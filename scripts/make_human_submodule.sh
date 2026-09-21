@@ -91,7 +91,15 @@ if [ "$APPLY" -eq 1 ]; then
   # another machine. It catches the common failure where the remote's HEAD
   # points at a branch that was never pushed.
   VTMP="$(mktemp -d)"
-  if git clone -q --recurse-submodules "$ROOT" "$VTMP/clone" 2>"$VTMP/err"; then
+  # Git refuses the `file` transport for submodules by default (CVE-2022-39253).
+  # A local path remote is normal when rehearsing this migration, so allow it
+  # for the check only; a real ssh/https remote is unaffected by the flag.
+  FILEOK=""
+  case "$URL" in
+    *://*) ;;                      # a real transport
+    *) FILEOK="-c protocol.file.allow=always" ;;
+  esac
+  if git $FILEOK clone -q --recurse-submodules "$ROOT" "$VTMP/clone" 2>"$VTMP/err"; then
     N="$(find "$VTMP/clone/human" -type f -not -path '*/.git/*' | wc -l | tr -d ' ')"
     if python3 -B "$VTMP/clone/scripts/human_manifest.py" verify --repo-root "$VTMP/clone" >/dev/null 2>&1; then
       echo "  ok   a recursive clone reproduces $N files and the manifest verifies"
@@ -101,9 +109,10 @@ if [ "$APPLY" -eq 1 ]; then
   else
     echo "  FAIL a recursive clone could not fetch the submodule:" >&2
     sed 's/^/       /' "$VTMP/err" >&2
-    echo "       If the remote is a bare repository you created locally, its HEAD may" >&2
-    echo "       point at a branch that was never pushed. Fix with:" >&2
-    echo "         git -C <remote.git> symbolic-ref HEAD refs/heads/$BRANCH" >&2
+    echo "       Two common causes: the remote's HEAD points at a branch that was" >&2
+    echo "       never pushed (fix: git -C <remote.git> symbolic-ref HEAD refs/heads/$BRANCH)," >&2
+    echo "       or the clone is being done by someone whose git refuses the file" >&2
+    echo "       transport for submodules (CVE-2022-39253)." >&2
   fi
   rm -rf "$VTMP"
   echo
