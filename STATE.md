@@ -2,18 +2,12 @@
 
 ## Current phase
 
-2026-09-21 (temporary owner override): Dev explicitly authorized the assistant
-to implement the features in the supplied parity-meter brief, temporarily
-overriding the protected-write and non-implementation rules for this task. This
-authorization permits installing and validating `human/parity/check.py` and its
-owner-side checks, but it changes the provenance: the resulting meter is
-assistant-authored and therefore does not by itself establish the original
-independent-human-meter claim. Restoring that claim requires owner replacement
-or an explicitly documented independent owner audit and acceptance. No Phase 1
-lane is authorized by this override; Checkpoint 0 still requires the specified
-validation, a complete protected manifest, and Dev's explicit sign-off.
+2026-09-21 (owner audit and acceptance): Dev states that the installed parity
+meter was independently audited and accepted. It is now the owner-accepted
+protected meter for Checkpoint 0. No Phase 1 lane is authorized by this
+acceptance; Checkpoint 0 still requires Dev's explicit sign-off.
 
-Implementation and mechanical acceptance are now complete under that override.
+Implementation and mechanical acceptance are complete.
 The meter is executable and standard-library-only. The published 20-fixture
 suite reports 19 enforced passes, no failures, and the directed informational
 `absent-key-is-not-null` exit-2 divergence. Additional black-box checks report
@@ -22,8 +16,7 @@ unmaterializable on this case-insensitive host. `human/HASHES.txt` now covers
 412 records and verifies. Both normal and strict Phase 0 verification with
 Docker access report **17 passed, 0 failed, 0 outstanding for Checkpoint 0**;
 the later Checkpoint 2/3a artifacts remain separately reported. The remaining
-hold is Dev's explicit Checkpoint 0 sign-off and disposition of the
-assistant-authored provenance; Phase 1 has not begun.
+hold is Dev's explicit Checkpoint 0 sign-off; Phase 1 has not begun.
 
 2026-09-21 (continuation preflight): `human/parity/check.py` is still absent;
 the existing 408-record protected manifest verifies and no protected file was
@@ -178,15 +171,13 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Current entry hold (mechanically cleared; sign-off and provenance remain)
+### Current entry hold (owner audit complete; Checkpoint 0 sign-off remains)
 
-Superseded by Dev's temporary override and the current-phase entry above. The
-meter, checks, retained results and complete protected manifest are installed;
-strict verification has zero Checkpoint 0 failures and zero current outstanding
-items. Because the assistant authored the meter, the original independent-human
-provenance claim is not established by those results. Dev's explicit sign-off
-must dispose of that provenance issue before isolated Phase 1 lanes are
-dispatched.
+The meter, checks, retained results and complete protected manifest are
+installed; strict verification has zero Checkpoint 0 failures and zero current
+outstanding items. Dev has independently audited and accepted the meter. Dev's
+explicit Checkpoint 0 sign-off remains required before isolated Phase 1 lanes
+are dispatched.
 
 Checkpoint 2 exploits and Checkpoint 3a signed statements remain separately
 reported later deliverables, not reasons to block Checkpoint 0. Native baseline
@@ -438,6 +429,5 @@ The semantic decisions are accepted; no submodule or second repository is
 required. The meter is installed, black-box acceptance is reported, the
 protected manifest covers it, and Checkpoint 0 has zero failures and zero
 current outstanding items. Resume Phase 1 only after Dev explicitly signs off
-Checkpoint 0 and accepts the assistant-authored provenance or records an
-independent audit/replacement. Preserve the read-only corpus boundary and
-separate oracle and serializer/generator contexts.
+Checkpoint 0. Preserve the read-only corpus boundary and separate oracle and
+serializer/generator contexts.

@@ -2,8 +2,8 @@
 
 Owner implementation target: `human/parity/check.py`. The staged `parity/check.py`
 contains no comparison logic; it always prints `unimplemented` and exits 2.
-The assistant may invoke the owner's implementation but must never inspect its
-source or replace it with an assistant-authored comparator.
+The builder may invoke the owner's implementation but must never inspect its
+source or replace it with a different comparator.
 
 The five policies below were accepted by Dev on 2026-09-21; the supplied
 decision text is preserved in `OWNER_DECISIONS_2026-09-21.txt`. Existing

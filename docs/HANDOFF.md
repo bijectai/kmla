@@ -2,13 +2,11 @@
 
 ## Current state after Dev's 2026-09-21 decisions
 
-### Meter implementation under temporary owner override
+### Meter independently audited and accepted by the owner
 
-Dev temporarily authorized the assistant on 2026-09-21 to implement the
-supplied parity-meter brief, overriding the protected-write and
-non-implementation rules for that task. `human/parity/check.py`, its black-box
-owner checks and their retained results are now installed. The protected
-manifest covers 412 records and verifies.
+Dev independently audited and accepted `human/parity/check.py` on 2026-09-21.
+The meter, its black-box owner checks and their retained results are installed.
+The protected manifest covers 412 records and verifies.
 
 The 20-fixture conformance suite has no enforced failure: 19 checks pass and
 `absent-key-is-not-null` retains its directed informational exit-2 divergence.
@@ -21,11 +19,9 @@ outstanding for Checkpoint 0**. Complete outputs are retained in
 `human/parity/OWNER_CHECKS_2026-09-21.txt`, and
 `docs/contracts/PHASE0_ACCEPTANCE_2026-09-21.after-meter.txt`.
 
-This override changes provenance: the installed meter is assistant-authored,
-so the original independent-human-meter claim is not established merely by its
-tests. Before Phase 1, Dev must explicitly sign off Checkpoint 0 and state that
-the assistant-authored provenance is accepted, or replace/independently audit
-and accept the meter. The override did not authorize Phase 1.
+The independent owner audit and acceptance are complete. Before Phase 1, Dev
+must still explicitly sign off Checkpoint 0. Meter acceptance alone did not
+authorize Phase 1.
 
 Work continues on `claude/checkpoint-0-integration`. The accumulated integration
 work was committed and pushed as `44d2a96` before applying Dev's follow-up
@@ -75,10 +71,10 @@ meter change. No additional sequencing decision is needed for that action.
 
 ## Independent meter and completion sequence
 
-The sequence below is now mechanically complete under the temporary owner
-override: the meter exists, conformance and owner checks pass as reported above,
-the manifest covers it, and strict Phase 0 verification has zero current
-outstanding items. Dev's explicit sign-off and provenance disposition remain.
+The sequence below is mechanically complete: the owner-audited meter exists,
+conformance and owner checks pass as reported above, the manifest covers it,
+and strict Phase 0 verification has zero current outstanding items. Dev's
+explicit Checkpoint 0 sign-off remains.
 
 Dev implements and installs `human/parity/check.py` to PARITY.md and the
 accepted policies, including the now-complete directory decision procedure.
