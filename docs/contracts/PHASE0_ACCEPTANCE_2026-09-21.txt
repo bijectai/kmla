@@ -1,0 +1,42 @@
+Checkpoint 0 acceptance checks against /Users/devrashie/Documents/csProjects/kmla
+
+-- scanner self-tests --
+ok    statute hazard scanner self-test
+ok    case inventory scanner self-test
+ok    hash manifest tool self-test
+ok    consult wrapper offline tests
+
+-- staged inventories regenerate byte for byte --
+ok    HAZARDS.json matches a fresh scan
+ok    CASES.json matches a fresh scan
+
+-- source integrity --
+ok    source archive digest matches docs/contracts/HASHES.txt
+ok    human/HASHES.txt is the installed manifest (docs/contracts/HASHES.txt is the superseded staging draft)
+ok    installed human/HASHES.txt verifies
+
+-- parity meter --
+skip  owner's meter satisfies the PARITY.md contract
+        human/parity/check.py does not exist; deliverable 3 is outstanding
+ok    staged stub behaves as an unimplemented placeholder (exit 2 everywhere)
+
+-- outstanding owner artifacts --
+ok    human/DECISIONS.md contains no TODO markers
+skip  human/gate/exploits contains exploit files
+        none present; Checkpoint 2 input outstanding
+skip  human/invariants/statements contains signed claims
+        none present; Checkpoint 3a input outstanding
+
+-- runtime pin --
+ok    the Docker daemon is running
+ok    runtime identity recorded (7.2.3 / amd64 / TZ=America/New_York)
+ok    the pinned interpreter image is built locally
+ok    corpus baseline recorded for utc (374/376 cases clean)
+ok    corpus baseline recorded for america_new_york (376/376 cases clean)
+scripts/verify_phase0.sh: line 206: [: 0
+0: integer expression expected
+ok    no decision-log entry is still PENDING
+
+17 passed, 0 failed, 3 outstanding
+No mechanical claim failed, but 3 owner deliverable(s) remain outstanding.
+Checkpoint 0 passes only when nothing above is listed as outstanding.

@@ -831,6 +831,10 @@ TODO observation: the snapshot also records 237 disjunction/if-then control toke
 
 ## Aggregates
 
+Schema (P-SUMLIST, accepted 2026-09-21): every `findall/sum_list`, duplicate +
+order semantics. This corrects the original plan's `sumlist` spelling only;
+the observed lexical counts below remain unchanged.
+
 Decision: TODO. Duplicate and ordering semantics per site: TODO. Equality used for deduplication, empty aggregates, concatenation, variable scope, errors and unbound results: TODO.
 
 Inventory: 43 `findall`, **zero `sumlist`**, and 12 `sum_list`. Both requested and observed sum spellings are tracked independently. Nested and multiline `findall` expressions are retained in full in JSON; an inner `findall` has its own token location as well as appearing in the outer excerpt.

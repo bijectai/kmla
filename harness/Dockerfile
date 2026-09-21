@@ -1,15 +1,9 @@
 # Pinned SWI-Prolog runtime for the KMLA harness.
 #
-# docs/contracts/RUNTIME.md requires SWI-Prolog 7.2.3 on linux/amd64 with a
-# recorded immutable image digest. No published swipl image satisfies that: the
-# official library/swipl repository has 123 tags whose oldest is 7.5.11, and
-# there is no 7.0.x-7.4.x tag at all. Debian stretch, however, ships
-# swi-prolog 7.2.3+dfsg-6, so this image installs it from the Debian archive.
-#
-# THIS IS NOT UPSTREAM'S 7.2.3 BUILD. `+dfsg-6` is Debian's repackaging with six
-# Debian revisions of patches applied. Whether that satisfies B001's pin is an
-# owner decision recorded in docs/DECISION_LOG.md (DL-001); this file implements
-# one option and does not settle it.
+# P-RUNTIME (owner accepted 2026-09-21): Debian swi-prolog-nox=7.2.3+dfsg-6,
+# including Debian's repackaging and patches. This is not an upstream build.
+# Runtime identity is the whole measured RUNTIME.json except image.local_image_id.
+# Every Dockerfile change requires a new record and sweep; retain older records.
 #
 # The base image is pinned by digest, not by the mutable `stretch` tag.
 FROM --platform=linux/amd64 debian:stretch@sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be
@@ -38,19 +32,21 @@ RUN set -eux; \
 # the +1. The two bugs are only equivalent to no bug in a negative-offset zone.
 #
 # Measured on the shipped corpus with this image (docs/contracts/RUNTIME_OBSERVATIONS.md):
-#   TZ=America/New_York : 376 of 376 cases agree with their own labels
+#   TZ=America/New_York : 376/376 clean outcomes, including 2 vacuous cases
 #   TZ=UTC              : 374 of 376; s3306_a_1_B_neg and s3306_a_2_B_neg fail
 #   TZ=Asia/Tokyo       : 374 of 376; the same two fail
 #
 # So the "obviously reproducible" choice, UTC, does not reproduce the reference.
-# Pick deliberately and record it in human/DECISIONS.md. See DL-002.
+# P-TZ pins America/New_York. The build argument still has no default.
 # ---------------------------------------------------------------------------
 ARG KMLA_TZ
 RUN test -n "${KMLA_TZ:-}" || { \
       echo "ERROR: build argument KMLA_TZ is required and has no default." >&2; \
       echo "       The corpus's answers depend on it. See harness/Dockerfile." >&2; \
       echo "       e.g. docker build --build-arg KMLA_TZ=America/New_York ..." >&2; \
-      exit 1; }
+      exit 1; }; \
+    test "$KMLA_TZ" = America/New_York; \
+    test -f "/usr/share/zoneinfo/$KMLA_TZ"
 ENV TZ=${KMLA_TZ} \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8

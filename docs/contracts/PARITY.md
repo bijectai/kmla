@@ -5,27 +5,45 @@ contains no comparison logic; it always prints `unimplemented` and exits 2.
 The assistant may invoke the owner's implementation but must never inspect its
 source or replace it with an assistant-authored comparator.
 
+The five policies below were accepted by Dev on 2026-09-21; the supplied
+decision text is preserved in `OWNER_DECISIONS_2026-09-21.txt`. Existing
+requirements are identified as restatements, not silently reclassified as new
+policy. Neither these policies nor the fixture suite supplies a meter.
+
 ## Invocation and results
 
 ```text
 python human/parity/check.py --section N --inputs DIR --prolog-out DIR --lean-out DIR
 ```
 
-- Exit 0: every requested input has both outputs and every output agrees.
+- Exit 0: every requested input has both outputs and every output agrees;
+  write a zero-byte `mismatches.jsonl` only after comparison completes.
 - Exit 1: mismatches; write `mismatches.jsonl` in the invocation's working
   directory. Each line has `input_id`, `prolog`, and `lean`.
 - Exit 2: unimplemented or unable to perform a valid comparison (for example,
   malformed JSON, invalid schema, or ambiguous IDs). Print the reason to stderr.
-  This is an infrastructure failure, never zero mismatches.
+  Create and modify nothing. This is an infrastructure failure, never zero
+  mismatches. An unexpected exception must also exit 2, not Python's uncaught
+  exception exit 1, which is reserved for completed mismatch comparisons.
 
 This elaborates the plan's 0/1 contract without relaxing its success condition.
-The harness invokes the meter in a dedicated run directory and retains its
+The harness invokes the meter in a fresh, dedicated run directory and retains its
 exit status, diagnostics, input identity, and mismatch artifact.
+An absent report there means infrastructure failure; present-and-empty means
+success; present-and-non-empty means mismatches. Never truncate a report before
+doing the comparison: that would manufacture a success artifact on failure.
+If invoked with an existing report, exit 2 leaves it untouched; the report alone
+cannot establish the new run's outcome. The harness must use a fresh directory
+and retain the exit status, rather than reuse a stale report as evidence.
 
 ## File envelopes
 
 Use UTF-8 JSON, one object per `<input_id>.json`. IDs match
-`[A-Za-z0-9][A-Za-z0-9_-]*`, and the filename stem and object ID must agree.
+`[A-Za-z0-9][A-Za-z0-9_-]*`, and the filename stem and object ID must agree
+byte-for-byte in **every record in all three directories** (otherwise exit 2).
+ID comparison is case-sensitive. As an additional population constraint, IDs
+within a section must be unique under ASCII case folding. Producers must
+prevent collisions before writing; `gen/` must mint lowercase-only stems.
 Every input record contains:
 
 ```json
@@ -81,9 +99,81 @@ is selected by this contract.
   not be serialized as an ordinary answer or silently removed from the input
   population. The harness reports it as an infrastructure failure; parity has
   not passed.
-- Write mismatch records in input-ID order. On successful comparison, write an
-  empty `mismatches.jsonl` so an old report cannot be mistaken for the new run.
-  On invalid data, report the error without claiming that comparisons completed.
+- Write mismatch records in input-ID order, only after comparison completes.
+  On successful comparison, write an empty `mismatches.jsonl` so an old report
+  cannot be mistaken for the new run. On invalid data, leave any report untouched
+  and report the error without claiming that comparisons completed.
+
+## Accepted directory and identity policies
+
+1. **Directory contents.** Ignore a dot-prefixed entry only when its name does
+   not end in `.json`. Every `*.json` entry, dotted or not, joins the population
+   and is judged by the ID grammar: `.s151_a.json` is exit 2, not ignored.
+   Dot-prefixed directories are covered by this rule, not by rule 2. The
+   producers keep engine logs and sidecars outside the three argument
+   directories.
+2. **Non-regular entries.** After rule 1, any entry that is not a regular file
+   is exit 2: directories (including `s151_a.json`), symlinks, FIFOs and device
+   nodes. Do not recurse or follow a link into additional records. Unexpected
+   exceptions must exit 2 as specified above.
+3. **Report format.** Exit 0 writes zero bytes after completion; exit 1 writes
+   records after completion; exit 2 creates/modifies nothing. For exit 1 use
+   UTF-8, LF, one object per line, a trailing newline after the final record,
+   unescaped non-ASCII characters (`ensure_ascii` off), and fixed key order
+   `input_id`, `prolog`, `lean`. This refines the report encoding, not the
+   comparison's strict typing or canonical observations.
+4. **IDs and duplicate keys.** Case-sensitive comparison, the lexical grammar,
+   stem equality and rejection of duplicate IDs/JSON keys restate existing
+   requirements. Reject duplicate keys inside records rather than silently
+   accepting the last value. Byte-identical filename stems cannot coexist in
+   one ordinary directory; that fact does not check duplicate JSON keys.
+   The ASCII-case-fold uniqueness requirement above is the new restriction
+   and must be in force before Checkpoint 1's freeze.
+5. **Aliasing.** Compare directory identities, not path strings: exit 2 if any
+   two of `--inputs`, `--prolog-out`, `--lean-out` and the working directory
+   share an `(st_dev, st_ino)` pair. For each selected ID, also exit 2 if its
+   two engine output files share an `(st_dev, st_ino)` pair. This covers
+   directory and file aliases; `realpath` string equality is not sufficient.
+
+The filesystem need not be case-sensitive merely because the OS is Linux or
+the platform is `linux/amd64` (A-006). On case-folding storage a later write
+can replace an earlier differently-cased filename before the meter sees it.
+A remaining stem/ID case mismatch is detectable; its absence does not prove no
+collapse occurred. The producer must prevent population loss. The meter cannot
+recover an input that was overwritten before invocation.
+
+**Open clarification (A-007 §3(a)):** the owner text does not explicitly assign
+an outcome to a regular file that is neither dot-prefixed nor `.json`, such as
+`notes.txt`. Exit 2 is implied by the aliasing rationale but has not been chosen
+by the builder. This narrow directory-policy case is paused for Dev; the other
+accepted rules, including ASCII-case-fold uniqueness, are already installed
+before the meter exists. No between-checkpoint meter re-pin is planned.
+
+## Independent implementation and acceptance sequence
+
+Dev implements and installs `human/parity/check.py` independently. The builder
+does not inspect, implement or propose its source. Invoke only through its CLI:
+
+```sh
+python3 -B scripts/parity_conformance.py --meter human/parity/check.py
+```
+
+Report the output verbatim, including any WRONG-REASON or informational
+divergence. A conformance failure is a finding for Dev; do not change the meter
+or suite to reconcile it. Dev explicitly promoted `invalid-input-id` from
+informational to enforced. `absent-key-is-not-null` and `no-number-coercion`
+remain informational until the envelope-defect classification is settled.
+No informational result is silently relabelled as an enforced pass.
+
+The current 20-fixture suite does not cover all five policies (directory entry
+types, inode aliasing and the exact report bytes are not comprehensively tested).
+A passing run establishes only the tested requirements, not full policy
+compliance. The builder has not added conformance fixtures without approval.
+
+After conformance passes, the protected manifest must cover the installed
+meter, verify, and be committed. Re-run `scripts/verify_phase0.sh` and report
+all results. Checkpoint 0 additionally requires Dev's explicit signoff;
+changing tooling output cannot substitute for it.
 
 The human can implement this envelope comparison independently while the
 section-specific payloads are being reviewed. No real comparison implementation

@@ -11,15 +11,22 @@ Nothing under `human/` was modified: the corpus is mounted read-only.
 ## Reproducing
 
 ```sh
-KMLA_TZ=America/New_York bash harness/pin_runtime.sh > docs/contracts/RUNTIME.json
+kmla_runtime_run=$(mktemp -d)
+KMLA_TZ=America/New_York bash harness/pin_runtime.sh --out "$kmla_runtime_run/RUNTIME.json"
+bash harness/run_corpus.sh --runtime "$kmla_runtime_run/RUNTIME.json" --out "$kmla_runtime_run/BASELINE.json"
 docker run --rm --platform linux/amd64 -e TZ=America/New_York \
   -v "$PWD/human/sara/sara:/corpus:ro" -w /corpus kmla-swipl:7.2.3 \
-  -q -f cases/s151_a_pos.pl
+  swipl -q -f cases/s151_a_pos.pl
 ```
 
 Interpreter, verified from inside the container: `SWI-Prolog version 7.2.3 for
 amd64`, `PLARCH=amd64`, `uname -m = x86_64`, Debian `swi-prolog-nox 7.2.3+dfsg-6`.
-Host is `darwin/arm64`, so amd64 runs emulated. See `RUNTIME.json` and DL-001.
+Host is `darwin/arm64`, so amd64 runs emulated. The legacy record does not
+identify the translator. See `runtime-history/` and the accepted P-RUNTIME.
+The new local measurement in the current RUNTIME.json identifies Rosetta for
+Linux from the Prolog process executable and its hash. It has not yet been
+paired with a fresh full sweep; the baseline/control numbers below remain
+historical observations, not results from that new record.
 
 ---
 
@@ -91,13 +98,16 @@ safe from silence: these two cases assert nothing and no observable signal says 
 
 Every case run once, classified by stderr:
 
-| TZ | Cases whose own test succeeds | Failures |
+| TZ | Clean directive outcomes (including two vacuous cases) | Failures |
 | --- | --- | --- |
 | `America/New_York` | **376 / 376** | none |
 | `UTC` | 374 / 376 | `s3306_a_1_B_neg`, `s3306_a_2_B_neg` |
 | `Asia/Tokyo` | 374 / 376 | the same two |
 
 Exactly two cases differ between timezones; the other 374 are identical.
+The two B005 files execute no test in this unmodified sweep, as O-4 records.
+Thus 376 clean outcomes do not mean 376 exercised assertions. P-STIP's reader
+exception belongs to the later harness and was not applied to these baselines.
 
 ## O-6. Why: a double defect that cancels only in a negative-offset zone
 
@@ -162,14 +172,32 @@ raises rather than failing — which O-2 shows is invisible in the exit status.
 
 ---
 
-## What this leaves open
+## O-9. Interpreter-version control
 
-The observations above answer the *behavioural* questions. They do not answer the
-*normative* ones, which remain the owner's:
+`CONTROL_swipl9.json`, already recorded in `fb8ce24`, uses the same unmodified
+376-case population with `TZ=America/New_York` on `swipl:9.2.9`. It reports
+312 clean outcomes and 64 errors, all with `rdiv/2` type-error diagnostics.
+All 376 processes still exit 0. The control independently corroborates O-7:
+the pinned interpreter accepts float operands to `rdiv/2` that this newer
+interpreter rejects. The 64 affected cases discriminate interpreter version,
+versus the two cases distinguishing the tested time-zone choices.
 
-- Which timezone the experiment pins, and therefore whether the corpus baseline is
-  376 or 374 (DL-002).
-- Whether Debian's `7.2.3+dfsg-6` satisfies B001 (DL-001).
-- Whether the Lean oracle reproduces these behaviours (`round` half-away-from-zero,
-  `/` changing type with exactness, a raising `s3306_c_5_B`) or corrects them.
-- What the pass/fail protocol is, now that exit status is known to be useless.
+The stored control has a tag, not an immutable image digest or translator
+record; retain it as the recorded control with that provenance limitation.
+Do not retroactively claim a native execution or an unrecorded image identity.
+
+## O-10. Command-line argument diagnosis corrected
+
+The earlier emulation diagnosis was wrong. With `ENTRYPOINT ["swipl"]`, an
+invocation supplying `swipl` again becomes `swipl swipl ...`; SWI interprets
+the second word as a script file. `fb8ce24` changes ENTRYPOINT to CMD and records
+that argv works under the same emulation. Stdin remains valid. Dev will correct
+the protected `human/DECISIONS.md` preamble; the builder leaves it untouched.
+
+## Decisions now recorded
+
+The owner has accepted New York (P-TZ), Debian's precise package (P-RUNTIME)
+and translating statute code as written (P-INTENT). These are not still-open
+choices. The pending work is execution and archival evidence under the accepted
+RUNTIME contract, followed by the independently metered implementation lanes
+after Checkpoint 0. Clean stderr is a baseline classification, not Lean parity.

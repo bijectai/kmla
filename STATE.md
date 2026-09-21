@@ -2,6 +2,18 @@
 
 ## Current phase
 
+2026-09-21 (owner acceptance follow-up): P-SUMLIST and P-RUNTIME are explicitly
+accepted. Their schema/pin changes and the five parity policies are installed
+in the staged contracts, with one narrow directory-policy case marked open.
+`docs/contracts/OWNER_DECISIONS_2026-09-21.txt` preserves the supplied text;
+Q-007/A-007 records the design-authority review. The independent meter remains
+absent. No Phase 1 work, protected-file edit, commit, push or merge is authorized
+by a passing tool alone. Development pauses for the two clarifications below;
+native-runtime CI preparation is uncommitted, not a completed native run.
+
+The following dated entries are historical snapshots, superseded where the
+accepted P-BUNDLE/P-RUNTIME and current state above say otherwise.
+
 2026-09-21 (later): The consolidation B006 called for is done, under the owner's
 explicit authorization to access `human/` for it. The completed
 `human/DECISIONS.md` is committed byte for byte; the authoritative
@@ -87,7 +99,81 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
+### Acceptance preflight finding (2026-09-21, Q-007)
+
+Dev has accepted P-SUMLIST, P-RUNTIME and the five parity policies; their
+supplied text is staged in `docs/contracts/OWNER_DECISIONS_2026-09-21.txt`.
+The owner meter is still absent. Before running it, a builder-side CLI defect
+was reproduced: `parity_conformance.py` passes a relative meter path after
+changing cwd to a temporary run directory. Python's file-not-found exit 2 is
+then reported as a passing rejection test. A traced `empty-input-population`
+fixture using only the staged stub returned `(True, '')` with `[Errno 2] No
+such file or directory` for the meter path. This is not a finding against the
+owner meter, whose source has not been inspected or implemented.
+
+Q-007/A-007 classifies the relative-path bug as restoration of the existing
+published CLI, not a meter divergence. It is fixed by resolving the path before
+launch and reporting invocation failures as harness errors; four invocation
+regressions pass. Exactly one fixture expectation was changed as Dev directed:
+`invalid-input-id` is enforced. Both envelope-defect cases remain informational;
+there are still 20 fixtures. No owner meter was run or inspected.
+
+Parity acceptance remains paused for the policy clarification below. Q-007 also asks about
+the phase-0 verifier counting Checkpoint 2 exploits and Checkpoint 3a statements
+as current outstanding items despite Dev's phase-specific schedule. No gate has
+been waived and `verify_phase0.sh` is unchanged.
+
+**Decisions needed from Dev (A-007 escalation):**
+
+1. For a regular non-dot-prefixed, non-JSON file such as `notes.txt` in one of
+   the three argument directories, confirm exit 2 or specify the intended
+   outcome. The rest of the accepted directory policy is unchanged.
+2. Approve or reject reporting Checkpoint 2 exploits and Checkpoint 3a statements
+   separately from Checkpoint 0's outstanding count. Do not waive them at their
+   owning checkpoints, and do not exempt mandatory runtime/infrastructure
+   verification. The existing script is retained and its output reported until
+   this is settled. Dev's signoff remains independently required.
+
+A-007 also raised the timing of the case-fold grammar restriction. It has
+already been installed before the meter exists, satisfying the requested
+before-Checkpoint-1 deadline without a between-checkpoint meter change.
+
+**Evidence correction to A-007 and its appended log entry:** their claim that
+`CONTROL_swipl9.json` is not recorded is incorrect. It was committed in
+`fb8ce24`; the existing JSON was checked: 376 cases, 312 clean, 64 distinct error
+IDs, all 64 with `rdiv/2` type-error diagnostics. The file was preserved. The
+answer itself is immutable; this is the correction, not an edit to A-007.
+
+**Evidence still outstanding:** native CI and the fresh full sweep have not run, and
+GHCR publication, offline rebuild closure and the independent paper archive
+deposit are not complete. The existing runtime record is preserved under
+`docs/contracts/runtime-history/`; future builds must not overwrite its history.
+The new current RUNTIME.json records a completed local build, 102 installed
+packages and Rosetta for Linux identified from the running Prolog process.
+Its file SHA-256 is `c1ca3a433d329ca28818cdd177190f14930a8025e310c0c9f1310d862c1aa12d`.
+Eighteen runtime unit tests pass; native and QEMU paths have not been exercised
+on real hosts. The new CI workflow is prepared, not dispatched. YAML syntax was
+parsed with Ruby Psych; this is not GitHub Actions execution validation.
+
+The unchanged phase-0 script was run with Docker access after the acceptances:
+**17 passed, 0 failed, 3 outstanding** (meter, Checkpoint 2 exploits,
+Checkpoint 3a statements). It also emitted this diagnostic verbatim:
+
+```text
+scripts/verify_phase0.sh: line 206: [: 0
+0: integer expression expected
+```
+
+Cause: when grep finds zero pending headings, `grep -c ... || echo 0` captures
+two zero lines instead of one integer. This is a separate reporting defect,
+not a reason to waive the gate. The script is deliberately unchanged while the
+requested accounting clarification is pending. No checkpoint was signed off.
+
 ### Review hold: builder acceptance tools violate their existing contracts
+
+Historical hold below: the two manifest holes and malformed input fixture were
+fixed in `626e404`; the manifest's 24 regressions and fixture self-test passed.
+The current holds are the separate Q-007 issues above, not these resolved bugs.
 
 Read-only integration review on 2026-09-21 independently confirmed the committed
 decision digest `58dad769…`, a verifying current manifest, and a successful

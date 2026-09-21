@@ -10,8 +10,28 @@ source identity and installed paths are in `docs/contracts/SOURCE.md`.
 The primary source is not DeonticBench's copy; an audited downstream program may
 be used later only as a second oracle for cross-checking.
 
-Pin SWI-Prolog 7.2.3 in Docker on `linux/amd64`. Record an immutable image digest
-and verify the runtime version and architecture before harness evaluation.
+P-RUNTIME (accepted by Dev, 2026-09-21) pins Debian's
+`swi-prolog-nox=7.2.3+dfsg-6` in Docker on `linux/amd64`, with
+`TZ=America/New_York` (P-TZ). This amendment and `docs/contracts/RUNTIME.md`
+are one decision; the latter no longer requires an unspecified identical
+upstream build. Verify interpreter version, architecture, package version and
+time zone before harness evaluation; never silently substitute another runtime.
+
+Artifact identity is the **whole `RUNTIME.json` record except
+`image.local_image_id`**, including the pinned base digest, Dockerfile SHA-256,
+full installed package closure, TZ and execution/translator provenance. It is
+not a three-field tuple. Preserve prior records when an identity changes.
+
+Record the immutable GHCR image digest, vendor the dependency closure together
+with what is needed to rebuild without either registry (including the base),
+and archive a `docker save` image with SHA-256 for deposit alongside the paper
+outside both registries. These are three distinct obligations, not alternatives.
+Vendoring changes the Dockerfile identity and requires a new record and sweep;
+retain both records. Emulated runs remain evidence; native amd64 CI on
+`ubuntu-latest` supplies the recorded baseline. Record the actual translator,
+not merely an emulation boolean. See RUNTIME.md for provenance and evidence
+limits; acceptance of the policy does not claim those deliveries have occurred.
+
 Count the original cases without silently dropping any; a discrepancy must be
 reported for a human decision, not repaired by filtering or changing semantics.
 
@@ -20,7 +40,7 @@ reported for a human decision, not repaired by filtering or changing semantics.
 All Phase 0.1 drafts destined for protected artifacts go under `docs/contracts/`.
 The human owner copies approved drafts into `human/` and pins their hashes.
 The assistant must never write under `human/`, including during bootstrap.
-Existing files there are preserved. Read-only mount and submodule/hash
+Existing files there are preserved. Read-only mount and manifest/CI
 enforcement are prerequisites for the later development lanes.
 
 ## B003: Independent mutation admission and grading
@@ -94,6 +114,25 @@ These keep the `P-` identifiers the decision log gives them rather than
 continuing the `B00N` series, because `STATE.md` already uses `B005` onward for
 blockers and reusing those numbers here would make one identifier mean two
 different things. `P-STIP` is what resolves `STATE.md`'s blocker B005.
+
+### P-SUMLIST: schema spelling
+
+The Aggregates schema heading reads `every findall/sum_list, duplicate + order
+semantics`. The source has twelve `sum_list/2` sites and no `sumlist`. This is
+a spelling correction with no semantic effect. It supersedes the preserved
+PLAN's schema spelling; neither PLAN nor the protected decisions is rewritten.
+
+### P-RUNTIME and parity policies: owner acceptance
+
+The complete owner directive is preserved in
+`docs/contracts/OWNER_DECISIONS_2026-09-21.txt`. P-RUNTIME amends B001 above and
+`docs/contracts/RUNTIME.md` together. The five parity policies are installed in
+`docs/contracts/PARITY.md`, including directory handling, three-valued report
+artifacts, ASCII-case-fold-unique IDs and inode-based alias checks. Only the
+invalid-input-id fixture is promoted to enforced; the two envelope-defect
+fixtures remain informational pending the owner's classification. A conformance
+failure is a finding for Dev, not permission to change the meter or test
+expectations. Checkpoint 0 requires the checks and Dev's explicit signoff.
 
 ### P-MONEY: money is `Int` whole dollars
 

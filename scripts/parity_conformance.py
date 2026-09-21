@@ -46,6 +46,10 @@ SECTION = 151
 TIMEOUT = 120
 
 
+class InvocationError(RuntimeError):
+    """The meter never started; its intended rejection is not being tested."""
+
+
 def input_record(input_id, section=SECTION, version=1, payload=None):
     """An --inputs record. PARITY.md gives these a `payload`, never a `result`."""
     return {"schema_version": version, "input_id": input_id, "section": section,
@@ -176,8 +180,7 @@ def build_cases():
         write_json(root / "prolog-out" / "_leading.json", output_record("_leading", 0))
         write_json(root / "lean-out" / "_leading.json", output_record("_leading", 0))
     case("invalid-input-id", "IDs must match [A-Za-z0-9][A-Za-z0-9_-]*",
-         "PARITY.md 'IDs match [A-Za-z0-9][A-Za-z0-9_-]*'", bad_id, 2, expect_stderr=True,
-         informational=True)
+         "PARITY.md 'IDs match [A-Za-z0-9][A-Za-z0-9_-]*'", bad_id, 2, expect_stderr=True)
 
     def bool_vs_int(root):
         agreeing(root)
@@ -279,7 +282,7 @@ def run_case(meter, case, workspace):
     run_directory.mkdir(parents=True, exist_ok=True)
 
     command = [
-        sys.executable, "-B", str(meter),
+        sys.executable, "-B", str(meter.resolve()),
         "--section", str(SECTION),
         "--inputs", str(root / "inputs"),
         "--prolog-out", str(root / "prolog-out"),
@@ -291,7 +294,15 @@ def run_case(meter, case, workspace):
     except subprocess.TimeoutExpired:
         return False, f"the meter did not finish within {TIMEOUT}s"
     except OSError as error:
-        return False, f"could not invoke the meter: {error}"
+        raise InvocationError(f"could not invoke the meter: {error}") from error
+
+    # CPython's failure to open the script is also exit 2. It must not count
+    # as the meter rejecting a malformed fixture. Retain its exact diagnostic.
+    if (completed.returncode == 2
+            and ": can't open file " in completed.stderr
+            and str(meter.resolve()) in completed.stderr):
+        raise InvocationError("WRONG-REASON: Python could not open the meter:\n"
+                              + completed.stderr)
 
     problems = []
     if completed.returncode != case.expect_exit:
@@ -315,31 +326,15 @@ def run_case(meter, case, workspace):
     return not problems, "; ".join(problems)
 
 
-# Five policy questions the owner settles before writing the meter. Narrowed
-# from a longer list after review: most of what was there is either already
-# fixed by PARITY.md or a normal implementation responsibility, and presenting
-# those as human prerequisites overstated what Checkpoint 0 needs.
+# The owner accepted the five policies on 2026-09-21. A-007 identified this
+# remaining omission; preserve it as open rather than choose an expected result.
+# This metadata does not add or change any conformance fixture.
 POLICIES = [
-    ("non-JSON files in a directory",
-     "A `.txt`, a `.DS_Store` or an editor swap file inside --inputs or an "
-     "engine directory: ignored, or exit 2? PARITY.md names one object per "
-     "`<input_id>.json` but does not say what else may sit beside them."),
-    ("nested subdirectories",
-     "Does the meter recurse into a subdirectory of --inputs, ignore it, or "
-     "exit 2? This decides whether a section can be sharded across directories."),
-    ("report encoding and line endings",
-     "UTF-8 is fixed for the envelopes; mismatches.jsonl's encoding, newline "
-     "and trailing-newline convention are not stated. The harness diffs this "
-     "file across runs, so the convention has to be pinned somewhere."),
-    ("ambiguous IDs, and ID case sensitivity",
-     "PARITY.md makes 'ambiguous IDs' an exit-2 condition without defining the "
-     "term. On a case-insensitive filesystem `s151_A` and `s151_a` are one "
-     "file; on a case-sensitive one they are two. Decide whether IDs compare "
-     "case-sensitively and what makes two of them ambiguous."),
-    ("aliased output directories",
-     "Nothing forbids --prolog-out and --lean-out naming the same directory, "
-     "or either naming --inputs. Decide whether that is exit 2 or is silently "
-     "treated as both engines agreeing with themselves."),
+    ("regular, non-dot-prefixed, non-JSON files",
+     "The accepted policies do not explicitly assign an outcome to notes.txt "
+     "or README in an argument directory. A-007 flags exit 2 as implied by "
+     "the aliasing rationale but requires Dev's clarification. Other directory, "
+     "report, ID and alias policies are installed in PARITY.md."),
 ]
 
 # Not owner policy. Listed so nobody re-raises them as blockers: each is either
@@ -360,8 +355,8 @@ IMPLEMENTATION = [
      "with no locale dependence. Implementation choice, worth writing down."),
     ("a crashed meter exits 1, the same code as 'mismatches found'",
      "Implementation responsibility: trap unexpected exceptions and re-exit 2, "
-     "and truncate the report before doing any work so a crash cannot present "
-     "a previous run's mismatches.jsonl as this run's result."),
+     "creating/modifying nothing. Policy 3 forbids pre-comparison truncation. "
+     "The harness must use a fresh run directory and retain the exit status."),
     ("schema_version other than 1",
      "Implementation responsibility: reject it, as exit 2."),
     ("unreadable or absent directory",
@@ -439,7 +434,7 @@ def main(argv=None):
 
     if arguments.list_gaps:
         print(f"{len(POLICIES)} policy questions for the owner. Each one lets two")
-        print("correct-looking meters disagree, and PARITY.md does not settle it.\n")
+        print("correct-looking meters disagree, and PARITY.md marks it open.\n")
         for title, detail in POLICIES:
             print(f"- {title}: {detail}")
         print(f"\nFor reference, {len(IMPLEMENTATION)} questions that are NOT owner policy:")
@@ -450,7 +445,7 @@ def main(argv=None):
 
     if not arguments.meter:
         parser.error("--meter is required unless --list-gaps is given")
-    meter = Path(arguments.meter)
+    meter = Path(arguments.meter).resolve()
     if not meter.is_file():
         print(f"error: no meter at {meter}", file=sys.stderr)
         return 2
@@ -460,7 +455,11 @@ def main(argv=None):
     with tempfile.TemporaryDirectory() as directory:
         workspace = Path(directory)
         for case in cases:
-            ok, detail = run_case(meter, case, workspace)
+            try:
+                ok, detail = run_case(meter, case, workspace)
+            except InvocationError as error:
+                print(f"HARNESS ERROR in {case.name}: {error}", file=sys.stderr)
+                return 2
             if ok:
                 status, bucket = "ok  ", passed
             elif case.informational:
@@ -484,9 +483,9 @@ def main(argv=None):
         print("\nA meter that fails any check above is out of contract; a Checkpoint 1")
         print("'zero mismatches' result from it would not mean what the gate claims.")
     print(f"\n{len(POLICIES)} owner policy questions remain; run with --list-gaps.")
-    print("Answer them in DECISIONS.md before writing the meter: docs/PLAN.md makes")
-    print("'parity/check.py hash unchanged' part of the Checkpoint 1 gate, so a later")
-    print("correction breaks the gate it exists to protect.")
+    print("The two envelope-defect fixtures remain informational by Dev's direction.")
+    print("This suite does not cover every accepted policy. Resolve the open contract")
+    print("question before freezing the meter; never adjust outcomes to reconcile a run.")
     return 0 if not failed else 1
 
 
