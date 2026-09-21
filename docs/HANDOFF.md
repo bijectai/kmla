@@ -1,4 +1,92 @@
-# Phase 0 handoff
+# Phase 1 handoff
+
+## Authorization and entry identity
+
+On 2026-09-21 Dev explicitly stated: "I sign off checkpoint 0 and authorize
+phase 1". Checkpoint 0 is cleared. The immediately preceding strict verification
+reported 17 passed, 0 failed, 0 outstanding; the installed 412-record manifest
+verified. Entry commit: `ba1e9206f4bb4cc7067e7bd70a951191b64fa51b`.
+
+- Meter SHA-256: `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
+- Manifest SHA-256: `7dcf2d707a908b53530dbc2dab4f4fa0e59bf8c033434c95db47c29339128480`.
+- Meter conformance: 19/20 matching outcomes, no enforced failure. The approved
+  informational `absent-key-is-not-null` divergence remains reported, not waived
+  or relabelled. The suite does not establish every accepted policy.
+
+## Builder lanes and boundaries
+
+1. Phase 1.1: a fresh serializer/harness context implements case reading,
+   pinned Prolog execution and semantic round trips for all 376 cases. It must
+   not inspect `Oracle/`. Follow H4 grounding, stipulations and both documented
+   reader exceptions; do not filter difficult cases or confuse the earlier
+   directive baseline with round-trip or Lean parity.
+2. Phase 1.2: a separate fresh oracle context for each section, in order
+   7703, 3306, 3301, 2, 63, 68, 151, 152, 1. It must not inspect serializer or
+   generator implementation. Shared semantics are only `human/DECISIONS.md`
+   and `Interface/`, with original Prolog source read-only. Cite every clause
+   and annotate the applicable NAF/CUT/AGG sites. No semantic defaults, `sorry`,
+   `partial` or `native_decide` may stand in for missing implementations.
+3. The orchestrator owns integration and retains per-section outputs, full
+   mismatch evidence, runtime/source/meter identities, and the 376-case coverage
+   accounting. Test the actual read-only corpus mount before executing case
+   programs. Never expose one lane's implementation to the other to obtain a
+   passing comparison. Missing shared decisions stop the affected lane.
+
+The production V7/V8 `OracleGuards` must use real oracle definitions; the Phase 0
+test-only instance is not an implementation. `human/` remains strictly read-only.
+The meter is invoked only via its CLI in fresh output directories, never read.
+Existing runtime archival obligations remain open and are not erased by sign-off.
+
+## Exact human deliverables for Checkpoint 1
+
+No further human artifact was required at Phase 1 entry. The first pass has
+since found the specific issues below; development is paused pending review,
+without retracting the Checkpoint 0 sign-off.
+
+### Current clarification requests
+
+- Q-008/A-008: approve P-WIRE's replacement of stale pending/blocked producer
+  wording with a lossless codec of the already-approved H1-H6/Interface shape.
+  Confirm the proposed record unit (one household, target and bound-argument
+  tuple) before freezing a corpus. No release or counting-unit change is yet
+  installed. The control-character JSON defect is classified as restoration,
+  but its correction is paused with development; the diagnostic test is retained.
+- Q-009/Q-010: review the reproduced sibling cycle in the R5 §7703/§152 recursion
+  group. Current child-graph acyclicity does not justify the stated person-count
+  fuel bound. Any new reference-domain/termination rule must be the owner's
+  explicit decision; no rule, truncation or source correction is implemented.
+  A-009's suggested equal-birthday exclusion is not a sufficient remedy: a
+  second diagnostic uses multiple different birth dates per person and reaches
+  the same cycle without any cross-person equal date. A justified replacement
+  domain/termination rule remains open; do not adopt the suggested fuel bound
+  from that incomplete argument.
+
+The source-reader slice has 26 passing tests covering all 376 case files, with
+its full lexical accounting retained in `docs/phase1/`. Grounding, semantic
+round trips and oracle parity remain unimplemented. The oracle context produced
+a source/mode audit and halted before adding any Lean definitions.
+
+### Review when implementation reaches Checkpoint 1
+
+At Checkpoint 1, Dev must:
+
+- Review the per-section clause/hazard audit and every NAF/CUT/AGG annotation
+  against the signed decisions. Require every hazard to be accounted for.
+- Triage every reported mismatch, reference exception, timeout or uncovered
+  semantic decision. Any semantic clarification belongs in the owner-maintained
+  decisions, with a new protected manifest; the builder does not edit them.
+- Review semantic round-trip evidence for all 376 cases and zero Lean/Prolog
+  parity mismatches across that same population, with the meter hash unchanged
+  from the entry identity above. Placeholders and missing outputs do not pass.
+- Explicitly sign off Checkpoint 1 before Phase 2 begins.
+
+Checkpoint 2 still requires human-authored gate exploits; Checkpoint 3a still
+requires human-signed invariant statements. Neither is newly due in Phase 1.
+
+## Historical Phase 0 handoff
+
+The record below is retained as history. Its earlier absent-meter and pending
+sign-off statements are superseded by the Phase 1 authorization above.
 
 ## Current state after Dev's 2026-09-21 decisions
 

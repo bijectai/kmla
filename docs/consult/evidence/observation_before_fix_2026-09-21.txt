@@ -1,0 +1,17 @@
+test_all_control_characters_round_trip_as_json (__main__.ObservationTests.test_all_control_characters_round_trip_as_json) ... FAIL
+test_existing_tags_unicode_and_numeric_precision (__main__.ObservationTests.test_existing_tags_unicode_and_numeric_precision) ... ok
+test_solution_set_sorts_and_deduplicates_encoded_tuples (__main__.ObservationTests.test_solution_set_sorts_and_deduplicates_encoded_tuples) ... ok
+
+======================================================================
+FAIL: test_all_control_characters_round_trip_as_json (__main__.ObservationTests.test_all_control_characters_round_trip_as_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/devrashie/Documents/csProjects/kmla/scripts/test_observation.py", line 57, in test_all_control_characters_round_trip_as_json
+    self.assertTrue(all(ord(c) >= 32 for c in output[:-1]), repr(output))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : '{"a":"prefix\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\n\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1fsuffix"}\n'
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.063s
+
+FAILED (failures=1)

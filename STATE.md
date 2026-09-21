@@ -2,6 +2,40 @@
 
 ## Current phase
 
+2026-09-21 (Checkpoint 0 signed off): Dev explicitly stated, "I sign off
+checkpoint 0 and authorize phase 1". Checkpoint 0 is cleared; Phase 1 entry
+preparation is active. Entry commit `ba1e9206f4bb4cc7067e7bd70a951191b64fa51b`;
+the immediately preceding strict run had 17 passed, 0 failed, 0 outstanding,
+with the 412-record manifest verifying. The meter hash frozen at entry is
+`c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
+The phase handoff now specifies separate fresh contexts, read-only execution,
+and the owner's exact Checkpoint 1 review and sign-off deliverables. Sign-off
+does not waive the later checkpoints or unfinished runtime archival work.
+
+Phase 1 work is now paused for the A-008 producer-release escalation and the
+R5 sibling-cycle finding and remedy review in Q-009/Q-010, following Dev's
+stop-and-ask rule.
+Two fresh contexts were used without sharing implementations. The serializer
+reader passes 26 tests across all 376 original cases; per-case source hashes
+and lexical counts are retained under `docs/phase1/`. It does not ground or
+serialize Households yet. The §7703 context audited dependencies/modes and
+stopped before implementing any Lean definitions. No oracle parity is claimed.
+The shared JSON diagnostic has 2 passing tests and 1 reproduced failure for
+control-character escaping; no fix, domain restriction or comparison change
+has been installed while approval is pending.
+Its verbatim output is retained in
+`docs/consult/evidence/observation_before_fix_2026-09-21.txt`. Eight existing
+verifier regressions, four invocation regressions, eighteen runtime regressions
+and all 29 existing Interface guards still pass. The entry meter and manifest
+hashes are unchanged; all 412 protected records still verify.
+
+Actual Docker mount inspection verified both `/human` and `/corpus` read-only
+without attempting a protected write. The live runtime record matched the
+approved local identity. Evidence: `docs/phase1/ENTRY_2026-09-21.json`.
+
+The entries below are historical; their pending Checkpoint 0 sign-off statements
+are superseded by this explicit authorization.
+
 2026-09-21 (owner audit and acceptance): Dev states that the installed parity
 meter was independently audited and accepted. It is now the owner-accepted
 protected meter for Checkpoint 0. No Phase 1 lane is authorized by this
@@ -171,13 +205,77 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Current entry hold (owner audit complete; Checkpoint 0 sign-off remains)
+### A-009 proposed remedy is not yet sound (Q-010)
+
+Fable confirmed the original R5 flaw and proposed a V10 excluding equal birth
+days among related distinct persons. Orchestrator review found that its proof
+silently assumes a single birth date per person, which H1/H5 do not require.
+A second read-only pinned diagnostic gives `a` dates 2000 and 2002, and `b` date
+2001: no cross-person date equality, both age-order directions succeed, and
+the query again exhausts 100,000 and 1,000,000 inferences. Removing only the
+sibling fact in the separate control makes it finish. Q-010 requests an explicit
+correction; A-009 is preserved unchanged. Do not treat its V10 or suggested
+fuel bound as a sufficient remedy or ask Dev to adopt them as proved.
+All source and result evidence is retained in `r5_multibirth_cycle*`.
+
+### Phase 1.2 §7703 recursive closure — R5 reproduced finding (Q-009)
+
+The fresh oracle lane found that R5's child-descent termination argument does
+not cover the sibling branch in `section152.pl:178–186`. Sibling symmetry
+(`utils.pl:131–144`) and equal birth dates accepted at `section152.pl:204`
+permit the static cycle in `docs/phase1/ORACLE_7703.md`: two married siblings
+residing together cause `s7703 → s7703_b_1 → s152_c → s152_c_1_E → s7703`
+to alternate siblings. The parent graph can be empty, with no V5/V6/V7 triggers
+and year 2018 outside V8's divergent region. The orchestrator then ran the
+diagnostic input on the measured pinned runtime, with the source read-only:
+the query exhausted both 100,000 and 1,000,000 inferences; its finite marriage
+prefix succeeded, and removing only the sibling fact in a separate in-memory
+control made the query finish. Exact fixture and full bounded results are
+retained under `docs/consult/evidence/r5_sibling_cycle*`. This is bounded runtime
+evidence plus a static repeated-call argument, not a formal divergence proof or
+a kernel-checked production `Valid` certificate.
+
+Halt the affected recursive definitions; do not implement fuel exhaustion as
+a truncation heuristic, alter `Valid`, or replace dependencies with stubs.
+The independent `(a)`, `(b)(2)`, membership and `(b)(3)` slice does not reach
+that closure. The orchestrator should route the source/spec evidence to a
+numbered Fable consult: does this invalidate R5/R9, and which owner-approved
+termination/domain decision is needed? No revised design or shared Interface
+edit is made by this lane. Checkpoint 0 authorization remains in force.
+
+### Phase 1 producer-release escalation (A-008)
+
+Fable classifies JSON control-character escaping as builder-owned restoration,
+not a semantic change. The three-test diagnostic suite reproduces that defect;
+the other two tests pass. The correction has not yet been applied: development
+is paused for owner clarification as requested.
+
+A-008 also escalates P-WIRE: owner approval of wording that releases PARITY.md's
+stale producer block after signed H1-H6/Interface approval. It recommends a record
+per (household, target, bound-argument tuple) and asks Dev to confirm that counting
+unit before corpus freeze. No new schema, record-count unit, contract release or
+comparison change has been installed. Checkpoint 0 remains signed off.
+
+### Phase 1 shared observation reproduction (Q-008; classification complete)
+
+The shared `escapeJson` emits literal U+000A in an atom even though the
+well-formedness check accepts that nonempty term. A pinned Lean 4.33.1 probe of
+`Solution.encode [.atom "line\nbreak"]` produced invalid multiline JSON;
+`Household.v1` returned true. Evidence and the exact probe are in Q-008.
+A-008 classifies this as restoration of the existing H6.2 JSON requirement,
+with byte-stable existing encodings and pinned control-character escape spellings.
+No shared encoder, `Valid`, protected artifact or comparison expectation has
+been changed. Its separate producer-release escalation and Q-009's semantic
+finding are the reasons development is now paused, not an unresolved question
+about whether raw control characters are valid JSON.
+
+### Checkpoint 0 entry hold — resolved
 
 The meter, checks, retained results and complete protected manifest are
 installed; strict verification has zero Checkpoint 0 failures and zero current
-outstanding items. Dev has independently audited and accepted the meter. Dev's
-explicit Checkpoint 0 sign-off remains required before isolated Phase 1 lanes
-are dispatched.
+outstanding items. Dev independently audited and accepted the meter, then
+explicitly signed off Checkpoint 0 and authorized Phase 1. The entry hold is
+resolved. No production parity, round-trip or Checkpoint 1 result is yet claimed.
 
 Checkpoint 2 exploits and Checkpoint 3a signed statements remain separately
 reported later deliverables, not reasons to block Checkpoint 0. Native baseline
@@ -425,9 +523,9 @@ No commits, pushes, or PRs were created in this session.
 
 ## Resume condition
 
-The semantic decisions are accepted; no submodule or second repository is
-required. The meter is installed, black-box acceptance is reported, the
-protected manifest covers it, and Checkpoint 0 has zero failures and zero
-current outstanding items. Resume Phase 1 only after Dev explicitly signs off
-Checkpoint 0. Preserve the read-only corpus boundary and separate oracle and
-serializer/generator contexts.
+Checkpoint 0 remains explicitly signed off. Phase 1 implementation is paused
+for Dev's decisions on A-008/P-WIRE and Q-009/Q-010's recursion finding. Resume only
+under the approved resolution, with separate oracle and serializer/generator
+contexts and the read-only execution boundary. Checkpoint 1 requires zero parity mismatches
+on all 376 cases, an unchanged meter hash, owner hazard/mismatch review, and
+explicit owner sign-off before Phase 2.
