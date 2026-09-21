@@ -1,0 +1,27 @@
+{
+  "tz": "UTC",
+  "image": "kmla-swipl:7.2.3",
+  "cases": 376,
+  "exit_codes": {
+    "0": 376
+  },
+  "classification": {
+    "clean": 374,
+    "directive_failed": 2
+  },
+  "note": "Exit status is 0 for every case regardless of outcome; stderr is the only signal.",
+  "not_clean": [
+    {
+      "id": "s3306_a_1_B_neg",
+      "exit": 0,
+      "class": "directive_failed",
+      "stderr": "Warning: /corpus/cases/s3306_a_1_B_neg.pl:25:\n"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "exit": 0,
+      "class": "directive_failed",
+      "stderr": "Warning: /corpus/cases/s3306_a_2_B_neg.pl:78:\n"
+    }
+  ]
+}

@@ -1,0 +1,4795 @@
+{
+  "definitions": {
+    "clause": "one top-level term ended by a full stop outside comments and quoted literals",
+    "fact": "a non-directive clause with no top-level neck operator",
+    "rule": "a non-directive clause with a top-level neck operator",
+    "test_directive": "a directive that is not consult, halt, or discontiguous",
+    "unterminated_residue": "text after the last full stop; the B005 defect signature",
+    "variable_bearing_fact": "a fact whose masked text contains a variable token; anonymous-only and named-variable facts are counted separately because the distinction is an owner decision",
+    "unreadable_signature": "a name/arity asserted by a case whose NAME is never called by a statute rule body and whose exact signature no statute program defines. Matching is by name/arity, because a name defined at one arity does not make another arity reachable. A lexical result, not a proof of runtime inertness",
+    "inert_signature": "an unreadable signature that no case-file rule calls either, so nothing in the loaded program can reach it",
+    "extending_signature": "a name/arity a case asserts that a statute program also defines; these are the facts-only-ingestion population"
+  },
+  "summary": {
+    "case_files": 376,
+    "clauses": 7122,
+    "facts": 5342,
+    "rules": 434,
+    "directives": {
+      "consult": 378,
+      "discontiguous": 218,
+      "halt": 376,
+      "test": 374
+    },
+    "files_without_a_test_directive": 2,
+    "files_with_unterminated_residue": 0,
+    "variable_bearing_facts_anonymous_only": 108,
+    "variable_bearing_facts_with_named_variables": 0,
+    "rule_clauses_extending_statute_predicates": 30,
+    "distinct_fact_predicates": 76,
+    "distinct_rule_head_predicates": 26,
+    "unreadable_signatures": 16,
+    "unreadable_clauses": 77,
+    "inert_signatures": 8,
+    "inert_clauses": 24,
+    "signatures_extending_statutes": 28,
+    "clauses_extending_statutes": 224,
+    "files_extending_statutes": 151
+  },
+  "unterminated_clauses": [],
+  "files_without_a_test_directive": [
+    "human/sara/sara/cases/s3306_c_2_neg.pl",
+    "human/sara/sara/cases/s3306_c_2_pos.pl"
+  ],
+  "rules_extending_statute_predicates": [
+    {
+      "file": "human/sara/sara/cases/s152_c_1_pos.pl",
+      "line": 25,
+      "predicate": "s152_c_3",
+      "clause": "s152_c_3(bob,alice,Year) :- between(2015,2020,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_1_B_pos.pl",
+      "line": 40,
+      "predicate": "s151",
+      "clause": "s151(bob,_,[charlie],[0],Year) :- between(2014,2017,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_ii_pos.pl",
+      "line": 39,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_pos.pl",
+      "line": 40,
+      "predicate": "s152_c",
+      "clause": "s152_c(charlie,bob,Year) :- between(2004,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_B_neg.pl",
+      "line": 40,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_B_pos.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_neg.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_pos.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_A_neg.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_A_pos.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_B_neg.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(bob,charlie,Year) :- between(2015,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_B_pos.pl",
+      "line": 35,
+      "predicate": "s152_d_2_H",
+      "clause": "s152_d_2_H(charlie,bob,Year,_,Start_day,End_day) :- between(2015,2019,Year),first_day_year(Year,Start_day),last_day_year(Year,End_day)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3301_neg.pl",
+      "line": 11,
+      "predicate": "s3306_a",
+      "clause": "s3306_a(alice,Year) :- between(2015,2016,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3301_pos.pl",
+      "line": 11,
+      "predicate": "s3306_a",
+      "clause": "s3306_a(alice,Year) :- between(2015,2016,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_B_neg.pl",
+      "line": 20,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(Employment_event,alice,bob,Day,_) :- member(Day, [\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]), atom_concat(\"alice_employer_\",Day,Employment_event)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_B_pos.pl",
+      "line": 22,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(Employment_event,alice,bob,Day,_) :- member(Day, [\"2017-01-24\", \"2017-02-04\", \"2017-03-03\", \"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]), atom_concat(\"alice_employer_\",Day,Employment_event)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_B_neg.pl",
+      "line": 22,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(Service_event,alice,Employee,Day,_) :- member(Day, [\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]), ( ( Day == \"2017-01-24\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-02-04\", member(Employee, [bob,cameron,fred]) ); ( Day == \"2017-03-03\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-03-19\", member(Employee, [cameron,dan,emily,fred,george]) ); ( Day == \"2017-04-02\", member(Employee, [bob,cameron,dan,fred,george]) ); ( Day == \"2017-05-09\", member(Employee, [cameron,dan,emily,fred,george]) ); ( Day == \"2017-10-15\", member(Employee, [bob,cameron,dan,emily,george]) ); ( Day == \"2017-10-25\", member(Employee, [bob,emily,fred,george]) ); ( Day == \"2017-11-08\", member(Employee, [bob,cameron,emily,fred,george]) ); ( Day == \"2017-11-22\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-12-01\", member(Employee, [bob,cameron,dan,emily,george]) ); ( Day == \"2017-12-03\", member(Employee, [bob,cameron,dan,emily,george]) ) ), atom_concat(\"alice_employer_\",Day,Service_event)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_B_pos.pl",
+      "line": 22,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(Service_event,alice,Employee,Day,_) :- member(Day, [\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]), ( ( Day == \"2017-01-24\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-02-04\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-03-03\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-03-19\", member(Employee, [cameron,dan,emily,fred,george]) ); ( Day == \"2017-04-02\", member(Employee, [bob,cameron,dan,fred,george]) ); ( Day == \"2017-05-09\", member(Employee, [cameron,dan,emily,fred,george]) ); ( Day == \"2017-10-15\", member(Employee, [bob,cameron,dan,emily,george]) ); ( Day == \"2017-10-25\", member(Employee, [bob,cameron,dan,emily,fred,george]) ); ( Day == \"2017-11-08\", member(Employee, [bob,cameron,emily,fred,george]) ); ( Day == \"2017-11-22\", member(Employee, [bob,cameron,dan,emily,fred]) ); ( Day == \"2017-12-01\", member(Employee, [bob,cameron,dan,emily,george]) ); ( Day == \"2017-12-03\", member(Employee, [bob,cameron,dan,emily,george]) ) ), atom_concat(\"alice_employer_\",Day,Service_event)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_15_neg.pl",
+      "line": 10,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(alice_employer,alice,bob,Day,_) :- ( nonvar(Day), is_before(\"2011-02-01\",Day), is_before(Day,\"2019-11-19\") ); var(Day)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_15_pos.pl",
+      "line": 10,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(alice_employer,alice,bob,Day,_) :- ( nonvar(Day), is_before(\"2011-02-01\",Day), is_before(Day,\"2019-11-19\") ); var(Day)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_7_neg.pl",
+      "line": 28,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(alice_employer,alice,bob,Day,_) :- ( nonvar(Day), is_before(\"2017-06-01\",Day), is_before(Day,\"2017-08-31\") ); var(Day)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_7_pos.pl",
+      "line": 28,
+      "predicate": "s3306_c",
+      "clause": "s3306_c(alice_employer,alice,bob,Day,_) :- ( nonvar(Day), is_before(\"2017-06-01\",Day), is_before(Day,\"2017-08-31\") ); var(Day)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_2_neg.pl",
+      "line": 26,
+      "predicate": "s3306_b",
+      "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_) :- \\+ s3306_c_2(alice_employer,_,2017)"
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_2_pos.pl",
+      "line": 26,
+      "predicate": "s3306_b",
+      "clause": "s3306_b(300,alice_pays,alice_employer,alice,bob,alice,bob,_) :- s3306_c_2(alice_employer,_,2017)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_1_neg.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_1_pos.pl",
+      "line": 38,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_2_neg.pl",
+      "line": 46,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_2_pos.pl",
+      "line": 35,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_3_neg.pl",
+      "line": 35,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_3_pos.pl",
+      "line": 35,
+      "predicate": "s151_c_applies",
+      "clause": "s151_c_applies(alice,charlie,Year) :- between(2017,2019,Year)"
+    }
+  ],
+  "unreadable_signatures": {
+    "agricultural_service/3": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 2,
+      "called_by_case_rules": 14,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_83.pl",
+        "human/sara/sara/cases/tax_case_91.pl"
+      ]
+    },
+    "alice_employer/3": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "called_by_case_rules": 12,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_10.pl"
+      ]
+    },
+    "alice_household_maintenance/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 10,
+      "called_by_case_rules": 60,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s7703_b_1_neg.pl",
+        "human/sara/sara/cases/s7703_b_1_pos.pl",
+        "human/sara/sara/cases/s7703_b_2_neg.pl",
+        "human/sara/sara/cases/s7703_b_2_pos.pl",
+        "human/sara/sara/cases/s7703_b_3_neg.pl",
+        "human/sara/sara/cases/s7703_b_3_pos.pl",
+        "human/sara/sara/cases/tax_case_73.pl",
+        "human/sara/sara/cases/tax_case_78.pl",
+        "human/sara/sara/cases/tax_case_84.pl",
+        "human/sara/sara/cases/tax_case_9.pl"
+      ]
+    },
+    "bob_household_maintenance/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 32,
+      "called_by_case_rules": 197,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s2_a_1_B_neg.pl",
+        "human/sara/sara/cases/s2_a_1_B_pos.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_II_neg.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_II_pos.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_I_neg.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_I_pos.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_neg.pl",
+        "human/sara/sara/cases/s2_b_1_A_i_pos.pl",
+        "human/sara/sara/cases/s2_b_1_A_ii_neg.pl",
+        "human/sara/sara/cases/s2_b_1_A_ii_pos.pl",
+        "human/sara/sara/cases/s2_b_1_A_neg.pl",
+        "human/sara/sara/cases/s2_b_1_A_pos.pl",
+        "human/sara/sara/cases/s2_b_1_B_neg.pl",
+        "human/sara/sara/cases/s2_b_1_B_pos.pl",
+        "human/sara/sara/cases/s2_b_1_neg.pl",
+        "human/sara/sara/cases/s2_b_1_pos.pl",
+        "human/sara/sara/cases/s2_b_3_A_neg.pl",
+        "human/sara/sara/cases/s2_b_3_A_pos.pl",
+        "human/sara/sara/cases/s2_b_3_B_neg.pl",
+        "human/sara/sara/cases/s2_b_3_B_pos.pl",
+        "human/sara/sara/cases/tax_case_13.pl",
+        "human/sara/sara/cases/tax_case_17.pl",
+        "human/sara/sara/cases/tax_case_2.pl",
+        "human/sara/sara/cases/tax_case_21.pl",
+        "human/sara/sara/cases/tax_case_30.pl",
+        "human/sara/sara/cases/tax_case_36.pl",
+        "human/sara/sara/cases/tax_case_48.pl",
+        "human/sara/sara/cases/tax_case_66.pl",
+        "human/sara/sara/cases/tax_case_7.pl",
+        "human/sara/sara/cases/tax_case_73.pl",
+        "human/sara/sara/cases/tax_case_9.pl",
+        "human/sara/sara/cases/tax_case_90.pl"
+      ]
+    },
+    "bob_income/3": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "called_by_case_rules": 4,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_90.pl"
+      ]
+    },
+    "bob_income/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s2_b_3_B_pos.pl"
+      ]
+    },
+    "joint_return_alice_and_bob/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 2,
+      "called_by_case_rules": 10,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s7703_b_2_pos.pl",
+        "human/sara/sara/cases/tax_case_9.pl"
+      ]
+    },
+    "medical_institution_/1": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_c_21_neg.pl"
+      ]
+    },
+    "patient/2": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_25.pl"
+      ]
+    },
+    "payment_for_labor/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 2,
+      "called_by_case_rules": 12,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_83.pl",
+        "human/sara/sara/cases/tax_case_91.pl"
+      ]
+    },
+    "retirement_/1": {
+      "asserted_as_facts": 11,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_b_10_A_neg.pl",
+        "human/sara/sara/cases/s3306_b_10_A_pos.pl",
+        "human/sara/sara/cases/s3306_b_10_B_neg.pl",
+        "human/sara/sara/cases/s3306_b_10_B_pos.pl",
+        "human/sara/sara/cases/s3306_b_2_A_neg.pl",
+        "human/sara/sara/cases/s3306_b_2_C_neg.pl",
+        "human/sara/sara/cases/tax_case_20.pl",
+        "human/sara/sara/cases/tax_case_26.pl",
+        "human/sara/sara/cases/tax_case_29.pl",
+        "human/sara/sara/cases/tax_case_32.pl",
+        "human/sara/sara/cases/tax_case_94.pl"
+      ]
+    },
+    "s151_d/4": {
+      "asserted_as_facts": 5,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 3,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s151_d_2_neg.pl",
+        "human/sara/sara/cases/s152_d_1_B_neg.pl",
+        "human/sara/sara/cases/s152_d_1_B_pos.pl",
+        "human/sara/sara/cases/s152_d_1_D_neg.pl",
+        "human/sara/sara/cases/s152_d_1_D_pos.pl"
+      ]
+    },
+    "s2_a/5": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 7,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s1_a_2_i_pos.pl"
+      ]
+    },
+    "s63_c_3/4": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 1,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s63_d_2_neg.pl"
+      ]
+    },
+    "sibling_/1": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_c_5_neg.pl",
+        "human/sara/sara/cases/tax_case_58.pl"
+      ]
+    },
+    "someone_household_maintenance/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 3,
+      "called_by_case_rules": 18,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s2_b_1_A_neg.pl",
+        "human/sara/sara/cases/s7703_b_2_neg.pl",
+        "human/sara/sara/cases/tax_case_2.pl"
+      ]
+    }
+  },
+  "inert_signatures": {
+    "bob_income/4": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s2_b_3_B_pos.pl"
+      ]
+    },
+    "medical_institution_/1": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_c_21_neg.pl"
+      ]
+    },
+    "patient/2": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/tax_case_25.pl"
+      ]
+    },
+    "retirement_/1": {
+      "asserted_as_facts": 11,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_b_10_A_neg.pl",
+        "human/sara/sara/cases/s3306_b_10_A_pos.pl",
+        "human/sara/sara/cases/s3306_b_10_B_neg.pl",
+        "human/sara/sara/cases/s3306_b_10_B_pos.pl",
+        "human/sara/sara/cases/s3306_b_2_A_neg.pl",
+        "human/sara/sara/cases/s3306_b_2_C_neg.pl",
+        "human/sara/sara/cases/tax_case_20.pl",
+        "human/sara/sara/cases/tax_case_26.pl",
+        "human/sara/sara/cases/tax_case_29.pl",
+        "human/sara/sara/cases/tax_case_32.pl",
+        "human/sara/sara/cases/tax_case_94.pl"
+      ]
+    },
+    "s151_d/4": {
+      "asserted_as_facts": 5,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 3,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s151_d_2_neg.pl",
+        "human/sara/sara/cases/s152_d_1_B_neg.pl",
+        "human/sara/sara/cases/s152_d_1_B_pos.pl",
+        "human/sara/sara/cases/s152_d_1_D_neg.pl",
+        "human/sara/sara/cases/s152_d_1_D_pos.pl"
+      ]
+    },
+    "s2_a/5": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 7,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s1_a_2_i_pos.pl"
+      ]
+    },
+    "s63_c_3/4": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": true,
+      "name_called_by_statutes": 1,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s63_d_2_neg.pl"
+      ]
+    },
+    "sibling_/1": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "called_by_case_rules": 0,
+      "name_defined_by_statutes": false,
+      "name_called_by_statutes": 0,
+      "signature_defined_by_statutes": false,
+      "files": [
+        "human/sara/sara/cases/s3306_c_5_neg.pl",
+        "human/sara/sara/cases/tax_case_58.pl"
+      ]
+    }
+  },
+  "signatures_extending_statutes": {
+    "s151/5": {
+      "asserted_as_facts": 5,
+      "asserted_as_rules": 1,
+      "files": 6
+    },
+    "s151_b/3": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "files": 1
+    },
+    "s151_b_applies/2": {
+      "asserted_as_facts": 4,
+      "asserted_as_rules": 0,
+      "files": 4
+    },
+    "s151_b_applies/3": {
+      "asserted_as_facts": 5,
+      "asserted_as_rules": 0,
+      "files": 5
+    },
+    "s151_c/4": {
+      "asserted_as_facts": 4,
+      "asserted_as_rules": 0,
+      "files": 4
+    },
+    "s151_c_applies/3": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 14,
+      "files": 15
+    },
+    "s152_b_2/4": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s152_c/3": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 1,
+      "files": 2
+    },
+    "s152_c_1/3": {
+      "asserted_as_facts": 8,
+      "asserted_as_rules": 0,
+      "files": 6
+    },
+    "s152_c_2/4": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s152_c_3/3": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "files": 1
+    },
+    "s152_d_2_H/6": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 1,
+      "files": 1
+    },
+    "s2_a/3": {
+      "asserted_as_facts": 19,
+      "asserted_as_rules": 0,
+      "files": 19
+    },
+    "s2_b/3": {
+      "asserted_as_facts": 19,
+      "asserted_as_rules": 0,
+      "files": 19
+    },
+    "s3306_a/2": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 2,
+      "files": 2
+    },
+    "s3306_b/8": {
+      "asserted_as_facts": 18,
+      "asserted_as_rules": 2,
+      "files": 10
+    },
+    "s3306_c/5": {
+      "asserted_as_facts": 0,
+      "asserted_as_rules": 8,
+      "files": 8
+    },
+    "s63/3": {
+      "asserted_as_facts": 60,
+      "asserted_as_rules": 0,
+      "files": 60
+    },
+    "s63_c/3": {
+      "asserted_as_facts": 1,
+      "asserted_as_rules": 0,
+      "files": 1
+    },
+    "s63_c_1/3": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s63_c_2/3": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s63_c_3/3": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s63_d/4": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s63_f_1_A/2": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s63_f_1_B/3": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s68_b/3": {
+      "asserted_as_facts": 2,
+      "asserted_as_rules": 0,
+      "files": 2
+    },
+    "s7703/4": {
+      "asserted_as_facts": 26,
+      "asserted_as_rules": 0,
+      "files": 26
+    },
+    "total_wages_employer/6": {
+      "asserted_as_facts": 4,
+      "asserted_as_rules": 0,
+      "files": 2
+    }
+  },
+  "variable_bearing_facts": {
+    "anonymous_only": [
+      {
+        "file": "human/sara/sara/cases/s151_a_neg.pl",
+        "line": 15,
+        "clause": "s151_c(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s151_a_pos.pl",
+        "line": 15,
+        "clause": "s151_c(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s151_d_2_neg.pl",
+        "line": 10,
+        "clause": "s151_d(alice,bob,_,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s151_d_3_A_neg.pl",
+        "line": 15,
+        "clause": "s151_c(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s151_d_3_A_pos.pl",
+        "line": 15,
+        "clause": "s151_c(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s152_d_1_B_neg.pl",
+        "line": 15,
+        "clause": "s151_d(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s152_d_1_B_pos.pl",
+        "line": 10,
+        "clause": "s151_d(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s152_d_1_D_neg.pl",
+        "line": 20,
+        "clause": "s151_d(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s152_d_1_D_pos.pl",
+        "line": 18,
+        "clause": "s151_d(alice,_,2000,2015)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_i_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_i_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_ii_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_ii_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_iii_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_iii_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_iv_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_iv_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_v_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_1_v_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_i_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_i_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,_,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_ii_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_ii_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_iii_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_iii_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_iv_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_iv_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_v_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_a_2_v_pos.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_i_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_i_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_ii_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_ii_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_iii_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_iii_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_iv_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_iv_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_v_neg.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_b_v_pos.pl",
+        "line": 11,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_c_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_i_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_i_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_ii_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_ii_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_iii_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_iii_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_iv_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_iv_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_neg.pl",
+        "line": 11,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_v_neg.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s1_d_v_pos.pl",
+        "line": 11,
+        "clause": "s7703(alice,spouse,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s2_b_1_A_i_II_pos.pl",
+        "line": 44,
+        "clause": "s152_b_2(charlie,_,bob,2018)"
+      },
+      {
+        "file": "human/sara/sara/cases/s2_b_1_A_i_neg.pl",
+        "line": 44,
+        "clause": "s152_b_2(bob,_,charlie,2018)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3301_neg.pl",
+        "line": 12,
+        "clause": "total_wages_employer(alice,453009,_,_,\"2015-01-01\",\"2015-12-31\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3301_neg.pl",
+        "line": 13,
+        "clause": "total_wages_employer(alice,443870,_,_,\"2016-01-01\",\"2016-12-31\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3301_pos.pl",
+        "line": 12,
+        "clause": "total_wages_employer(alice,453009,_,_,\"2015-01-01\",\"2015-12-31\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3301_pos.pl",
+        "line": 13,
+        "clause": "total_wages_employer(alice,443870,_,_,\"2016-01-01\",\"2016-12-31\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_A_neg.pl",
+        "line": 10,
+        "clause": "s3306_b(3200,_,bob_works,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_A_neg.pl",
+        "line": 13,
+        "clause": "s3306_b(4500,_,alice_works,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_A_pos.pl",
+        "line": 10,
+        "clause": "s3306_b(3200,_,bob_works,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_A_pos.pl",
+        "line": 13,
+        "clause": "s3306_b(4500,_,alice_works,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_neg.pl",
+        "line": 22,
+        "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_neg.pl",
+        "line": 34,
+        "clause": "s3306_b(4500,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_pos.pl",
+        "line": 22,
+        "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_1_pos.pl",
+        "line": 35,
+        "clause": "s3306_b(4500,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_neg.pl",
+        "line": 22,
+        "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_neg.pl",
+        "line": 34,
+        "clause": "s3306_b(4520,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_pos.pl",
+        "line": 22,
+        "clause": "s3306_b(6771,alice_pays_bob,alice_employer_bob,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_pos.pl",
+        "line": 35,
+        "clause": "s3306_b(6954,alice_pays_charlie,alice_employer_charlie,alice,charlie,alice,charlie,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_pos.pl",
+        "line": 48,
+        "clause": "s3306_b(6872,alice_pays_dan,alice_employer_dan,alice,dan,alice,dan,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_A_pos.pl",
+        "line": 61,
+        "clause": "s3306_b(4520,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_B_neg.pl",
+        "line": 75,
+        "clause": "purpose_(_,\"agricultural labor\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_2_B_pos.pl",
+        "line": 75,
+        "clause": "purpose_(_,\"agricultural labor\")"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_3_neg.pl",
+        "line": 23,
+        "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_3_neg.pl",
+        "line": 38,
+        "clause": "s3306_b(4200,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_3_pos.pl",
+        "line": 24,
+        "clause": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s3306_a_3_pos.pl",
+        "line": 40,
+        "clause": "s3306_b(4200,bob_pays,bob_employer,bob,alice,bob,alice,_)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_a_neg.pl",
+        "line": 16,
+        "clause": "s151(alice,4000,_,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_a_pos.pl",
+        "line": 14,
+        "clause": "s151(alice,2000,_,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_b_neg.pl",
+        "line": 16,
+        "clause": "s151(alice,0,_,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_b_pos.pl",
+        "line": 16,
+        "clause": "s151(alice,0,_,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_c_2_A_ii_pos.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_c_2_B_pos.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_c_7_i_neg.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2019)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_c_7_i_pos.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2019)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_d_2_neg.pl",
+        "line": 14,
+        "clause": "s63_c_3(alice,_,1200,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s63_d_2_pos.pl",
+        "line": 14,
+        "clause": "s151(alice,2000,[alice],_,2017)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_1_neg.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_1_pos.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_2_neg.pl",
+        "line": 15,
+        "clause": "s63_d(alice,_,60000,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_2_neg.pl",
+        "line": 16,
+        "clause": "s2_a(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_2_pos.pl",
+        "line": 15,
+        "clause": "s63_d(alice,_,60000,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_a_2_pos.pl",
+        "line": 16,
+        "clause": "s2_b(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_A_neg.pl",
+        "line": 14,
+        "clause": "s7703(alice,_,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_A_pos.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_B_neg.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_B_pos.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_C_neg.pl",
+        "line": 14,
+        "clause": "s2_b(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_D_neg.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_b_1_D_pos.pl",
+        "line": 14,
+        "clause": "s7703(alice,_,_,2016)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_f_neg.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2014)"
+      },
+      {
+        "file": "human/sara/sara/cases/s68_f_pos.pl",
+        "line": 14,
+        "clause": "s2_a(alice,_,2018)"
+      }
+    ],
+    "named_variables": []
+  },
+  "file_shapes": {
+    "consult=1 discontiguous=0 test=1 halt=1": 217,
+    "consult=1 discontiguous=1 test=0 halt=1": 2,
+    "consult=1 discontiguous=1 test=1 halt=1": 94,
+    "consult=1 discontiguous=2 test=1 halt=1": 61,
+    "consult=2 discontiguous=0 test=1 halt=1": 2
+  },
+  "fact_predicates": {
+    "agent_": 1298,
+    "american_employer_": 7,
+    "amount_": 348,
+    "attending_classes_": 8,
+    "beneficiary_": 18,
+    "birth_": 29,
+    "blindness_": 7,
+    "brother_": 13,
+    "business_": 2,
+    "business_trust_": 2,
+    "citizenship_": 14,
+    "country_": 14,
+    "daughter_": 1,
+    "death_": 50,
+    "deduction_": 20,
+    "destination_": 1,
+    "disability_": 4,
+    "educational_institution_": 7,
+    "end_": 400,
+    "enrollment_": 8,
+    "father_": 35,
+    "hospital_": 4,
+    "incarceration_": 3,
+    "income_": 120,
+    "international_organization_": 1,
+    "joint_return_": 53,
+    "legal_separation_": 6,
+    "location_": 113,
+    "marriage_": 156,
+    "means_": 13,
+    "medical_institution_": 1,
+    "medical_patient_": 4,
+    "migration_": 1,
+    "mother_": 3,
+    "nonresident_alien_": 14,
+    "nurses_training_school_": 1,
+    "patient": 2,
+    "patient_": 615,
+    "payment_": 209,
+    "penal_institution_": 2,
+    "plan_": 17,
+    "purpose_": 178,
+    "reason_": 10,
+    "residence_": 141,
+    "retirement_": 11,
+    "s151": 5,
+    "s151_b": 1,
+    "s151_b_applies": 9,
+    "s151_c": 4,
+    "s151_c_applies": 1,
+    "s151_d": 5,
+    "s152_b_2": 2,
+    "s152_c": 1,
+    "s152_c_1": 8,
+    "s152_c_2": 2,
+    "s2_a": 20,
+    "s2_b": 19,
+    "s3306_b": 18,
+    "s63": 60,
+    "s63_c": 1,
+    "s63_c_1": 2,
+    "s63_c_2": 2,
+    "s63_c_3": 3,
+    "s63_d": 2,
+    "s63_f_1_A": 2,
+    "s63_f_1_B": 2,
+    "s68_b": 2,
+    "s7703": 26,
+    "service_": 91,
+    "sibling_": 2,
+    "sister_": 3,
+    "son_": 72,
+    "start_": 1000,
+    "termination_": 5,
+    "total_wages_employer": 4,
+    "type_": 4
+  },
+  "rule_head_predicates": {
+    "agent_": 60,
+    "agricultural_service": 2,
+    "alice_employer": 1,
+    "alice_household_maintenance": 10,
+    "amount_": 52,
+    "bob_household_maintenance": 32,
+    "bob_income": 2,
+    "end_": 53,
+    "income_": 2,
+    "joint_return_": 2,
+    "joint_return_alice_and_bob": 2,
+    "patient_": 9,
+    "payment_": 50,
+    "payment_for_labor": 2,
+    "purpose_": 52,
+    "s151": 1,
+    "s151_c_applies": 14,
+    "s152_c": 1,
+    "s152_c_3": 1,
+    "s152_d_2_H": 1,
+    "s3306_a": 2,
+    "s3306_b": 2,
+    "s3306_c": 8,
+    "service_": 5,
+    "someone_household_maintenance": 3,
+    "start_": 65
+  },
+  "rule_body_goals": {
+    "agricultural_service": 14,
+    "agricultural_service/3": 14,
+    "alice_employer": 12,
+    "alice_employer/3": 12,
+    "alice_household_maintenance": 60,
+    "alice_household_maintenance/4": 60,
+    "atom_concat": 71,
+    "atom_concat/3": 71,
+    "atom_number": 2,
+    "atom_number/2": 2,
+    "between": 81,
+    "between/3": 81,
+    "bob_household_maintenance": 197,
+    "bob_household_maintenance/4": 197,
+    "bob_income": 4,
+    "bob_income/3": 4,
+    "first_day_year": 54,
+    "first_day_year/2": 54,
+    "is_before": 8,
+    "is_before/2": 8,
+    "joint_return_alice_and_bob": 10,
+    "joint_return_alice_and_bob/4": 10,
+    "last_day_year": 51,
+    "last_day_year/2": 51,
+    "member": 55,
+    "member/2": 55,
+    "nonvar": 4,
+    "nonvar/1": 4,
+    "payment_for_labor": 12,
+    "payment_for_labor/4": 12,
+    "s3306_c_2": 2,
+    "s3306_c_2/3": 2,
+    "someone_household_maintenance": 18,
+    "someone_household_maintenance/4": 18,
+    "split_string": 16,
+    "split_string/4": 16,
+    "var": 4,
+    "var/1": 4
+  },
+  "per_file": [
+    {
+      "file": "human/sara/sara/cases/s151_a_neg.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_a_pos.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_b_neg.pl",
+      "clauses": 12,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_b_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_c_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_c_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_1_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_1_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_2_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_2_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_3_A_neg.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_3_A_pos.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_3_B_neg.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_3_B_pos.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_5_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s151_d_5_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_a_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_a_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_b_1_neg.pl",
+      "clauses": 6,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_b_1_pos.pl",
+      "clauses": 6,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_b_2_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_b_2_pos.pl",
+      "clauses": 12,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_B_neg.pl",
+      "clauses": 12,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_B_pos.pl",
+      "clauses": 12,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_E_neg.pl",
+      "clauses": 21,
+      "facts": 18,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_E_pos.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_neg.pl",
+      "clauses": 18,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_1_pos.pl",
+      "clauses": 20,
+      "facts": 14,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_A_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_A_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_B_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_B_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_2_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_3_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_c_3_pos.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_1_B_neg.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_1_B_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_1_D_neg.pl",
+      "clauses": 15,
+      "facts": 10,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_1_D_pos.pl",
+      "clauses": 13,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_A_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_A_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_B_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_B_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_C_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_C_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_D_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_D_pos.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_E_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_E_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_F_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_F_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_G_neg.pl",
+      "clauses": 8,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_G_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_H_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s152_d_2_H_pos.pl",
+      "clauses": 8,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_i_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_i_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_ii_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_ii_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_iii_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_iii_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_iv_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_iv_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_v_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_1_v_pos.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_i_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_i_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_ii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_ii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_iii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_iii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_iv_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_iv_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_v_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_a_2_v_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_i_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_i_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_ii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_ii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_iii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_iii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_iv_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_iv_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_v_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_b_v_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_i_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_i_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_ii_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_ii_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_iii_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_iii_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_iv_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_iv_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_neg.pl",
+      "clauses": 12,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_v_neg.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_c_v_pos.pl",
+      "clauses": 5,
+      "facts": 1,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_i_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_i_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_ii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_ii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_iii_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_iii_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_iv_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_iv_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_v_neg.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s1_d_v_pos.pl",
+      "clauses": 7,
+      "facts": 2,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_1_A_neg.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_1_A_pos.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_1_B_neg.pl",
+      "clauses": 40,
+      "facts": 30,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_1_B_pos.pl",
+      "clauses": 35,
+      "facts": 23,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_2_A_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_2_A_pos.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_2_B_neg.pl",
+      "clauses": 14,
+      "facts": 11,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_a_2_B_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_II_neg.pl",
+      "clauses": 33,
+      "facts": 23,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_II_pos.pl",
+      "clauses": 35,
+      "facts": 24,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_I_neg.pl",
+      "clauses": 33,
+      "facts": 23,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_I_pos.pl",
+      "clauses": 33,
+      "facts": 23,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_neg.pl",
+      "clauses": 35,
+      "facts": 24,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_i_pos.pl",
+      "clauses": 29,
+      "facts": 19,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_ii_neg.pl",
+      "clauses": 41,
+      "facts": 31,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_ii_pos.pl",
+      "clauses": 34,
+      "facts": 22,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_neg.pl",
+      "clauses": 36,
+      "facts": 19,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_A_pos.pl",
+      "clauses": 31,
+      "facts": 19,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_B_neg.pl",
+      "clauses": 31,
+      "facts": 19,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_B_pos.pl",
+      "clauses": 29,
+      "facts": 17,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_neg.pl",
+      "clauses": 29,
+      "facts": 17,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_1_pos.pl",
+      "clauses": 29,
+      "facts": 17,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_A_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_A_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_B_neg.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_B_pos.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_C_neg.pl",
+      "clauses": 13,
+      "facts": 10,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_2_C_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_A_neg.pl",
+      "clauses": 32,
+      "facts": 20,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_A_pos.pl",
+      "clauses": 32,
+      "facts": 20,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_B_neg.pl",
+      "clauses": 29,
+      "facts": 17,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s2_b_3_B_pos.pl",
+      "clauses": 32,
+      "facts": 14,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3301_neg.pl",
+      "clauses": 8,
+      "facts": 2,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3301_pos.pl",
+      "clauses": 8,
+      "facts": 2,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_A_neg.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_A_pos.pl",
+      "clauses": 10,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_B_neg.pl",
+      "clauses": 5,
+      "facts": 0,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_B_pos.pl",
+      "clauses": 5,
+      "facts": 0,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_neg.pl",
+      "clauses": 29,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_1_pos.pl",
+      "clauses": 30,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_A_neg.pl",
+      "clauses": 29,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_A_pos.pl",
+      "clauses": 56,
+      "facts": 52,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_B_neg.pl",
+      "clauses": 6,
+      "facts": 1,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_2_B_pos.pl",
+      "clauses": 6,
+      "facts": 1,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_3_neg.pl",
+      "clauses": 33,
+      "facts": 29,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_a_3_pos.pl",
+      "clauses": 35,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_10_A_neg.pl",
+      "clauses": 21,
+      "facts": 18,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_10_A_pos.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_10_B_neg.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_10_B_pos.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_11_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_11_pos.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_15_neg.pl",
+      "clauses": 20,
+      "facts": 15,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_15_pos.pl",
+      "clauses": 20,
+      "facts": 15,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_2_A_neg.pl",
+      "clauses": 39,
+      "facts": 36,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_2_A_pos.pl",
+      "clauses": 33,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_2_C_neg.pl",
+      "clauses": 37,
+      "facts": 34,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_2_C_pos.pl",
+      "clauses": 33,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_7_neg.pl",
+      "clauses": 23,
+      "facts": 18,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_7_pos.pl",
+      "clauses": 23,
+      "facts": 18,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_neg.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_b_pos.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_A_i_neg.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_A_i_pos.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_A_ii_neg.pl",
+      "clauses": 32,
+      "facts": 29,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_A_ii_pos.pl",
+      "clauses": 32,
+      "facts": 29,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_B_neg.pl",
+      "clauses": 24,
+      "facts": 21,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_10_B_pos.pl",
+      "clauses": 24,
+      "facts": 21,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_11_neg.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_11_pos.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_13_neg.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_13_pos.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_16_neg.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_16_pos.pl",
+      "clauses": 18,
+      "facts": 15,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_A_i_neg.pl",
+      "clauses": 23,
+      "facts": 20,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_A_i_pos.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_B_neg.pl",
+      "clauses": 27,
+      "facts": 24,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_B_pos.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_neg.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_1_pos.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_21_neg.pl",
+      "clauses": 21,
+      "facts": 18,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_21_pos.pl",
+      "clauses": 21,
+      "facts": 18,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_2_neg.pl",
+      "clauses": 20,
+      "facts": 16,
+      "rules": 1,
+      "test_directives": 0,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_2_pos.pl",
+      "clauses": 20,
+      "facts": 16,
+      "rules": 1,
+      "test_directives": 0,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_5_neg.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_5_pos.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_6_neg.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_6_pos.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_7_neg.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_7_pos.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_A_neg.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_A_pos.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_B_neg.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s3306_c_B_pos.pl",
+      "clauses": 21,
+      "facts": 18,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_a_neg.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_a_pos.pl",
+      "clauses": 13,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_b_neg.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_b_pos.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_1_neg.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_1_pos.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_A_i_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_A_i_pos.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_A_ii_neg.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_A_ii_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_B_neg.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_B_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_C_neg.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_2_C_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_3_neg.pl",
+      "clauses": 15,
+      "facts": 10,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_3_pos.pl",
+      "clauses": 15,
+      "facts": 10,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_5_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_5_pos.pl",
+      "clauses": 13,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_A_neg.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_A_pos.pl",
+      "clauses": 14,
+      "facts": 11,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_B_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_B_pos.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_D_neg.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_6_D_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_7_i_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_7_i_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_7_ii_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_c_7_ii_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_d_2_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_d_2_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_d_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_d_pos.pl",
+      "clauses": 12,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_1_A_neg.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_1_A_pos.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_1_B_neg.pl",
+      "clauses": 21,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_1_B_pos.pl",
+      "clauses": 21,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_2_A_neg.pl",
+      "clauses": 14,
+      "facts": 11,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_2_A_pos.pl",
+      "clauses": 14,
+      "facts": 11,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_2_B_neg.pl",
+      "clauses": 16,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_2_B_pos.pl",
+      "clauses": 16,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_3_neg.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s63_f_3_pos.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_a_1_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_a_1_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_a_2_neg.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_a_2_pos.pl",
+      "clauses": 11,
+      "facts": 6,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_A_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_A_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_B_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_B_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_C_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_C_pos.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_D_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_b_1_D_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_f_neg.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s68_f_pos.pl",
+      "clauses": 9,
+      "facts": 5,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_a_1_neg.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_a_1_pos.pl",
+      "clauses": 10,
+      "facts": 7,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_a_2_neg.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_a_2_pos.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_1_neg.pl",
+      "clauses": 44,
+      "facts": 32,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_1_pos.pl",
+      "clauses": 29,
+      "facts": 17,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_2_neg.pl",
+      "clauses": 33,
+      "facts": 14,
+      "rules": 15,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_2_pos.pl",
+      "clauses": 32,
+      "facts": 14,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_3_neg.pl",
+      "clauses": 31,
+      "facts": 19,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/s7703_b_3_pos.pl",
+      "clauses": 31,
+      "facts": 19,
+      "rules": 8,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_1.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_10.pl",
+      "clauses": 50,
+      "facts": 33,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_100.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_11.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_12.pl",
+      "clauses": 36,
+      "facts": 33,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_13.pl",
+      "clauses": 44,
+      "facts": 34,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_14.pl",
+      "clauses": 34,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_15.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_16.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_17.pl",
+      "clauses": 32,
+      "facts": 22,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_18.pl",
+      "clauses": 15,
+      "facts": 12,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_19.pl",
+      "clauses": 17,
+      "facts": 14,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_2.pl",
+      "clauses": 49,
+      "facts": 32,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_20.pl",
+      "clauses": 71,
+      "facts": 67,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_21.pl",
+      "clauses": 47,
+      "facts": 37,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_22.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_23.pl",
+      "clauses": 23,
+      "facts": 20,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_24.pl",
+      "clauses": 34,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_25.pl",
+      "clauses": 40,
+      "facts": 37,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_26.pl",
+      "clauses": 53,
+      "facts": 50,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_27.pl",
+      "clauses": 26,
+      "facts": 23,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_28.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_29.pl",
+      "clauses": 52,
+      "facts": 49,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_3.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_30.pl",
+      "clauses": 28,
+      "facts": 18,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_31.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_32.pl",
+      "clauses": 28,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_33.pl",
+      "clauses": 31,
+      "facts": 9,
+      "rules": 19,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_34.pl",
+      "clauses": 7,
+      "facts": 4,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_35.pl",
+      "clauses": 18,
+      "facts": 15,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_36.pl",
+      "clauses": 55,
+      "facts": 45,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_37.pl",
+      "clauses": 34,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 2,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_38.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_39.pl",
+      "clauses": 33,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_4.pl",
+      "clauses": 28,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_40.pl",
+      "clauses": 32,
+      "facts": 29,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_41.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_42.pl",
+      "clauses": 30,
+      "facts": 27,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_43.pl",
+      "clauses": 23,
+      "facts": 20,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_44.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_45.pl",
+      "clauses": 43,
+      "facts": 40,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_46.pl",
+      "clauses": 29,
+      "facts": 26,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_47.pl",
+      "clauses": 55,
+      "facts": 52,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_48.pl",
+      "clauses": 42,
+      "facts": 32,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_49.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_5.pl",
+      "clauses": 27,
+      "facts": 24,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_50.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_51.pl",
+      "clauses": 44,
+      "facts": 41,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_52.pl",
+      "clauses": 37,
+      "facts": 34,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_53.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_54.pl",
+      "clauses": 34,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_55.pl",
+      "clauses": 34,
+      "facts": 30,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_56.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_57.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_58.pl",
+      "clauses": 33,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_59.pl",
+      "clauses": 54,
+      "facts": 51,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_6.pl",
+      "clauses": 42,
+      "facts": 39,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_60.pl",
+      "clauses": 37,
+      "facts": 34,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_61.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_62.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_63.pl",
+      "clauses": 28,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_64.pl",
+      "clauses": 22,
+      "facts": 19,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_65.pl",
+      "clauses": 24,
+      "facts": 21,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_66.pl",
+      "clauses": 33,
+      "facts": 23,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_67.pl",
+      "clauses": 19,
+      "facts": 16,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_68.pl",
+      "clauses": 31,
+      "facts": 28,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_69.pl",
+      "clauses": 12,
+      "facts": 9,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_7.pl",
+      "clauses": 32,
+      "facts": 22,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_70.pl",
+      "clauses": 30,
+      "facts": 27,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_71.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_72.pl",
+      "clauses": 24,
+      "facts": 21,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_73.pl",
+      "clauses": 45,
+      "facts": 28,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_74.pl",
+      "clauses": 28,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_75.pl",
+      "clauses": 39,
+      "facts": 34,
+      "rules": 2,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_76.pl",
+      "clauses": 27,
+      "facts": 23,
+      "rules": 1,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_77.pl",
+      "clauses": 28,
+      "facts": 25,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_78.pl",
+      "clauses": 36,
+      "facts": 26,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_79.pl",
+      "clauses": 20,
+      "facts": 17,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_8.pl",
+      "clauses": 34,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_80.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_81.pl",
+      "clauses": 23,
+      "facts": 20,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_82.pl",
+      "clauses": 25,
+      "facts": 22,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_83.pl",
+      "clauses": 21,
+      "facts": 4,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_84.pl",
+      "clauses": 33,
+      "facts": 23,
+      "rules": 7,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_85.pl",
+      "clauses": 33,
+      "facts": 30,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_86.pl",
+      "clauses": 19,
+      "facts": 15,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 2,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_87.pl",
+      "clauses": 32,
+      "facts": 29,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_88.pl",
+      "clauses": 34,
+      "facts": 31,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_89.pl",
+      "clauses": 26,
+      "facts": 23,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_9.pl",
+      "clauses": 50,
+      "facts": 27,
+      "rules": 20,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_90.pl",
+      "clauses": 33,
+      "facts": 18,
+      "rules": 12,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_91.pl",
+      "clauses": 30,
+      "facts": 13,
+      "rules": 14,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_92.pl",
+      "clauses": 39,
+      "facts": 36,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_93.pl",
+      "clauses": 11,
+      "facts": 8,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_94.pl",
+      "clauses": 43,
+      "facts": 40,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_95.pl",
+      "clauses": 35,
+      "facts": 32,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_96.pl",
+      "clauses": 16,
+      "facts": 13,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_97.pl",
+      "clauses": 26,
+      "facts": 23,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_98.pl",
+      "clauses": 35,
+      "facts": 32,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    },
+    {
+      "file": "human/sara/sara/cases/tax_case_99.pl",
+      "clauses": 45,
+      "facts": 42,
+      "rules": 0,
+      "test_directives": 1,
+      "consult_directives": 1,
+      "unterminated_residue": false
+    }
+  ]
+}

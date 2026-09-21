@@ -1,0 +1,29 @@
+{
+  "interpreter": {
+    "version_string": "SWI-Prolog version 7.2.3 for amd64",
+    "version": "7.2.3",
+    "plarch": "amd64",
+    "uname_m": "x86_64",
+    "debian_package_version": "7.2.3+dfsg-6",
+    "verified_from_inside_container": true
+  },
+  "image": {
+    "tag": "kmla-swipl:7.2.3",
+    "local_image_id": "sha256:de470fb4c535c992f44261e5c215f34dd35373578a18c3c9f8ace1d4d08aa621",
+    "base_image_digest": "sha256:c5c5200ff1e9c73ffbf188b4a67eb1c91531b644856b4aefe86a58d2f0cb05be",
+    "dockerfile_sha256": "14cc17173e4f96f21b212089f6ecddc967d780bb31925f334f0ce080e48af662",
+    "platform": "linux/amd64"
+  },
+  "environment": {
+    "TZ": "America/New_York",
+    "host_arch": "arm64",
+    "emulated": true
+  },
+  "provenance_caveats": [
+    "Not upstream's 7.2.3 build: Debian's swi-prolog-nox 7.2.3+dfsg-6 carries Debian patches.",
+    "local_image_id is this build's config digest and is NOT reproducible across builds; the reproducible identity is base_image_digest plus debian_package_version plus dockerfile_sha256.",
+    "For a registry-pinned immutable digest the image must be pushed and referenced by that digest.",
+    "archive.debian.org is the package source; it is an archive, not a guaranteed-permanent mirror. Vendor the .deb if long-term reproducibility is required.",
+    "TZ is part of the artifact identity, not an environment detail: it changes the answers of 2 of the 376 shipped cases. See docs/DECISION_LOG.md DL-002."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "tz": "America/New_York",
+  "image": "kmla-swipl:7.2.3",
+  "cases": 376,
+  "exit_codes": {
+    "0": 376
+  },
+  "classification": {
+    "clean": 376
+  },
+  "note": "Exit status is 0 for every case regardless of outcome; stderr is the only signal.",
+  "not_clean": []
+}
