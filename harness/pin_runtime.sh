@@ -26,10 +26,31 @@ docker build --platform linux/amd64 --build-arg "KMLA_TZ=$KMLA_TZ" \
 
 inside() { docker run --rm --platform linux/amd64 --entrypoint sh "$TAG" -c "$1"; }
 
+# The whole installed package set, not just swi-prolog-nox. libgmp10 in
+# particular is not incidental: the unbounded-integer and rdiv-rational
+# behaviour the oracle is specified against runs through GMP, and pinning one
+# package version while its dependency closure floats records less than it
+# appears to.
+packages_json() {
+  # `dpkg-query -W` with no --showformat prints "name<TAB>version" and avoids
+  # ${Package}-style placeholders, which the shell would expand before
+  # dpkg-query ever sees them.
+  inside 'dpkg-query -W' | tr -d '\r' | python3 -c '
+import json, sys
+out = []
+for line in sys.stdin:
+    parts = line.rstrip("\n").split("\t")
+    if len(parts) == 2 and parts[0]:
+        out.append({"name": parts[0], "version": parts[1]})
+json.dump(sorted(out, key=lambda p: p["name"]), sys.stdout, separators=(",", ":"))
+'
+}
+
 VERSION_LINE="$(inside 'swipl --version' | tr -d '\r')"
 PLARCH="$(inside 'swipl --dump-runtime-variables' | sed -n 's/^PLARCH="\(.*\)";$/\1/p')"
 UNAME_M="$(inside 'uname -m')"
 PKG="$(inside 'dpkg -s swi-prolog-nox' | sed -n 's/^Version: //p' | tr -d '\r')"
+PACKAGES="$(packages_json)"
 TZ_IN="$(inside 'printf %s "$TZ"')"
 
 case "$VERSION_LINE" in
@@ -59,7 +80,8 @@ cat <<JSON
     "plarch": "$PLARCH",
     "uname_m": "$UNAME_M",
     "debian_package_version": "$PKG",
-    "verified_from_inside_container": true
+    "verified_from_inside_container": true,
+    "installed_packages": $PACKAGES
   },
   "image": {
     "tag": "$TAG",
@@ -78,7 +100,9 @@ cat <<JSON
     "local_image_id is this build's config digest and is NOT reproducible across builds; the reproducible identity is base_image_digest plus debian_package_version plus dockerfile_sha256.",
     "For a registry-pinned immutable digest the image must be pushed and referenced by that digest.",
     "archive.debian.org is the package source; it is an archive, not a guaranteed-permanent mirror. Vendor the .deb if long-term reproducibility is required.",
-    "TZ is part of the artifact identity, not an environment detail: it changes the answers of 2 of the 376 shipped cases. See docs/DECISION_LOG.md DL-002."
+    "TZ is part of the artifact identity, not an environment detail: it changes the answers of 2 of the 376 shipped cases. See docs/DECISION_LOG.md P-TZ.",
+    "Acquire::Check-Valid-Until is disabled because stretch is end-of-life and its Release file has expired. Signature verification is unaffected; what is lost is rollback/replay protection on the package index. Vendoring the .deb with a recorded digest would remove the exposure.",
+    "The reproducible identity is this whole record except local_image_id -- base_image_digest, dockerfile_sha256, installed_packages AND environment.TZ. The Dockerfile takes TZ as a build argument with no default, so two images with an identical dockerfile_sha256 can carry different TZ and differ on 2 of the 376 cases."
   ]
 }
 JSON

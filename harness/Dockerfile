@@ -61,4 +61,13 @@ ENV TZ=${KMLA_TZ} \
 # must be the corpus root or nothing loads (verified: from cases/ the consult
 # fails and the run still exits 0).
 WORKDIR /corpus
-ENTRYPOINT ["swipl"]
+
+# CMD, not ENTRYPOINT. With `ENTRYPOINT ["swipl"]` the natural invocation
+# `docker run IMAGE swipl --version` expands to `swipl swipl --version`, and SWI
+# takes the first non-option argument as a script file, so every later flag
+# becomes an application argument and the run prints the banner instead. That
+# symptom was once diagnosed as "the image ignores command-line arguments under
+# emulation"; it is not, argv works normally under emulation. CMD removes the
+# trap: `docker run IMAGE swipl -q -f cases/x.pl` and `docker run IMAGE sh -c …`
+# both behave as written, with no --entrypoint override needed.
+CMD ["swipl"]

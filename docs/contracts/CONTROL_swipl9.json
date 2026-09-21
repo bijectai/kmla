@@ -1,0 +1,399 @@
+{
+  "tz": "America/New_York",
+  "image": "swipl:9.2.9",
+  "cases": 376,
+  "exit_codes": {
+    "0": 376
+  },
+  "classification": {
+    "clean": 312,
+    "error": 64
+  },
+  "note": "Exit status is 0 for every case regardless of outcome; stderr is the only signal.",
+  "not_clean": [
+    {
+      "id": "s152_c_1_B_neg",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s152_c_1_B_neg.pl:20:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s152_c_1_B_neg.pl:20:\nWarning:    Goal (directive) failed: user:(\\+s152_c_1_B(bob,_13412,alice,_13434,_13456,2015))"
+    },
+    {
+      "id": "s152_c_1_B_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s152_c_1_B_pos.pl:20:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/s152_c_1_B_pos.pl:20:\nWarning:    Goal (directive) failed: user:s152_c_1_B(bob,_13296,alice,_13318,_13340,2016)"
+    },
+    {
+      "id": "s152_c_1_E_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s152_c_1_E_pos.pl:24:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s152_c_1_E_pos.pl:24:\nWarning:    Goal (directive) failed: user:s152_c_1_E(bob,_13236,2019)"
+    },
+    {
+      "id": "s152_c_1_neg",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s152_c_1_neg.pl:26:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s152_c_1_neg.pl:26:\nWarning:    Goal (directive) failed: user:(\\+s152_c_1(bob,alice,2019))"
+    },
+    {
+      "id": "s152_c_1_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s152_c_1_pos.pl:28:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s152_c_1_pos.pl:28:\nWarning:    Goal (directive) failed: user:s152_c_1(bob,alice,2019)"
+    },
+    {
+      "id": "s2_a_1_B_neg",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_a_1_B_neg.pl:52:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/s2_a_1_B_neg.pl:52:\nWarning:    Goal (directive) failed: user:(\\+s2_a_1_B(bob,_13356,_13378,2020))"
+    },
+    {
+      "id": "s2_a_1_B_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_a_1_B_pos.pl:47:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/s2_a_1_B_pos.pl:47:\nWarning:    Goal (directive) failed: user:s2_a_1_B(bob,_13258,_13280,2016)"
+    },
+    {
+      "id": "s2_b_1_A_i_I_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_A_i_I_pos.pl:45:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_A_i_I_pos.pl:45:\nWarning:    Goal (directive) failed: user:s2_b_1_A_i_I(charlie,2017)"
+    },
+    {
+      "id": "s2_b_1_A_i_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_A_i_pos.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_A_i_pos.pl:41:\nWarning:    Goal (directive) failed: user:s2_b_1_A_i(_13236,charlie,2018)"
+    },
+    {
+      "id": "s2_b_1_A_ii_neg",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_A_ii_neg.pl:53:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_A_ii_neg.pl:53:\nWarning:    Goal (directive) failed: user:(\\+s2_b_1_A_ii(_13316,charlie,2017))"
+    },
+    {
+      "id": "s2_b_1_A_ii_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_A_ii_pos.pl:46:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_A_ii_pos.pl:46:\nWarning:    Goal (directive) failed: user:s2_b_1_A_ii(_13236,charlie,2017)"
+    },
+    {
+      "id": "s2_b_1_A_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_A_pos.pl:43:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_A_pos.pl:43:\nWarning:    Goal (directive) failed: user:s2_b_1_A(bob,_13258,_13280,2018)"
+    },
+    {
+      "id": "s2_b_1_B_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_B_pos.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_B_pos.pl:41:\nWarning:    Goal (directive) failed: user:s2_b_1_B(bob,_13280,_13302,_13324,2018)"
+    },
+    {
+      "id": "s2_b_1_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s2_b_1_pos.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s2_b_1_pos.pl:41:\nWarning:    Goal (directive) failed: user:s2_b_1(bob,_13258,_13280,2018)"
+    },
+    {
+      "id": "s7703_b_1_pos",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/s7703_b_1_pos.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/s7703_b_1_pos.pl:41:\nWarning:    Goal (directive) failed: user:s7703_b_1(alice,_13258,_13280,2018)"
+    },
+    {
+      "id": "tax_case_10",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_10.pl:61:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_10.pl:61:\nWarning:    Goal (directive) failed: user:tax(alice,2017,68844)"
+    },
+    {
+      "id": "tax_case_11",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_11.pl:37:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_11.pl:37:\nWarning:    Goal (directive) failed: user:tax(alice,2015,0)"
+    },
+    {
+      "id": "tax_case_13",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_13.pl:56:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_13.pl:56:\nWarning:    Goal (directive) failed: user:tax(bob,2017,8710)"
+    },
+    {
+      "id": "tax_case_14",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_14.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_14.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2017,8582)"
+    },
+    {
+      "id": "tax_case_15",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_15.pl:37:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_15.pl:37:\nWarning:    Goal (directive) failed: user:tax(alice,2017,5460)"
+    },
+    {
+      "id": "tax_case_16",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_16.pl:33:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_16.pl:33:\nWarning:    Goal (directive) failed: user:tax(alice,2017,4938)"
+    },
+    {
+      "id": "tax_case_17",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_17.pl:44:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_17.pl:44:\nWarning:    Goal (directive) failed: user:tax(bob,2015,4509)"
+    },
+    {
+      "id": "tax_case_2",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_2.pl:65:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_2.pl:65:\nWarning:    Goal (directive) failed: user:tax(alice,2013,26567)"
+    },
+    {
+      "id": "tax_case_20",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_20.pl:79:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_20.pl:79:\nWarning:    Goal (directive) failed: user:tax(alice,2017,90683)"
+    },
+    {
+      "id": "tax_case_21",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_21.pl:59:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_21.pl:59:\nWarning:    Goal (directive) failed: user:tax(alice,2018,15777)"
+    },
+    {
+      "id": "tax_case_22",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_22.pl:30:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_22.pl:30:\nWarning:    Goal (directive) failed: user:tax(alice,2017,2174)"
+    },
+    {
+      "id": "tax_case_24",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_24.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_24.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2017,19039)"
+    },
+    {
+      "id": "tax_case_26",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_26.pl:61:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_26.pl:61:\nWarning:    Goal (directive) failed: user:tax(alice,2019,196056)"
+    },
+    {
+      "id": "tax_case_27",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_27.pl:34:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_27.pl:34:\nWarning:    Goal (directive) failed: user:tax(alice,2017,3720)"
+    },
+    {
+      "id": "tax_case_30",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_30.pl:40:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_30.pl:40:\nWarning:    Goal (directive) failed: user:tax(alice,2017,249)"
+    },
+    {
+      "id": "tax_case_35",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_35.pl:26:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_35.pl:26:\nWarning:    Goal (directive) failed: user:tax(alice,2017,2384)"
+    },
+    {
+      "id": "tax_case_36",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_36.pl:67:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_36.pl:67:\nWarning:    Goal (directive) failed: user:tax(alice,2017,10018)"
+    },
+    {
+      "id": "tax_case_37",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_37.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_37.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2018,32045)"
+    },
+    {
+      "id": "tax_case_39",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_39.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_39.pl:41:\nWarning:    Goal (directive) failed: user:tax(bob,2015,6812)"
+    },
+    {
+      "id": "tax_case_45",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_45.pl:51:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_45.pl:51:\nWarning:    Goal (directive) failed: user:tax(alice,2017,0)"
+    },
+    {
+      "id": "tax_case_48",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_48.pl:54:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_48.pl:54:\nWarning:    Goal (directive) failed: user:tax(bob,2018,33068)"
+    },
+    {
+      "id": "tax_case_5",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_5.pl:35:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_5.pl:35:\nWarning:    Goal (directive) failed: user:tax(alice,2017,116066)"
+    },
+    {
+      "id": "tax_case_51",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_51.pl:52:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_51.pl:52:\nWarning:    Goal (directive) failed: user:tax(alice,2017,55528)"
+    },
+    {
+      "id": "tax_case_54",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_54.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_54.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2019,62000)"
+    },
+    {
+      "id": "tax_case_55",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_55.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_55.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2018,187552)"
+    },
+    {
+      "id": "tax_case_59",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_59.pl:62:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/tax_case_59.pl:62:\nWarning:    Goal (directive) failed: user:tax(alice,2020,15236)"
+    },
+    {
+      "id": "tax_case_6",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_6.pl:50:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_6.pl:50:\nWarning:    Goal (directive) failed: user:tax(alice,2017,180610)"
+    },
+    {
+      "id": "tax_case_60",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_60.pl:45:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_60.pl:45:\nWarning:    Goal (directive) failed: user:tax(alice,2015,4331)"
+    },
+    {
+      "id": "tax_case_61",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_61.pl:27:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_61.pl:27:\nWarning:    Goal (directive) failed: user:tax(alice,2015,25055)"
+    },
+    {
+      "id": "tax_case_64",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_64.pl:30:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_64.pl:30:\nWarning:    Goal (directive) failed: user:tax(alice,2015,81487)"
+    },
+    {
+      "id": "tax_case_66",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_66.pl:45:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/tax_case_66.pl:45:\nWarning:    Goal (directive) failed: user:tax(bob,2016,16023)"
+    },
+    {
+      "id": "tax_case_7",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_7.pl:44:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_7.pl:44:\nWarning:    Goal (directive) failed: user:tax(bob,2015,245359)"
+    },
+    {
+      "id": "tax_case_70",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_70.pl:38:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/tax_case_70.pl:38:\nWarning:    Goal (directive) failed: user:tax(alice,2016,178147)"
+    },
+    {
+      "id": "tax_case_73",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_73.pl:61:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_73.pl:61:\nWarning:    Goal (directive) failed: user:tax(alice,2013,15109)"
+    },
+    {
+      "id": "tax_case_75",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_75.pl:49:\nERROR:    rdiv/2: Type error: `rational' expected, found `31536000.0' (a float)\nWarning: /corpus/cases/tax_case_75.pl:49:\nWarning:    Goal (directive) failed: user:tax(alice,2012,8883)"
+    },
+    {
+      "id": "tax_case_76",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_76.pl:36:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_76.pl:36:\nWarning:    Goal (directive) failed: user:tax(alice,1997,46734)"
+    },
+    {
+      "id": "tax_case_77",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_77.pl:36:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_77.pl:36:\nWarning:    Goal (directive) failed: user:tax(alice,2023,6449)"
+    },
+    {
+      "id": "tax_case_78",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_78.pl:48:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_78.pl:48:\nWarning:    Goal (directive) failed: user:tax(alice,2019,14470)"
+    },
+    {
+      "id": "tax_case_8",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_8.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_8.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2017,12036)"
+    },
+    {
+      "id": "tax_case_80",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_80.pl:33:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_80.pl:33:\nWarning:    Goal (directive) failed: user:tax(alice,2014,21452)"
+    },
+    {
+      "id": "tax_case_84",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_84.pl:45:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_84.pl:45:\nWarning:    Goal (directive) failed: user:tax(alice,2017,2574)"
+    },
+    {
+      "id": "tax_case_85",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_85.pl:41:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_85.pl:41:\nWarning:    Goal (directive) failed: user:tax(alice,2019,2477)"
+    },
+    {
+      "id": "tax_case_87",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_87.pl:40:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_87.pl:40:\nWarning:    Goal (directive) failed: user:tax(alice,2018,243103)"
+    },
+    {
+      "id": "tax_case_88",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_88.pl:42:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_88.pl:42:\nWarning:    Goal (directive) failed: user:tax(alice,2011,2334)"
+    },
+    {
+      "id": "tax_case_9",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_9.pl:70:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_9.pl:70:\nWarning:    Goal (directive) failed: user:tax(alice,2018,10598)"
+    },
+    {
+      "id": "tax_case_90",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_90.pl:48:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_90.pl:48:\nWarning:    Goal (directive) failed: user:tax(bob,2018,96641)"
+    },
+    {
+      "id": "tax_case_95",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_95.pl:43:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_95.pl:43:\nWarning:    Goal (directive) failed: user:tax(alice,2017,174)"
+    },
+    {
+      "id": "tax_case_98",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_98.pl:43:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_98.pl:43:\nWarning:    Goal (directive) failed: user:tax(alice,2015,14296)"
+    },
+    {
+      "id": "tax_case_99",
+      "exit": 0,
+      "class": "error",
+      "stderr": "ERROR: /corpus/cases/tax_case_99.pl:53:\nERROR:    rdiv/2: Type error: `rational' expected, found `31449600.0' (a float)\nWarning: /corpus/cases/tax_case_99.pl:53:\nWarning:    Goal (directive) failed: user:tax(alice,2017,15037)"
+    }
+  ]
+}
