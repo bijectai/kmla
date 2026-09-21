@@ -2,6 +2,29 @@
 
 ## Current phase
 
+2026-09-21 (continuation preflight): `human/parity/check.py` is still absent;
+the existing 408-record protected manifest verifies and no protected file was
+changed. Phase 1 remains unstarted: a general request to continue does not
+substitute for the independent meter or explicit Checkpoint 0 sign-off.
+The unchanged verifier was re-run with `--strict`: **17 passed, 0 failed,
+1 outstanding** for Checkpoint 0, exit 1 as intended. Both later-checkpoint
+artifact groups are still reported separately. No integer-expression diagnostic
+occurred, and no acceptance expectation or runtime check was changed.
+
+Native runtime run `35649969714` on `b265977` has now succeeded. Its downloaded
+evidence was independently checked: 376 clean directive outcomes, including
+two known vacuous cases, matching source/harness hashes, matching full runtime
+identity, 376 valid raw case statuses and 752 matching raw stream hashes. All
+1546 downloaded files are retained byte-for-byte in the archive documented by
+`docs/contracts/runtime-history/NATIVE_35649969714.md`. This closes the native
+baseline evidence item, not Lean parity, the local Rosetta sweep, GHCR publication,
+offline rebuild closure or independent image deposition. The verify workflow
+for the same commit also passed (`35649969482`).
+
+The dated entries below are preserved history; their statements that native CI
+is not yet run are superseded by this evidence. The active blocker remains the
+independently authored meter and its completion sequence, described below.
+
 2026-09-21 (clarifications approved): Dev explicitly closed both Q-007 issues.
 Policy 1 now states the exhaustive filename procedure, with exit 2 for every
 other non-JSON entry. Checkpoint 2/3a artifacts remain reported under their own
@@ -131,6 +154,22 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### Current entry hold (2026-09-21 continuation)
+
+The owner meter remains absent at `human/parity/check.py`. Dev must independently
+implement/install it under the accepted PARITY.md contract; the builder must
+neither implement it nor inspect its source. Once installed, invoke the existing
+black-box conformance suite and report its full results. Any divergence is a
+finding, not permission to change the meter or expectations. After acceptance,
+the owner must refresh the protected manifest to include it under the current
+read-only boundary. Re-run Checkpoint 0 verification, then obtain Dev's explicit
+sign-off before dispatching isolated Phase 1 implementation lanes.
+
+Checkpoint 2 exploits and Checkpoint 3a signed statements remain separately
+reported later deliverables, not reasons to block Checkpoint 0. Native baseline
+evidence is now retained; the remaining runtime archival obligations remain
+visible in RUNTIME.md. No additional semantic decision is inferred or requested.
 
 ### Acceptance preflight finding (2026-09-21, Q-007)
 
@@ -352,6 +391,10 @@ would close this; the owner declined both as unnecessary on 2026-09-21.
 
 ## Validation
 
+The following is the original scaffold validation record, not the current
+validation status. Current interface/runtime results and protected-file checks
+are recorded above and in the dated evidence under `docs/contracts/`.
+
 Source hash, payload equality, and split inventory checked. No Prolog execution,
 oracle compilation, parity comparison, coverage, mutation scoring, or model
 evaluation has run. Pinned Docker execution is a Phase 1 requirement.
@@ -369,9 +412,10 @@ No commits, pushes, or PRs were created in this session.
 
 ## Resume condition
 
-The owner has reported Phase 0 clearance, and B005's decision is now supplied.
-Resume when the authoritative cleared bundle is installed and its meter,
-manifest, reviewed submodule pin, and protected runner boundary can be verified
-in the implementation checkout. The remaining blocker is B006, not a request
-to repeat B005's semantic decision. Subsequent implementation starts only after
-that entry verification succeeds.
+The semantic decisions are accepted; no submodule or second repository is
+required. Resume Phase 1 only after the independently authored owner meter is
+installed, its black-box acceptance is reported, the protected manifest covers
+it, and Checkpoint 0 has zero failures, zero current outstanding items and Dev's
+explicit sign-off. Preserve the read-only corpus boundary and separate oracle
+and serializer/generator contexts. The next human action is to install the
+meter, not to repeat previously resolved semantic decisions.

@@ -17,9 +17,13 @@ clarifications. No Phase 1 implementation has begun.
   `docs/contracts/CONTROL_swipl9.json`: 312 clean outcomes and 64 `rdiv/2`
   errors across 376 cases. The pinned legacy baseline has 376 clean outcomes,
   including two vacuous cases, not 376 exercised assertions.
-- Native-runtime CI is now pushed. A workflow definition is not a verified native
-  baseline. Runtime publication, closure vendoring and independent archival deposit
-  remain incomplete; see RUNTIME.md. Preserve historical records when rebuilding.
+- Native-runtime CI run `35649969714` on `b265977` completed successfully.
+  The downloaded evidence verifies 376 clean directive outcomes, including the
+  two known vacuous cases. Its native runtime record and all 1546 diagnostic
+  files are retained in `docs/contracts/runtime-history/`; see
+  `NATIVE_35649969714.md`. This is not Lean parity. Runtime publication, closure
+  vendoring and independent archival deposit remain incomplete; see RUNTIME.md.
+  Preserve historical records when rebuilding.
 
 ## Follow-up approvals installed
 

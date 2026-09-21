@@ -26,3 +26,11 @@ build with Dockerfile SHA-256
 The fresh sweep is still outstanding: no old corpus result is attributed to this
 new runtime record. Vendoring has not yet occurred, so these are pre-vendoring
 history and current measurement, not the promised post-vendoring pair.
+
+Native CI has since completed successfully on commit `b265977`, run
+`35649969714`, attempt 1. See `NATIVE_35649969714.md` and its retained archive
+for the independently verified 376 clean directive outcomes (including two
+vacuous cases), the native runtime identity and complete per-case diagnostics.
+This is a distinct native record, not a sweep of the local Rosetta record above.
+It completes the native-baseline evidence obligation, not any archival-image
+leg, Lean parity or checkpoint sign-off.
