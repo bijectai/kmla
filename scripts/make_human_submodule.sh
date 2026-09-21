@@ -60,6 +60,22 @@ else
   exit 2
 fi
 
+# The SARA licence requires its notice in "all copies or substantial portions"
+# of the dataset. Splitting human/ into its own repository makes a new copy, so
+# the licence has to be inside the bundle, not only in the parent.
+if [ -f "$ROOT/human/sara/sara/LICENSE" ]; then
+  echo "  ok   the SARA licence travels with the bundle (human/sara/sara/LICENSE)"
+else
+  echo "error: human/sara/sara/LICENSE is missing. The SARA licence requires its" >&2
+  echo "       copyright and permission notice in every copy of the dataset, and" >&2
+  echo "       this migration creates one. Restore it before splitting the bundle." >&2
+  exit 2
+fi
+if ! grep -q 'Holzenberger' "$ROOT/human/sara/sara/LICENSE" 2>/dev/null; then
+  echo "error: human/sara/sara/LICENSE does not carry the copyright notice" >&2
+  exit 2
+fi
+
 for missing in parity/check.py; do
   [ -e "$ROOT/human/$missing" ] || echo "  WARN human/$missing is absent; the pin will not cover the owner's meter"
 done
@@ -71,6 +87,8 @@ echo
 echo "== migration =="
 say "initialise a git repository inside human/ on branch $BRANCH"
 run "git -C human init -q -b '$BRANCH'"
+say "copy NOTICE.md into the bundle so attribution travels with it"
+run "cp NOTICE.md human/NOTICE.md"
 say "commit all $FILES files there"
 run "git -C human add -A"
 run "git -C human -c user.name=\"\$(git config user.name)\" -c user.email=\"\$(git config user.email)\" commit -q -m 'human: protected artifact bundle'"

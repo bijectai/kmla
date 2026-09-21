@@ -50,3 +50,12 @@ Source provenance, the archive digest, and the verified 376-case inventory are
 recorded in [SOURCE.md](docs/contracts/SOURCE.md). The approved mutation and
 invariant contracts and the design-flaw stop-and-report standard are recorded
 in [PROTOCOL.md](docs/PROTOCOL.md).
+
+## Attribution
+
+SARA is the work of its authors at Johns Hopkins University
+(<https://nlp.jhu.edu/law/sara/>), © 2020 Nils Holzenberger, redistributed here
+unmodified under its own licence. Its copyright and permission notice must be
+included in all copies — `human/sara/sara/LICENSE` travels with the corpus and is
+hash-pinned. See [NOTICE.md](NOTICE.md) for the full attribution, the archive
+digest, and what this project did and did not change.
