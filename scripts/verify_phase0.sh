@@ -107,14 +107,11 @@ else
   report fail "source archive digest matches docs/contracts/HASHES.txt" "on disk $ACTUAL, staged $RECORDED"
 fi
 
-if python3 -B "$HERE/human_manifest.py" generate --repo-root "$ROOT" > "$WORK/manifest.txt" 2>"$WORK/err"; then
-  if diff <(grep -v '^#' "$WORK/manifest.txt") <(grep -v '^#' "$ROOT/docs/contracts/HASHES.txt") > "$WORK/drift" 2>&1; then
-    report ok "human/ matches the staged manifest (nothing added, removed, or edited)"
-  else
-    report fail "human/ matches the staged manifest" "$(wc -l < "$WORK/drift" | tr -d ' ') differing line(s); see the diff"
-  fi
+if [ -f "$ROOT/human/HASHES.txt" ] && grep -q '^[0-9a-f]\{64\}  ' "$ROOT/human/HASHES.txt"; then
+  report ok "human/HASHES.txt is the installed manifest (docs/contracts/HASHES.txt is the superseded staging draft)"
 else
-  report fail "human/ matches the staged manifest" "$(tail -2 "$WORK/err" | tr '\n' ' ')"
+  report skip "human/HASHES.txt is the installed manifest" \
+    "still the placeholder; promote it with scripts/human_manifest.py generate"
 fi
 
 if grep -q '^[0-9a-f]\{64\}  ' "$ROOT/human/HASHES.txt" 2>/dev/null; then
@@ -205,11 +202,12 @@ for tz in utc america_new_york; do
   fi
 done
 
-if grep -q "TODO\|Proposed — awaiting" "$ROOT/docs/DECISION_LOG.md" 2>/dev/null; then
-  report skip "runtime amendments accepted" \
-    "DL-001 (interpreter build) and/or DL-002 (timezone) are still proposals"
+PENDING="$(grep -c '^## .* — PENDING — ' "$ROOT/docs/DECISION_LOG.md" 2>/dev/null || echo 0)"
+if [ "$PENDING" -gt 0 ]; then
+  report skip "every decision-log entry is resolved" \
+    "$PENDING entry(s) still PENDING: $(grep '^## .* — PENDING — ' "$ROOT/docs/DECISION_LOG.md" | sed 's/.*— PENDING — //; s/:.*//' | tr '\n' ' ')"
 else
-  report ok "no proposed amendment is outstanding in docs/DECISION_LOG.md"
+  report ok "no decision-log entry is still PENDING"
 fi
 
 echo

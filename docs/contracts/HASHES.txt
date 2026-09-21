@@ -1,3 +1,11 @@
-# DRAFT: source archive pin only; not a complete human/ manifest.
-# Paths are relative to human/. The owner installs and completes this manifest.
+# SUPERSEDED. The installed manifest is human/HASHES.txt, promoted on 2026-09-21.
+# This file was the Phase 0.1 staging draft that carried the source archive pin
+# forward for owner promotion; that promotion has happened. Kept so the path
+# docs/contracts/README.md and HASHES.md refer to still resolves.
+#
+# Regenerate the installed manifest with:
+#   python3 -B scripts/human_manifest.py generate > human/HASHES.txt
+#   python3 -B scripts/human_manifest.py verify
+#
+# The verified source archive digest, unchanged since 2026-09-20:
 e4f1b845016fc38b95b702bbbb27a5c9af3eadfa856ba585662b8b2cd71c187c  sara/SARA.tar.gz
