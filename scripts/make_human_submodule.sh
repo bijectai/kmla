@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+# RETAINED BUT UNUSED. P-BUNDLE (docs/DECISION_LOG.md, accepted 2026-09-21)
+# keeps human/ as a tracked directory in the parent repository, so KMLA has no
+# submodule. This script is kept, tested and working in case that is reversed.
+#
 # Convert the tracked human/ directory into the pinned submodule docs/PLAN.md
-# section 2 requires, preserving every file and every digest.
+# section 2 originally required, preserving every file and every digest.
 #
 # Dry run by default. Nothing is written until you pass --apply.
 #

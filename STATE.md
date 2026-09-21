@@ -150,11 +150,10 @@ verifies. **Two parts remain, and both are the owner's:**
    (`docs/PLAN.md` section 1: if Astra writes the meter, zero mismatches means
    self-agreement) and has not. `scripts/parity_conformance.py` will check an
    owner meter against `docs/contracts/PARITY.md` through its CLI alone.
-2. The submodule pin. `scripts/make_human_submodule.sh` performs the migration
-   and refuses to start unless the tree is clean, the manifest verifies and no
-   worktree sits inside `human/`; it needs a repository URL only the owner can
-   supply. The pin should be taken after the meter is installed, since the
-   manifest must cover it.
+2. Regenerating `human/HASHES.txt` after the meter is installed, so the manifest
+   covers it. **No submodule pin is required**: P-BUNDLE keeps `human/` in the
+   parent repository, with CI carrying the enforcement the submodule was for.
+   `scripts/make_human_submodule.sh` is retained and tested but unused.
 
 The original preflight record follows.
 
@@ -203,10 +202,18 @@ interface with the authoritative cleared decisions before lane dispatch.
 
 ### Checkpoint 0: Protected-artifact enforcement
 
-`human/` is not a configured submodule or enforced read-only mount. Its full
-hash manifest is not pinned. The owner must promote approved artifacts, finish
-the manifest, and supply a reviewed submodule commit; runner/CI enforcement is
-required before the development lanes start.
+Revised by P-BUNDLE. `human/` stays a tracked directory in the parent repository;
+no submodule and no reviewed submodule commit are required. In force:
+`human/HASHES.txt` pins all 408 protected files and `.github/workflows/verify.yml`
+verifies it and fails any pull request that touches `human/` without an owner
+label. Still to do: regenerate the manifest once the meter exists, and establish
+the read-only mount in the Phase 1 runner.
+
+Accepted limitation, recorded under P-BUNDLE: enforcement is now detection
+rather than impossibility. A pull request can carry `human/` edits in its own
+diff, and a `pull_request` workflow runs the version of itself from the PR
+branch. CODEOWNERS on `/human/` with required review, or a repository ruleset,
+would close this; the owner declined both as unnecessary on 2026-09-21.
 
 ## Findings
 

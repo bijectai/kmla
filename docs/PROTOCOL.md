@@ -129,6 +129,19 @@ recursion through a supported parent — depends on the taxable year, and a
 year-free exclusion would remove every section 2(b)(1)(B) input. `Valid` may
 import `Oracle/` for the two conjuncts that need it.
 
+### P-BUNDLE: no submodule; `human/` stays in the parent repository
+
+Supersedes the plan's §2 requirement that the owner-owned artifacts live in a
+`human/` git submodule. KMLA is open-sourced as a single repository and `human/`
+is an ordinary tracked directory. The two properties the submodule existed for
+are carried by CI instead: a pull request that touches `human/` fails unless the
+owner labels it, and `human/HASHES.txt` pins every protected file with the
+manifest check as a CI step.
+
+The difference is that enforcement is now detection rather than impossibility,
+and the bundle is identified by the parent commit plus the manifest rather than
+by a gitlink. Both are recorded in `docs/DECISION_LOG.md` under P-BUNDLE.
+
 ### P-INTENT: fidelity rule
 
 Where the runtime, reader or observation is under our control, choose the option

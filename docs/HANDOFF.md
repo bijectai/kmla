@@ -13,28 +13,27 @@
 | Evidence | `docs/consult/evidence/` (26 files), cited by `human/DECISIONS.md` |
 | Shared interface | `Interface/Household.lean`, type-checked with 29 guards |
 | Protected manifest | `human/HASHES.txt`, 408 records, verifies |
-| Human submodule commit | **not yet pinned** — see below |
+| Bundle identity | `bijectai/kmla@<parent sha>:human/` plus the 408 digests in `human/HASHES.txt`. **No submodule** — see P-BUNDLE |
 | Acceptance status | `bash scripts/verify_phase0.sh` → 16 passed, 0 failed, 4 outstanding |
 
 The branch merges `main` (the PR #1 merge, `00e1b45`) with the Phase 0.1 body of
 work that was only on `infra/fable-consult` (`608c227`), so nothing is missing.
 
-**The submodule is not pinned yet, and deliberately so.** The manifest must
-cover `human/parity/check.py`, which does not exist. Once the owner installs the
-meter:
+**There is no submodule (P-BUNDLE).** KMLA is open-sourced as a single
+repository and `human/` is an ordinary tracked directory. The enforcement the
+submodule existed for is carried by CI: `.github/workflows/verify.yml` fails any
+pull request that touches `human/` without an owner label, and verifies the
+manifest. `scripts/make_human_submodule.sh` is retained and tested but unused.
+
+**Deliverable 5 is now just the manifest**, and it must be regenerated once the
+meter exists so that it covers it:
 
 ```sh
 python3 -B scripts/human_manifest.py generate > human/HASHES.txt
-bash scripts/make_human_submodule.sh --url <the human-owned repository>          # dry run
-bash scripts/make_human_submodule.sh --url <the human-owned repository> --apply
+python3 -B scripts/human_manifest.py verify
 ```
 
-The migration refuses to start unless the tree is clean, `human/` verifies
-against its manifest, and no git worktree sits inside `human/`; afterwards it
-proves the pin by doing a recursive clone and re-verifying. It prints the parent
-commit and the submodule commit to record here.
-
-**Four things remain outstanding, all of them the owner's:**
+**Three things remain outstanding, all of them the owner's:**
 
 1. `human/parity/check.py`. The builder must not write it and has not
    (`docs/PLAN.md` §1). Check a candidate with
@@ -47,6 +46,9 @@ commit and the submodule commit to record here.
    than its size suggests: the accepted decisions were all verified on the
    Debian-built 7.2.3, so either that deviation is accepted or the
    interpreter-dependent claims need re-deriving.
+
+Regenerating the manifest after (1) is the last mechanical step; it needs no
+repository URL and no pin.
 
 ---
 

@@ -37,6 +37,7 @@ and its heading still reads PENDING.
 | P-INTENT | Fidelity rule | **ACCEPTED** | `human/DECISIONS.md` G9; `docs/PROTOCOL.md` |
 | P-SUMLIST | Schema heading `findall/sum_list`, not `sumlist` | **PENDING** | — |
 | P-RUNTIME | Debian's `7.2.3+dfsg-6` build, emulation, image distribution | **PENDING** | —; `docs/contracts/RUNTIME.md` remains operative as written |
+| P-BUNDLE | `human/` stays a directory in the parent repo; no submodule | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `STATE.md` |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -202,3 +203,51 @@ and reached the same conclusion. Recorded here so the corroboration is not
 lost and so no one looks for a second, still-open time-zone decision. The
 measurement is in `docs/contracts/RUNTIME_OBSERVATIONS.md` O-5 and O-6 and the
 per-case baselines in `docs/contracts/CORPUS_BASELINE_*.json`.
+
+---
+
+## 2026-09-21 — ACCEPTED (Dev, chat) — P-BUNDLE: no submodule; `human/` stays in the parent repository
+
+Supersedes `docs/PLAN.md` §2's "`sara/`, `parity/`, `gate/exploits/`,
+`invariants/statements/`, `DECISIONS.md` are in a `human/` git submodule".
+
+**Decision.** KMLA is to be open-sourced as a single repository. `human/` remains
+an ordinary tracked directory in `bijectai/kmla`. No second repository is
+created and no gitlink pin is taken. Dev's reasoning, in chat: the builder is not
+expected to alter `human/` unless directed.
+
+**What the submodule was for, and what replaces it.** It was never about
+secrecy — public or private was always orthogonal. `docs/PLAN.md` §2 wanted two
+things:
+
+1. *Astra cannot merge a PR that touches `human/`.* Replaced by
+   `.github/workflows/verify.yml`, which fails any pull request whose diff
+   touches `human/` unless the owner labels it `owner-human-update`.
+2. *`human/HASHES.txt` pins every file; CI fails on any drift.* Unchanged and
+   already in force: the manifest covers all 408 protected files and
+   `python3 -B scripts/human_manifest.py verify` is a CI step.
+
+**What is genuinely given up, recorded so no one discovers it later.**
+
+- A pull request can now carry `human/` edits in its own diff, so the protection
+  is *detection* rather than *impossibility*. A `pull_request` workflow runs the
+  version of itself from the PR branch, so one commit could weaken `verify.yml`
+  and edit `human/` together. Branch protection with CODEOWNERS on `/human/`, or
+  a repository ruleset, would close this; Dev declined both as unnecessary.
+- There is no single gitlink commit id to quote as "the reviewed bundle". The
+  substitute identifier is the parent commit plus the manifest, i.e.
+  `bijectai/kmla@<sha>:human/` together with the 408 digests in
+  `human/HASHES.txt`, which is sufficient for reproduction and for the paper.
+
+**Consequence for Checkpoint 0.** Deliverable 5 no longer requires a repository
+URL or a submodule pin. What remains of it is the manifest, which must be
+regenerated once `human/parity/check.py` exists so that it covers the meter:
+
+```sh
+python3 -B scripts/human_manifest.py generate > human/HASHES.txt
+python3 -B scripts/human_manifest.py verify
+```
+
+`scripts/make_human_submodule.sh` is retained, tested and unused. If this
+decision is ever reversed it performs the migration; it is not part of the
+current path.
