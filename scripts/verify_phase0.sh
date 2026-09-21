@@ -119,20 +119,22 @@ else
   report fail "source archive digest matches docs/contracts/HASHES.txt" "on disk $ACTUAL, staged $RECORDED"
 fi
 
+# Installed manifest enforcement begins.
 if [ -f "$ROOT/human/HASHES.txt" ] && grep -q '^[0-9a-f]\{64\}  ' "$ROOT/human/HASHES.txt"; then
   report ok "human/HASHES.txt is the installed manifest (docs/contracts/HASHES.txt is the superseded staging draft)"
 else
-  report skip "human/HASHES.txt is the installed manifest" \
-    "still the placeholder; promote it with scripts/human_manifest.py generate"
+  report fail "human/HASHES.txt is the installed manifest" \
+    "missing or empty after Checkpoint 0 sign-off; protected artifacts cannot be verified"
 fi
 
 if grep -q '^[0-9a-f]\{64\}  ' "$ROOT/human/HASHES.txt" 2>/dev/null; then
   run "installed human/HASHES.txt verifies" \
     python3 -B "$HERE/human_manifest.py" verify --repo-root "$ROOT"
 else
-  report skip "installed human/HASHES.txt verifies" \
-    "human/HASHES.txt is still the placeholder; deliverable 5 is outstanding"
+  report fail "installed human/HASHES.txt verifies" \
+    "human/HASHES.txt is absent or has no hash records"
 fi
+# Installed manifest enforcement ends.
 
 echo
 echo "-- parity meter --"

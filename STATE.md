@@ -2,6 +2,15 @@
 
 ## Current phase
 
+2026-09-21 (Greptile remedies installed): Dev authorized sensible patches for
+two reproduced enforcement defects. `Interface/Household.lean` now escapes all
+JSON control characters; all three black-box observation tests pass. A missing
+or empty `human/HASHES.txt` is now a mechanical verifier failure, and
+`.github/workflows/verify.yml` invokes manifest verification unconditionally.
+Ten verifier regressions, YAML parsing, the 29 Interface guards, manifest
+verification and strict Phase 0 all pass. Neither remedy changes statute
+semantics or protected artifacts.
+
 2026-09-21 (Checkpoint 0 signed off): Dev explicitly stated, "I sign off
 checkpoint 0 and authorize phase 1". Checkpoint 0 is cleared; Phase 1 entry
 preparation is active. Entry commit `ba1e9206f4bb4cc7067e7bd70a951191b64fa51b`;
@@ -20,14 +29,12 @@ reader passes 26 tests across all 376 original cases; per-case source hashes
 and lexical counts are retained under `docs/phase1/`. It does not ground or
 serialize Households yet. The §7703 context audited dependencies/modes and
 stopped before implementing any Lean definitions. No oracle parity is claimed.
-The shared JSON diagnostic has 2 passing tests and 1 reproduced failure for
-control-character escaping; no fix, domain restriction or comparison change
-has been installed while approval is pending.
-Its verbatim output is retained in
-`docs/consult/evidence/observation_before_fix_2026-09-21.txt`. Eight existing
-verifier regressions, four invocation regressions, eighteen runtime regressions
-and all 29 existing Interface guards still pass. The entry meter and manifest
-hashes are unchanged; all 412 protected records still verify.
+The shared JSON diagnostic now has 3 passing tests after the authorized
+control-character escaping restoration. Its before-fix output is retained in
+`docs/consult/evidence/observation_before_fix_2026-09-21.txt`. Ten verifier
+regressions, four invocation regressions, eighteen runtime regressions and all
+29 existing Interface guards pass. The entry meter and manifest hashes are
+unchanged; all 412 protected records still verify.
 
 Actual Docker mount inspection verified both `/human` and `/corpus` read-only
 without attempting a protected write. The live runtime record matched the
@@ -261,9 +268,8 @@ edit is made by this lane. Checkpoint 0 authorization remains in force.
 ### Phase 1 producer-release escalation (A-008)
 
 Fable classifies JSON control-character escaping as builder-owned restoration,
-not a semantic change. The three-test diagnostic suite reproduces that defect;
-the other two tests pass. The correction has not yet been applied: development
-is paused for owner clarification as requested.
+not a semantic change. Dev authorized the correction; complete U+0000–U+001F
+escaping is installed and all three diagnostic tests pass.
 
 A-008 also escalates P-WIRE: owner approval of wording that releases PARITY.md's
 stale producer block after signed H1-H6/Interface approval. It recommends a record
@@ -279,10 +285,10 @@ well-formedness check accepts that nonempty term. A pinned Lean 4.33.1 probe of
 `Household.v1` returned true. Evidence and the exact probe are in Q-008.
 A-008 classifies this as restoration of the existing H6.2 JSON requirement,
 with byte-stable existing encodings and pinned control-character escape spellings.
-No shared encoder, `Valid`, protected artifact or comparison expectation has
-been changed. Its separate producer-release escalation and Q-009's semantic
-finding are the reasons development is now paused, not an unresolved question
-about whether raw control characters are valid JSON.
+The shared encoder now implements that restoration; `Valid`, protected
+artifacts and comparison expectations are unchanged. Its separate
+producer-release escalation and Q-009's semantic finding remain the reasons
+development is paused.
 
 ### Checkpoint 0 entry hold — resolved
 
@@ -539,7 +545,7 @@ No commits, pushes, or PRs were created in this session.
 ## Resume condition
 
 Checkpoint 0 remains explicitly signed off. Phase 1 implementation is paused
-for Dev's decisions on A-008/P-WIRE and Q-009/Q-010's recursion finding. Resume only
+for Dev's decision on P-WIRE and Q-009/Q-010's recursion finding. Resume only
 under the approved resolution, with separate oracle and serializer/generator
 contexts and the read-only execution boundary. Checkpoint 1 requires zero parity mismatches
 on all 376 cases, an unchanged meter hash, owner hazard/mismatch review, and

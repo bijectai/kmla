@@ -49,8 +49,8 @@ without retracting the Checkpoint 0 sign-off.
   wording with a lossless codec of the already-approved H1-H6/Interface shape.
   Confirm the proposed record unit (one household, target and bound-argument
   tuple) before freezing a corpus. No release or counting-unit change is yet
-  installed. The control-character JSON defect is classified as restoration,
-  but its correction is paused with development; the diagnostic test is retained.
+  installed. Dev separately authorized the control-character JSON restoration;
+  it is installed and its three black-box observation tests pass.
 - Q-009/Q-010: review the reproduced sibling cycle in the R5 §7703/§152 recursion
   group. Current child-graph acyclicity does not justify the stated person-count
   fuel bound. Any new reference-domain/termination rule must be the owner's

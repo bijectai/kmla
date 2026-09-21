@@ -13,13 +13,21 @@ import unittest
 
 
 SCRIPT = Path(__file__).with_name("verify_phase0.sh").read_text(encoding="utf-8")
+WORKFLOW = (Path(__file__).parents[1] / ".github/workflows/verify.yml").read_text(
+    encoding="utf-8"
+)
 LATER_MARKER = "# Later checkpoint artifacts are visible but not Checkpoint 0 requirements."
 SUMMARY_MARKER = "# Checkpoint 0 summary: later artifacts cannot change these counters or exits."
 LATER = SCRIPT.split(LATER_MARKER, 1)[1].split(SUMMARY_MARKER, 1)[0]
 SUMMARY = SCRIPT.split(SUMMARY_MARKER, 1)[1]
 LATER_FUNCTION = re.search(r"(?ms)^report_later\(\) \{.*?^\}", SCRIPT).group()
+REPORT_FUNCTION = re.search(r"(?ms)^report\(\) \{.*?^\}", SCRIPT).group()
+RUN_FUNCTION = re.search(r"(?ms)^run\(\) \{.*?^\}", SCRIPT).group()
 PENDING_LINES = "\n".join(line for line in SCRIPT.splitlines()
                           if line.startswith("PENDING="))
+MANIFEST = SCRIPT.split("# Installed manifest enforcement begins.", 1)[1].split(
+    "# Installed manifest enforcement ends.", 1
+)[0]
 
 
 def bash(fragment, env=None):
@@ -103,6 +111,33 @@ class AccountingTests(unittest.TestCase):
                 result = self.run_report(present=present, strict=False, failed=1)
                 self.assertEqual(result.returncode, 1)
                 self.assertIn("Checkpoint 0 has NOT passed", result.stdout)
+
+
+class ManifestEnforcementTests(unittest.TestCase):
+    def test_missing_installed_manifest_is_a_mechanical_failure(self):
+        with tempfile.TemporaryDirectory(prefix="kmla-manifest-test-") as work:
+            root = Path(work)
+            (root / "human").mkdir()
+            setup = (
+                "PASS=0\nFAIL=0\nSKIP=0\n"
+                f"ROOT={root}\nHERE=/unused\n"
+            )
+            result = bash(
+                setup + REPORT_FUNCTION + "\n" + RUN_FUNCTION + "\n" + MANIFEST
+                + '\nprintf "%s %s %s" "$PASS" "$FAIL" "$SKIP"\n'
+            )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stderr, "")
+        self.assertIn("FAIL  human/HASHES.txt is the installed manifest", result.stdout)
+        self.assertIn("FAIL  installed human/HASHES.txt verifies", result.stdout)
+        self.assertTrue(result.stdout.endswith("0 2 0"), result.stdout)
+
+    def test_workflow_never_skips_manifest_verification(self):
+        marker = "      - name: Protected-artifact manifest"
+        self.assertIn(marker, WORKFLOW)
+        block = WORKFLOW.split(marker, 1)[1].split("\n      - name:", 1)[0]
+        self.assertNotIn("if:", block)
+        self.assertIn("run: python3 -B scripts/human_manifest.py verify", block)
 
 
 if __name__ == "__main__":

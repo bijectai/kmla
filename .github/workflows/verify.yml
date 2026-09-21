@@ -38,14 +38,16 @@ jobs:
           fi
 
       - name: Phase 0 acceptance checks
-        # Flip to --strict once Checkpoint 0 has passed, so a regression that
-        # empties an owner artifact fails the build instead of reading as
-        # "outstanding".
+        # The verifier treats a missing/empty protected manifest as a hard
+        # failure. Other unavailable local-runtime prerequisites remain visible
+        # here without making this workflow rebuild the separately pinned image.
         run: bash scripts/verify_phase0.sh .
 
       - name: Protected-artifact manifest
-        if: hashFiles('human/HASHES.txt') != ''
         run: python3 -B scripts/human_manifest.py verify
+
+      - name: Verifier enforcement regressions
+        run: python3 -B scripts/test_verify_phase0.py
 
   protect-human:
     name: human/ is read-only to the assistant

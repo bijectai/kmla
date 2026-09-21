@@ -635,10 +635,26 @@ inductive Obs where
   | arr  (xs : List Obs)
   deriving Repr, Inhabited
 
-/-- Minimal JSON string escaping: the corpus contains no control characters. -/
+/-- One lowercase hexadecimal digit for a JSON `\u00XX` escape. -/
+private def jsonHexDigit (n : Nat) : String :=
+  (Char.ofNat (if n < 10 then 48 + n else 87 + n)).toString
+
+/-- JSON string escaping for quotes, backslashes and every U+0000–U+001F control. -/
 def escapeJson (s : String) : String :=
   s.foldl (init := "") fun acc c =>
-    acc ++ (if c == '"' then "\\\"" else if c == '\\' then "\\\\" else c.toString)
+    acc ++ match c.toNat with
+      | 8  => "\\b"
+      | 9  => "\\t"
+      | 10 => "\\n"
+      | 12 => "\\f"
+      | 13 => "\\r"
+      | 34 => "\\\""
+      | 92 => "\\\\"
+      | n  =>
+        if n < 32 then
+          "\\u00" ++ jsonHexDigit (n / 16) ++ jsonHexDigit (n % 16)
+        else
+          c.toString
 
 /--
 H6.2. Canonical JSON for one observed value. `DecidableEq` cannot be derived for
