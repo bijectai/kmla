@@ -87,6 +87,58 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
+### Review hold: builder acceptance tools violate their existing contracts
+
+Read-only integration review on 2026-09-21 independently confirmed the committed
+decision digest `58dad769…`, a verifying current manifest, and a successful
+Lean 4.33.1 interface check with 29 guards. It also reproduced these defects in
+isolated temporary fixtures, without implementing or reading the owner meter:
+
+- `scripts/parity_conformance.py:78` constructs its all-agree input using the
+  engine-output helper `record()`. It writes `result: null` and omits the
+  `payload` required by `docs/contracts/PARITY.md`. A conforming meter that
+  checks input envelopes could correctly reject this fixture. A failed suite
+  is therefore not currently reliable evidence of a defective owner meter.
+- `scripts/human_manifest.py` silently omits symlinked directories from its
+  inventory. Generation followed by verification accepts such a tree, despite
+  HASHES.md's symlink prohibition.
+- The same helper excludes every basename `HASHES.txt`, including
+  `nested/HASHES.txt`, rather than only the protected root's self-manifest.
+  Generation/verification accepted an unlisted nested file in a reproduction.
+
+These are builder-side acceptance-tool findings, not new semantic decisions
+or additional human artifacts. Pause reliance on the parity conformance verdict
+and migration/integrity acceptance until the helpers conform to the existing
+contracts and negative regression tests pass. The current manifest's success
+does not demonstrate that its verifier rejects all prohibited trees.
+
+Q-005 requests Fable's classification of the fourteen purported parity gaps
+against the written contract, without adding requirements or choosing new
+contract rules. No code fix or contract change has been applied in this review.
+The production V7/V8 OracleGuards remain outstanding as documented; the passing
+interface guards use an always-true test instance, not actual oracle semantics.
+
+A-005 now records `Escalate to Dev: Yes` for items 8, 9, 10, 13, and 14:
+non-JSON files, nested input directories, report encoding/line endings, the
+definition of ambiguous IDs, and aliased engine-output directories. Preserve
+the meter/affected acceptance hold; do not implement owner policy by guessing.
+Most of the fourteen listed items are already covered by the current contract
+or are integration responsibilities, not fourteen new human prerequisites.
+Fable identifies the reproduced helper defects as violations of existing
+contracts, not semantic decisions or contract amendments.
+
+Q-006/A-006 reconcile A-005's inconsistent four/five count: the enumerated five
+questions govern. A-006 also withdraws the unsupported claim that a
+`linux/amd64` pin alone guarantees case-sensitive input/output storage. No
+filesystem property of the future runner mounts has been established by this
+review. The same narrow owner escalation remains; prior answers are unchanged.
+
+An independent enumeration and SHA-256 comparison, not using the manifest
+helper, also verified all 408 currently listed files and found no symlink paths
+in the actual protected tree. Thus the reproduced verifier holes are not a
+claim of current artifact drift. All 26 evidence files are installed. No
+protected file, runtime acceptance, contract, or implementation was changed.
+
 ### B006 (mostly cleared): Phase 0 artifacts not fully installed or pinned
 
 Cleared on 2026-09-21: the decisions are committed, the decision log and

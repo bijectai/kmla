@@ -46,11 +46,18 @@ SECTION = 151
 TIMEOUT = 120
 
 
-def record(input_id, result, section=SECTION, version=1, omit_result=False):
-    payload = {"schema_version": version, "input_id": input_id, "section": section}
+def input_record(input_id, section=SECTION, version=1, payload=None):
+    """An --inputs record. PARITY.md gives these a `payload`, never a `result`."""
+    return {"schema_version": version, "input_id": input_id, "section": section,
+            "payload": {} if payload is None else payload}
+
+
+def output_record(input_id, result, section=SECTION, version=1, omit_result=False):
+    """An engine output record. PARITY.md gives these a `result`, never a `payload`."""
+    body = {"schema_version": version, "input_id": input_id, "section": section}
     if not omit_result:
-        payload["result"] = result
-    return payload
+        body["result"] = result
+    return body
 
 
 def write_json(path, payload, raw=None):
@@ -75,9 +82,9 @@ class Case:
 
 def agreeing(root, ids=("s151_a_pos", "s151_b_pos")):
     for index, name in enumerate(ids):
-        write_json(root / "inputs" / f"{name}.json", record(name, None))
+        write_json(root / "inputs" / f"{name}.json", input_record(name))
         for engine in ("prolog-out", "lean-out"):
-            write_json(root / engine / f"{name}.json", record(name, index))
+            write_json(root / engine / f"{name}.json", output_record(name, index))
 
 
 def build_cases():
@@ -94,7 +101,7 @@ def build_cases():
 
     def differ(root):
         agreeing(root)
-        write_json(root / "lean-out" / "s151_b_pos.json", record("s151_b_pos", 999))
+        write_json(root / "lean-out" / "s151_b_pos.json", output_record("s151_b_pos", 999))
     case("value-mismatch", "Exit 1 and one mismatch record when a result differs",
          "PARITY.md 'Exit 1'", differ, 1, expect_mismatch_ids=["s151_b_pos"])
 
@@ -116,7 +123,7 @@ def build_cases():
         agreeing(root)
         (root / "prolog-out" / "s151_a_pos.json").unlink()
         (root / "lean-out" / "s151_a_pos.json").unlink()
-        write_json(root / "lean-out" / "s151_b_pos.json", record("s151_b_pos", 1))
+        write_json(root / "lean-out" / "s151_b_pos.json", output_record("s151_b_pos", 1))
     case("input-population-is-authoritative",
          "An input with NO engine output is still compared, not silently dropped",
          "PARITY.md 'Use --inputs as the authority'; 'Do not compare only the intersection'",
@@ -132,13 +139,13 @@ def build_cases():
 
     def extra_output(root):
         agreeing(root)
-        write_json(root / "lean-out" / "s151_zzz.json", record("s151_zzz", 0))
+        write_json(root / "lean-out" / "s151_zzz.json", output_record("s151_zzz", 0))
     case("unexpected-output-id", "An output ID absent from --inputs is an infrastructure failure",
          "PARITY.md 'Unexpected output IDs ... fail with exit 2'", extra_output, 2, expect_stderr=True)
 
     def wrong_section(root):
         agreeing(root)
-        write_json(root / "lean-out" / "s151_b_pos.json", record("s151_b_pos", 1, section=63))
+        write_json(root / "lean-out" / "s151_b_pos.json", output_record("s151_b_pos", 1, section=63))
     case("wrong-section", "An output carrying the wrong section is an infrastructure failure",
          "PARITY.md 'wrong sections ... fail with exit 2'", wrong_section, 2, expect_stderr=True)
 
@@ -158,55 +165,55 @@ def build_cases():
 
     def stem_disagrees(root):
         agreeing(root)
-        write_json(root / "lean-out" / "s151_b_pos.json", record("s151_OTHER", 1))
+        write_json(root / "lean-out" / "s151_b_pos.json", output_record("s151_OTHER", 1))
     case("stem-id-disagreement", "The filename stem and the object's input_id must agree",
          "PARITY.md 'the filename stem and the object ID must agree'",
          stem_disagrees, 2, expect_stderr=True)
 
     def bad_id(root):
         agreeing(root)
-        write_json(root / "inputs" / "_leading.json", record("_leading", None))
-        write_json(root / "prolog-out" / "_leading.json", record("_leading", 0))
-        write_json(root / "lean-out" / "_leading.json", record("_leading", 0))
+        write_json(root / "inputs" / "_leading.json", input_record("_leading"))
+        write_json(root / "prolog-out" / "_leading.json", output_record("_leading", 0))
+        write_json(root / "lean-out" / "_leading.json", output_record("_leading", 0))
     case("invalid-input-id", "IDs must match [A-Za-z0-9][A-Za-z0-9_-]*",
          "PARITY.md 'IDs match [A-Za-z0-9][A-Za-z0-9_-]*'", bad_id, 2, expect_stderr=True,
          informational=True)
 
     def bool_vs_int(root):
         agreeing(root)
-        write_json(root / "prolog-out" / "s151_a_pos.json", record("s151_a_pos", True))
-        write_json(root / "lean-out" / "s151_a_pos.json", record("s151_a_pos", 1))
+        write_json(root / "prolog-out" / "s151_a_pos.json", output_record("s151_a_pos", True))
+        write_json(root / "lean-out" / "s151_a_pos.json", output_record("s151_a_pos", 1))
     case("boolean-is-not-integer", "true and 1 are different values under strict typing",
          "PARITY.md 'booleans are not integers'", bool_vs_int, 1,
          expect_mismatch_ids=["s151_a_pos"])
 
     def absent_vs_null(root):
         agreeing(root)
-        write_json(root / "prolog-out" / "s151_a_pos.json", record("s151_a_pos", None, omit_result=True))
-        write_json(root / "lean-out" / "s151_a_pos.json", record("s151_a_pos", None))
+        write_json(root / "prolog-out" / "s151_a_pos.json", output_record("s151_a_pos", None, omit_result=True))
+        write_json(root / "lean-out" / "s151_a_pos.json", output_record("s151_a_pos", None))
     case("absent-key-is-not-null", "An absent key is not a null value",
          "PARITY.md 'absent keys are not null values'", absent_vs_null, 1,
          expect_mismatch_ids=["s151_a_pos"], informational=True)
 
     def array_order(root):
         agreeing(root)
-        write_json(root / "prolog-out" / "s151_a_pos.json", record("s151_a_pos", [1, 2]))
-        write_json(root / "lean-out" / "s151_a_pos.json", record("s151_a_pos", [2, 1]))
+        write_json(root / "prolog-out" / "s151_a_pos.json", output_record("s151_a_pos", [1, 2]))
+        write_json(root / "lean-out" / "s151_a_pos.json", output_record("s151_a_pos", [2, 1]))
     case("array-order-matters", "Arrays retain order",
          "PARITY.md 'arrays retain order and multiplicity'", array_order, 1,
          expect_mismatch_ids=["s151_a_pos"])
 
     def array_multiplicity(root):
         agreeing(root)
-        write_json(root / "prolog-out" / "s151_a_pos.json", record("s151_a_pos", [1, 1]))
-        write_json(root / "lean-out" / "s151_a_pos.json", record("s151_a_pos", [1]))
+        write_json(root / "prolog-out" / "s151_a_pos.json", output_record("s151_a_pos", [1, 1]))
+        write_json(root / "lean-out" / "s151_a_pos.json", output_record("s151_a_pos", [1]))
     case("array-multiplicity-matters", "Duplicates are not collapsed",
          "PARITY.md 'Do not ... deduplicate answers'", array_multiplicity, 1,
          expect_mismatch_ids=["s151_a_pos"])
 
     def number_coercion(root):
         agreeing(root)
-        write_json(root / "prolog-out" / "s151_a_pos.json", record("s151_a_pos", 1))
+        write_json(root / "prolog-out" / "s151_a_pos.json", output_record("s151_a_pos", 1))
         write_json(root / "lean-out" / "s151_a_pos.json", None, raw=
                    '{"schema_version": 1, "input_id": "s151_a_pos", "section": 151, "result": 1.0}\n')
     case("no-number-coercion", "1 and 1.0 are not interchangeable",
@@ -229,7 +236,7 @@ def build_cases():
         ids = ["s151_c_pos", "s151_a_pos", "s151_b_pos"]
         agreeing(root, ids=ids)
         for index, name in enumerate(ids):
-            write_json(root / "lean-out" / f"{name}.json", record(name, 1000 + index))
+            write_json(root / "lean-out" / f"{name}.json", output_record(name, 1000 + index))
     case("mismatch-record-order", "Mismatch records are written in input-ID order",
          "PARITY.md 'Write mismatch records in input-ID order'", ordered_records, 1,
          expect_mismatch_ids=["s151_a_pos", "s151_b_pos", "s151_c_pos"])
@@ -308,58 +315,136 @@ def run_case(meter, case, workspace):
     return not problems, "; ".join(problems)
 
 
-GAPS = [
-    ("mismatches.jsonl location", "PARITY.md says 'the invocation's working directory', so "
-     "this harness runs the meter with cwd set to a dedicated run directory and reads the "
-     "report from there. That is the contract's literal reading, but the real harness must "
-     "be held to it too; consider pinning an explicit output path instead."),
-    ("a crashed meter is indistinguishable from a completed one", "An uncaught Python "
-     "exception exits 1, which is PARITY.md's 'mismatches' code. PARITY.md requires the "
-     "report to be truncated only on SUCCESS, so a crash in a reused directory can present "
-     "a previous run's mismatches.jsonl as this run's result. Decide whether the meter must "
-     "trap unexpected exceptions and re-exit 2, and whether it must truncate the report "
-     "before doing any work."),
-    ("input record section vs --section", "PARITY.md fixes engine OUTPUT sections but never "
-     "says whether an INPUT record whose 'section' disagrees with --section is simply not "
-     "selected, or is exit 2."),
-    ("what prolog and lean hold in a mismatch record", "PARITY.md says a missing side is null "
-     "and an existing side is 'its full output object'. It does not say whether an ordinary "
-     "value mismatch records the full objects or only the 'result' values."),
-    ("definition of input-ID order", "PARITY.md requires records 'in input-ID order' without "
-     "saying byte order, codepoint order, or a locale collation."),
-    ("classification of envelope defects", "A missing 'result' key, a raw JSON float where "
-     "DECISIONS.md requires a tagged representation, and an ID violating the published "
-     "grammar are each either a mismatch (exit 1) or a malformed record (exit 2). PARITY.md "
-     "does not say which. The three checks above marked INFORMATIONAL depend on this."),
-    ("schema_version validation", "PARITY.md fixes schema_version to 1 but does not say "
-     "whether the meter must reject another value, and with which exit code."),
-    ("non-.json files in a directory", "Undefined: ignore them, or exit 2?"),
-    ("nested subdirectories under --inputs", "Undefined: recurse, ignore, or exit 2?"),
-    ("encoding and line endings of mismatches.jsonl", "UTF-8 is fixed for envelopes; the "
-     "report's encoding, newline, and trailing-newline convention are not stated."),
-    ("exit codes above 2", "Undefined. Decide whether any status other than 0, 1 and 2 is "
-     "ever legal, and what the harness does when it sees one."),
-    ("unreadable or absent directory", "Undefined; presumably exit 2, but it is not written down."),
-    ("ID case sensitivity and 'ambiguous IDs'", "PARITY.md lists 'ambiguous IDs' as an exit-2 "
-     "condition without defining the term. On a case-insensitive filesystem 's151_A' and "
-     "'s151_a' are one file; on a case-sensitive one they are two. Decide whether IDs are "
-     "compared case-sensitively and what makes two of them ambiguous."),
-    ("shared or identical output directories", "Nothing forbids --prolog-out and --lean-out "
-     "naming the same directory, or either of them naming --inputs. Decide whether that is "
-     "exit 2 or is silently treated as both engines agreeing with themselves."),
+# Five policy questions the owner settles before writing the meter. Narrowed
+# from a longer list after review: most of what was there is either already
+# fixed by PARITY.md or a normal implementation responsibility, and presenting
+# those as human prerequisites overstated what Checkpoint 0 needs.
+POLICIES = [
+    ("non-JSON files in a directory",
+     "A `.txt`, a `.DS_Store` or an editor swap file inside --inputs or an "
+     "engine directory: ignored, or exit 2? PARITY.md names one object per "
+     "`<input_id>.json` but does not say what else may sit beside them."),
+    ("nested subdirectories",
+     "Does the meter recurse into a subdirectory of --inputs, ignore it, or "
+     "exit 2? This decides whether a section can be sharded across directories."),
+    ("report encoding and line endings",
+     "UTF-8 is fixed for the envelopes; mismatches.jsonl's encoding, newline "
+     "and trailing-newline convention are not stated. The harness diffs this "
+     "file across runs, so the convention has to be pinned somewhere."),
+    ("ambiguous IDs, and ID case sensitivity",
+     "PARITY.md makes 'ambiguous IDs' an exit-2 condition without defining the "
+     "term. On a case-insensitive filesystem `s151_A` and `s151_a` are one "
+     "file; on a case-sensitive one they are two. Decide whether IDs compare "
+     "case-sensitively and what makes two of them ambiguous."),
+    ("aliased output directories",
+     "Nothing forbids --prolog-out and --lean-out naming the same directory, "
+     "or either naming --inputs. Decide whether that is exit 2 or is silently "
+     "treated as both engines agreeing with themselves."),
 ]
+
+# Not owner policy. Listed so nobody re-raises them as blockers: each is either
+# already answered by PARITY.md or is the meter author's ordinary job.
+IMPLEMENTATION = [
+    ("mismatches.jsonl location",
+     "Answered: PARITY.md says 'the invocation's working directory'. The "
+     "harness must honour it; this suite runs the meter in a dedicated run "
+     "directory for exactly that reason."),
+    ("what prolog and lean hold in a mismatch record",
+     "Answered: PARITY.md says a missing side is null and an existing side "
+     "'contains its full output object'."),
+    ("an input record whose section disagrees with --section",
+     "Answered: PARITY.md makes --inputs the authority for the IDs 'in the "
+     "requested section'."),
+    ("input-ID order",
+     "PARITY.md says 'input-ID order'; byte order of the ID is the reading "
+     "with no locale dependence. Implementation choice, worth writing down."),
+    ("a crashed meter exits 1, the same code as 'mismatches found'",
+     "Implementation responsibility: trap unexpected exceptions and re-exit 2, "
+     "and truncate the report before doing any work so a crash cannot present "
+     "a previous run's mismatches.jsonl as this run's result."),
+    ("schema_version other than 1",
+     "Implementation responsibility: reject it, as exit 2."),
+    ("unreadable or absent directory",
+     "Implementation responsibility: exit 2 with a diagnostic."),
+    ("classification of envelope defects",
+     "A missing `result`, or a raw JSON float where DECISIONS.md requires a "
+     "tagged representation, is exit 1 or exit 2 depending on whether it is "
+     "read as a value difference or a malformed record. The two checks below "
+     "marked INFORMATIONAL depend on it and are reported, never enforced."),
+]
+
+GAPS = POLICIES
+
+
+def self_test():
+    """Check the fixtures themselves against PARITY.md's envelopes.
+
+    A fixture that writes a malformed record would fail a *correct* meter, which
+    is worse than not testing at all: the harness would read as evidence against
+    a meter that is in fact in contract. This ran after exactly that defect was
+    found -- every `--inputs` record carried a `result` key instead of `payload`.
+    """
+    import tempfile as _tf
+    problems = []
+    with _tf.TemporaryDirectory() as directory:
+        workspace = Path(directory)
+        for case in build_cases():
+            root = workspace / case.name
+            root.mkdir(parents=True)
+            case.build(root)
+            for path in sorted((root / "inputs").glob("*.json")):
+                try:
+                    body = json.loads(path.read_text(encoding="utf-8"))
+                except json.JSONDecodeError:
+                    continue            # a deliberately malformed fixture
+                if "payload" not in body:
+                    problems.append(f"{case.name}: inputs/{path.name} has no 'payload'")
+                if "result" in body:
+                    problems.append(f"{case.name}: inputs/{path.name} has a 'result'")
+                for required in ("schema_version", "input_id", "section"):
+                    if required not in body:
+                        problems.append(f"{case.name}: inputs/{path.name} has no '{required}'")
+            for engine in ("prolog-out", "lean-out"):
+                for path in sorted((root / engine).glob("*.json")):
+                    try:
+                        body = json.loads(path.read_text(encoding="utf-8"))
+                    except json.JSONDecodeError:
+                        continue
+                    if "payload" in body:
+                        problems.append(f"{case.name}: {engine}/{path.name} has a 'payload'")
+                    for required in ("schema_version", "input_id", "section"):
+                        if required not in body:
+                            problems.append(f"{case.name}: {engine}/{path.name} has no '{required}'")
+            if not list((root / "inputs").glob("*.json")) and case.name != "empty-input-population":
+                problems.append(f"{case.name}: no input records at all")
+
+    for problem in problems:
+        print(f"FAIL  {problem}")
+    if problems:
+        print(f"\n{len(problems)} fixture defect(s); these would fail a correct meter.")
+        return 1
+    print(f"ok    all {len(build_cases())} fixtures match PARITY.md's input and output envelopes")
+    return 0
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--meter", help="path to the meter to test; never read, only invoked")
     parser.add_argument("--list-gaps", action="store_true", help="print the unresolved contract questions and exit")
+    parser.add_argument("--self-test", action="store_true", help="check the fixtures against the contract's envelopes and exit")
     arguments = parser.parse_args(argv)
 
+    if arguments.self_test:
+        return self_test()
+
     if arguments.list_gaps:
-        print("Unresolved questions in docs/contracts/PARITY.md. Each one lets two")
-        print("correct-looking meters disagree. Pin them before writing the meter.\n")
-        for title, detail in GAPS:
+        print(f"{len(POLICIES)} policy questions for the owner. Each one lets two")
+        print("correct-looking meters disagree, and PARITY.md does not settle it.\n")
+        for title, detail in POLICIES:
+            print(f"- {title}: {detail}")
+        print(f"\nFor reference, {len(IMPLEMENTATION)} questions that are NOT owner policy:")
+        print("already answered by the contract, or the meter author's ordinary job.\n")
+        for title, detail in IMPLEMENTATION:
             print(f"- {title}: {detail}")
         return 0
 
@@ -398,7 +483,7 @@ def main(argv=None):
         print("failed: " + ", ".join(failed))
         print("\nA meter that fails any check above is out of contract; a Checkpoint 1")
         print("'zero mismatches' result from it would not mean what the gate claims.")
-    print(f"\n{len(GAPS)} contract questions remain unresolved; run with --list-gaps.")
+    print(f"\n{len(POLICIES)} owner policy questions remain; run with --list-gaps.")
     print("Answer them in DECISIONS.md before writing the meter: docs/PLAN.md makes")
     print("'parity/check.py hash unchanged' part of the Checkpoint 1 gate, so a later")
     print("correction breaks the gate it exists to protect.")

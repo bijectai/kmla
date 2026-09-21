@@ -27,7 +27,13 @@ MANIFEST_NAME = "HASHES.txt"
 DIGEST_SEPARATOR = "  "
 DIGEST_LENGTH = 64
 HEX = frozenset("0123456789abcdef")
-EXCLUDED_COMPONENTS = frozenset({".git", MANIFEST_NAME})
+# `.git` is Git's own metadata at any depth (a submodule carries its own).
+# The manifest cannot hash its own final contents, so the manifest file is
+# excluded -- but only the one AT THE ROOT. A `HASHES.txt` deeper in the tree is
+# an ordinary protected file and must be covered, or it becomes a place to hide
+# content from the coverage check.
+EXCLUDED_ANY_DEPTH = frozenset({".git"})
+EXCLUDED_AT_ROOT = frozenset({MANIFEST_NAME})
 CHUNK = 1 << 20
 
 
@@ -65,8 +71,10 @@ def check_relative_path(text):
     for part in parts:
         if part in {"", ".", ".."}:
             raise ManifestError(f"traversal or empty component in path: {text!r}")
-        if part in EXCLUDED_COMPONENTS:
+        if part in EXCLUDED_ANY_DEPTH:
             raise ManifestError(f"excluded component {part!r} in path: {text!r}")
+    if len(parts) == 1 and parts[0] in EXCLUDED_AT_ROOT:
+        raise ManifestError(f"the manifest cannot list itself: {text!r}")
     return PurePosixPath(text)
 
 
@@ -87,19 +95,33 @@ def walk_protected(root):
         raise ManifestError(f"protected root is not a directory: {root}")
     found = []
     for directory, subdirectories, names in os.walk(root, followlinks=False):
+        here = Path(directory)
+        # os.walk lists a symlinked directory among `subdirectories` and, with
+        # followlinks=False, simply does not descend into it. Pruning it here
+        # without complaint would leave whatever it points at uncovered while
+        # `verify` still reported success, so refuse instead.
+        for name in list(subdirectories):
+            if name in EXCLUDED_ANY_DEPTH:
+                continue
+            if stat_module.S_ISLNK(os.lstat(here / name).st_mode):
+                raise ManifestError(f"symlinked directory under the protected root: {here / name}")
         subdirectories[:] = sorted(
-            name for name in subdirectories if name not in EXCLUDED_COMPONENTS
+            name for name in subdirectories if name not in EXCLUDED_ANY_DEPTH
         )
         for name in sorted(names):
-            if name in EXCLUDED_COMPONENTS:
+            if name in EXCLUDED_ANY_DEPTH:
                 continue
-            path = Path(directory) / name
+            path = here / name
+            relative = PurePosixPath(path.relative_to(root).as_posix())
+            # Only the root manifest is excluded; a nested one is protected data.
+            if len(relative.parts) == 1 and name in EXCLUDED_AT_ROOT:
+                continue
             info = os.lstat(path)
             if stat_module.S_ISLNK(info.st_mode):
                 raise ManifestError(f"symlink under the protected root: {path}")
             if not stat_module.S_ISREG(info.st_mode):
                 raise ManifestError(f"not a regular file: {path}")
-            found.append(PurePosixPath(path.relative_to(root).as_posix()))
+            found.append(relative)
     return sorted(found, key=str)
 
 
@@ -235,7 +257,8 @@ def self_test():
         expect_error("uppercase digests rejected", lambda: parse_manifest("A" * 64 + "  a.txt"), "malformed digest")
         expect_error("missing separator rejected", lambda: parse_manifest("f" * 64 + " a.txt"), "separator")
         expect_error("CRLF rejected", lambda: parse_manifest("f" * 64 + "  a.txt\r\n"), "carriage return")
-        expect_error("self-reference rejected", lambda: parse_manifest("f" * 64 + f"  {MANIFEST_NAME}"), "excluded")
+        expect_error("the root manifest cannot list itself",
+                     lambda: parse_manifest("f" * 64 + f"  {MANIFEST_NAME}"), "cannot list itself")
         expect_error("git metadata rejected", lambda: parse_manifest("f" * 64 + "  .git/config"), "excluded")
 
         unsorted_path = Path(workspace) / "unsorted.txt"
@@ -246,6 +269,34 @@ def self_test():
         comments = "# leading comment\n\n" + render(records)
         (Path(workspace) / "c.txt").write_text(comments, encoding="utf-8")
         expect("comments and blank lines are accepted", verify(root, Path(workspace) / "c.txt") == [])
+
+        # Regressions for two holes found in review on 2026-09-21: a symlinked
+        # DIRECTORY was silently not descended into, and a HASHES.txt at any
+        # depth was silently excluded. Both let an unlisted protected file sit
+        # in the tree while `verify` still reported success.
+        nested_manifest = root / "nested" / MANIFEST_NAME
+        nested_manifest.write_text("not the root manifest\n", encoding="utf-8")
+        expect("a nested HASHES.txt is covered, not excluded",
+               PurePosixPath("nested/HASHES.txt") in set(walk_protected(root)))
+        expect("the root HASHES.txt is still excluded",
+               PurePosixPath(MANIFEST_NAME) not in set(walk_protected(root)))
+        expect("a nested HASHES.txt may be listed in a manifest",
+               parse_manifest("f" * 64 + "  nested/HASHES.txt")[0][1]
+               == PurePosixPath("nested/HASHES.txt"))
+        expect("an unlisted nested manifest is reported",
+               any("unlisted" in problem for problem in verify(root, manifest)))
+        nested_manifest.unlink()
+        expect("restored tree verifies once more", verify(root, manifest) == [])
+
+        symlinked_dir_root = Path(workspace) / "symdir"
+        (symlinked_dir_root / "real").mkdir(parents=True)
+        (symlinked_dir_root / "real" / "kept.txt").write_text("kept\n", encoding="utf-8")
+        outside = Path(workspace) / "outside"
+        outside.mkdir()
+        (outside / "hidden.txt").write_text("hidden\n", encoding="utf-8")
+        os.symlink(outside, symlinked_dir_root / "linkdir")
+        expect_error("symlinked directories rejected, not silently skipped",
+                     lambda: walk_protected(symlinked_dir_root), "symlinked directory")
 
         link_root = Path(workspace) / "linked"
         (link_root / "nested").mkdir(parents=True)
