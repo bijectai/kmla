@@ -1,0 +1,3 @@
+# DRAFT: source archive pin only; not a complete human/ manifest.
+# Paths are relative to human/. The owner installs and completes this manifest.
+e4f1b845016fc38b95b702bbbb27a5c9af3eadfa856ba585662b8b2cd71c187c  sara/SARA.tar.gz
