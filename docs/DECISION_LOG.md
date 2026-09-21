@@ -29,12 +29,12 @@ and its heading still reads PENDING.
 
 | Entry | Subject | Status | Installed in the owning artifact? |
 | --- | --- | --- | --- |
-| P-TZ | `TZ=America/New_York` in the pinned container | **ACCEPTED** | In `human/DECISIONS.md`; **not yet in `docs/contracts/RUNTIME.md`** |
-| P-MONEY | Money is `Int` whole dollars, not cents | **ACCEPTED** | In `human/DECISIONS.md` M1; `docs/PLAN.md` Checkpoint 0 still says cents |
-| P-STIP | Stipulations, rule grounding, B005 reader exception | **ACCEPTED** | In `human/DECISIONS.md` H4; reader exception **not yet in a harness contract** |
-| P-TARGETS | Per-signature targets, solution-set observation | **ACCEPTED** | In `human/DECISIONS.md` H6; `Interface/S{N}.lean` not written |
-| P-VALID-YEAR | `Valid : Household → Year → Prop` | **ACCEPTED** | In `human/DECISIONS.md` H5; refines `docs/PROTOCOL.md` B004, not yet edited there |
-| P-INTENT | Fidelity rule | **ACCEPTED** | In `human/DECISIONS.md` G9 |
+| P-TZ | `TZ=America/New_York` in the pinned container | **ACCEPTED** | `human/DECISIONS.md`; `docs/contracts/RUNTIME.md` |
+| P-MONEY | Money is `Int` whole dollars, not cents | **ACCEPTED** | `human/DECISIONS.md` M1; `docs/PROTOCOL.md`. `docs/PLAN.md` is preserved byte for byte and still says cents; PROTOCOL supersedes it |
+| P-STIP | Stipulations, rule grounding, B005 reader exception | **ACCEPTED** | `human/DECISIONS.md` H4; `docs/PROTOCOL.md`. The reader exception still needs a harness contract when the harness exists |
+| P-TARGETS | Per-signature targets, solution-set observation | **ACCEPTED** | `human/DECISIONS.md` H6; `docs/PROTOCOL.md`. `Interface/S{N}.lean` not written |
+| P-VALID-YEAR | `Valid : Household → Year → Prop` | **ACCEPTED** | `human/DECISIONS.md` H5; `docs/PROTOCOL.md`, including the corrected B004 example; `Interface/Household.lean` |
+| P-INTENT | Fidelity rule | **ACCEPTED** | `human/DECISIONS.md` G9; `docs/PROTOCOL.md` |
 | P-SUMLIST | Schema heading `findall/sum_list`, not `sumlist` | **PENDING** | — |
 | P-RUNTIME | Debian's `7.2.3+dfsg-6` build, emulation, image distribution | **PENDING** | —; `docs/contracts/RUNTIME.md` remains operative as written |
 

@@ -56,8 +56,11 @@ A signed invariant defines a proposition parameterized by the implementation:
 ```lean
 import Interface.S151
 def S151_nonneg (impl : Household → Year → Int) : Prop :=
-  ∀ h y, Valid h → 0 ≤ impl h y
+  ∀ h y, Valid h y → 0 ≤ impl h y
 ```
+
+The `Valid h y` form is B008 (P-VALID-YEAR); this example previously read
+`Valid h`.
 
 The human owns the statement in `human/invariants/statements/S151_nonneg.lean`.
 The assistant's oracle proof is a separate theorem in
@@ -80,6 +83,62 @@ Failed proof search is `PARTIAL`, never `REFUTED`. A checked violation takes
 precedence over unproved goals. Signed statements are never weakened. All
 proofs remain subject to the gate and approved axiom whitelist; evaluation
 must not bypass kernel checking.
+
+## Amendments accepted 2026-09-21
+
+Accepted by the user in chat and recorded in `docs/DECISION_LOG.md`, which holds
+each one's full reasoning. `docs/PLAN.md` is preserved byte for byte, so where
+these conflict with it, these supersede it.
+
+These keep the `P-` identifiers the decision log gives them rather than
+continuing the `B00N` series, because `STATE.md` already uses `B005` onward for
+blockers and reusing those numbers here would make one identifier mean two
+different things. `P-STIP` is what resolves `STATE.md`'s blocker B005.
+
+### P-MONEY: money is `Int` whole dollars
+
+Supersedes the plan's Checkpoint 0 instruction "Money as Int cents". Every
+source amount is an integer dollar literal and every output is rounded to whole
+dollars, so cents would make `Valid` demand multiples of 100 and give models a
+unit the reference never uses. The cents-preserving variant is written out in
+`human/DECISIONS.md` M1 should this be revisited.
+
+### P-STIP: stipulations, rule grounding and the reader exception
+
+Resolves the case-program blocker. `Household` gains a `stipulations` list; case
+rules are grounded by enumeration in the pinned interpreter; round-trip identity
+is defined on the grounded lists and on solution sets rather than on bytes; and
+the two unterminated `s3306_c_2` files are read with the terminator restored, as
+a documented reader exception. 156 of 376 cases stipulate statute predicates and
+59 define facts by rules, so a facts-only contract cannot represent them.
+
+### P-TARGETS: per-signature targets and set observation
+
+Supersedes the plan's Phase 2.3 "one target signature per section" and refines
+Phase 3.5 and 4.3. `Interface/S{N}.lean` declares one target per queried
+predicate signature plus one entry point per section; the observation of a
+target is the sorted, deduplicated solution set; scalar entry points are first
+solutions; per-case accuracy for models is computed on the
+stipulation-independent subset of the originals.
+
+### P-VALID-YEAR: `Valid` is year-indexed
+
+Refines B004's statement form (above) from `∀ h y, Valid h → …` to
+`∀ h y, Valid h y → …`. One reference-undefined region — the head-of-household
+recursion through a supported parent — depends on the taxable year, and a
+year-free exclusion would remove every section 2(b)(1)(B) input. `Valid` may
+import `Oracle/` for the two conjuncts that need it.
+
+### P-INTENT: fidelity rule
+
+Where the runtime, reader or observation is under our control, choose the option
+that reproduces the authors' own results. Where the statute code itself diverges
+from its evident intent, translate the code **as written** and report the
+divergence as a finding: the parity meter compares against the pinned program on
+the unmodified `human/sara`, so an oracle that "corrects" the source cannot
+reach zero mismatches. Grading the intended readings instead would require a
+corrected Prolog copy as the parity reference and is a separate contract change,
+to be proposed rather than applied silently.
 
 ## Design-flaw stop-and-report standard
 
