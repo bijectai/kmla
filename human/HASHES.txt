@@ -1,22 +1,14 @@
 # Protected-artifact manifest for human/, per docs/contracts/HASHES.md.
 # Paths are relative to human/. Sorted by path. Excludes .git and this file.
-#
-# INCOMPLETE. This covers every protected file that exists on 2026-09-21.
-# It does NOT yet cover:
-#   - human/parity/check.py       (the owner's meter; not written)
-#   - human/gate/exploits/*.lean  (Checkpoint 2 input; none written)
-#   - human/invariants/statements/*.lean (Checkpoint 3a input; none written)
-# Regenerate after installing each of those:
-#   python3 -B scripts/human_manifest.py generate > human/HASHES.txt
-#   python3 -B scripts/human_manifest.py verify
-#
-# Written by the builder under the owner's explicit authorization of
-# 2026-09-21 to access human/ for this migration; see docs/DECISION_LOG.md.
 58dad769c0a318e018275dc106b1389e0ac7d89586e0c66bb33f6d8f3e19b30c  DECISIONS.md
 14bac34d68a6ebfee829643550b90441e0045fcb169defbd17288b06f897500a  README.md
 a15aaca15cff0e04bf5b6cce226445b9319195d51c80c4bb232b75f47eb0d0b9  gate/exploits/README.md
 41c62bb65c8174fffb3d935253dcfd464433d5090ea36b3ebdd620cb0d374bac  invariants/statements/README.md
+a310b0ddfde7cd5bc5f2d18e7ce388b91c5ba36f53b1002f4fbc4f920ccf5dec  parity/CONFORMANCE_2026-09-21.txt
+37e96df44b1dec693834d4d4fd1776dff0d84c3c62d2d18c9334f4593479a149  parity/OWNER_CHECKS_2026-09-21.txt
 69c85abfcbad379e2e179ad1eb28509e3646943860770315bff74ab0fba42c65  parity/README.md
+c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5  parity/check.py
+38e7b256b47003f366059b7fec193a7d63098c7e46bc5a7dfd70391da461791d  parity/owner_checks.py
 d42398e58074cf5f34279a14184a375ee0e360e3275df6920dacc7c7a0a1bf0d  sara/README.md
 e4f1b845016fc38b95b702bbbb27a5c9af3eadfa856ba585662b8b2cd71c187c  sara/SARA.tar.gz
 ed9f372054b80832c800672340663e0435548a8c504f9d1fd280e6fc55f9a57a  sara/SOURCE_SHA256.txt

@@ -1,0 +1,51 @@
+ok    all-agree
+        Exit 0 when every requested input has both outputs and they agree  [PARITY.md 'Exit 0']
+ok    value-mismatch
+        Exit 1 and one mismatch record when a result differs  [PARITY.md 'Exit 1']
+ok    missing-lean-output
+        A missing Lean output is a mismatch, not a skipped input  [PARITY.md 'Missing outputs are mismatches']
+ok    missing-prolog-output
+        A missing Prolog output is a mismatch  [PARITY.md 'Missing outputs are mismatches']
+ok    input-population-is-authoritative
+        An input with NO engine output is still compared, not silently dropped  [PARITY.md 'Use --inputs as the authority'; 'Do not compare only the intersection']
+ok    empty-input-population
+        An empty input population fails; it does not validate a section  [PARITY.md 'Empty selected input populations fail with exit 2']
+ok    unexpected-output-id
+        An output ID absent from --inputs is an infrastructure failure  [PARITY.md 'Unexpected output IDs ... fail with exit 2']
+ok    wrong-section
+        An output carrying the wrong section is an infrastructure failure  [PARITY.md 'wrong sections ... fail with exit 2']
+ok    malformed-json
+        Malformed JSON is exit 2, never a mismatch and never zero mismatches  [PARITY.md 'Exit 2: ... malformed JSON']
+ok    duplicate-object-keys
+        Duplicate JSON object keys are an infrastructure failure  [PARITY.md 'duplicate IDs/keys ... fail with exit 2']
+ok    stem-id-disagreement
+        The filename stem and the object's input_id must agree  [PARITY.md 'the filename stem and the object ID must agree']
+ok    invalid-input-id
+        IDs must match [A-Za-z0-9][A-Za-z0-9_-]*  [PARITY.md 'IDs match [A-Za-z0-9][A-Za-z0-9_-]*']
+ok    boolean-is-not-integer
+        true and 1 are different values under strict typing  [PARITY.md 'booleans are not integers']
+note  absent-key-is-not-null
+        An absent key is not a null value  [PARITY.md 'absent keys are not null values']
+        -> exit 2, expected 1
+        -> INFORMATIONAL: PARITY.md does not fix this outcome, so this
+           result is reported, not enforced. Pin it, then re-run.
+ok    array-order-matters
+        Arrays retain order  [PARITY.md 'arrays retain order and multiplicity']
+ok    array-multiplicity-matters
+        Duplicates are not collapsed  [PARITY.md 'Do not ... deduplicate answers']
+ok    no-number-coercion
+        1 and 1.0 are not interchangeable  [PARITY.md 'Do not coerce numbers']
+ok    key-order-and-formatting-ignored
+        Only object-key order and formatting are ignored  [PARITY.md 'Ignore only object-key order and JSON formatting']
+ok    mismatch-record-order
+        Mismatch records are written in input-ID order  [PARITY.md 'Write mismatch records in input-ID order']
+ok    stale-report-is-cleared
+        A successful run leaves an EMPTY mismatches.jsonl  [PARITY.md 'write an empty mismatches.jsonl so an old report cannot be mistaken']
+
+19/20 contract checks passed against /Users/devrashie/Documents/csProjects/kmla/human/parity/check.py
+1 informational check(s) diverged: absent-key-is-not-null
+
+0 owner policy questions remain; run with --list-gaps.
+The two envelope-defect fixtures remain informational by Dev's direction.
+This suite does not cover every accepted policy; never adjust outcomes
+to reconcile a run. The five policy questions themselves are settled.
