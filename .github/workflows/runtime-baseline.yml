@@ -16,7 +16,6 @@ jobs:
     timeout-minutes: 45
     env:
       KMLA_TZ: America/New_York
-      RUN_DIR: ${{ runner.temp }}/runtime-baseline
     steps:
       - uses: actions/checkout@v7
         with:
@@ -27,6 +26,8 @@ jobs:
 
       - name: Build and record the approved native amd64 runtime
         timeout-minutes: 17
+        env:
+          RUN_DIR: ${{ runner.temp }}/runtime-baseline
         run: |
           set -euo pipefail
           mkdir -p "$RUN_DIR"
@@ -35,6 +36,8 @@ jobs:
 
       - name: Assert 376 clean outcomes including two known vacuous cases
         timeout-minutes: 22
+        env:
+          RUN_DIR: ${{ runner.temp }}/runtime-baseline
         run: |
           set -euo pipefail
           bash harness/run_corpus.sh --require-native --case-timeout 120 --run-timeout 1200 \
@@ -42,6 +45,8 @@ jobs:
 
       - name: Report the measured baseline
         if: always()
+        env:
+          RUN_DIR: ${{ runner.temp }}/runtime-baseline
         run: |
           python3 -B - <<'PY'
           import json, os

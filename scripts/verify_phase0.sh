@@ -8,9 +8,12 @@
 # human/.
 #
 # Usage:  bash scripts/verify_phase0.sh [--strict] [repo-root]
-# Exit:   0 every check passed, 1 at least one failed, 2 the harness could not run.
+# Exit:   0 no mechanical check failed (outstanding items may remain),
+#         1 a check failed or --strict found Checkpoint 0 outstanding items,
+#         2 the harness could not run. Exit 0 is not the owner's sign-off.
 #
-# --strict additionally fails when any owner deliverable is still outstanding.
+# --strict additionally fails when a Checkpoint 0 requirement is outstanding.
+# Checkpoint 2 and 3a artifacts remain reported, outside the Checkpoint 0 counts.
 # Use it in CI once Checkpoint 0 has passed, so a regression cannot pass silently.
 
 set -u
@@ -38,12 +41,21 @@ trap 'rm -rf "$WORK"' EXIT
 PASS=0
 FAIL=0
 SKIP=0
+LATER_PRESENT=0
+LATER_OUTSTANDING=0
 
 report() { # status, name, detail
   case "$1" in
     ok)   PASS=$((PASS + 1)); printf 'ok    %s\n' "$2" ;;
     fail) FAIL=$((FAIL + 1)); printf 'FAIL  %s\n        %s\n' "$2" "$3" ;;
     skip) SKIP=$((SKIP + 1)); printf 'skip  %s\n        %s\n' "$2" "$3" ;;
+  esac
+}
+
+report_later() { # status, name, detail; never alters Checkpoint 0 counters
+  case "$1" in
+    present) LATER_PRESENT=$((LATER_PRESENT + 1)); printf 'later %s\n        %s\n' "$2" "$3" ;;
+    missing) LATER_OUTSTANDING=$((LATER_OUTSTANDING + 1)); printf 'later %s\n        %s\n' "$2" "$3" ;;
   esac
 }
 
@@ -140,7 +152,7 @@ else
 fi
 
 echo
-echo "-- outstanding owner artifacts --"
+echo "-- Checkpoint 0 owner decisions --"
 check_absent() { # path, deliverable
   if [ -e "$ROOT/$1" ]; then
     report ok "$1 exists"
@@ -153,17 +165,6 @@ if grep -q '^TODO\|TODO:' "$ROOT/human/DECISIONS.md" 2>/dev/null; then
 else
   report ok "human/DECISIONS.md contains no TODO markers"
 fi
-if compgen -G "$ROOT/human/gate/exploits/*.lean" > /dev/null; then
-  report ok "human/gate/exploits contains exploit files"
-else
-  report skip "human/gate/exploits contains exploit files" "none present; Checkpoint 2 input outstanding"
-fi
-if compgen -G "$ROOT/human/invariants/statements/*.lean" > /dev/null; then
-  report ok "human/invariants/statements contains signed claims"
-else
-  report skip "human/invariants/statements contains signed claims" "none present; Checkpoint 3a input outstanding"
-fi
-
 echo
 echo "-- runtime pin --"
 if docker info > /dev/null 2>&1; then
@@ -202,7 +203,8 @@ for tz in utc america_new_york; do
   fi
 done
 
-PENDING="$(grep -c '^## .* — PENDING — ' "$ROOT/docs/DECISION_LOG.md" 2>/dev/null || echo 0)"
+PENDING="$(grep -c '^## .* — PENDING — ' "$ROOT/docs/DECISION_LOG.md" 2>/dev/null)"
+PENDING="${PENDING:-0}"
 if [ "$PENDING" -gt 0 ]; then
   report skip "every decision-log entry is resolved" \
     "$PENDING entry(s) still PENDING: $(grep '^## .* — PENDING — ' "$ROOT/docs/DECISION_LOG.md" | sed 's/.*— PENDING — //; s/:.*//' | tr '\n' ' ')"
@@ -210,17 +212,41 @@ else
   report ok "no decision-log entry is still PENDING"
 fi
 
+# Later checkpoint artifacts are visible but not Checkpoint 0 requirements.
 echo
-printf '%d passed, %d failed, %d outstanding\n' "$PASS" "$FAIL" "$SKIP"
+echo "-- Checkpoint 2: human-authored gate exploits --"
+if compgen -G "$ROOT/human/gate/exploits/*.lean" > /dev/null; then
+  report_later present "human/gate/exploits contains exploit files" \
+    "present; rejection validation is still required at Checkpoint 2"
+else
+  report_later missing "human/gate/exploits contains no exploit files" \
+    "Checkpoint 2 input outstanding; not a Checkpoint 0 blocker"
+fi
+echo
+echo "-- Checkpoint 3a: human-signed invariant statements --"
+if compgen -G "$ROOT/human/invariants/statements/*.lean" > /dev/null; then
+  report_later present "human/invariants/statements contains claim files" \
+    "present; owner signature/review is still required at Checkpoint 3a"
+else
+  report_later missing "human/invariants/statements contains no claim files" \
+    "Checkpoint 3a input outstanding; not a Checkpoint 0 blocker"
+fi
+
+# Checkpoint 0 summary: later artifacts cannot change these counters or exits.
+echo
+printf 'Checkpoint 0: %d passed, %d failed, %d outstanding\n' "$PASS" "$FAIL" "$SKIP"
+printf 'Later checkpoints: %d artifact group(s) present, %d outstanding (reported above)\n' \
+  "$LATER_PRESENT" "$LATER_OUTSTANDING"
+echo "Checkpoint 0 also requires Dev's explicit sign-off; this script cannot grant it."
 if [ "$FAIL" -gt 0 ]; then
   echo "Checkpoint 0 has NOT passed: a mechanical claim failed to re-derive."
   exit 1
 fi
 if [ "$SKIP" -gt 0 ]; then
-  echo "No mechanical claim failed, but $SKIP owner deliverable(s) remain outstanding."
-  echo "Checkpoint 0 passes only when nothing above is listed as outstanding."
+  echo "No mechanical claim failed, but $SKIP Checkpoint 0 requirement(s) remain outstanding."
+  echo "Checkpoint 0 requires zero failures, zero outstanding for Checkpoint 0, and Dev's sign-off."
   if [ "$STRICT" -eq 1 ]; then
-    echo "--strict: treating outstanding deliverables as a failure."
+    echo "--strict: treating outstanding Checkpoint 0 requirements as a failure."
     exit 1
   fi
 fi

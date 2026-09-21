@@ -134,6 +134,21 @@ fixtures remain informational pending the owner's classification. A conformance
 failure is a finding for Dev, not permission to change the meter or test
 expectations. Checkpoint 0 requires the checks and Dev's explicit signoff.
 
+### P-PARITY5 clarification and checkpoint accounting (accepted 2026-09-21)
+
+Directory policy 1 is complete: an entry ending in `.json` joins the population
+and is judged by the ID grammar (and regular-file requirement); a dot-prefixed
+entry not ending in `.json` is ignored; **any other entry is exit 2**. This
+preserves rejection of other non-JSON files, including `notes.txt`; the narrowed
+dotfile exemption must not be read as loosening that rejection.
+
+`verify_phase0.sh` reports Checkpoint 2 exploits and Checkpoint 3a signed
+statements under their own headings, without adding them to Checkpoint 0's
+pass/failure/outstanding counts. They remain visible and mandatory at their
+respective checkpoints. Runtime checks are unchanged. Checkpoint 0 clears only
+on zero failures, zero outstanding **for Checkpoint 0**, and Dev's explicit
+sign-off. A successful script exit is not sign-off.
+
 ### P-MONEY: money is `Int` whole dollars
 
 Supersedes the plan's Checkpoint 0 instruction "Money as Int cents". Every

@@ -2,6 +2,39 @@
 
 ## Current phase
 
+2026-09-21 (clarifications approved): Dev explicitly closed both Q-007 issues.
+Policy 1 now states the exhaustive filename procedure, with exit 2 for every
+other non-JSON entry. Checkpoint 2/3a artifacts remain reported under their own
+headings, outside Checkpoint 0's counters; runtime checks and explicit owner
+sign-off are unchanged. The grep count defect is corrected as directed.
+Before any of these edits, the accumulated integration work and evidence were
+committed and pushed as `44d2a96` on `claude/checkpoint-0-integration`, using
+only the owner's attribution. Checkpoint 0 is not signed off; Phase 1 remains
+unstarted and the independent meter remains absent.
+
+Verification after the fixes: **Checkpoint 0: 17 passed, 0 failed, 1
+outstanding** (the meter); **later checkpoints: 2 outstanding**, both still
+reported under their own headings. Default mode exits 0 without the prior
+integer-expression diagnostic; `--strict` exits 1 for the missing meter.
+The full new output is in
+`docs/contracts/PHASE0_ACCEPTANCE_2026-09-21.after-clarifications.txt`; the old
+report is retained unchanged. Eight verifier regressions, four invocation
+regressions and eighteen runtime unit tests pass; the 20-fixture self-test and
+the existing 408-record protected manifest also verify. No checkpoint sign-off
+is inferred from those results.
+
+The preservation push triggered verify run `35649101727` (success) and native
+workflow run `35649100277` (failed with no jobs). The native workflow contained
+`${{ runner.temp }}` in job-level `env`, where GitHub does not make `runner`
+available. Moved that value into the three consuming steps' `env`, without
+changing runtime checks. GitHub's context-availability table supports the fix:
+https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability
+No native baseline is claimed from the failed run; a subsequent successful run
+and retained evidence are still needed.
+
+The following acceptance-follow-up entry is historical; the two clarification
+holds it describes are resolved by the owner approval above.
+
 2026-09-21 (owner acceptance follow-up): P-SUMLIST and P-RUNTIME are explicitly
 accepted. Their schema/pin changes and the five parity policies are installed
 in the staged contracts, with one narrow directory-policy case marked open.
@@ -100,6 +133,13 @@ semantic decisions or as permission to change anything under `human/`.
 ## Blockers
 
 ### Acceptance preflight finding (2026-09-21, Q-007)
+
+**Follow-up resolution:** Dev approved the complete directory decision procedure
+and phase-specific accounting. These are no longer open owner choices. The
+integer-expression defect is fixed; eight focused shell/counting regressions
+pass, and the runtime verification block is byte-identical to `44d2a96`.
+The historical account below, including the untrusted 17/0/3 output, is retained
+for provenance rather than treated as current acceptance or an active hold.
 
 Dev has accepted P-SUMLIST, P-RUNTIME and the five parity policies; their
 supplied text is staged in `docs/contracts/OWNER_DECISIONS_2026-09-21.txt`.

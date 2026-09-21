@@ -326,16 +326,10 @@ def run_case(meter, case, workspace):
     return not problems, "; ".join(problems)
 
 
-# The owner accepted the five policies on 2026-09-21. A-007 identified this
-# remaining omission; preserve it as open rather than choose an expected result.
-# This metadata does not add or change any conformance fixture.
-POLICIES = [
-    ("regular, non-dot-prefixed, non-JSON files",
-     "The accepted policies do not explicitly assign an outcome to notes.txt "
-     "or README in an argument directory. A-007 flags exit 2 as implied by "
-     "the aliasing rationale but requires Dev's clarification. Other directory, "
-     "report, ID and alias policies are installed in PARITY.md."),
-]
+# Dev clarified policy 1's complete procedure: JSON -> population/ID grammar;
+# dotted non-JSON -> ignored; any other entry -> exit 2. All five policies are
+# settled. This reporting metadata does not add or change conformance fixtures.
+POLICIES = []
 
 # Not owner policy. Listed so nobody re-raises them as blockers: each is either
 # already answered by PARITY.md or is the meter author's ordinary job.
@@ -433,12 +427,13 @@ def main(argv=None):
         return self_test()
 
     if arguments.list_gaps:
-        print(f"{len(POLICIES)} policy questions for the owner. Each one lets two")
-        print("correct-looking meters disagree, and PARITY.md marks it open.\n")
+        print(f"{len(POLICIES)} unresolved questions about the five accepted policies.")
+        print("PARITY.md contains policy 1's complete directory-entry procedure.\n")
         for title, detail in POLICIES:
             print(f"- {title}: {detail}")
-        print(f"\nFor reference, {len(IMPLEMENTATION)} questions that are NOT owner policy:")
-        print("already answered by the contract, or the meter author's ordinary job.\n")
+        print(f"\nFor reference, {len(IMPLEMENTATION)} contract/implementation notes:")
+        print("Envelope-defect classification remains unresolved and informational;\n"
+              "the other notes restate the contract or implementation responsibilities.\n")
         for title, detail in IMPLEMENTATION:
             print(f"- {title}: {detail}")
         return 0
@@ -484,8 +479,8 @@ def main(argv=None):
         print("'zero mismatches' result from it would not mean what the gate claims.")
     print(f"\n{len(POLICIES)} owner policy questions remain; run with --list-gaps.")
     print("The two envelope-defect fixtures remain informational by Dev's direction.")
-    print("This suite does not cover every accepted policy. Resolve the open contract")
-    print("question before freezing the meter; never adjust outcomes to reconcile a run.")
+    print("This suite does not cover every accepted policy; never adjust outcomes")
+    print("to reconcile a run. The five policy questions themselves are settled.")
     return 0 if not failed else 1
 
 

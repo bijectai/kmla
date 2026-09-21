@@ -2,12 +2,13 @@
 
 ## Current state after Dev's 2026-09-21 decisions
 
-Work continues from `claude/checkpoint-0-integration` at base commit `fb8ce24`.
-Current integration edits are uncommitted. No Phase 1 implementation has begun.
+Work continues on `claude/checkpoint-0-integration`. The accumulated integration
+work was committed and pushed as `44d2a96` before applying Dev's follow-up
+clarifications. No Phase 1 implementation has begun.
 
 - P-SUMLIST and P-RUNTIME are accepted, not pending. One runtime acceptance
   amends both PROTOCOL B001 and RUNTIME.md. The five parity policies are in
-  PARITY.md; one narrow omission is marked open after Q-007/A-007.
+  PARITY.md; Dev's complete directory procedure closes Q-007/A-007's escalation.
 - The source and `human/DECISIONS.md` remain untouched. The existing manifest
   covers 408 records; it cannot yet cover the absent owner meter.
 - `Interface/Household.lean` passed 29 behavioural guards. The production
@@ -16,24 +17,28 @@ Current integration edits are uncommitted. No Phase 1 implementation has begun.
   `docs/contracts/CONTROL_swipl9.json`: 312 clean outcomes and 64 `rdiv/2`
   errors across 376 cases. The pinned legacy baseline has 376 clean outcomes,
   including two vacuous cases, not 376 exercised assertions.
-- Native-runtime CI is being prepared. A workflow definition is not a native
-  run. Runtime publication, closure vendoring and independent archival deposit
+- Native-runtime CI is now pushed. A workflow definition is not a verified native
+  baseline. Runtime publication, closure vendoring and independent archival deposit
   remain incomplete; see RUNTIME.md. Preserve historical records when rebuilding.
 
-## Immediate decisions needed from Dev
+## Follow-up approvals installed
 
-Development is paused for these clarifications, not for renewed approval of
-P-SUMLIST or P-RUNTIME:
+Dev approved both follow-up points; no renewed approval is needed:
 
-1. Should a regular file such as `notes.txt` (not dot-prefixed, not `.json`)
-   in an input/output argument directory cause exit 2? Policy 1 explicitly
-   covers dotted non-JSON entries and JSON entries; policy 2 covers non-regular
-   entries. The remaining regular-file case is not explicitly assigned.
-2. May the verifier report Checkpoint 2 exploits and Checkpoint 3a statements
-   separately from Checkpoint 0's outstanding counter? They remain mandatory
-   at their checkpoints. Runtime/infrastructure requirements must not be
-   waived. Until Dev decides, `verify_phase0.sh` is unchanged and its complete
-   output must be reported. Dev's signoff is required regardless of counters.
+1. An entry ending in `.json` joins the population and is judged by the ID
+   grammar and regular-file rule; a dotted non-JSON entry is ignored; any
+   other entry, including `notes.txt`, is exit 2. No category is left open.
+2. The verifier reports exploits under Checkpoint 2 and signed statements under
+   Checkpoint 3a, separately from Checkpoint 0's counters. They remain visible
+   and mandatory at those checkpoints. Runtime checks are unchanged. The grep
+   count bug is fixed, and the new report must replace the earlier untrusted
+   17/0/3 result for acceptance purposes. Dev's sign-off is still required.
+
+The corrected local run exits cleanly and reports **17 passed, 0 failed,
+1 outstanding for Checkpoint 0** (the absent meter), with the **two later
+artifacts still reported separately**. Strict mode correctly exits 1. See
+`docs/contracts/PHASE0_ACCEPTANCE_2026-09-21.after-clarifications.txt` for the
+complete output. The earlier acceptance report remains unchanged as history.
 
 The case-fold uniqueness grammar is already installed in PARITY.md before the
 meter exists, satisfying the requested timing without a between-checkpoint
@@ -42,7 +47,7 @@ meter change. No additional sequencing decision is needed for that action.
 ## Independent meter and completion sequence
 
 Dev implements and installs `human/parity/check.py` to PARITY.md and the
-accepted policies, including the remaining directory clarification when settled.
+accepted policies, including the now-complete directory decision procedure.
 The builder must not implement it, inspect its source or propose its algorithm.
 
 A builder CLI preflight found that relative meter paths stopped resolving after
@@ -61,8 +66,9 @@ Once the meter exists:
 2. Only after conformance passes, refresh `human/HASHES.txt` to cover the
    meter, verify, and commit per Dev's sequence. The conditional manifest step
    has not occurred. No other protected-file write is authorized.
-3. Re-run `scripts/verify_phase0.sh`; report all results and any unresolved
-   accounting issue. Checkpoint 0 clears only with the agreed checks and
+3. Re-run `scripts/verify_phase0.sh`; report all results, with later artifacts
+   under their own headings. Checkpoint 0 clears only with zero failures,
+   zero outstanding for Checkpoint 0, and
    **Dev's explicit signoff**, not because tooling has become quieter.
 
 Dev will separately correct the decisions preamble's argv/emulation diagnosis.

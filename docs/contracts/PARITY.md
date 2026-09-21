@@ -106,12 +106,21 @@ is selected by this contract.
 
 ## Accepted directory and identity policies
 
-1. **Directory contents.** Ignore a dot-prefixed entry only when its name does
-   not end in `.json`. Every `*.json` entry, dotted or not, joins the population
-   and is judged by the ID grammar: `.s151_a.json` is exit 2, not ignored.
-   Dot-prefixed directories are covered by this rule, not by rule 2. The
-   producers keep engine logs and sidecars outside the three argument
-   directories.
+1. **Directory contents.** Apply this complete decision procedure, in order,
+   to every entry in each of the three argument directories:
+
+   - An entry whose name ends in `.json`, dotted or not, joins the population
+     and is judged by the ID grammar. Thus `.s151_a.json` is exit 2, not ignored.
+     Such entries must also satisfy rule 2's regular-file requirement.
+   - A dot-prefixed entry whose name does not end in `.json` is ignored.
+     Dot-prefixed directories are covered here, before rule 2.
+   - **Any other entry is exit 2**, including a regular file such as `notes.txt`
+     or `README`. There is no third, unspecified category.
+
+   Dev's clarification preserves the original rejection of other non-JSON
+   files; narrowing the dotfile exemption does not loosen that rule. Stray
+   files may indicate interrupted runs. Producers keep engine logs and sidecars
+   outside all three directories rather than silently ignoring them.
 2. **Non-regular entries.** After rule 1, any entry that is not a regular file
    is exit 2: directories (including `s151_a.json`), symlinks, FIFOs and device
    nodes. Do not recurse or follow a link into additional records. Unexpected
@@ -142,11 +151,9 @@ A remaining stem/ID case mismatch is detectable; its absence does not prove no
 collapse occurred. The producer must prevent population loss. The meter cannot
 recover an input that was overwritten before invocation.
 
-**Open clarification (A-007 §3(a)):** the owner text does not explicitly assign
-an outcome to a regular file that is neither dot-prefixed nor `.json`, such as
-`notes.txt`. Exit 2 is implied by the aliasing rationale but has not been chosen
-by the builder. This narrow directory-policy case is paused for Dev; the other
-accepted rules, including ASCII-case-fold uniqueness, are already installed
+**Clarification resolved (Dev, 2026-09-21):** rule 1 above explicitly preserves
+exit 2 for every other non-JSON entry. A-007's directory-policy escalation is
+closed. The accepted rules, including ASCII-case-fold uniqueness, are installed
 before the meter exists. No between-checkpoint meter re-pin is planned.
 
 ## Independent implementation and acceptance sequence
@@ -172,8 +179,12 @@ compliance. The builder has not added conformance fixtures without approval.
 
 After conformance passes, the protected manifest must cover the installed
 meter, verify, and be committed. Re-run `scripts/verify_phase0.sh` and report
-all results. Checkpoint 0 additionally requires Dev's explicit signoff;
-changing tooling output cannot substitute for it.
+all results. Checkpoint 0 requires zero failures, zero outstanding **for
+Checkpoint 0**, and Dev's explicit signoff. Checkpoint 2 exploits and
+Checkpoint 3a statements remain reported under their own headings and remain
+mandatory at those checkpoints; they do not enter Checkpoint 0's counters.
+Runtime checks are unchanged. Changing tooling output cannot substitute for
+the checks or signoff.
 
 The human can implement this envelope comparison independently while the
 section-specific payloads are being reviewed. No real comparison implementation

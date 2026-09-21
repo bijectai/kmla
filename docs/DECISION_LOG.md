@@ -35,10 +35,11 @@ and its heading still reads PENDING.
 | P-TARGETS | Per-signature targets, solution-set observation | **ACCEPTED** | `human/DECISIONS.md` H6; `docs/PROTOCOL.md`. `Interface/S{N}.lean` not written |
 | P-VALID-YEAR | `Valid : Household → Year → Prop` | **ACCEPTED** | `human/DECISIONS.md` H5; `docs/PROTOCOL.md`, including the corrected B004 example; `Interface/Household.lean` |
 | P-INTENT | Fidelity rule | **ACCEPTED** | `human/DECISIONS.md` G9; `docs/PROTOCOL.md` |
-| P-SUMLIST | Schema heading `findall/sum_list`, not `sumlist` | **ACCEPTED** | Builder installing in `docs/PROTOCOL.md`; `docs/PLAN.md` §4.1 is preserved byte for byte and still reads `sumlist` |
-| P-RUNTIME | Debian's `swi-prolog-nox 7.2.3+dfsg-6`; identity is the `RUNTIME.json` record; native-amd64 CI baseline; three-leg archival | **ACCEPTED** | One acceptance, two artifacts: builder installing in `docs/PROTOCOL.md` B001 **and** `docs/contracts/RUNTIME.md`. Acceptance is not evidence that vendoring, GHCR publication, archival deposit or native CI has happened |
-| P-PARITY5 | The five parity policies: directory contents, non-regular entries, three-valued report, IDs, aliasing | **ACCEPTED** | Builder installing in `docs/contracts/PARITY.md`. One omission flagged in A-007 §3 blocks fully mechanical installation of policy 1 |
+| P-SUMLIST | Schema heading `findall/sum_list`, not `sumlist` | **ACCEPTED** | Installed in `docs/PROTOCOL.md` and the staged schema; `docs/PLAN.md` §4.1 is preserved byte for byte and still reads `sumlist` |
+| P-RUNTIME | Debian's `swi-prolog-nox 7.2.3+dfsg-6`; identity is the `RUNTIME.json` record; native-amd64 CI baseline; three-leg archival | **ACCEPTED** | Installed in `docs/PROTOCOL.md` B001 **and** `docs/contracts/RUNTIME.md`. Acceptance is not evidence that vendoring, GHCR publication, archival deposit or native CI has happened |
+| P-PARITY5 | The five parity policies: directory contents, non-regular entries, three-valued report, IDs, aliasing | **ACCEPTED** | Installed in `docs/contracts/PARITY.md`; Dev's complete directory procedure below closes A-007's escalation |
 | P-BUNDLE | `human/` stays a directory in the parent repo; no submodule | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `STATE.md` |
+| P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -458,3 +459,40 @@ IDs and `rdiv/2` type-error diagnostics in all 64. Neither the raw control nor
 the immutable A-007 answer was edited. The log's historical bodies remain
 preserved. GHCR, closure vendoring, archival deposit and native CI are still
 obligations, not completed deliveries.
+
+## 2026-09-21 — ACCEPTED (Dev, chat) — P-PARITY5 clarification and P-CHECKPOINT-ACCOUNTING
+
+Dev approved both escalations with an explicit condition on checkpoint reporting.
+This records the owner's decision, not a new builder interpretation. It
+supersedes the earlier open-status notes; A-007 and earlier entry bodies remain
+unchanged as historical records.
+
+**Complete directory procedure, in order:**
+
+1. An entry ending in `.json` joins the population and is judged by the ID
+   grammar, as well as the existing regular-file requirement.
+2. A dot-prefixed entry not ending in `.json` is ignored.
+3. Any other entry is exit 2, including `notes.txt`.
+
+Dev clarifies that the original rule already rejected other non-JSON files.
+The finalized text narrowed only the dotfile exemption and must not loosen the
+rest. Stray files in an engine directory can signal interrupted runs; ignoring
+them would hide the failure being checked. There is no unassigned category.
+
+**Checkpoint reporting:** exploits and signed statements belong to Checkpoints
+2 and 3a. Report them under those headings, not as Checkpoint 0 outstanding
+items. They must still appear and remain required at their own checkpoints.
+Runtime checks and Dev's sign-off are unchanged: Checkpoint 0 clears only with
+zero failures, zero outstanding for Checkpoint 0, and Dev's explicit approval.
+
+**Verifier defect:** Dev directed replacement of `grep -c ... || echo 0` with
+the grep assignment followed by `PENDING="${PENDING:-0}"`. No matches previously
+produced `0\n0` and an integer-expression diagnostic. The earlier 17/0/3 output
+is retained as historical evidence, not treated as trusted acceptance. Re-run
+after fixing the script.
+
+**Preservation first:** Dev authorized committing and pushing the accumulated
+work on `claude/checkpoint-0-integration` before any further edits. This was
+done as `44d2a96`, including the original acceptance output, owner decision text
+and runtime history, with only the owner's Git attribution. Nothing was merged
+and no path under `human/` was modified.
