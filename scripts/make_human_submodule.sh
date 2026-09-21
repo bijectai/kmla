@@ -100,7 +100,7 @@ if [ "$APPLY" -eq 1 ]; then
     *) FILEOK="-c protocol.file.allow=always" ;;
   esac
   if git $FILEOK clone -q --recurse-submodules "$ROOT" "$VTMP/clone" 2>"$VTMP/err"; then
-    N="$(find "$VTMP/clone/human" -type f -not -path '*/.git/*' | wc -l | tr -d ' ')"
+    N="$(find "$VTMP/clone/human" -type f -not -path '*/.git/*' -not -name '.git' | wc -l | tr -d ' ')"
     if python3 -B "$VTMP/clone/scripts/human_manifest.py" verify --repo-root "$VTMP/clone" >/dev/null 2>&1; then
       echo "  ok   a recursive clone reproduces $N files and the manifest verifies"
     else
