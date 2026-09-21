@@ -1,0 +1,11 @@
+
+
+catch(call_with_time_limit(90,s2_b_1_B(mia,_G386,_G397,_G408,2017)),_G419, (write(_G419),nl,fail))  =>  error(resource_error(stack),local)
+FAIL
+catch(call_with_time_limit(90,s151_d(mia,_G137,2017)),_G139, (write(_G139),nl,fail))  =>  error(resource_error(stack),local)
+FAIL
+catch(call_with_time_limit(90,s151(mia,_G386,_G397,_G408,2017)),_G419, (write(_G419),nl,fail))  =>  error(resource_error(stack),local)
+FAIL
+s2_a(sue,_G413,2017)  =>  2 solutions [s2_a(sue,tom,2017),s2_a(sue,tom,2017)]
+s68_b(zed,_G156,2017)  =>  3 solutions [s68_b(zed,300000,2017),s68_b(zed,300000,2017),s68_b(zed,250000,2017)]
+s68_b_1_A(zed,_G155,_G156,_G157,2017)  =>  2 solutions [s68_b_1_A(zed,_G243,sue,300000,2017),s68_b_1_A(zed,_G234,sue,300000,2017)]

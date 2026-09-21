@@ -108,3 +108,9 @@ Check answer consistency, the saved ID, unchanged previous answers, and changed
 file scope after each call. Q-003 corrects two overstatements in A-001 without
 editing it or changing the approved B003/B004 contract. Read A-001 together with
 A-003. See `SMOKE_TEST.md` for actual results and CLI assumptions.
+
+## Answers that carry design content
+
+- `A-004` (2026-09-21): Dev-relayed request to complete the SARA semantics
+  interpretation. The body is `DECISIONS_RECOMMENDED.md`; evidence in
+  `evidence/`; PROPOSED contract changes in `../DECISION_LOG.md`.

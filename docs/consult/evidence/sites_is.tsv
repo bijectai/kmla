@@ -1,0 +1,101 @@
+section1.pl:70:9	s1_a_i/2	is	Tax is round(Taxinc*0.15)
+section1.pl:75:9	s1_a_ii/2	is	Tax is round(5535+(Taxinc-36900)*0.28)
+section1.pl:80:9	s1_a_iii/2	is	Tax is round(20165+(Taxinc-89150)*0.31)
+section1.pl:85:9	s1_a_iv/2	is	Tax is round(35928.50+(Taxinc-140000)*0.36)
+section1.pl:89:9	s1_a_v/2	is	Tax is round(75528.50+(Taxinc-250000)*0.396)
+section1.pl:108:9	s1_b_i/2	is	Tax is round(Taxinc*0.15)
+section1.pl:113:9	s1_b_ii/2	is	Tax is round(4440+(Taxinc-29600)*0.28)
+section1.pl:118:9	s1_b_iii/2	is	Tax is round(17544+(Taxinc-76400)*0.31)
+section1.pl:123:9	s1_b_iv/2	is	Tax is round(33385+(Taxinc-127500)*0.36)
+section1.pl:127:9	s1_b_v/2	is	Tax is round(77485+(Taxinc-250000)*0.396)
+section1.pl:148:9	s1_c_i/2	is	Tax is round(Taxinc*0.15)
+section1.pl:153:9	s1_c_ii/2	is	Tax is round(3315+(Taxinc-22100)*0.28)
+section1.pl:158:9	s1_c_iii/2	is	Tax is round(12107+(Taxinc-53500)*0.31)
+section1.pl:163:9	s1_c_iv/2	is	Tax is round(31172+(Taxinc-115000)*0.36)
+section1.pl:167:9	s1_c_v/2	is	Tax is round(79772+(Taxinc-250000)*0.396)
+section1.pl:195:9	s1_d_i/2	is	Tax is round(Taxinc*0.15)
+section1.pl:200:9	s1_d_ii/2	is	Tax is round(2767.50+(Taxinc-18450)*0.28)
+section1.pl:205:9	s1_d_iii/2	is	Tax is round(10082.50+(Taxinc-44575)*0.31)
+section1.pl:210:9	s1_d_iv/2	is	Tax is round(17964.25+(Taxinc-70000)*0.36)
+section1.pl:214:9	s1_d_v/2	is	Tax is round(37764.25+(Taxinc-125000)*0.396)
+section151.pl:15:16	s151/5	is	S2 is Total_ex_taxpayer+Total_ex_spouse
+section151.pl:129:8	s151_d_1/1	is	Ea is 2000
+section151.pl:140:8	s151_d_2/4	is	Ea is 0
+section151.pl:156:22	s151_d_3_A/7	is	Reduction_amount is round( (Exemption_amount_in*Ap) rdiv 100)
+section151.pl:157:8	s151_d_3_A/7	is	Ea is max(Exemption_amount_in-Reduction_amount,0)
+section151.pl:165:16	s151_d_3_B/5	is	Difference is max(Agi-Aa,0)
+section151.pl:180:20	s151_d_3_B/5	is	Number is 2*ceil(Difference/1250)
+section151.pl:183:20	s151_d_3_B/5	is	Number is 2*ceil(Difference/2500)
+section151.pl:186:8	s151_d_3_B/5	is	Ap is min(Number,100)
+section151.pl:193:8	s151_d_5/2	is	Ea is 0
+section152.pl:134:24	s152_c_1_B/6	is	Half_year_duration is Taxy_duration rdiv 2
+section152.pl:227:10	s152_c_3/3	is	Taxy_25 is Taxy+25
+section2.pl:37:11	s2_a_1_A/5	is	Taxy2 is Taxy-2
+section2.pl:40:11	s2_a_1_A/5	is	Taxy1 is Taxy-1
+section2.pl:183:31	s2_b_1/4	is	Taxy1 is Taxy+1
+section2.pl:249:24	s2_b_1_A/4	is	Half_year_duration is Taxy_duration rdiv 2
+section3301.pl:9:9	s3301/6	is	Tax is round(0.06*Wages)
+section3306.pl:33:11	s3306_a_1_A/3	is	Pyear is Caly-1
+section3306.pl:52:11	s3306_a_1_B/4	is	Year1 is Caly-1
+section3306.pl:119:11	s3306_a_2_A/4	is	Pyear is Caly-1
+section3306.pl:167:11	s3306_a_2_B/6	is	Year1 is Caly-1
+section3306.pl:242:11	s3306_a_3/4	is	Pyear is Caly-1
+section3306.pl:306:19	s3306_b_1/2	is	Remuneration2 is min(7000,Remuneration)
+section3306.pl:522:11	s3306_c_1_A_i/5	is	Year1 is Caly-1
+section3306.pl:650:20	s3306_c_5_B/4	is	Day_offset is Dob_d+7671
+section63.pl:10:9	s63/3	is	Taxinc is max(Taxable_income_tmp,0)
+section63.pl:20:8	s63_a/5	is	Ded63 is Total_deduction_reduced + Exemption_151
+section63.pl:21:24	s63_a/5	is	Taxable_income_tmp is Grossinc - Ded63
+section63.pl:22:9	s63_a/5	is	Taxinc is max(Taxable_income_tmp,0)
+section63.pl:32:24	s63_b/4	is	Taxable_income_tmp is Grossinc - Amount1 - Amount2
+section63.pl:33:9	s63_b/4	is	Taxinc is max(Taxable_income_tmp,0)
+section63.pl:59:21	s63_c_1/3	is	Standed is Bassd+Addsd
+section63.pl:69:19	s63_c_1_A/3	is	Bassd is min(Basic_amount,Max_amount)
+section63.pl:73:19	s63_c_1_A/3	is	Bassd is Basic_amount
+section63.pl:89:15	s63_c_2/3	is	Bassd is Multiplier*Default_amount
+section63.pl:107:16	s63_c_2_A/3	is	Multiplier is 2
+section63.pl:131:19	s63_c_2_B/3	is	Bassd is 4400
+section63.pl:140:15	s63_c_2_C/2	is	Bassd is 3000
+section63.pl:161:13	s63_c_5/5	is	Amount1 is 500
+section63.pl:163:13	s63_c_5/5	is	Amount2 is 250+Grossinc
+section63.pl:164:11	s63_c_5/5	is	Bassd is max(Amount1,Amount2)
+section63.pl:173:13	s63_c_6/3	is	Standed is 0
+section63.pl:260:12	s63_c_7_i/2	is	Amount is 18000
+section63.pl:266:12	s63_c_7_ii/2	is	Amount is 12000
+section63.pl:314:20	s63_f/3	is	Amount is 600
+section63.pl:317:24	s63_f/3	is	Additional_amounts is (Counts_blind+Counts_aged)*Amount
+section63.pl:323:37	s63_f_1/3	is	Count1 is 1
+section63.pl:323:50	s63_f_1/3	is	Count1 is 0
+section63.pl:324:39	s63_f_1/3	is	Count2 is 1
+section63.pl:324:52	s63_f_1/3	is	Count2 is 0
+section63.pl:325:12	s63_f_1/3	is	Counts is Count1+Count2
+section63.pl:334:12	s63_f_1_A/2	is	Taxy65 is Taxy+65
+section63.pl:347:12	s63_f_1_B/3	is	Taxy65 is Taxy+65
+section63.pl:357:37	s63_f_2/3	is	Count1 is 1
+section63.pl:357:50	s63_f_2/3	is	Count1 is 0
+section63.pl:358:39	s63_f_2/3	is	Count2 is 600
+section63.pl:358:54	s63_f_2/3	is	Count2 is 0
+section63.pl:359:12	s63_f_2/3	is	Counts is Count1+Count2
+section63.pl:387:12	s63_f_3/3	is	Amount is 750
+section68.pl:5:31	s68/4	is	Amount_deductions_out is Amount_deductions_in
+section68.pl:11:35	s68/4	is	Amount_deductions_out is Amount_deductions_in-Reduction
+section68.pl:15:35	s68/4	is	Amount_deductions_out is Amount_deductions_in
+section68.pl:28:8	s68_a/6	is	S7 is min(Reduction1,Reduction2)
+section68.pl:32:7	s68_a_1/3	is	X is 3*(Agi-Aa)
+section68.pl:33:8	s68_a_1/3	is	S9 is round(X rdiv 100)
+section68.pl:38:7	s68_a_2/4	is	X is 80*Itemded
+section68.pl:39:9	s68_a_2/4	is	S14 is round(X rdiv 100)
+section68.pl:53:12	amount/2	is	Amount is 300000
+section68.pl:55:12	amount/2	is	Amount is 275000
+section68.pl:57:12	amount/2	is	Amount is 250000
+section68.pl:60:12	amount/2	is	Amount is round(Amount_A rdiv 2)
+section7703.pl:21:8	s7703_a_1/5	is	Taxy1 is Taxy+1
+section7703.pl:137:24	s7703_b_1/4	is	Half_year_duration is Taxy_duration rdiv 2
+section7703.pl:183:8	s7703_b_2/4	is	Ratio is Payment_by_individual rdiv Cost
+utils.pl:7:6	day_to_stamp/2	is	DI1 is DI+1
+utils.pl:95:11	duration/3	is	Duration is Stamp2-Stamp1
+utils.pl:286:26	gross_income/3	is	Gross_income is Income_individual+Income_spouse
+utils.pl:330:18	gross_income_individual/3	is	Gross_income is Income+Payment
+utils.pl:338:24	tax/3	is	Income_tax is 0
+utils.pl:345:28	tax/3	is	Employment_tax is 0
+utils.pl:348:9	tax/3	is	Tax is Income_tax+Employment_tax

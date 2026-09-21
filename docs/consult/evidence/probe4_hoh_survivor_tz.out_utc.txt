@@ -1,0 +1,21 @@
+
+
+catch(call_with_time_limit(60,s151_d(mia,_G354,2017)),_G365, (write(_G365),nl,fail))  =>  true catch(call_with_time_limit(60,s151_d(mia,2000,2017)),_G365, (write(_G365),nl,fail))
+catch(call_with_time_limit(60,s2_b(mia,_G354,2017)),_G365, (write(_G365),nl,fail))  =>  true catch(call_with_time_limit(60,s2_b(mia,pa,2017)),_G365, (write(_G365),nl,fail))
+catch(call_with_time_limit(60,s151_d(mia,_G354,2019)),_G365, (write(_G365),nl,fail))  =>  true catch(call_with_time_limit(60,s151_d(mia,0,2019)),_G365, (write(_G365),nl,fail))
+s2_a(sue,_G249,2017)  =>  0 solutions []
+s68_b(zed,_G249,2017)  =>  1 solutions [s68_b(zed,250000,2017)]
+s3306_c(svc9,_G534,_G545,_G556,2017)  =>  1 solutions [s3306_c(svc9,boss,wk,_G805,2017)]
+s3306_a_1_B(boss,_G585,_G596,2017)  =>  0 solutions []
+s3306_a_1_A(boss,2017,_G622)  =>  1 solutions [s3306_a_1_A(boss,2017,7000)]
+s3301(boss,2017,_G645,_G656,_G667,_G678)  =>  1 solutions [s3301(boss,2017,7000,[wk],[svc9],420)]
+b3window first 2017-07-02 last 2018-01-01 n 184
+W 2017-01-01 -> localday 2017-01-02 week 01
+W 2017-01-02 -> localday 2017-01-03 week 01
+W 2017-01-07 -> localday 2017-01-08 week 01
+W 2017-01-08 -> localday 2017-01-09 week 02
+W 2017-12-31 -> localday 2018-01-01 week 01
+W 2018-01-01 -> localday 2018-01-02 week 01
+W 2016-12-31 -> localday 2017-01-01 week 00
+W 2017-03-12 -> localday 2017-03-13 week 11
+W 2017-11-05 -> localday 2017-11-06 week 45
