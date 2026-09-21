@@ -86,6 +86,27 @@ run "git -c user.name=\"\$(git config user.name)\" -c user.email=\"\$(git config
 
 echo
 if [ "$APPLY" -eq 1 ]; then
+  echo "== verify the result =="
+  # A recursive clone is the only check that proves the pin is usable from
+  # another machine. It catches the common failure where the remote's HEAD
+  # points at a branch that was never pushed.
+  VTMP="$(mktemp -d)"
+  if git clone -q --recurse-submodules "$ROOT" "$VTMP/clone" 2>"$VTMP/err"; then
+    N="$(find "$VTMP/clone/human" -type f -not -path '*/.git/*' | wc -l | tr -d ' ')"
+    if python3 -B "$VTMP/clone/scripts/human_manifest.py" verify --repo-root "$VTMP/clone" >/dev/null 2>&1; then
+      echo "  ok   a recursive clone reproduces $N files and the manifest verifies"
+    else
+      echo "  FAIL the clone's human/ does not verify against its manifest" >&2
+    fi
+  else
+    echo "  FAIL a recursive clone could not fetch the submodule:" >&2
+    sed 's/^/       /' "$VTMP/err" >&2
+    echo "       If the remote is a bare repository you created locally, its HEAD may" >&2
+    echo "       point at a branch that was never pushed. Fix with:" >&2
+    echo "         git -C <remote.git> symbolic-ref HEAD refs/heads/$BRANCH" >&2
+  fi
+  rm -rf "$VTMP"
+  echo
   echo "== result =="
   echo "  parent commit:    $(git -C "$ROOT" rev-parse HEAD)"
   echo "  submodule commit: $(git -C "$ROOT/human" rev-parse HEAD)"
