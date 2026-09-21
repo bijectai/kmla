@@ -205,7 +205,7 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### A-009 proposed remedy is not yet sound (Q-010)
+### R5 remedy remains open; A-009 proposal withdrawn (A-010)
 
 Fable confirmed the original R5 flaw and proposed a V10 excluding equal birth
 days among related distinct persons. Orchestrator review found that its proof
@@ -213,10 +213,25 @@ silently assumes a single birth date per person, which H1/H5 do not require.
 A second read-only pinned diagnostic gives `a` dates 2000 and 2002, and `b` date
 2001: no cross-person date equality, both age-order directions succeed, and
 the query again exhausts 100,000 and 1,000,000 inferences. Removing only the
-sibling fact in the separate control makes it finish. Q-010 requests an explicit
-correction; A-009 is preserved unchanged. Do not treat its V10 or suggested
+sibling fact in the separate control makes it finish. A-010 explicitly withdraws
+V10, its global-equal-birthday variant and the proposed `2 * persons.length + 2`
+bound. A-009 is preserved unchanged. Do not treat its V10 or suggested
 fuel bound as a sufficient remedy or ask Dev to adopt them as proved.
 All source and result evidence is retained in `r5_multibirth_cycle*`.
+
+The required owner decision is now open, not yes/no on the withdrawn proposal:
+a reference-domain/termination rule over all permitted fact solutions, a derived
+fuel/decrease argument (including R8), and corrected R5/R9. A-010 lists the
+proof obligations. Both preserved witnesses must be considered; no new input
+filter, uniqueness assumption or semantic rule has been installed.
+
+Source-reading qualification to A-010: in the first age disjunct,
+`Individual_is_born` and `Individual_dob` are already bound when the final
+under-25 conjunct is reached. That conjunct does not independently re-select
+the event/date in this branch, contrary to A-010's broader phrasing. The finding
+does not rely on that assertion: selections differ between recursive calls,
+and all selected dates in the witness meet the under-25 check. The retained
+`age_both_directions` probe establishes both directions without that assumption.
 
 ### Phase 1.2 §7703 recursive closure — R5 reproduced finding (Q-009)
 
@@ -238,9 +253,9 @@ a kernel-checked production `Valid` certificate.
 Halt the affected recursive definitions; do not implement fuel exhaustion as
 a truncation heuristic, alter `Valid`, or replace dependencies with stubs.
 The independent `(a)`, `(b)(2)`, membership and `(b)(3)` slice does not reach
-that closure. The orchestrator should route the source/spec evidence to a
-numbered Fable consult: does this invalidate R5/R9, and which owner-approved
-termination/domain decision is needed? No revised design or shared Interface
+that closure. Fable confirmed the finding in A-009; A-010 then withdrew the
+proposed remedy after the second diagnostic. The owner-approved termination/
+domain decision is still required. No revised design or shared Interface
 edit is made by this lane. Checkpoint 0 authorization remains in force.
 
 ### Phase 1 producer-release escalation (A-008)

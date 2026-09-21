@@ -39,6 +39,8 @@ and its heading still reads PENDING.
 | P-RUNTIME | Debian's `swi-prolog-nox 7.2.3+dfsg-6`; identity is the `RUNTIME.json` record; native-amd64 CI baseline; three-leg archival | **ACCEPTED** | Installed in `docs/PROTOCOL.md` B001 **and** `docs/contracts/RUNTIME.md`. Acceptance is not evidence that vendoring, GHCR publication, archival deposit or native CI has happened |
 | P-PARITY5 | The five parity policies: directory contents, non-regular entries, three-valued report, IDs, aliasing | **ACCEPTED** | Installed in `docs/contracts/PARITY.md`; Dev's complete directory procedure below closes A-007's escalation |
 | P-BUNDLE | `human/` stays a directory in the parent repo; no submodule | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `STATE.md` |
+| P-WIRE | Release PARITY.md's producer block; its stated condition is discharged | **PROPOSED** | — ; blocks nothing else, see A-008 |
+| P-R5CYCLE | R5's termination argument is false; a §152(c)(2)(B) sibling cycle diverges on a `Valid` input | **PROPOSED**; its proposed V10 and fuel bound are **WITHDRAWN** as insufficient (P-R5CYCLE-A) | — ; R5/R9 and H5 are Dev's. Finding stands, remedy is open. The R5 group's oracle work is halted |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 
 `INSTALLED` entries record an action taken, not a proposal.
@@ -441,6 +443,172 @@ One omission in policy 1 is flagged in A-007 §3: an entry that is a regular fil
 not dot-prefixed, and does not end in `.json` is assigned no outcome by any of
 the five policies, and policy 5's own stated rationale about `mismatches.jsonl`
 depends on the answer. Flagged, not resolved.
+
+## 2026-09-21 — PROPOSED — P-WIRE: release PARITY.md's producer block
+
+Origin: Q-008 / A-008 §2. Owning artifact: `docs/contracts/PARITY.md`, "File
+envelopes" and "Comparison requirements".
+
+**The clause.** PARITY.md says "The approved `Interface/` and `DECISIONS.md` will
+define section payloads and query encodings. **That definition remains
+pending**", and "Until the payload and result specifications are approved,
+producers are blocked rather than guessing representations."
+
+**Why it should be released.** The clause is conditional and names its own
+release condition: approval of `Interface/` and `DECISIONS.md`. That condition is
+now discharged. `human/DECISIONS.md` carries signed H1 (household shape), H2
+(argument kinds), H3 (the 57 representable event predicates), H4 (stipulations
+and grounding), G4 (the `Term` domain), D1/V9 (zero-padded ISO days), M1 (`Int`
+dollars), H6.1 (targets and entry points), H6.2 (the canonical observation and
+its JSON tags) and H6.5 (the 135 queried signatures with their modes); the
+corresponding `Interface/Household.lean` is installed and type-checks on the
+pinned toolchain. Dev has signed off Checkpoint 0 and authorized Phase 1, which
+cannot be executed while producers are blocked.
+
+**What is proposed.** Replace the two "pending"/"blocked" sentences with text
+recording that the payload and result semantics are supplied by the named
+DECISIONS.md sections and `Interface/`, that their concrete JSON spelling is a
+builder-owned lossless codec of that approved shape fixed once in `Interface/`,
+and that producers remain blocked on any field those sections do not determine.
+The exact replacement wording is Dev's to approve; the builder should not install
+it as part of the P-PARITY5 installation without that approval, because this
+sentence is what currently gates producing any output at all.
+
+**What is not proposed.** No semantic mode, output-position projection or
+canonicalization choice. The two items A-008 identifies as not determined by the
+signed text — record granularity, and the byte-level escape/format pinning that
+both isolated lanes must share — are handled there: the first as a builder
+decision to be recorded and reported, the second as a restoration.
+
+**Status.** Awaiting Dev. Recorded with a `PROPOSED` heading, not `PENDING`, so
+`scripts/verify_phase0.sh:205` does not retroactively reopen the signed-off
+Checkpoint 0 gate over a Phase 1 proposal.
+
+## 2026-09-21 — PROPOSED — P-R5CYCLE: R5's termination argument fails on a §152(c)(2)(B) sibling cycle
+
+Origin: Q-009 / A-009. Owning artifact: `human/DECISIONS.md` R5, R8, R9 and H5
+(`Valid`). **Dev's artifact; nothing here is operative.** Full reasoning, the
+source citations and the evidence-status caveats are in `docs/consult/A-009.md`.
+
+> **Corrected by P-R5CYCLE-A below (Q-010 / A-010).** The finding in this entry —
+> that R5's termination argument is false and that the R5 group diverges on an
+> input satisfying V1–V9 — stands unchanged. **The proposed V10 and the
+> `2 * persons.length + 2` fuel bound below are withdrawn as insufficient**: both
+> assume one birth date per person, which no signed decision provides. Do not
+> act on them. The body is preserved verbatim.
+
+**The defect.** R5 states that each round trip of the
+`s152_a_1 → s152_c → s152_c_1 → s152_c_1_E → s7703 → s7703_b → s7703_b_1 →
+s152_a_1` group "moves from a taxpayer to a child living with them … so the
+recursion follows the child relation and terminates under V4". Two independent
+errors:
+
+1. `s152_c_1_A` calls `s152_c_2` (`section152.pl:158-160`), a **disjunction**.
+   R5 reads only the (c)(2)(A) child/descendant disjunct. The (c)(2)(B) disjunct
+   (`section152.pl:178-187`) admits siblings and stepsiblings, and both
+   `is_sibling_of` (`utils.pl:131-156`) and `is_stepsibling_of`
+   (`utils.pl:167-187`) are **symmetric**. V4 constrains only the
+   `son_`/`daughter_`/`father_`/`mother_` graph, so no signed rule touches a
+   `brother_`/`sister_` edge.
+2. The age requirement of (c)(3) would break the symmetry if it were a strict
+   order, but `is_before` is `Stamp1 =< Stamp2` (`utils.pl:10-14`), so two people
+   with the same birth date each count as "younger than" the other.
+
+Two equally aged siblings, each separately married, sharing a residence, with no
+child facts, therefore produce a 2-cycle in which `s7703(a,sa,_,2018)` recurs
+with identical arguments. The input satisfies V1–V9 as signed.
+
+**Why it is not a grading outcome.** R9 already fixes the classification: "a
+counterexample would be a design flaw (a missing V-rule), not a grading outcome."
+The pinned reference program itself diverges here, so there is no reference value
+to be consistent with — this is a G6 reference-undefined region of the same kind
+as E1/E2/E4/E5, which V5–V8 exist to exclude. Returning `[]` on fuel exhaustion
+would invent a reference value the reference does not produce.
+
+**Proposed, for Dev to accept, amend or reject — a new V-rule in the style of
+V5–V7.** Exclude households in which two distinct persons related under
+§152(c)(2) share a birth date:
+
+> **V10 (E6, §152(c)(2)(B) symmetric-relationship cycle).** No two distinct
+> persons `p ≠ q` that are connected in the undirected relationship graph — an
+> edge for every `brother_`/`sister_` event linking them, every stepsibling pair
+> under `utils.pl:167`, and every `is_child_of` edge — have `birth_` events whose
+> `start_` days are equal. Decidable from the fact list alone; unlike V7 and V8
+> it needs no `Oracle/` import.
+
+The supporting argument, which A-009 gives in full: around any cycle of the R5
+group each Dependent becomes the next Taxpayer, so (c)(3)'s first disjunct forces
+`dob(Taxp) ≤ dob(Dep)` at every step and hence equal birth dates for all members,
+while a cycle using (c)(3)'s second disjunct anywhere forces every leg to use it
+and collapses into a `is_child_of` cycle already excluded by V4. A blunter
+alternative Dev may prefer is "no two distinct persons share a birth date",
+which is easier to state but costs the twin boundary cases in `gen/`.
+
+**Consequence if V10 is adopted: R5's fuel constant needs re-deriving.** Under
+V10 a chain's birth dates strictly increase while (c)(3)'s first disjunct is
+used, and a second-disjunct suffix strictly descends the V4-acyclic child graph,
+so `persons.length + 1` no longer obviously bounds the mixed case;
+`2 * persons.length + 2` is safe under that argument. R8 inherits whatever R5
+settles on.
+
+**What must not be done meanwhile, and is not being done.** No edit to `human/`;
+no fuel chosen; no clause re-read; no input excluded; `is_before` is not made
+strict — P-INTENT clause 2 requires the oracle to translate the code as written,
+and a corrected `is_before` could not reach parity with the pinned program.
+
+**Status.** Awaiting Dev. Oracle work on the R5 group (§7703, §152 and every
+target whose call graph reaches `s152_a_1`/`s7703_b_1`, including R8's entry from
+`s3306_c_10_A_ii`) is halted under the design-flaw stop-and-report standard. The
+witness is preserved at `docs/consult/evidence/r5_sibling_cycle.pl` and its
+results file. Filed as `PROPOSED`, not `PENDING`, so `verify_phase0.sh:205` does
+not reopen the signed-off Checkpoint 0 gate over a Phase 1 finding.
+
+## 2026-09-21 — PROPOSED (correction) — P-R5CYCLE-A: V10 withdrawn; the remedy is open
+
+Origin: Q-010 / A-010, correcting P-R5CYCLE above. `docs/consult/A-009.md` is
+immutable and is corrected here, not edited.
+
+**Withdrawn.** V10 ("no two distinct related persons share a birth date"), the
+blunter variant ("no two distinct persons share a birth date"), and the
+`2 * persons.length + 2` fuel bound. All three rest on composing inequalities
+`dob(p₁) ≤ dob(p₂) ≤ … ≤ dob(p₁)` around a cycle, which presumes a **function**
+`dob(·)`. No signed decision supplies one: G1 and H1 keep the fact list with
+duplicates and all solutions, H2/H3 permit a person to be the `agent_` of several
+`birth_` events, and H5's V1–V9 impose no uniqueness. `s152_c_3`
+(`section152.pl:192-230`) chooses its birth facts existentially and may choose
+differently in different calls.
+
+**Counterexample.** `docs/consult/evidence/r5_multibirth_cycle.pl`: `a` has
+births at 2000-01-01 and 2002-01-01, `b` at 2001-01-01; no day is shared between
+distinct persons, so V10 does not exclude it. Both `s152_c_3(b,a,2018)` (using
+`a`'s 2000 date) and `s152_c_3(a,b,2018)` (using `a`'s 2002 date) succeed, and
+the cycle exhausts 10⁵ and 10⁶ inference budgets on the pinned runtime, while the
+`no_sibling_control` run terminates. Bounded-budget evidence plus the structural
+recurrence argument, not a formal proof of divergence; no kernel-checked `Valid`
+certificate is claimed.
+
+**A corollary that removes a tempting narrow fix.** Making `is_before` strict
+would not break this cycle either: 2000 < 2001 < 2002 satisfies both directions
+strictly. The non-strict `=<` noted in P-R5CYCLE is therefore neither the root
+cause nor sufficient to repair, quite apart from P-INTENT clause 2 forbidding the
+oracle to correct the source.
+
+**What stands from P-R5CYCLE.** The finding: R5's "the recursion follows the
+child relation and terminates under V4" is false, because `s152_c_2` is a
+disjunction whose (c)(2)(B) branch admits the symmetric `is_sibling_of` and
+`is_stepsibling_of`, which V4 does not constrain. The classification under R9 as
+a design flaw and a missing V-rule. The rule that fuel exhaustion must not stand
+in as a reference value where the pinned program itself diverges. The halt scope.
+
+**No replacement rule is proposed.** The open proof obligation is stated in
+A-010 §3: define the step relation over *all* permitted fact solutions rather
+than one chosen witness per person, exhibit a well-founded measure that strictly
+decreases along it, show `Valid` decides that measure's premises, derive the fuel
+constant from the measure, and check any candidate against both preserved
+witnesses. Adding a uniqueness requirement to V1 would itself narrow the signed
+domain and is Dev's decision, not a technical repair.
+
+**Status.** Awaiting Dev. The halt in P-R5CYCLE continues unchanged.
 
 ## 2026-09-21 — Verification addendum: installed contracts and recorded control
 

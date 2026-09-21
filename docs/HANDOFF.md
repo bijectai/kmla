@@ -55,11 +55,12 @@ without retracting the Checkpoint 0 sign-off.
   group. Current child-graph acyclicity does not justify the stated person-count
   fuel bound. Any new reference-domain/termination rule must be the owner's
   explicit decision; no rule, truncation or source correction is implemented.
-  A-009's suggested equal-birthday exclusion is not a sufficient remedy: a
+  A-009's suggested equal-birthday exclusion was withdrawn in A-010: a
   second diagnostic uses multiple different birth dates per person and reaches
   the same cycle without any cross-person equal date. A justified replacement
   domain/termination rule remains open; do not adopt the suggested fuel bound
-  from that incomplete argument.
+  from that incomplete argument. The owner decision is open in content; A-010
+  records the proof obligations, not a replacement approved rule.
 
 The source-reader slice has 26 passing tests covering all 376 case files, with
 its full lexical accounting retained in `docs/phase1/`. Grounding, semantic
