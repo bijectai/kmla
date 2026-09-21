@@ -1,0 +1,12 @@
+ok   executable-and-shebang
+ok   dot-entries-ignored
+ok   other-entry-types-rejected
+ok   directory-and-cwd-aliases
+ok   hardlinked-engine-outputs
+ok   exact-report-bytes
+ok   strict-utf8-and-exit2-preservation
+ok   strict-envelopes-and-nested-duplicates
+ok   raw-number-precision
+ok   escaped-surrogate-reporting
+note ascii-casefold-collision: host filesystem collapsed the names
+11 owner checks passed; 0 failed

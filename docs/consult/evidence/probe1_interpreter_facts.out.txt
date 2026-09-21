@@ -1,0 +1,91 @@
+
+
+_G591 is 31536000.0 rdiv 2  =>  true 15768000 is 31536000.0 rdiv 2
+_G591 is 31536001.5 rdiv 2  =>  true 63072003 rdiv 4 is 31536001.5 rdiv 2
+_G588 is 3 rdiv 2  =>  true 3 rdiv 2 is 3 rdiv 2
+_G812 is round(2.5)  =>  true 3 is round(2.5)
+_G838 is round(-2.5)  =>  true -3 is round(-2.5)
+_G864 is round(3.5)  =>  true 4 is round(3.5)
+_G878 is round(0.5)  =>  true 1 is round(0.5)
+_G884 is round(3 rdiv 2)  =>  true 2 is round(3 rdiv 2)
+_G910 is round(-3 rdiv 2)  =>  true -2 is round(-3 rdiv 2)
+_G936 is round(1 rdiv 2)  =>  true 1 is round(1 rdiv 2)
+_G950 is round(5 rdiv 2)  =>  true 3 is round(5 rdiv 2)
+_G896 is round(10*0.15)  =>  true 2 is round(10*0.15)
+_G922 is round(50*0.31)  =>  true 16 is round(50*0.31)
+_G948 is round(125*0.396)  =>  true 50 is round(125*0.396)
+_G962 is round(36900*0.15)  =>  true 5535 is round(36900*0.15)
+_G798 is round(75528.5+ (250125-250000)*0.396)  =>  true 75578 is round(75528.5+ (250125-250000)*0.396)
+_G812 is round(35928.5+ (140050-140000)*0.36)  =>  true 35947 is round(35928.5+ (140050-140000)*0.36)
+_G953 is 2500/1250  =>  true 2 is 2500/1250
+_G979 is 2501/1250  =>  true 2.0008 is 2501/1250
+_G1005 is ceil(2501/1250)  =>  true 3 is ceil(2501/1250)
+_G1031 is ceil(0/1250)  =>  true 0 is ceil(0/1250)
+_G1045 is ceil(2500/1250)  =>  true 2 is ceil(2500/1250)
+_G1129 is round(2000*34 rdiv 100)  =>  true 680 is round(2000*34 rdiv 100)
+_G1155 is round(2000*33 rdiv 100)  =>  true 660 is round(2000*33 rdiv 100)
+_G1181 is round(2000*35 rdiv 100)  =>  true 700 is round(2000*35 rdiv 100)
+_G1207 is round(1 rdiv 2)  =>  true 1 is round(1 rdiv 2)
+_G1233 is round(300000 rdiv 2)  =>  true 150000 is round(300000 rdiv 2)
+_G219 is round(300001 rdiv 2)  =>  true 150001 is round(300001 rdiv 2)
+_G543 is 1 rdiv 2,_G543>=rational(0.5)  =>  true 1 rdiv 2 is 1 rdiv 2,1 rdiv 2>=rational(0.5)
+_G569 is 1 rdiv 3,_G569>=rational(0.5)  =>  FAIL
+_G583 is rational(0.5)  =>  true 1 rdiv 2 is rational(0.5)
+date_time_stamp(date(2015,1,1,0,0,0,0,-,-),_G634)  =>  true date_time_stamp(date(2015,1,1,0,0,0,0,-,-),1420070400.0)
+date_time_stamp(date(2015,1,32,0,0,0,0,-,-),_G660)  =>  true date_time_stamp(date(2015,1,32,0,0,0,0,-,-),1422748800.0)
+date_time_stamp(date(2015,1,32,0,0,0,0,-,-),_G677),format_time(atom(_G688),"%Y-%m-%d",_G677)  =>  true date_time_stamp(date(2015,1,32,0,0,0,0,-,-),1422748800.0),format_time(atom('2015-02-01'),"%Y-%m-%d",1422748800.0)
+date_time_stamp(date(2017,7,185,0,0,0,0,-,-),_G581),format_time(atom(_G592),"%Y-%m-%d",_G581)  =>  true date_time_stamp(date(2017,7,185,0,0,0,0,-,-),1514764800.0),format_time(atom('2018-01-01'),"%Y-%m-%d",1514764800.0)
+date_time_stamp(date(2017,7,2,0,0,0,0,-,-),_G609),format_time(atom(_G620),"%Y-%m-%d",_G609)  =>  true date_time_stamp(date(2017,7,2,0,0,0,0,-,-),1498953600.0),format_time(atom('2017-07-02'),"%Y-%m-%d",1498953600.0)
+_G619 is "15"+7671  =>  
+EXC error(type_error([],"15"),context(system: (is)/2,'"x" must hold one character'))
+_G645 is "5"+7671  =>  true 7724 is "5"+7671
+date_time_stamp(date("1990","05",22,0,0,0,0,-,-),_G671)  =>  
+EXC error(type_error(integer,"1990"),context(system:date_time_stamp/2,_G947))
+date_time_stamp(date(1990,5,"22",0,0,0,0,-,-),_G685)  =>  
+EXC error(type_error(integer,"22"),context(system:date_time_stamp/2,_G1043))
+"usa"==usa  =>  FAIL
+"usa"=="usa"  =>  true "usa"=="usa"
+usa==usa  =>  true usa==usa
+abc\=="abc"  =>  true abc\=="abc"
+_G512==_G523  =>  FAIL
+_G537\=="usa"  =>  true _G537\=="usa"
+atom_prefix("state of maryland","state of ")  =>  true atom_prefix("state of maryland","state of ")
+atom_prefix('state of maryland',"state of ")  =>  true atom_prefix('state of maryland',"state of ")
+atom_prefix(state_of_md,"state of ")  =>  FAIL
+sub_atom("canadian government",_G448,11,0,_G459),_G459==' government'  =>  true sub_atom("canadian government",8,11,0,' government'),' government'==' government'
+sub_atom('canadian government',_G476,11,0,_G487),_G487==' government'  =>  true sub_atom('canadian government',8,11,0,' government'),' government'==' government'
+list_to_set([ (_G689,2000), (_G700,2000)],_G711)  =>  true list_to_set([ (_G216,2000), (_G217,2000)],[ (_G216,2000), (_G217,2000)])
+list_to_set([ (1,2), (1,2), (2,1)],_G219)  =>  true list_to_set([ (1,2), (1,2), (2,1)],[ (1,2), (2,1)])
+list_to_set([ (_G220,1), (_G220,1)],_G221)  =>  true list_to_set([ (_G220,1), (_G220,1)],[ (_G220,1)])
+list_to_set([1.0,1],_G222)  =>  true list_to_set([1.0,1],[1.0,1])
+date_time_stamp(date(2017,1,1,0,0,0,0,-,-),_G957),format_time(atom(_G968),"%W",_G957)  =>  true date_time_stamp(date(2017,1,1,0,0,0,0,-,-),1483228800.0),format_time(atom('00'),"%W",1483228800.0)
+date_time_stamp(date(2017,1,2,0,0,0,0,-,-),_G997),format_time(atom(_G1008),"%W",_G997)  =>  true date_time_stamp(date(2017,1,2,0,0,0,0,-,-),1483315200.0),format_time(atom('01'),"%W",1483315200.0)
+date_time_stamp(date(2017,12,31,0,0,0,0,-,-),_G1037),format_time(atom(_G1048),"%W",_G1037)  =>  true date_time_stamp(date(2017,12,31,0,0,0,0,-,-),1514678400.0),format_time(atom('52'),"%W",1514678400.0)
+date_time_stamp(date(2018,1,1,0,0,0,0,-,-),_G1065),format_time(atom(_G1076),"%W",_G1065)  =>  true date_time_stamp(date(2018,1,1,0,0,0,0,-,-),1514764800.0),format_time(atom('01'),"%W",1514764800.0)
+split_string("2017-02-01","-","",_G793),_G793=[_G804,_G815,_G826],atom_number(_G804,_G837)  =>  true split_string("2017-02-01","-","",["2017","02","01"]),["2017","02","01"]=["2017","02","01"],atom_number("2017",2017)
+2017==2017  =>  true 2017==2017
+split_string("2017-02-01","-","",[_G881,_G892,_G903]),_G881=="2017"  =>  true split_string("2017-02-01","-","",["2017","02","01"]),"2017"=="2017"
+"2018"@>"2017"  =>  true "2018"@>"2017"
+"2018"@>2017  =>  true "2018"@>2017
+"2017"@>"2017"  =>  FAIL
+sum_list([],_G545)  =>  true sum_list([],0)
+sum_list([1,2.0],_G571)  =>  true sum_list([1,2.0],3.0)
+length([],_G597),_G597>0  =>  FAIL
+between(2018,2025,2020)  =>  true between(2018,2025,2020)
+between(2018,2025,2017)  =>  FAIL
+_G900 is max(3,2.0)  =>  true 3 is max(3,2.0)
+_G926 is min(7000,7000.0)  =>  true 7000 is min(7000,7000.0)
+_G952 is round(0.06*33200)  =>  true 1992 is round(0.06*33200)
+_G978 is 0.06*33200  =>  true 1992.0 is 0.06*33200
+_G1004 is round(0.06*7000)  =>  true 420 is round(0.06*7000)
+_G1030 is round(0.06*1250)  =>  true 75 is round(0.06*1250)
+_G1056 is 0.06*1250  =>  true 75.0 is 0.06*1250
+_G1070 is round(0.06*2250)  =>  true 135 is round(0.06*2250)
+_G714=5,_G714==5  =>  true 5=5,5==5
+_G740 is 5.0,_G740==5  =>  FAIL
+5.0=:=5  =>  true 5.0=:=5
+_G778 is 33200-12000-0  =>  true 21200 is 33200-12000-0
+1.5>=1 rdiv 2  =>  true 1.5>=1 rdiv 2
+15724800.0>=15768000 rdiv 1  =>  FAIL
+day_test  =>  
+EXC error(existence_error(procedure,day_test/0),context(system:'<meta-call>'/1,_G303))

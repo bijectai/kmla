@@ -1,0 +1,315 @@
+section1.pl:36:27	s1_a_1/6	=	Start_time=First_day
+section1.pl:43:25	s1_a_1/6	=	End_time=Last_day
+section1.pl:47:9	s1_a_1/6	is_before	is_before(Start_time,Last_day)
+section1.pl:48:9	s1_a_1/6	is_before	is_before(First_day,End_time)
+section1.pl:69:12	s1_a_i/2	=<	Taxinc =< 36900
+section1.pl:73:12	s1_a_ii/2	=<	Taxinc =< 89150
+section1.pl:74:11	s1_a_ii/2	<	36900 < Taxinc
+section1.pl:78:12	s1_a_iii/2	=<	Taxinc =< 140000
+section1.pl:79:11	s1_a_iii/2	<	89150 < Taxinc
+section1.pl:83:12	s1_a_iv/2	=<	Taxinc =< 250000
+section1.pl:84:12	s1_a_iv/2	<	140000 < Taxinc
+section1.pl:88:12	s1_a_v/2	<	250000 < Taxinc
+section1.pl:107:12	s1_b_i/2	=<	Taxinc =< 29600
+section1.pl:111:12	s1_b_ii/2	=<	Taxinc =< 76400
+section1.pl:112:11	s1_b_ii/2	<	29600 < Taxinc
+section1.pl:116:12	s1_b_iii/2	=<	Taxinc =< 127500
+section1.pl:117:11	s1_b_iii/2	<	76400 < Taxinc
+section1.pl:121:12	s1_b_iv/2	=<	Taxinc =< 250000
+section1.pl:122:12	s1_b_iv/2	<	127500 < Taxinc
+section1.pl:126:12	s1_b_v/2	<	250000 < Taxinc
+section1.pl:147:12	s1_c_i/2	=<	Taxinc =< 22100
+section1.pl:151:12	s1_c_ii/2	=<	Taxinc =< 53500
+section1.pl:152:11	s1_c_ii/2	<	22100 < Taxinc
+section1.pl:156:12	s1_c_iii/2	=<	Taxinc =< 115000
+section1.pl:157:11	s1_c_iii/2	<	53500 < Taxinc
+section1.pl:161:12	s1_c_iv/2	=<	Taxinc =< 250000
+section1.pl:162:12	s1_c_iv/2	<	115000 < Taxinc
+section1.pl:166:12	s1_c_v/2	<	250000 < Taxinc
+section1.pl:194:12	s1_d_i/2	=<	Taxinc =< 18450
+section1.pl:198:12	s1_d_ii/2	=<	Taxinc =< 44575
+section1.pl:199:11	s1_d_ii/2	<	18450 < Taxinc
+section1.pl:203:12	s1_d_iii/2	=<	Taxinc =< 70000
+section1.pl:204:11	s1_d_iii/2	<	44575 < Taxinc
+section1.pl:208:12	s1_d_iv/2	=<	Taxinc =< 125000
+section1.pl:209:11	s1_d_iv/2	<	70000 < Taxinc
+section1.pl:213:12	s1_d_v/2	<	125000 < Taxinc
+section151.pl:40:5	s151_individual/5	list_to_set	list_to_set(List_b_2,Set_b)
+section151.pl:46:5	s151_individual/5	list_to_set	list_to_set(List_c,Set_c)
+section151.pl:50:9	s151_individual/5	member	member((Person,_),List_all_exemptions)
+section151.pl:55:9	s151_individual/5	member	member((_,Exemption),List_all_exemptions)
+section151.pl:119:24	s151_d/3	=	Ea = Exemption_in
+section151.pl:135:10	s151_d_2/4	\==	Taxp \== Otaxp
+section151.pl:154:8	s151_d_3_A/7	>	Agi>Aa
+section151.pl:157:11	s151_d_3_A/7	max	max(Exemption_amount_in-Reduction_amount,0)
+section151.pl:165:19	s151_d_3_B/5	max	max(Agi-Aa,0)
+section151.pl:186:11	s151_d_3_B/5	min	min(Number,100)
+section151.pl:192:5	s151_d_5/2	between	between(2018,2025,Taxy)
+section152.pl:4:14	s152/3	\==	Dependent\==Taxp
+section152.pl:77:16	s152_c_1_A/4	=	End_t = Death_taxpayer_time
+section152.pl:77:50	s152_c_1_A/4	=	End_t = End_day
+section152.pl:84:16	s152_c_1_A/4	=	End_i = Death_individual_time
+section152.pl:84:52	s152_c_1_A/4	=	End_i = End_day
+section152.pl:86:2	s152_c_1_A/4	earliest	earliest([End_t,End_i,End_day],End_relationship)
+section152.pl:130:5	s152_c_1_B/6	earliest	earliest([End_individual,End_taxpayer,Last_day_of_year,End_relationship],End_day)
+section152.pl:132:5	s152_c_1_B/6	latest	latest([Start_individual,Start_taxpayer,First_day_of_year,Start_relationship],Start_day)
+section152.pl:136:11	s152_c_1_B/6	>=	Duration >= Half_year_duration
+section152.pl:167:13	s152_c_2_A/5	=	Dependent=Childc2a
+section152.pl:168:22	s152_c_2_A/5	=	Start_relationship=Start_child
+section152.pl:169:20	s152_c_2_A/5	=	End_relationship=End_child
+section152.pl:172:14	s152_c_2_A/5	\==	Dependent \== Childc2a
+section152.pl:184:13	s152_c_2_B/5	==	S65 == Bsssc2b
+section152.pl:204:13	s152_c_3/3	is_before	is_before(Taxpayer_dob,Individual_dob)
+section152.pl:230:17	s152_c_3/3	=<	Age_individual =< Duration_25_years
+section152.pl:254:16	s152_d_1_A/5	=	End_t = Death_taxpayer_time
+section152.pl:254:50	s152_d_1_A/5	=	End_t = End_day
+section152.pl:261:16	s152_d_1_A/5	=	End_i = Death_individual_time
+section152.pl:261:52	s152_d_1_A/5	=	End_i = End_day
+section152.pl:263:2	s152_d_1_A/5	earliest	earliest([End_t,End_i,End_day],End_relationship)
+section152.pl:269:18	s152_d_1_B/2	==	Gross_income == 0
+section152.pl:295:13	s152_d_2_A/4	=	Dependent=Child
+section152.pl:296:13	s152_d_2_A/4	=	Start_day=Start_child
+section152.pl:297:11	s152_d_2_A/4	=	End_day=End_child
+section152.pl:300:14	s152_d_2_A/4	\==	Dependent \== Child
+section152.pl:324:5	s152_d_2_E/5	latest	latest([Start_day_sibling,Start_day_child],Start_day)
+section152.pl:325:5	s152_d_2_E/5	earliest	earliest([End_day_sibling,End_day_child],End_day)
+section152.pl:331:5	s152_d_2_F/5	latest	latest([Start_day_sibling,Start_day_child],Start_day)
+section152.pl:332:5	s152_d_2_F/5	earliest	earliest([End_day_sibling,End_day_child],End_day)
+section152.pl:344:15	s152_d_2_H/6	\==	Dependent \== Taxp
+section152.pl:352:9	s152_d_2_H/6	is_before	is_before(Start,Last_day_year)
+section152.pl:356:4	s152_d_2_H/6	is_before	is_before(First_day_year,End)
+section152.pl:365:5	s152_d_2_H/6	is_before	is_before(Start_taxpayer_residence,First_day_year)
+section152.pl:369:3	s152_d_2_H/6	is_before	is_before(Last_day_year,End_taxpayer_residence)
+section152.pl:377:5	s152_d_2_H/6	is_before	is_before(Start_individual_residence,First_day_year)
+section152.pl:381:3	s152_d_2_H/6	is_before	is_before(Last_day_year,End_individual_residence)
+section152.pl:385:5	s152_d_2_H/6	latest	latest([Start_taxpayer_residence,Start_individual_residence],Start_day)
+section152.pl:386:5	s152_d_2_H/6	earliest	earliest([End_taxpayer_residence,End_individual_residence],End_day)
+section152.pl:387:6	s152_d_2_H/6	==	S145==S143
+section2.pl:20:10	s2_a_1_A/5	\==	Taxp \== Spouse
+section2.pl:27:5	s2_a_1_A/5	is_before	is_before(Start_marriage,Time_death)
+section2.pl:34:13	s2_a_1_A/5	is_before	is_before(Time_death,End_marriage)
+section2.pl:39:5	s2_a_1_A/5	is_before	is_before(First_day_year,Time_death)
+section2.pl:42:5	s2_a_1_A/5	is_before	is_before(Time_death,Last_day_year)
+section2.pl:55:5	s2_a_1_B/4	is_before	is_before(Start_taxpayer_residence,First_day_year)
+section2.pl:62:13	s2_a_1_B/4	is_before	is_before(Last_day_year,End_taxpayer_residence)
+section2.pl:70:5	s2_a_1_B/4	is_before	is_before(Start_dependent_residence,First_day_year)
+section2.pl:77:13	s2_a_1_B/4	is_before	is_before(Last_day_year,End_dependent_residence)
+section2.pl:87:9	s2_a_1_B/4	is_before	is_before(Start_dependent,First_day_year)
+section2.pl:91:9	s2_a_1_B/4	is_before	is_before(Last_day_year,End_dependent)
+section2.pl:110:16	s2_a_2_A/5	\==	Remarriage \== Previous_marriage
+section2.pl:111:5	s2_a_2_A/5	is_before	is_before(Start_previous_marriage,S31)
+section2.pl:113:5	s2_a_2_A/5	is_before	is_before(S31,Last_day_year)
+section2.pl:130:17	s2_a_2_B/3	is_before	is_before(Start_nra,Last_day_year)
+section2.pl:140:17	s2_a_2_B/3	is_before	is_before(First_day_year,End_nra)
+section2.pl:159:16	s2_b_1/4	\==	Spouse \== Taxp
+section2.pl:162:9	s2_b_1/4	is_before	is_before(Start_marriage,Last_day_year)
+section2.pl:171:25	s2_b_1/4	is_before	is_before(Last_day_year,Death_time)
+section2.pl:185:25	s2_b_1/4	is_before	is_before(First_day_year1,End_marriage)
+section2.pl:213:9	s2_b_1_A/4	is_before	is_before(Start_taxpayer_residence,First_day_year)
+section2.pl:220:9	s2_b_1_A/4	is_before	is_before(Last_day_year,End_taxpayer_residence)
+section2.pl:232:40	s2_b_1_A/4	=	Start_individual_residence = First_day_year
+section2.pl:241:38	s2_b_1_A/4	=	End_individual_residence = Last_day_year
+section2.pl:250:35	s2_b_1_A/4	>=	Duration_individual_residence >= Half_year_duration
+section2.pl:289:5	s2_b_1_B/5	is_before	is_before(Start_dependent_residence,First_day_year)
+section2.pl:297:13	s2_b_1_B/5	is_before	is_before(Last_day_year,End_dependent_residence)
+section2.pl:302:9	s2_b_1_B/5	is_before	is_before(Start_child,First_day_year)
+section2.pl:306:9	s2_b_1_B/5	is_before	is_before(Last_day_year,End_child)
+section2.pl:323:10	s2_b_2_A/5	\==	Taxp \== Spouse
+section2.pl:332:5	s2_b_2_A/5	is_before	is_before(Divorce_time,Last_day_year)
+section2.pl:349:13	s2_b_2_B/3	is_before	is_before(Start_nra,Last_day_year)
+section2.pl:358:13	s2_b_2_B/3	is_before	is_before(First_day_year,Stop_nra)
+section2.pl:379:13	s2_b_2_C/4	is_before	is_before(Time_death,End_marriage)
+section2.pl:382:5	s2_b_2_C/4	is_before	is_before(First_day_year,Time_death)
+section2.pl:383:5	s2_b_2_C/4	is_before	is_before(Time_death,Last_day_year)
+section2.pl:404:17	s2_b_3_A/3	=	S119=First_day_year
+section2.pl:408:13	s2_b_3_A/3	is_before	is_before(Start_nra,Last_day_year)
+section2.pl:409:17	s2_b_3_A/3	=	S119=Last_day_year
+section2.pl:418:13	s2_b_3_A/3	is_before	is_before(First_day_year,Stop_nra)
+section2.pl:419:13	s2_b_3_A/3	earliest	earliest([S119,Stop_nra],S119)
+section2.pl:443:13	s2_b_3_B/3	is_before	is_before(Start_relationship,First_day)
+section2.pl:447:13	s2_b_3_B/3	is_before	is_before(End_relationship,Last_day)
+section2.pl:453:9	s2_b_3_B/3	is_before	is_before(StartH,First_day)
+section2.pl:457:9	s2_b_3_B/3	is_before	is_before(Last_day,EndH)
+section3301.pl:18:13	total_wages_employer/6	is_before	is_before(Start_day,Remuneration_time)
+section3301.pl:19:13	total_wages_employer/6	is_before	is_before(Remuneration_time,End_day)
+section3301.pl:25:9	total_wages_employer/6	member	member((Individual,_,_),Individuals_x_wages)
+section3301.pl:28:5	total_wages_employer/6	list_to_set	list_to_set(Individual_list,Individual_set)
+section3301.pl:32:13	total_wages_employer/6	member	member(Individual, Individual_set)
+section3301.pl:35:17	total_wages_employer/6	member	member((Individual,Wage,_),Individuals_x_wages)
+section3301.pl:46:13	total_wages_employer/6	member	member(Individual,Individual_set)
+section3301.pl:47:13	total_wages_employer/6	member	member((Individual,Wage),Individuals_x_capped_wages)
+section3301.pl:54:9	total_wages_employer/6	member	member((_,_,Service),Individuals_x_wages)
+section3306.pl:21:5	s3306_a_1_is_wages/4	is_before	is_before(Time,Last_day_year)
+section3306.pl:23:5	s3306_a_1_is_wages/4	is_before	is_before(First_day_year,Time)
+section3306.pl:40:7	s3306_a_1_A/3	>=	Wages>=1500
+section3306.pl:58:13	s3306_a_1_B/4	is_before	is_before(First_day_year1,Day)
+section3306.pl:59:13	s3306_a_1_B/4	is_before	is_before(Day,Last_day_year)
+section3306.pl:66:9	s3306_a_1_B/4	member	member((Stamp,_,_),Stamp_day_individual)
+section3306.pl:69:5	s3306_a_1_B/4	list_to_set	list_to_set(Emp_days,Emp_days_set)
+section3306.pl:71:10	s3306_a_1_B/4	>=	Num_days>=10
+section3306.pl:75:4	s3306_a_1_B/4	member	member(Stamp,Emp_days)
+section3306.pl:80:2	s3306_a_1_B/4	list_to_set	list_to_set(Weeks,Weeks_set)
+section3306.pl:82:11	s3306_a_1_B/4	>=	Num_weeks>=10
+section3306.pl:85:9	s3306_a_1_B/4	member	member((_,Day,_),Stamp_day_individual)
+section3306.pl:90:9	s3306_a_1_B/4	member	member((_,_,Individual),Stamp_day_individual)
+section3306.pl:108:5	s3306_a_2_is_wages/5	is_before	is_before(Time,Last_day_year)
+section3306.pl:110:5	s3306_a_2_is_wages/5	is_before	is_before(First_day_year,Time)
+section3306.pl:127:9	s3306_a_2_A/4	member	member((Amount,_),Amount_service)
+section3306.pl:132:9	s3306_a_2_A/4	member	member((_,Service_),Amount_service)
+section3306.pl:136:7	s3306_a_2_A/4	>=	Wages>=20000
+section3306.pl:153:9	s3306_a_2_is_day_of_employment/4	member	member((Employee,_),Employee_x_service)
+section3306.pl:158:9	s3306_a_2_is_day_of_employment/4	member	member((_,Labor),Employee_x_service)
+section3306.pl:161:5	s3306_a_2_is_day_of_employment/4	list_to_set	list_to_set(Employees,Individuals)
+section3306.pl:163:15	s3306_a_2_is_day_of_employment/4	>=	Num_employees>=5
+section3306.pl:174:13	s3306_a_2_B/6	is_before	is_before(First_day_year1,Day)
+section3306.pl:175:13	s3306_a_2_B/6	is_before	is_before(Day,Last_day_year)
+section3306.pl:182:9	s3306_a_2_B/6	member	member((Stamp,_,_,_),Stamp_day_employees_labor)
+section3306.pl:185:2	s3306_a_2_B/6	list_to_set	list_to_set(Stamp_list,Days_stamp)
+section3306.pl:187:10	s3306_a_2_B/6	>=	Num_days>=10
+section3306.pl:191:4	s3306_a_2_B/6	member	member(Stamp,Stamp_list)
+section3306.pl:196:5	s3306_a_2_B/6	list_to_set	list_to_set(Weeks,S33)
+section3306.pl:198:11	s3306_a_2_B/6	>=	Num_weeks>=10
+section3306.pl:201:9	s3306_a_2_B/6	member	member((_,_,Employees,_),Stamp_day_employees_labor)
+section3306.pl:206:9	s3306_a_2_B/6	member	member((_,_,_,Labor),Stamp_day_employees_labor)
+section3306.pl:211:9	s3306_a_2_B/6	member	member((_,Day,_,_),Stamp_day_employees_labor)
+section3306.pl:214:5	s3306_a_2_B/6	list_to_set	list_to_set(Days_list,Workday)
+section3306.pl:223:5	s3306_a_3_is_wages/5	is_before	is_before(Time,Last_day_year)
+section3306.pl:225:5	s3306_a_3_is_wages/5	is_before	is_before(First_day_year,Time)
+section3306.pl:250:9	s3306_a_3/4	member	member((Amount,_),Amount_service)
+section3306.pl:255:9	s3306_a_3/4	member	member((_,Service_),Amount_service)
+section3306.pl:259:7	s3306_a_3/4	>=	Wages>=1000
+section3306.pl:306:22	s3306_b_1/2	min	min(7000,Remuneration)
+section3306.pl:316:11	s3306_b_2/6	==	Employee==Payee
+section3306.pl:345:8	s3306_b_7/6	\==	Medium\=="cash"
+section3306.pl:350:6	s3306_b_7/6	\==	S92 \== Type_service
+section3306.pl:361:11	s3306_b_10/6	==	Employee==Payee
+section3306.pl:364:25	s3306_b_10/6	==	Any_of_his_dependents==Payee
+section3306.pl:377:5	s3306_b_10_A/6	is_before	is_before(Start_termination,Start_remuneration)
+section3306.pl:401:11	s3306_b_11/3	\==	Medium\=="cash"
+section3306.pl:418:19	s3306_b_15/5	@>	Year_remuneration@>Caly
+section3306.pl:459:35	s3306_c_A/3	=	Geographical_location = "usa"
+section3306.pl:465:20	s3306_c_A/3	==	Country=="usa"
+section3306.pl:469:34	s3306_c_A/3	==	Geographical_location=="usa"
+section3306.pl:480:20	s3306_c_B/4	\==	Country\=="usa"
+section3306.pl:484:21	s3306_c_B/4	\==	Location\=="usa"
+section3306.pl:540:13	s3306_c_1_A_i/5	is_before	is_before(First_day_year,Payment_time)
+section3306.pl:541:13	s3306_c_1_A_i/5	is_before	is_before(Payment_time,Last_day_year)
+section3306.pl:553:9	s3306_c_1_A_i/5	member	member((Amount,_,_),Amounts_employee_service)
+section3306.pl:557:18	s3306_c_1_A_i/5	>=	Remuneration >= 20000
+section3306.pl:560:9	s3306_c_1_A_i/5	member	member((_,Individual,_),Amounts_employee_service)
+section3306.pl:565:9	s3306_c_1_A_i/5	member	member((_,_,Service_),Amounts_employee_service)
+section3306.pl:583:11	s3306_c_1_B/2	\==	Country \== "usa"
+section3306.pl:599:11	s3306_c_2/3	==	Location=="private home"
+section3306.pl:600:11	s3306_c_2/3	==	Location=="local college club"
+section3306.pl:601:11	s3306_c_2/3	==	Location=="local chapter of a college fraternity"
+section3306.pl:602:11	s3306_c_2/3	==	Location=="local chapter of a college sorority"
+section3306.pl:624:21	s3306_c_5_A/4	\==	Employer\==Employee
+section3306.pl:626:13	s3306_c_5_A/4	is_before	is_before(Time_start,Workday)
+section3306.pl:633:21	s3306_c_5_A/4	is_before	is_before(Workday,Time_end)
+section3306.pl:654:17	s3306_c_5_B/4	>	Stamp_21>Stamp_day
+section3306.pl:660:10	s3306_c_6/1	==	Employer=="united states government"
+section3306.pl:665:2	s3306_c_7/2	atom_prefix	atom_prefix(Employer,"state of ")
+section3306.pl:680:11	s3306_c_10_A/4	==	Employee==Student
+section3306.pl:694:2	s3306_c_10_A_i/3	is_before	is_before(Start_enrollment,Workday)
+section3306.pl:695:2	s3306_c_10_A_i/3	is_before	is_before(Start_attendance,Workday)
+section3306.pl:702:4	s3306_c_10_A_i/3	is_before	is_before(Workday,Stop_enrollment)
+section3306.pl:711:4	s3306_c_10_A_i/3	is_before	is_before(Workday,Stop_attendance)
+section3306.pl:726:4	s3306_c_10_A_ii/3	is_before	is_before(Start_marriage,Workday)
+section3306.pl:735:4	s3306_c_10_A_ii/3	is_before	is_before(Workday,End_marriage)
+section3306.pl:751:2	s3306_c_10_B/4	is_before	is_before(Start_patient,Workday)
+section3306.pl:758:4	s3306_c_10_B/4	is_before	is_before(Workday,End_patient)
+section3306.pl:766:2	s3306_c_11/2	sub_atom	sub_atom(Employer,_,11,0,Suffix)
+section3306.pl:767:8	s3306_c_11/2	==	Suffix==' government'
+section3306.pl:768:10	s3306_c_11/2	\==	Employer\=="united states government"
+section3306.pl:789:2	s3306_c_13/4	is_before	is_before(Start_enrollment,Workday)
+section3306.pl:790:2	s3306_c_13/4	is_before	is_before(Start_attendance,Workday)
+section3306.pl:797:4	s3306_c_13/4	is_before	is_before(Workday,Stop_enrollment)
+section3306.pl:806:4	s3306_c_13/4	is_before	is_before(Workday,Stop_attendance)
+section3306.pl:826:2	s3306_c_21/4	is_before	is_before(Start_incarceration,Workday)
+section3306.pl:833:4	s3306_c_21/4	is_before	is_before(Workday,End_incarceration)
+section63.pl:10:12	s63/3	max	max(Taxable_income_tmp,0)
+section63.pl:22:12	s63_a/5	max	max(Taxable_income_tmp,0)
+section63.pl:33:12	s63_b/4	max	max(Taxable_income_tmp,0)
+section63.pl:69:22	s63_c_1_A/3	min	min(Basic_amount,Max_amount)
+section63.pl:164:14	s63_c_5/5	max	max(Amount1,Amount2)
+section63.pl:195:4	s63_c_6_A/4	is_before	is_before(First_day_year,Start)
+section63.pl:196:4	s63_c_6_A/4	is_before	is_before(Start,Last_day_year)
+section63.pl:210:13	s63_c_6_B/2	is_before	is_before(Start_nra,Last_day_year)
+section63.pl:219:13	s63_c_6_B/2	is_before	is_before(First_day_year,End_nra)
+section63.pl:235:13	s63_c_6_D/2	is_before	is_before(Start_trust,Last_day_year)
+section63.pl:244:13	s63_c_6_D/2	is_before	is_before(First_day_year,End_trust)
+section63.pl:258:9	s63_c_7_i/2	>	Taxy>2017
+section63.pl:259:9	s63_c_7_i/2	<	Taxy<2026
+section63.pl:264:9	s63_c_7_ii/2	>	Taxy>2017
+section63.pl:265:9	s63_c_7_ii/2	<	Taxy<2026
+section63.pl:281:4	s63_d/4	is_before	is_before(First,Start)
+section63.pl:282:4	s63_d/4	is_before	is_before(Start,Last)
+section63.pl:288:3	s63_d/4	member	member((Amount,_),Amount_deduction)
+section63.pl:292:3	s63_d/4	>	L>0
+section63.pl:296:3	s63_d/4	member	member((_,Deduction),Amount_deduction)
+section63.pl:337:21	s63_f_1_A/2	>=	Time_since_birth>=Sixtyfive_years
+section63.pl:350:21	s63_f_1_B/3	>=	Time_since_birth>=Sixtyfive_years
+section63.pl:367:5	s63_f_2_A/2	is_before	is_before(Start_time,Last_day_year)
+section63.pl:376:5	s63_f_2_B/3	is_before	is_before(Start_time,Last_day_year)
+section68.pl:25:8	s68_a/6	>	Agi>Aa
+section68.pl:28:11	s68_a/6	min	min(Reduction1,Reduction2)
+section68.pl:111:5	s68_f/1	between	between(2018,2025,Taxy)
+section7703.pl:7:10	s7703/4	\==	Taxp \== Spouse
+section7703.pl:27:6	s7703_a_1/5	\==	Taxp\==Spouse
+section7703.pl:31:28	s7703_a_1/5	=	Start_marriage = First_day_year
+section7703.pl:37:5	s7703_a_1/5	is_before	is_before(Start_marriage,Last_day_year)
+section7703.pl:43:4	s7703_a_1/5	is_before	is_before(First_day_year,S13)
+section7703.pl:44:4	s7703_a_1/5	is_before	is_before(S13,Last_day_year)
+section7703.pl:47:4	s7703_a_1/5	is_before	is_before(Start_marriage,S13)
+section7703.pl:54:6	s7703_a_1/5	is_before	is_before(S13,End_time)
+section7703.pl:70:7	s7703_a_1/5	is_before	is_before(First_day_next_year,End_time)
+section7703.pl:78:6	s7703_a_1/5	is_before	is_before(First_day_next_year,End_time)
+section7703.pl:89:9	s7703_a_2/5	\==	Taxp\==Spouse
+section7703.pl:98:2	s7703_a_2/5	is_before	is_before(Divorce_time,Last_day_year)
+section7703.pl:126:5	s7703_b_1/4	latest	latest([Start_time,First_day_year],Start)
+section7703.pl:133:5	s7703_b_1/4	earliest	earliest([End_time,Last_day_year],End)
+section7703.pl:138:11	s7703_b_1/4	>=	Duration >= Half_year_duration
+section7703.pl:158:8	s7703_b_2/4	==	Taxy==Taxy_payment_int
+section7703.pl:176:8	s7703_b_2/4	==	Taxy==Taxy_payment_int
+section7703.pl:182:6	s7703_b_2/4	>	Cost>0
+section7703.pl:184:7	s7703_b_2/4	>=	Ratio>=rational(0.5)
+section7703.pl:192:5	s7703_b_3_is_member_of_household/3	is_before	is_before(Time_start,Day)
+section7703.pl:199:4	s7703_b_3_is_member_of_household/3	is_before	is_before(Day,Time_end)
+section7703.pl:208:13	s7703_b_3/4	between	between(2,185,Day_offset)
+section7703.pl:216:13	s7703_b_3/4	==	Num_days==0
+utils.pl:14:11	is_before/2	=<	Stamp1=<Stamp2
+utils.pl:30:9	latest/2	latest	latest(Days,Day,Output)
+utils.pl:34:9	latest/2	latest	latest(Days,Output)
+utils.pl:44:17	latest/3	is_before	is_before(Day,Latest)
+utils.pl:45:17	latest/3	latest	latest(Days,Latest,Output)
+utils.pl:48:20	latest/3	is_before	is_before(Day,Latest)
+utils.pl:49:17	latest/3	latest	latest(Days,Day,Output)
+utils.pl:55:9	latest/3	latest	latest(Days,Latest,Output)
+utils.pl:64:9	earliest/2	earliest	earliest(Days,Day,Output)
+utils.pl:68:9	earliest/2	earliest	earliest(Days,Output)
+utils.pl:78:17	earliest/3	is_before	is_before(Earliest,Day)
+utils.pl:79:17	earliest/3	earliest	earliest(Days,Earliest,Output)
+utils.pl:82:20	earliest/3	is_before	is_before(Earliest,Day)
+utils.pl:83:17	earliest/3	earliest	earliest(Days,Day,Output)
+utils.pl:89:9	earliest/3	earliest	earliest(Days,Earliest,Output)
+utils.pl:117:7	is_child_of/4	\==	X \== Y
+utils.pl:144:7	is_sibling_of/4	\==	X \== Y
+utils.pl:173:7	is_stepsibling_of/4	\==	X \== Y
+utils.pl:180:5	is_stepsibling_of/4	latest	latest([Day_start_x,Day_start_y,Start_time], Day_start)
+utils.pl:187:5	is_stepsibling_of/4	earliest	earliest([Day_end_x,Day_end_y,End_time],Day_end)
+utils.pl:198:7	is_sibling_in_law_of_aux/4	\==	X \== Y
+utils.pl:205:5	is_sibling_in_law_of_aux/4	latest	latest([Start_time,Day_start_y],Day_start)
+utils.pl:212:5	is_sibling_in_law_of_aux/4	earliest	earliest([End_time,Day_end_y],Day_end)
+utils.pl:219:7	is_child_in_law_of/4	\==	X \== Y
+utils.pl:226:5	is_child_in_law_of/4	latest	latest([Start_time,Day_start_y],Day_start)
+utils.pl:233:5	is_child_in_law_of/4	earliest	earliest([End_time,Day_end_y],Day_end)
+utils.pl:240:7	is_parent_in_law_of/4	\==	X \== Y
+utils.pl:247:5	is_parent_in_law_of/4	latest	latest([Start_time,Day_start_y],Day_start)
+utils.pl:254:5	is_parent_in_law_of/4	earliest	earliest([End_time,Day_end_y],Day_end)
+utils.pl:262:5	is_stepparent_of/4	latest	latest([Start_time,Day_start_y],Day_start)
+utils.pl:263:7	is_stepparent_of/4	\==	X \== Y
+utils.pl:270:5	is_stepparent_of/4	earliest	earliest([End_time,Day_end_y],Day_end)
+utils.pl:311:13	gross_income_individual/3	is_before	is_before(First_day_year,Start_time)
+utils.pl:312:13	gross_income_individual/3	is_before	is_before(Start_time,Last_day_year)
+utils.pl:323:13	gross_income_individual/3	is_before	is_before(First_day_year,Start_time)
+utils.pl:324:13	gross_income_individual/3	is_before	is_before(Start_time,Last_day_year)

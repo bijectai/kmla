@@ -1,0 +1,43 @@
+section151.pl:34:5	s151_individual/5	findall	findall( (Person,Exemption), s151_b(Taxp,Person,Exemption,Taxy), List_b )
+section151.pl:41:5	s151_individual/5	findall	findall( (Person,Exemption), s151_c(Taxp,Person,Exemption,Taxy), List_c )
+section151.pl:48:5	s151_individual/5	findall	findall( Person, member((Person,_),List_all_exemptions), Person_list )
+section151.pl:53:5	s151_individual/5	findall	findall( Exemption, member((_,Exemption),List_all_exemptions), Exemptions_list )
+section3301.pl:13:5	total_wages_employer/6	findall	findall( (Individual,Wages,Service), ( s3306_b(Wages,Remuneration,Service,Employer,Individual,Employer,_,_), start_(Remuneration,Remuneration_time), is_before(S
+section3301.pl:23:5	total_wages_employer/6	findall	findall( Individual, member((Individual,_,_),Individuals_x_wages), Individual_list )
+section3301.pl:29:5	total_wages_employer/6	findall	findall( (Individual,Total_wage), ( member(Individual, Individual_set), findall( Wage, member((Individual,Wage,_),Individuals_x_wages), Individual_wages ), sum_
+section3301.pl:33:13	total_wages_employer/6	findall	findall( Wage, member((Individual,Wage,_),Individuals_x_wages), Individual_wages )
+section3301.pl:43:5	total_wages_employer/6	findall	findall( Wage, ( member(Individual,Individual_set), member((Individual,Wage),Individuals_x_capped_wages) ), Capped_wages )
+section3301.pl:52:5	total_wages_employer/6	findall	findall( Service, member((_,_,Service),Individuals_x_wages), Service_list )
+section3306.pl:28:2	s3306_a_1_A/3	findall	findall( Amount, ( s3306_a_1_is_wages(Employee, Caly, Remuneration, Amount); ( Pyear is Caly-1, s3306_a_1_is_wages(Employee, Pyear, Remuneration, Amount) ) ), W
+section3306.pl:54:2	s3306_a_1_B/4	findall	findall( (Stamp,Day,Individual), ( s3306_a_1_is_day_of_employment(Employer,Individual,Day), is_before(First_day_year1,Day), is_before(Day,Last_day_year), day_to
+section3306.pl:64:5	s3306_a_1_B/4	findall	findall( Stamp, member((Stamp,_,_),Stamp_day_individual), Emp_days )
+section3306.pl:72:5	s3306_a_1_B/4	findall	findall( Week, ( member(Stamp,Emp_days), format_time(atom(Week), "%W", Stamp) ), Weeks )
+section3306.pl:83:5	s3306_a_1_B/4	findall	findall( Day, member((_,Day,_),Stamp_day_individual), Workday )
+section3306.pl:88:5	s3306_a_1_B/4	findall	findall( Individual, member((_,_,Individual),Stamp_day_individual), Employee )
+section3306.pl:114:2	s3306_a_2_A/4	findall	findall( (Amount,Service_), ( s3306_a_2_is_wages(Employer, Caly, Epay, Amount, Service_); ( Pyear is Caly-1, s3306_a_2_is_wages(Employer, Pyear, Epay, Amount, S
+section3306.pl:125:5	s3306_a_2_A/4	findall	findall( Amount, member((Amount,_),Amount_service), Wageslist )
+section3306.pl:130:5	s3306_a_2_A/4	findall	findall( Service_, member((_,Service_),Amount_service), Service )
+section3306.pl:140:2	s3306_a_2_is_day_of_employment/4	findall	findall( (Employee,Service), ( s3306_c(Service,Person,Employee,Day,_), ( purpose_(Service,"agricultural labor"); type_(Service,"agricultural labor") ) ), Employ
+section3306.pl:151:5	s3306_a_2_is_day_of_employment/4	findall	findall( Employee, member((Employee,_),Employee_x_service), Employees )
+section3306.pl:156:5	s3306_a_2_is_day_of_employment/4	findall	findall( Labor, member((_,Labor),Employee_x_service), Agricultural_labor )
+section3306.pl:169:2	s3306_a_2_B/6	findall	findall( (Stamp,Day,Employees,Labor), ( s3306_c(_,Employer,_,Day,_), % narrow down the list of days s3306_a_2_is_day_of_employment(Employer,Employees,Labor,Day)
+section3306.pl:180:5	s3306_a_2_B/6	findall	findall( Stamp, member((Stamp,_,_,_),Stamp_day_employees_labor), Stamp_list )
+section3306.pl:188:5	s3306_a_2_B/6	findall	findall( Week, ( member(Stamp,Stamp_list), format_time(atom(Week), "%W", Stamp) ), Weeks )
+section3306.pl:199:5	s3306_a_2_B/6	findall	findall( Employees, member((_,_,Employees,_),Stamp_day_employees_labor), Employee )
+section3306.pl:204:5	s3306_a_2_B/6	findall	findall( Labor, member((_,_,_,Labor),Stamp_day_employees_labor), Service )
+section3306.pl:209:5	s3306_a_2_B/6	findall	findall( Day, member((_,Day,_,_),Stamp_day_employees_labor), Days_list )
+section3306.pl:237:2	s3306_a_3/4	findall	findall( (Amount,Service_), ( s3306_a_3_is_wages(Employer, Caly, Epay, Service_, Amount); ( Pyear is Caly-1, s3306_a_3_is_wages(Employer, Pyear, Epay, Service_,
+section3306.pl:248:5	s3306_a_3/4	findall	findall( Amount, member((Amount,_),Amount_service), Wages_list )
+section3306.pl:253:5	s3306_a_3/4	findall	findall( Service_, member((_,Service_),Amount_service), Service )
+section3306.pl:524:5	s3306_c_1_A_i/5	findall	findall( (Amount,Employee_,Service_), ( payment_(Payment), agent_(Payment,Employer), patient_(Payment,Employee_), service_(Service_), agent_(Service_,Employee_)
+section3306.pl:551:5	s3306_c_1_A_i/5	findall	findall( Amount, member((Amount,_,_),Amounts_employee_service), Amounts )
+section3306.pl:558:5	s3306_c_1_A_i/5	findall	findall( Individual, member((_,Individual,_),Amounts_employee_service), Employee )
+section3306.pl:563:5	s3306_c_1_A_i/5	findall	findall( Service_, member((_,_,Service_),Amounts_employee_service), Service )
+section63.pl:274:2	s63_d/4	findall	findall( (Amount,Deduction), ( deduction_(Deduction), agent_(Deduction,Taxp), amount_(Deduction,Amount), start_(Deduction,Start), is_before(First,Start), is_bef
+section63.pl:286:2	s63_d/4	findall	findall( Amount, member((Amount,_),Amount_deduction), Amounts )
+section63.pl:294:2	s63_d/4	findall	findall( Deduction, member((_,Deduction),Amount_deduction), Itemded )
+section7703.pl:143:5	s7703_b_2/4	findall	findall( Payment_amount, ( payment_(Payment), residence_(Residence), agent_(Payment,Taxp), patient_(Residence,Household), ( purpose_(Payment,Residence); purpose
+section7703.pl:162:2	s7703_b_2/4	findall	findall( Payment_amount, ( payment_(Payment), residence_(Residence), patient_(Residence,Household), ( purpose_(Payment,Residence); purpose_(Payment,Household) )
+section7703.pl:205:5	s7703_b_3/4	findall	findall( Day_offset, ( between(2,185,Day_offset), date_time_stamp(date(Taxy,7,Day_offset,0,0,0,0,-,-), Stamp), format_time(atom(Day), "%Y-%m-%d", Stamp), s7703_
+utils.pl:304:5	gross_income_individual/3	findall	findall( Amount, ( income_(Income), agent_(Income,Person), amount_(Income,Amount), start_(Income,Start_time), is_before(First_day_year,Start_time), is_before(St
+utils.pl:316:5	gross_income_individual/3	findall	findall( Amount, ( payment_(Payment), patient_(Payment,Person), amount_(Payment,Amount), start_(Payment,Start_time), is_before(First_day_year,Start_time), is_be

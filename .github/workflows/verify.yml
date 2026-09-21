@@ -1,0 +1,85 @@
+name: verify
+
+# Implements the CI half of docs/PLAN.md section 2: "human/HASHES.txt pins every
+# file. CI fails on any drift. Astra cannot merge a PR that touches human/."
+# Neither half was enforced anywhere before this workflow existed.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  phase0:
+    name: Phase 0 acceptance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # human/ is an owner-owned submodule; without this the manifest check
+          # has nothing to verify and would pass vacuously.
+          submodules: recursive
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Report whether the protected tree is present
+        run: |
+          if [ -d human ] && [ -n "$(ls -A human 2>/dev/null)" ]; then
+            echo "human/ present: $(find human -type f | wc -l) files"
+          else
+            echo "::warning::human/ is absent or empty. The manifest check cannot"
+            echo "::warning::verify anything. Configure the submodule (Checkpoint 0, item 5)."
+          fi
+
+      - name: Phase 0 acceptance checks
+        # The verifier treats a missing/empty protected manifest as a hard
+        # failure. Other unavailable local-runtime prerequisites remain visible
+        # here without making this workflow rebuild the separately pinned image.
+        run: bash scripts/verify_phase0.sh .
+
+      - name: Protected-artifact manifest
+        run: python3 -B scripts/human_manifest.py verify
+
+      - name: Verifier enforcement regressions
+        run: python3 -B scripts/test_verify_phase0.py
+
+  protect-human:
+    name: human/ is read-only to the assistant
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Refuse a pull request that modifies human/
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: |
+          set -euo pipefail
+          changed=$(git diff --name-only "$BASE" "$HEAD" -- human human/ || true)
+          if [ -z "$changed" ]; then
+            echo "No path under human/ is touched."
+            exit 0
+          fi
+          echo "This pull request modifies the protected tree:"
+          printf '  %s\n' $changed
+          # The owner updates the pinned submodule commit and the manifest; that
+          # is the one legitimate reason for human/ to change in a pull request.
+          case ",$LABELS," in
+            *,owner-human-update,*)
+              echo "Label 'owner-human-update' is present; allowing."
+              exit 0 ;;
+          esac
+          echo "::error::human/ is owner-owned and read-only to the assistant"
+          echo "::error::(docs/PLAN.md section 2, AGENTS.md). If this change is yours,"
+          echo "::error::add the 'owner-human-update' label to this pull request."
+          exit 1
