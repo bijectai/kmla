@@ -1,0 +1,483 @@
+{
+  "births": [],
+  "child_parent_edges": [
+    [
+      "alice",
+      "charlie"
+    ],
+    [
+      "unnamed_daughter",
+      "alice"
+    ]
+  ],
+  "clause_count": 68,
+  "domain": [
+    "\"2010-01-14\"",
+    "\"2014-01-01\"",
+    "\"2016-01-01\"",
+    "\"2016-11-23\"",
+    "\"2017-01-01\"",
+    "\"2017-12-31\"",
+    "\"make provisions for employees in case of retirement\"",
+    "\"make provisions in case of sickness\"",
+    "alice",
+    "alice_and_charlie",
+    "alice_employer",
+    "alice_house",
+    "alice_is_paid",
+    "alice_maintains_house",
+    "alice_marriage",
+    "alice_pays_bob",
+    "alice_pays_insurance",
+    "alice_pays_retirement",
+    "alice_residence",
+    "bob",
+    "charlie",
+    "charlie_retires",
+    "daughter_of_alice",
+    "daughter_residence",
+    "halt",
+    "health_insurance_fund",
+    "husband_death",
+    "init",
+    "itemized_deductions",
+    "prolog",
+    "retirement_fund",
+    "statutes",
+    "unnamed_daughter",
+    "unnamed_husband"
+  ],
+  "domain_count": 34,
+  "equal_birth_pairs": [],
+  "k_age_checks": [
+    {
+      "c3_success_years": [],
+      "dependent": "unnamed_daughter",
+      "dependent_birth_events": [],
+      "dependent_dates": [],
+      "descendant": true,
+      "proposed_condition": true,
+      "reasons": [],
+      "taxpayer": "alice",
+      "taxpayer_birth_events": [],
+      "taxpayer_dates": []
+    },
+    {
+      "c3_success_years": [],
+      "dependent": "alice",
+      "dependent_birth_events": [],
+      "dependent_dates": [],
+      "descendant": true,
+      "proposed_condition": true,
+      "reasons": [],
+      "taxpayer": "charlie",
+      "taxpayer_birth_events": [],
+      "taxpayer_dates": []
+    },
+    {
+      "c3_success_years": [],
+      "dependent": "unnamed_daughter",
+      "dependent_birth_events": [],
+      "dependent_dates": [],
+      "descendant": true,
+      "proposed_condition": true,
+      "reasons": [],
+      "taxpayer": "charlie",
+      "taxpayer_birth_events": [],
+      "taxpayer_dates": []
+    }
+  ],
+  "k_edges": [
+    [
+      "alice",
+      "unnamed_daughter"
+    ],
+    [
+      "charlie",
+      "alice"
+    ],
+    [
+      "charlie",
+      "unnamed_daughter"
+    ]
+  ],
+  "k_pairs_tested": 1156,
+  "loaded_clause_counts": [
+    {
+      "added": 15,
+      "after": 15,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 6,
+      "after": 6,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "beneficiary_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "daughter_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "death_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "deduction_"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "father_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "income_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "marriage_"
+    },
+    {
+      "added": 9,
+      "after": 9,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 1,
+      "before": 0,
+      "predicate": "payment_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 1,
+      "before": 0,
+      "predicate": "plan_"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "purpose_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 1,
+      "before": 0,
+      "predicate": "residence_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "retirement_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "service_"
+    },
+    {
+      "added": 12,
+      "after": 12,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "tax(alice,2017,90683)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 16,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "tax_case_20",
+  "population": "original",
+  "source_sha256": "53f8d255568d2b81e06b4d951ea00d1f5ca26c68edb7001d23e9d9251e2f38c5",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-900333400a194723b23b247f6225d564",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/tax_case_20.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 1.364465
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"2010-01-14\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2014-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2016-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2016-11-23\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2017-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2017-12-31\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"make provisions for employees in case of retirement\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"make provisions in case of sickness\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_and_charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_employer",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_house",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_is_paid",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_maintains_house",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_marriage",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_pays_bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_pays_insurance",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_pays_retirement",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_residence",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "charlie_retires",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "daughter_of_alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "daughter_residence",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "health_insurance_fund",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "husband_death",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "itemized_deductions",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "retirement_fund",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "unnamed_daughter",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "unnamed_husband",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

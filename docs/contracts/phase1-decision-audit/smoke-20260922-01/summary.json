@@ -1,0 +1,59 @@
+{
+  "original": {
+    "attempted": 2,
+    "ok": 0,
+    "unresolved": [
+      {
+        "id": "s3306_c_2_neg",
+        "status": "error"
+      },
+      {
+        "id": "s3306_c_2_pos",
+        "status": "error"
+      }
+    ],
+    "multiple_birth_events": [],
+    "multiple_birth_start_dates": [],
+    "equal_birth_pairs": [],
+    "equal_birth_k_related": [],
+    "k_self_edges": [],
+    "k_cycle_components": [],
+    "v4_cycle_components": [],
+    "earlier_a_components_hit": [],
+    "refined_a_edge_failures": [],
+    "refined_a_components_hit": []
+  },
+  "witness": {
+    "attempted": 2,
+    "ok": 2,
+    "unresolved": [],
+    "multiple_birth_events": [
+      "r5_multibirth_cycle"
+    ],
+    "multiple_birth_start_dates": [],
+    "equal_birth_pairs": [
+      "r5_sibling_cycle"
+    ],
+    "equal_birth_k_related": [
+      "r5_sibling_cycle"
+    ],
+    "k_self_edges": [],
+    "k_cycle_components": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "v4_cycle_components": [],
+    "earlier_a_components_hit": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "refined_a_edge_failures": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "refined_a_components_hit": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ]
+  }
+}

@@ -1,0 +1,2437 @@
+[
+  {
+    "births": [],
+    "child_parent_edges": [],
+    "clause_count": 17,
+    "domain": [
+      "\"2017-02-01\"",
+      "\"2017-09-02\"",
+      "\"domestic service\"",
+      "\"private home\"",
+      "alice",
+      "alice_employer",
+      "alice_pays",
+      "baltimore",
+      "bob",
+      "halt",
+      "init",
+      "maryland",
+      "prolog",
+      "s3306_b",
+      "statutes",
+      "usa"
+    ],
+    "domain_count": 16,
+    "equal_birth_pairs": [],
+    "k_age_checks": [],
+    "k_edges": [],
+    "k_pairs_tested": 256,
+    "loaded_clause_counts": [
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "amount_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "end_"
+      },
+      {
+        "added": 4,
+        "after": 4,
+        "arity": 2,
+        "before": 0,
+        "predicate": "location_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "payment_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "purpose_"
+      },
+      {
+        "added": 1,
+        "after": 2,
+        "arity": 8,
+        "before": 1,
+        "predicate": "s3306_b"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "service_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "skipped_directives": [
+      "[statutes/prolog/init]",
+      "\\+s3306_c_2(alice_employer,_G359,2017)",
+      "halt"
+    ],
+    "status": "ok",
+    "stipulated_c2_c3": [],
+    "unary_event_solutions": 2,
+    "witness_probes": [],
+    "id": "s3306_c_2_neg",
+    "population": "original",
+    "source_sha256": "20ac10863992b937b3aff70b79ac1c27fa101a555a45feeb21f01c4f0374097e",
+    "h44_offset": 891,
+    "stderr": "",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-43bb5844cc60400a97276a13e64a2fd6",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/birth_audit.pl",
+        "-g",
+        "birth_audit:main",
+        "--",
+        "/corpus/cases/s3306_c_2_neg.pl",
+        "891",
+        "original"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 0.496909
+    },
+    "birth_events_per_person": [
+      {
+        "person": "\"2017-02-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2017-09-02\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"domestic service\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"private home\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice_employer",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice_pays",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "baltimore",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "bob",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "halt",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "init",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "maryland",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "prolog",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "s3306_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "statutes",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "usa",
+        "events": [],
+        "count": 0
+      }
+    ],
+    "start_dates_per_birth_event": [],
+    "multiple_birth_events": [],
+    "multiple_birth_start_dates": [],
+    "k_self_edges": [],
+    "k_cycle_components": [],
+    "v4_cycle_components": [],
+    "equal_birth_k_related": [],
+    "earlier_a_components_hit": [],
+    "refined_a_edge_failures": [],
+    "refined_a_components_hit": []
+  },
+  {
+    "births": [],
+    "child_parent_edges": [],
+    "clause_count": 17,
+    "domain": [
+      "\"2017-02-01\"",
+      "\"2017-09-02\"",
+      "\"domestic service\"",
+      "\"private home\"",
+      "alice",
+      "alice_employer",
+      "alice_pays",
+      "baltimore",
+      "bob",
+      "halt",
+      "init",
+      "maryland",
+      "prolog",
+      "s3306_b",
+      "statutes",
+      "usa"
+    ],
+    "domain_count": 16,
+    "equal_birth_pairs": [],
+    "k_age_checks": [],
+    "k_edges": [],
+    "k_pairs_tested": 256,
+    "loaded_clause_counts": [
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "amount_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "end_"
+      },
+      {
+        "added": 4,
+        "after": 4,
+        "arity": 2,
+        "before": 0,
+        "predicate": "location_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "payment_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "purpose_"
+      },
+      {
+        "added": 1,
+        "after": 2,
+        "arity": 8,
+        "before": 1,
+        "predicate": "s3306_b"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "service_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "skipped_directives": [
+      "[statutes/prolog/init]",
+      "s3306_c_2(alice_employer,_G355,2017)",
+      "halt"
+    ],
+    "status": "ok",
+    "stipulated_c2_c3": [],
+    "unary_event_solutions": 2,
+    "witness_probes": [],
+    "id": "s3306_c_2_pos",
+    "population": "original",
+    "source_sha256": "1b912b348ef4481643a509a920bd6653522571dd9c1f29673d2ad2280c478d88",
+    "h44_offset": 873,
+    "stderr": "",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-f8a01c30cab34326b72ccf1168c6c70a",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/birth_audit.pl",
+        "-g",
+        "birth_audit:main",
+        "--",
+        "/corpus/cases/s3306_c_2_pos.pl",
+        "873",
+        "original"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 0.497716
+    },
+    "birth_events_per_person": [
+      {
+        "person": "\"2017-02-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2017-09-02\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"domestic service\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"private home\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice_employer",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "alice_pays",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "baltimore",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "bob",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "halt",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "init",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "maryland",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "prolog",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "s3306_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "statutes",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "usa",
+        "events": [],
+        "count": 0
+      }
+    ],
+    "start_dates_per_birth_event": [],
+    "multiple_birth_events": [],
+    "multiple_birth_start_dates": [],
+    "k_self_edges": [],
+    "k_cycle_components": [],
+    "v4_cycle_components": [],
+    "equal_birth_k_related": [],
+    "earlier_a_components_hit": [],
+    "refined_a_edge_failures": [],
+    "refined_a_components_hit": []
+  },
+  {
+    "births": [
+      {
+        "agents": [
+          "a"
+        ],
+        "event": "birth_a0",
+        "starts": [
+          "\"2000-01-01\""
+        ]
+      },
+      {
+        "agents": [
+          "b"
+        ],
+        "event": "birth_b1",
+        "starts": [
+          "\"2001-01-01\""
+        ]
+      },
+      {
+        "agents": [
+          "a"
+        ],
+        "event": "birth_a2",
+        "starts": [
+          "\"2002-01-01\""
+        ]
+      }
+    ],
+    "child_parent_edges": [],
+    "clause_count": 28,
+    "domain": [
+      "\"2000-01-01\"",
+      "\"2001-01-01\"",
+      "\"2002-01-01\"",
+      "\"2017-01-01\"",
+      "\"2018-01-01\"",
+      "'/corpus/statutes/prolog/init.pl'",
+      "a",
+      "b",
+      "birth_a0",
+      "birth_a2",
+      "birth_b1",
+      "brother_",
+      "home",
+      "marriage_a",
+      "marriage_b",
+      "residence_a",
+      "residence_b",
+      "sa",
+      "sb",
+      "sibling_ab"
+    ],
+    "domain_count": 20,
+    "equal_birth_pairs": [],
+    "k_age_checks": [
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "dependent": "b",
+        "dependent_birth_events": [
+          "birth_b1"
+        ],
+        "dependent_dates": [
+          "\"2001-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_birth_event_count_not_one",
+          "taxpayer_known_date_count_not_one"
+        ],
+        "taxpayer": "a",
+        "taxpayer_birth_events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\"",
+          "\"2002-01-01\""
+        ]
+      },
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "dependent": "a",
+        "dependent_birth_events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\"",
+          "\"2002-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "dependent_birth_event_count_not_one",
+          "dependent_known_date_count_not_one"
+        ],
+        "taxpayer": "b",
+        "taxpayer_birth_events": [
+          "birth_b1"
+        ],
+        "taxpayer_dates": [
+          "\"2001-01-01\""
+        ]
+      }
+    ],
+    "k_edges": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "a"
+      ]
+    ],
+    "k_pairs_tested": 400,
+    "loaded_clause_counts": [
+      {
+        "added": 10,
+        "after": 10,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 3,
+        "after": 3,
+        "arity": 1,
+        "before": 0,
+        "predicate": "birth_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "brother_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 1,
+        "before": 0,
+        "predicate": "marriage_"
+      },
+      {
+        "added": 3,
+        "after": 3,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 1,
+        "before": 0,
+        "predicate": "residence_"
+      },
+      {
+        "added": 7,
+        "after": 7,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "skipped_directives": [
+      "consult('/corpus/statutes/prolog/init.pl')",
+      "dynamic brother_/1"
+    ],
+    "status": "ok",
+    "stipulated_c2_c3": [],
+    "unary_event_solutions": 8,
+    "witness_probes": [
+      {
+        "inference_limit": 100000,
+        "name": "finite_marriage_prefix",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "age_a_b",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "age_b_a",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "s7703_a_100k",
+        "result": "inference_limit_exceeded"
+      },
+      {
+        "inference_limit": 1000000,
+        "name": "s7703_a_1m",
+        "result": "inference_limit_exceeded"
+      }
+    ],
+    "id": "r5_multibirth_cycle",
+    "population": "witness",
+    "source_sha256": "cd081118c9cab6df65d928ef15174c06fdbf112883d1716c90be4ebad57fbd3a",
+    "h44_offset": -1,
+    "stderr": "",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-935d6865bc4d4e9e99d5ee935709946e",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/birth_audit.pl",
+        "-g",
+        "birth_audit:main",
+        "--",
+        "/evidence/r5_multibirth_cycle.pl",
+        "-1",
+        "witness"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 0.919222
+    },
+    "birth_events_per_person": [
+      {
+        "person": "\"2000-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2001-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2002-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2017-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2018-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "'/corpus/statutes/prolog/init.pl'",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "a",
+        "events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "count": 2
+      },
+      {
+        "person": "b",
+        "events": [
+          "birth_b1"
+        ],
+        "count": 1
+      },
+      {
+        "person": "birth_a0",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "birth_a2",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "birth_b1",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "brother_",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "home",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "marriage_a",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "marriage_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "residence_a",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "residence_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sa",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sb",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sibling_ab",
+        "events": [],
+        "count": 0
+      }
+    ],
+    "start_dates_per_birth_event": [
+      {
+        "event": "birth_a0",
+        "dates": [
+          "\"2000-01-01\""
+        ],
+        "count": 1
+      },
+      {
+        "event": "birth_a2",
+        "dates": [
+          "\"2002-01-01\""
+        ],
+        "count": 1
+      },
+      {
+        "event": "birth_b1",
+        "dates": [
+          "\"2001-01-01\""
+        ],
+        "count": 1
+      }
+    ],
+    "multiple_birth_events": [
+      {
+        "person": "a",
+        "events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "count": 2
+      }
+    ],
+    "multiple_birth_start_dates": [],
+    "k_self_edges": [],
+    "k_cycle_components": [
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "v4_cycle_components": [],
+    "equal_birth_k_related": [],
+    "earlier_a_components_hit": [
+      "multiple_birth_events"
+    ],
+    "refined_a_edge_failures": [
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "dependent": "b",
+        "dependent_birth_events": [
+          "birth_b1"
+        ],
+        "dependent_dates": [
+          "\"2001-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_birth_event_count_not_one",
+          "taxpayer_known_date_count_not_one"
+        ],
+        "taxpayer": "a",
+        "taxpayer_birth_events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\"",
+          "\"2002-01-01\""
+        ]
+      },
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "dependent": "a",
+        "dependent_birth_events": [
+          "birth_a0",
+          "birth_a2"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\"",
+          "\"2002-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "dependent_birth_event_count_not_one",
+          "dependent_known_date_count_not_one"
+        ],
+        "taxpayer": "b",
+        "taxpayer_birth_events": [
+          "birth_b1"
+        ],
+        "taxpayer_dates": [
+          "\"2001-01-01\""
+        ]
+      }
+    ],
+    "refined_a_components_hit": [
+      "multiple_birth_events",
+      "refined_a_edge_failures"
+    ]
+  },
+  {
+    "births": [
+      {
+        "agents": [
+          "a"
+        ],
+        "event": "birth_a",
+        "starts": [
+          "\"2000-01-01\""
+        ]
+      },
+      {
+        "agents": [
+          "b"
+        ],
+        "event": "birth_b",
+        "starts": [
+          "\"2000-01-01\""
+        ]
+      }
+    ],
+    "child_parent_edges": [],
+    "clause_count": 25,
+    "domain": [
+      "\"2000-01-01\"",
+      "\"2017-01-01\"",
+      "\"2018-01-01\"",
+      "'/corpus/statutes/prolog/init.pl'",
+      "a",
+      "b",
+      "birth_a",
+      "birth_b",
+      "brother_",
+      "home",
+      "marriage_a",
+      "marriage_b",
+      "residence_a",
+      "residence_b",
+      "sa",
+      "sb",
+      "sibling_ab"
+    ],
+    "domain_count": 17,
+    "equal_birth_pairs": [
+      {
+        "date": "\"2000-01-01\"",
+        "k_left_to_right": true,
+        "k_right_to_left": true,
+        "left": "a",
+        "right": "b",
+        "sibling": true,
+        "stepsibling": false
+      }
+    ],
+    "k_age_checks": [
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "dependent": "b",
+        "dependent_birth_events": [
+          "birth_b"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_date_not_strictly_before_dependent"
+        ],
+        "taxpayer": "a",
+        "taxpayer_birth_events": [
+          "birth_a"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\""
+        ]
+      },
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "dependent": "a",
+        "dependent_birth_events": [
+          "birth_a"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_date_not_strictly_before_dependent"
+        ],
+        "taxpayer": "b",
+        "taxpayer_birth_events": [
+          "birth_b"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\""
+        ]
+      }
+    ],
+    "k_edges": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "a"
+      ]
+    ],
+    "k_pairs_tested": 289,
+    "loaded_clause_counts": [
+      {
+        "added": 9,
+        "after": 9,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 1,
+        "before": 0,
+        "predicate": "birth_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "brother_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 1,
+        "before": 0,
+        "predicate": "marriage_"
+      },
+      {
+        "added": 3,
+        "after": 3,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 1,
+        "before": 0,
+        "predicate": "residence_"
+      },
+      {
+        "added": 6,
+        "after": 6,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "skipped_directives": [
+      "consult('/corpus/statutes/prolog/init.pl')",
+      "dynamic brother_/1"
+    ],
+    "status": "ok",
+    "stipulated_c2_c3": [],
+    "unary_event_solutions": 7,
+    "witness_probes": [
+      {
+        "inference_limit": 100000,
+        "name": "finite_marriage_prefix",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "age_a_b",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "age_b_a",
+        "result": "success"
+      },
+      {
+        "inference_limit": 100000,
+        "name": "s7703_a_100k",
+        "result": "inference_limit_exceeded"
+      },
+      {
+        "inference_limit": 1000000,
+        "name": "s7703_a_1m",
+        "result": "inference_limit_exceeded"
+      }
+    ],
+    "id": "r5_sibling_cycle",
+    "population": "witness",
+    "source_sha256": "e84c32197005521401a0b65092be8b6ecb2e26644994b1d5a5184f9038ea885e",
+    "h44_offset": -1,
+    "stderr": "",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-dae78dad96be41b9a568890c27f4c572",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/birth_audit.pl",
+        "-g",
+        "birth_audit:main",
+        "--",
+        "/evidence/r5_sibling_cycle.pl",
+        "-1",
+        "witness"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 0.867413
+    },
+    "birth_events_per_person": [
+      {
+        "person": "\"2000-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2017-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "\"2018-01-01\"",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "'/corpus/statutes/prolog/init.pl'",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "a",
+        "events": [
+          "birth_a"
+        ],
+        "count": 1
+      },
+      {
+        "person": "b",
+        "events": [
+          "birth_b"
+        ],
+        "count": 1
+      },
+      {
+        "person": "birth_a",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "birth_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "brother_",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "home",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "marriage_a",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "marriage_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "residence_a",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "residence_b",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sa",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sb",
+        "events": [],
+        "count": 0
+      },
+      {
+        "person": "sibling_ab",
+        "events": [],
+        "count": 0
+      }
+    ],
+    "start_dates_per_birth_event": [
+      {
+        "event": "birth_a",
+        "dates": [
+          "\"2000-01-01\""
+        ],
+        "count": 1
+      },
+      {
+        "event": "birth_b",
+        "dates": [
+          "\"2000-01-01\""
+        ],
+        "count": 1
+      }
+    ],
+    "multiple_birth_events": [],
+    "multiple_birth_start_dates": [],
+    "k_self_edges": [],
+    "k_cycle_components": [
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "v4_cycle_components": [],
+    "equal_birth_k_related": [
+      {
+        "date": "\"2000-01-01\"",
+        "k_left_to_right": true,
+        "k_right_to_left": true,
+        "left": "a",
+        "right": "b",
+        "sibling": true,
+        "stepsibling": false
+      }
+    ],
+    "earlier_a_components_hit": [
+      "equal_birth_k_related"
+    ],
+    "refined_a_edge_failures": [
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "dependent": "b",
+        "dependent_birth_events": [
+          "birth_b"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_date_not_strictly_before_dependent"
+        ],
+        "taxpayer": "a",
+        "taxpayer_birth_events": [
+          "birth_a"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\""
+        ]
+      },
+      {
+        "c3_success_years": [
+          1900,
+          1901,
+          1902,
+          1903,
+          1904,
+          1905,
+          1906,
+          1907,
+          1908,
+          1909,
+          1910,
+          1911,
+          1912,
+          1913,
+          1914,
+          1915,
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938,
+          1939,
+          1940,
+          1941,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947,
+          1948,
+          1949,
+          1950,
+          1951,
+          1952,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "dependent": "a",
+        "dependent_birth_events": [
+          "birth_a"
+        ],
+        "dependent_dates": [
+          "\"2000-01-01\""
+        ],
+        "descendant": false,
+        "proposed_condition": false,
+        "reasons": [
+          "taxpayer_date_not_strictly_before_dependent"
+        ],
+        "taxpayer": "b",
+        "taxpayer_birth_events": [
+          "birth_b"
+        ],
+        "taxpayer_dates": [
+          "\"2000-01-01\""
+        ]
+      }
+    ],
+    "refined_a_components_hit": [
+      "refined_a_edge_failures"
+    ]
+  }
+]

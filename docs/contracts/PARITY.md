@@ -55,10 +55,15 @@ Every input record contains:
 }
 ```
 
-The empty payload above is illustrative, not a valid household. The approved
-`Interface/` and `DECISIONS.md` will define section payloads and query encodings.
-That definition remains pending; the independent meter only needs the input
-identity and section to determine the expected output population.
+The empty payload above is illustrative, not a valid household.
+Payload and result semantics are supplied by the approved
+`human/DECISIONS.md` H1–H4, G4, D1/V9, M1, H6.1, H6.2 and H6.5 and the
+corresponding `Interface/` declarations, including the G1 ordering and A3
+wildcard-identity rules those sections reference. Their concrete JSON spelling
+is a builder-owned lossless codec of that approved shape, fixed once as a
+byte-level specification in `Interface/` and implemented independently by both
+isolated lanes; the independent meter needs only input identity and section to
+determine the expected output population.
 
 Each engine output contains exactly the following fields:
 
@@ -79,6 +84,38 @@ representation approved in `DECISIONS.md`, not an implicitly rounded JSON float.
 No epoch, rounding, answer projection, result ordering, or missing-fact behavior
 is selected by this contract.
 
+### Record and byte handling (P-WIRE, accepted 2026-09-22)
+
+One record represents `(Household, target, bound-argument tuple)` in the already
+approved H6.5 call mode, with the year identified wherever the target requires
+one. Bind identifiers to that signed table in `Interface/` before producer use;
+this does not create a new mode or assume Phase 2 target declarations exist.
+Mint IDs under the grammar and ASCII-case-fold uniqueness rule above. Retain
+the ID-to-target/mode/arguments and case-to-record(s) mappings. The tuple is not
+concatenated into a filename. One original case may use several records, and
+records may be shared by originals; H6.3 case success and its two extra-conjunct
+cases are unchanged.
+
+Report `record_count`, `distinct_household_count` and `original_case_count`
+separately in run summaries, frozen-corpus manifests and coverage reports.
+The generated ≥10k-input threshold counts records, not necessarily distinct
+households; no new ≥10k-household threshold is imposed. Household identity is
+the complete H1 value, preserving G4 tags, fact/stipulation order, multiplicity
+and A3 wildcard identity. Case coverage still accounts for all 376 originals.
+The mutation kill-rate denominator remains admitted whole-section mutants;
+one refuting record can kill a mutant. The ≥20-hits-per-arm requirement is
+unchanged.
+
+The shared byte contract is `Interface/WIRE.md`: compact UTF-8 JSON without
+optional whitespace or Unicode normalization; quote/backslash escaping;
+short `\b`, `\f`, `\n`, `\r`, `\t`; lowercase `\u00xx` for other controls;
+all other Unicode raw, including astral code points. Integers are exact decimal
+integers, never floats. H6.2 tags, ISO days, solution tuples, encoded-string
+ordering and deduplication are preserved at the approved observation boundary
+only. Input field spelling and cross-language fixtures must be fixed in
+`Interface/` before either producer uses them; a field map must cite each
+field's governing signed section or this approved packaging choice.
+
 ## Comparison requirements
 
 - Use `--inputs` as the authority for all input IDs in the requested section.
@@ -93,8 +130,10 @@ is selected by this contract.
   Ignore only object-key order and JSON formatting. Do not coerce numbers,
   deduplicate answers, introduce tolerances, or interpret Prolog semantics.
 - Both engines must implement only approved canonicalization before emitting
-  outputs. Until the payload and result specifications are approved, producers
-  are blocked rather than guessing representations.
+  outputs. Producers may encode fields determined by those approved sections
+  using the shared lossless codec; producers remain blocked on any field those
+  sections do not determine and must obtain a recorded owner decision before
+  supplying it.
 - A compile error, interpreter failure, timeout, or serialization failure must
   not be serialized as an ordinary answer or silently removed from the input
   population. The harness reports it as an infrastructure failure; parity has

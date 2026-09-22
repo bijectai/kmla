@@ -1,0 +1,67 @@
+{
+  "original": {
+    "attempted": 376,
+    "ok": 376,
+    "unresolved": [],
+    "multiple_birth_events": [],
+    "multiple_birth_start_dates": [],
+    "equal_birth_pairs": [],
+    "equal_birth_k_related": [],
+    "k_self_edges": [],
+    "k_cycle_components": [
+      "s152_c_2_A_neg",
+      "s152_c_2_B_pos",
+      "s152_d_2_A_neg",
+      "s152_d_2_B_pos",
+      "s152_d_2_D_neg",
+      "s152_d_2_E_neg",
+      "s152_d_2_E_pos",
+      "s152_d_2_F_pos",
+      "s2_b_1_A_ii_pos",
+      "tax_case_11",
+      "tax_case_18",
+      "tax_case_53",
+      "tax_case_64",
+      "tax_case_70",
+      "tax_case_75",
+      "tax_case_85"
+    ],
+    "v4_cycle_components": [],
+    "earlier_a_components_hit": [],
+    "refined_a_edge_failures": [],
+    "refined_a_components_hit": []
+  },
+  "witness": {
+    "attempted": 2,
+    "ok": 2,
+    "unresolved": [],
+    "multiple_birth_events": [
+      "r5_multibirth_cycle"
+    ],
+    "multiple_birth_start_dates": [],
+    "equal_birth_pairs": [
+      "r5_sibling_cycle"
+    ],
+    "equal_birth_k_related": [
+      "r5_sibling_cycle"
+    ],
+    "k_self_edges": [],
+    "k_cycle_components": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "v4_cycle_components": [],
+    "earlier_a_components_hit": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "refined_a_edge_failures": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ],
+    "refined_a_components_hit": [
+      "r5_multibirth_cycle",
+      "r5_sibling_cycle"
+    ]
+  }
+}

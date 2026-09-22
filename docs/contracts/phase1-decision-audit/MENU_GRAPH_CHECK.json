@@ -1,0 +1,202 @@
+{
+  "draft_only": true,
+  "source_sha256": "d520d332f54e2736fe2f167c497779737e90bd28faf7f4708ec56aeb2cd26f93",
+  "originals": 376,
+  "a_excluded": [],
+  "K_and_c3_graphs_checked": 75576,
+  "K_and_c3_cycles": [],
+  "B_limit": "E is a subgraph of K-and-c3; no separate full-corpus E enumeration claimed.",
+  "c_excluded": [
+    {
+      "id": "s152_c_2_A_neg",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "s152_c_2_B_pos",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_A_neg",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_B_pos",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_D_neg",
+      "cycles": [
+        [
+          "bob",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_E_neg",
+      "cycles": [
+        [
+          "alice",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_E_pos",
+      "cycles": [
+        [
+          "bob",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "s152_d_2_F_pos",
+      "cycles": [
+        [
+          "alice",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "s2_b_1_A_ii_pos",
+      "cycles": [
+        [
+          "bob",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_11",
+      "cycles": [
+        [
+          "alice",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_18",
+      "cycles": [
+        [
+          "bob",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_53",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_64",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_70",
+      "cycles": [
+        [
+          "alice",
+          "bob"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_75",
+      "cycles": [
+        [
+          "alice",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "tax_case_85",
+      "cycles": [
+        [
+          "alice",
+          "charlie"
+        ]
+      ]
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "r5_multibirth_cycle",
+      "A_failures": [
+        "multiple_birth_events",
+        "refined_a_edge_failures"
+      ],
+      "B_prefix_edges_2018": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "a"
+        ]
+      ],
+      "C_cycles": [
+        [
+          "a",
+          "b"
+        ]
+      ]
+    },
+    {
+      "id": "r5_sibling_cycle",
+      "A_failures": [
+        "refined_a_edge_failures"
+      ],
+      "B_prefix_edges_2018": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "a"
+        ]
+      ],
+      "C_cycles": [
+        [
+          "a",
+          "b"
+        ]
+      ]
+    }
+  ]
+}

@@ -2,6 +2,37 @@
 
 ## Current phase
 
+2026-09-22 (A and WIRE accepted; Checkpoint 1 unsigned): Dev selected refined
+Option A, explicitly requiring query-year coverage before an R5 proof claim and
+prohibiting generator-created multibirth persons, multi-date births and
+same-birthday eligible pairs. WIRE's two release spans and both handling
+proposals are installed in PARITY and Interface/WIRE.md. The record unit is
+distinct from household and original-case counts; all three must be reported.
+No mode, projection or observation canonicalization changed.
+
+Interface now includes V10 in both Valid and ValidStip, with real fact-based
+uniqueness/decrease checks and a required, still-unimplemented original K/c3
+universal-decrease decider. Its all-years scope is the accepted proposal, not a new
+strengthening. QueryTime supplies a dependent checked-year/Workday boundary,
+not a call-site coverage or R5 termination proof. The generator's future-domain
+contract is installed; no Phase 2 generator exists. The same-birthday and
+conservative all-years exclusions are stated limitations. Dev's protected
+H5/R5/R8/R9 installation text is staged in
+`docs/contracts/DECISIONS_R5_A_AMENDMENT.md`; human and its manifest are untouched.
+Owner installation/re-pin remains due, as do production eligibility, operational
+query/stipulation coverage and kernel adequacy. No Checkpoint 1 pass is inferred.
+
+Verification: 97 shared-interface guards, 19 query-time guards (including all
+73,414 admitted days), 3 observation tests and 10 verifier regressions pass.
+The protected manifest still verifies. The extra pinned stipulated-time audit
+completed all 376 cases with no unresolved execution but deliberately exits 1
+for two literal out-of-range year slots; see the finding below and
+`docs/contracts/A_WIRE_INSTALLATION_2026-09-22.md`. No clean coverage pass is
+claimed from that audit.
+
+The dated entries below are historical snapshots, superseded by this acceptance
+and the current obligations under Blockers. Checkpoint 0 remains signed off.
+
 2026-09-21 (Greptile remedies installed): Dev authorized sensible patches for
 two reproduced enforcement defects. `Interface/Household.lean` now escapes all
 JSON control characters; all three black-box observation tests pass. A missing
@@ -212,7 +243,61 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### R5 remedy remains open; A-009 proposal withdrawn (A-010)
+### Q-014 representation hold — resolved by A-014, equivalence proof still owed
+
+The initial required `r5EligiblePairs` field promises a finite ground-pair list
+without carrying the approved universe/query arguments. Well-formed wildcard
+c2/c3 stipulations can make infinitely many ground Term pairs eligible, although
+A can still reject them by a finite violating witness. Thus an all-ground-pairs
+enumeration contract is not a sound implementation requirement. A-014 classifies
+this as a builder representation defect, not a new owner decision. It is now
+replaced by required `r5AllEligibleDecrease : Household → Year → Bool`, with
+no default and an explicit iff with the universal original K/c3 decrease rule.
+Both directions are required: false-on-unknown may not silently narrow A.
+The semantic equivalence still needs a production proof.
+Do not fix this by restricting persons to household literals, omitting wildcard
+solutions, or treating a finite test list as production completeness evidence.
+No A domain change or R5 proof has been implemented or claimed.
+
+### A-012 review hold — resolved by A-013; coverage implementation still owed
+
+Dev accepted A and WIRE on 2026-09-22, expressly without Checkpoint 1 sign-off.
+The shared-interface installation review A-012 temporarily paused R5 edits.
+A-013 withdraws its two false premises: the accepted A draft already requires
+all 201 years, and the retained audit already enumerated them
+(`birth_audit.pl:103`, 75,576 original K-and-c3 graphs). Stipulation coverage and
+constructor-error handling are existing implementation obligations, not new
+owner choices. No stronger domain or new audit claim is inferred. Actual
+wrapper/mode coverage remains unimplemented; no R5/R8 theorem is claimed.
+Uncovered time is reported, never a reference answer. A-012 stays immutable.
+A-013 requests measurement of original stipulated time arguments; escalate only
+if an actual uncovered original is found, with its ID and source-mode evidence.
+
+Measured result: 376/376 executions complete; `s151_d_3_B_neg` and `_pos` each
+contain `s68_b(alice,2015,250000)`, with 250000 in the canonical year position.
+The actual case query binds Taxy to 2015 and section151:166–168 forwards it
+unchanged, so this appended head cannot match that call. Preserve both cases
+and the literal; do not impose a blanket stipulation-year filter. Also retain
+150 wildcard time slots rather than calling them bounded. This census does not
+establish an uncovered operational R5 call or discharge complete mode coverage.
+Full evidence/limitations are in the installation report; a real uncovered
+admitted call still halts for owner review. A-014 closes the conditional owner
+escalation for these two literals specifically; P-INTENT requires preserving
+their apparent argument transposition as a source finding.
+
+### Current R5/producer prerequisites — implementation and protected installation
+
+Dev's A/WIRE choices are settled. Before reference use: install/re-pin the
+protected amendment, implement/prove the exact original K/c3 universal decider and real
+V7/V8, integrate checked operational time at every wrapper/mode, prove universe
+coverage and R5/R8 fuel adequacy, and fix the remaining lossless input codec with
+shared fixtures. No always-true/empty production guard or default year is allowed.
+The staged amendment and HANDOFF enumerate the obligations. Missing signatures
+or proofs are unfinished work, not another request to select A/WIRE. Gen's
+output-domain contract is not a claim that a generator exists. Checkpoint 1
+requires all 376 round trips/parity comparisons and Dev's separate sign-off.
+
+### Historical R5 remedy hold — resolved by refined A; A-009 remains withdrawn
 
 Fable confirmed the original R5 flaw and proposed a V10 excluding equal birth
 days among related distinct persons. Orchestrator review found that its proof
@@ -240,7 +325,7 @@ does not rely on that assertion: selections differ between recursive calls,
 and all selected dates in the witness meet the under-25 check. The retained
 `age_both_directions` probe establishes both directions without that assumption.
 
-### Phase 1.2 §7703 recursive closure — R5 reproduced finding (Q-009)
+### Historical Phase 1.2 §7703 recursive closure — R5 finding (Q-009)
 
 The fresh oracle lane found that R5's child-descent termination argument does
 not cover the sibling branch in `section152.pl:178–186`. Sibling symmetry
@@ -265,7 +350,7 @@ proposed remedy after the second diagnostic. The owner-approved termination/
 domain decision is still required. No revised design or shared Interface
 edit is made by this lane. Checkpoint 0 authorization remains in force.
 
-### Phase 1 producer-release escalation (A-008)
+### Historical producer-release escalation (A-008) — WIRE now accepted
 
 Fable classifies JSON control-character escaping as builder-owned restoration,
 not a semantic change. Dev authorized the correction; complete U+0000–U+001F
@@ -544,9 +629,10 @@ No commits, pushes, or PRs were created in this session.
 
 ## Resume condition
 
-Checkpoint 0 remains explicitly signed off. Phase 1 implementation is paused
-for Dev's decision on P-WIRE and Q-009/Q-010's recursion finding. Resume only
-under the approved resolution, with separate oracle and serializer/generator
-contexts and the read-only execution boundary. Checkpoint 1 requires zero parity mismatches
-on all 376 cases, an unchanged meter hash, owner hazard/mismatch review, and
-explicit owner sign-off before Phase 2.
+Checkpoint 0 remains explicitly signed off. A/WIRE are accepted, not open
+choices. Continue only within their installed shared contracts and the remaining
+implementation obligations above, with separate oracle/serializer contexts and
+read-only human. Protected amendment installation/re-pin is Dev's. Do not claim
+R5 termination before actual query/stipulation coverage and adequacy proofs.
+Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
+meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.

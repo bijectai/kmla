@@ -1,0 +1,1 @@
+{"clauses": [], "loaded_clause_counts": [ {"added":1, "after":1, "arity":2, "before":0, "predicate":"agent_"},  {"added":1, "after":1, "arity":1, "before":0, "predicate":"brother_"},  {"added":1, "after":1, "arity":2, "before":0, "predicate":"patient_"},  {"added":1, "after":1, "arity":2, "before":0, "predicate":"start_"} ], "status":"ok"}

@@ -1,0 +1,257 @@
+{
+  "births": [],
+  "child_parent_edges": [
+    [
+      "bob",
+      "charlie"
+    ],
+    [
+      "bob",
+      "dorothy"
+    ]
+  ],
+  "clause_count": 12,
+  "domain": [
+    "\"1995-04-15\"",
+    "\"2018-08-08\"",
+    "alice",
+    "alice_and_charlie",
+    "bob",
+    "charlie",
+    "charlie_and_bob",
+    "dorothy",
+    "dorothy_and_bob",
+    "halt",
+    "init",
+    "prolog",
+    "statutes"
+  ],
+  "domain_count": 13,
+  "equal_birth_pairs": [],
+  "k_age_checks": [
+    {
+      "c3_success_years": [],
+      "dependent": "bob",
+      "dependent_birth_events": [],
+      "dependent_dates": [],
+      "descendant": true,
+      "proposed_condition": true,
+      "reasons": [],
+      "taxpayer": "charlie",
+      "taxpayer_birth_events": [],
+      "taxpayer_dates": []
+    },
+    {
+      "c3_success_years": [],
+      "dependent": "bob",
+      "dependent_birth_events": [],
+      "dependent_dates": [],
+      "descendant": true,
+      "proposed_condition": true,
+      "reasons": [],
+      "taxpayer": "dorothy",
+      "taxpayer_birth_events": [],
+      "taxpayer_dates": []
+    }
+  ],
+  "k_edges": [
+    [
+      "charlie",
+      "bob"
+    ],
+    [
+      "dorothy",
+      "bob"
+    ]
+  ],
+  "k_pairs_tested": 169,
+  "loaded_clause_counts": [
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "father_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "marriage_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "mother_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "s152_d_2_D(alice,bob,_G275,_G276),var(_G276),first_day_year(2019,_G287),is_before(_G275,_G287)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 3,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "s152_d_2_D_pos",
+  "population": "original",
+  "source_sha256": "e85166379b7c5d7207bc92a032e136408c1b938b1b97780994c8980d1a31c40f",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-b96b02b28d9b46d4b2615dfea6227fd9",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/s152_d_2_D_pos.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 1.035147
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"1995-04-15\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2018-08-08\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_and_charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "charlie_and_bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "dorothy",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "dorothy_and_bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

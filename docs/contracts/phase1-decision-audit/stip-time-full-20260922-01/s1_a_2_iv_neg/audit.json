@@ -1,0 +1,121 @@
+{
+  "clauses": [
+    {
+      "kind": "fact",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "alice"
+            },
+            {
+              "kind": "wild",
+              "value": 0
+            },
+            {
+              "kind": "int",
+              "value": 2017
+            }
+          ],
+          "arity": 3,
+          "predicate": "s2_a"
+        }
+      ],
+      "source": "s2_a(alice,A,2017)"
+    },
+    {
+      "kind": "fact",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "alice"
+            },
+            {
+              "kind": "int",
+              "value": 2017
+            },
+            {
+              "kind": "int",
+              "value": 615572
+            }
+          ],
+          "arity": 3,
+          "predicate": "s63"
+        }
+      ],
+      "source": "s63(alice,2017,615572)"
+    }
+  ],
+  "loaded_clause_counts": [
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 3,
+      "before": 1,
+      "predicate": "s2_a"
+    },
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 3,
+      "before": 1,
+      "predicate": "s63"
+    }
+  ],
+  "status": "ok",
+  "id": "s1_a_2_iv_neg",
+  "source_sha256": "4bafac72c30521ec8669dc5d5ec631a89cc32f7ea4fcf217aa104fc0ecd7e6a3",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-b589fb4badd742599c273a8d0a9304f0",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/stip_time_audit.pl",
+      "-g",
+      "stip_time_audit:main",
+      "--",
+      "/corpus/cases/s1_a_2_iv_neg.pl",
+      "-1"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 1.012082
+  },
+  "stderr": ""
+}

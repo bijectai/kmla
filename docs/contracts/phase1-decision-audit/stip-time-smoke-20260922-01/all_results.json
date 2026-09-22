@@ -1,0 +1,613 @@
+[
+  {
+    "clauses": [],
+    "loaded_clause_counts": [
+      {
+        "added": 3,
+        "after": 3,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "death_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "marriage_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "status": "ok",
+    "id": "s2_a_1_A_neg",
+    "source_sha256": "0108c04807b9a70529c4c9528980a40db62ee5d8926cc7dedffb0e0df5685b9e",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-7152dd22475a4fb6afcb74c4459bb32a",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/stip_time_audit.pl",
+        "-g",
+        "stip_time_audit:main",
+        "--",
+        "/corpus/cases/s2_a_1_A_neg.pl",
+        "-1"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 1.702558
+    },
+    "stderr": ""
+  },
+  {
+    "clauses": [
+      {
+        "kind": "rule",
+        "solutions": [
+          {
+            "args": [
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "int",
+                "value": 2015
+              }
+            ],
+            "arity": 2,
+            "predicate": "s3306_a"
+          },
+          {
+            "args": [
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "int",
+                "value": 2016
+              }
+            ],
+            "arity": 2,
+            "predicate": "s3306_a"
+          }
+        ],
+        "source": ":-(s3306_a(alice,A),between(2015,2016,A))"
+      },
+      {
+        "kind": "fact",
+        "solutions": [
+          {
+            "args": [
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "int",
+                "value": 453009
+              },
+              {
+                "kind": "wild",
+                "value": 0
+              },
+              {
+                "kind": "wild",
+                "value": 1
+              },
+              {
+                "kind": "str",
+                "value": "2015-01-01"
+              },
+              {
+                "kind": "str",
+                "value": "2015-12-31"
+              }
+            ],
+            "arity": 6,
+            "predicate": "total_wages_employer"
+          }
+        ],
+        "source": "total_wages_employer(alice,453009,A,B,\"2015-01-01\",\"2015-12-31\")"
+      },
+      {
+        "kind": "fact",
+        "solutions": [
+          {
+            "args": [
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "int",
+                "value": 443870
+              },
+              {
+                "kind": "wild",
+                "value": 0
+              },
+              {
+                "kind": "wild",
+                "value": 1
+              },
+              {
+                "kind": "str",
+                "value": "2016-01-01"
+              },
+              {
+                "kind": "str",
+                "value": "2016-12-31"
+              }
+            ],
+            "arity": 6,
+            "predicate": "total_wages_employer"
+          }
+        ],
+        "source": "total_wages_employer(alice,443870,A,B,\"2016-01-01\",\"2016-12-31\")"
+      }
+    ],
+    "loaded_clause_counts": [
+      {
+        "added": 1,
+        "after": 2,
+        "arity": 2,
+        "before": 1,
+        "predicate": "s3306_a"
+      },
+      {
+        "added": 2,
+        "after": 3,
+        "arity": 6,
+        "before": 1,
+        "predicate": "total_wages_employer"
+      }
+    ],
+    "status": "ok",
+    "id": "s3301_pos",
+    "source_sha256": "a48d808c0ef3e5f76dfd4886a093952c1eb09ea1d30fce15de3930c8fced8826",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-78fc758795cb4ebb9c94e66caf0cf196",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/stip_time_audit.pl",
+        "-g",
+        "stip_time_audit:main",
+        "--",
+        "/corpus/cases/s3301_pos.pl",
+        "-1"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 1.6798
+    },
+    "stderr": ""
+  },
+  {
+    "clauses": [
+      {
+        "kind": "fact",
+        "solutions": [
+          {
+            "args": [
+              {
+                "kind": "int",
+                "value": 3200
+              },
+              {
+                "kind": "atom",
+                "value": "alice_pays"
+              },
+              {
+                "kind": "atom",
+                "value": "alice_employer"
+              },
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "atom",
+                "value": "bob"
+              },
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "atom",
+                "value": "bob"
+              },
+              {
+                "kind": "wild",
+                "value": 0
+              }
+            ],
+            "arity": 8,
+            "predicate": "s3306_b"
+          }
+        ],
+        "source": "s3306_b(3200,alice_pays,alice_employer,alice,bob,alice,bob,A)"
+      }
+    ],
+    "loaded_clause_counts": [
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "amount_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "end_"
+      },
+      {
+        "added": 4,
+        "after": 4,
+        "arity": 2,
+        "before": 0,
+        "predicate": "location_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "payment_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "purpose_"
+      },
+      {
+        "added": 1,
+        "after": 2,
+        "arity": 8,
+        "before": 1,
+        "predicate": "s3306_b"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "service_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "status": "ok",
+    "id": "s3306_c_2_neg",
+    "source_sha256": "20ac10863992b937b3aff70b79ac1c27fa101a555a45feeb21f01c4f0374097e",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-7a232baf32024cd6a21b8895177a9a75",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/stip_time_audit.pl",
+        "-g",
+        "stip_time_audit:main",
+        "--",
+        "/corpus/cases/s3306_c_2_neg.pl",
+        "891"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 1.24691
+    },
+    "stderr": ""
+  },
+  {
+    "clauses": [
+      {
+        "kind": "fact",
+        "solutions": [
+          {
+            "args": [
+              {
+                "kind": "int",
+                "value": 300
+              },
+              {
+                "kind": "atom",
+                "value": "alice_pays"
+              },
+              {
+                "kind": "atom",
+                "value": "alice_employer"
+              },
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "atom",
+                "value": "bob"
+              },
+              {
+                "kind": "atom",
+                "value": "alice"
+              },
+              {
+                "kind": "atom",
+                "value": "bob"
+              },
+              {
+                "kind": "wild",
+                "value": 0
+              }
+            ],
+            "arity": 8,
+            "predicate": "s3306_b"
+          }
+        ],
+        "source": "s3306_b(300,alice_pays,alice_employer,alice,bob,alice,bob,A)"
+      }
+    ],
+    "loaded_clause_counts": [
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "agent_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "amount_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 2,
+        "before": 0,
+        "predicate": "end_"
+      },
+      {
+        "added": 4,
+        "after": 4,
+        "arity": 2,
+        "before": 0,
+        "predicate": "location_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "patient_"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "payment_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "purpose_"
+      },
+      {
+        "added": 1,
+        "after": 2,
+        "arity": 8,
+        "before": 1,
+        "predicate": "s3306_b"
+      },
+      {
+        "added": 1,
+        "after": 1,
+        "arity": 1,
+        "before": 0,
+        "predicate": "service_"
+      },
+      {
+        "added": 2,
+        "after": 2,
+        "arity": 2,
+        "before": 0,
+        "predicate": "start_"
+      }
+    ],
+    "status": "ok",
+    "id": "s3306_c_2_pos",
+    "source_sha256": "1b912b348ef4481643a509a920bd6653522571dd9c1f29673d2ad2280c478d88",
+    "execution": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-b89f45caa7134861b72a0df9a9252bc0",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/audit/stip_time_audit.pl",
+        "-g",
+        "stip_time_audit:main",
+        "--",
+        "/corpus/cases/s3306_c_2_pos.pl",
+        "873"
+      ],
+      "timeout_seconds": 120,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 1.714074
+    },
+    "stderr": ""
+  }
+]
