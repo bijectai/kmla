@@ -2,14 +2,24 @@
 
 ## Authorization and entry identity
 
-**Current dispatch status (2026-09-23): snapshot committed; §7703 resumed.**
+**Current dispatch status (2026-09-23): §7703 bounded continuation verified.**
 `6e3cdc9` preserves the working admission/transport/compiling oracle slice AND
 the three failing proof tests on `claude/checkpoint-0-integration`. Dev has
 authorized one proof-only round with assertions unchanged. Keep translating
 §7703 on the narrowed domain with R5 proof obligations open; unclosed proofs
 do not stop unrelated translation. If a breaker repeats, obtain Fable's
 design-flaw review of the obligation, not a fourth proof attempt. The same
-isolated oracle context is resumed; no later section has been dispatched.
+isolated oracle context completed this handoff and is now closed; no later
+section has been dispatched.
+
+Round result: all three exact original assertions now pass, with the prior
+goals and failed attempts preserved. The complete file has 62 passing theorem
+declarations; all 53 original statements and 24 original fixture definitions
+remain unchanged. The source `(b)` composition and root statute clause bodies
+are added with explicit required downstream dependencies, not fake providers.
+Root stipulations/freshening, missing modes, production guards and R5 adequacy
+remain open. No complete root reference, original parity or CP1 pass is claimed.
+Fresh verification: `docs/phase1/s7703-continuation-final-2026-09-23/001.*`.
 
 H4 grounding stays separately held. Dev has NOT accepted an amendment. The
 fresh retained original-call trace confirms purpose_(payment_2015_1,Purpose)
@@ -104,6 +114,14 @@ Existing runtime archival obligations remain open and are not erased by sign-off
   unproved goals/failing tests visible and continue §7703 translation with
   R5/recursive dependencies explicit. A repeated breaker requires Fable
   design-flaw review of the obligation rather than another proof attempt.
+
+That proof round is now complete: all three assertions close without a repeated
+breaker. There is no further owner choice for these proofs. The H4 candidate
+is in `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`, unapproved and unimplemented;
+Q-020's external review was denied by the permission reviewer before execution.
+Explicit permission to send it to Fable/Claude and permit a consult answer is
+still required. No existing answer file was edited and no external review result
+is inferred from that denial.
 
 No new A/WIRE choice, Checkpoint 0 sign-off or parity-meter implementation is
 requested. Only H4-dependent work is held; later sections have not been dispatched.

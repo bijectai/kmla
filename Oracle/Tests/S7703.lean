@@ -229,7 +229,8 @@ theorem b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity
     (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
     s7703_b_1_bffb (hh (childHome (jul1 + 1))) alice y checked dependency =
       (dependency bob alice y checked).flatMap (fun _ => [(home, bob)]) := by
-  simp [Bind.bind, Pure.pure, BEq.beq, instBEqTerm, instBEqTerm.beq,
+  have hguard : (364 : Int) ≤ 2 * (min 16618 16800 - 16436) := by decide
+  simp [Bind.bind, Pure.pure, BEq.beq, instBEqTerm.beq, hguard,
     s7703_b_1_bffb, s7703_b_1_clause1, childHome, living, hh, markers,
     agents, patients, ends, Household.startDays, succeed, firstDay, lastDay,
     y, jan1, jul1, julyFirst, home, residence, alice, bob]
@@ -248,14 +249,17 @@ theorem b3_admission_checks_actual_year : (b3Query alice home 2101).v3 = false :
 theorem b1_certificate_is_for_the_actual_year (checked : CoveredR5Time (.year y)) :
     checked.year.value ∈ r5Years := checked.year_covered
 
+set_option maxRecDepth 10000 in
 theorem a1_null_only_at_observation :
     observe (a1Solutions (s7703_a_1_bfffb (hh married) alice y)) =
       ["[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"] := by
   rw [a1_absent_start_and_end]
   simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil,
-    Solution.encode, Obs.encode, escapeJson, String.foldl_eq_foldl_toList]
+    Solution.encode, Obs.encode, escapeJson, String.foldl_eq_foldl_toList,
+    List.mergeSort, List.merge]
   decide
 
+set_option maxRecDepth 10000 in
 theorem b3_deduplication_only_at_observation :
     observe (b3Solutions (s7703_b_3_bfbb
       (hh (married ++ [.agent_ marriage bob])) alice home y)) =
@@ -263,7 +267,67 @@ theorem b3_deduplication_only_at_observation :
   rw [b3_marriage_multiplicity]
   simp only [b3Solutions, termObs, bob, observe, List.map_cons, List.map_nil,
     Solution.encode, Obs.encode, escapeJson, String.foldl_eq_foldl_toList]
+  rw [List.mergeSort_of_pairwise (by simp)]
   decide
+
+/-! Bounded continuation tests. These universally quantify over the missing
+provider: no fake implementation, empty default, or completed-root claim.
+The concrete fixtures below have no residence prefix, so b1 does not reach
+that provider. The composition equation separately retains its arbitrary rows.
+-/
+
+theorem b_composition_preserves_literal_order_and_every_prefix
+    (h : Household) (taxpayer : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_b_bfb h taxpayer year checked dependency =
+      (s7703_b_1_bffb h taxpayer year checked dependency).flatMap
+        (fun (household, _) => (s7703_b_2_bbfb h taxpayer household year).flatMap
+          (fun _ => s7703_b_3_bfbb h taxpayer household year)) := by rfl
+
+theorem b_no_residence_never_needs_provider
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_b_bfb (hh married) alice y checked dependency = [] := by rfl
+
+theorem root_statute_free_spouse_one_guard_success
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bffb (hh married) alice y checked dependency =
+      [(bob, marriage)] := by rfl
+
+theorem root_statute_bound_spouse_two_guard_successes
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bbfb (hh married) alice bob y checked dependency =
+      [marriage, marriage] := by rfl
+
+theorem root_statute_bound_identical_people_fail
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bbfb (hh married) alice alice y checked dependency = [] := by rfl
+
+theorem root_statute_bound_other_spouse_fails
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bbfb (hh married) alice carol y checked dependency = [] := by rfl
+
+theorem root_statute_bound_spouse_retains_atom_string_distinction
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bbfb (hh married) alice (.str "bob") y checked dependency = [] := by rfl
+
+theorem root_statute_free_mode_retains_fact_duplicates
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bffb (hh (married ++ [.agent_ marriage bob])) alice y checked dependency =
+      [(bob, marriage), (bob, marriage)] := by rfl
+
+theorem root_statute_bound_mode_retains_guard_times_fact_duplicates
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_statute_bbfb (hh (married ++ [.agent_ marriage bob])) alice bob y checked dependency =
+      [marriage, marriage, marriage, marriage] := by rfl
 
 -- Axiom checks for every clause, entry wrapper, and the parameterized proof.
 #print axioms s7703_a_1_clause1
@@ -273,12 +337,27 @@ theorem b3_deduplication_only_at_observation :
 #print axioms s7703_b_2_clause1
 #print axioms s7703_b_3_is_member_of_household_clause1
 #print axioms s7703_b_3_clause1
+#print axioms s7703_b_clause1
+#print axioms s7703_b_bbb
+#print axioms s7703_clause1
+#print axioms s7703_statute_bffb
+#print axioms s7703_statute_bbfb
 #print axioms s7703_a_1_entry
 #print axioms s7703_a_2_entry
 #print axioms s7703_b_1_entry
 #print axioms s7703_b_2_entry
 #print axioms s7703_b_3_entry
 #print axioms b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity
+#print axioms a1_null_only_at_observation
 #print axioms b3_deduplication_only_at_observation
+#print axioms b_composition_preserves_literal_order_and_every_prefix
+#print axioms b_no_residence_never_needs_provider
+#print axioms root_statute_free_spouse_one_guard_success
+#print axioms root_statute_bound_spouse_two_guard_successes
+#print axioms root_statute_bound_identical_people_fail
+#print axioms root_statute_bound_other_spouse_fails
+#print axioms root_statute_bound_spouse_retains_atom_string_distinction
+#print axioms root_statute_free_mode_retains_fact_duplicates
+#print axioms root_statute_bound_mode_retains_guard_times_fact_duplicates
 
 end KMLA.Oracle.S7703.Tests

@@ -2,6 +2,28 @@
 
 ## Current phase
 
+2026-09-23 (bounded continuation verified): all three original §7703 proof
+obligations now kernel-check with their statements and fixtures unchanged.
+The isolated lane also added the source `(b)` composition and root statute
+clause bodies, parameterized by the required §152 continuation. A fresh
+orchestrator run of `bash scripts/check_oracle7703.sh` exits 0 on all 62 theorem
+declarations; axiom printouts for the three recovered proofs and new bodies/
+tests are subsets of X1, without sorryAx. All 53 pre-existing theorem statements
+were independently compared unchanged. Complete output:
+`docs/phase1/s7703-continuation-final-2026-09-23/001.*`.
+
+This does not complete the reference: root stipulation append/freshening,
+additional required modes, the real §152 continuation, production validity
+guards and the R5 source/measure/fuel adequacy proofs remain open. No fuel
+exhaustion value, source reinterpretation or placeholder provider was added.
+Original parity records: 0; distinct households compared: 0; original cases
+compared: 0/376. Checkpoint 1 remains unpassed. H4 grounding remains held and
+Q-020's external review awaits permission; its draft is not approved.
+The oracle handoff is complete and its isolated context is closed. No
+background implementation is running. Next §7703 work is root stipulation/mode
+completion and opaque integration, subject to the explicit dependency/admission
+obligations; no later section has been dispatched in this continuation.
+
 2026-09-23 (owner-directed continuation after snapshot commit): committed the
 admission, transport, compiling §7703 slice, passing Python tests and all three
 still-failing proof tests as `6e3cdc920fa1c1433aad0b29f4348f7dad55c86a` on
@@ -384,7 +406,15 @@ Reason: This sends internal repository details and the proposed H4 design to an 
 Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.
 ```
 
-### §7703 open test proofs — one owner-authorized round (Q-018, 2026-09-23)
+### Resolved: three §7703 test proofs; reference/R5 obligations still open
+
+The authorized round closes all three exact assertions, with their last failed
+goals/attempts retained in Oracle/UNPROVED.md and Oracle/Tests/ evidence files.
+The final complete assertion file exits 0, with nine added continuation tests
+and all 53 original statements unchanged. This resolves only the test-proof
+stop, not source correspondence, recursive adequacy or any checkpoint. No
+repeated three-failure breaker occurred in the resumed round. The earlier
+authorization and failure history follows, not a current hold on translation.
 
 Dev has supplied the resumption direction requested below. One bounded
 proof-only round is authorized, with unchanged statements and continued
@@ -860,9 +890,12 @@ read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
 query-admission circuit breaker was resolved on Dev-authorized continuation;
 pre-dispatch checks passed and both isolated lanes delivered initial slices.
 The H4 grounding lane stays paused for an owner-approved remedy after the
-bound-call evidence; no amendment is accepted. Dev has authorized one §7703
-proof-only round and continued translation with open obligations. A repeated
-proof breaker requires Fable design-flaw review of that obligation. Do not claim
+bound-call evidence; no amendment is accepted and Q-020 review needs permission.
+The authorized §7703 proof-only round is complete: all three assertions pass,
+and bounded source translation continued with explicit open dependencies.
+Continue §7703 integration without mistaking those dependencies for references.
+A repeated proof breaker requires Fable design-flaw review of the obligation.
+Do not claim
 R5 termination before actual query/stipulation coverage and adequacy proofs.
 Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
 meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.

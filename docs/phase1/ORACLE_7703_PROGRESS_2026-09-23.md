@@ -1,5 +1,222 @@
 # §7703 isolated oracle progress — 2026-09-23
 
+Current status: this bounded §7703 handoff is complete and main has independently
+reviewed and verified the final 62-theorem state. All three protected assertions
+are closed unchanged; nine clause bodies comprise six independent clauses and
+three parameterized bodies, not a complete reference. Downstream providers,
+root stipulation/mode completion and R5/R8 proofs remain open; parity and CP1
+remain unpassed. UNPROVED.md preserves the attempt ledger. No further code edits
+or test runs are needed for this handoff; main owns the commit. Historical text
+below is preserved.
+
+## Final authorized continuation — current handoff
+
+**Pinned fresh build and the complete 62-theorem main test file PASS.** All
+three protected assertions are closed without changing their types, fixtures,
+or expected literals. Nine source clause bodies are now represented: **six
+independent executable clauses and three explicitly parameterized bodies**.
+This is NOT a completed §7703 reference. No recursive provider, full root,
+reference parity, hygiene-gate pass or CP1 pass is claimed.
+
+This current section supersedes the historical stopped report retained below.
+Dev authorized exactly one resumed proof-only round on snapshot
+`6e3cdc920fa1c1433aad0b29f4348f7dad55c86a`, then a bounded §7703 continuation.
+The round is finished: b1 and a1 passed R1; b3 failed R1 and R2, then passed
+R3. There was **no repeated breaker and no fourth attempt**. The new composition
+and its nine additional tests passed on their first compile/test attempt.
+No further proof/implementation edits followed the final verification.
+
+### Scope and changed paths
+
+Re-read root/lane rules and the required PLAN/PROTOCOL/HANDOFF/STATE documents,
+A-018 completely, the original §7703 source and relevant signed decisions.
+Only this section was implemented. No later-section implementation was begun.
+Original later-section call-site context was read only to establish §7703 modes.
+No harness/gen implementation, tests, implementation reports, meter source,
+gate exploits or the H4 investigation were inspected. No human/ write,
+Interface edit, STATE/HANDOFF edit, consult invocation, git commit/push/PR/merge,
+or owner-attribution change was made. The orchestrator's runner was not edited.
+
+Changed in this resumed turn:
+
+- `Oracle/S7703.lean`: add b composition and root statute clause body/mode
+  specializations; preserve the existing seven bodies and five entry wrappers.
+- `Oracle/Tests/S7703.lean`: proof-only changes to the three protected tests,
+  nine new universally parameterized continuation tests and axiom printouts.
+- `Oracle/UNPROVED.md`: complete pre-round references, attempt ledger, latest
+  goals/status, corrected A-018 hypotheses, and open implementation/proof debts.
+- `Oracle/Tests/S7703ProofDiagnostics.lean`: retained diagnostic ladder, not
+  imported into the main test suite and intentionally still non-compiling.
+- `Oracle/Tests/check_s7703_assertions.rb`: read-only byte-identity check against
+  the pinned snapshot; no git writes.
+- Retained raw evidence under `Oracle/Tests/`: `S7703_PROOF_DIAGNOSTICS_R0.txt`,
+  `S7703_PROOF_ROUND_R1.txt`, `S7703_PROOF_ROUND_R2.txt`,
+  `S7703_PROOF_ROUND_R3.txt`, `S7703_CONTINUATION_C1.txt`,
+  `S7703_ASSERTION_IDENTITY.txt`, `S7703_FINAL_VERIFICATION.txt`.
+- This dated oracle report. `S7703Reduction.lean` was rerun, not edited.
+
+Final implementation SHA-256:
+`0e0f11c6fe72c42e9b936c85039a129783710ae8ce8d540f3b1e0cf1b403df54`.
+Final main test SHA-256:
+`096ac907f363dd7d780787662a75544f271c4dd698b3598f582cd59283e3fa67`.
+The five shared/source hashes in the historical identity table below were
+rechecked and are unchanged. Other concurrently modified/untracked paths belong
+to the orchestrator and were neither edited nor treated as this lane's work.
+
+### Proof round, unchanged assertions and last goals
+
+The full original three goal states remain at
+`docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt`, referenced in UNPROVED.
+No historical failure or recovery term has been recast as a successful proof.
+
+| Original assertion | Successful proof change | Resumed failed edit cycles | Latest goals |
+| --- | --- | --- | --- |
+| b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity | Prove the exact concrete Int-min guard, then existing simplification | 0; closed R1 | None |
+| a1_null_only_at_observation | Existing fold equation and singleton sort equation; local maxRecDepth 10000 | 0; closed R1 | None |
+| b3_deduplication_only_at_observation | Existing fold equation, then List.mergeSort_of_pairwise, then decide | 2; closed R3 | None |
+
+R1 b3's residual involved splitInTwo projections inside mergeSort; R2's involved
+`List.splitAt.go` projections inside mergeSort/foldr. Their **full**, untruncated
+goals and recovery-axiom printouts are retained in the R1/R2 files above. R3 and
+the final build contain no error or recovery axiom for the original assertions.
+All three printed axiom sets are within X1: propext, Classical.choice, Quot.sound.
+
+The diagnostic ladder evaluates both actual observations to the unchanged
+expected literals and proves the concrete guard. Its ten direct rfl/decide
+encoding/observation examples fail at the limits tested (maxRecDepth 10000,
+maxHeartbeats 1000000). That is not a mismatch or a proof of failure at all
+higher limits. The diagnostic file is a reproducible failure record, not a
+passing test artifact; it emits no accepted olean and its recovered proofs are
+never imported. No skip/xfail or altered expected result was introduced.
+
+A-018's b1 arithmetic suggestion was verified. Its year-only admission examples
+**do not exercise date parsing**: they check the supplied year, not Day.fromISO?.
+No broad string/date reduction claim follows. Existing proved string/sort lemmas
+closed the actual observation goals; no shared implementation change was needed.
+
+`ruby Oracle/Tests/check_s7703_assertions.rb` exits 0. It checks all 24 original
+fixture definitions and these exact declarations through `:= by` byte-for-byte;
+their verbatim text is retained in `S7703_ASSERTION_IDENTITY.txt`:
+
+| Assertion | SHA-256 of exact declaration through `:= by` |
+| --- | --- |
+| b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity | `94ad637a8ef8ccb7a421a873d2e4fb91a01b08115e68a41bc083ca3ce8b23b2a` |
+| a1_null_only_at_observation | `38fe92b93a06de672777e086244871f9c7719e97ba970756ff6b3a7854bd864c` |
+| b3_deduplication_only_at_observation | `5aea04698b8ae18b730f7edeb3db9c8af9eb9b155cc0d68999ab6f9a57f26300` |
+
+The orchestrator additionally reports its independent comparison of all 53 old
+theorem statements as byte-identical and its fresh runner exit 0, with raw output
+at `docs/phase1/s7703-continuation-final-2026-09-23/001.*`. That report is recorded
+as orchestrator verification, not a run performed by this lane. Its earlier
+intermediate b3 failure is compatible with this ledger and was not an edit cycle.
+
+### Current clause/mode and hazard coverage
+
+One definition per original clause; each predicate has one source statute
+clause. Definition layout follows Lean dependency order, not a changed Prolog
+clause order. Within each body, ordered flatMap/disjunction retains duplicates.
+
+| Source lines | Clause | Current boundary |
+| --- | --- | --- |
+| 2–9 | s7703/4 | Parameterized STATUTE BODY only: bffb, bbfb; no full root/stipulation append |
+| 12–14 | s7703_a/4 | Independent bffb, bound a2 outputs filtered inside NAF |
+| 17–82 | s7703_a_1/5 | Independent bfffb, Option Day preserves unbound S13 |
+| 85–98 | s7703_a_2/5 | Independent bfffb, exact decree string tags |
+| 103–106 | s7703_b/3 | Parameterized bfb composition, bbb equality-filter specialization |
+| 110–139 | s7703_b_1/4 | Parameterized bffb, required actual-year s152_a_1 continuation |
+| 142–184 | s7703_b_2/4 | Independent bbfb, two ordered findall lists and sums |
+| 187–201 | membership/3 | Independent bbb, one Unit per proof |
+| 203–216 | s7703_b_3/4 | Independent bfbb, ordered 184-day membership proofs |
+
+The new root body requires bound Taxp/Year and free Marriage. A free Spouse gives
+one nonvar-disjunction success; a bound Spouse gives two, except that bound
+identity fails at the next source literal. Ground results of a are filtered
+according to the requested Spouse binding before NAF. Tests distinguish those
+modes, the repeated guard × fact multiplicity, wrong spouse, same person, and
+atom/string identity. These modes do not silently stand in for free-Taxp or
+bound-Marriage modes. No new reference entry wrapper is exposed for the partial
+root. The existing five wrappers still consume exact-tuple AdmittedQuery, and
+b1's wrapper also requires the actual-year certificate and dependency.
+
+**NAF 8/8** annotated exactly once: section7703.pl sites
+9:2 (new parameterized N-CALL), 14:2 (N-CALL), 30:13, 50:6, 61:6,
+129:13, 195:4 (N-ABS-DATE), 113:2 (N-CONJ). Rules N1/N4, N2 and N5
+are cited at the respective definitions. **AGG 5/5** annotated exactly once:
+143:5, 162:2, 205:5 (A1 findall, including D8 at 205); 180:2, 181:2
+(A2/M8 sums). **CUT 0/0** explicit ! sites. The three -> sites (45, 62,
+67) retain separately annotated G1 first-condition commitment semantics.
+This is annotation/body coverage, not a formal source-equivalence proof.
+
+### Exact pinned final commands and results
+
+Working directory: `/Users/devrashie/Documents/csProjects/kmla`.
+`mktemp -d /private/tmp/kmla-oracle7703-resumed.XXXXXX` created the retained
+fresh directory `/private/tmp/kmla-oracle7703-resumed.BbKIpl`. No prior oleans
+were used in the final build. Full commands and outputs are retained in
+`Oracle/Tests/S7703_FINAL_VERIFICATION.txt`.
+
+```sh
+lean +leanprover/lean4:v4.33.1 --version
+mkdir -p /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface /private/tmp/kmla-oracle7703-resumed.BbKIpl/Oracle
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/Household.olean Interface/Household.lean
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/QuerySchema.olean Interface/QuerySchema.lean
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/QueryTime.olean Interface/QueryTime.lean
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Oracle/S7703.olean Oracle/S7703.lean
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 Oracle/Tests/S7703.lean
+LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 Oracle/Tests/S7703Reduction.lean
+ruby Oracle/Tests/check_s7703_assertions.rb
+```
+
+Every command exits 0. Lean identity: 4.33.1, arm64-apple-darwin24.6.0,
+commit `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`, Release. Main suite:
+**62/62** theorem declarations (53 old + 9 new), with one harmless unused
+`List.merge` simp-argument warning, retained without suppressing the linter.
+All nine clause bodies, five existing entries, new mode specializations,
+three protected proofs and nine new proofs have printed dependencies within
+X1; no full hygiene/axiom-gate execution is claimed. Diagnostic failure logs
+remain failures, separately identified above.
+
+### Remaining obligations and next integration need
+
+1. Implement and prove the actual ordered s152_a_1 provider in its future fresh
+   section context, including downstream stipulations. The universally quantified
+   continuation here is not that implementation or its termination proof.
+2. Complete the root's H4 ordered stipulated append, relational unification and
+   variable freshening, retaining unbound spouse/marriage for later bindings.
+   A ground statute list is not the full predicate. Do not apply statute guards
+   to appended facts, invent a finite universe of wildcard pairs, or identify
+   wildcard ids across independent clause invocations. Further root modes and
+   the H6 Bool target remain absent, not false-valued stubs.
+3. Prove source-prefix/eligible-decider equivalence, operational modes and E2
+   exclusion, complete participant universe, V10 born/birthless phase decrease,
+   branch counter and phase/entry offsets. No fuel or exhaustion result is added.
+   No production OracleGuards instance exists.
+4. Cover every actual R5/R8 time path. All three parameterized bodies pass the
+   same CoveredR5Time (.year year) unchanged; this proves no Workday/R8 coverage
+   and does not reset or manufacture a descendant budget.
+5. Prove general calendar/year-extraction and source correspondence; these
+   self-contained tests are not reference comparisons or coverage of all admitted
+   inputs. The separate H4 grounding issue remains outside this lane.
+6. Orchestrator: next request is **opaque harness CLI integration**, with exact
+   tuples/outputs/diagnostics only, for the four independent queried modes
+   a1/bfffb, a2/bfffb, b2/bbfb, b3/bfbb after real admission/payload wiring.
+   Parameterized b1/root must remain unsupported until their actual providers
+   and proofs exist. Do not output []/false/null for missing work. Main owns
+   STATE/HANDOFF, coordination, and any authorized checkpoint commit.
+
+No Prolog reference invocation or opaque parity run occurred here: 0/376 original
+cases compared, zero parity records. **All 376-case parity and CP1 remain
+unpassed.** No Fable call was attempted after the reported permission denial.
+There is no new failed obligation requiring an escalation from this round.
+
+---
+
+## Historical pre-resumption report — superseded, retained as failure evidence
+
+Everything below through the historical self-review describes the earlier
+stopped snapshot, not the current compilation/authorization status. Its original
+attempts and exact failure evidence are preserved; the current outcome is above.
+
 **Status: substantive implementation compiles; test proof circuit breaker
 triggered. No completed §7703 target, reference parity or CP1 pass.**
 
@@ -317,3 +534,28 @@ oracle, parity pass, or checkpoint pass is claimed.
 Three failed proof attempts occurred on each of the three retained statements;
 the lane stopped, reported them promptly, and made no subsequent proof or
 implementation edits. Only read-only accounting and this handoff followed.
+
+---
+
+## Current final self-review
+
+Prolog assumptions are the signed G1/G2/G3/G4 semantics: ordered SLD solutions
+and duplicates; source-mode-sensitive instantiation; two independent nonvar
+disjunction successes when both terms are bound; structural tag-sensitive
+identity; first complete -> condition commits even if its consequent fails;
+NAF checks existential failure without exporting bindings. N2 absent-date
+candidates, D3/D4/D8 date rules, A1/A2 multiplicity and H6 boundary-only set
+observation are retained. H4 wildcard freshness and later unification are owed,
+not replaced by ground enumeration. Parameterization is not reference completion.
+
+All three original proofs are now closed, with exact assertions/fixtures
+preserved. The new compositions and 62-theorem main suite compile under pinned
+Lean; no later-section provider, R5 adequacy, production guard, parity or CP1
+completion is inferred. Consultation denial was respected. No implementation
+or proof edits are planned after this bounded handoff.
+
+**Circuit breaker: three failed edit cycles on one test means stop and report.**
+The authorized resumed round incurred two b3 failures before success; no repeated
+breaker fired. If a future breaker fires, halt edits to that obligation and send
+precise evidence to the orchestrator for Fable DESIGN-FLAW REVIEW OF THE
+OBLIGATION pending explicit approval, not a fourth tactic attempt.

@@ -5,10 +5,12 @@ import Interface.QueryTime
 M3/M8 and A1/A2/A6. Source: statutes/prolog/section7703.pl.
 
 Six nonrecursive clauses are executable below in their approved modes.
-The seventh, (b)(1), is a clause BODY parameterized by the unavailable
-s152_a_1/3 continuation. No provider, recursive knot, R5 bound, production
-OracleGuards or full s7703 target is supplied. In particular s7703/4 (2–9)
-and s7703_b/3 (103–106) remain untranslated, not false-valued stubs.
+Three clause BODIES, (b)(1), (b), and the statute clause of s7703/4, are
+parameterized by the unavailable s152_a_1/3 continuation. No provider,
+recursive knot, R5 bound, production OracleGuards or full s7703 target is
+supplied. The root body covers bound Taxp/Year, free Marriage, and either free
+or bound Spouse ONLY. In particular it is NOT the complete root predicate:
+H4 stipulated clauses (including free outputs and freshening) remain absent.
 
 Definitions named *_clause1 and *_mode are internal, ordered solution lists.
 Only *_entry wrappers are query entries; each consumes AdmittedQuery for the
@@ -278,6 +280,76 @@ def s7703_b_3_clause1 (h : Household) (taxpayer home : Term) (year : Year) :
   pure spouse
 
 def s7703_b_3_bfbb := s7703_b_3_clause1
+
+/--
+section7703.pl:103–106, sole s7703_b/3 clause BODY, mode bfb.
+Result: Spouse. Keep every b1 proof (including each dependent), then every
+b2 proof, then every b3 proof in that order. None of these is a truth-only
+shortcut. The actual-year certificate is passed unchanged to b1's required
+continuation. This composition does not tie or prove the R5 recursive knot.
+H4.1 lists no additional clauses for this signature.
+-/
+def s7703_b_clause1 (h : Household) (taxpayer : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) : List Term := do
+  let (home, _) ← s7703_b_1_bffb h taxpayer year checked s152_a_1_bbb
+  let _ ← s7703_b_2_bbfb h taxpayer home year
+  s7703_b_3_bfbb h taxpayer home year
+
+def s7703_b_bfb := s7703_b_clause1
+
+/-- G2 specialization used by source line 9 after a binds Spouse. -/
+def s7703_b_bbb (h : Household) (taxpayer spouse : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) : List Unit :=
+  ((s7703_b_bfb h taxpayer year checked s152_a_1_bbb).filter (· == spouse)).map
+    (fun _ => ())
+
+/--
+section7703.pl:2–9, sole s7703/4 STATUTE clause BODY, modes bffb and bbfb.
+Taxp and Taxy are bound and Marriage is free; spouseInput = none means free
+Spouse, some s means bound Spouse. These are instantiation states, not optional
+persons or a change to the shared Term/Pat representation.
+
+G1/G2: (nonvar(Taxp); nonvar(Spouse)) has ONE success for bffb, TWO for bbfb.
+G3: the pre-a nonidentity succeeds for a free Spouse; a bound identical Spouse
+fails before a. Filtering the free-mode results alone would lose that doubling.
+Other modes, in particular free Taxp/bound Spouse, are not implemented here.
+
+H4.1 root stipulations must be appended AFTER this clause, not subjected to its
+guard or NAF. That append/unification/freshening layer is deliberately absent;
+returning only these ground statute rows is NOT a full reference value. Do not
+enumerate an arbitrary ground universe to replace a stipulated wildcard.
+-/
+def s7703_clause1 (h : Household) (taxpayer : Term) (spouseInput : Option Term)
+    (year : Year) (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) : List (Term × Term) := do
+  let _ ← [()] ++ (if spouseInput.isSome then [()] else [])
+  let _ ← succeed (match spouseInput with
+    | none => true
+    | some spouse => taxpayer != spouse)
+  let (spouse, marriage) ← (s7703_a_bffb h taxpayer year).filter fun (s, _) =>
+    match spouseInput with | none => true | some boundSpouse => s == boundSpouse
+  -- NAF section7703.pl:9:2 — N-CALL, N1/N4; both people bound, no bindings escape.
+  let _ ← succeed (s7703_b_bbb h taxpayer spouse year checked s152_a_1_bbb).isEmpty
+  pure (spouse, marriage)
+
+/-- Internal statute-clause mode, NOT the H6 root/Bool entry or full predicate. -/
+def s7703_statute_bffb (h : Household) (taxpayer : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) :=
+  s7703_clause1 h taxpayer none year checked s152_a_1_bbb
+
+/-- Internal bbfb mode; bound Spouse is not an output. Multiplicity is retained. -/
+def s7703_statute_bbfb (h : Household) (taxpayer spouse : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) : List Term :=
+  (s7703_clause1 h taxpayer (some spouse) year checked s152_a_1_bbb).map Prod.snd
 
 /-! Entry tuples use only the shared QueryCall, SuppliedArg, Pat and Term types.
 The free positions below are exactly H6.5, not ground-only substitute modes.

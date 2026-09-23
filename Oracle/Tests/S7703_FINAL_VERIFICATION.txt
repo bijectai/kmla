@@ -1,0 +1,93 @@
+$ lean +leanprover/lean4:v4.33.1 --version
+exit_code=0
+Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+
+$ mkdir -p /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface /private/tmp/kmla-oracle7703-resumed.BbKIpl/Oracle
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/Household.olean Interface/Household.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/QuerySchema.olean Interface/QuerySchema.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Interface/QueryTime.olean Interface/QueryTime.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-resumed.BbKIpl/Oracle/S7703.olean Oracle/S7703.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 Oracle/Tests/S7703.lean
+exit_code=0
+Oracle/Tests/S7703.lean:259:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil, Solution.encode,
+    Obs.encode, escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.s7703_a_1_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_1_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_is_member_of_household_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_bbb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_3_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.a1_null_only_at_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b3_deduplication_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_composition_preserves_literal_order_and_every_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_no_residence_never_needs_provider' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_spouse_one_guard_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_two_guard_successes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_identical_people_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_other_spouse_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_retains_atom_string_distinction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_mode_retains_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_mode_retains_guard_times_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-resumed.BbKIpl lean +leanprover/lean4:v4.33.1 Oracle/Tests/S7703Reduction.lean
+exit_code=0
+String.foldl_eq_foldl_toList.{u} {α : Type u} {f : α → Char → α} {init : α} {s : String} :
+  String.foldl f init s = List.foldl f init s.toList
+instBEqTerm
+@[instance_reducible] def KMLA.instBEqTerm : BEq Term :=
+{ beq := instBEqTerm.beq }
+def KMLA.instBEqTerm.beq : Term → Term → Bool :=
+fun x x_1 =>
+  match x, x_1 with
+  | Term.atom a, Term.atom b => a == b
+  | Term.str a, Term.str b => a == b
+  | Term.int a, Term.int b => a == b
+  | x, x_2 => false

@@ -1,0 +1,350 @@
+Oracle/Tests/S7703.lean:259:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil, Solution.encode,
+    Obs.encode, escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Oracle/Tests/S7703.lean:271:2: error: Tactic `decide` failed for proposition
+  List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      (((List.MergeSort.Internal.splitInTwo
+                    ⟨["[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]",
+                        "[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]"],
+                      ⋯⟩).fst.val.mergeSort
+            fun a b => decide (a ≤ b)).merge
+        ((List.MergeSort.Internal.splitInTwo
+                  ⟨["[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]",
+                      "[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]"],
+                    ⋯⟩).snd.val.mergeSort
+          fun a b => decide (a ≤ b))
+        fun a b => decide (a ≤ b)) =
+    ["[{\"a\":\"bob\"}]"]
+because its `Decidable` instance
+  instDecidableEqList
+    (List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      (((List.MergeSort.Internal.splitInTwo
+                    ⟨["[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]",
+                        "[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]"],
+                      ⋯⟩).fst.val.mergeSort
+            fun a b => decide (a ≤ b)).merge
+        ((List.MergeSort.Internal.splitInTwo
+                  ⟨["[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]",
+                      "[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]"],
+                    ⋯⟩).snd.val.mergeSort
+          fun a b => decide (a ≤ b))
+        fun a b => decide (a ≤ b)))
+    ["[{\"a\":\"bob\"}]"]
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instance `instDecidableEqList`, reduction got stuck at the `Decidable` instance
+  match
+    List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      (((List.MergeSort.Internal.splitInTwo
+                    ⟨["[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]",
+                        "[" ++
+                            ",".intercalate
+                              ["{\"a\":\"" ++
+                                    List.foldl
+                                      (fun acc c =>
+                                        acc ++
+                                          match c.toNat with
+                                          | 8 => "\\b"
+                                          | 9 => "\\t"
+                                          | 10 => "\\n"
+                                          | 12 => "\\f"
+                                          | 13 => "\\r"
+                                          | 34 => "\\\""
+                                          | 92 => "\\\\"
+                                          | n =>
+                                            if n < 32 then
+                                              "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                            else c.toString)
+                                      "" "bob".toList ++
+                                  "\"}"] ++
+                          "]"],
+                      ⋯⟩).fst.val.mergeSort
+            fun a b => decide (a ≤ b)).merge
+        ((List.MergeSort.Internal.splitInTwo
+                  ⟨["[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]",
+                      "[" ++
+                          ",".intercalate
+                            ["{\"a\":\"" ++
+                                  List.foldl
+                                    (fun acc c =>
+                                      acc ++
+                                        match c.toNat with
+                                        | 8 => "\\b"
+                                        | 9 => "\\t"
+                                        | 10 => "\\n"
+                                        | 12 => "\\f"
+                                        | 13 => "\\r"
+                                        | 34 => "\\\""
+                                        | 92 => "\\\\"
+                                        | n =>
+                                          if n < 32 then
+                                            "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++ KMLA.jsonHexDigit✝ (n % 16)
+                                          else c.toString)
+                                    "" "bob".toList ++
+                                "\"}"] ++
+                        "]"],
+                    ⋯⟩).snd.val.mergeSort
+          fun a b => decide (a ≤ b))
+        fun a b => decide (a ≤ b)) with
+  | [] =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+Oracle/Tests/S7703.lean:270:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [b3Solutions, termObs, bob, observe, List.map_cons, List.map_nil, Solution.encode, Obs.encode,
+    escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.s7703_a_1_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_1_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_is_member_of_household_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_3_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.a1_null_only_at_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b3_deduplication_only_at_observation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
