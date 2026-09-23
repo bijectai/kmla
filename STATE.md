@@ -2,6 +2,43 @@
 
 ## Current phase
 
+2026-09-23 (owner-directed continuation after snapshot commit): committed the
+admission, transport, compiling §7703 slice, passing Python tests and all three
+still-failing proof tests as `6e3cdc920fa1c1433aad0b29f4348f7dad55c86a` on
+`claude/checkpoint-0-integration`, with only Dev's author/committer identity.
+No push, PR or merge. Before proof edits, the unchanged test command again
+exited 1 and its FULL last-goal output was retained in
+`docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt`.
+
+Dev authorizes one proof-only round with assertions unchanged and continued
+§7703 translation on Option A's narrowed domain. An unclosed R5 obligation is
+open, not a global development stop. Keep failed tests failing; if the breaker
+fires again on any of the three, send that obligation to Fable for design-flaw
+review, not a fourth proof attempt. The same isolated oracle context is resumed;
+no serializer implementation is shared with it. Checkpoint 1 remains unpassed.
+
+The separate H4 hold is not an authorized amendment. A fresh pinned diagnostic
+executes the original `findall(Purpose,purpose_(payment_2015_1,Purpose),Purposes)`
+and then exposes the original clause's conjunction calls without rewriting or
+reordering them. At the failing SECOND split_string, the first argument of
+purpose_ is still the ground atom payment_2015_1; Service_event is free;
+Xp="payment", Yp="2015", Zp="1"; Xs/Ys/Zs are free. Exit 2, no timeout, with
+`ERROR: split_string/4: Arguments are not sufficiently instantiated`.
+Raw bindings/runtime identity: `docs/consult/evidence/h4-bound-goal-2026-09-23/`.
+The earlier snapshot and historical stops follow; their blanket pause wording
+is superseded by this lane-specific direction. `human/` remains unchanged and
+its manifest verifies. No H4 remedy has been implemented or installed.
+
+Continuation validation: 111 Python tests, 115 Interface guards and the shared
+query-time checks pass again; complete streams are retained under
+`docs/phase1/continuation-checks-2026-09-23/`. The new
+`bash scripts/check_oracle7703.sh` builds in a fresh temporary directory and
+propagates every test compilation failure. An intermediate resumed-round run
+exits 1 with b1 and a1 closed (X1 only) and b3 still open; its complete output is
+under `docs/phase1/s7703-continuation-check-2026-09-23/`, not a final round result.
+The H4 candidate is staged separately in
+`docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`; it remains unreviewed/unapproved.
+
 2026-09-23 (first isolated slices delivered; development paused): the preflight
 below passed and both fresh contexts ran, then stopped and were closed.
 Household transport has 12 codec tests and 11 pinned-Prolog syntax checks
@@ -328,7 +365,34 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Active: §7703 test-proof circuit breaker (Q-018, 2026-09-23)
+### Pending permission: Q-020 external design review
+
+The exact bound-call evidence was reported to Dev before drafting Q-020's
+tax_case_33-only candidate exception. It is not an installed amendment and
+neither H4.3 preservation nor its full traversal cost is claimed. The consult
+did not start: the permission reviewer rejected sending repository excerpts
+and the proposed design to the Fable/Claude service with answer-file write
+access. No retry or indirect bypass was made. Explicit approval is needed to
+send Q-020 and allow writes only under the established consult boundaries.
+This holds the external review, not independent local §7703 translation.
+
+Verbatim rejection:
+
+```text
+This action was rejected due to unacceptable risk.
+Reason: This sends internal repository details and the proposed H4 design to an external Fable/Claude service and permits it to write repository files; the transcript authorizes consulting Fable generally, but not this specific sensitive payload and destination or those side effects.
+Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.
+```
+
+### §7703 open test proofs — one owner-authorized round (Q-018, 2026-09-23)
+
+Dev has supplied the resumption direction requested below. One bounded
+proof-only round is authorized, with unchanged statements and continued
+translation independent of unresolved proofs. Preserve each last goal and the
+failed assertions. A repeated breaker routes the obligation itself to Fable
+for design-flaw review; it does not authorize a fourth attempt or semantic
+change. The paragraph below records the pre-authorization stop, not a current
+global oracle hold.
 
 The first isolated §7703 slice compiles, but its test file exits 1: 50 of 53
 theorem declarations elaborate without errors; three reached three failed proof
@@ -348,6 +412,13 @@ all three original assertions remain unchanged. Its general Lean explanations
 are hypotheses to test, not trusted proof evidence.
 
 ### Active: H4.2 grounding raises on tax_case_33 (Q-017, 2026-09-23)
+
+Dev requires exact goal/binding evidence before any amendment. The fresh
+read-only original-call reproduction and clause-call trace above confirm the
+first event is bound and the SECOND split consumes the still-free service.
+This is the reported bound-event finding, not permission to substitute a
+grounder or amend H4. The old proposal remains unaccepted. The runtime's
+diagnostic singleton/var warning is retained alongside the exception.
 
 The prescribed first-position-bound binary enumeration reaches
 `purpose_(payment_2015_1, Purpose)` with Purpose free. The original clause
@@ -788,8 +859,10 @@ implementation obligations above, with separate oracle/serializer contexts and
 read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
 query-admission circuit breaker was resolved on Dev-authorized continuation;
 pre-dispatch checks passed and both isolated lanes delivered initial slices.
-Now pause for the new H4/P-GROUND2 owner amendment and §7703 proof-breaker
-resumption direction, as recorded above. Do not claim
+The H4 grounding lane stays paused for an owner-approved remedy after the
+bound-call evidence; no amendment is accepted. Dev has authorized one §7703
+proof-only round and continued translation with open obligations. A repeated
+proof breaker requires Fable design-flaw review of that obligation. Do not claim
 R5 termination before actual query/stipulation coverage and adequacy proofs.
 Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
 meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.

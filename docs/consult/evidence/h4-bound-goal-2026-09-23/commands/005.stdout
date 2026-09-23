@@ -1,0 +1,5 @@
+original_call(findall(A,purpose_(payment_2015_1,A),B))
+original_exception(error(instantiation_error,context(system:split_string/4,A)))
+original_clause((purpose_(payment_2015_1,A):-split_string(payment_2015_1,"_","",[B,C,D]),split_string(A,"_","",[E,F,G]),B=="payment",E=="workforalice",C==F,D==G))
+before_call(split_string(payment_2015_1,"_","",[A,B,C]),[event=payment_2015_1,service=D,xp=A,yp=B,zp=C,xs=E,ys=F,zs=G])
+before_call(split_string(A,"_","",[B,C,D]),[event=payment_2015_1,service=A,xp="payment",yp="2015",zp="1",xs=B,ys=C,zs=D])

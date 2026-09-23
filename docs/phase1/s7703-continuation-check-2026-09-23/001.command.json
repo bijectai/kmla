@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "scripts/check_oracle7703.sh"
+  ],
+  "timeout_seconds": 180,
+  "exit": 1,
+  "timed_out": false,
+  "stdout": "001.stdout",
+  "stderr": "001.stderr",
+  "elapsed_seconds": 5.526238
+}

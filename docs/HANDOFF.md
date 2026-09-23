@@ -2,15 +2,23 @@
 
 ## Authorization and entry identity
 
-**Current dispatch status (2026-09-23): first isolated slices delivered; paused.**
-Both contexts are closed. H4.2's prescribed grounding raises on tax_case_33;
-A-017 escalates PROPOSED P-GROUND2 to Dev. A-019 corrects the review's numerical/
-domain claims using retained pinned evidence; no alternative grounder is installed.
-Separately, the §7703 implementation slice compiles but three test proofs reached
-the circuit breaker (Q-018); the whole test file fails. No later section starts
-until the affected stop is addressed. See STATE → Blockers and the two dated
-lane progress reports. Neither partial implementation nor passing transport
-checks establish original round trips, parity or Checkpoint 1.
+**Current dispatch status (2026-09-23): snapshot committed; §7703 resumed.**
+`6e3cdc9` preserves the working admission/transport/compiling oracle slice AND
+the three failing proof tests on `claude/checkpoint-0-integration`. Dev has
+authorized one proof-only round with assertions unchanged. Keep translating
+§7703 on the narrowed domain with R5 proof obligations open; unclosed proofs
+do not stop unrelated translation. If a breaker repeats, obtain Fable's
+design-flaw review of the obligation, not a fourth proof attempt. The same
+isolated oracle context is resumed; no later section has been dispatched.
+
+H4 grounding stays separately held. Dev has NOT accepted an amendment. The
+fresh retained original-call trace confirms purpose_(payment_2015_1,Purpose)
+has its event bound; the SECOND split_string reads free Service_event and
+raises. See `docs/consult/evidence/h4-bound-goal-2026-09-23/`. No alternative
+grounder is installed. A-017/A-019 remain proposal/correction only. Neither
+partial translation nor passing transport checks establish original round
+trips, parity or Checkpoint 1. Full pre-round proof goals are retained in
+`docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt`.
 
 The successful pre-dispatch preparation follows:
 Dev authorized continuation after the prior circuit-breaker stop. Q-016/A-016
@@ -78,23 +86,27 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 ## Exact human deliverables for Checkpoint 1
 
-### New Phase 1 stop — owner direction required
+### H4 finding — remedy not accepted; proof continuation authorized
 
-- H4.2's first-argument-only grounding mode fails on the original purpose rule
-  in tax_case_33. Approve an exact amended procedure only after its required
+- The required bound-call diagnostic is complete: the original purpose rule
+  in tax_case_33 fails in its second split with its first event already bound.
+  No grounder fix for an unbound first argument is indicated by this evidence.
+  An exact amendment may now be proposed, not installed. Approve it only after its required
   argument domains, ordering/multiplicity and H2/A3 wildcard preservation are
   stated and justified. The builder stages any protected-artifact draft under
   docs/contracts; Dev installs/re-pins it. H4.3 stays unchanged unless Dev
   explicitly chooses otherwise; a global/infinite-relation criterion is not
   an existing requirement. A-017/A-019 and P-GROUND2 are proposals/review,
   not an installed remedy or a measured corpus-wide candidate audit.
-- Authorize a proof-only restart after the new §7703 test circuit breaker,
-  with the exact three assertions unchanged. A-018 is an untested diagnostic
-  plan. A change to shared semantics, test expectations or production guards
-  is not authorized by that restart. Keep R5/recursive dependencies open.
+- The §7703 proof-only restart is authorized, with the exact three assertions
+  unchanged. A-018 is a diagnostic plan, not proof evidence. No change to
+  shared semantics, expectations or production guards is authorized. Keep
+  unproved goals/failing tests visible and continue §7703 translation with
+  R5/recursive dependencies explicit. A repeated breaker requires Fable
+  design-flaw review of the obligation rather than another proof attempt.
 
 No new A/WIRE choice, Checkpoint 0 sign-off or parity-meter implementation is
-requested. Both contexts are stopped; later sections have not been dispatched.
+requested. Only H4-dependent work is held; later sections have not been dispatched.
 
 No further artifact was required at Phase 1 entry. Dev has now resolved the two
 owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those
