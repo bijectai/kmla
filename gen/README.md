@@ -21,3 +21,11 @@ The corpus manifest and coverage report must distinguish records from complete
 distinct household values and original cases, as specified in `Interface/WIRE.md`.
 A target/argument change can add a record without adding a household. No count or
 same-birthday filtering relaxes the 376-original, ≥20-hit or mutation gates.
+
+V10 is an **admission/validity boundary**, never a post-output population filter.
+Construction must respect it before either engine is run. If construction fails
+the approved predicate, retain a diagnostic and keep the attempt separate from
+the admitted population. An admitted/frozen record is never dropped because it
+mismatches, times out, raises, or later exposes a validity implementation defect.
+Those outcomes halt/report the affected run. This contract confirmation does
+not assert that a production generator or V10 decider has been implemented.
