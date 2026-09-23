@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "harness"))
 import runtime
@@ -157,6 +157,114 @@ class RuntimeTests(unittest.TestCase):
         self.assertNotIn("-e", argv)  # no silent timezone override
         self.assertEqual(calls[1][0][:3], ["docker", "rm", "--force"])
         self.assertEqual(calls[1][0][3], argv[argv.index("--name") + 1])
+
+
+class MountBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="kmla-mount-test-")
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name).resolve()
+        self.human = self.root / "human"
+        self.corpus = self.human / "sara/sara"
+        self.corpus.mkdir(parents=True)
+        self.sentinel = self.human / "sentinel"
+        self.sentinel.write_text("stand-in only\n")
+        self.harness = self.root / "harness"
+        self.harness.mkdir()
+        self.out = self.root / "output"
+        self.out.mkdir()
+        scope = patch.object(runtime, "HERE", self.harness)
+        scope.start()
+        self.addCleanup(scope.stop)
+
+    def reject(self, mounts):
+        log = Mock()
+        with self.assertRaises(runtime.RuntimeFailure):
+            runtime.container(log, "sha256:pin", ["true"], mounts=mounts)
+        log.run.assert_not_called()
+        self.assertEqual(self.sentinel.read_text(), "stand-in only\n")
+
+    def test_readonly_protected_mounts_and_disjoint_writable_output(self):
+        log = Mock()
+        log.run.return_value = ({"exit": 0, "timed_out": False}, b"", b"")
+        runtime.container(log, "sha256:pin", ["true"], mounts=[
+            (self.human, "/human", True), (self.corpus, "/corpus", True),
+            (self.out, "/out", False)])
+        argv = log.run.call_args.args[0]
+        for source, target, suffix in ((self.human, "/human", ",readonly"),
+                                      (self.corpus, "/corpus", ",readonly"),
+                                      (self.out, "/out", "")):
+            self.assertIn(f"type=bind,src={source},dst={target}{suffix}", argv)
+
+    def test_full_human_mount_is_mandatory_even_for_corpus_only_runner(self):
+        mounts = runtime.checked_mounts([(self.corpus, "/corpus", True)])
+        self.assertIn((self.human, Path("/human"), True), mounts)
+        self.assertIn((self.human, Path("/human"), True), runtime.checked_mounts([]))
+        self.reject([(self.corpus, "/human", True)])
+        self.reject([(self.out, "/human", True)])
+        self.reject([(self.out, "/human/parity", True)])
+
+    def test_writable_protected_root_child_file_and_ancestor_are_rejected(self):
+        for source in (self.human, self.corpus, self.sentinel, self.root):
+            with self.subTest(source=source):
+                self.reject([(source, "/elsewhere", False)])
+
+    def test_symlink_aliases_cannot_hide_protected_sources(self):
+        for source in (self.human, self.corpus, self.sentinel, self.root):
+            alias = self.out / "alias"
+            alias.symlink_to(source)
+            self.reject([(alias, "/elsewhere", False)])
+            alias.unlink()
+
+    def test_hardlink_aliases_cannot_hide_protected_files(self):
+        alias = self.out / "alias"
+        os.link(self.sentinel, alias)
+        self.reject([(alias, "/elsewhere", False)])
+        self.reject([(self.out, "/out", False)])
+
+    def test_host_directory_identity_accounts_for_case_aliases(self):
+        alias = self.root / "HUMAN"
+        if alias.exists():
+            self.assertTrue(alias.samefile(self.human))
+            self.reject([(alias, "/elsewhere", False)])
+            self.reject([(alias / "sentinel", "/elsewhere", False)])
+        else:
+            # On case-sensitive hosts this is a distinct, unprotected tree.
+            alias.mkdir()
+            self.assertIn((alias, Path("/out"), False),
+                          runtime.checked_mounts([(alias, "/out", False)]))
+
+    def test_writable_protected_destinations_are_rejected(self):
+        for target in ("/human", "/human/parity", "/corpus", "/corpus/cases"):
+            with self.subTest(target=target):
+                self.reject([(self.out, target, False)])
+
+    def test_readonly_source_aliases_and_destination_shadows_are_rejected(self):
+        child = self.harness / "nested"
+        child.mkdir()
+        for source, target in ((self.harness, "/alias"), (child, "/alias"),
+                               (self.out, "/harness/nested"), (self.out, "/harness")):
+            for reverse in (False, True):
+                mounts = [(self.harness, "/harness", True), (source, target, False)]
+                self.reject(list(reversed(mounts)) if reverse else mounts)
+
+    def test_writable_parent_destination_cannot_cover_readonly_child(self):
+        self.reject([(self.harness, "/data/harness", True), (self.out, "/data", False)])
+
+    def test_mount_option_injection_and_noncanonical_targets_are_rejected(self):
+        for target in ("/out,readonly=false", '/out"', "/out\n", "/out\x00",
+                       "relative", "/data/../human", "//human", "/out/", "/"):
+            with self.subTest(target=target):
+                self.reject([(self.out, target, False)])
+        for name in ('bad,source', 'bad"source', 'bad\nsource'):
+            source = self.out / name
+            source.mkdir()
+            self.reject([(source, "/fixture", True)])
+
+    def test_duplicate_targets_and_non_boolean_modes_are_rejected(self):
+        self.reject([(self.human, "/human", True), (self.out, "/human", True)])
+        for readonly in (None, 0, 1, "false", "true"):
+            self.reject([(self.human, "/human", readonly)])
 
 
 class CorpusTests(unittest.TestCase):

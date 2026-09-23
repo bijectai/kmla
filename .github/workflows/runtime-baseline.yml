@@ -3,6 +3,7 @@ name: Native runtime baseline
 on:
   push:
   pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled, edited]
   workflow_dispatch:
 
 permissions:
@@ -21,8 +22,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Protected-artifact manifest
+        run: python3 -B scripts/human_manifest.py verify
+
+      - name: Require installed manifest records
+        run: |
+          test -s human/HASHES.txt
+          LC_ALL=C grep -Eq '^[0-9a-f]{64}  ' human/HASHES.txt
+
       - name: Runtime regression tests
-        run: python3 -B -m unittest discover -s scripts -p 'test_runtime*.py' -v
+        run: |
+          python3 -B scripts/test_runtime.py -v
+          python3 -B scripts/test_runner_boundary.py -v
 
       - name: Build and record the approved native amd64 runtime
         timeout-minutes: 17
@@ -33,6 +44,14 @@ jobs:
           mkdir -p "$RUN_DIR"
           bash harness/pin_runtime.sh --require-native --build-timeout 900 \
             --out "$RUN_DIR/RUNTIME.json" kmla-swipl:7.2.3
+
+      - name: Inspect the actual read-only runner boundary
+        env:
+          RUN_DIR: ${{ runner.temp }}/runtime-baseline
+        run: |
+          python3 -B scripts/test_runner_boundary.py \
+            --probe-runtime "$RUN_DIR/RUNTIME.json" \
+            --evidence "$RUN_DIR/RUNNER_BOUNDARY.json"
 
       - name: Assert 376 clean outcomes including two known vacuous cases
         timeout-minutes: 22

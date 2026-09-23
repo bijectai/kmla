@@ -1,13 +1,13 @@
 name: verify
 
-# Implements the CI half of docs/PLAN.md section 2: "human/HASHES.txt pins every
-# file. CI fails on any drift. Astra cannot merge a PR that touches human/."
-# Neither half was enforced anywhere before this workflow existed.
+# P-BUNDLE: human/ is tracked in this repository. CI detects manifest drift
+# and PR changes without the owner label; it is not a branch-protection rule.
 
 on:
   push:
     branches: ["**"]
   pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled, edited]
 
 permissions:
   contents: read
@@ -19,23 +19,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # human/ is an owner-owned submodule; without this the manifest check
-          # has nothing to verify and would pass vacuously.
-          submodules: recursive
+          persist-credentials: false
           fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Report whether the protected tree is present
+      - name: Protected-artifact manifest
+        run: python3 -B scripts/human_manifest.py verify
+
+      - name: Require installed manifest records
         run: |
-          if [ -d human ] && [ -n "$(ls -A human 2>/dev/null)" ]; then
-            echo "human/ present: $(find human -type f | wc -l) files"
-          else
-            echo "::warning::human/ is absent or empty. The manifest check cannot"
-            echo "::warning::verify anything. Configure the submodule (Checkpoint 0, item 5)."
-          fi
+          test -s human/HASHES.txt
+          LC_ALL=C grep -Eq '^[0-9a-f]{64}  ' human/HASHES.txt
 
       - name: Phase 0 acceptance checks
         # The verifier treats a missing/empty protected manifest as a hard
@@ -43,11 +40,34 @@ jobs:
         # here without making this workflow rebuild the separately pinned image.
         run: bash scripts/verify_phase0.sh .
 
-      - name: Protected-artifact manifest
-        run: python3 -B scripts/human_manifest.py verify
-
       - name: Verifier enforcement regressions
         run: python3 -B scripts/test_verify_phase0.py
+
+      - name: Runner boundary regressions
+        run: |
+          python3 -B scripts/test_runtime.py -v
+          python3 -B scripts/test_runner_boundary.py -v
+
+      - name: Install the pinned Lean toolchain
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.elan/bin:$PATH"
+          if ! command -v elan >/dev/null 2>&1; then
+            curl -fsSL https://elan.lean-lang.org/elan-init.sh | \
+              sh -s -- -y --default-toolchain none --no-modify-path
+          fi
+          test -s lean-toolchain
+          toolchain="$(cat lean-toolchain)"
+          elan toolchain install "$toolchain"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          echo "ELAN_TOOLCHAIN=$toolchain" >> "$GITHUB_ENV"
+          elan run "$toolchain" lean --version
+
+      - name: Shared Interface guards
+        run: bash scripts/check_interface.sh
+
+      - name: Query-time guards
+        run: bash scripts/check_query_time.sh
 
   protect-human:
     name: human/ is read-only to the assistant
@@ -56,29 +76,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - name: Refuse a pull request that modifies human/
         env:
           BASE: ${{ github.event.pull_request.base.sha }}
           HEAD: ${{ github.event.pull_request.head.sha }}
-          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+          OWNER_HUMAN_UPDATE: ${{ contains(github.event.pull_request.labels.*.name, 'owner-human-update') }}
         run: |
           set -euo pipefail
-          changed=$(git diff --name-only "$BASE" "$HEAD" -- human human/ || true)
-          if [ -z "$changed" ]; then
+          # Compare the PR contribution from its merge base; --no-renames also
+          # catches moves out of human/. An unavailable ref must fail closed.
+          if git diff --quiet --no-ext-diff --no-renames "$BASE...$HEAD" -- human; then
             echo "No path under human/ is touched."
             exit 0
+          else
+            status=$?
+            if [ "$status" -ne 1 ]; then
+              echo "::error::Cannot determine protected changes (git exit $status)."
+              exit "$status"
+            fi
           fi
           echo "This pull request modifies the protected tree:"
-          printf '  %s\n' $changed
-          # The owner updates the pinned submodule commit and the manifest; that
-          # is the one legitimate reason for human/ to change in a pull request.
-          case ",$LABELS," in
-            *,owner-human-update,*)
-              echo "Label 'owner-human-update' is present; allowing."
-              exit 0 ;;
-          esac
+          git diff --no-ext-diff --no-renames --name-only "$BASE...$HEAD" -- human
+          # This is the existing P-BUNDLE owner-label exception. A label never
+          # bypasses the independent manifest-verification job.
+          if [ "$OWNER_HUMAN_UPDATE" = true ]; then
+            echo "Label 'owner-human-update' is present; allowing."
+            exit 0
+          fi
           echo "::error::human/ is owner-owned and read-only to the assistant"
           echo "::error::(docs/PLAN.md section 2, AGENTS.md). If this change is yours,"
           echo "::error::add the 'owner-human-update' label to this pull request."

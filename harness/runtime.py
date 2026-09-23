@@ -7,7 +7,7 @@ import hashlib
 import json
 import math
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import platform
 import re
 import signal
@@ -111,16 +111,86 @@ class Commands:
         return json.loads(out)
 
 
+def checked_mounts(mounts):
+    """Reject writable aliases of protected/read-only sources before Docker runs.
+
+    The host checkout and daemon remain trusted (P-BUNDLE is detection-only).
+    No protected file contents are read and no write probe is attempted.
+    """
+    protected = (HERE.parent / "human").resolve()
+    if not protected.is_dir():
+        raise RuntimeFailure(f"missing protected tree: {protected}")
+    checked = []
+    targets = set()
+    for source, target, readonly in mounts:
+        source = Path(source).resolve(strict=True)
+        target = str(target)
+        destination = PurePosixPath(target)
+        if (any(c in str(source) + target for c in ',"\r\n\x00') or
+                not destination.is_absolute() or str(destination) != target or
+                ".." in destination.parts or target == "/" or target.startswith("//")):
+            raise RuntimeFailure("Docker mount paths must be absolute, canonical and contain no CSV syntax")
+        if type(readonly) is not bool:
+            raise RuntimeFailure("Docker mount readonly must be a boolean")
+        if target in targets:
+            raise RuntimeFailure(f"duplicate Docker mount destination: {target}")
+        targets.add(target)
+        checked.append((source, destination, readonly))
+
+    human_target = PurePosixPath("/human")
+    if "/human" in targets:
+        if (protected, human_target, True) not in checked:
+            raise RuntimeFailure("/human must expose the complete protected tree read-only")
+    else:
+        checked.insert(0, (protected, human_target, True))
+
+    def overlaps(a, b):
+        return a == b or a in b.parents or b in a.parents
+
+    def source_overlaps(a, b):
+        # resolve() does not normalize case on case-insensitive host volumes.
+        return (overlaps(a, b) or any(a.samefile(p) for p in (b, *b.parents)) or
+                any(b.samefile(p) for p in a.parents))
+
+    sources = [protected] + [s for s, _, ro in checked if ro]
+    destinations = [PurePosixPath("/human"), PurePosixPath("/corpus")]
+    destinations += [t for _, t, ro in checked if ro]
+    for source, target, readonly in checked:
+        if human_target in target.parents:
+            raise RuntimeFailure(f"mount would shadow part of the protected tree: {target}")
+        if readonly:
+            continue
+        if any(source_overlaps(source, p) for p in sources):
+            raise RuntimeFailure(f"writable mount overlaps a protected/read-only source: {source}")
+        if any(overlaps(target, p) for p in destinations):
+            raise RuntimeFailure(f"writable mount overlaps a protected/read-only destination: {target}")
+        # A second hard link in an output tree could expose protected bytes via
+        # an unrelated host path. Only writable trees are inspected, by metadata.
+        def check_links(path):
+            if path.is_file() and path.stat().st_nlink > 1:
+                raise RuntimeFailure(f"hard-linked file in writable mount: {path}")
+
+        check_links(source)
+        if source.is_dir():
+            def walk_error(error):
+                raise error
+
+            for directory, _, files in os.walk(source, onerror=walk_error, followlinks=False):
+                for name in files:
+                    path = Path(directory) / name
+                    if not path.is_symlink():
+                        check_links(path)
+    return checked
+
+
 def container(log, image, command, *, mounts=(), timeout=60):
+    mounts = checked_mounts(mounts)
     name = "kmla-runtime-" + uuid.uuid4().hex
     argv = ["docker", "run", "--rm", "--name", name, "--platform", PLATFORM,
             "--network", "none", "--read-only", "--tmpfs", "/tmp",
             "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
             "--user", f"{os.getuid()}:{os.getgid()}", "--workdir", "/corpus"]
     for source, target, readonly in mounts:
-        source = str(Path(source).resolve())
-        if "," in source:
-            raise RuntimeFailure("Docker mount paths containing commas are unsupported")
         argv += ["--mount", f"type=bind,src={source},dst={target}" + (",readonly" if readonly else "")]
     argv += ["--entrypoint", command[0], image, *command[1:]]
     result, out, err = log.run(argv, timeout=timeout, check=False)
