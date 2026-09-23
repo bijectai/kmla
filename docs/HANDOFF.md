@@ -2,6 +2,17 @@
 
 ## Authorization and entry identity
 
+**H4 update (2026-09-23): candidate review and conditional implementation are
+authorized, not protected installation.** Dev accepts the bound-call finding.
+The three prior commits were on origin at 866f519 before Q-020 was sent. Fable
+endorsed it in A-020, with no missing choice/counterexample and four clarifications
+now folded into the staged draft. The isolated harness context may implement
+and measure both H4.3 checks for every one of the 376 originals, plus traversal
+cost. No raise
+fallback, exclusion, source repair or inferred completeness. Only Dev installs
+and re-pins the protected amendment; no checkpoint is passed. The prior
+permission hold below is historical and superseded by explicit authorization.
+
 **Current dispatch status (2026-09-23): §7703 bounded continuation verified.**
 `6e3cdc9` preserves the working admission/transport/compiling oracle slice AND
 the three failing proof tests on `claude/checkpoint-0-integration`. Dev has
@@ -96,14 +107,14 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 ## Exact human deliverables for Checkpoint 1
 
-### H4 finding — remedy not accepted; proof continuation authorized
+### H4 candidate — reviewed and authorized for measurement, not installed
 
 - The required bound-call diagnostic is complete: the original purpose rule
   in tax_case_33 fails in its second split with its first event already bound.
   No grounder fix for an unbound first argument is indicated by this evidence.
-  An exact amendment may now be proposed, not installed. Approve it only after its required
-  argument domains, ordering/multiplicity and H2/A3 wildcard preservation are
-  stated and justified. The builder stages any protected-artifact draft under
+  Dev approved the exact staged candidate for Fable review and conditional
+  implementation; A-020 endorses it with four explicit clarifications now in
+  the draft. The builder stages any protected-artifact draft under
   docs/contracts; Dev installs/re-pins it. H4.3 stays unchanged unless Dev
   explicitly chooses otherwise; a global/infinite-relation criterion is not
   an existing requirement. A-017/A-019 and P-GROUND2 are proposals/review,
@@ -117,14 +128,16 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 That proof round is now complete: all three assertions close without a repeated
 breaker. There is no further owner choice for these proofs. The H4 candidate
-is in `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`, unapproved and unimplemented;
-Q-020's external review was denied by the permission reviewer before execution.
-Explicit permission to send it to Fable/Claude and permit a consult answer is
-still required. No existing answer file was edited and no external review result
-is inferred from that denial.
+is in `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`, reviewed and authorized for
+implementation/verification only. Q-020 completed successfully after Dev's
+explicit permission; the prior sandbox denial is historical. No existing answer
+file was edited. Only Dev installs the amendment into human/DECISIONS.md and
+re-pins after reviewing the measured findings; endorsement is not preservation.
 
 No new A/WIRE choice, Checkpoint 0 sign-off or parity-meter implementation is
-requested. Only H4-dependent work is held; later sections have not been dispatched.
+requested. H4-dependent candidate implementation may proceed; a new design flaw
+halts the affected work for Dev rather than authorizing a workaround. Later
+sections have not been dispatched.
 
 No further artifact was required at Phase 1 entry. Dev has now resolved the two
 owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those

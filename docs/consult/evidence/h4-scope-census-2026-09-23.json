@@ -1,0 +1,14 @@
+{
+  "scope": "Parsed original case rules; input-variable identity, not dataflow or completeness analysis",
+  "original_cases": 376,
+  "split_string_calls": 16,
+  "non_first_argument_variable_splits": [
+    {
+      "case": "tax_case_33.pl",
+      "clause_location": "human/sara/sara/cases/tax_case_33.pl:29:1",
+      "split_location": "human/sara/sara/cases/tax_case_33.pl:30:5",
+      "clause": "purpose_(Payment_event,Service_event) :- split_string(Payment_event,\"_\",\"\",[Xp,Yp,Zp]),\n    split_string(Service_event,\"_\",\"\",[Xs,Ys,Zs]),\n    Xp==\"payment\",Xs==\"workforalice\",Yp==Ys,Zp==Zs.",
+      "source_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0"
+    }
+  ]
+}

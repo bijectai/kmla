@@ -2,6 +2,33 @@
 
 ## Current phase
 
+2026-09-23 (Q-020 review complete): Fable endorses the narrow H4 candidate as
+explicit, with no missing owner choice or counterexample. Its four clarifications
+are now folded into docs/contracts/H4_BOUND_PURPOSE_DRAFT.md: replacement rather
+than double traversal, unary provenance, explicit asymmetric deduplication and
+fail-closed exact-rule recognition. Implementation/verification is authorized
+under Dev's conditional approval, not protected installation or preservation.
+Fable's only tracked-scope writes are A-020 and an appended DECISION_LOG review;
+the protected manifest verifies and the draft/Q/STATE/HANDOFF were not changed
+by the consult. Both H4.3 checks over 376 originals and traversal cost are still
+unmeasured. The isolated harness context is resumed; it cannot inspect Oracle/.
+Checkpoint 1 is not passed. Earlier permission/review holds below are historical.
+
+2026-09-23 (H4 candidate review authorized): Dev accepts the exact bound-call
+finding and approves the staged tax_case_33-only candidate for Fable review,
+then implementation/verification only if Fable endorses it as explicit. Any
+missing choice or counterexample goes to Dev before implementation. Both H4.3
+checks must be reported for all 376 originals and traversal cost measured;
+no fallback, exclusion, source repair or global-completeness claim. Installation
+and re-pin remain Dev's. Human/ is unchanged and the manifest verifies.
+The explicitly requested three commits (6e3cdc9, f99fafe, 866f519) were pushed
+before consultation; the remote branch tip is verified at
+866f5196fc3c645ba393a1b7f3e6e8048631836c. Q-020's CLI invocation is now explicitly
+authorized, with Fable writes confined to docs/consult/ and docs/DECISION_LOG.md.
+No implementation has started pending its answer. Checkpoint 1 stays unpassed.
+Pre-existing untracked scripts/__pycache__/inventory_cases.cpython-314.pyc is
+left untouched and is not part of this work.
+
 2026-09-23 (bounded continuation verified): all three original §7703 proof
 obligations now kernel-check with their statements and fixtures unchanged.
 The isolated lane also added the source `(b)` composition and root statute
@@ -387,9 +414,16 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Pending permission: Q-020 external design review
+### Resolved: Q-020 permission and review gate
 
-The exact bound-call evidence was reported to Dev before drafting Q-020's
+Dev explicitly authorized this payload/destination/consult-answer scope after
+the prior rejection. The three commits were pushed first; Q-020 completed
+successfully and A-020 endorsed candidate implementation/verification with four
+clarifications now in the staged draft. There is no active consultation or
+permission hold. Neither H4.3 preservation nor installation is established.
+The historical permission-denial evidence below is preserved, not active.
+
+Historical pre-authorization record: the exact bound-call evidence was reported to Dev before drafting Q-020's
 tax_case_33-only candidate exception. It is not an installed amendment and
 neither H4.3 preservation nor its full traversal cost is claimed. The consult
 did not start: the permission reviewer rejected sending repository excerpts
@@ -473,8 +507,11 @@ be explicit; H2/A3 wildcard representation cannot be silently expanded away.
 A-019 appends the factual correction. Nothing in the consult answers accepts
 a remedy or changes H4.3: keep its existing re-grounding and original-query
 preservation checks unless Dev explicitly amends them. An exact revised H4.2
-procedure still needs a draft, domain/order justification and owner approval;
-no completeness or cost claim for an unaudited candidate is accepted here.
+procedure needed a draft, domain/order justification and owner approval at that
+time. Dev has since conditionally authorized the narrow staged candidate and
+A-020 has endorsed its implementation with clarifications. Only the candidate
+implementation/review hold is cleared; both H4.3 checks and cost remain to be
+measured, and protected installation/re-pin remain Dev's.
 
 ### Resolved 2026-09-23: query-admission proof circuit breaker (2026-09-22)
 

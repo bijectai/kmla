@@ -853,3 +853,41 @@ established, the empty-list exception remains prohibited and would now drop the
 whole declared family of 157 pairs, the wildcard question in the body stays open
 with `Pat.wild` preserved under H2/A3 until Dev says otherwise, and both H4.3
 checks must be re-run over all 376 rather than over `tax_case_33` alone.
+
+### Review appended 2026-09-23 (Q-020 / A-020) — candidate reviewed, not installed
+
+Bodies above unedited. This records a **review**, and separates three things that
+must not be conflated.
+
+**1. The finding is now sharper than P-GROUND2's body states, and in Dev's
+favour.** The raise is not caused by an unbound first argument. With the original
+goal `findall(Purpose,purpose_(payment_2015_1,Purpose),Purposes)` the first
+`split_string/4` accepts the ground atom and binds `Xp="payment"`, `Yp="2015"`,
+`Zp="1"`; the **second** `split_string/4`, on the free `Service_event`, raises
+`error(instantiation_error,context(system:split_string/4,_))`. So H4.2's
+prescribed mode is satisfied and the call still raises, which is the evidence Dev
+required before entertaining an amendment.
+
+**2. Fable's review of `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`: endorsed as
+explicit enough to implement and verify, subject to four clarifications** that
+change no domain, order or promise and therefore need no new owner decision —
+stated in full in `docs/consult/A-020.md` §3: that the two-input call *replaces*
+rather than supplements step (ii) for this predicate in this file; that step (i)
+must retain per-unary-predicate provenance, since the candidate consumes the
+`service_/1` projection rather than the merged universe; that the inner-domain
+deduplication and the undeduplicated outer event traversal are deliberately
+asymmetric; and that the rule is keyed so the exception fails closed if it does
+not match exactly one clause in the file of that digest. No missing owner choice
+and no counterexample to this tax_case_33-scoped candidate were found.
+
+**3. What this review is not.** Not installed text, not an owner acceptance, not
+an H4.3 result, not a cost measurement, not a claim of preservation or of global
+completeness, and not a Checkpoint 1 outcome. Installation into
+`human/DECISIONS.md` and the re-pin remain Dev's alone. The candidate's promise
+is exactly H4.3(a) and (b) on that case, measured, with a raise, nontermination or
+failed check remaining a finding — never an empty result, a skipped original, a
+broader domain or a source repair. Both H4.3 checks and the traversal cost for all
+376 originals remain open verification obligations.
+
+The separate oracle lane is unaffected by this entry and remains under Dev's
+authorization for continued §7703 translation and one proof-only round.

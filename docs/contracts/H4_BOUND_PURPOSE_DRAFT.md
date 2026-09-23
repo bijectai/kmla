@@ -1,8 +1,15 @@
-# H4.2 bound-purpose exception — unapproved draft
+# H4.2 bound-purpose exception — reviewed candidate
 
-Status: **DRAFT ONLY. Not installed, not implemented, not reviewed by Fable.**
-Q-020's external review was blocked by the permission reviewer. Dev has not
-accepted this proposal. H4.2/H4.3 remain operative as installed in human/.
+Status: **CANDIDATE ONLY. Reviewed in A-020; implementation/verification authorized;
+not installed or certified.**
+On 2026-09-23 Dev approved this exact candidate for Fable review, then
+implementation and verification if Fable endorses it as explicit. A missing
+choice or counterexample must go to Dev before implementation. The prior
+consultation permission block is cleared by explicit owner authorization.
+The proposed text below incorporates A-020 §3's four clarifications without
+changing the domain, order or preservation criterion. Only Dev installs
+human/DECISIONS.md and re-pins; candidate approval is not installed text or
+round-trip/CP1 acceptance.
 
 ## Finding that precedes this proposal
 
@@ -29,26 +36,36 @@ tax_case_33.pl:29–31, SHA-256
 ## Proposed appended H4.2 text
 
 For the single `purpose_/2` rule at lines 29–31 of the pinned original
-`tax_case_33.pl`, step (ii) binds both inputs. Keep the first-position event
-traversal from step (ii). For each such event, traverse the ground `service_/1`
+`tax_case_33.pl`, the two-input call replaces, rather than supplements, the
+single-input call of step (ii) for this predicate in this file. The raising
+single-input call is not made and the predicate is not traversed twice.
+Keep the first-position event traversal from step (ii), without deduplicating
+it: repeated unary declarations retain repeated outer iterations. Step (i)
+retains each unary predicate's provenance, not only a merged event universe.
+For each such event, traverse the ground `service_/1`
 terms obtained in step (i), once per distinct tagged term in first-occurrence
 order, and execute the original `purpose_(Event,Service)` with both arguments
 bound. Append every successful proof of that call in interpreter order; never
-deduplicate its proof results. This second-input domain traversal is scoped
+deduplicate its proof results. Only the inner candidate domain is deduplicated;
+neither the outer traversal nor successful proofs are deduplicated.
+This second-input domain traversal is scoped
 to that exact original rule, not a replacement for other purpose clauses.
 Bodyless wildcard facts retain H2/A3 patterns and shared variable identity;
 no wildcard is expanded by this exception. All other H4.2 steps and H4.3(a,b)
 stay unchanged. A raise, nontermination or failed H4.3 check remains a finding,
 never an empty result, skipped original, broader candidate domain or source
-repair. Report both H4.3 checks for every one of the 376 originals before
-claiming round-trip completion.
+repair. Recognize the exception by the pinned file digest above and the unique
+matching `purpose_/2` clause; require exactly one match and halt on a mismatch,
+rather than widening the exception. Report both H4.3 checks for every one of
+the 376 originals before claiming round-trip completion.
 
 ## What approval would and would not settle
 
 This explicitly proposes the second-input domain and its traversal order;
-neither is silently treated as already signed. Domain deduplication applies
+neither is silently treated as installed signed text. Domain deduplication applies
 only to that proposed input enumeration, not fact lists or proof results.
-Approval would permit implementing and testing this candidate. It would not
+Dev's conditional authorization and A-020's endorsement permit implementing and
+testing this candidate. They do not
 certify its preservation, authorize a fallback on failure, exclude an original,
 change comparison/canonicalization, or pass Checkpoint 1.
 
