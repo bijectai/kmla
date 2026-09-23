@@ -39,8 +39,8 @@ and its heading still reads PENDING.
 | P-RUNTIME | Debian's `swi-prolog-nox 7.2.3+dfsg-6`; identity is the `RUNTIME.json` record; native-amd64 CI baseline; three-leg archival | **ACCEPTED** | Installed in `docs/PROTOCOL.md` B001 **and** `docs/contracts/RUNTIME.md`. Acceptance is not evidence that vendoring, GHCR publication, archival deposit or native CI has happened |
 | P-PARITY5 | The five parity policies: directory contents, non-regular entries, three-valued report, IDs, aliasing | **ACCEPTED** | Installed in `docs/contracts/PARITY.md`; Dev's complete directory procedure below closes A-007's escalation |
 | P-BUNDLE | `human/` stays a directory in the parent repo; no submodule | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `STATE.md` |
-| P-WIRE | Release PARITY.md's producer block; its stated condition is discharged | **PROPOSED** | — ; blocks nothing else, see A-008 |
-| P-R5CYCLE | R5's termination argument is false; a §152(c)(2)(B) sibling cycle diverges on a `Valid` input | **PROPOSED**; its proposed V10 and fuel bound are **WITHDRAWN** as insufficient (P-R5CYCLE-A) | — ; R5/R9 and H5 are Dev's. Finding stands, remedy is open. The R5 group's oracle work is halted |
+| P-WIRE | Release producer block, record granularity and byte handling | **ACCEPTED** (Dev, 2026-09-22) | `docs/contracts/PARITY.md`, `Interface/WIRE.md`, PROTOCOL; concrete input codec/fixtures remain implementation work |
+| P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; protected amendment staged for Dev's installation/re-pin; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 
 `INSTALLED` entries record an action taken, not a proposal.
@@ -664,3 +664,64 @@ work on `claude/checkpoint-0-integration` before any further edits. This was
 done as `44d2a96`, including the original acceptance output, owner decision text
 and runtime history, with only the owner's Git attribution. Nothing was merged
 and no path under `human/` was modified.
+
+## 2026-09-22 — ACCEPTED (Dev, chat) — P-WIRE and refined P-R5CYCLE Option A
+
+Owner directive, verbatim:
+
+> **A**, with two conditions: close the query-year coverage gap in `Interface/` before any R5-group termination proof is claimed, and have `gen/` never mint multibirth persons, multi-date births, or same-birthday eligible pairs. I accept that A excludes same-birthday dependent pairs from the graded domain; record it as a stated limitation. Install the H5 conjunct in both `Valid` and `ValidStip`; I'll re-pin the manifest.
+> **WIRE**, including both handling proposals. Report record and distinct-household counts separately as proposed.
+> Neither word signs off Checkpoint 1.
+
+This acceptance selects the refined A in
+`docs/contracts/P_R5CYCLE_OPTIONS_DRAFT.md`, not the withdrawn A-009 V10 or its
+2·persons+2 bound. The prior proposed entries and immutable consult answers are
+historical and remain unchanged. The original R5 defect stands.
+
+A requires distinct birth-event and start-day functionality plus strict DOB or
+birthless structural descent for every original K-and-c3 eligible pair, across
+all 201 years 1900–2100, in both Valid and ValidStip. This scope was explicit in
+the approved draft. Its stated limitations include same-birthday eligible
+dependent pairs and violations in another admitted year; there is no global
+ban on unrelated equal birthdays. Retained pinned evidence covers all 376
+originals and 75,576 year-indexed K-and-c3 graphs with zero A exclusions, and
+rejects both preserved witnesses. It is not a full validity/parity certificate.
+
+The builder installs shared predicates and the checked query-time boundary;
+Dev installs the staged `DECISIONS_R5_A_AMENDMENT.md` and re-pins human. The
+production K/c3 universal-decrease decider, actual wrapper/mode/stipulation coverage, finite
+universe and kernel counter-adequacy proofs remain implementation obligations.
+Test-only guard instances and boundary types cannot certify them. No R5/R8
+termination theorem or Checkpoint 1 pass is recorded.
+
+WIRE installs the exact release spans and both packaging proposals in PARITY,
+with one shared byte specification in Interface. The remaining lossless input
+codec must cite field authorities and fix bytes/fixtures before producer use;
+undetermined semantic fields stay blocked. Count records, distinct complete
+households and original cases separately in summaries/manifests/coverage.
+≥10k counts records; case accuracy, ≥20 arm hits and the admitted-mutant kill
+denominator are unchanged. No new mode, projection or canonicalization.
+
+Q-012/A-012 reviews the implementation boundary; A-013 withdraws its false
+fixed-year/case-year-only premises after checking Q-013's draft/audit evidence.
+Its remaining stipulation-time and failure-path items are existing implementation
+obligations, not new owner choices. No new audit run is owed for the 201-year
+A exclusion result. A separate original-stipulation time measurement is retained
+as coverage evidence, not a theorem or permission to drop an original.
+
+**Implementation review correction (Q-014/A-014):** a finite list of ground
+eligible pairs cannot promise completeness for arbitrary wildcard c2/c3
+stipulations. The builder replaced that initial interface design with required
+`r5AllEligibleDecrease : Household → Year → Bool`, explicitly equivalent in
+both directions to A's universal condition. No default, no conservative rejection
+on unknown, no restriction to household literals. This is a representation
+correction, not an owner domain amendment. Production equivalence and the
+measure's finite-universe proof remain required. The checks do not certify them.
+
+The extra stipulated-time census found `s68_b(alice,2015,250000)` in
+`s151_d_3_B_neg` and `_pos`, with 250000 in canonical s68_b's year position.
+Their actual queries bind 2015, so those heads cannot match the relevant call.
+A-014 confirms no new owner choice follows. Retain the apparent argument
+transposition as a source finding under P-INTENT; never correct/filter the cases.
+The audit's exit 1 and its 150 wildcard time slots remain reported, not a clean
+coverage pass. See `A_WIRE_INSTALLATION_2026-09-22.md` for complete scope.

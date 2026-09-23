@@ -1,0 +1,137 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 1,
+  "domain": [
+    "alice",
+    "halt",
+    "init",
+    "prolog",
+    "s151_b_applies",
+    "statutes"
+  ],
+  "domain_count": 6,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 36,
+  "loaded_clause_counts": [
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 2,
+      "before": 1,
+      "predicate": "s151_b_applies"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "\\+s151_d_5(2000,2018)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 0,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "s151_d_5_neg",
+  "population": "original",
+  "source_sha256": "74d943e8dcaa6f18796f8eda7c6cf2a2129ddc09b46f8b1641a21c90d317f24b",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-9b680a1bbec148be956763692cbaf0c9",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/s151_d_5_neg.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.754592
+  },
+  "birth_events_per_person": [
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "s151_b_applies",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

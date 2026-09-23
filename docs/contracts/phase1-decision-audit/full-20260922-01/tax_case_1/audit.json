@@ -1,0 +1,254 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 22,
+  "domain": [
+    "\"2015-01-24\"",
+    "\"2019-01-01\"",
+    "\"2019-05-05\"",
+    "\"2019-12-31\"",
+    "alice",
+    "alice_employed_in_jail",
+    "alice_goes_to_jail",
+    "alice_is_paid",
+    "alice_is_paid_out_of_jail",
+    "halt",
+    "init",
+    "jail",
+    "jail_is_a_penal_institution",
+    "prolog",
+    "statutes"
+  ],
+  "domain_count": 15,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 225,
+  "loaded_clause_counts": [
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "incarceration_"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 1,
+      "before": 0,
+      "predicate": "payment_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "penal_institution_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "purpose_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "service_"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "tax(alice,2019,0)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 5,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "tax_case_1",
+  "population": "original",
+  "source_sha256": "b690951422271101358a446f0484d93da2cb27c03b6edb07de362726e5bdd82c",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-f9789bbc6cf9478fa457612155fba533",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/tax_case_1.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.933254
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"2015-01-24\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2019-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2019-05-05\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2019-12-31\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_employed_in_jail",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_goes_to_jail",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_is_paid",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_is_paid_out_of_jail",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "jail",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "jail_is_a_penal_institution",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

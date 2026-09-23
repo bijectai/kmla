@@ -32,35 +32,81 @@ verified. Entry commit: `ba1e9206f4bb4cc7067e7bd70a951191b64fa51b`.
    programs. Never expose one lane's implementation to the other to obtain a
    passing comparison. Missing shared decisions stop the affected lane.
 
-The production V7/V8 `OracleGuards` must use real oracle definitions; the Phase 0
-test-only instance is not an implementation. `human/` remains strictly read-only.
+The production V7/V8 guards and V10's exact nonrecursive all-eligible-pairs
+decrease decider must use real definitions; test-only instances are not implementations.
+`human/` remains strictly read-only.
 The meter is invoked only via its CLI in fresh output directories, never read.
 Existing runtime archival obligations remain open and are not erased by sign-off.
 
 ## Exact human deliverables for Checkpoint 1
 
-No further human artifact was required at Phase 1 entry. The first pass has
-since found the specific issues below; development is paused pending review,
-without retracting the Checkpoint 0 sign-off.
+No further artifact was required at Phase 1 entry. Dev has now resolved the two
+owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those
+choices again. Neither acceptance is Checkpoint 1 sign-off.
 
-### Current clarification requests
+### Current owner installation
 
-- Q-008/A-008: approve P-WIRE's replacement of stale pending/blocked producer
-  wording with a lossless codec of the already-approved H1-H6/Interface shape.
-  Confirm the proposed record unit (one household, target and bound-argument
-  tuple) before freezing a corpus. No release or counting-unit change is yet
-  installed. Dev separately authorized the control-character JSON restoration;
-  it is installed and its three black-box observation tests pass.
-- Q-009/Q-010: review the reproduced sibling cycle in the R5 §7703/§152 recursion
-  group. Current child-graph acyclicity does not justify the stated person-count
-  fuel bound. Any new reference-domain/termination rule must be the owner's
-  explicit decision; no rule, truncation or source correction is implemented.
-  A-009's suggested equal-birthday exclusion was withdrawn in A-010: a
-  second diagnostic uses multiple different birth dates per person and reaches
-  the same cycle without any cross-person equal date. A justified replacement
-  domain/termination rule remains open; do not adopt the suggested fuel bound
-  from that incomplete argument. The owner decision is open in content; A-010
-  records the proof obligations, not a replacement approved rule.
+Install `docs/contracts/DECISIONS_R5_A_AMENDMENT.md` in the corresponding H5,
+R5, R8 and R9 sections of `human/DECISIONS.md`, then re-pin the manifest as Dev
+offered. The builder installs no protected file. The amendment preserves the
+selected all-years A and its same-birthday/domain limitations. WIRE release
+wording, record unit and byte/count handling are already installed in
+`docs/contracts/PARITY.md` and `Interface/WIRE.md`; no further WIRE choice is due.
+
+After the owner installs the amendment:
+
+```sh
+python3 -B scripts/human_manifest.py generate > human/HASHES.txt
+python3 -B scripts/human_manifest.py verify
+```
+
+### Builder obligations before an R5 reference or termination claim
+
+- V10 is in both Valid and ValidStip: unconditional distinct birth-event/day
+  uniqueness and strict DOB/birthless descent for every eligible pair in all
+  201 years. Supply the real original K/c3 universal-decrease decider, including
+  wildcard stipulations and all solutions, without prefiltering offending pairs.
+  Prove an iff with the approved quantified condition: conservative false is
+  not allowed. No default exists; that alone cannot certify a production instance.
+  A finite list of ground pairs is inadequate for arbitrary wildcard patterns;
+  the measure's finite universe has its separate proof obligation (A-014).
+- `Interface/QueryTime.lean` ties a checked year to the actual root-year or
+  Workday argument and the exact `r5Years` population. Use it at every relevant
+  wrapper/call site, including query/stipulation values and R8. Complete the
+  typed-argument/mode audit, preserve the existing E2 exclusion, and prove
+  admitted operational calls are covered. The new type alone is not that proof.
+  Failed construction is a reported error, never a reference answer. Do not
+  impose a new V8-at-derived-year requirement through a convenience wrapper.
+- Prove structural-descendant correspondence, finite-person-universe coverage,
+  the strict measure, phase/cycle cut and N+1 branch-counter adequacy with every
+  entry/mode/offset accounted for. The old child-descent argument and A-009's
+  withdrawn 2·persons+2 bound remain invalid; no R5/R8 theorem exists yet.
+- Fix the remaining lossless input-codec field map and cross-language fixtures
+  in Interface before producer use. WIRE does not authorize guessed semantics.
+  Report record/distinct-household/original-case counts separately in run
+  summaries, frozen manifests and coverage reports. The ≥10k unit is records.
+- The future generator must never mint multibirth persons, multi-date births
+  or same-birthday eligible pairs. Its contract is in gen/AGENTS.md; no Phase 2
+  generator has been implemented. It may invoke the real Valid via Interface
+  without inspecting Oracle implementation. The harness retains all originals.
+
+Q-012/A-012 and Q-013/A-013 review this boundary. A-013 withdraws the mistaken
+fixed-year/case-year-only claims: both the approved draft and retained audit
+already cover all 201 years. It confirms the remaining coverage work is not a
+new owner choice. Any actually uncovered original is still a finding, never
+silently filtered.
+
+The additional stipulated-time census is retained in
+`docs/contracts/A_WIRE_INSTALLATION_2026-09-22.md`: all 376 executions completed,
+but two source literals put 250000 in s68_b's year position and 150 time slots
+are wildcards. The two literals cannot match their actual queries' bound 2015;
+do not swap their arguments or filter the originals. The census is not full
+operational coverage and its exit 1 remains reported.
+
+A-014 confirms the eligibility representation correction preserves A and needs
+no owner choice. It also closes A-013's conditional escalation about the two
+s68_b literals: retain/report them under P-INTENT, without filtering or swapping
+arguments. Complete operational coverage remains unproved.
 
 The source-reader slice has 26 passing tests covering all 376 case files, with
 its full lexical accounting retained in `docs/phase1/`. Grounding, semantic

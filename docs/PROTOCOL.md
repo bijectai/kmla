@@ -207,6 +207,60 @@ reach zero mismatches. Grading the intended readings instead would require a
 corrected Prolog copy as the parity reference and is a separate contract change,
 to be proposed rather than applied silently.
 
+## Amendments accepted 2026-09-22
+
+### P-WIRE: producer release, packaging and counts
+
+Dev approved WIRE including both handling proposals in
+`docs/contracts/P_WIRE_DRAFT.md`. Installed release wording and record packaging
+are in `docs/contracts/PARITY.md`; `Interface/WIRE.md` fixes the shared byte
+contract. The concrete input codec remains builder work: fix its lossless field
+spelling and shared fixtures once in Interface before either isolated producer
+uses it. Fields not determined by H1–H4, G4, D1/V9, M1, H6.1/H6.2/H6.5 and
+their referenced G1/A3 rules remain blocked for an owner decision.
+
+One record is a household/target/bound-argument tuple in the approved mode.
+Report record, distinct-household and original-case counts separately in run
+summaries, freeze manifests and coverage reports. ≥10k refers to records, not
+necessarily distinct households. H6.3 case scoring, all 376 originals,
+≥20 hits per arm and B003's admitted-mutant denominator remain unchanged.
+No mode, projection or observation canonicalization is redefined.
+
+### P-R5CYCLE: Option A with coverage and generator conditions
+
+Dev selected A from `docs/contracts/P_R5CYCLE_OPTIONS_DRAFT.md`, including its
+all-201-years scope and zero-exclusion audit, with two explicit conditions:
+close the query-year coverage gap in Interface before any R5-group termination
+proof is claimed, and have gen never mint multibirth persons, multi-date births
+or same-birthday eligible pairs. Same-birthday eligible dependent pairs are an
+accepted, stated limitation of the graded domain. The all-years restriction
+also excludes a household if a violating pair is eligible in another admitted
+year; unrelated equal birthdays remain allowed.
+
+Install the new H5 conjunct in both Valid and ValidStip, not only V1. The exact
+protected amendment is staged in `docs/contracts/DECISIONS_R5_A_AMENDMENT.md`
+for Dev to install/re-pin; human remains read-only to the builder. The executable
+uniqueness/decrease checks and required universal-decrease dependency are in
+Interface. A required instance with no default prevents omission, not a false
+implementation: prove the decider true iff the original K/c3 quantified condition
+holds, including wildcard stipulations. Neither a finite ground-pair enumeration
+nor conservative false-on-unknown is a substitute. This representation correction
+(A-014) changes no domain; real decider correctness and production V7/V8 remain
+obligations.
+
+All root/query/stipulation years and R8 Workdays must be tied to their actual
+source arguments at the shared checked-year boundary. Constructor failure is a
+reported coverage/domain failure, never a normal reference answer. Every
+admitted operational call must be proved covered, and unbound-year/E2 paths
+accounted for. No complete wrapper coverage or R5/R8 theorem is claimed by this
+installation. The re-derived N+1 branch-depth proposal needs universe, phase,
+mode and adequacy proofs; the old V10 and 2·persons+2 stay withdrawn. Exhaustion
+cannot stand in as a reference value. The generator contract is installed, but
+the generator itself belongs to Phase 2 and does not exist yet.
+
+**Neither A nor WIRE signs off Checkpoint 1.** All existing parity, hazard
+review and explicit owner sign-off requirements remain intact.
+
 ## Design-flaw stop-and-report standard
 
 When a design flaw is discovered, halt the affected development and record the

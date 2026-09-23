@@ -1,0 +1,90 @@
+{
+  "clauses": [
+    {
+      "kind": "fact",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "alice"
+            },
+            {
+              "kind": "int",
+              "value": 2017
+            },
+            {
+              "kind": "int",
+              "value": 7748
+            }
+          ],
+          "arity": 3,
+          "predicate": "s63"
+        }
+      ],
+      "source": "s63(alice,2017,7748)"
+    }
+  ],
+  "loaded_clause_counts": [
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 3,
+      "before": 1,
+      "predicate": "s63"
+    }
+  ],
+  "status": "ok",
+  "id": "s1_c_ii_neg",
+  "source_sha256": "bd9c844d1456dde065f5c9e7c56c04c3d60bcf77cf556d052d467da5d247f85b",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-d874d4e767c6460fa34c23bdbf79b94d",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/stip_time_audit.pl",
+      "-g",
+      "stip_time_audit:main",
+      "--",
+      "/corpus/cases/s1_c_ii_neg.pl",
+      "-1"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.810407
+  },
+  "stderr": ""
+}

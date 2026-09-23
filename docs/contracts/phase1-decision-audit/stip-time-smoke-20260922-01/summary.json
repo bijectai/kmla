@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "cases": 4,
+    "cases_with_stipulations": 3,
+    "fact_clauses": 4,
+    "rule_clauses": 1,
+    "solutions": 6,
+    "year_values": 2,
+    "day_values": 4,
+    "wild_time_values": 0
+  },
+  "signatures": [
+    "s3306_a/2",
+    "s3306_b/8",
+    "total_wages_employer/6"
+  ],
+  "unresolved": [],
+  "out_of_range_or_wrong_kind": [],
+  "wild_time_arguments": [],
+  "distinct_years": [
+    2015,
+    2016
+  ],
+  "distinct_days": [
+    "2015-01-01",
+    "2015-12-31",
+    "2016-01-01",
+    "2016-12-31"
+  ],
+  "scope": "Original appended clauses evaluated with all head positions unbound; wild time fields retained, not treated as bounded. Not operational call-site coverage."
+}

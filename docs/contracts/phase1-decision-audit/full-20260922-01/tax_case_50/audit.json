@@ -1,0 +1,215 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 13,
+  "domain": [
+    "\"2016-10-09\"",
+    "\"2017-01-01\"",
+    "\"2017-12-31\"",
+    "alice",
+    "alice_income_2017",
+    "alice_marriage",
+    "halt",
+    "init",
+    "joint_return",
+    "prolog",
+    "spouse",
+    "statutes"
+  ],
+  "domain_count": 12,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 144,
+  "loaded_clause_counts": [
+    {
+      "added": 5,
+      "after": 5,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "income_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "joint_return_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "marriage_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "tax(alice,2017,4931)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 3,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "tax_case_50",
+  "population": "original",
+  "source_sha256": "423ea70b39a6f19c921cb643c6c2bf884d0a8c07b92805f5dc47caeb2819ca68",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-1c9d913d48d34c9eab2562ad8f89a85d",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/tax_case_50.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 2.17973
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"2016-10-09\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2017-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2017-12-31\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_income_2017",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_marriage",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "joint_return",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "spouse",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

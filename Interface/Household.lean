@@ -5,7 +5,8 @@ Implements the owner's `human/DECISIONS.md` (recorded 2026-09-21): G4 (term
 domain), D1 (dates), H1 (shape), H2 (argument kinds), H3 (field list), H4
 (stipulations) and H5 (`Valid`). Section ids in the doc comments cite that file,
 which is the specification; where this file and `human/DECISIONS.md` disagree,
-`human/DECISIONS.md` wins and this file is the defect.
+`human/DECISIONS.md` wins, except for the owner's explicitly approved Option A
+H5 amendment (2026-09-22), implemented below as V10 in `Valid` and `ValidStip`.
 
 This replaces the Phase 0.1 `HouseholdDraft`, which was a source-syntax
 container (lexemes plus unparsed rule strings) written before the semantics were
@@ -16,10 +17,10 @@ imports outside `Interface/` and `Oracle/`, so this file uses core Lean 4 only �
 no Mathlib, no Batteries. Everything decidable here is decidable by `decide`.
 
 Not yet settled here, and deliberately so:
-  * V7 and V8 of H5 quantify over the oracle's own definitions, and `Oracle/`
-    does not exist. They are carried by the `OracleGuards` class below so the
-    signature `Valid : Household → Year → Prop` is fixed now and the oracle lane
-    supplies the two conjuncts later, without this file changing.
+  * V7/V8 and V10's all-eligible-pairs decider depend on oracle definitions.
+    `OracleGuards` has no default instance: the oracle lane must supply the
+    actual guards and prove the V10 decider equivalent to its universal rule.
+    Structural checks here do not decide that rule or prove R5/R8 termination.
   * `Interface/S{N}.lean` (H6.1 targets) is a separate per-section file.
 -/
 
@@ -47,6 +48,9 @@ abbrev Day := Int
 
 /-- D1. A taxable year. `Valid` restricts it to 1900 … 2100 (V3). -/
 abbrev Year := Int
+
+/-- Option A: every approved R5 query year, independently of `Valid`'s year index. -/
+def r5Years : List Year := (List.range 201).map (fun n => 1900 + Int.ofNat n)
 
 /-- A person is an `atom` term in every case file; the alias is for readability. -/
 abbrev Person := Term
@@ -485,13 +489,99 @@ def acyclic (es : List (Term × Term)) : Bool := acyclicAux es.length es
 def Household.isChildOf (h : Household) (child parent : Term) : Bool :=
   h.parentEdges.contains (child, parent)
 
+/-- Nonempty directed paths of at most `fuel` edges in the structural parent graph. -/
+def parentReachableWithin (es : List (Term × Term)) : Nat → Term → Term → Bool
+  | 0, _, _ => false
+  | fuel + 1, child, ancestor =>
+      es.any fun e =>
+        e.1 == child && (e.2 == ancestor || parentReachableWithin es fuel e.2 ancestor)
+
+/--
+Option A's strict structural descendant test. Under V4 every path is simple,
+so `parentEdges.length` bounds its length, including when facts repeat. The
+bound is for this finite reachability check, not an R5 oracle fuel claim.
+Self-pairs are rejected explicitly; neither facts nor repeated edges are changed.
+-/
+def Household.isStrictDescendantOf (h : Household) (descendant ancestor : Term) : Bool :=
+  let es := h.parentEdges
+  descendant != ancestor && parentReachableWithin es es.length descendant ancestor
+
+/-! ## Birth structure (Option A, H5 V10) -/
+
+/-- Birth-event markers in fact order, including repeated identical markers. -/
+def Household.birthEvents (h : Household) : List Term :=
+  h.facts.filterMap fun f => match f with
+    | .birth_ e => some e
+    | _ => none
+
+/-- Every `(person, event)` birth/agent fact combination, with multiplicity kept. -/
+def Household.births (h : Household) : List (Term × Term) :=
+  h.birthEvents.flatMap fun e =>
+    h.facts.filterMap fun f => match f with
+      | .agent_ ev p => if ev == e then some (p, e) else none
+      | _ => none
+
+/-- All birth-event IDs of a person; equality of both persons and IDs is tag-sensitive. -/
+def Household.birthEventsOf (h : Household) (person : Term) : List Term :=
+  h.births.filterMap fun b => if b.1 == person then some b.2 else none
+
+/-- Start-day facts of an event, in fact order with duplicates kept. -/
+def Household.startDays (h : Household) (event : Term) : List Day :=
+  h.facts.filterMap fun f => match f with
+    | .start_ e d => if e == event then some d else none
+    | _ => none
+
+/-- A birth is present even when it has no `start_` fact (G5, N-CONJ at 152:207). -/
+def Household.hasBirth (h : Household) (person : Term) : Bool :=
+  !(h.birthEventsOf person).isEmpty
+
+/--
+Option A's unconditional uniqueness restrictions: at most one distinct birth
+event per person, and at most one distinct start day per birth event, even if
+the event has no agent. Repeated identical facts remain allowed and untouched.
+Non-birth events retain their unrestricted start-day multiplicity.
+-/
+def Household.birthUnique (h : Household) : Bool :=
+  let births := h.births
+  (births.all fun b => births.all fun b' => b.1 != b'.1 || b.2 == b'.2)
+  && h.birthEvents.all fun e =>
+    let days := h.startDays e
+    days.all fun d => days.all fun d' => d == d'
+
+/--
+A known unique DOB, requiring both a unique birth-event ID and a unique start
+day. Absence, an undated birth and conflicting facts all yield `none`; callers
+must use `hasBirth` separately to distinguish absence from an undated birth.
+-/
+def Household.uniqueDOB (h : Household) (person : Term) : Option Day :=
+  match h.birthEventsOf person with
+  | [] => none
+  | e :: es =>
+      if es.all (fun e' => e' == e) then
+        match h.startDays e with
+        | [] => none
+        | d :: ds => if ds.all (fun d' => d' == d) then some d else none
+      else none
+
+/--
+Option A's decrease condition for an eligible `(taxpayer, dependent)` pair.
+A dependent with any birth must have a known unique DOB strictly later than
+the taxpayer's known unique DOB. Only a dependent with no birth may instead
+use strict structural descent. Equal-DOB eligible dependent pairs are excluded
+as an approved domain limitation; unrelated equal birthdays remain allowed.
+-/
+def Household.r5Decreases (h : Household) (taxpayer dependent : Term) : Bool :=
+  if h.hasBirth dependent then
+    match h.uniqueDOB taxpayer, h.uniqueDOB dependent with
+    | some tDOB, some dDOB => tDOB < dDOB
+    | _, _ => false
+  else h.isStrictDescendantOf dependent taxpayer
+
 /-! ## Valid (H5) -/
 
 /--
-H5 V7 and V8 quantify over the oracle's own definitions — the domestic-service
-cycle and the head-of-household recursion — and `Oracle/` does not exist yet.
-Carrying them in a class fixes `Valid`'s signature now and lets the oracle lane
-supply the two conjuncts later without this file changing.
+H5 V7/V8 and Option A's V10 eligibility depend on the oracle's definitions.
+The oracle lane must supply their production implementations separately.
 
 The class is deliberately *not* given a default instance. An `Oracle/`-free
 build of `Interface/` therefore cannot silently assume the guards hold.
@@ -501,6 +591,36 @@ class OracleGuards where
   domesticAcyclic : Household → Bool
   /-- V8. `¬ hohCycle h t y` for every person `t`. -/
   noHohCycle      : Household → Year → Bool
+  /--
+  V10. Required nonrecursive decision procedure, with this EXACT contract:
+
+    r5AllEligibleDecrease h y = true ↔
+      ∀ ground t d, (original_s152_c_2 h d t has some solution ∧
+                    original_s152_c_3 h d t y has some solution) →
+                   h.r5Decreases t d = true.
+
+  Both people are bound in the original calls. Include all applicable facts and
+  stipulations, including wildcard person patterns; a finite ground-pair list
+  cannot represent all such cases. Do not restrict persons to household literals
+  or prefilter a violating edge. Prove BOTH directions: returning false merely
+  because search/proof ran out would silently narrow the approved domain.
+
+  Required at every `r5Years` year, for Valid and ValidStip. No default instance
+  exists. This Bool-only interface prevents omission, not an unfaithful provider:
+  the equivalence above is a recorded production proof obligation. Test mocks
+  are not its implementation or certificate. The finite universe for the later
+  R5 path measure needs its separate completeness proof.
+  -/
+  r5AllEligibleDecrease : Household → Year → Bool
+
+/--
+H5 V10 (approved Option A). Birth uniqueness always applies, even with no
+eligible pairs. Check the universal rule in all 201 approved years, not merely
+the outer `Valid h y` year. The exact nonrecursive decider is still required;
+this interface conjunct alone establishes no R5/R8 termination theorem.
+-/
+def Household.v10 [OracleGuards] (h : Household) : Bool :=
+  h.birthUnique && r5Years.all (OracleGuards.r5AllEligibleDecrease h)
 
 /-- V3. `Day` bounds: 1900-01-01 … 2100-12-31, as days since 1970-01-01. -/
 def dayLo : Day := -25567
@@ -575,7 +695,7 @@ V9 (dates well-formed for the interpreter) is implied by D1 and V3 and is listed
 in the decisions only to make the serializer's obligation explicit.
 -/
 def Valid [OracleGuards] (h : Household) (y : Year) : Prop :=
-  h.v1 && h.v2 && h.v3 y && h.v4 && h.v5 && h.v6
+  h.v1 && h.v2 && h.v3 y && h.v4 && h.v5 && h.v6 && h.v10
   && OracleGuards.domesticAcyclic h && OracleGuards.noHohCycle h y
 
 instance [OracleGuards] (h : Household) (y : Year) : Decidable (Valid h y) := by
@@ -585,9 +705,10 @@ instance [OracleGuards] (h : Household) (y : Year) : Decidable (Valid h y) := by
 H5. `ValidStip` is `Valid` without V1: stipulations and the two original
 `purpose_` wildcards are allowed. The 376 original cases are compared under this
 for Week 1 parity only; generated inputs must satisfy the full `Valid`.
+Option A's V10, including unconditional birth uniqueness, applies to both.
 -/
 def ValidStip [OracleGuards] (h : Household) (y : Year) : Prop :=
-  h.v2 && h.v3 y && h.v4 && h.v5 && h.v6
+  h.v2 && h.v3 y && h.v4 && h.v5 && h.v6 && h.v10
   && h.stipulations.all Stip.wellFormed
   && OracleGuards.domesticAcyclic h && OracleGuards.noHohCycle h y
 

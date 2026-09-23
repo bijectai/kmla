@@ -1,0 +1,248 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 17,
+  "domain": [
+    "\"2017-02-01\"",
+    "\"2017-09-02\"",
+    "alice",
+    "alice_employer",
+    "alice_pays",
+    "baltimore",
+    "bob",
+    "bob_brother_of_alice",
+    "halt",
+    "init",
+    "maryland",
+    "prolog",
+    "statutes",
+    "usa"
+  ],
+  "domain_count": 14,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 196,
+  "loaded_clause_counts": [
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "location_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "payment_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "purpose_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "service_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "sibling_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "\\+s3306_c_5(_G321,alice,bob,\"2017-02-01\")",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 3,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "s3306_c_5_neg",
+  "population": "original",
+  "source_sha256": "98fe0273ebdef679ebc1251348ff98a4cab1393ab307ccae94387b57ba7fb8e8",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-be25c2b05e334c8db32062feb3e0e679",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/s3306_c_5_neg.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 1.299542
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"2017-02-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2017-09-02\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_employer",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_pays",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "baltimore",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob_brother_of_alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "maryland",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "usa",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

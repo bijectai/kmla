@@ -1,0 +1,229 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 14,
+  "domain": [
+    "\"2018-01-01\"",
+    "\"2018-12-31\"",
+    "\"agricultural labor\"",
+    "\"kind\"",
+    "alice",
+    "alice_employer",
+    "alice_pays",
+    "bob",
+    "halt",
+    "init",
+    "prolog",
+    "statutes"
+  ],
+  "domain_count": 12,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 144,
+  "loaded_clause_counts": [
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "means_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "payment_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "purpose_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "service_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "\\+s3306_b(_G311,alice_pays,alice_employer,alice,bob,alice,bob,_G318)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 2,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "s3306_b_neg",
+  "population": "original",
+  "source_sha256": "044ddb3dfe25a117c38d36b1c3234355d6d1781bf9860e9346969b19d3f2f822",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-2bf80af2e2524ec69ae44467542e6660",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/s3306_b_neg.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 1.262005
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"2018-01-01\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2018-12-31\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"agricultural labor\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"kind\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_employer",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_pays",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

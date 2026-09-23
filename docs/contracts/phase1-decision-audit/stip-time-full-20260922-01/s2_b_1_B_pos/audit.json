@@ -1,0 +1,246 @@
+{
+  "clauses": [
+    {
+      "kind": "rule",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "charlie"
+            },
+            {
+              "kind": "int",
+              "value": 2015
+            }
+          ],
+          "arity": 3,
+          "predicate": "s151_c_applies"
+        },
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "charlie"
+            },
+            {
+              "kind": "int",
+              "value": 2016
+            }
+          ],
+          "arity": 3,
+          "predicate": "s151_c_applies"
+        },
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "charlie"
+            },
+            {
+              "kind": "int",
+              "value": 2017
+            }
+          ],
+          "arity": 3,
+          "predicate": "s151_c_applies"
+        },
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "charlie"
+            },
+            {
+              "kind": "int",
+              "value": 2018
+            }
+          ],
+          "arity": 3,
+          "predicate": "s151_c_applies"
+        },
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "charlie"
+            },
+            {
+              "kind": "int",
+              "value": 2019
+            }
+          ],
+          "arity": 3,
+          "predicate": "s151_c_applies"
+        }
+      ],
+      "source": ":-(s151_c_applies(bob,charlie,A),between(2015,2019,A))"
+    }
+  ],
+  "loaded_clause_counts": [
+    {
+      "added": 7,
+      "after": 7,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 4,
+      "before": 0,
+      "predicate": "bob_household_maintenance"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "death_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "father_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "marriage_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "payment_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "purpose_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "residence_"
+    },
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 3,
+      "before": 1,
+      "predicate": "s151_c_applies"
+    },
+    {
+      "added": 4,
+      "after": 4,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "status": "ok",
+  "id": "s2_b_1_B_pos",
+  "source_sha256": "3353cdcdea56c4cf3cfac71528324c55140dc42d3360f8e70e3c7ff829cd7257",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-54b8d624c67540078a859bc4f7f8550b",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/stip_time_audit.pl",
+      "-g",
+      "stip_time_audit:main",
+      "--",
+      "/corpus/cases/s2_b_1_B_pos.pl",
+      "-1"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.807662
+  },
+  "stderr": ""
+}

@@ -1,0 +1,174 @@
+{
+  "clauses": [
+    {
+      "kind": "fact",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "bob"
+            },
+            {
+              "kind": "atom",
+              "value": "alice"
+            },
+            {
+              "kind": "int",
+              "value": 2015
+            }
+          ],
+          "arity": 3,
+          "predicate": "s152_c"
+        }
+      ],
+      "source": "s152_c(bob,alice,2015)"
+    },
+    {
+      "kind": "fact",
+      "solutions": [
+        {
+          "args": [
+            {
+              "kind": "atom",
+              "value": "alice"
+            },
+            {
+              "kind": "wild",
+              "value": 0
+            },
+            {
+              "kind": "int",
+              "value": 2000
+            },
+            {
+              "kind": "int",
+              "value": 2015
+            }
+          ],
+          "arity": 4,
+          "predicate": "s151_d"
+        }
+      ],
+      "source": "s151_d(alice,A,2000,2015)"
+    }
+  ],
+  "loaded_clause_counts": [
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "amount_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "father_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "income_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "patient_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 4,
+      "before": 0,
+      "predicate": "s151_d"
+    },
+    {
+      "added": 1,
+      "after": 2,
+      "arity": 3,
+      "before": 1,
+      "predicate": "s152_c"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "status": "ok",
+  "id": "s152_d_1_D_neg",
+  "source_sha256": "a27b2a9abd0c7df228a37cf23aedf6890cb6651a4ac1f2279dcef9b9715904a6",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-3e94a61bb1a84e399b1498079fd1aba9",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/stip_time_audit.pl",
+      "-g",
+      "stip_time_audit:main",
+      "--",
+      "/corpus/cases/s152_d_1_D_neg.pl",
+      "-1"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.956222
+  },
+  "stderr": ""
+}

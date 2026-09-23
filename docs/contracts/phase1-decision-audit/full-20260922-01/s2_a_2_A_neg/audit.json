@@ -1,0 +1,207 @@
+{
+  "births": [],
+  "child_parent_edges": [],
+  "clause_count": 12,
+  "domain": [
+    "\"1992-02-03\"",
+    "\"2014-07-09\"",
+    "\"2015-09-14\"",
+    "alice",
+    "alice_and_bob",
+    "alice_and_charlie",
+    "alice_dies",
+    "bob",
+    "charlie",
+    "halt",
+    "init",
+    "prolog",
+    "statutes"
+  ],
+  "domain_count": 13,
+  "equal_birth_pairs": [],
+  "k_age_checks": [],
+  "k_edges": [],
+  "k_pairs_tested": 169,
+  "loaded_clause_counts": [
+    {
+      "added": 5,
+      "after": 5,
+      "arity": 2,
+      "before": 0,
+      "predicate": "agent_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 1,
+      "before": 0,
+      "predicate": "death_"
+    },
+    {
+      "added": 1,
+      "after": 1,
+      "arity": 2,
+      "before": 0,
+      "predicate": "end_"
+    },
+    {
+      "added": 2,
+      "after": 2,
+      "arity": 1,
+      "before": 0,
+      "predicate": "marriage_"
+    },
+    {
+      "added": 3,
+      "after": 3,
+      "arity": 2,
+      "before": 0,
+      "predicate": "start_"
+    }
+  ],
+  "skipped_directives": [
+    "[statutes/prolog/init]",
+    "\\+s2_a_2_A(bob,_G267,_G268,_G269,2014)",
+    "halt"
+  ],
+  "status": "ok",
+  "stipulated_c2_c3": [],
+  "unary_event_solutions": 3,
+  "witness_c1_prefix_edges_2018": [],
+  "witness_c1_prefix_solutions_2018": [],
+  "witness_probes": [],
+  "id": "s2_a_2_A_neg",
+  "population": "original",
+  "source_sha256": "6f48e1d98465971dbe1d2d304d9959e9499e1200b737716f7378edd5f2be2c84",
+  "h44_offset": -1,
+  "stderr": "",
+  "execution": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-1750069f7077467eba1e9c4824f041ab",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/contracts/phase1-decision-audit,dst=/audit,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/consult/evidence,dst=/evidence,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/audit/birth_audit.pl",
+      "-g",
+      "birth_audit:main",
+      "--",
+      "/corpus/cases/s2_a_2_A_neg.pl",
+      "-1",
+      "original"
+    ],
+    "timeout_seconds": 120,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 0.980937
+  },
+  "birth_events_per_person": [
+    {
+      "person": "\"1992-02-03\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2014-07-09\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "\"2015-09-14\"",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_and_bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_and_charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "alice_dies",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "bob",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "charlie",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "halt",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "init",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "prolog",
+      "events": [],
+      "count": 0
+    },
+    {
+      "person": "statutes",
+      "events": [],
+      "count": 0
+    }
+  ],
+  "start_dates_per_birth_event": [],
+  "multiple_birth_events": [],
+  "multiple_birth_start_dates": [],
+  "k_self_edges": [],
+  "k_cycle_components": [],
+  "v4_cycle_components": [],
+  "equal_birth_k_related": [],
+  "earlier_a_components_hit": [],
+  "refined_a_edge_failures": [],
+  "refined_a_components_hit": []
+}

@@ -1,0 +1,230 @@
+{
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92",
+  "mounts": {
+    "/human": "ro,nosuid,nodev,relatime",
+    "/corpus": "ro,nosuid,nodev,relatime",
+    "/audit": "ro,nosuid,nodev,relatime"
+  },
+  "source_sha256": {
+    "s2_a_1_A_neg.pl": "0108c04807b9a70529c4c9528980a40db62ee5d8926cc7dedffb0e0df5685b9e",
+    "s3301_pos.pl": "a48d808c0ef3e5f76dfd4886a093952c1eb09ea1d30fce15de3930c8fced8826",
+    "s3306_c_2_neg.pl": "20ac10863992b937b3aff70b79ac1c27fa101a555a45feeb21f01c4f0374097e",
+    "s3306_c_2_pos.pl": "1b912b348ef4481643a509a920bd6653522571dd9c1f29673d2ad2280c478d88"
+  },
+  "time_positions": {
+    "s63/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s7703/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s3306_b/8": [
+      [],
+      []
+    ],
+    "s2_b/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s2_a/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s151_c_applies/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s152_c_1/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s3306_c/5": [
+      [
+        5
+      ],
+      [
+        4
+      ]
+    ],
+    "s151/5": [
+      [
+        5
+      ],
+      []
+    ],
+    "s151_d/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s151_b_applies/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s151_c/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s151_b_applies/2": [
+      [],
+      []
+    ],
+    "total_wages_employer/6": [
+      [],
+      [
+        5,
+        6
+      ]
+    ],
+    "s68_b/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s152_c_2/4": [
+      [],
+      [
+        3,
+        4
+      ]
+    ],
+    "s152_c/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s152_b_2/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s3306_a/2": [
+      [
+        2
+      ],
+      []
+    ],
+    "s63_c_1/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s63_c_2/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s63_c_3/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s63_f_1_A/2": [
+      [
+        2
+      ],
+      []
+    ],
+    "s63_f_1_B/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s63_d/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s152_c_3/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s2_a/5": [
+      [
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "s152_d_2_H/6": [
+      [
+        3
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "s63_c/3": [
+      [
+        3
+      ],
+      []
+    ],
+    "s63_c_3/4": [
+      [
+        4
+      ],
+      []
+    ],
+    "s151_b/3": [
+      [
+        3
+      ],
+      []
+    ]
+  },
+  "statutes": {
+    "events.pl": "aed56ad9b0569d91328b2e2932621bc49911791f5a343dca7c2af7a87a5af85c",
+    "init.pl": "b1dedfd2469737799c9d12b50d8e3d3ce19652aaa87465c43ce0d190b1c6926f",
+    "section1.pl": "76ad42975e9156b8e235319bab8510056f558df9c023be0947f48599fcb63a32",
+    "section151.pl": "b00273394d4fc9f734947287d411400dbf49d2c38785dba82c63c2b12378ccbc",
+    "section152.pl": "6d653a12197a64967f686ad0f4f751e2c9876d3804a45c93fb7df09effc747f3",
+    "section2.pl": "14431d6954acffd7b1f2dcc2014dc63f89618ae974e2f147b8265ec336b6265f",
+    "section3301.pl": "f053e7e0b9ed17b73a4d81530cb64532388221581323478d4b81d21b8aa35662",
+    "section3306.pl": "e5b07f2e510eb8d66095217beaa0db5b0c2b092f801481e58d4c670050a6768e",
+    "section63.pl": "337bfedc2ad36cf29466c7b2004d1e5420a396bd6648c1a89e3073ca2d939b07",
+    "section68.pl": "3604740d2d7bd4d67e442cdb308cb00c3d0de63d764a8859adeb97cfef75ad34",
+    "section7703.pl": "37f5ad90cbfea12e47b6c91068f93edd02980cd88f3a1caacfdf79b4263e81e3",
+    "utils.pl": "e773297c392da3c7caec86dc393d72c1233a44255af4f9a51c136415f9070e1c"
+  },
+  "diagnostics": {
+    "run_stip_time_audit.py": "b5212c8848bfe514c9690f2c291c3e6acaee87dc0634acf65756121d4c511f8a",
+    "stip_time_audit.pl": "5b3e3a402410294cca07739b8c326a620f6aac71085d97bb4b512abc5bcbae69",
+    "birth_audit.pl": "fc6d9829547099a5c417f23bbb6af174f702b51a72d876eb61de2210cf93a0d0",
+    "run_birth_audit.py": "6ba75d6ece855d85e5a815d3f00e7f5c0daacb3500c117c6663f6b4a6a54f98a"
+  },
+  "smoke_only": true,
+  "original_test_directives_executed": false
+}

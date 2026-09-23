@@ -1,0 +1,1768 @@
+{
+  "counts": {
+    "cases": 376,
+    "cases_with_stipulations": 156,
+    "fact_clauses": 203,
+    "rule_clauses": 28,
+    "solutions": 440,
+    "year_values": 266,
+    "day_values": 162,
+    "wild_time_values": 150
+  },
+  "signatures": [
+    "s151/5",
+    "s151_b/3",
+    "s151_b_applies/2",
+    "s151_b_applies/3",
+    "s151_c/4",
+    "s151_c_applies/3",
+    "s151_d/4",
+    "s152_b_2/4",
+    "s152_c/3",
+    "s152_c_1/3",
+    "s152_c_2/4",
+    "s152_c_3/3",
+    "s152_d_2_H/6",
+    "s2_a/3",
+    "s2_a/5",
+    "s2_b/3",
+    "s3306_a/2",
+    "s3306_b/8",
+    "s3306_c/5",
+    "s63/3",
+    "s63_c/3",
+    "s63_c_1/3",
+    "s63_c_2/3",
+    "s63_c_3/3",
+    "s63_c_3/4",
+    "s63_d/4",
+    "s63_f_1_A/2",
+    "s63_f_1_B/3",
+    "s68_b/3",
+    "s7703/4",
+    "total_wages_employer/6"
+  ],
+  "unresolved": [],
+  "out_of_range_or_wrong_kind": [
+    {
+      "id": "s151_d_3_B_neg",
+      "signature": "s68_b/3",
+      "position": 3,
+      "kind": "year",
+      "argument": {
+        "kind": "int",
+        "value": 250000
+      },
+      "source": "s68_b(alice,2015,250000)"
+    },
+    {
+      "id": "s151_d_3_B_pos",
+      "signature": "s68_b/3",
+      "position": 3,
+      "kind": "year",
+      "argument": {
+        "kind": "int",
+        "value": 250000
+      },
+      "source": "s68_b(alice,2015,250000)"
+    }
+  ],
+  "wild_time_arguments": [
+    {
+      "id": "s1_a_2_i_pos",
+      "signature": "s2_a/5",
+      "position": 3,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 1
+      },
+      "source": "s2_a(alice,A,B,C,2017)"
+    },
+    {
+      "id": "s1_a_2_i_pos",
+      "signature": "s2_a/5",
+      "position": 4,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 2
+      },
+      "source": "s2_a(alice,A,B,C,2017)"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_1_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,bob,B,C),','(member(B,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),atom_concat(\"alice_employer_\",B,A)))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_a_2_B_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(A,alice,B,C,D),','(member(C,[\"2017-01-24\",\"2017-02-04\",\"2017-03-03\",\"2017-03-19\",\"2017-04-02\",\"2017-05-09\",\"2017-10-15\",\"2017-10-25\",\"2017-11-08\",\"2017-11-22\",\"2017-12-01\",\"2017-12-03\"]),','(;(','(==(C,\"2017-01-24\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-02-04\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-03\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-03-19\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-04-02\"),member(B,[bob,cameron,dan,fred,george])),;(','(==(C,\"2017-05-09\"),member(B,[cameron,dan,emily,fred,george])),;(','(==(C,\"2017-10-15\"),member(B,[bob,cameron,dan,emily,george])),;(','(==(C,\"2017-10-25\"),member(B,[bob,cameron,dan,emily,fred,george])),;(','(==(C,\"2017-11-08\"),member(B,[bob,cameron,emily,fred,george])),;(','(==(C,\"2017-11-22\"),member(B,[bob,cameron,dan,emily,fred])),;(','(==(C,\"2017-12-01\"),member(B,[bob,cameron,dan,emily,george])),','(==(C,\"2017-12-03\"),member(B,[bob,cameron,dan,emily,george]))))))))))))),atom_concat(\"alice_employer_\",C,A))))"
+    },
+    {
+      "id": "s3306_b_15_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 1
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2011-02-01\",A),is_before(A,\"2019-11-19\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_15_neg",
+      "signature": "s3306_c/5",
+      "position": 4,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2011-02-01\",A),is_before(A,\"2019-11-19\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_15_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 1
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2011-02-01\",A),is_before(A,\"2019-11-19\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_15_pos",
+      "signature": "s3306_c/5",
+      "position": 4,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2011-02-01\",A),is_before(A,\"2019-11-19\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_7_neg",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 1
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2017-06-01\",A),is_before(A,\"2017-08-31\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_7_neg",
+      "signature": "s3306_c/5",
+      "position": 4,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2017-06-01\",A),is_before(A,\"2017-08-31\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_7_pos",
+      "signature": "s3306_c/5",
+      "position": 5,
+      "kind": "year",
+      "argument": {
+        "kind": "wild",
+        "value": 1
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2017-06-01\",A),is_before(A,\"2017-08-31\"))),var(A)))"
+    },
+    {
+      "id": "s3306_b_7_pos",
+      "signature": "s3306_c/5",
+      "position": 4,
+      "kind": "day",
+      "argument": {
+        "kind": "wild",
+        "value": 0
+      },
+      "source": ":-(s3306_c(alice_employer,alice,bob,A,B),;(','(nonvar(A),','(is_before(\"2017-06-01\",A),is_before(A,\"2017-08-31\"))),var(A)))"
+    }
+  ],
+  "distinct_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    250000
+  ],
+  "distinct_days": [
+    "2015-01-01",
+    "2015-12-31",
+    "2016-01-01",
+    "2016-12-31",
+    "2017-01-01",
+    "2017-01-24",
+    "2017-02-04",
+    "2017-03-03",
+    "2017-03-19",
+    "2017-04-02",
+    "2017-05-09",
+    "2017-10-15",
+    "2017-10-25",
+    "2017-11-08",
+    "2017-11-22",
+    "2017-12-01",
+    "2017-12-03",
+    "2017-12-31",
+    "2018-01-01",
+    "2018-12-31",
+    "2019-01-01",
+    "2019-12-31",
+    "2020-12-31"
+  ],
+  "scope": "Original appended clauses evaluated with all head positions unbound; wild time fields retained, not treated as bounded. Not operational call-site coverage."
+}
