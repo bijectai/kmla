@@ -1,0 +1,66 @@
+{
+  "scope": "Prolog syntax re-emission only; not H4 re-grounding/query identity/parity/Valid",
+  "checks": [
+    {
+      "fixture": "empty",
+      "passed": true,
+      "clauses": 0
+    },
+    {
+      "fixture": "tags_order_integers",
+      "passed": true,
+      "clauses": 7
+    },
+    {
+      "fixture": "controls_unicode",
+      "passed": true,
+      "clauses": 3
+    },
+    {
+      "fixture": "dates_and_tagged_patterns",
+      "passed": true,
+      "clauses": 7
+    },
+    {
+      "fixture": "wildcard_identity",
+      "passed": true,
+      "clauses": 5
+    },
+    {
+      "fixture": "opaque_helpers_extra_arities",
+      "passed": true,
+      "clauses": 10
+    },
+    {
+      "fixture": "all_registered_constructors",
+      "passed": true,
+      "clauses": 88
+    },
+    {
+      "fixture": "parser_failure",
+      "passed": true,
+      "expected_failure": true
+    },
+    {
+      "fixture": "reject_directive",
+      "passed": true,
+      "expected_failure": true
+    },
+    {
+      "fixture": "reject_rule",
+      "passed": true,
+      "expected_failure": true
+    },
+    {
+      "fixture": "reject_compound_value",
+      "passed": true,
+      "expected_failure": true
+    }
+  ],
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced (no producer records)",
+  "original_case_count": 376,
+  "original_count_scope": "lexical inventory only; no original H4 round trips or query comparisons",
+  "rule_bearing_original_count": 59,
+  "bodyless_original_count": 317
+}

@@ -1,0 +1,1 @@
+birth_(x) :- true.

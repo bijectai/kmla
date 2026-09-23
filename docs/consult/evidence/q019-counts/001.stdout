@@ -1,0 +1,8 @@
+{
+  "declared_payment_solutions":157,
+  "declared_service_solutions":157,
+  "declared_pair_solutions":157,
+  "outside_pair_succeeds":"true",
+  "outside_payment_declared":"false",
+  "outside_service_declared":"false"
+}

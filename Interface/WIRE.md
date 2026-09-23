@@ -27,9 +27,11 @@ projection, canonicalization, missing-value convention or coercion is selected.
   ignores object-key order and JSON formatting; it does not choose semantics.
 
 These are lossless spelling choices under the owner-approved byte proposal.
-The observation encoder already exists. The full input codec does **not** yet
-exist: before use, fix its field names/order, lossless typed encodings and
-cross-language fixtures here (or in a referenced Interface specification).
+The observation encoder already exists. [HOUSEHOLD_WIRE.md](HOUSEHOLD_WIRE.md)
+fixes the Household component, with declarative cross-language fixtures under
+`fixtures/household_wire.json`. The full input codec does **not** yet exist:
+before emitting full records, fix the remaining payload/query packaging and
+fixtures here (or in a referenced Interface specification).
 Do not let either lane independently invent the payload wire shape.
 
 ## Field authority and record identity

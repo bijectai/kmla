@@ -1,0 +1,41 @@
+[
+  {
+    "pred":"agricultural_service",
+    "args": [ {"a":"helper"},  {"s":"2015-01-01"}, -7 ]
+  },
+  {
+    "pred":"alice_employer",
+    "args": [ {"a":"alice"},  {"s":"household"}, 250000 ]
+  },
+  {
+    "pred":"alice_household_maintenance",
+    "args": [ {"a":"alice"},  {"a":"payment"},  {"s":""}, 9007199254740993 ]
+  },
+  {"pred":"patient", "args": [ {"a":"event"},  {"a":"person"} ]},
+  {"pred":"patient_", "args": [ {"a":"event"},  {"a":"person"} ]},
+  {"pred":"itemize_deductions_", "args": [ {"a":"inert-marker"} ]},
+  {
+    "pred":"s151_d",
+    "args": [
+      {"a":"alice"},
+      {"s":"2015-01-01"},
+      {"variable":"_KMLA_W40"},
+      250000
+    ]
+  },
+  {
+    "pred":"s2_a",
+    "args": [
+      {"a":"alice"},
+      {"variable":"_KMLA_W41"},
+      {"s":"2015-01-01"},
+      -7,
+      250000
+    ]
+  },
+  {
+    "pred":"s63_c_3",
+    "args": [ {"a":"alice"},  {"variable":"_KMLA_W42"}, 0, 2015 ]
+  },
+  {"pred":"s68_b", "args": [ {"a":"alice"}, 2015, 250000 ]}
+]

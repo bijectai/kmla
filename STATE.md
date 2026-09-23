@@ -2,6 +2,59 @@
 
 ## Current phase
 
+2026-09-23 (first isolated slices delivered; development paused): the preflight
+below passed and both fresh contexts ran, then stopped and were closed.
+Household transport has 12 codec tests and 11 pinned-Prolog syntax checks
+passing; the full Python suite is 111 tests, OK. §7703's six independent clause
+definitions and one explicit parameterized body compile, but its complete test
+file exits 1 on three proof goals after the circuit breaker. No recursive root,
+R5 adequacy, original H4 round trips, reference parity or Checkpoint 1 pass is
+claimed. Exact lane reports: `docs/phase1/HARNESS_PROGRESS_2026-09-23.md` and
+`docs/phase1/ORACLE_7703_PROGRESS_2026-09-23.md`.
+
+A-017 escalates the reproduced H4.2 mode failure to Dev as PROPOSED P-GROUND2.
+No correction to grounding was installed. A read-only audit refutes its
+87-total-pairs/global-completeness claims: 157 declared payment/service pairs
+succeed, and a fully ground pair outside both unary sets succeeds too. A-019
+withdraws those claims and appends the correction without changing A-017 or
+the original proposed log body. Raw audit: `docs/consult/evidence/q019-counts/`.
+H4.3 remains the operative preservation criterion; no stronger/global criterion
+was adopted. Candidate procedures have not been corpus-audited or selected;
+A-019's further argument against event-only enumeration is inspection-only,
+not a measured failure of a defined replacement procedure. A-018 supplies a
+review-only proof plan; it authorizes no new edit cycle. Both stops are below.
+No human file, meter, original source, commit, push or PR was changed/created.
+
+2026-09-23 (Phase 1 resumed): Dev's continuation authorizes resuming the stopped
+proof review. Entry HEAD is `b80a807`; the previous turn's work is now committed.
+Q-016/A-016 reviewed the reduction failure. Scratch checks isolate the failure
+to the core string split/integer parser; the existing date renderer reduces.
+The shared date decoder now uses structural character-list splitting and digit
+scanning, retaining its bounds, civil arithmetic and exact round-trip test.
+The SAME concrete tuple-admission rejection passes with `decide`; its named
+proof uses only `propext`, `Classical.choice`, `Quot.sound` (X1).
+`scripts/check_query_time.sh` exits 0, including all 73,414 admitted-day
+round trips and the new kernel malformed-date guards. One resumed code/proof
+edit cycle passed; the earlier three-failure record is preserved, not erased.
+
+Read-only runner/CI enforcement and gen's V10 validity-boundary contract are
+installed. This turn re-ran 29 runtime, 12 runner-boundary and 115 household
+checks successfully; the protected manifest verifies. The query/stipulation
+preflight boundary is ready for isolated lane implementation. This is NOT a
+proof of coverage of as-yet-unwritten operational call sites or R5 termination.
+No Checkpoint 1 sign-off, semantic round-trip result or Lean/Prolog parity is
+claimed. Phase 1.1 and §7703 Phase 1.2 are now dispatched in separate fresh
+contexts, without inherited conversation or access to the other implementation.
+Their initial write scopes are harness/ plus its own tests/report, and Oracle/
+plus its own tests/report respectively. Later oracle sections require fresh
+contexts in the approved order. Shared Household JSON spelling/fixtures are
+fixed under Interface; full payload/target packaging is still not released.
+The second kernel admission theorem also rejects an out-of-range stipulated
+Workday under every root query (X1 only). Details and reproducible checks:
+`docs/phase1/QUERY_ADMISSION_RESUMED_2026-09-23.md`.
+
+The 2026-09-22 stopped snapshot below is retained as history.
+
 2026-09-22 (Phase 1 preflight; circuit-breaker stop): Dev confirms Checkpoint 0
 at parent `0a2a65ac1313c180bea39d137e6665c01b8e833a` and authorizes Phase 1.
 The owner installed/re-pinned A; the protected manifest verifies and the meter
@@ -275,7 +328,59 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Active: query-admission proof circuit breaker (2026-09-22)
+### Active: §7703 test-proof circuit breaker (Q-018, 2026-09-23)
+
+The first isolated §7703 slice compiles, but its test file exits 1: 50 of 53
+theorem declarations elaborate without errors; three reached three failed proof
+edits. They are `b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity`,
+`a1_null_only_at_observation`, and `b3_deduplication_only_at_observation`.
+The stopped tests and exact diagnostics/attempts remain in Oracle/Tests/ and
+`docs/phase1/ORACLE_7703_PROGRESS_2026-09-23.md`. Recovery sorryAx terms are not
+proofs and no test .olean was emitted. The context is closed; no further edit,
+weakened assertion or later-section dispatch followed. Q-018 requests a bounded
+proof-only diagnosis, with no authority to perform the next edit cycle.
+Report this new breaker and obtain resumption direction before editing again.
+
+A-018 provides a proof-only diagnostic plan, not a verified fix or authority to
+run another edit cycle. It identifies the concrete Int guard and proposes
+isolating the observation reduction. No recommendation has been applied, and
+all three original assertions remain unchanged. Its general Lean explanations
+are hypotheses to test, not trusted proof evidence.
+
+### Active: H4.2 grounding raises on tax_case_33 (Q-017, 2026-09-23)
+
+The prescribed first-position-bound binary enumeration reaches
+`purpose_(payment_2015_1, Purpose)` with Purpose free. The original clause
+at tax_case_33.pl:29–31 calls split_string/4 on that free Service_event.
+Pinned/runtime-verified execution exits 2 (no timeout), stderr verbatim:
+`ERROR: split_string/4: Arguments are not sufficiently instantiated`.
+Raw process metadata and streams are retained under
+`docs/phase1/harness-evidence-2026-09-23/h4-probe-docker/commands/005.*`.
+H4 grounding and dependent round-trip/producer work are halted; no source
+repair, second-position enumeration, record filtering or empty answer was
+installed. Q-017 asks Fable whether any signed rule already resolves this,
+otherwise for the minimal owner amendment and preservation obligations.
+Independent transport and nonrecursive oracle checks are not parity evidence.
+
+A-017 confirms owner escalation and records PROPOSED P-GROUND2. Its pair-count
+and completeness claims are not accepted: a bounded read-only verification in
+Q-019 finds 157 declared payment/service pairs (not 87 total), plus a successful
+fully ground pair outside both unary sets. No alternative grounder or Household
+was produced by that diagnostic. The required preservation domain/order must
+be explicit; H2/A3 wildcard representation cannot be silently expanded away.
+
+A-019 appends the factual correction. Nothing in the consult answers accepts
+a remedy or changes H4.3: keep its existing re-grounding and original-query
+preservation checks unless Dev explicitly amends them. An exact revised H4.2
+procedure still needs a draft, domain/order justification and owner approval;
+no completeness or cost claim for an unaudited candidate is accepted here.
+
+### Resolved 2026-09-23: query-admission proof circuit breaker (2026-09-22)
+
+Dev authorized continuation. The same literal-tuple rejection now passes after
+Q-016/A-016 and reduction diagnostics, in one resumed edit cycle. The parser
+uses structural character lists; no assertion or semantics were weakened.
+The historical failure/stop record follows; it no longer blocks dispatch.
 
 The concrete test that a 2101-01-01 R8 query cannot carry AdmittedQuery under
 outer year 2015 fails kernel/elaborator reduction, even though its executable
@@ -681,8 +786,10 @@ Checkpoint 0 remains explicitly signed off. A/WIRE are accepted, not open
 choices. Continue only within their installed shared contracts and the remaining
 implementation obligations above, with separate oracle/serializer contexts and
 read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
-query-admission circuit breaker above requires Dev direction before resuming
-that proof and completing the pre-dispatch checks. Do not claim
+query-admission circuit breaker was resolved on Dev-authorized continuation;
+pre-dispatch checks passed and both isolated lanes delivered initial slices.
+Now pause for the new H4/P-GROUND2 owner amendment and §7703 proof-breaker
+resumption direction, as recorded above. Do not claim
 R5 termination before actual query/stipulation coverage and adequacy proofs.
 Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
 meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.
