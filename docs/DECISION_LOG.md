@@ -40,7 +40,7 @@ and its heading still reads PENDING.
 | P-PARITY5 | The five parity policies: directory contents, non-regular entries, three-valued report, IDs, aliasing | **ACCEPTED** | Installed in `docs/contracts/PARITY.md`; Dev's complete directory procedure below closes A-007's escalation |
 | P-BUNDLE | `human/` stays a directory in the parent repo; no submodule | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `STATE.md` |
 | P-WIRE | Release producer block, record granularity and byte handling | **ACCEPTED** (Dev, 2026-09-22) | `docs/contracts/PARITY.md`, `Interface/WIRE.md`, PROTOCOL; concrete input codec/fixtures remain implementation work |
-| P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; protected amendment staged for Dev's installation/re-pin; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
+| P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; owner installed/re-pinned H5/R5/R8/R9 at `0a2a65a`; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 
 `INSTALLED` entries record an action taken, not a proposal.

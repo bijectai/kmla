@@ -239,7 +239,8 @@ year; unrelated equal birthdays remain allowed.
 
 Install the new H5 conjunct in both Valid and ValidStip, not only V1. The exact
 protected amendment is staged in `docs/contracts/DECISIONS_R5_A_AMENDMENT.md`
-for Dev to install/re-pin; human remains read-only to the builder. The executable
+and was installed/re-pinned by Dev at `0a2a65a`; human remains read-only to the
+builder. The executable
 uniqueness/decrease checks and required universal-decrease dependency are in
 Interface. A required instance with no default prevents omission, not a false
 implementation: prove the decider true iff the original K/c3 quantified condition
