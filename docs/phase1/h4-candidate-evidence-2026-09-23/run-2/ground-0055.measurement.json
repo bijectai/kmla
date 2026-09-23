@@ -1,0 +1,200 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2015-09-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2019-02-03"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          "2018-10-23"
+        ]
+      }
+    ],
+    "stipulations": [
+      {
+        "pred": "s152_c_2_4",
+        "args": [
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "s": "2015-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2020-12-31"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "son_",
+      "event": {
+        "a": "bob_is_son"
+      }
+    },
+    {
+      "source_clause": 4,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "marriage_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    }
+  ],
+  "stats": {
+    "unary_proofs": 3,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 13,
+    "stipulation_count": 1,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00022054200000000412,
+    "grounding_wall_seconds": 0.0002200603485107422,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

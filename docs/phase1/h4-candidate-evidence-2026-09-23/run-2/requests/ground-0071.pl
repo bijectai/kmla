@@ -1,0 +1,12 @@
+birth_(alice_is_born).
+agent_(alice_is_born,alice).
+start_(alice_is_born,"1992-01-10").
+end_(alice_is_born,"1992-01-10").
+birth_(bob_is_born).
+agent_(bob_is_born,bob).
+start_(bob_is_born,"1984-01-31").
+end_(bob_is_born,"1984-01-31").
+son_(alice_and_bob).
+agent_(alice_and_bob,bob).
+patient_(alice_and_bob,alice).
+start_(alice_and_bob,"2018-03-04").

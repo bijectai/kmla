@@ -2,6 +2,18 @@
 
 ## Authorization and entry identity
 
+**Latest H4 result (2026-09-23): scoped candidate passes; corpus-wide completion
+is blocked, not claimed.** tax_case_33 retains its ordered 1,736 facts and tax
+result 27181; its 49,612 two-input calls produce 157 successful proofs. A
+separate generic country-fact omission changes s3306_c_A_pos's bff answer from
+[[alice,bob]] to []. No remedy has been applied. Q-021 is drafted to distinguish
+an H1/H3 implementation violation from a new owner choice; its CLI spawn was
+rejected before execution because only Q-020's payload had explicit approval.
+Dev must approve sending Q-021 and its named excerpts to Fable with the standing
+consult-only write scope. No A-021 exists; do not bypass the denial. The exact
+failure and permission rejection are in STATE.md. Neither protected installation
+nor Checkpoint 1 is passed.
+
 **H4 update (2026-09-23): candidate review and conditional implementation are
 authorized, not protected installation.** Dev accepts the bound-call finding.
 The three prior commits were on origin at 866f519 before Q-020 was sent. Fable
@@ -109,6 +121,11 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 ### H4 candidate — reviewed and authorized for measurement, not installed
 
+- **New immediate deliverable:** authorize Q-021's listed repository excerpts
+  and mismatch evidence to be sent to Fable, with writes only to docs/consult/
+  and appended docs/DECISION_LOG.md. The affected generic path remains halted
+  for that review. The tax_case_33-only success does not discharge the all-376
+  obligation or authorize a broader bodyless-fact traversal.
 - The required bound-call diagnostic is complete: the original purpose rule
   in tax_case_33 fails in its second split with its first event already bound.
   No grounder fix for an unbound first argument is indicated by this evidence.

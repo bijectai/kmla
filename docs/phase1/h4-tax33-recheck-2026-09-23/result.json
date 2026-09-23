@@ -1,0 +1,37 @@
+{
+  "scope": "tax_case_33 only; no all-corpus completion claim",
+  "h4_3_a": true,
+  "h4_3_b": true,
+  "original_tax": 27181,
+  "serialized_tax": 27181,
+  "facts": 1736,
+  "original_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.052751958000000015,
+    "grounding_wall_seconds": 0.05275130271911621,
+    "candidate": {
+      "outer_iterations": 316,
+      "inner_distinct_terms": 157,
+      "full_two_input_calls": 49612,
+      "successful_proofs": 157
+    }
+  },
+  "serialized_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.034831291999999986,
+    "grounding_wall_seconds": 0.03483462333679199,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  }
+}

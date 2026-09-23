@@ -1,0 +1,32 @@
+{
+  "scope": "partial candidate measurement; broad verification halted, not complete",
+  "original_case_count": 376,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "h4_3_a": {
+    "pass": 115,
+    "blocked:general-traversal-halted-for-review": 261
+  },
+  "h4_3_b": {
+    "unimplemented:H6-observation": 113,
+    "blocked:general-traversal-halted-for-review": 261,
+    "fail": 1,
+    "pass": 1
+  },
+  "both_pass_cases": [
+    "tax_case_33.pl"
+  ],
+  "source_preservation_finding": "s3306_c_A_pos.pl",
+  "raw_run_interruption": {
+    "outer_exit": 130,
+    "signal": "SIGINT",
+    "process_id": 24983,
+    "reason": "halt broad traversal pending H3 bodyless/domain review",
+    "raw_summary_null_finding_is_not_a_completed_audit": true
+  },
+  "input_hashes": {
+    "docs/phase1/h4-candidate-evidence-2026-09-23/run-2/all-376-statuses.json": "6dada3796af98e6984bc743055c3240e0b3d0d69444a9d4e48a3e57b990b79fc",
+    "docs/phase1/h4-candidate-evidence-2026-09-23/run-2/summary.json": "5485f67d365353c77eee7726237bc320d39a333843e16dc1fb876e0b93af9681",
+    "docs/phase1/h4-candidate-evidence-2026-09-23/country-finding/finding.json": "8b7e776d5c28bd4fe084ddc97cf49f71ed270fb1e728c804b26dfbb2c13a1396"
+  }
+}

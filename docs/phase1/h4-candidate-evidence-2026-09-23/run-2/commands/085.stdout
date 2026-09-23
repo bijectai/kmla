@@ -1,0 +1,61 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_makes_money"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_makes_money"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_makes_money"}, 312 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_makes_money"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_makes_money"}, "2015-12-31" ]
+      },
+      {"ctor":"father_", "args": [ {"a":"alice_and_bob"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      }
+    ],
+    "stipulations": [
+      {
+	"pred":"s151_d_4",
+	"args": [
+	  {"val": {"a":"alice"}},
+	  {"wild":0},
+	  {"val":2000},
+	  {"val":2015}
+	]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_makes_money"}
+    },
+    {
+      "source_clause":6,
+      "predicate":"father_",
+      "event": {"a":"alice_and_bob"}
+    }
+  ],
+  "stats": {
+    "unary_proofs":2,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":8,
+    "stipulation_count":1,
+    "wildcard_count":1,
+    "grounding_cpu_seconds":0.0002415000000000056,
+    "grounding_wall_seconds":0.00024127960205078125,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

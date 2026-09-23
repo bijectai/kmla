@@ -1,0 +1,12 @@
+{
+  "original_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+  "request_sha256": "e1ed9713bd98a587381e259e83bcc44b9308a8a3a1e59923c882e29d3d37bcd1",
+  "helper_sha256": "e067dc191b441159cba29b36888368c4d2e43b32cb85a1c97553ec75a0da4c02",
+  "supplied_unary_predicates": [
+    "marriage_",
+    "service_",
+    "payment_",
+    "joint_return_"
+  ],
+  "scope": "A-020 assumptions only, not H4.3 or candidate traversal cost"
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "A-020 candidate measurement; not protected installation or parity",
+  "hashes": {
+    "harness/grounding.py": "a41aa09bbcc8d292b7ea7c66db892f6c65ab8acfcb962c5ab0406d6c39170e11",
+    "harness/grounding.pl": "e14d556b8856e931e1de4fc0482b4ddcdad6f642f0715071694320f67556e4ce",
+    "scripts/test_grounding.py": "f05dd41da7edd973b11b2943baf52b8799c15b5da5b08bb2db60ccdf007237b7"
+  },
+  "fact_emission_order": "stable source-clause provenance order (H1); phase execution stays unary, binary, stipulation",
+  "wildcards": "findall copies numbered in final facts/stipulations traversal; no wildcard expansion"
+}

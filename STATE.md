@@ -2,6 +2,37 @@
 
 ## Current phase
 
+Final handoff for this continuation: the isolated harness context is closed;
+no background implementation remains. Independent orchestrator rechecks pass
+tax_case_33's two comparisons and reproduce the country mismatch with exit 1
+(`docs/phase1/h4-tax33-recheck-2026-09-23/` and
+`docs/phase1/h4-country-recheck-2026-09-23/`). Regression suite: 117 tests, OK;
+this does not override the failing H4 diagnostic. The exact 376-name population
+was independently checked against the corpus, with no omissions/duplicates.
+Qualified H4.3(a): 115 measured equalities, 261 blocked. H4.3(b): 1 pass,
+1 fail, 113 unimplemented observations, 261 blocked. Only tax_case_33 passes
+both. The interrupted broad run is not a completed audit; its historical null
+finding is qualified in the report. Producer records/distinct households are
+not yet produced. Details: docs/phase1/H4_CANDIDATE_REPORT_2026-09-23.md.
+
+2026-09-23 (H4 candidate measured; generic path held): the exact reviewed
+tax_case_33 candidate passes its own H4.3(a,b) measurement: 1,736 facts retained,
+tax/3 first solution 27181 on both programs, 316 outer iterations × 157 inner
+terms = 49,612 two-input calls with 157 successful proofs. This does not validate
+all 376 originals. A separate generic grounder defect drops the supplied
+country_("baltimore, maryland, usa","usa") in s3306_c_A_pos.pl. Its ordered-list
+re-grounding passes but its H6.5 bff observation changes from [[alice,bob]] to
+[]. Raw tagged outputs and pinned identities are retained under
+docs/phase1/h4-candidate-evidence-2026-09-23/country-finding/. No revised traversal
+or comparison was applied. The affected generic path is halted for review.
+
+Q-021 asks whether H1/H3 already require a narrow implementation correction
+(country's first position is a place, not an event), or an owner choice is
+missing. Its CLI spawn was rejected before execution: explicit permission
+covered Q-020, not this new payload. No A-021 exists; no retry or indirect route
+is authorized. Dev must authorize sending Q-021 and its listed excerpts before
+the standing design-authority review can run. Checkpoint 1 remains unpassed.
+
 2026-09-23 (Q-020 review complete): Fable endorses the narrow H4 candidate as
 explicit, with no missing owner choice or counterexample. Its four clarifications
 are now folded into docs/contracts/H4_BOUND_PURPOSE_DRAFT.md: replacement rather
@@ -413,6 +444,34 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### Q-021 not sent: generic country-fact loss, consultation needs permission
+
+Measured original H6.5 query:
+`s3306_c_A(alice_employer,Employer,Employee)` in s3306_c_A_pos.pl.
+Original stdout is `[ [ {"a":"alice"},  {"a":"bob"} ] ]`; serialized stdout is
+`[]`. Both processes exit 0 without a timeout. H4.3(b) fails, even though
+H4.3(a) passes. This is not a refutation of the scoped service-domain candidate;
+the generic binary path incorrectly treats country_/2 position 1 as an event.
+No source, answer, comparison, universe or traversal was changed to hide it.
+
+Q-021 seeks a design-authority ruling on the existing H1/H3 requirement versus
+a missing owner choice before applying a correction. Fable was not invoked:
+the permission reviewer rejected the new payload/destination before process
+creation. No answer is inferred from the denial. Explicit owner permission is
+needed to send docs/consult/Q-021.md and its named repository excerpts to Fable,
+allowing only docs/consult/ and appended docs/DECISION_LOG.md writes.
+
+Verbatim rejection:
+
+```text
+This action was rejected due to unacceptable risk.
+Reason: This sends a new Q-021 and potentially sensitive repository excerpts to the separate Fable service; prior authorization specifically covered Q-020, not this new payload and destination, so sensitive egress is not specifically authorized.
+Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.
+```
+
+This was one rejected tool invocation, not a failed Claude subprocess. The
+three-failed-CLI-attempt breaker was not reached; no repeated attempt is made.
 
 ### Resolved: Q-020 permission and review gate
 

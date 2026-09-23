@@ -1,7 +1,7 @@
 # H4.2 bound-purpose exception — reviewed candidate
 
-Status: **CANDIDATE ONLY. Reviewed in A-020; implementation/verification authorized;
-not installed or certified.**
+Status: **CANDIDATE ONLY. Reviewed in A-020; implemented and measured for
+tax_case_33; all-376 verification incomplete. Not installed or certified.**
 On 2026-09-23 Dev approved this exact candidate for Fable review, then
 implementation and verification if Fable endorses it as explicit. A missing
 choice or counterexample must go to Dev before implementation. The prior
@@ -73,15 +73,26 @@ The existing numeric audit found 157 payment solutions, 157 service solutions
 and 157 successful pairs on their declared product. A ground pair outside
 both sets also succeeds. Thus this draft does NOT claim global extensional
 completeness. The required criterion remains exactly H4.3, not a stronger
-replacement. Neither H4.3 check nor the full event-by-service traversal cost
-has been measured for this candidate. Those are open verification obligations.
-No claim that all other cases work follows from this exception.
+replacement. Both H4.3 checks now pass for tax_case_33: 1,736 ordered facts and
+the tax/3 first result 27181 are preserved. The measured traversal has 316 outer
+event proofs and 157 distinct inner service terms, making 49,612 two-input
+calls and retaining 157 successes. Whole grounding (not purpose-only) wall time
+was 0.052663 seconds in the retained run-2 measurement. Full evidence and timing
+scope are in docs/phase1/H4_CANDIDATE_REPORT_2026-09-23.md.
+
+All-376 completion is still open: the generic binary path loses a supplied
+country_/2 fact, with a measured H4.3(b) mismatch in s3306_c_A_pos. That path is
+halted for Q-021 review; permission to send its new payload is required. No
+revised traversal is implemented and no claim that other cases work follows
+from the narrow candidate's success.
 
 ## Self-review
 
 The measured assumption is that the first split accepts its bound atom on
 SWI-Prolog 7.2.3+dfsg-6, while the second rejects its free input. The proposal's
-unproved assumption is that the declared service terms suffice for this case's
-H4.3 observations; that must be tested, not inferred from the 157-pair count.
-Three failed edit cycles on one test means stop and report. No candidate
-grounder edit/test cycle has begun and no protected file has been touched.
+preservation obligation was tested on this case's actual H4.3 observations,
+not inferred from the 157-pair count. It is not global completeness. Three
+failed edit cycles on one test means stop and report. The separate static-loader
+defect had one failed measurement and one corrective edit before passing; the
+country mismatch remains failing with no remedy attempt. No breaker threshold
+was reached and no protected file has been touched.

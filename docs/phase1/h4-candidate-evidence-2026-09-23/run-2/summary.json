@@ -1,0 +1,11 @@
+{
+  "scope": "candidate measurement only; no production records, Valid, parity or checkpoint claim",
+  "original_case_count": 376,
+  "attempted_original_count": 115,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "h4_3_a_pass": 114,
+  "h4_3_b_pass": 1,
+  "elapsed_wall_seconds": 106.0394254589919,
+  "finding": null
+}

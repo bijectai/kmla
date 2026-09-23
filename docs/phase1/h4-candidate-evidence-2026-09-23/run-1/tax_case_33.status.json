@@ -1,0 +1,53 @@
+{
+  "original_case": "tax_case_33.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "source_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+  "reader_exceptions": [],
+  "h6_observation": "tax/3 first solution, amount unbound",
+  "original_measurement": "ground-0001.pl",
+  "original_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.05208295800000001,
+    "grounding_wall_seconds": 0.05208277702331543,
+    "candidate": {
+      "outer_iterations": 316,
+      "inner_distinct_terms": 157,
+      "full_two_input_calls": 49612,
+      "successful_proofs": 157
+    }
+  },
+  "reground_measurement": "ground-0002.pl",
+  "reground_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.03382091699999998,
+    "grounding_wall_seconds": 0.03382372856140137,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax_first_solution": {
+    "original": {
+      "status": "first_solution",
+      "value": 27181,
+      "cpu_seconds": 0.798959874,
+      "wall_seconds": 0.7992689609527588
+    },
+    "regrounded": {
+      "status": "first_solution",
+      "value": 27181,
+      "cpu_seconds": 0.04344895800000001,
+      "wall_seconds": 0.04347062110900879
+    }
+  }
+}

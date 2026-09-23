@@ -1,0 +1,152 @@
+{
+  "original_case": "s3306_c_A_pos.pl",
+  "source_sha256": "4f788e912133535b3433f32fa53d489a9d5933f5f674b485b141ce92d784012b",
+  "supplied_country_fact": {
+    "ctor": "country_",
+    "args": [
+      {
+        "s": "baltimore, maryland, usa"
+      },
+      {
+        "s": "usa"
+      }
+    ]
+  },
+  "country_retained": false,
+  "h4_3_a": "pass",
+  "observation_authority": "H6.5 s3306_c_A/3 bff; inputs [alice_employer], outputs [Employer,Employee]",
+  "original_observation": {
+    "raw_solutions": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "canonical": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-74692473a229462a830f824987b2517f",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/h4-candidate-evidence-2026-09-23/country-finding/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_findings.pl",
+        "-g",
+        "country_probe",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0001.pl"
+      ],
+      "timeout_seconds": 60,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "007.stdout",
+      "stderr": "007.stderr",
+      "elapsed_seconds": 0.448945
+    }
+  },
+  "regrounded_observation": {
+    "raw_solutions": [],
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-a85da99553784ba58431faf4955c08c1",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/h4-candidate-evidence-2026-09-23/country-finding/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_findings.pl",
+        "-g",
+        "country_probe",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0002.pl"
+      ],
+      "timeout_seconds": 60,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "008.stdout",
+      "stderr": "008.stderr",
+      "elapsed_seconds": 0.336556
+    }
+  },
+  "h4_3_b": "fail",
+  "scope": "unchanged-grounder finding; no preservation fix or alternative traversal",
+  "helper_sha256": "2e7c25dcbf62a0494d228aa10fcaaedbccbdb6e9e43a56fbb8976e77faf52c22",
+  "script_sha256": "d7a3eff71c7026e53f9a7b90d82da0180b84bcc2d3b746569925bb507ed68ba1"
+}

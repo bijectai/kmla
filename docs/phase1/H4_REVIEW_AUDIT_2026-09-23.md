@@ -69,6 +69,67 @@ This uses the existing source-preserving reader and statement-local variable
 identity. It is a syntactic census, not dataflow analysis, candidate-domain
 completeness, a no-other-raises certificate or either H4.3 check.
 
+## Measured A-020 assumptions (separate from H4.3)
+
+`python3 -B scripts/check_q020_assumptions.py --out <fresh-directory>` reproduces
+the retained run under `docs/consult/evidence/q020-assumptions-2026-09-23/`.
+The full measured runtime identity matches the pin
+`744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92`.
+The immutable image was used with `/human` and `/corpus` read-only; original
+case clauses were loaded unchanged without executing their directives.
+
+Raw `commands/005.stdout` reports 316 unary solutions across every unary
+predicate supplied by this original, 157 service solutions, and 157
+`workforalice_*` solutions, all from `service_/1`; provenance violations are
+empty. The provenance list itself is retained, not just its count. There is
+no inferred statement about undeclared terms or the rule's infinite extension.
+
+For atom inputs `alice` and `home`, and string inputs `"home"`,
+`"agricultural labor"`, and `"workforalice"`, both
+`split_string(Input,"_","",[_,_,_])` and the original
+`purpose_(payment_2015_1,Input)` failed normally: ten observations, no raises.
+These are the five tested inputs, not a universal result over every term.
+The diagnostic process exited 0 without a timeout (0.335238 seconds including
+container launch). That duration is **not** candidate traversal cost.
+
+## Integration checks and halt
+
+The isolated implementation/report is in
+`docs/phase1/H4_CANDIDATE_REPORT_2026-09-23.md`. The orchestrator independently
+re-ran the scoped candidate with current code: both H4.3 checks pass, 1,736
+facts, 27181 on both programs, 49,612 bound calls and 157 proofs. Retained data:
+`docs/phase1/h4-tax33-recheck-2026-09-23/result.json` and complete streams.
+
+The independent country reproduction exits **1**, preserving the original
+raw and canonical mismatch exactly:
+`[[{"a":"alice"},{"a":"bob"}]]` versus `[]`. Both original/serialized
+Prolog calls exit 0 without a timeout; the diagnostic fails on their unequal
+results, not an exception masquerading as an answer. Evidence:
+`docs/phase1/h4-country-recheck-2026-09-23/`. No remedy was applied.
+
+The final unit suite passes 117 tests; retained output is in
+`docs/phase1/h4-final-regression-2026-09-23/`. The qualified report has exactly
+the corpus's 376 distinct names, with both statuses for each. Only tax_case_33
+passes both checks. H4.3(a): 115 ordered equalities, 261 blocked. H4.3(b):
+1 pass, 1 fail, 113 unimplemented, 261 blocked. Record and distinct-household
+counts are unproduced, not inferred from those partial comparisons.
+
+A strict current-code hash comparison against run-2 initially failed because
+the Python module's scope docstring changed after that run. Follow-up byte-hash
+verification confirms that is its **only** change; the Prolog helper is byte
+identical. The current-code independent rechecks have their own matching code
+hashes. The driver separately gained honest interrupt/status reporting; raw
+run-2 outputs and its incomplete/null-finding summary were not rewritten. The
+qualified report records the lane-reported SIGINT/exit 130, not a completed
+audit. No production or generic H4 preservation claim is made.
+
+Q-021 is staged for Fable to classify the country path against H1/H3/H4. Its
+spawn was denied before execution because this new payload lacks explicit
+owner permission; the exact rejection is retained in STATE.md. No A-021 exists,
+no alternate route was used, and the affected path is halted. The isolated
+context is closed. Human manifest verification still passes; no protected file
+or Oracle implementation changed in this continuation.
+
 ## Self-review
 
 The existing Python regression suite passed again: 111 tests, exit 0. Complete
