@@ -80,6 +80,49 @@ def goodHh : Household :=
      Fact.beneficiary_ (Term.atom "p") (Term.atom "y")] } 2015) == false
 end LegacyInterfaceGuards
 
+section StipulatedTimeGuards
+-- Test-only semantic guards isolate the V3 wiring; they certify no oracle.
+local instance : OracleGuards where
+  domesticAcyclic := fun _ => true
+  noHohCycle := fun _ _ => true
+  r5AllEligibleDecrease := fun _ _ => true
+
+private def withWorkday (p : Pat) : Household :=
+  ⟨[], [⟨.s3306_c_5,
+    [.val (.atom "service"), .val (.atom "employer"), .val (.atom "employee"),
+     p, .wild 9]⟩]⟩
+
+#guard (withWorkday (.val (.str "1900-01-01"))).v3 2018
+#guard (withWorkday (.val (.atom "2100-12-31"))).v3 2018
+#guard (withWorkday (.wild 47)).v3 2018
+#guard !(withWorkday (.val (.str "1899-12-31"))).v3 2018
+#guard !(withWorkday (.val (.str "2101-01-01"))).v3 2018
+#guard !(withWorkday (.val (.str "2017-1-1"))).v3 2018
+#guard !(withWorkday (.val (.str "2017-02-30"))).v3 2018
+#guard !(withWorkday (.val (.int 2015))).v3 2018
+#guard decide (ValidStip (withWorkday (.val (.str "2000-02-29"))) 2018)
+#guard !decide (ValidStip (withWorkday (.val (.str "2101-01-01"))) 2018)
+#guard !decide (Valid (withWorkday (.val (.str "2000-02-29"))) 2018)
+-- Missing positions are never treated as implicit wildcards by zip/truncation.
+#guard !(Household.mk [] [⟨.s3306_c_5, []⟩]).v3 2018
+-- The tag and wildcard id stay intact; the check does not rewrite input.
+#guard (withWorkday (.val (.atom "2000-02-29"))).stipulations !=
+  (withWorkday (.val (.str "2000-02-29"))).stipulations
+#guard (withWorkday (.wild 47)).stipulations != (withWorkday (.wild 48)).stipulations
+-- Other declared Day positions use the SAME rule, not a Workday-only whitelist.
+#guard !(Household.mk [] [⟨.s152_c_2_4,
+  [.val (.atom "d"), .val (.atom "t"), .val (.str "1800-01-01"), .wild 0]⟩]).v3 2018
+#guard !(Household.mk [] [⟨.total_wages_employer_6,
+  [.wild 0, .wild 1, .wild 2, .wild 3, .wild 4, .val (.str "x")]⟩]).v3 2018
+#guard !(Household.mk [] [⟨.s152_d_2_H_6,
+  [.wild 0, .wild 1, .val (.int 2015), .wild 2,
+   .val (.str "2015-01-01"), .val (.str "2101-01-01")]⟩]).v3 2018
+-- A-014: the literal year 250000 in an inert stipulated head is NOT a reason
+-- to drop the two original cases. The actual call year's boundary is separate.
+#guard (Household.mk [] [⟨.s68_b_3,
+  [.val (.atom "alice"), .val (.int 2015), .val (.int 250000)]⟩]).v3 2015
+end StipulatedTimeGuards
+
 namespace R5InterfaceTests
 
 -- These supplied edges are deliberately mock data, not solutions computed
