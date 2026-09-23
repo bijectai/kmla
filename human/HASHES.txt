@@ -1,6 +1,6 @@
 # Protected-artifact manifest for human/, per docs/contracts/HASHES.md.
 # Paths are relative to human/. Sorted by path. Excludes .git and this file.
-58dad769c0a318e018275dc106b1389e0ac7d89586e0c66bb33f6d8f3e19b30c  DECISIONS.md
+12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a  DECISIONS.md
 14bac34d68a6ebfee829643550b90441e0045fcb169defbd17288b06f897500a  README.md
 a15aaca15cff0e04bf5b6cce226445b9319195d51c80c4bb232b75f47eb0d0b9  gate/exploits/README.md
 41c62bb65c8174fffb3d935253dcfd464433d5090ea36b3ebdd620cb0d374bac  invariants/statements/README.md
