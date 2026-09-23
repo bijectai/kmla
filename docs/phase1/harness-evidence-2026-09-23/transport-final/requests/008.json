@@ -1,0 +1,6 @@
+{
+  "source_sha256": "526793f1b5423287315c567eb9bb1814d4799c2ea7615b6c9d115f3f2e3af5fe",
+  "provenance": null,
+  "helper": "transport_reader.pl",
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92"
+}

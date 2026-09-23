@@ -1,0 +1,27 @@
+[
+  {"pred":"start_", "args": [ {"a":"pre-epoch"},  {"s":"1969-12-31"} ]},
+  {"pred":"end_", "args": [ {"a":"epoch"},  {"s":"1970-01-01"} ]},
+  {"pred":"start_", "args": [ {"a":"leap"},  {"s":"2000-02-29"} ]},
+  {"pred":"start_", "args": [ {"a":"lower"},  {"s":"1900-01-01"} ]},
+  {"pred":"end_", "args": [ {"a":"upper"},  {"s":"2100-12-31"} ]},
+  {
+    "pred":"s3306_c",
+    "args": [
+      {"a":"service"},
+      {"a":"employer"},
+      {"a":"employee"},
+      {"s":"2015-01-01"},
+      2015
+    ]
+  },
+  {
+    "pred":"s3306_c",
+    "args": [
+      {"a":"service"},
+      {"a":"employer"},
+      {"a":"employee"},
+      {"a":"2015-01-01"},
+      2015
+    ]
+  }
+]

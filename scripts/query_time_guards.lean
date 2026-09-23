@@ -48,6 +48,54 @@ private def yearValue (source : R5TimeSource) : Option Year :=
 #guard Day.fromISO? "2017-01-00" == none
 #guard Day.fromISO? "x" == none
 
+-- These are kernel proofs, not compiled #guard evaluations. Keep the literal
+-- string boundary in each claim so parser reducibility is itself tested.
+example : Day.fromISO? "1900-02-29" = none := by decide
+example : Day.fromISO? "2017-02-30" = none := by decide
+example : Day.fromISO? "2017-1-1" = none := by decide
+example : Day.fromISO? "" = none := by decide
+example : Day.fromISO? "2015-01-01-01" = none := by decide
+example : Day.fromISO? "2015-01" = none := by decide
+example : Day.fromISO? "+2015-01-01" = none := by decide
+example : Day.fromISO? "2015-01-01" = some 16436 := by decide
+example : Day.fromISO? "2015-٠١-01" = none := by decide
+
+-- Pre-resumption parser retained solely as a regression oracle for this
+-- plumbing edit. This is not the independently authored parity meter.
+private def previousFromISO? (s : String) : Option Day := do
+  let [ys, ms, ds] := s.splitOn "-" | none
+  let y ← ys.toInt?
+  let m ← ms.toInt?
+  let d ← ds.toInt?
+  if !(1900 ≤ y && y ≤ 2100 && 1 ≤ m && m ≤ 12 && 1 ≤ d && d ≤ 31) then
+    none
+  else
+    let y := y - (if m ≤ 2 then 1 else 0)
+    let era := y.fdiv 400
+    let yoe := y - era * 400
+    let mp := m + (if m > 2 then -3 else 9)
+    let doy := (153 * mp + 2).fdiv 5 + d - 1
+    let doe := yoe * 365 + yoe.fdiv 4 - yoe.fdiv 100 + doy
+    let day := era * 146097 + doe - 719468
+    if Day.inRange day && Day.toISO day == s then some day else none
+
+private def twoDigits (n : Nat) : String :=
+  if n < 10 then "0" ++ toString n else toString n
+
+-- 93,786 canonical-shaped strings: every 1899..2101 year, month 00..13,
+-- day 00..32, including invalid dates and both out-of-range boundary years.
+#guard (List.range 203).all fun yi => (List.range 14).all fun m =>
+  (List.range 33).all fun d =>
+    let s := toString (1899 + yi) ++ "-" ++ twoDigits m ++ "-" ++ twoDigits d
+    Day.fromISO? s == previousFromISO? s
+
+#guard (["", "+2015-01-01", "-2015-01-01", "02015-01-01",
+  "2015-1-01", "2015-01-1", "2015-001-01", "2015-01-001",
+  "2015-+1-01", "2015-01-+1", "2015-01-01-01", "2015-01",
+  "2015--01", "2015-01-", "2015-٠١-01", "２０１５-01-01",
+  "2015-01-01\n", " 2015-01-01", "2015-01-01\u0000"] : List String).all
+    fun s => Day.fromISO? s == previousFromISO? s
+
 -- A certificate for a root year cannot be used for an unrelated Workday.
 example (checked : CoveredR5Time (.workday 16801)) :
     checked.year.value ∈ r5Years := checked.year_covered
@@ -119,14 +167,29 @@ def r8 (d : SuppliedArg) : QueryCall := ⟨"s3306_c_10_A_ii", [a "p", a "student
 example (q : QueryCall) (checked : AdmittedQuery .generated emptyH 2015 q) :
     emptyH.v3ForQuery 2015 q = true := checked.actual_v3
 
-example : ¬ Nonempty (AdmittedQuery .original emptyH 2015 (r8 (day "2101-01-01"))) := by
+theorem outOfRangeQueryRejected :
+    ¬ Nonempty (AdmittedQuery .original emptyH 2015 (r8 (day "2101-01-01"))) := by
   intro ⟨checked⟩
   have bad := checked.actual_v3
-  -- +kernel asks the kernel to check the decision proof directly; it is NOT
-  -- +native/native_decide and adds no native-evaluation axiom. String reduction
-  -- in the elaborator alone gets stuck on this concrete tuple.
-  have rejected : emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")) = false := by decide +kernel
+  have rejected : emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")) = false := by decide
   rw [rejected] at bad
   contradiction
+
+#print axioms outOfRangeQueryRejected
+
+def outOfRangeStipH : Household := ⟨[], [⟨.s3306_c_5,
+  [.val (.atom "service"), .val (.atom "employer"), .val (.atom "employee"),
+   .val (.str "2101-01-01"), .val (.int 2015)]⟩]⟩
+
+-- Stipulation-supplied Workdays cannot evade admission through an unrelated
+-- well-bounded root query. The query here is arbitrary, not a selected fixture.
+theorem outOfRangeStipRejected (q : QueryCall) :
+    ¬ Nonempty (AdmittedQuery .original outOfRangeStipH 2015 q) := by
+  intro ⟨checked⟩
+  have bad := checked.actual_v3
+  have rejected : outOfRangeStipH.v3 2015 = false := by decide
+  simp [Household.v3ForQuery, rejected] at bad
+
+#print axioms outOfRangeStipRejected
 
 end QueryAdmissionTests

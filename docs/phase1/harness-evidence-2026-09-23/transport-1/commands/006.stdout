@@ -1,0 +1,12 @@
+[
+  {"pred":"country_", "args": [ {"a":"place"},  {"a":"usa"} ]},
+  {"pred":"country_", "args": [ {"a":"place"},  {"s":"usa"} ]},
+  {"pred":"country_", "args": [ {"a":"place"},  {"a":"usa"} ]},
+  {"pred":"amount_", "args": [ {"a":"payment"}, 9007199254740993 ]},
+  {"pred":"amount_", "args": [ {"a":"payment"}, -9007199254740993 ]},
+  {"pred":"amount_", "args": [ {"a":"zero"}, 0 ]},
+  {
+    "pred":"agent_",
+    "args": [ {"a":"numeric-participant"}, 9007199254740993 ]
+  }
+]

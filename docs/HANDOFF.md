@@ -2,13 +2,45 @@
 
 ## Authorization and entry identity
 
-**Current dispatch status: stopped by the query-admission proof circuit breaker.**
-Read-only runner/CI work and the shared time-schema census are verified locally,
-but `scripts/check_query_time.sh` still exits 1 at its concrete tuple-admission
-kernel proof after three failed proof-edit attempts. See STATE's active blocker
-and `docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`. Neither Phase
-1.1 nor Phase 1.2 has been dispatched in this turn. The failure is not permission
-to remove the test, weaken admission, change semantics or assert a preflight pass.
+**Current dispatch status (2026-09-23): §7703 bounded continuation verified.**
+`6e3cdc9` preserves the working admission/transport/compiling oracle slice AND
+the three failing proof tests on `claude/checkpoint-0-integration`. Dev has
+authorized one proof-only round with assertions unchanged. Keep translating
+§7703 on the narrowed domain with R5 proof obligations open; unclosed proofs
+do not stop unrelated translation. If a breaker repeats, obtain Fable's
+design-flaw review of the obligation, not a fourth proof attempt. The same
+isolated oracle context completed this handoff and is now closed; no later
+section has been dispatched.
+
+Round result: all three exact original assertions now pass, with the prior
+goals and failed attempts preserved. The complete file has 62 passing theorem
+declarations; all 53 original statements and 24 original fixture definitions
+remain unchanged. The source `(b)` composition and root statute clause bodies
+are added with explicit required downstream dependencies, not fake providers.
+Root stipulations/freshening, missing modes, production guards and R5 adequacy
+remain open. No complete root reference, original parity or CP1 pass is claimed.
+Fresh verification: `docs/phase1/s7703-continuation-final-2026-09-23/001.*`.
+
+H4 grounding stays separately held. Dev has NOT accepted an amendment. The
+fresh retained original-call trace confirms purpose_(payment_2015_1,Purpose)
+has its event bound; the SECOND split_string reads free Service_event and
+raises. See `docs/consult/evidence/h4-bound-goal-2026-09-23/`. No alternative
+grounder is installed. A-017/A-019 remain proposal/correction only. Neither
+partial translation nor passing transport checks establish original round
+trips, parity or Checkpoint 1. Full pre-round proof goals are retained in
+`docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt`.
+
+The successful pre-dispatch preparation follows:
+Dev authorized continuation after the prior circuit-breaker stop. Q-016/A-016
+and isolated reduction checks identified the date parser plumbing. Structural
+character-list parsing now closes the SAME concrete tuple-admission rejection
+with only X1 axioms, without changing its statement, bounds or round-trip test.
+`scripts/check_query_time.sh` exits 0, including 73,414 admitted-day round trips
+and kernel malformed-date checks. Runtime (29), runner boundary (12) and
+household guards (115) pass. The earlier failure evidence is preserved in
+`docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`.
+Fresh Phase 1.1 and §7703 Phase 1.2 contexts have begun. Operational call-site
+coverage and R5 adequacy remain obligations, not consequences of this preflight.
 
 On 2026-09-22 Dev confirmed Checkpoint 0 at parent
 `0a2a65ac1313c180bea39d137e6665c01b8e833a` and authorized Phase 1. The owner
@@ -64,6 +96,36 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 ## Exact human deliverables for Checkpoint 1
 
+### H4 finding — remedy not accepted; proof continuation authorized
+
+- The required bound-call diagnostic is complete: the original purpose rule
+  in tax_case_33 fails in its second split with its first event already bound.
+  No grounder fix for an unbound first argument is indicated by this evidence.
+  An exact amendment may now be proposed, not installed. Approve it only after its required
+  argument domains, ordering/multiplicity and H2/A3 wildcard preservation are
+  stated and justified. The builder stages any protected-artifact draft under
+  docs/contracts; Dev installs/re-pins it. H4.3 stays unchanged unless Dev
+  explicitly chooses otherwise; a global/infinite-relation criterion is not
+  an existing requirement. A-017/A-019 and P-GROUND2 are proposals/review,
+  not an installed remedy or a measured corpus-wide candidate audit.
+- The §7703 proof-only restart is authorized, with the exact three assertions
+  unchanged. A-018 is a diagnostic plan, not proof evidence. No change to
+  shared semantics, expectations or production guards is authorized. Keep
+  unproved goals/failing tests visible and continue §7703 translation with
+  R5/recursive dependencies explicit. A repeated breaker requires Fable
+  design-flaw review of the obligation rather than another proof attempt.
+
+That proof round is now complete: all three assertions close without a repeated
+breaker. There is no further owner choice for these proofs. The H4 candidate
+is in `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`, unapproved and unimplemented;
+Q-020's external review was denied by the permission reviewer before execution.
+Explicit permission to send it to Fable/Claude and permit a consult answer is
+still required. No existing answer file was edited and no external review result
+is inferred from that denial.
+
+No new A/WIRE choice, Checkpoint 0 sign-off or parity-meter implementation is
+requested. Only H4-dependent work is held; later sections have not been dispatched.
+
 No further artifact was required at Phase 1 entry. Dev has now resolved the two
 owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those
 choices again. Neither acceptance is Checkpoint 1 sign-off.
@@ -98,8 +160,8 @@ The builder verified the new manifest using
   admitted operational calls are covered. The new type alone is not that proof.
   Failed construction is a reported error, never a reference answer. Do not
   impose a new V8-at-derived-year requirement through a convenience wrapper.
-  The current tuple-indexed integration remains unaccepted work in progress
-  while the concrete kernel regression is stopped under the circuit breaker.
+  The tuple-indexed boundary and concrete kernel rejection now pass; each
+  production wrapper/call site still has to consume the actual certificate.
 - Prove structural-descendant correspondence, finite-person-universe coverage,
   the strict measure, phase/cycle cut and N+1 branch-counter adequacy with every
   entry/mode/offset accounted for. The old child-descent argument and A-009's

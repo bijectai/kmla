@@ -1,0 +1,25 @@
+[
+  {
+    "pred":"purpose_",
+    "args": [
+      {"variable":"_KMLA_W9007199254740993"},
+      {"s":"agricultural labor"}
+    ]
+  },
+  {
+    "pred":"purpose_",
+    "args": [ {"a":"_"},  {"s":"agricultural labor"} ]
+  },
+  {
+    "pred":"s2_b",
+    "args": [ {"a":"alice"},  {"variable":"_KMLA_W17"}, 2015 ]
+  },
+  {
+    "pred":"s2_b",
+    "args": [ {"a":"alice"},  {"variable":"_KMLA_W18"}, 2015 ]
+  },
+  {
+    "pred":"s2_b",
+    "args": [ {"a":"alice"},  {"variable":"_KMLA_W17"}, 2015 ]
+  }
+]

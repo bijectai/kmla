@@ -1,0 +1,309 @@
+["[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"]
+["[{\"a\":\"bob\"}]"]
+Oracle/Tests/S7703ProofDiagnostics.lean:18:41: error: Tactic `rfl` failed: The left-hand side
+  escapeJson "bob"
+is not definitionally equal to the right-hand side
+  "bob"
+
+⊢ escapeJson "bob" = "bob"
+Oracle/Tests/S7703ProofDiagnostics.lean:19:41: error: Tactic `decide` failed for proposition
+  escapeJson "bob" = "bob"
+because its `Decidable` instance
+  instDecidableEqString (escapeJson "bob") "bob"
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqBool`, `instDecidableEqList`, `instDecidableEqString`, `instDecidableOr`, `Bool.decEq`, `Classical.propDecidable`, `Nat.decLe`, `Nat.decLt`, and `String.decEq`, reduction got stuck at the `Decidable` instance
+  match
+    (Decidable.rec
+            (fun h =>
+              (fun h =>
+                  WellFounded.opaqueFix✝
+                    (InvImage
+                      (Std.IteratorLoop.rel
+                        (Std.Iterators.Types.Map "bob".toSlice.PosIterator Id Id (fun ⦃x⦄ => monadLift) fun b =>
+                          pure
+                            (match b with
+                            | ⟨pos, h⟩ => pos.get h))
+                        Id fun x x_1 x_2 => True)
+                      fun x => (x.fst, x.snd.fst))
+                    (fun x G =>
+                      (fun it acc hP recur =>
+                          (fun x => (fun x x_1 f c => f c.run) (Std.Shrink it.Step) String x it.step) fun s =>
+                            match s.inflate with
+                            | ⟨Std.IterStep.yield it' out, h⟩ => do
+                              let __do_lift ←
+                                (fun x1 x2 x3 => do
+                                      let __do_lift ←
+                                        (fun out h acc =>
+                                              (fun a x =>
+                                                  (fun x acc =>
+                                                      ForInStep.yield
+                                                        ((fun acc c =>
+                                                            acc ++
+                                                              match c.toNat with
+                                                              | 8 => "\\b"
+                                                              | 9 => "\\t"
+                                                              | 10 => "\\n"
+                                                              | 12 => "\\f"
+                                                              | 13 => "\\r"
+                                                              | 34 => "\\\""
+                                                              | 92 => "\\\\"
+                                                              | n =>
+                                                                if n < 32 then
+                                                                  "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++
+                                                                    KMLA.jsonHexDigit✝ (n % 16)
+                                                                else c.toString)
+                                                          acc x))
+                                                    a)
+                                                out ⋯ acc)
+                                            x1 x2 x3
+                                      pure ⟨__do_lift, trivial⟩)
+                                    out ⋯ acc
+                              match __do_lift with
+                                | ⟨ForInStep.yield c, h'⟩ => recur it' c ⋯ ⋯
+                                | ⟨ForInStep.done c, h⟩ => pure c
+                            | ⟨Std.IterStep.skip it', h⟩ => recur it' acc ⋯ ⋯
+                            | ⟨Std.IterStep.done, property⟩ => pure acc)
+                        x.fst x.snd.fst ⋯ fun a b c => G ⟨a, ⟨b, c⟩⟩)
+                    ⟨"bob".toSlice.chars.toIterM, ⟨"", ⋯⟩⟩)
+                h)
+            (fun h =>
+              (fun h =>
+                  h.fix
+                    (fun x G =>
+                      (fun it acc hP recur =>
+                          (fun x => (fun x x_1 f c => f c.run) (Std.Shrink it.Step) String x it.step) fun s =>
+                            match s.inflate with
+                            | ⟨Std.IterStep.yield it' out, h⟩ => do
+                              let __do_lift ←
+                                (fun x1 x2 x3 => do
+                                      let __do_lift ←
+                                        (fun out h acc =>
+                                              (fun a x =>
+                                                  (fun x acc =>
+                                                      ForInStep.yield
+                                                        ((fun acc c =>
+                                                            acc ++
+                                                              match c.toNat with
+                                                              | 8 => "\\b"
+                                                              | 9 => "\\t"
+                                                              | 10 => "\\n"
+                                                              | 12 => "\\f"
+                                                              | 13 => "\\r"
+                                                              | 34 => "\\\""
+                                                              | 92 => "\\\\"
+                                                              | n =>
+                                                                if n < 32 then
+                                                                  "\\u00" ++ KMLA.jsonHexDigit✝ (n / 16) ++
+                                                                    KMLA.jsonHexDigit✝ (n % 16)
+                                                                else c.toString)
+                                                          acc x))
+                                                    a)
+                                                out ⋯ acc)
+                                            x1 x2 x3
+                                      pure ⟨__do_lift, trivial⟩)
+                                    out ⋯ acc
+                              match __do_lift with
+                                | ⟨ForInStep.yield c, h'⟩ => recur it' c ⋯ ⋯
+                                | ⟨ForInStep.done c, h⟩ => pure c
+                            | ⟨Std.IterStep.skip it', h⟩ => recur it' acc ⋯ ⋯
+                            | ⟨Std.IterStep.done, property⟩ => pure acc)
+                        x.fst x.snd.fst ⋯ fun a b c => G ⟨a, ⟨b, c⟩⟩)
+                    ⟨"bob".toSlice.chars.toIterM, ⟨"", ⋯⟩⟩)
+                h)
+            (Classical.propDecidable
+              (WellFounded
+                (InvImage
+                  (Std.IteratorLoop.rel
+                    (Std.Iterators.Types.Map "bob".toSlice.PosIterator Id Id (fun ⦃x⦄ => monadLift) fun b =>
+                      pure
+                        (match b with
+                        | ⟨pos, h⟩ => pos.get h))
+                    Id fun x x_1 x_2 => True)
+                  fun x => (x.fst, x.snd.fst))))).1.1.toList with
+  | [] =>
+    match
+      ((#[].push (UInt8.ofNat 'b'.val.toNat)).push (UInt8.ofNat 'o'.val.toNat)).toList.concat
+        (UInt8.ofNat 'b'.val.toNat) with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match
+      ((#[].push (UInt8.ofNat 'b'.val.toNat)).push (UInt8.ofNat 'o'.val.toNat)).toList.concat
+        (UInt8.ofNat 'b'.val.toNat) with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+Oracle/Tests/S7703ProofDiagnostics.lean:20:61: error: Tactic `rfl` failed: The left-hand side
+  (Obs.atom "bob").encode
+is not definitionally equal to the right-hand side
+  "{\"a\":\"bob\"}"
+
+⊢ (Obs.atom "bob").encode = "{\"a\":\"bob\"}"
+Oracle/Tests/S7703ProofDiagnostics.lean:21:61: error: Tactic `decide` failed for proposition
+  (Obs.atom "bob").encode = "{\"a\":\"bob\"}"
+because its `Decidable` instance
+  instDecidableEqString (Obs.atom "bob").encode "{\"a\":\"bob\"}"
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqBool`, `instDecidableEqList`, `instDecidableEqString`, `instDecidableOr`, `Bool.decEq`, `Nat.decLe`, `Nat.decLt`, and `String.decEq`, reduction got stuck at the `Decidable` instance
+  match (Obs.atom "bob").encode.1.1.toList with
+  | [] =>
+    match
+      ((((((((((#[].push (UInt8.ofNat '{'.val.toNat)).push (UInt8.ofNat '\"'.val.toNat)).push
+                                          (UInt8.ofNat 'a'.val.toNat)).push
+                                      (UInt8.ofNat '\"'.val.toNat)).push
+                                  (UInt8.ofNat ':'.val.toNat)).push
+                              (UInt8.ofNat '\"'.val.toNat)).push
+                          (UInt8.ofNat 'b'.val.toNat)).push
+                      (UInt8.ofNat 'o'.val.toNat)).push
+                  (UInt8.ofNat 'b'.val.toNat)).push
+              (UInt8.ofNat '\"'.val.toNat)).toList.concat
+        (UInt8.ofNat '}'.val.toNat) with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match
+      ((((((((((#[].push (UInt8.ofNat '{'.val.toNat)).push (UInt8.ofNat '\"'.val.toNat)).push
+                                          (UInt8.ofNat 'a'.val.toNat)).push
+                                      (UInt8.ofNat '\"'.val.toNat)).push
+                                  (UInt8.ofNat ':'.val.toNat)).push
+                              (UInt8.ofNat '\"'.val.toNat)).push
+                          (UInt8.ofNat 'b'.val.toNat)).push
+                      (UInt8.ofNat 'o'.val.toNat)).push
+                  (UInt8.ofNat 'b'.val.toNat)).push
+              (UInt8.ofNat '\"'.val.toNat)).toList.concat
+        (UInt8.ofNat '}'.val.toNat) with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+Oracle/Tests/S7703ProofDiagnostics.lean:23:56: error: Tactic `rfl` failed: The left-hand side
+  Solution.encode [Obs.atom "bob", Obs.atom "marriage", Obs.null]
+is not definitionally equal to the right-hand side
+  "[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"
+
+⊢ Solution.encode [Obs.atom "bob", Obs.atom "marriage", Obs.null] = "[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"
+Oracle/Tests/S7703ProofDiagnostics.lean:25:56: error: Tactic `decide` failed for proposition
+  Solution.encode [Obs.atom "bob", Obs.atom "marriage", Obs.null] = "[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"
+because its `Decidable` instance
+  instDecidableEqString (Solution.encode [Obs.atom "bob", Obs.atom "marriage", Obs.null])
+    "[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decEq`, `instDecidableEqBitVec`, `instDecidableEqBool`, `instDecidableEqFin`, `instDecidableEqList`, `instDecidableEqNat`, `instDecidableEqString`, `instDecidableEqUInt8`, `instDecidableOr`, `BitVec.decEq`, `Bool.decEq`, `Nat.decEq`, `Nat.decLe`, `Nat.decLt`, `String.decEq`, and `UInt8.decEq`, reduction got stuck at the `Decidable` instance
+  (([].append
+            (",".intercalate
+                    (List.map Obs.encode
+                      [Obs.atom "bob", Obs.atom "marriage", Obs.null])).toByteArray.data.toList).append
+        "]".toByteArray.data.toList).hasDecEq
+    (((((((((((((((((((((((((((((((((([].concat (UInt8.ofNat '{'.val.toNat)).concat (UInt8.ofNat '\"'.val.toNat)).concat
+                                                                                                                                  (UInt8.ofNat
+                                                                                                                                    'a'.val.toNat)).concat
+                                                                                                                              (UInt8.ofNat
+                                                                                                                                '\"'.val.toNat)).concat
+                                                                                                                          (UInt8.ofNat
+                                                                                                                            ':'.val.toNat)).concat
+                                                                                                                      (UInt8.ofNat
+                                                                                                                        '\"'.val.toNat)).concat
+                                                                                                                  (UInt8.ofNat
+                                                                                                                    'b'.val.toNat)).concat
+                                                                                                              (UInt8.ofNat
+                                                                                                                'o'.val.toNat)).concat
+                                                                                                          (UInt8.ofNat
+                                                                                                            'b'.val.toNat)).concat
+                                                                                                      (UInt8.ofNat
+                                                                                                        '\"'.val.toNat)).concat
+                                                                                                  (UInt8.ofNat
+                                                                                                    '}'.val.toNat)).concat
+                                                                                              (UInt8.ofNat
+                                                                                                ','.val.toNat)).concat
+                                                                                          (UInt8.ofNat
+                                                                                            '{'.val.toNat)).concat
+                                                                                      (UInt8.ofNat
+                                                                                        '\"'.val.toNat)).concat
+                                                                                  (UInt8.ofNat 'a'.val.toNat)).concat
+                                                                              (UInt8.ofNat '\"'.val.toNat)).concat
+                                                                          (UInt8.ofNat ':'.val.toNat)).concat
+                                                                      (UInt8.ofNat '\"'.val.toNat)).concat
+                                                                  (UInt8.ofNat 'm'.val.toNat)).concat
+                                                              (UInt8.ofNat 'a'.val.toNat)).concat
+                                                          (UInt8.ofNat 'r'.val.toNat)).concat
+                                                      (UInt8.ofNat 'r'.val.toNat)).concat
+                                                  (UInt8.ofNat 'i'.val.toNat)).concat
+                                              (UInt8.ofNat 'a'.val.toNat)).concat
+                                          (UInt8.ofNat 'g'.val.toNat)).concat
+                                      (UInt8.ofNat 'e'.val.toNat)).concat
+                                  (UInt8.ofNat '\"'.val.toNat)).concat
+                              (UInt8.ofNat '}'.val.toNat)).concat
+                          (UInt8.ofNat ','.val.toNat)).concat
+                      (UInt8.ofNat 'n'.val.toNat)).concat
+                  (UInt8.ofNat 'u'.val.toNat)).concat
+              (UInt8.ofNat 'l'.val.toNat)).concat
+          (UInt8.ofNat 'l'.val.toNat)).concat
+      (UInt8.ofNat ']'.val.toNat))
+Oracle/Tests/S7703ProofDiagnostics.lean:26:64: error: Tactic `rfl` failed: The left-hand side
+  observe [[Obs.atom "bob"]]
+is not definitionally equal to the right-hand side
+  ["[{\"a\":\"bob\"}]"]
+
+⊢ observe [[Obs.atom "bob"]] = ["[{\"a\":\"bob\"}]"]
+Oracle/Tests/S7703ProofDiagnostics.lean:27:64: error: Tactic `decide` failed for proposition
+  observe [[Obs.atom "bob"]] = ["[{\"a\":\"bob\"}]"]
+because its `Decidable` instance
+  instDecidableEqList (observe [[Obs.atom "bob"]]) ["[{\"a\":\"bob\"}]"]
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instance `instDecidableEqList`, reduction got stuck at the `Decidable` instance
+  match observe [[Obs.atom "bob"]] with
+  | [] =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+Oracle/Tests/S7703ProofDiagnostics.lean:28:79: error: Tactic `rfl` failed: The left-hand side
+  observe [[Obs.atom "bob"], [Obs.atom "bob"]]
+is not definitionally equal to the right-hand side
+  ["[{\"a\":\"bob\"}]"]
+
+⊢ observe [[Obs.atom "bob"], [Obs.atom "bob"]] = ["[{\"a\":\"bob\"}]"]
+Oracle/Tests/S7703ProofDiagnostics.lean:29:79: error: Tactic `decide` failed for proposition
+  observe [[Obs.atom "bob"], [Obs.atom "bob"]] = ["[{\"a\":\"bob\"}]"]
+because its `Decidable` instance
+  instDecidableEqList (observe [[Obs.atom "bob"], [Obs.atom "bob"]]) ["[{\"a\":\"bob\"}]"]
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instance `instDecidableEqList`, reduction got stuck at the `Decidable` instance
+  match observe [[Obs.atom "bob"], [Obs.atom "bob"]] with
+  | [] =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match ["[{\"a\":\"bob\"}]"] with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯

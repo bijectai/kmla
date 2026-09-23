@@ -1,0 +1,3 @@
+Warning: /audit/h4_bound_goal_bindings.pl:8:
+	Test is always true: var(Purpose)
+ERROR: split_string/4: Arguments are not sufficiently instantiated

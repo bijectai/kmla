@@ -1,0 +1,57 @@
+Oracle/Tests/S7703.lean:259:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil, Solution.encode,
+    Obs.encode, escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.s7703_a_1_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_1_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_is_member_of_household_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_bbb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_3_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.a1_null_only_at_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b3_deduplication_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_composition_preserves_literal_order_and_every_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_no_residence_never_needs_provider' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_spouse_one_guard_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_two_guard_successes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_identical_people_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_other_spouse_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_retains_atom_string_distinction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_mode_retains_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_mode_retains_guard_times_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

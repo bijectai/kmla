@@ -1,0 +1,31 @@
+{
+  "image": "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92",
+  "runtime_record_sha256": "c1ca3a433d329ca28818cdd177190f14930a8025e310c0c9f1310d862c1aa12d",
+  "decisions_sha256": "12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a",
+  "manifest_sha256": "5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9",
+  "household_wire_sha256": "fd30d6619dd7f653c63dc68961e05bce1ac62d7f81ab4a8f7c607c44af3c5a3e",
+  "harness_sha256": {
+    "swipl.py": "5a302e503991e4d1c8e5727f8daf616ab70b7352a21a0c5621c56e8564cdd77c",
+    "facts.py": "791e521532d153312bb3414df5b72c5072d5704329aa3d7d2afabd7540e1d772",
+    "runtime.py": "9bdbc5bd044f909282325801fd19613b493f67de1507ebfbeb024713fa5fbc83",
+    "case_reader.py": "c0e4afea64a561cd8a641f479be1eefede62b7ed56d4878b28e1c9aab7807f95",
+    "transport_reader.pl": "c2b10d7bc0236f38154038464026b25a24452af902a23b7fbcd6b7a2cd52527f",
+    "grounding_probe.pl": "2dddd8434d72c04176a44762dbdcb232c4306cf4f9830791c218e1b1c325e0c7"
+  },
+  "source_files_sha256": {
+    "statutes/prolog/events.pl": "aed56ad9b0569d91328b2e2932621bc49911791f5a343dca7c2af7a87a5af85c",
+    "statutes/prolog/init.pl": "b1dedfd2469737799c9d12b50d8e3d3ce19652aaa87465c43ce0d190b1c6926f",
+    "statutes/prolog/section1.pl": "76ad42975e9156b8e235319bab8510056f558df9c023be0947f48599fcb63a32",
+    "statutes/prolog/section151.pl": "b00273394d4fc9f734947287d411400dbf49d2c38785dba82c63c2b12378ccbc",
+    "statutes/prolog/section152.pl": "6d653a12197a64967f686ad0f4f751e2c9876d3804a45c93fb7df09effc747f3",
+    "statutes/prolog/section2.pl": "14431d6954acffd7b1f2dcc2014dc63f89618ae974e2f147b8265ec336b6265f",
+    "statutes/prolog/section3301.pl": "f053e7e0b9ed17b73a4d81530cb64532388221581323478d4b81d21b8aa35662",
+    "statutes/prolog/section3306.pl": "e5b07f2e510eb8d66095217beaa0db5b0c2b092f801481e58d4c670050a6768e",
+    "statutes/prolog/section63.pl": "337bfedc2ad36cf29466c7b2004d1e5420a396bd6648c1a89e3073ca2d939b07",
+    "statutes/prolog/section68.pl": "3604740d2d7bd4d67e442cdb308cb00c3d0de63d764a8859adeb97cfef75ad34",
+    "statutes/prolog/section7703.pl": "37f5ad90cbfea12e47b6c91068f93edd02980cd88f3a1caacfdf79b4263e81e3",
+    "statutes/prolog/utils.pl": "e773297c392da3c7caec86dc393d72c1233a44255af4f9a51c136415f9070e1c"
+  },
+  "scope": "Household transport diagnostics; no Valid/parity/reference answers"
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "f0f17038e17a3387d456012116ab2ec04aa1d47096ad7f1be0b13cffce270fd1",
+  "provenance": {
+    "original": "/Users/devrashie/Documents/csProjects/kmla/human/sara/sara/cases/tax_case_33.pl",
+    "sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+    "reader_exceptions": 0
+  },
+  "helper": "grounding_probe.pl",
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92"
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "lean",
+    "--run",
+    "Transport.lean"
+  ],
+  "exit": 0,
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "interface_sha256": "a78d9fd26639f2f6e1f771fbabbaf988d519a2dc0234ba546aa4d5e7d4f78007",
+  "fixture_sha256": "831ea14bf83f3486a43e14fc400280dd38cd9b7aa6de5665500e10fe0df3b071",
+  "facts_py_sha256": "642ad240ab3747634bfc4744bcd1d5e8f05b96d0ffa3f42f0d421d07850d6e94",
+  "scope": "evaluated emitted data; no Valid, H4 grounding, kernel theorem or parity"
+}

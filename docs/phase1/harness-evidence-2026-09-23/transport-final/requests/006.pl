@@ -1,0 +1,10 @@
+agricultural_service('helper',"2015-01-01",-7).
+alice_employer('alice',"household",250000).
+alice_household_maintenance('alice','payment',"",9007199254740993).
+patient('event','person').
+patient_('event','person').
+itemize_deductions_('inert-marker').
+s151_d('alice',"2015-01-01",_KMLA_W40,250000).
+s2_a('alice',_KMLA_W41,"2015-01-01",-7,250000).
+s63_c_3('alice',_KMLA_W42,0,2015).
+s68_b('alice',2015,250000).

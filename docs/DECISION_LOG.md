@@ -42,6 +42,7 @@ and its heading still reads PENDING.
 | P-WIRE | Release producer block, record granularity and byte handling | **ACCEPTED** (Dev, 2026-09-22) | `docs/contracts/PARITY.md`, `Interface/WIRE.md`, PROTOCOL; concrete input codec/fixtures remain implementation work |
 | P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; owner installed/re-pinned H5/R5/R8/R9 at `0a2a65a`; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
+| P-GROUND2 | H4.2's step (ii) cannot ground a binary event predicate that relates two events; `tax_case_33` raises | **PROPOSED** | — ; H4.2 is Dev's, see A-017. The serializer grounding path is halted |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -725,3 +726,130 @@ A-014 confirms no new owner choice follows. Retain the apparent argument
 transposition as a source finding under P-INTENT; never correct/filter the cases.
 The audit's exit 1 and its 150 wildcard time slots remain reported, not a clean
 coverage pass. See `A_WIRE_INSTALLATION_2026-09-22.md` for complete scope.
+
+## 2026-09-23 — PROPOSED — P-GROUND2: H4.2 cannot ground a binary event predicate that relates two events
+
+Origin: Q-017 / A-017. Owning artifact: `human/DECISIONS.md` H4.2 (and, for the
+second gap below, its interaction with H2). **Dev's artifact; nothing here is
+operative, nothing is selected.** Full reasoning and evidence are in
+`docs/consult/A-017.md`.
+
+**The defect.** H4.2 step (ii) grounds "every binary event predicate with the
+event position bound to each event", and justifies itself with the claim that
+such rules "raise `instantiation_error` when called with the event unbound and
+behave as facts when it is bound". `tax_case_33.pl:29-31` refutes that claim:
+
+```prolog
+purpose_(Payment_event,Service_event) :- split_string(Payment_event,"_","",[Xp,Yp,Zp]),
+    split_string(Service_event,"_","",[Xs,Ys,Zs]),
+    Xp=="payment",Xs=="workforalice",Yp==Ys,Zp==Zs.
+```
+
+Both positions are event-typed and both must be bound. With only position 1
+bound the second `split_string/4` raises, which the isolated serializer probe
+reproduced on the pinned image: stderr `ERROR: split_string/4: Arguments are not
+sufficiently instantiated`, exit 2, no timeout. H4.2's own sentence — "A
+grounding that raises or fails to terminate is a finding" — makes this a
+reportable finding, and authorizes no repair.
+
+**This is not G6.** The case's own directive succeeds; the raise occurs only
+inside the harness's grounding construction. Treating it as reference-undefined
+would convert a harness defect into an input exclusion.
+
+**Losing the clause is not a neutral fallback.** The clause's true ground
+extension in this case is 87 pairs `(payment_2015_k, workforalice_2015_k)`,
+since `tax_case_33.pl:13-14` defines 87 `workforalice_2015_*` services and
+`:26-27` defines the matching payments. Representing the exception as an empty
+list would silently drop all 87 and change the quantity the case asks for.
+
+**The smallest decision Dev must make.** For a binary event-predicate clause that
+raises when only the event position is bound: *which domain enumerates the other
+position, and in what order are the resulting facts appended?* The option space,
+listed without selection — (A) the event universe from step (i); (B) the event
+universe together with an active domain of ground terms drawn from the case and
+statute literals of the relevant argument kind; (C) a per-clause mode-directed
+procedure. (A) is complete for `tax_case_33` but incomplete in general, because
+H3 gives `purpose_/2` position 2 the roles "purpose string | service | place",
+and strings and places are not events.
+
+**Obligations any remedy must discharge, per H4.2/H4.3.**
+
+1. Completeness, argued per clause rather than by appeal to a Cartesian product:
+   no ground solution lies outside the chosen domain.
+2. A fixed, reproducible iteration order for the second position, with
+   multiplicity kept. H1's "source order" is undefined for rule-derived facts, so
+   the amendment must define it rather than inherit it.
+3. Termination and cost: the enumeration is `|U|²` per binary predicate — 157²
+   here — and must be bounded and measured, not assumed small.
+4. Both H4.3 checks re-run over all 376, not only over `tax_case_33`.
+5. No source repair, no clause reordering, no case exclusion, no empty-list
+   exception.
+
+**A second gap the same amendment should settle.** Step (ii) binds position 1 to
+each event, which expands the bodyless wildcard fact
+`purpose_(_,"agricultural labor")` (`s3306_a_2_B_neg.pl:75`, and its `_pos`
+twin) into one ground fact per event. That is not demonstrably lossy under H4.3 —
+a consistently expanding procedure can still satisfy both checks if every call
+binds position 1 to an enumerated event, as H2 asserts — but it contradicts H2's
+and `Interface/`'s deliberate representation of that fact as `Pat.wild`, and would
+make wildcard event facts unreachable for the originals. Whether grounding
+preserves a bodyless wildcard head verbatim or expands it is the second question,
+and answering it separately later would mean amending H4.2 twice.
+
+**Status.** Awaiting Dev. The serializer grounding path is halted under the
+design-flaw stop-and-report standard; independent non-recursive oracle slice
+checks continue. Evidence retained at
+`docs/phase1/harness-evidence-2026-09-23/h4-probe-docker/`.
+
+### Correction appended 2026-09-23 (Q-019 / A-019)
+
+The body above is preserved unedited. Three of its factual claims are wrong and
+are withdrawn; the defect, the classification and the escalation stand.
+
+**Withdrawn.**
+
+1. "87 pairs" counted only the 2015 family. `tax_case_33.pl:40-41` and `:51-52`
+   declare a second family of 70 2016 services and 70 2016 payments. The retained
+   read-only diagnostic (`docs/consult/evidence/q019-counts/`) measures 157
+   declared payment solutions, 157 declared service solutions and **157 successes
+   of the purpose clause over that declared product**.
+2. "Complete for `tax_case_33`" is false for option (A). The clause never requires
+   membership in `payment_/1` or `service_/1`; it tests name shape. The same
+   diagnostic shows `purpose_(payment_2099_999, workforalice_2099_999)` succeeds
+   with neither term in either unary enumeration, so the ground relation is
+   infinite and **no finite enumeration is extensionally complete**.
+3. "157² per binary predicate" was an unverified cost estimate and mislabels 157,
+   which is the payment count and separately the service count, not the size of
+   the event universe — this case also declares `marriage_` and `joint_return_`
+   events. No cost figure is claimed; any amendment must measure one.
+
+**What replaces the completeness framing.** H4.3 does not ask for extensional
+equality with a clause's ground relation. It asks for (a) re-grounding the
+serialized Household to the same ordered fact and stipulation lists, and (b) the
+same canonical solution set for that case's queried goals (H6) on the original
+and serialized files. Preservation is therefore **observational**, relative to
+what the case's queries can reach, and that is the promise an amendment must
+state. It is also bounded: grounding runs only on the 376 originals, since V1
+gives generated inputs no stipulations and no rules.
+
+Option (A) fails on the observational reading too, not only the extensional one.
+`section7703.pl:146-153` calls `purpose_(Payment,Household)` where `Household`
+is bound by `patient_(Residence,Household)` — a place, which no unary event
+predicate enumerates. So the domain question stays open on both readings and the
+real choice lies between an active-domain option and a per-clause mode-directed
+one; neither is selected here.
+
+**Consequently the minimal owner choice is restated as:** for a binary
+event-predicate clause that raises when only the event position is bound, which
+domain enumerates the other position, in what order are the resulting facts
+appended, and **which preservation domain does the amendment promise** — H4.3's
+observational criterion, a stronger call-site-reachable closure, or something
+else. Obligation 1 in the body above ("completeness … no ground solution lies
+outside the chosen domain") is replaced by: completeness *relative to the
+promised preservation domain*, argued per clause.
+
+The rest of the body is unchanged and still governs: the H4.2 mode failure is
+established, the empty-list exception remains prohibited and would now drop the
+whole declared family of 157 pairs, the wildcard question in the body stays open
+with `Pat.wild` preserved under H2/A3 until Dev says otherwise, and both H4.3
+checks must be re-run over all 376 rather than over `tax_case_33` alone.

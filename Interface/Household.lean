@@ -653,6 +653,23 @@ def Day.toISO (z : Day) : String :=
     if n < 0 then "-" ++ s else s
   pad y 4 ++ "-" ++ pad m 2 ++ "-" ++ pad d 2
 
+-- Split on the ASCII date separator without the core String reduction path.
+private def splitDateParts : List Char → List Char → List (List Char)
+  | [], acc => [acc.reverse]
+  | c :: cs, acc =>
+      if c == '-' then acc.reverse :: splitDateParts cs []
+      else splitDateParts cs (c :: acc)
+
+-- Structural recursion keeps literal date checks kernel-reducible. Only
+-- unsigned ASCII digits can occur in a canonical, in-range ISO date; the
+-- unchanged final round-trip check still rejects noncanonical widths.
+private def dateDigits? (cs : List Char) : Option Int := do
+  if cs.isEmpty then none else
+    let n ← cs.foldl (init := some 0) fun acc c => do
+      let n ← acc
+      if '0' ≤ c && c ≤ '9' then some (n * 10 + (c.toNat - '0'.toNat)) else none
+    some (Int.ofNat n)
+
 /--
 D1/V3/V9: decode a canonical, in-range ISO day without normalizing malformed
 or overflow dates. The inverse civil algorithm is checked by re-encoding;
@@ -660,10 +677,10 @@ e.g. 1900-02-29, 2017-02-30 and 2017-1-1 are rejected, not repaired. This
 parser validates the spelling only; it does not change a stipulated Term tag.
 -/
 def Day.fromISO? (s : String) : Option Day := do
-  let [ys, ms, ds] := s.splitOn "-" | none
-  let y ← ys.toInt?
-  let m ← ms.toInt?
-  let d ← ds.toInt?
+  let [ys, ms, ds] := splitDateParts s.toList [] | none
+  let y ← dateDigits? ys
+  let m ← dateDigits? ms
+  let d ← dateDigits? ds
   if !(1900 ≤ y && y ≤ 2100 && 1 ≤ m && m ≤ 12 && 1 ≤ d && d ≤ 31) then
     none
   else
