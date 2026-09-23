@@ -2,6 +2,38 @@
 
 ## Current phase
 
+2026-09-22 (Phase 1 preflight; circuit-breaker stop): Dev confirms Checkpoint 0
+at parent `0a2a65ac1313c180bea39d137e6665c01b8e833a` and authorizes Phase 1.
+The owner installed/re-pinned A; the protected manifest verifies and the meter
+hash is unchanged. Strict entry verification is 17 passed, 0 failed, 0 outstanding
+for Checkpoint 0; later artifacts remain separately reported. No protected file
+was changed by the builder.
+
+Read-only runner/CI enforcement is implemented and locally verified: complete
+/human plus /corpus read-only, disjoint output writable, 29 runtime and 12
+boundary regressions pass. Hosted CI has not run these changes. Gen's V10 rules
+explicitly define an admission boundary, not an answer-dependent filter.
+
+The V3 query/stipulation integration is **work in progress**, not an accepted
+preflight pass: 115 household guards pass and the shared time schema covers
+175 signatures (135 queried, 31 stipulated). The new concrete tuple-admission
+impossibility proof failed three proof-edit attempts (change, decide, then
+decide +kernel). The circuit breaker is triggered. No further proof edits or
+implementation-lane dispatch occurred; no assertion was weakened or removed.
+Exact diagnostics: `docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`.
+See the active blocker below. Checkpoint 1 is unsigned and no parity is claimed.
+
+The separate schema census completed before handoff: all 376 retained original
+records examined, including 156 stipulated files; 162 concrete declared Day
+occurrences canonical/in-range, four Day wildcards unchanged, zero originals
+excluded by that Day check. The two inert 250000 year literals remain findings.
+See `docs/phase1/TIME_SCHEMA_2026-09-22.md`. Both sidecar contexts are closed;
+no background implementation is running. Current changes are uncommitted and
+no push, PR or merge occurred.
+
+The following acceptance snapshot is historical; its outstanding owner
+installation/re-pin statements are superseded by 0a2a65a and the entry above.
+
 2026-09-22 (A and WIRE accepted; Checkpoint 1 unsigned): Dev selected refined
 Option A, explicitly requiring query-year coverage before an R5 proof claim and
 prohibiting generator-created multibirth persons, multi-date births and
@@ -243,6 +275,22 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
+### Active: query-admission proof circuit breaker (2026-09-22)
+
+The concrete test that a 2101-01-01 R8 query cannot carry AdmittedQuery under
+outer year 2015 fails kernel/elaborator reduction, even though its executable
+guard rejects the query. Three proof-edit attempts on this same test failed.
+`bash scripts/check_query_time.sh` exits 1 at scripts/query_time_guards.lean:128.
+The full verbatim diagnostics and attempts are retained in
+`docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`.
+
+Stop affected development per the circuit breaker and await Dev direction
+before resuming this proof. Do not bypass it by deleting/weakening the test,
+using native_decide/an axiom, changing the input population or declaring the
+preflight passed. Neither isolated Phase 1.1 nor Phase 1.2 was dispatched.
+The owner decisions, protected installation and Checkpoint 0 remain settled;
+no semantic amendment or human-file change is requested.
+
 ### Q-014 representation hold — resolved by A-014, equivalence proof still owed
 
 The initial required `r5EligiblePairs` field promises a finite ground-pair list
@@ -285,10 +333,10 @@ admitted call still halts for owner review. A-014 closes the conditional owner
 escalation for these two literals specifically; P-INTENT requires preserving
 their apparent argument transposition as a source finding.
 
-### Current R5/producer prerequisites — implementation and protected installation
+### Current R5/producer prerequisites — implementation
 
-Dev's A/WIRE choices are settled. Before reference use: install/re-pin the
-protected amendment, implement/prove the exact original K/c3 universal decider and real
+Dev's A/WIRE choices are settled and installed/re-pinned at 0a2a65a. Before
+reference use: implement/prove the exact original K/c3 universal decider and real
 V7/V8, integrate checked operational time at every wrapper/mode, prove universe
 coverage and R5/R8 fuel adequacy, and fix the remaining lossless input codec with
 shared fixtures. No always-true/empty production guard or default year is allowed.
@@ -632,7 +680,9 @@ No commits, pushes, or PRs were created in this session.
 Checkpoint 0 remains explicitly signed off. A/WIRE are accepted, not open
 choices. Continue only within their installed shared contracts and the remaining
 implementation obligations above, with separate oracle/serializer contexts and
-read-only human. Protected amendment installation/re-pin is Dev's. Do not claim
+read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
+query-admission circuit breaker above requires Dev direction before resuming
+that proof and completing the pre-dispatch checks. Do not claim
 R5 termination before actual query/stipulation coverage and adequacy proofs.
 Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
 meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.

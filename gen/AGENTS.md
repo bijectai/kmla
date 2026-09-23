@@ -16,6 +16,12 @@ Phase 2 before Dev signs off Checkpoint 1.
   graded record. Test-only OracleGuards mocks are forbidden in production.
   Raw Workdays/years, including supplied arguments, must pass the shared
   checked boundary. Failure is diagnostic, never a normal reference value.
+- V10 is a validity boundary, not a result-dependent filter. Construct within
+  it before engine execution; never inspect an answer, timeout, mismatch or
+  coverage result to decide whether to drop a record. Report invalid construction
+  attempts separately. Once an admitted population is frozen, an exception,
+  missing answer or discovered invalid record halts the affected run; do not
+  silently remove it, replace it, or shrink any denominator.
 - Follow `Interface/WIRE.md` for spelling, mappings and distinct counts.
   Emit `record_count`, `distinct_household_count`, `original_case_count`
   separately in summaries, freeze manifests and coverage reports. ≥10k uses

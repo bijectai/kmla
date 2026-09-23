@@ -1,0 +1,69 @@
+Phase 1 preflight circuit breaker — 2026-09-22
+
+Affected test:
+  scripts/query_time_guards.lean, concrete impossibility example for
+  AdmittedQuery .original emptyH 2015 (r8 (day "2101-01-01"))
+
+The executable #guard checks precede this example and produced no failure.
+They do not replace the failed kernel proof or make the suite pass.
+No R5 termination theorem or complete query/mode coverage is claimed.
+
+Attempt 1: change false = true at bad
+Command: bash scripts/check_query_time.sh && bash scripts/check_interface.sh
+Exit: 1
+Verbatim diagnostic:
+scripts/query_time_guards.lean:125:2: error: 'change' tactic failed, pattern
+  false = true
+is not definitionally equal to target
+  emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")) = true
+
+Attempt 2: prove the same concrete Boolean rejection using decide, then rewrite
+Command: bash scripts/check_query_time.sh && bash scripts/check_interface.sh
+Exit: 1
+Verbatim diagnostic:
+scripts/query_time_guards.lean:125:79: error: Tactic `decide` failed for proposition
+  emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")) = false
+because its `Decidable` instance
+  instDecidableEqBool (emptyH.v3ForQuery 2015 (r8 (day "2101-01-01"))) false
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decEq`, `instDecidableEqBitVec`, `instDecidableEqBool`, `instDecidableEqFin`, `instDecidableEqList`, `instDecidableEqNat`, `instDecidableEqString`, `instDecidableEqUInt8`, `instDecidableOr`, `BitVec.decEq`, `Bool.decEq`, `Int.decLe`, `Int.decNonneg`, `List.hasDecEq`, `Nat.decEq`, `Nat.decLe`, `Nat.decLt`, `String.decEq`, and `UInt8.decEq`, reduction got stuck at the `Decidable` instance
+  match emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")), false with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+
+Attempt 3: decide +kernel (not +native / native_decide)
+Command: bash scripts/check_query_time.sh && bash scripts/check_interface.sh
+Exit: 1
+Verbatim diagnostic:
+scripts/query_time_guards.lean:128:79: error: Tactic `decide` failed for proposition
+  emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")) = false
+because its `Decidable` instance
+  instDecidableEqBool (emptyH.v3ForQuery 2015 (r8 (day "2101-01-01"))) false
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match emptyH.v3ForQuery 2015 (r8 (day "2101-01-01")), false with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+
+Before attempt 3, the builder inspected the pinned Lean implementation at
+Lean/Elab/Tactic/Decide.lean: doKernel submits mkDecideProof to the kernel;
+it is distinct from the native-evaluation axiom path. That check did not
+resolve this failure. No proof axiom, native fallback, weaker assertion,
+removed test, changed date semantics or fourth attempt was introduced.
+
+Other earlier compile defects were corrected independently: one missing
+qualification on Day.inRange, and an AdmittedQuery structure inferred as Prop
+rather than Type. They are not claimed as reasons to reset this test's counter.
+
+Disposition: stop affected proof/development and report, per AGENTS.md.
+The shared admission code is unaccepted work in progress; the query-time suite
+is red. Phase 1.1 and Phase 1.2 were NOT dispatched. Checkpoint 0 remains signed
+off; this is a builder implementation/proof issue, not a request to change
+approved A/WIRE semantics or human artifacts. Dev direction is required before
+resuming this stopped proof work. No PR or merge is authorized by these results.

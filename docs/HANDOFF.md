@@ -2,6 +2,30 @@
 
 ## Authorization and entry identity
 
+**Current dispatch status: stopped by the query-admission proof circuit breaker.**
+Read-only runner/CI work and the shared time-schema census are verified locally,
+but `scripts/check_query_time.sh` still exits 1 at its concrete tuple-admission
+kernel proof after three failed proof-edit attempts. See STATE's active blocker
+and `docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`. Neither Phase
+1.1 nor Phase 1.2 has been dispatched in this turn. The failure is not permission
+to remove the test, weaken admission, change semantics or assert a preflight pass.
+
+On 2026-09-22 Dev confirmed Checkpoint 0 at parent
+`0a2a65ac1313c180bea39d137e6665c01b8e833a` and authorized Phase 1. The owner
+installed Option A's H5/R5/R8/R9 amendment there and re-pinned the protected
+bundle. The manifest verifies; the meter is unchanged and remains CLI-only.
+
+- Current DECISIONS SHA-256: `12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a`.
+- Current manifest SHA-256: `5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9`.
+- Current meter SHA-256: `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
+
+Before fresh isolated contexts start, establish runner read-only mounts and CI
+enforcement, connect V3 to actual query/stipulation Workdays, and confirm V10
+is the generator's validity boundary. R5 work is authorized on the narrowed
+domain with proofs open; this is not Checkpoint 1 or a termination certificate.
+
+### Earlier entry identity (retained history)
+
 On 2026-09-21 Dev explicitly stated: "I sign off checkpoint 0 and authorize
 phase 1". Checkpoint 0 is cleared. The immediately preceding strict verification
 reported 17 passed, 0 failed, 0 outstanding; the installed 412-record manifest
@@ -44,21 +68,18 @@ No further artifact was required at Phase 1 entry. Dev has now resolved the two
 owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those
 choices again. Neither acceptance is Checkpoint 1 sign-off.
 
-### Current owner installation
+### Owner installation — complete at 0a2a65a
 
-Install `docs/contracts/DECISIONS_R5_A_AMENDMENT.md` in the corresponding H5,
-R5, R8 and R9 sections of `human/DECISIONS.md`, then re-pin the manifest as Dev
-offered. The builder installs no protected file. The amendment preserves the
-selected all-years A and its same-birthday/domain limitations. WIRE release
+Dev installed `docs/contracts/DECISIONS_R5_A_AMENDMENT.md` in the corresponding
+H5, R5, R8 and R9 sections of `human/DECISIONS.md` and re-pinned the manifest.
+No further protected artifact is due before Phase 1. The builder installs no
+protected file. The amendment preserves the selected all-years A and its
+same-birthday/domain limitations. WIRE release
 wording, record unit and byte/count handling are already installed in
 `docs/contracts/PARITY.md` and `Interface/WIRE.md`; no further WIRE choice is due.
 
-After the owner installs the amendment:
-
-```sh
-python3 -B scripts/human_manifest.py generate > human/HASHES.txt
-python3 -B scripts/human_manifest.py verify
-```
+The builder verified the new manifest using
+`python3 -B scripts/human_manifest.py verify`; no manifest was regenerated.
 
 ### Builder obligations before an R5 reference or termination claim
 
@@ -77,6 +98,8 @@ python3 -B scripts/human_manifest.py verify
   admitted operational calls are covered. The new type alone is not that proof.
   Failed construction is a reported error, never a reference answer. Do not
   impose a new V8-at-derived-year requirement through a convenience wrapper.
+  The current tuple-indexed integration remains unaccepted work in progress
+  while the concrete kernel regression is stopped under the circuit breaker.
 - Prove structural-descendant correspondence, finite-person-universe coverage,
   the strict measure, phase/cycle cut and N+1 branch-counter adequacy with every
   entry/mode/offset accounted for. The old child-descent argument and A-009's
@@ -102,6 +125,13 @@ but two source literals put 250000 in s68_b's year position and 150 time slots
 are wildcards. The two literals cannot match their actual queries' bound 2015;
 do not swap their arguments or filter the originals. The census is not full
 operational coverage and its exit 1 remains reported.
+
+The 2026-09-22 schema-derived Day census in
+`docs/phase1/TIME_SCHEMA_2026-09-22.md` examined all 376 retained records:
+162 concrete declared Day occurrences are canonical and in range, four Day
+wildcards remain unchanged, and zero originals are excluded by this Day check.
+The two inert year findings remain findings. This census does not establish
+query-mode completeness, full ValidStip, a kernel admission proof or parity.
 
 A-014 confirms the eligibility representation correction preserves A and needs
 no owner choice. It also closes A-013's conditional escalation about the two

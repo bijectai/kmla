@@ -5,8 +5,8 @@ Implements the owner's `human/DECISIONS.md` (recorded 2026-09-21): G4 (term
 domain), D1 (dates), H1 (shape), H2 (argument kinds), H3 (field list), H4
 (stipulations) and H5 (`Valid`). Section ids in the doc comments cite that file,
 which is the specification; where this file and `human/DECISIONS.md` disagree,
-`human/DECISIONS.md` wins, except for the owner's explicitly approved Option A
-H5 amendment (2026-09-22), implemented below as V10 in `Valid` and `ValidStip`.
+`human/DECISIONS.md` wins. The owner installed Option A's H5/R5/R8/R9 amendment
+at `0a2a65a`; V10 below is part of both `Valid` and `ValidStip`.
 
 This replaces the Phase 0.1 `HouseholdDraft`, which was a source-syntax
 container (lexemes plus unparsed rule strings) written before the semantics were
@@ -627,6 +627,123 @@ def dayLo : Day := -25567
 /-- V3. Upper `Day` bound. -/
 def dayHi : Day := 47846
 
+/-- V3's shared day-bound check, including supplied query/stipulation days. -/
+def Day.inRange (d : Day) : Bool := dayLo ≤ d && d ≤ dayHi
+
+/--
+D1. `YYYY-MM-DD` for a day count, by the standard civil-from-days algorithm,
+with the four-digit zero-padded year the serializer is required to emit. Uses
+`Int.fdiv` throughout because the algorithm needs floor division and Lean's `/`
+on `Int` truncates toward zero.
+-/
+def Day.toISO (z : Day) : String :=
+  let z := z + 719468
+  let era := (if z ≥ 0 then z else z - 146096).fdiv 146097
+  let doe := z - era * 146097
+  let yoe := (doe - doe.fdiv 1460 + doe.fdiv 36524 - doe.fdiv 146096).fdiv 365
+  let y := yoe + era * 400
+  let doy := doe - (365 * yoe + yoe.fdiv 4 - yoe.fdiv 100)
+  let mp := (5 * doy + 2).fdiv 153
+  let d := doy - (153 * mp + 2).fdiv 5 + 1
+  let m := mp + (if mp < 10 then 3 else -9)
+  let y := y + (if m ≤ 2 then 1 else 0)
+  let pad (n : Int) (width : Nat) : String :=
+    let s := toString n.natAbs
+    let s := "".pushn '0' (width - s.length) ++ s
+    if n < 0 then "-" ++ s else s
+  pad y 4 ++ "-" ++ pad m 2 ++ "-" ++ pad d 2
+
+/--
+D1/V3/V9: decode a canonical, in-range ISO day without normalizing malformed
+or overflow dates. The inverse civil algorithm is checked by re-encoding;
+e.g. 1900-02-29, 2017-02-30 and 2017-1-1 are rejected, not repaired. This
+parser validates the spelling only; it does not change a stipulated Term tag.
+-/
+def Day.fromISO? (s : String) : Option Day := do
+  let [ys, ms, ds] := s.splitOn "-" | none
+  let y ← ys.toInt?
+  let m ← ms.toInt?
+  let d ← ds.toInt?
+  if !(1900 ≤ y && y ≤ 2100 && 1 ≤ m && m ≤ 12 && 1 ≤ d && d ≤ 31) then
+    none
+  else
+    let y := y - (if m ≤ 2 then 1 else 0)
+    let era := y.fdiv 400
+    let yoe := y - era * 400
+    let mp := m + (if m > 2 then -3 else 9)
+    let doy := (153 * mp + 2).fdiv 5 + d - 1
+    let doe := yoe * 365 + yoe.fdiv 4 - yoe.fdiv 100 + doy
+    let day := era * 146097 + doe - 719468
+    if Day.inRange day && Day.toISO day == s then some day else none
+
+/-- Time roles only; `term` does not replace H2/G4's other kind constraints. -/
+inductive TimeRole where
+  | term | day | days | year | yearText
+  deriving DecidableEq, BEq, Repr
+
+/--
+Check a Day-typed supplied position without changing its tag, spelling or
+wildcard identity. A wildcard introduces no date; its actual bound caller value
+must still be checked. An integer here is a malformed date under D2, not a day
+count to coerce, and fails V3. Missing positions fail the separate shape check.
+-/
+def Pat.dayWellFormed : Pat → Bool
+  | .wild _ => true
+  | .val (.atom s) | .val (.str s) => (Day.fromISO? s).isSome
+  | .val (.int _) => false
+
+-- BEGIN GENERATED STIPULATION TIME ROLES
+-- Generated from Interface/TIME_SCHEMA.json; scripts/check_time_schema.py
+-- verifies this table without loading either implementation lane.
+def StipPred.timeRoles : StipPred → List TimeRole
+  | .s63_3 => [.term, .year, .term]
+  | .s7703_4 => [.term, .term, .term, .year]
+  | .s3306_b_8 => [.term, .term, .term, .term, .term, .term, .term, .term]
+  | .s2_b_3 => [.term, .term, .year]
+  | .s2_a_3 => [.term, .term, .year]
+  | .s151_c_applies_3 => [.term, .term, .year]
+  | .s152_c_1_3 => [.term, .term, .year]
+  | .s3306_c_5 => [.term, .term, .term, .day, .year]
+  | .s151_5 => [.term, .term, .term, .term, .year]
+  | .s151_d_4 => [.term, .term, .term, .term]
+  | .s151_b_applies_3 => [.term, .term, .year]
+  | .s151_c_4 => [.term, .term, .term, .year]
+  | .s151_b_applies_2 => [.term, .year]
+  | .total_wages_employer_6 => [.term, .term, .term, .term, .day, .day]
+  | .s68_b_3 => [.term, .term, .year]
+  | .s152_c_2_4 => [.term, .term, .day, .day]
+  | .s152_c_3 => [.term, .term, .year]
+  | .s152_b_2_4 => [.term, .term, .term, .year]
+  | .s3306_a_2 => [.term, .year]
+  | .s63_c_1_3 => [.term, .year, .term]
+  | .s63_c_2_3 => [.term, .year, .term]
+  | .s63_c_3_3 => [.term, .term, .year]
+  | .s63_f_1_A_2 => [.term, .year]
+  | .s63_f_1_B_3 => [.term, .term, .year]
+  | .s63_d_4 => [.term, .term, .term, .year]
+  | .s152_c_3_3 => [.term, .term, .year]
+  | .s2_a_5 => [.term, .term, .term, .term, .term]
+  | .s152_d_2_H_6 => [.term, .term, .year, .term, .day, .day]
+  | .s63_c_3 => [.term, .year, .term]
+  | .s63_c_3_4 => [.term, .term, .term, .term]
+  | .s151_b_3 => [.term, .term, .year]
+-- END GENERATED STIPULATION TIME ROLES
+
+/--
+V3 reaches supplied Day positions through the shared signature schema. Years
+in a stipulated head are *not* all operational years: a bound caller may never
+unify with a literal (the preserved s68_b(...,250000) originals). Check actual
+query/call years at the query boundary instead of rejecting inert head literals.
+The three corpus-only extra arities have no canonical time-role declaration;
+they remain opaque patterns, not invented date/year modes. See TIME_SCHEMA.json.
+-/
+def Stip.daysWellFormed (s : Stip) : Bool :=
+  s.wellFormed && (s.pred.timeRoles.zip s.args).all (fun (role, arg) =>
+    match role with
+    | .day => arg.dayWellFormed
+    | .days => false -- no H4.1 signature supplies a list-valued Day position
+    | .term | .year | .yearText => true)
+
 /--
 H5 V1. Well-formed: the argument kinds of H2 are enforced by `Fact`'s own types,
 so what remains is no wildcard, no stipulation, no case-local helper, and no
@@ -642,10 +759,16 @@ def Household.v1 (h : Household) : Bool :=
 def Household.v2 (h : Household) : Bool :=
   h.facts.all fun f => f.amounts.all fun v => 0 ≤ v && v ≤ 1000000000
 
-/-- H5 V3. Every `Day` lies in 1900-01-01 … 2100-12-31 and the year index in 1900 … 2100. -/
+/--
+H5 V3. Fact and stipulated days lie in 1900-01-01 … 2100-12-31 and the year
+index in 1900 … 2100. Query arguments are not part of Household: every entry
+wrapper additionally requires the tuple-indexed admission in QueryTime.lean.
+Valid/ValidStip alone never certify a query or an internal call's actual time.
+-/
 def Household.v3 (h : Household) (y : Year) : Bool :=
   (1900 ≤ y && y ≤ 2100)
-  && h.facts.all fun f => f.days.all fun d => dayLo ≤ d && d ≤ dayHi
+  && h.facts.all (fun f => f.days.all Day.inRange)
+  && h.stipulations.all Stip.daysWellFormed
 
 /-- H5 V4. The kinship graph is acyclic. -/
 def Household.v4 (h : Household) : Bool := acyclic h.parentEdges
@@ -714,31 +837,6 @@ def ValidStip [OracleGuards] (h : Household) (y : Year) : Prop :=
 
 instance [OracleGuards] (h : Household) (y : Year) : Decidable (ValidStip h y) := by
   unfold ValidStip; infer_instance
-
-/-! ## Dates on the wire (D1) -/
-
-/--
-D1. `YYYY-MM-DD` for a day count, by the standard civil-from-days algorithm,
-with the four-digit zero-padded year the serializer is required to emit. Uses
-`Int.fdiv` throughout because the algorithm needs floor division and Lean's `/`
-on `Int` truncates toward zero.
--/
-def Day.toISO (z : Day) : String :=
-  let z := z + 719468
-  let era := (if z ≥ 0 then z else z - 146096).fdiv 146097
-  let doe := z - era * 146097
-  let yoe := (doe - doe.fdiv 1460 + doe.fdiv 36524 - doe.fdiv 146096).fdiv 365
-  let y := yoe + era * 400
-  let doy := doe - (365 * yoe + yoe.fdiv 4 - yoe.fdiv 100)
-  let mp := (5 * doy + 2).fdiv 153
-  let d := doy - (153 * mp + 2).fdiv 5 + 1
-  let m := mp + (if mp < 10 then 3 else -9)
-  let y := y + (if m ≤ 2 then 1 else 0)
-  let pad (n : Int) (width : Nat) : String :=
-    let s := toString n.natAbs
-    let s := "".pushn '0' (width - s.length) ++ s
-    if n < 0 then "-" ++ s else s
-  pad y 4 ++ "-" ++ pad m 2 ++ "-" ++ pad d 2
 
 /-! ## Canonical observation (H6.2) -/
 
