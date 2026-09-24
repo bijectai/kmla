@@ -43,6 +43,16 @@ the transport must preserve both. This does not test improper-list support.
 
 ## Integration status
 
+A-023 subsequently classifies the new multiplicative traversal failure as an
+implementation violation of signed H4.3(a). Its all-path audit reports only
+A-023 and appended DECISION_LOG; prior answers and human manifest are unchanged.
+It explicitly corrects A-020 §3.3 while leaving that answer immutable. A new
+bounded harness slice may deduplicate the traversal domain only, in stable
+first-occurrence order, preserving unary facts and binary solution multiplicity.
+That slice must restart its evidence; no old pass count transfers. This report
+and its retained audit remain the pre-correction snapshot. The optional H4.2
+clarification is Dev's choice, not a builder installation or a required amendment.
+
 Both adapters are complete and independently checked in
 `q022-adapters-independent-2026-09-23/`: both named list-bearing originals pass
 both H4 comparisons and exact supplied-head checks; the 14-country slice passes

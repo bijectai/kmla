@@ -1,0 +1,19 @@
+{
+  "scope": "all repository paths including ignored files and git metadata; no symlink following",
+  "changed_paths": ["docs/DECISION_LOG.md", "docs/consult/A-023.md"],
+  "outside_scope": [],
+  "changed_prior_answers": [],
+  "decision_log_append_only": true,
+  "before_path_count": 16973,
+  "after_path_count": 16974,
+  "question_sha256": "a5a7a8d1230fb9f897a1c05b02922bf9627ed8ad2b078f64bda82ce6b6efc139",
+  "answer_sha256": "5eec13f43f04d0a9c7d85498549f223b4f3e62cbc86af12be9066e00bd44b742",
+  "raw_snapshots": "/private/tmp/kmla-q023-audit.QrxJYo",
+  "cli_response": "/var/folders/nb/1nmz4lr56rz3wcmmcgglfyx00000gn/T/kmla-fable-response.tBw5CC",
+  "cli_type": "result",
+  "cli_subtype": "success",
+  "cli_is_error": false,
+  "cli_permission_denials": [],
+  "session_id_matches_saved_session": true,
+  "protected_manifest_verifies_after_call": true
+}

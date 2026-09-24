@@ -2,6 +2,15 @@
 
 ## Authorization and entry identity
 
+**A-023 classification (2026-09-23):** the occurrence-multiset traversal is an
+implementation defect, not a required amendment. The cleanly audited review
+releases distinct ground events in stable first-occurrence order, preserving
+all stored unary facts/binary proofs and the ordinary step-(ii) path. It
+corrects A-020 §3.3 without editing that answer. The isolated harness context
+must recheck the witness, duplicates/order, country slice, tax33 and restart
+the all-376 audit. Human action is optional clarification only; protected H4
+installation/re-pin and Checkpoint 1 sign-off remain Dev's. No gate is passed.
+
 **New H4(a) halt (2026-09-23):** list adapters are verified, but the fresh broad
 audit stops at s2_b_3_B_pos: facts grow 114 -> 204 (independent next pass: 384).
 Q-023 requests classification before any remedy. Standing consultation is

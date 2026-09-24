@@ -2,6 +2,17 @@
 
 ## Current phase
 
+2026-09-23 (A-023 reviewed; bounded traversal correction released): Fable
+classifies the occurrence-multiset event domain as an implementation violation
+of H4.3(a), not a blocking owner amendment. The domain must use distinct ground
+events in first-occurrence order, WITHOUT deduplicating stored unary facts or
+binary solutions and WITHOUT bypassing step (ii) for bodyless facts. A-023
+explicitly corrects A-020 §3.3; old answers remain unchanged. Consult audit is
+clean: only new A-023 and appended DECISION_LOG, protected manifest verifies.
+The isolated harness lane may implement this bounded correction and restart
+the broad audit. Prior pass counts do not transfer to the new traversal.
+No protected text is installed, and Checkpoint 1 remains unpassed.
+
 2026-09-23 (StipArg adapters verified; new H4(a) finding, Q-023): both isolated
 adapters are complete. Independent checks pass both list-bearing originals,
 all 14 country originals, 144 unit regressions and 122 oracle assertions
@@ -539,6 +550,13 @@ semantic decisions or as permission to change anything under `human/`.
 
 ### Active Q-023: ordered re-grounding multiplies facts in s2_b_3_B_pos
 
+A-023 resolves the classification as an existing-contract implementation
+correction. The remaining gate is verification of a distinct first-occurrence
+event domain, stored unary/binary multiplicity intact, bodyless traversal/order
+intact, plus fresh witness/country/tax33/broad runs. The optional explicit H4.2
+clarification remains Dev's choice, not a required installation or blocker.
+No prior pass count is reused as a post-correction measurement.
+
 The exact failure and unchanged three-pass reproduction are in Q-023 and
 docs/consult/evidence/q023-reproduction-2026-09-23/. Source hash:
 cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a.
@@ -550,13 +568,14 @@ against H1/H4 and the explicit no-bodyless-bypass instruction. No deduplication,
 source repair, exclusion, revised traversal or comparison change is authorized
 by this finding. Consult first; amendments/installations still require Dev.
 
-### Q-022: representation classified and shared boundary checked; adapters in progress
+### Q-022 resolved: shared representation and both adapters verified
 
 A-022 resolves the classification: implementation representation gap, no blocking
-owner amendment. The shared-only StipArg correction is independently verified;
-the separate encoding and oracle contexts are adapting to that checked type
-and wire. They must not independently invent a different shape. Full H4 remains
-unverified. The failed run below remains historical failed evidence.
+owner amendment. The shared-only StipArg correction and both isolated adapters
+are independently verified, including both named original H4 checks and all
+122 oracle assertions. They use the same checked type and wire. Full H4 remains
+unverified because of the separate Q-023 finding. The failed run below remains
+historical failed evidence.
 
 Exact failure: `ERROR: Unknown error term: unsupported_household_term([charlie])`.
 Original s2_a_1_B_pos.pl supplies

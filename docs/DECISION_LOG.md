@@ -997,3 +997,60 @@ which replaces the syntactic census as evidence; and the run-specific statuses
 (120 (a) passes, one encoding error, 255 blocked) stay run-specific, not an
 all-376 result. `Valid` needs no change, since V1 already excludes stipulations
 from generated inputs.
+
+## 2026-09-23 — REVIEW, no contract change — the step (ii) event domain is a set
+
+Origin: Q-023 / A-023. **Not a proposal, not an acceptance, not an installation.**
+Recorded because it classifies a halted lane, and because it corrects a sentence
+in A-020.
+
+**Verdict: authorized implementation correction, already determined.** H4.2(i)
+obtains "the event **universe**", and H4.2(ii) binds "the event position **to each
+event**, collecting all solutions **with multiplicity**" — multiplicity is
+attached to the binary solutions, not to the domain. Independently of that
+reading, **H4.3(a) forces it**: re-grounding must reproduce the same ordered fact
+list, and with an occurrence-multiset domain it provably cannot. An event
+declared by `k` unary predicates is visited `k` times, so its binary facts are
+emitted `k`× on pass 1, and on pass 2 the `k` materialised clauses are each found
+from each of the `k` visits, giving `k²`. The measured 114 → 204 → 384 is that
+doubling with `k = 2`: 114 = C + 2X, 204 = C + 4X, 384 = C + 8X with C = 24,
+X = 45. With a set domain and preserved solution multiplicity, grounding is a
+fixed point: `n` materialised facts yield `n` solutions yield `n` facts.
+
+**Three things that must not be conflated, and only the middle one is a set:**
+the stored unary facts (all 13 here — `payment_(e)` and `income_(e)` are
+different facts, kept in enumeration order, never deduplicated); the traversal
+domain (8 distinct ground event terms, first occurrence in step (i)'s order); and
+the binary solutions (every proof kept with multiplicity). Genuine duplicate
+clauses survive all three and stay idempotent.
+
+**No commitment is revisited.** Dev's country instruction — do not bypass step
+(ii) for bodyless event facts, since its per-event order is what H1 fixes — is
+untouched: every event is still visited through step (ii), exactly once, in the
+same relative order. A-021 declined to authorize deduplicating the outer
+traversal and remains correct for its own scope. The A-020 `tax_case_33`
+candidate's text is unaffected and becomes more uniform, since both its loops now
+use distinct-terms-in-first-occurrence-order; its H4.3 measurement was taken
+under the old traversal and must be re-taken.
+
+**Correction to A-020 §3.3.** It called the deduplicated inner domain and the
+undeduplicated outer traversal "both defensible". They are not. The outer
+multiset breaks H4.3(a) for any case containing a multi-kind event, and A-020
+should have said so.
+
+**Optional clarifying text, not an amendment, if Dev wants the order written
+down rather than derived:** "The event universe is the set of distinct ground
+event terms, in first-occurrence order of step (i)'s enumeration; step (ii)
+visits each once. Solution multiplicity and the stored unary facts are
+unaffected." This states what H4.3(a) already forces; sorting the domain would
+also be idempotent but would contradict Dev's per-event-order instruction.
+
+**Required regression.** The three-pass fixed point on `s2_b_3_B_pos.pl`; a case
+with genuinely duplicated binary clauses or proofs, showing multiplicity kept and
+still idempotent; the multi-kind event case storing 13 unary facts over 8 domain
+entries; unchanged ordering for single-kind events; both H4 comparisons on the
+affected original; the 14-country slice re-run; the `tax_case_33` candidate
+re-measured. The audit's 148 H4(a) passes were measured under the old traversal
+and do not transfer — the broad run restarts. No source repair under P-INTENT,
+no validity exclusion, no reordered comparison, no deduplication of stored facts
+or solutions, no waived original.
