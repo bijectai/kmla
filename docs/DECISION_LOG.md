@@ -48,6 +48,7 @@ and its heading still reads PENDING.
 | P-GROUND2 | H4.2's step (ii) cannot ground a binary event predicate that relates two events; `tax_case_33` raises | **PROPOSED** | — ; H4.2 is Dev's, see A-017. The serializer grounding path is halted |
 | P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **ACCEPTED** (Dev, 2026-09-24; merged PR #7, bc80499) | Installed on `main` by the PR #7 merge: root and lane `CLAUDE.md`, `docs/BUILDER_RULES.md`, governor `AGENTS.md` files, `docs/PROTOCOL.md`, `.claude/settings.json`, `.claude/lanes/*.json`, consult README/script/tests, HANDOFF and STATE; stale activation wording updated by the `builder/activate-roles` PR. Recorded by the builder at Dev's direction |
 | P-WAKE | Per-question headless governor wake with `scripts/wake_governor.sh`; manual relay through Dev remains the fallback | **ACCEPTED** (Dev, 2026-09-24) | Installed by the `builder/activate-roles` PR: `docs/PROTOCOL.md`, `docs/BUILDER_RULES.md`, `docs/consult/README.md`, `docs/HANDOFF.md`, `scripts/wake_governor.sh`, `scripts/test_wake_governor.py`, `.claude/settings.json` read denies. `AGENTS.md` unchanged (Dev's call). Recorded by the builder at Dev's direction |
+| P-H6-CONJ | H6.3 extra-conjunct scope beyond its two named cases | **PROPOSED** (A-024, 2026-09-24) | Not installed; owner approval/amendment and installation required. Affected integration/scoring work halted; no checkpoint or projection-table acceptance |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -1314,3 +1315,43 @@ these terms and the audit's further checks and limits, which are not part of
 Dev's decision and are Dev's to confirm or reverse. P-WAKE changes no semantics, contract or checkpoint.
 During a wake the governor may write only the new A and the log append, which
 is narrower than its standing scope (no review notes). `AGENTS.md` is unchanged.
+
+## 2026-09-24 — PROPOSED — P-H6-CONJ: state the full extra-conjunct scope
+
+Origin: builder Q-024, governor A-024. Audience: integration and both lanes;
+shared contract and original-source evidence only, no implementation relay.
+No owner approval is inferred from the automated wake or the builder's Q.
+
+**Finding.** `human/DECISIONS.md` H6.3, lines 895–897, names only
+`s152_d_2_D_pos/neg` as cases with extra conjuncts. H6.5 also flags
+`s152_d_2_G/4`, `s68_b/3` and `s3306_c_10_A/4`. Bounded original-source checks
+confirm additional conjunctions in `human/sara/sara/cases/`:
+`s152_d_2_G_pos.pl:19`, `s68_a_1_pos.pl:17`, `s68_a_1_neg.pl:17`, and
+`s3306_c_10_A_i_pos.pl:37`. In the `s68_a_1` cases the question's reduction
+amount belongs to the later conjunct, not to the root `s68_b/3` output tuple.
+This is a contract-text inconsistency, not an observed implementation defect.
+
+**Proposed replacement** for H6.3's sentence beginning “The two cases…”:
+
+> For every original case directive with additional conjuncts, evaluate the
+> additional conjuncts on each matching solution of the queried target,
+> preserving the original variable sharing, literal order, bindings and
+> negation scope. The positive test succeeds iff a solution satisfies the
+> entire conjunction; a negated conjunction succeeds iff none does. This
+> includes `s152_d_2_D_pos/neg`, `s152_d_2_G_pos`, `s68_a_1_pos/neg`, and
+> `s3306_c_10_A_i_pos`. Additional conjuncts do not change the target's
+> output-position tuple or the H6.1/H6.2 observation policy.
+
+**Disposition.** PROPOSED only. Dev must approve/amend and install; no
+installation or re-pin performed. Builder to record the affected
+integration/scoring halt in STATE and report it to Dev. A-024's source-derived
+output constraints and layout advice do not certify a complete 135-signature
+projection table: the submitted evidence inventories case calls, not the
+statute call-site derivation G2 also requires. No checkpoint is signed.
+
+**Review limits.** Retained evidence and bounded original-source reads only;
+neither implementation lane nor the meter source was inspected, no full corpus
+audit or evidence re-hash was run. Prolog assumptions: G1/G2 literal-entry
+bindings and original conjunction/NAF scope, without a new runtime claim.
+Circuit breaker: three failed edit cycles on one check means stop and report;
+no fourth attempt or weakened check. No implementation edit cycles here.
