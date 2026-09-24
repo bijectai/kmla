@@ -44,7 +44,7 @@ and its heading still reads PENDING.
 | P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; owner installed/re-pinned H5/R5/R8/R9 at `0a2a65a`; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 | P-GROUND2 | H4.2's step (ii) cannot ground a binary event predicate that relates two events; `tax_case_33` raises | **PROPOSED** | — ; H4.2 is Dev's, see A-017. The serializer grounding path is halted |
-| P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **PROPOSED** — awaiting Dev's acceptance and merge | Prepared only on `roles/claude-builder`, based on pushed integration `96722c5`; no role change on the integration branch |
+| P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **ACCEPTED** — awaiting Dev's acceptance and merge | Prepared only on `roles/claude-builder`, based on pushed integration `96722c5`; no role change on the integration branch |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
