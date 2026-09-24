@@ -1,0 +1,19 @@
+{
+  "question": "docs/consult/Q-021.md",
+  "question_sha256": "f770afd831ab9771529399325ec95191f84ca1b36420c647299ac1406d2e6969",
+  "answer": "docs/consult/A-021.md",
+  "answer_sha256": "31df65aa3f1871bcd65081027b4b4441c49271824c51131b39948a2fbaed47f4",
+  "scope": "all repository paths including ignored files and git metadata; no symlink following; opaque content digests and modes",
+  "concurrent_repository_writers": "none during the audit interval",
+  "changed_paths": ["docs/DECISION_LOG.md", "docs/consult/A-021.md"],
+  "outside_scope": [],
+  "changed_prior_answers": [],
+  "decision_log_append_only": true,
+  "before_path_count": 6726,
+  "after_path_count": 6727,
+  "local_audit_artifacts": "/private/tmp/kmla-q021-audit.oQyH82",
+  "cli_response": "/var/folders/nb/1nmz4lr56rz3wcmmcgglfyx00000gn/T/kmla-fable-response.ofMzQJ",
+  "cli_result": {"type":"result","subtype":"success","is_error":false,"permission_denials":[]},
+  "human_manifest_verified_after_call": true,
+  "qualification": "This audit record was written by the builder after the comparison; it is not a Fable write. No source text from the independent meter was inspected."
+}

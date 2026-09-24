@@ -891,3 +891,59 @@ broader domain or a source repair. Both H4.3 checks and the traversal cost for a
 
 The separate oracle lane is unaffected by this entry and remains under Dev's
 authorization for continued §7703 translation and one proof-only round.
+
+## 2026-09-23 — REVIEW, no contract change — `country_/2` fact loss is an implementation defect
+
+Origin: Q-021 / A-021. **Not a proposal, not an acceptance, not an installation,
+and not a checkpoint result.** Recorded because it classifies a measured
+mismatch, and because the classification determines who may act.
+
+**Verdict: implementation defect. Dev's interpretation is confirmed, and no new
+owner choice is required.** The chain is entirely in signed text: H4.2(ii)
+applies to "every binary **event** predicate with the **event position** bound to
+each event", and H3 (`human/DECISIONS.md:645`) gives `country_/2` the roles
+**(place, country string)** — it has no event position, so step (ii)'s
+precondition is unmet and binding position 1 to each event is a category error
+rather than a permitted reading. H1 requires supplied facts to be carried in
+source order with duplicates kept and nothing defaulted; H3 adds that even
+predicates with zero statute reads "are still part of `Household` (the serializer
+must round-trip them)", a fortiori one with four reads and fourteen supplied
+clauses.
+
+**Source claims verified, not adopted.** H3's row states 4 statute reads and 14
+case clauses. The statute reads are exactly `section3306.pl:464, 468, 479, 483`.
+Fourteen case files supply exactly one `country_` clause each, all bodyless and
+ground, including `s3306_c_A_pos.pl:15`. Of every binary predicate in H3's table,
+`country_/2` is the **only** one whose declared position-1 role is not an event:
+`first_day_year/2`, `is_before/2` and `last_day_year/2` have zero case clauses,
+and `patient/2`'s two clauses (`tax_case_25.pl:11-12`) do have an event in
+position 1. Scoping the fix to `country_` by name is therefore also complete on
+this corpus — a measured statement about H3's table, not a general rule about
+predicates.
+
+**Mechanism of the measured mismatch**, refining the framing in the question: the
+solution loss comes through the **positive** read at `section3306.pl:464`, not
+through the NAF. With the fact, `country_("baltimore, maryland, usa",Country)`
+binds `Country="usa"` and `Country=="usa"` succeeds. Without it that disjunct
+fails; the second disjunct's `\+ country_(Geographical_location,_)` then succeeds
+under G5 but is defeated by `Geographical_location=="usa"`, since the location is
+`"baltimore, maryland, usa"`. Hence `[[{"a":"alice"},{"a":"bob"}]]` becomes `[]`.
+The mirror site `:479/:483` in `s3306_c_B` has the opposite sign: there the same
+omission can *add* solutions.
+
+**What this demonstrates about the verification design.** H4.3(a) passed while
+(b) failed. (a) is a fixed-point check, and a consistently lossy grounder
+satisfies it. Since (b) is blind to predicates with zero statute reads, neither
+H4.3 check can detect a dropped inert fact, so the regression needs a direct
+supplied-fact-to-fact-list comparison in addition to Dev's stated scope.
+
+**Open and unchanged.** Nothing here authorizes bypassing step (ii) for bodyless
+event facts generally, deduplicating the outer event traversal, widening the
+`tax_case_33` domain, or altering any comparison. A rule-defined `country_`
+clause is not covered and would be a new finding; none exists in the corpus
+today, and the handling should fail closed if one appears. The regression Dev
+named — all 14 files, both H4.3 checks each, and the original
+`[[{"a":"alice"},{"a":"bob"}]]` observation in `s3306_c_A_pos` — stands, with the
+direct fact-list check and the opposite-sign `s3306_c_B_pos/_neg` case added.
+P-GROUND2's own open items are untouched, and the scoped `tax_case_33` candidate
+is unaffected.

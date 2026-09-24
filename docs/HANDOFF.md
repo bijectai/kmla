@@ -2,7 +2,22 @@
 
 ## Authorization and entry identity
 
-**Latest H4 result (2026-09-23): scoped candidate passes; corpus-wide completion
+**Current direction (2026-09-23):** Q-021 is explicitly authorized. Dev grants
+standing consult authorization through scripts/consult.sh within docs/consult/
+and append-only docs/DECISION_LOG.md, with changed-path audits after every call
+and a stop on out-of-scope writes. No per-question approval is needed within
+that scope. Contract amendments, protected artifacts and installations remain
+Dev's. If Fable confirms the H1/H3 reading, fix country_/2 only: retain supplied
+ground bodyless clauses at their source-clause positions with tags/duplicates
+intact; a country_ rule remains a new finding. Verify both H4.3 checks in all
+14 files before continuing the Phase 1 audit. No checkpoint is passed.
+
+A-021 now confirms that reading. Its only repository writes were the new answer
+and an append-only decision-log review, verified by an all-path before/after
+audit. The isolated harness correction is in progress. No human action is due
+for this implementation defect; new amendments/installations still go to Dev.
+
+**Earlier H4 snapshot (superseded permission hold): scoped candidate passes; corpus-wide completion
 is blocked, not claimed.** tax_case_33 retains its ordered 1,736 facts and tax
 result 27181; its 49,612 two-input calls produce 157 successful proofs. A
 separate generic country-fact omission changes s3306_c_A_pos's bff answer from
@@ -121,11 +136,11 @@ Existing runtime archival obligations remain open and are not erased by sign-off
 
 ### H4 candidate — reviewed and authorized for measurement, not installed
 
-- **New immediate deliverable:** authorize Q-021's listed repository excerpts
-  and mismatch evidence to be sent to Fable, with writes only to docs/consult/
-  and appended docs/DECISION_LOG.md. The affected generic path remains halted
-  for that review. The tax_case_33-only success does not discharge the all-376
-  obligation or authorize a broader bodyless-fact traversal.
+- **Consult permission delivered:** Q-021 and later in-scope questions are
+  authorized. No new permission is due for this review. Fable has confirmed
+  Dev's conditional country_-only correction; a new semantic choice
+  still comes to Dev. The tax_case_33-only success does not discharge the
+  all-376 obligation or authorize a broader bodyless-fact traversal.
 - The required bound-call diagnostic is complete: the original purpose rule
   in tax_case_33 fails in its second split with its first event already bound.
   No grounder fix for an unbound first argument is indicated by this evidence.

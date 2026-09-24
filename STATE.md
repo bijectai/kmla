@@ -2,7 +2,31 @@
 
 ## Current phase
 
-Final handoff for this continuation: the isolated harness context is closed;
+2026-09-23 (A-021 reviewed; country-only correction released): Fable confirms
+Dev's reading: country_/2 has no event position, so applying H4.2(ii)'s event
+domain is an implementation defect under H1/H3, not a missing semantic choice.
+The all-path audit (including ignored files and git metadata) finds only new
+A-021 and an append to DECISION_LOG changed during the consult; old answers and
+the protected manifest are unchanged. The isolated harness lane is resumed for
+the country_-by-name correction and both H4.3 regressions on all 14 files, plus
+direct supplied-fact preservation. No bodyless-event bypass or country rule
+handling is authorized. Phase 1 continues after that slice is verified. The
+standing consult permission is recorded in AGENTS; no new owner action is
+currently required for this defect. Checkpoint 1 remains unpassed.
+
+2026-09-23 (Q-021 explicitly authorized; standing consult scope): Dev clears
+the Q-021 pre-spawn permission hold and grants standing consultation through
+scripts/consult.sh, with writes only in docs/consult/ and appended
+docs/DECISION_LOG.md. Audit paths after each call; out-of-scope writes halt the
+lane. Contract amendments, human/ and installations still require Dev. Q-021
+now carries Dev's interpretation and conditional country_-only correction:
+preserve supplied ground bodyless clauses with source order/tags/multiplicity;
+record placement, reject a future country_ rule as a finding, keep event
+traversal unchanged, and check both H4.3 criteria for all 14 originals. Fable
+must confirm or refute before implementation. The historical hold below is
+superseded; Checkpoint 1 remains unpassed.
+
+Prior continuation handoff (before Q-021 authorization): the isolated harness context was closed;
 no background implementation remains. Independent orchestrator rechecks pass
 tax_case_33's two comparisons and reproduce the country mismatch with exit 1
 (`docs/phase1/h4-tax33-recheck-2026-09-23/` and
@@ -445,7 +469,13 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Q-021 not sent: generic country-fact loss, consultation needs permission
+### Q-021 resolved; country correction and regression in progress
+
+Dev explicitly authorized Q-021 and granted standing in-scope consultation.
+A-021 confirms the implementation defect and releases the conditional fix.
+The path audit is clean and the log change is append-only. The permission
+denial below is retained history, not a current request for owner permission.
+The measured mismatch remains a failing regression until corrected, not waived.
 
 Measured original H6.5 query:
 `s3306_c_A(alice_employer,Employer,Employee)` in s3306_c_A_pos.pl.
@@ -985,8 +1015,12 @@ implementation obligations above, with separate oracle/serializer contexts and
 read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
 query-admission circuit breaker was resolved on Dev-authorized continuation;
 pre-dispatch checks passed and both isolated lanes delivered initial slices.
-The H4 grounding lane stays paused for an owner-approved remedy after the
-bound-call evidence; no amendment is accepted and Q-020 review needs permission.
+The Q-020 candidate is implemented and measured for tax_case_33 only; protected
+installation remains Dev's. A-021 confirms the authorized country-only fix is
+an implementation correction; complete all 14 regressions, then continue the
+all-376 audit without changing semantics. Consultations have standing scope
+authorization with per-call changed-path audits. New contract choices still
+halt the affected lane for Dev.
 The authorized §7703 proof-only round is complete: all three assertions pass,
 and bounded source translation continued with explicit open dependencies.
 Continue §7703 integration without mistaking those dependencies for references.
