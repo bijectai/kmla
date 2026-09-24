@@ -33,12 +33,14 @@ role/permission/session references below are provenance, not new routing.
 The governor may inspect both lanes for review but must never relay either
 implementation. Review is event-driven and sampled, not a full audit rerun.
 
-HANDOFF item 1 (shared output-position projections) is halted, awaiting
-docs/consult/Q-024.md. Q-024 asks where the declaration lives, which positions
-are outputs where a case binds its answer, and how the harness's projection
-exceptions reach the declaration without a lane-implementation relay. Its
-evidence is docs/consult/evidence/q024-question-bindings/, extracted
-mechanically from the owner corpus. The first P-WAKE wake waits for Dev's go.
+Q-024 was answered by A-024 through the first P-WAKE wake, which Dev ran
+(verdict 0, audit clean). A-024 settles the declaration's location: a per-mode
+output field in TIME_SCHEMA.json. It lists the required bound-answer outputs
+and routes the harness's exceptions through DECISIONS and source call sites,
+not a lane relay. It escalates PROPOSED P-H6-CONJ to Dev; see Blockers.
+The projection declaration may not be finalized as approved: its full G2
+statute call-site derivation is unreviewed. Only read-only contract and
+call-site analysis continues.
 
 ## Historical phase snapshots
 
@@ -639,6 +641,26 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### P-H6-CONJ (A-024): extra-conjunct scoring scope awaits Dev
+
+A-024 escalates an owner-text inconsistency. H6.3 (`human/DECISIONS.md:895`)
+names only `s152_d_2_D_pos/neg` as cases with extra conjuncts. H6.5 also flags
+`s152_d_2_G/4`, `s68_b/3` and `s3306_c_10_A/4`, and the originals
+`s152_d_2_G_pos`, `s68_a_1_pos/neg` and `s3306_c_10_A_i_pos` carry extra
+conjuncts. The proposed replacement sentence is recorded as PROPOSED
+P-H6-CONJ in docs/DECISION_LOG.md. It is not installed; only Dev approves,
+amends and installs it.
+
+Halted until Dev decides:
+- the H6.3 scoring of those extra-conjunct originals;
+- the integration and scoring work and the producer release that depend on it;
+- finalizing the shared projection declaration as approved.
+
+A-024 certifies only the listed bound-answer outputs and the named G2 classes,
+not a complete 135-signature table. Read-only contract and statute call-site
+analysis may continue. Additional conjuncts do not change any target's
+output tuple. No lane is dispatched and no checkpoint is affected.
 
 ### Q-023 resolved: event-domain correction verified; H4(b) implementation incomplete
 
