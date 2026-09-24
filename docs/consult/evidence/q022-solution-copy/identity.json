@@ -1,0 +1,5 @@
+{
+  "probe_sha256": "cd3bff9b4408e19771599373e574667fa9816bc154420caecd9e96c711ed8e98",
+  "image": "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+  "qualification": "variable/solution-copy diagnostic only; not grounding, parity or admission"
+}
