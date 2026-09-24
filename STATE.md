@@ -2,6 +2,19 @@
 
 ## Current phase
 
+2026-09-23 (new list-valued stipulation encoding finding; Q-022 prepared): the
+wider audit stops at s2_a_1_B_pos.pl with pinned stderr
+`ERROR: Unknown error term: unsupported_household_term([charlie])` (exit 2,
+no timeout). Its four s151/5 heads retain [charlie] and [0] in positions 3/4;
+the shared flat Pat/Term input representation cannot encode them. A source-head
+census also identifies [alice] in s63_d_2_pos.pl. No coercion, exclusion, new
+constructor or semantic remedy is implemented. The affected lane is halted
+for Q-022 classification under standing consult authorization, after writer
+quiescence and before/after scope audits. The country-only 14-case success is
+unchanged. The separate §7703 stipulation slice is complete and independently
+verified (62 unchanged + 25 new theorems); remaining provider/mode/R5 obligations
+are recorded in Oracle/UNPROVED.md. Checkpoint 1 remains unpassed.
+
 2026-09-23 (country fix independently verified; Phase 1 continuation): the
 country_-by-name correction passes both H4.3 checks on all 14 originals and
 the independent supplied-country comparison. The final independent run also
@@ -485,6 +498,22 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### Q-022: list-valued original stipulations do not fit the shared input pattern
+
+Exact failure: `ERROR: Unknown error term: unsupported_household_term([charlie])`.
+Original s2_a_1_B_pos.pl supplies
+`s151(bob,_,[charlie],[0],Year) :- between(2014,2017,Year)`; the pinned diagnostic
+prints all four yearly heads before unchanged encoding fails. This is an
+encoder failure, not evidence that the source query is reference-undefined.
+G4 fixes flat scalar Term; H4 retains these stipulated clauses; Stip.args and
+the current input wire use only val(Term)/wild(Nat). The required classification
+is implementation representation gap versus a needed owner amendment. No list
+is flattened/stringified/dropped and no validity restriction is introduced.
+Q-022 and adjacent census/trace evidence preserve the decision question.
+The broad run accounts for all 376: 120 H4(a) pass, 1 error, 255 blocked; H4(b)
+has 1 pass, 119 unimplemented, 1 encoding-blocked, 255 blocked-after-finding.
+The previously verified country slice is separate retained evidence, not waived.
 
 ### Q-021 resolved; country correction verified, wider H4 audit unfinished
 

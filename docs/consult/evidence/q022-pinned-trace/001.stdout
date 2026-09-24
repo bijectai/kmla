@@ -1,0 +1,4 @@
+stipulated_head=s151(bob,'$VAR'(0),[charlie],[0],2014)
+stipulated_head=s151(bob,'$VAR'(1),[charlie],[0],2015)
+stipulated_head=s151(bob,'$VAR'(2),[charlie],[0],2016)
+stipulated_head=s151(bob,'$VAR'(3),[charlie],[0],2017)

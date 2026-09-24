@@ -2,6 +2,19 @@
 
 ## Authorization and entry identity
 
+**Latest continuation finding (2026-09-23):** the full-population grounding
+audit is halted at s2_a_1_B_pos.pl:40: the supplied s151/5 clause has proper
+lists [charlie] and [0], while shared Stip.args uses flat Pat/Term. The pinned
+encoder exits 2 with `unsupported_household_term([charlie])`; this is not a
+reference-undefined source query or an exclusion. Q-022 asks Fable to classify
+the missing representation under existing H4/G4 versus an owner amendment.
+No remedy/installation is authorized by that question. All 376 remain accounted
+for, with incomplete/unvisited statuses explicit. The separate country slice
+still passes; the §7703 stipulation slice adds 25 checked theorems to the 62
+unchanged ones. Both isolated contexts are now paused/closed for an attributable
+consult audit. Human deliverable, if any, follows the classification—not another
+per-question permission request. Checkpoint 1 remains unpassed.
+
 **Current direction (2026-09-23):** Q-021 is explicitly authorized. Dev grants
 standing consult authorization through scripts/consult.sh within docs/consult/
 and append-only docs/DECISION_LOG.md, with changed-path audits after every call

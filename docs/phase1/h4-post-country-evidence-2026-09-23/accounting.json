@@ -1,0 +1,33 @@
+{
+  "source_identities_unchanged": 376,
+  "implementation_test_hashes_match_audit": true,
+  "original_successful_grounding_counts": {
+    "fact_count": 2238,
+    "stipulation_count": 141,
+    "unary_proofs": 427,
+    "grounding_cpu_seconds": 0.08193828500000008,
+    "grounding_wall_seconds": 0.08184075355529785
+  },
+  "reground_successful_counts": {
+    "fact_count": 2238,
+    "stipulation_count": 141,
+    "grounding_cpu_seconds": 0.05794603499999981,
+    "grounding_wall_seconds": 0.057877302169799805
+  },
+  "raw_command_count": 245,
+  "prolog_invocations": 241,
+  "command_elapsed_seconds_sum": 102.36393,
+  "timeouts": 0,
+  "nonzero_exit_commands": [
+    [
+      "245.stderr",
+      2
+    ]
+  ],
+  "error_stdout_bytes": 0,
+  "error_stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([charlie])\n",
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92",
+  "first_failure_source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+  "failed_request_sha256": "e2beafa94e575317c6eebfa148fc045034b77aa1ffc853b66afb1618d9298e6f",
+  "first_failure_position_in_execution_order": 121
+}

@@ -1,0 +1,7 @@
+{
+  "original_rows": 376,
+  "all_source_and_code_hashes_match": true,
+  "audit_pass": false,
+  "failure_case": "s2_a_1_B_pos.pl",
+  "qualification": "independent accounting and pinned failure trace, not a rerun or pass of all376"
+}

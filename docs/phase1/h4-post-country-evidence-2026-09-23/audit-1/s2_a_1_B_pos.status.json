@@ -1,0 +1,25 @@
+{
+  "original_case": "s2_a_1_B_pos.pl",
+  "h4_3_a": "error:original-grounding",
+  "h4_3_b": "blocked:grounding-not-complete",
+  "direct_country": {
+    "status": "blocked:original-grounding"
+  },
+  "source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s2_a_1_B/4 bffb"
+  },
+  "original_queries": [
+    "s2_a_1_B(bob,_,_,2016)"
+  ],
+  "error": {
+    "case": "s2_a_1_B_pos.pl",
+    "stage": "original-grounding",
+    "kind": "execution/dispatch/decode failure",
+    "error": "s2_a_1_B_pos.pl: process failure {'argv': ['docker', 'run', '--rm', '--name', 'kmla-runtime-06fb97dd63bb42d3817a3d0c56b58e62', '--platform', 'linux/amd64', '--network', 'none', '--read-only', '--tmpfs', '/tmp', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--user', '501:20', '--workdir', '/corpus', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/h4-post-country-evidence-2026-09-23/audit-1/requests,dst=/requests,readonly', '--entrypoint', 'swipl', 'sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7', '-q', '-f', 'none', '-s', '/harness/grounding.pl', '-g', 'main', '-t', 'halt', '--', '/requests/ground-0241.pl', '/requests/registry.pl', 'regular', 'none'], 'timeout_seconds': 60.0, 'exit': 2, 'timed_out': False, 'stdout': '245.stdout', 'stderr': '245.stderr', 'elapsed_seconds': 0.388587}; retained raw diagnostics"
+  }
+}
