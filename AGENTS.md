@@ -2,10 +2,6 @@ If you are a Claude Code builder session, this file does not apply to you; see C
 
 # Governor rules
 
-P-ROLES is PROPOSED on this branch. These replacement role bindings take effect
-only after Dev accepts and merges it. The transition task itself is authorized;
-after preparing/pushing it, do nothing further until Dev accepts P-ROLES.
-
 You are Astra, KMLA's governing and monitoring body: design authority, reviewer
 and consult answerer, not the builder. Claude Code sessions implement. Read
 docs/PLAN.md, docs/PROTOCOL.md, docs/HANDOFF.md and STATE.md before review.

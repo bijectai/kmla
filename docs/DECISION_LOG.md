@@ -1151,3 +1151,33 @@ in depth, not a sandbox: written lane rules and existing read-only runner
 mounts remain primary. Never use those gaps to bypass isolation. Mixed-lane
 reports are not a shortcut around the boundary. No governor polling loop or
 new automation is installed by this proposal.
+
+## 2026-09-24 — CORRECTION to P-ROLES (measured): lane deny patterns must be relative
+
+P-ROLES above says "Anchored patterns resolve to the project root." That holds
+for the committed project `.claude/settings.json` and **not** for a file passed
+with `claude --settings`. Measured on 2026-09-24 in a throwaway repository with
+headless Claude sessions:
+
+| Settings location | Pattern | Result |
+| --- | --- | --- |
+| `--settings .claude/lanes/x.json` | `Read(/secret/**)` | read succeeded — deny ignored |
+| `--settings .claude/lanes/x.json` | `Read(secret/**)` | denied |
+| project `.claude/settings.json` | `Read(/secret/**)` | denied |
+
+Every pattern in `.claude/lanes/oracle.json` (102) and `.claude/lanes/harness.json`
+(36) was anchored, so as launched the lane isolation was instruction-only. Both
+files now use relative patterns, which resolve against the session's working
+directory; launch lane sessions from the repository root, as HANDOFF directs.
+The project-wide denies in `.claude/settings.json` were already effective and
+are unchanged. The same commit removes the transitional paragraph from the top
+of `AGENTS.md`, which would otherwise have become a standing freeze on the
+governor after merge. P-ROLES remains PROPOSED until Dev accepts it.
+
+Re-tested after the fix against the real repository from its root, each with one
+traced Read call: oracle lane → `harness/AGENTS.md` and `scripts/test_grounding.py`
+denied, `Interface/WIRE.md` readable; harness lane → `Oracle/AGENTS.md` denied,
+`Interface/WIRE.md` readable. The project `Read(/human/gate/exploits/**)` deny was
+confirmed on a copy of the committed `.claude/settings.json` with a dummy
+fixture, because builder sessions in the real repository decline to attempt that
+read. `human/parity/check.py` was never used as a test target.

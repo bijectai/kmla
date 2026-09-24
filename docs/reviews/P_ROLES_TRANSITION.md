@@ -123,3 +123,11 @@ Circuit breaker: three failed edit cycles on one check means stop and report.
 The consult replacement passed its first test cycle; no breaker fired. The
 path-pair check initially found the planned review-note directory absent before
 this note was created; no rule or check was weakened to accommodate it.
+
+## Correction (2026-09-24)
+
+The statement above that "each lane deny is an anchored Read/Edit pair" described
+a defect: in a `--settings` file a leading `/` does not anchor to the project
+root, so those rules matched nothing. Both lane files now use relative patterns
+and were re-tested against the real repository; see the correction entry after
+P-ROLES in `docs/DECISION_LOG.md`.
