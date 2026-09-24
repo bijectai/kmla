@@ -2,6 +2,16 @@
 
 ## Current phase
 
+2026-09-23 (shared stipulation-list boundary verified): distinct recursive
+StipArg and its tagged-list wire are checked independently. All 115 existing
+Interface guards, unchanged query-time guards, 16 new behavioral guards,
+20 new proofs and five declarative fixture tests pass on pinned Lean 4.33.1.
+Six legacy fixture encodings remain unchanged; human manifest verifies.
+The two isolated implementation contexts may now adapt to this shared shape.
+Their prior results are snapshots, not claims that the changed adapters already
+compile. No full-population H4 completion or Checkpoint 1 pass is claimed.
+Evidence: docs/phase1/q022-shared-independent-2026-09-23/.
+
 2026-09-23 (A-022 reviewed; shared-only representation correction released):
 Fable classifies list-valued stipulations as an Interface/codec representation
 gap under existing H4, not an owner amendment or G6 source failure. Its writes

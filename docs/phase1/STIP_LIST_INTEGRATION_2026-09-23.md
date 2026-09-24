@@ -43,12 +43,22 @@ the transport must preserve both. This does not test improper-list support.
 
 ## Integration status
 
-The shared context is implementing and verifying the declaration, wire and
-fixtures. The two isolated implementation contexts remain paused until that
-checked handoff. Neither lane may inspect the other's implementation or invent
-a different list spelling. The required next evidence is preservation through
-each adapter, both H4 comparisons for the two affected originals, the existing
-country regressions and a fresh full-population report.
+The shared context completed the declaration, wire and fixtures. Main's fresh
+independent run, retained in `q022-shared-independent-2026-09-23/`, passes all
+115 old Interface guards, the unchanged query-time checks, 16 new guards,
+20 new kernel-checked proofs and five fixture tests. The final equality
+decision uses no axioms; theorem dependencies stay within X1, without sorryAx.
+Input hashes stayed stable throughout. The protected manifest verifies.
+The first failed new-test cycle and its exact goals remain in the shared
+handoff; the structural-recursion correction changed no assertion.
+
+The two isolated implementation contexts may now adapt against this checked
+handoff. Neither lane may inspect the other's implementation or invent a
+different list spelling. Their pre-change passing results are historical
+snapshots, not a claim that the new adapters already build. The required next
+evidence is preservation through each adapter, both H4 comparisons for the two
+affected originals, the existing country regressions and a fresh full-population
+report.
 
 All earlier failing audit evidence stays unchanged. No all-376 round trip,
 production records, `ValidStip` certification, reference parity or Checkpoint 1

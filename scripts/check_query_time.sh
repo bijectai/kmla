@@ -14,3 +14,5 @@ lean -o "$CHECK_DIR/Interface/QuerySchema.olean" Interface/QuerySchema.lean
 lean -o "$CHECK_DIR/Interface/QueryTime.olean" Interface/QueryTime.lean
 lean scripts/query_time_guards.lean
 echo "ok    query-time guards and kernel-checked boundary proofs passed"
+lean scripts/stip_list_guards.lean
+echo "ok    recursive stipulation guards and kernel-checked boundary proofs passed"

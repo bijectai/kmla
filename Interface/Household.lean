@@ -56,10 +56,11 @@ def r5Years : List Year := (List.range 201).map (fun n => 1900 + Int.ofNat n)
 abbrev Person := Term
 
 /--
-H2/A3. A pattern position. `wild` is the unbound position of a stipulation (and
-of the two original `purpose_(_, "agricultural labor")` facts). Each `wild`
-carries a distinct id because A3 requires wildcards to be pairwise distinct
-under `list_to_set`: a wildcard is identical only to itself.
+H2/A3. A scalar event-fact pattern, used by the two original
+`purpose_(_, "agricultural labor")` facts and the scalar query-time boundary.
+Wildcard identity is carried by its id: a wildcard is identical only to itself.
+Stipulation arguments use the distinct recursive `StipArg` below; event
+positions do not gain a list constructor.
 -/
 inductive Pat where
   | val  (t : Term)
@@ -206,6 +207,65 @@ inductive Fact where
 /-! ## Stipulations (H4) -/
 
 /--
+H4.1/H4.2(iii). One supplied stipulation argument: a G4 scalar, an unbound
+variable identified by its existing id, or a finite proper list of arguments.
+Lists preserve nesting, order, duplicates and ids shared with other positions.
+This repairs the representation gap classified in A-022; `Term` and event
+`Pat` stay scalar. Non-list compounds and improper lists are not represented:
+an encounter remains a reported finding, never a coerced value or exclusion.
+-/
+inductive StipArg where
+  | val (t : Term)
+  | wild (id : Nat)
+  | list (items : List StipArg)
+  deriving Repr, Inhabited
+
+-- Mutually structural recursive decisions compare the entire structure and
+-- reduce in the kernel, with no normalization of the represented values.
+mutual
+  private def stipArgDecEq : (a b : StipArg) → Decidable (a = b)
+    | .val a, .val b =>
+        match decEq a b with
+        | isTrue h => isTrue (congrArg StipArg.val h)
+        | isFalse h => isFalse (fun e => h (StipArg.val.inj e))
+    | .wild a, .wild b =>
+        match decEq a b with
+        | isTrue h => isTrue (congrArg StipArg.wild h)
+        | isFalse h => isFalse (fun e => h (StipArg.wild.inj e))
+    | .list as, .list bs =>
+        match stipArgsDecEq as bs with
+        | isTrue h => isTrue (congrArg StipArg.list h)
+        | isFalse h => isFalse (fun e => h (StipArg.list.inj e))
+    | .val _, .wild _ | .val _, .list _
+    | .wild _, .val _ | .wild _, .list _
+    | .list _, .val _ | .list _, .wild _ => isFalse (by intro h; cases h)
+  termination_by structural a => a
+
+  private def stipArgsDecEq : (as bs : List StipArg) → Decidable (as = bs)
+    | [], [] => isTrue rfl
+    | [], _ :: _ | _ :: _, [] => isFalse (by intro h; cases h)
+    | a :: as, b :: bs =>
+        match stipArgDecEq a b with
+        | isFalse h => isFalse (fun e => h (List.cons.inj e).1)
+        | isTrue h =>
+            match stipArgsDecEq as bs with
+            | isFalse t => isFalse (fun e => t (List.cons.inj e).2)
+            | isTrue t => isTrue (by cases h; cases t; rfl)
+  termination_by structural as => as
+end
+
+instance : DecidableEq StipArg := stipArgDecEq
+
+/-- Lossless one-way inclusion of the old scalar pattern, preserving its id. -/
+def StipArg.ofPat : Pat → StipArg
+  | .val t => .val t
+  | .wild id => .wild id
+
+-- Keeps explicit legacy Pat arguments usable without widening Fact.purpose_.
+-- There is deliberately no reverse coercion from StipArg to Pat or Term.
+instance : Coe Pat StipArg := ⟨StipArg.ofPat⟩
+
+/--
 H4.1. The 31 statute signatures that case files supply clauses for. A case
 clause whose head is a statute predicate adds a clause *after* the statute's
 own, so the predicate's solution list is `statute solutions ++ stipulated
@@ -321,7 +381,7 @@ unbound output (A3).
 -/
 structure Stip where
   pred : StipPred
-  args : List Pat
+  args : List StipArg
   deriving DecidableEq, Repr, Inhabited
 
 /-- A stipulation is well-formed when it supplies exactly one pattern per argument. -/
@@ -708,6 +768,17 @@ def Pat.dayWellFormed : Pat → Bool
   | .wild _ => true
   | .val (.atom s) | .val (.str s) => (Day.fromISO? s).isSome
   | .val (.int _) => false
+
+/--
+The existing scalar Day check for a stipulated position. A proper list is not
+a scalar Day, even if empty or containing a date. Other positions are still
+governed solely by the existing signature/time checks, not recursively scanned
+for date-looking values. No list-valued Day slot occurs in the H4.1 registry.
+-/
+def StipArg.dayWellFormed : StipArg → Bool
+  | .val t => (Pat.val t).dayWellFormed
+  | .wild id => (Pat.wild id).dayWellFormed
+  | .list _ => false
 
 -- BEGIN GENERATED STIPULATION TIME ROLES
 -- Generated from Interface/TIME_SCHEMA.json; scripts/check_time_schema.py

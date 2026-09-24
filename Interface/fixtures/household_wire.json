@@ -89,6 +89,36 @@
         ]
       },
       "wire": "{\"facts\":[{\"ctor\":\"agricultural_service\",\"args\":[{\"a\":\"helper\"},{\"s\":\"2015-01-01\"},-7]},{\"ctor\":\"alice_employer\",\"args\":[{\"a\":\"alice\"},{\"s\":\"household\"},250000]},{\"ctor\":\"alice_household_maintenance\",\"args\":[{\"a\":\"alice\"},{\"a\":\"payment\"},{\"s\":\"\"},9007199254740993]},{\"ctor\":\"patient\",\"args\":[{\"a\":\"event\"},{\"a\":\"person\"}]},{\"ctor\":\"patient_\",\"args\":[{\"a\":\"event\"},{\"a\":\"person\"}]},{\"ctor\":\"itemize_deductions_\",\"args\":[{\"a\":\"inert-marker\"}]}],\"stipulations\":[{\"pred\":\"s151_d_4\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"val\":{\"s\":\"2015-01-01\"}},{\"wild\":40},{\"val\":250000}]},{\"pred\":\"s2_a_5\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":41},{\"val\":{\"s\":\"2015-01-01\"}},{\"val\":-7},{\"val\":250000}]},{\"pred\":\"s63_c_3_4\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":42},{\"val\":0},{\"val\":2015}]},{\"pred\":\"s68_b_3\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"val\":2015},{\"val\":250000}]}]}"
+    },
+    {
+      "name": "supplied_s151_lists",
+      "household": {
+        "facts": [],
+        "stipulations": [
+          {"pred": "s151_5", "args": [{"val": {"a": "bob"}}, {"wild": 0}, {"list": [{"val": {"a": "charlie"}}]}, {"list": [{"val": 0}]}, {"val": 2014}]},
+          {"pred": "s151_5", "args": [{"val": {"a": "bob"}}, {"wild": 1}, {"list": [{"val": {"a": "charlie"}}]}, {"list": [{"val": 0}]}, {"val": 2015}]},
+          {"pred": "s151_5", "args": [{"val": {"a": "bob"}}, {"wild": 2}, {"list": [{"val": {"a": "charlie"}}]}, {"list": [{"val": 0}]}, {"val": 2016}]},
+          {"pred": "s151_5", "args": [{"val": {"a": "bob"}}, {"wild": 3}, {"list": [{"val": {"a": "charlie"}}]}, {"list": [{"val": 0}]}, {"val": 2017}]},
+          {"pred": "s151_5", "args": [{"val": {"a": "alice"}}, {"val": 2000}, {"list": [{"val": {"a": "alice"}}]}, {"wild": 4}, {"val": 2017}]}
+        ]
+      },
+      "wire": "{\"facts\":[],\"stipulations\":[{\"pred\":\"s151_5\",\"args\":[{\"val\":{\"a\":\"bob\"}},{\"wild\":0},{\"list\":[{\"val\":{\"a\":\"charlie\"}}]},{\"list\":[{\"val\":0}]},{\"val\":2014}]},{\"pred\":\"s151_5\",\"args\":[{\"val\":{\"a\":\"bob\"}},{\"wild\":1},{\"list\":[{\"val\":{\"a\":\"charlie\"}}]},{\"list\":[{\"val\":0}]},{\"val\":2015}]},{\"pred\":\"s151_5\",\"args\":[{\"val\":{\"a\":\"bob\"}},{\"wild\":2},{\"list\":[{\"val\":{\"a\":\"charlie\"}}]},{\"list\":[{\"val\":0}]},{\"val\":2016}]},{\"pred\":\"s151_5\",\"args\":[{\"val\":{\"a\":\"bob\"}},{\"wild\":3},{\"list\":[{\"val\":{\"a\":\"charlie\"}}]},{\"list\":[{\"val\":0}]},{\"val\":2017}]},{\"pred\":\"s151_5\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"val\":2000},{\"list\":[{\"val\":{\"a\":\"alice\"}}]},{\"wild\":4},{\"val\":2017}]}]}"
+    },
+    {
+      "name": "recursive_lists_shared_ids",
+      "household": {
+        "facts": [],
+        "stipulations": [
+          {"pred": "s151_5", "args": [
+            {"wild": 0},
+            {"list": [{"wild": 0}, {"wild": 1}, {"list": [{"wild": 1}]}]},
+            {"wild": 1},
+            {"list": [{"list": []}, {"val": {"a": "[]"}}, {"val": {"s": "[]"}}, {"val": {"a": "usa"}}, {"val": {"s": "usa"}}, {"val": 123456789012345678901234567890}, {"val": -123456789012345678901234567890}, {"val": {"a": "dup"}}, {"val": {"a": "dup"}}]},
+            {"val": 2015}
+          ]}
+        ]
+      },
+      "wire": "{\"facts\":[],\"stipulations\":[{\"pred\":\"s151_5\",\"args\":[{\"wild\":0},{\"list\":[{\"wild\":0},{\"wild\":1},{\"list\":[{\"wild\":1}]}]},{\"wild\":1},{\"list\":[{\"list\":[]},{\"val\":{\"a\":\"[]\"}},{\"val\":{\"s\":\"[]\"}},{\"val\":{\"a\":\"usa\"}},{\"val\":{\"s\":\"usa\"}},{\"val\":123456789012345678901234567890},{\"val\":-123456789012345678901234567890},{\"val\":{\"a\":\"dup\"}},{\"val\":{\"a\":\"dup\"}}]},{\"val\":2015}]}]}"
     }
   ]
 }

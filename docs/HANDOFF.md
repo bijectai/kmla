@@ -2,6 +2,15 @@
 
 ## Authorization and entry identity
 
+**Shared correction checked (2026-09-23):** Interface now carries distinct
+recursive StipArg with disjoint list wire. Event Term/Pat and validity/query
+requirements are unchanged. Independent checks pass: 115 old guards, unchanged
+query-time checks, 16 new guards, 20 proofs and five fixture tests. Harness and
+oracle may adapt in their separate contexts using only this common semantic
+boundary. No new human action is due for this representation correction;
+the protected H4 candidate installation/re-pin remains Dev's, after its required
+evidence. Full H4, reference parity and Checkpoint 1 remain incomplete.
+
 **A-022 classification (2026-09-23):** representation defect under signed H4,
 not a blocking owner amendment. The consult audit is clean. A shared-only
 Interface context is preparing a distinct recursive stipulation-argument type
