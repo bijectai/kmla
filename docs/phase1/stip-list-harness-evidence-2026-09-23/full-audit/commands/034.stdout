@@ -1,0 +1,46 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_makes_money"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_makes_money"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_makes_money"}, 276932 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_makes_money"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_makes_money"}, "2015-12-31" ]
+      }
+    ],
+    "stipulations": [
+      {
+	"pred":"s68_b_3",
+	"args": [ {"val": {"a":"alice"}},  {"val":2015},  {"val":250000} ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_makes_money"}
+    }
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5 ],
+  "stats": {
+    "unary_proofs":1,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":5,
+    "stipulation_count":1,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0002564580000000011,
+    "grounding_wall_seconds":0.000255584716796875,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

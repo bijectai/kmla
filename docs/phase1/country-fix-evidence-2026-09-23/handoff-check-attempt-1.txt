@@ -1,0 +1,20 @@
+2026-09-23: failed ad-hoc evidence-accounting assertion, not a Prolog/test failure.
+
+The check incorrectly demanded /corpus on EVERY docker run, including the
+runtime-only identity probe. Its failing operation was:
+
+for c in commands:
+ if c['argv'][:2]==['docker','run']:
+  for mount in ['/human','/corpus']:
+   assert any('dst='+mount+',readonly' in a for a in c['argv']),c
+
+Verbatim exception:
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+AssertionError: {'argv': ['docker', 'run', '--rm', '--name', 'kmla-runtime-8877c511b7dd4a739b34c8e084768d29', '--platform', 'linux/amd64', '--network', 'none', '--read-only', '--tmpfs', '/tmp', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--user', '501:20', '--workdir', '/corpus', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly', '--entrypoint', 'sh', 'sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7', '/harness/runtime_probe.sh'], 'timeout_seconds': 60, 'exit': 0, 'timed_out': False, 'stdout': '003.stdout', 'stderr': '003.stderr', 'elapsed_seconds': 0.767972}
+
+The command in slice-1/commands/003.command.json executes only runtime_probe.sh,
+not source cases. Correct accounting retains mandatory /human RO on every
+container and /corpus RO on every Prolog case/fixture execution. No runtime,
+grounder, comparison, input or original status changes for this correction.
+Count: one failed accounting assertion; one corrective accounting attempt.

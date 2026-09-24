@@ -1,0 +1,318 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employed_in_jail"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employed_in_jail"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employed_in_jail"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employed_in_jail"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employed_in_jail"
+          },
+          "2019-05-05"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          "2019-05-05"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_is_paid"
+            }
+          },
+          {
+            "a": "alice_employed_in_jail"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          1200
+        ]
+      },
+      {
+        "ctor": "penal_institution_",
+        "args": [
+          {
+            "a": "jail_is_a_penal_institution"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "jail_is_a_penal_institution"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "incarceration_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          "2015-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          "2019-05-05"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid_out_of_jail"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid_out_of_jail"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid_out_of_jail"
+          },
+          5320
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid_out_of_jail"
+          },
+          "2019-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employed_in_jail"
+      }
+    },
+    {
+      "source_clause": 6,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid"
+      }
+    },
+    {
+      "source_clause": 12,
+      "predicate": "penal_institution_",
+      "event": {
+        "a": "jail_is_a_penal_institution"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "incarceration_",
+      "event": {
+        "a": "alice_goes_to_jail"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid_out_of_jail"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_employed_in_jail"
+    },
+    {
+      "a": "alice_is_paid"
+    },
+    {
+      "a": "jail_is_a_penal_institution"
+    },
+    {
+      "a": "alice_goes_to_jail"
+    },
+    {
+      "a": "alice_is_paid_out_of_jail"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003031250000000152,
+    "grounding_wall_seconds": 0.00030350685119628906,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 0,
+    "cpu_seconds": 0.0015741669999999874,
+    "wall_seconds": 0.0015740394592285156
+  }
+}

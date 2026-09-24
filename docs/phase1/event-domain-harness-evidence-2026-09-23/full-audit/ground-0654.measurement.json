@@ -1,0 +1,434 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          "1998-02-03"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          "1999-04-01"
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "bob_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_house"
+            }
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2019"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2019"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2019"
+          },
+          236422
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2019"
+          },
+          "2019-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "son_",
+      "event": {
+        "a": "charlie_is_son"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "death_",
+      "event": {
+        "a": "bob_dies"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "residence_",
+      "event": {
+        "a": "charlie_residence"
+      }
+    },
+    {
+      "source_clause": 18,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_house"
+      }
+    },
+    {
+      "source_clause": 23,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_residence"
+      }
+    },
+    {
+      "source_clause": 28,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2019"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_marriage"
+    },
+    {
+      "a": "charlie_is_son"
+    },
+    {
+      "a": "bob_dies"
+    },
+    {
+      "a": "charlie_residence"
+    },
+    {
+      "a": "alice_maintains_house"
+    },
+    {
+      "a": "alice_residence"
+    },
+    {
+      "a": "alice_income_2019"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "stats": {
+    "unary_proofs": 7,
+    "distinct_event_domain": 7,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 31,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00031604200000001637,
+    "grounding_wall_seconds": 0.0003154277801513672,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 62000,
+    "cpu_seconds": 0.007588917000000001,
+    "wall_seconds": 0.007588863372802734
+  }
+}

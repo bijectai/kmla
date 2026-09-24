@@ -1,0 +1,26 @@
+ok: 175 shared signatures; 135 queried; 31 stipulated; generated tables match
+'QueryAdmissionTests.outOfRangeQueryRejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QueryAdmissionTests.outOfRangeStipRejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+ok    query-time guards and kernel-checked boundary proofs passed
+'KMLA.instDecidableEqStipArg' does not depend on any axioms
+'StipListInterfaceTests.scalarDayCheckUnchanged' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StipListInterfaceTests.scalarInclusionInjective' depends on axioms: [propext]
+'StipListInterfaceTests.nestedTagsDistinct' does not depend on any axioms
+'StipListInterfaceTests.listOrderMatters' does not depend on any axioms
+'StipListInterfaceTests.listMultiplicityMatters' does not depend on any axioms
+'StipListInterfaceTests.nestingMatters' does not depend on any axioms
+'StipListInterfaceTests.emptyListIsNotScalarOrWildcard' does not depend on any axioms
+'StipListInterfaceTests.largeSignedScalarsDistinct' does not depend on any axioms
+'StipListInterfaceTests.sharedIdsPreserved' depends on axioms: [propext]
+'StipListInterfaceTests.changingOnlyNestedIdIsDetected' does not depend on any axioms
+'StipListInterfaceTests.recursiveEqualityAcceptsIdenticalValues' does not depend on any axioms
+'StipListInterfaceTests.copiedRowsRemainDistinct' does not depend on any axioms
+'StipListInterfaceTests.originalHeadsHaveFiveArguments' does not depend on any axioms
+'StipListInterfaceTests.originalHeadsKeepOrderAndWildcards' depends on axioms: [propext]
+'StipListInterfaceTests.originalListValuesAreRetained' depends on axioms: [propext]
+'StipListInterfaceTests.shapeStillChecksOnlyOuterArity' does not depend on any axioms
+'StipListInterfaceTests.listsAreNotScalarDays' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StipListInterfaceTests.generatedStillRequiresNoStipulations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StipListInterfaceTests.listStipulationsCannotAdmitBadQuery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StipListInterfaceTests.listStipulationsCannotHideBadDay' depends on axioms: [propext, Classical.choice, Quot.sound]
+ok    recursive stipulation guards and kernel-checked boundary proofs passed

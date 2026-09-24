@@ -1,0 +1,5 @@
+{
+  "probe_sha256": "a53753dabff60996da364159e14af5d999b68140369b7fdbe7322676d5f17834",
+  "image": "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+  "qualification": "empty-list/scalar distinction diagnostic only; not grounding, parity or admission"
+}

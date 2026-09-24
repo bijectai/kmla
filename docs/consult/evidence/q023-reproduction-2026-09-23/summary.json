@@ -1,0 +1,133 @@
+{
+  "scope": "unchanged diagnostic, not a remedy or H4(b)/parity claim",
+  "case": "/Users/devrashie/Documents/csProjects/kmla/human/sara/sara/cases/s2_b_3_B_pos.pl",
+  "source_sha256": "cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a",
+  "before": {
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding.py": "7388fafe1b752638dbf6a7226ad3c170f81d3dfa076a52904204e3bb6e743226",
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a"
+  },
+  "runs": [
+    {
+      "request": "ground-0001.pl",
+      "facts": 114,
+      "stipulations": 5,
+      "unary_proofs": 13,
+      "distinct_events": 8,
+      "event_occurrences": {
+        "{\"a\": \"alice_and_bob\"}": 1,
+        "{\"a\": \"alice_dies\"}": 1,
+        "{\"a\": \"charlie_and_bob_residence\"}": 1,
+        "{\"a\": \"bob_maintains_household_2015\"}": 2,
+        "{\"a\": \"bob_maintains_household_2016\"}": 2,
+        "{\"a\": \"bob_maintains_household_2017\"}": 2,
+        "{\"a\": \"bob_maintains_household_2018\"}": 2,
+        "{\"a\": \"bob_maintains_household_2019\"}": 2
+      },
+      "fact_predicate_counts": {
+        "marriage_": 1,
+        "agent_": 25,
+        "start_": 23,
+        "death_": 1,
+        "end_": 22,
+        "residence_": 1,
+        "patient_": 1,
+        "payment_": 5,
+        "amount_": 20,
+        "purpose_": 10,
+        "income_": 5
+      }
+    },
+    {
+      "request": "ground-0002.pl",
+      "facts": 204,
+      "stipulations": 5,
+      "unary_proofs": 13,
+      "distinct_events": 8,
+      "event_occurrences": {
+        "{\"a\": \"alice_and_bob\"}": 1,
+        "{\"a\": \"alice_dies\"}": 1,
+        "{\"a\": \"charlie_and_bob_residence\"}": 1,
+        "{\"a\": \"bob_maintains_household_2015\"}": 2,
+        "{\"a\": \"bob_maintains_household_2016\"}": 2,
+        "{\"a\": \"bob_maintains_household_2017\"}": 2,
+        "{\"a\": \"bob_maintains_household_2018\"}": 2,
+        "{\"a\": \"bob_maintains_household_2019\"}": 2
+      },
+      "fact_predicate_counts": {
+        "marriage_": 1,
+        "agent_": 45,
+        "start_": 43,
+        "death_": 1,
+        "end_": 42,
+        "residence_": 1,
+        "patient_": 1,
+        "payment_": 5,
+        "amount_": 40,
+        "purpose_": 20,
+        "income_": 5
+      }
+    },
+    {
+      "request": "ground-0003.pl",
+      "facts": 384,
+      "stipulations": 5,
+      "unary_proofs": 13,
+      "distinct_events": 8,
+      "event_occurrences": {
+        "{\"a\": \"alice_and_bob\"}": 1,
+        "{\"a\": \"alice_dies\"}": 1,
+        "{\"a\": \"charlie_and_bob_residence\"}": 1,
+        "{\"a\": \"bob_maintains_household_2015\"}": 2,
+        "{\"a\": \"bob_maintains_household_2016\"}": 2,
+        "{\"a\": \"bob_maintains_household_2017\"}": 2,
+        "{\"a\": \"bob_maintains_household_2018\"}": 2,
+        "{\"a\": \"bob_maintains_household_2019\"}": 2
+      },
+      "fact_predicate_counts": {
+        "marriage_": 1,
+        "agent_": 85,
+        "start_": 83,
+        "death_": 1,
+        "end_": 82,
+        "residence_": 1,
+        "patient_": 1,
+        "payment_": 5,
+        "amount_": 80,
+        "purpose_": 40,
+        "income_": 5
+      }
+    }
+  ],
+  "first_difference": {
+    "index_zero_based": 20,
+    "original": {
+      "ctor": "agent_",
+      "args": [
+        {
+          "a": "bob_maintains_household_2016"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    },
+    "regrounded": {
+      "ctor": "agent_",
+      "args": [
+        {
+          "a": "bob_maintains_household_2015"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    }
+  },
+  "after": {
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding.py": "7388fafe1b752638dbf6a7226ad3c170f81d3dfa076a52904204e3bb6e743226",
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a"
+  },
+  "code_stable": true
+}

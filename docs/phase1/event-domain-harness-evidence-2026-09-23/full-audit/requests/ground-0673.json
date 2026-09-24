@@ -1,0 +1,6 @@
+{
+  "case": "tax_case_63.pl",
+  "candidate": "regular",
+  "query": "tax_inputs('bob',2019)",
+  "source_sha256": "5d108839bbe7cbb31a1d54644d844cbd210776e6037db5f368e21da0c0d46f67"
+}

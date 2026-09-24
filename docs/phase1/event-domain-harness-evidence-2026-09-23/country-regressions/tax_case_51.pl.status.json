@@ -1,0 +1,90 @@
+{
+  "original_case": "tax_case_51.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "8ca3dd3cad07a56b04f386093fb5dc9513fd80e30329794dfd38fd828ef96e2e",
+  "query": {
+    "tax_inputs": "tax_inputs('alice',2017)",
+    "amount": "unbound; first solution only"
+  },
+  "original_request": "ground-0023.pl",
+  "original_stats": {
+    "unary_proofs": 9,
+    "distinct_event_domain": 9,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 41,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002900409999999909,
+    "grounding_wall_seconds": 0.0002894401550292969,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0024.pl",
+  "reground_stats": {
+    "unary_proofs": 9,
+    "distinct_event_domain": 9,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 41,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002655419999999936,
+    "grounding_wall_seconds": 0.0002651214599609375,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "status": "first_solution",
+    "value": 55528,
+    "cpu_seconds": 0.008470749999999999,
+    "wall_seconds": 0.008470773696899414
+  },
+  "serialized_observation": {
+    "status": "first_solution",
+    "value": 55528,
+    "cpu_seconds": 0.007820208000000009,
+    "wall_seconds": 0.00782012939453125
+  }
+}

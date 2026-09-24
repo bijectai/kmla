@@ -28,7 +28,7 @@ def registry_household():
     args = {"Term": f.Term("atom", "event"), "Pat": f.Pat("wild", 7), "Int": -17, "Day": -1}
     return f.Household(
         tuple(f.Fact(name, tuple(args[k] for k in kinds)) for name, kinds in f.FACT_TYPES.items()),
-        tuple(f.Stip(name, tuple(f.Pat("val", f.Term("int", i)) for i in range(arity)))
+        tuple(f.Stip(name, tuple(f.StipArg("val", f.Term("int", i)) for i in range(arity)))
               for name, (_, arity) in f.STIP_SIGNATURES.items()))
 
 
@@ -92,7 +92,7 @@ class TransportTests(unittest.TestCase):
                 f.day_from_iso(text)
 
     def test_lossless_stip_list_separate_from_arity(self):
-        h = f.Household((), (f.Stip("s63_3", (f.Pat("wild", 17),)),))
+        h = f.Household((), (f.Stip("s63_3", (f.StipArg("wild", 17),)),))
         self.assertFalse(h.stipulations[0].well_formed)
         self.assertEqual(f.decode(f.encode(h)), h)
         self.assertIn("KMLA.StipPred.s63_3", f.emit_lean(h))
@@ -148,6 +148,17 @@ def testTerm : KMLA.Term → String
 def testPat : KMLA.Pat → String
   | .val t => "v" ++ testTerm t
   | .wild n => "w" ++ toString n
+mutual
+  def testStipArg : KMLA.StipArg → String
+    | .val t => "v" ++ testTerm t
+    | .wild n => "w" ++ toString n
+    | .list xs => "l[" ++ String.intercalate "," (testStipArgs xs) ++ "]"
+  termination_by structural a => a
+  def testStipArgs : List KMLA.StipArg → List String
+    | [] => []
+    | a :: rest => testStipArg a :: testStipArgs rest
+  termination_by structural xs => xs
+end
 def testFact : KMLA.Fact → String
 '''
         for name, kinds in f.FACT_TYPES.items():
@@ -159,7 +170,7 @@ def testFact : KMLA.Fact → String
         for name in f.STIP_SIGNATURES:
             code += f'  | .{name} => "{name}"\n'
         code += '''def testStip (s : KMLA.Stip) : String :=
-  testPred s.pred ++ "(" ++ String.intercalate "," (s.args.map testPat) ++ ")"
+  testPred s.pred ++ "(" ++ String.intercalate "," (s.args.map testStipArg) ++ ")"
 def testHousehold (h : KMLA.Household) : String :=
   String.intercalate ";" (h.facts.map testFact) ++ "|" ++ String.intercalate ";" (h.stipulations.map testStip)
 def main : IO Unit := do
@@ -170,11 +181,13 @@ def main : IO Unit := do
             return "i" + str(t.value) if t.tag == "int" else ("a" if t.tag == "atom" else "s") + json.dumps(list(map(ord, t.value)), separators=(",", ":"))
         def pat(p):
             return "w" + str(p.value) if p.tag == "wild" else "v" + term(p.value)
+        def stip_arg(p):
+            return "l[" + ",".join(map(stip_arg, p.value)) + "]" if p.tag == "list" else pat(p)
         expected = []
         for h in cases:
             fact_rows = [v.ctor + "(" + ",".join(term(a) if k == "Term" else pat(a) if k == "Pat" else str(a)
                          for k, a in zip(f.FACT_TYPES[v.ctor], v.args)) + ")" for v in h.facts]
-            stip_rows = [s.pred + "(" + ",".join(map(pat, s.args)) + ")" for s in h.stipulations]
+            stip_rows = [s.pred + "(" + ",".join(map(stip_arg, s.args)) + ")" for s in h.stipulations]
             expected.append(";".join(fact_rows) + "|" + ";".join(stip_rows))
         with tempfile.TemporaryDirectory(prefix="kmla-facts-lean-") as directory:
             path = Path(directory)

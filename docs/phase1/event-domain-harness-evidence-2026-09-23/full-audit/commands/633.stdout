@@ -1,0 +1,158 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 33200 ]},
+      {"ctor":"marriage_", "args": [ {"a":"alice_and_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2017-02-03" ]},
+      {"ctor":"blindness_", "args": [ {"a":"alice_is_blind"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_blind"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_is_blind"}, "2013-10-04" ]
+      },
+      {
+	"ctor":"joint_return_",
+	"args": [ {"a":"alice_and_bob_joint_return"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob_joint_return"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob_joint_return"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_and_bob_joint_return"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_and_bob_joint_return"}, "2017-12-31" ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_residence"}, "2017-01-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_residence"}, "2020-12-31" ]},
+      {"ctor":"residence_", "args": [ {"a":"bob_residence"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_residence"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_residence"},  {"a":"home"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"bob_residence"}, "2017-01-01" ]},
+      {"ctor":"end_", "args": [ {"a":"bob_residence"}, "2020-12-31" ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_is_paid"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"marriage_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"blindness_",
+      "event": {"a":"alice_is_blind"}
+    },
+    {
+      "source_clause":12,
+      "predicate":"joint_return_",
+      "event": {"a":"alice_and_bob_joint_return"}
+    },
+    {
+      "source_clause":17,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":22,
+      "predicate":"residence_",
+      "event": {"a":"bob_residence"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_is_paid"},
+    {"a":"alice_and_bob"},
+    {"a":"alice_is_blind"},
+    {"a":"alice_and_bob_joint_return"},
+    {"a":"alice_residence"},
+    {"a":"bob_residence"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "stats": {
+    "unary_proofs":6,
+    "distinct_event_domain":6,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":26,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00026237500000000913,
+    "grounding_wall_seconds":0.00026154518127441406,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":3390,
+    "cpu_seconds":0.0018375840000000032,
+    "wall_seconds":0.0018377304077148438
+  }
+}

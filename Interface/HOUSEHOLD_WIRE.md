@@ -20,13 +20,14 @@ decision. Fixtures cannot supply missing semantics.
 
 | Transport content | Owner authority in `human/DECISIONS.md` | Shared type authority in `Interface/Household.lean` |
 | --- | --- | --- |
-| `facts`, `stipulations`, list order and multiplicity | H1, lines 598–609; H4.2–H4.3, lines 740–757; G1, lines 23–31 | `Household`, lines 332–341 |
-| Fact constructor and positional arguments | H2–H3, lines 611–691 | `Fact`, lines 71–204 |
-| Atom/string tags and integer values | G4, lines 48–56; H2; M1, lines 90–99 | `Term`, lines 31–40; typed Fact arguments |
-| Whole-dollar `amount_` argument | M1; H2 | `Fact.amount_`, lines 100–101 |
+| `facts`, `stipulations`, list order and multiplicity | H1, lines 598–609; H4.2–H4.3, lines 740–757; G1, lines 23–31 | `Household` |
+| Fact constructor and positional arguments | H2–H3, lines 611–691 | `Fact` |
+| Atom/string tags and integer values | G4, lines 48–56; H2; M1, lines 90–99 | `Term`; typed Fact arguments |
+| Whole-dollar `amount_` argument | M1; H2 | `Fact.amount_` |
 | Typed Day values and ISO spelling | D1, lines 309–316; V9, lines 806–807 | `Day`; `Fact.start_`/`Fact.end_`; `Day.toISO` |
-| Stipulation signature, arity and positional pattern list | H4.1, lines 696–738 | `StipPred`, lines 208–279; `StipPred.arity`, lines 281–314; `Stip`, lines 317–328 |
-| Explicit value/wildcard distinction and identity | H2; H4.1; A3, lines 1291–1295 | `Pat`, lines 58–67 |
+| Stipulation signature, arity and positional argument list | H4.1, lines 696–738 | `StipPred`; `StipPred.arity`; `Stip.args : List StipArg` |
+| Explicit value/wildcard distinction and identity | H2; H4.1; A3, lines 1291–1295 | Event `Pat`; stipulation `StipArg` |
+| Proper lists inside supplied stipulation arguments | H4.1–H4.3; A1/A3; representation-gap classification in `docs/consult/A-022.md` | `StipArg.list : List StipArg → StipArg` |
 | Preservation of opaque extra stipulated arities | H4.1 (`s151_d/4`, `s2_a/5`, `s63_c_3/4`) | `StipPred.timeRoles` and its following scope comment; `Interface/TIME_SCHEMA.json`, last three signature entries |
 | Exact emitted bytes | Accepted P-WIRE | `Interface/WIRE.md`, Bytes, lines 8–33 |
 
@@ -37,28 +38,37 @@ an encodable value or well-shaped fixture need not satisfy `Valid` or
 `ValidStip`. Existing admission checks must neither be inferred from examples
 nor used to silently delete or repair transported data.
 
+The 2026-09-23 correction supplies the proper-list container required by signed
+H4, as classified in A-022. G4 scalar `Term` and event `Pat` are unchanged.
+The new distinct `StipArg` retains the old scalar/wildcard wire bytes and adds
+one recursive container. This is not an owner amendment or a full query codec.
+
 ## JSON shapes and emission order
 
 Objects have exactly the fields shown, emitted in the listed order. Array
 positions are significant. The tables describe the emitted form and its
 inverse; they do not change the meter's object-key-order comparison policy.
 There is no implicit field, alternate null form or default for an omitted
-field. An explicitly empty list is `[]`.
+field. Empty outer `facts`, `stipulations` or `args` arrays are `[]`; an empty
+list-valued stipulation argument is `{"list":[]}`, never a bare array.
 
 | Value | JSON shape | Object key order / array order |
 | --- | --- | --- |
 | `Household` | `{"facts":[Fact,...],"stipulations":[Stip,...]}` | `facts`, `stipulations`; each list in its supplied order |
 | `Fact` | `{"ctor":"constructor_name","args":[arg1,...]}` | `ctor`, `args`; arguments in the constructor's declaration order |
-| `Stip` | `{"pred":"StipPred_constructor","args":[Pat,...]}` | `pred`, `args`; patterns in source argument order |
+| `Stip` | `{"pred":"StipPred_constructor","args":[StipArg,...]}` | `pred`, `args`; arguments in source position order |
 | `Term.atom s` | `{"a":s}` | single key `a`; `s` is a JSON string |
 | `Term.str s` | `{"s":s}` | single key `s`; `s` is a JSON string |
 | `Term.int n` | `n` | exact JSON integer number |
 | `Pat.val t` | `{"val":Term}` | single key `val`; the nested Term retains its tag |
 | `Pat.wild id` | `{"wild":id}` | single key `wild`; exact JSON nonnegative integer (`Nat`) |
+| `StipArg.val t` | `{"val":Term}` | byte-identical to the old scalar stipulation spelling |
+| `StipArg.wild id` | `{"wild":id}` | byte-identical to the old wildcard stipulation spelling |
+| `StipArg.list items` | `{"list":[StipArg,...]}` | single key `list`; recursive elements in supplied order |
 | `Int` in an `Int`-typed argument | `n` | exact JSON integer number |
 | `Day` in a `Day`-typed argument | `"YYYY-MM-DD"` | D1 civil date, zero-padded ISO spelling |
 
-`Fact`, `Stip`, `Pat`, `Term`, `arg1`, `s`, `n` and `id` in the shape table
+`Fact`, `Stip`, `Pat`, `StipArg`, `Term`, `arg1`, `s`, `n` and `id` in the shape table
 are metavariables, not literal JSON. Constructor and key strings are literal,
 case-sensitive spellings. `ctor` is the exact `Fact` constructor name without
 a namespace. `pred` is the exact `StipPred` constructor name without a
@@ -71,7 +81,7 @@ list, deduplicate, or add missing facts. H4 grounding has already occurred
 before a grounded Household reaches this boundary; no Prolog rule text is a
 Household field. This spelling also preserves the declared helper constructors
 when supplied, even though H4.2 does not emit them and V1 rejects them for
-generated inputs (`Fact` documentation, lines 82–86).
+generated inputs (the `Fact` declaration's documentation).
 
 ### Primitive values and patterns
 
@@ -99,7 +109,7 @@ the interpreter's timestamp shift, a time zone, a default date or overflow
 normalization to this spelling.
 
 Only `Fact.start_` and `Fact.end_` have a `Day`-typed argument. All `Stip.args`
-entries are `Pat`, including those with a declared time role. For example,
+entries are `StipArg`, including those with a declared time role. For example,
 `{"val":{"s":"2015-01-01"}}` and `{"val":{"a":"2015-01-01"}}` retain
 different tags, and `{"val":2015}` retains an integer. A time-role check does
 not erase a tag or convert a date-looking Term to the bare Day spelling.
@@ -107,14 +117,46 @@ Preserve every literal in place, including inert out-of-range year literals.
 Operational time admission remains the shared query boundary's responsibility;
 this declaration supplies no query mode or operational year.
 
-`Pat.val` is explicit even in `purpose_` position 1. `{"val":{"a":"_"}}`
-is an atom-valued pattern, not a wildcard. `{"wild":17}` transports exactly
-`Pat.wild 17`; another occurrence of that stored value retains 17, while
-`Pat.wild 18` remains distinct. Do not replace IDs with `null`, drop them,
+`Pat.val` is explicit in `purpose_` position 1; `StipArg.val` is explicit in
+stipulations. `{"val":{"a":"_"}}` is an atom-valued pattern, not a wildcard.
+`{"wild":17}` transports exactly the corresponding `Pat.wild 17` or
+`StipArg.wild 17` selected by its enclosing type. Another occurrence of that
+stored value retains 17, while id 18 remains distinct. Do not replace IDs with `null`, drop them,
 renumber them by position, deduplicate them or allocate fresh IDs during this
-transport. This preserves the existing `Pat` identity under A3; it does not
+transport. This preserves the stored wildcard identity under A3; it does not
 specify Prolog variable allocation, clause invocation or solution-copy
 freshening. H6.2's observed-unbound `null` is outside this Household format.
+
+### Proper-list stipulation arguments
+
+The outer `Stip.args` array enumerates argument positions. A proper list
+*within* one argument uses the disjoint tag `{"list":[...]}`, recursively:
+`{"list":[]}` is an empty list, and
+`{"list":[{"val":{"a":"charlie"}}]}` is the singleton list `[charlie]`.
+An inner list is never a bare array, a `val` containing an array, an atom/string
+spelling of Prolog syntax, a wildcard or `null`. `{"val":{"a":"[]"}}` remains
+a scalar atom; it is not the empty-list container.
+
+Keep all nesting, tags, exact integers, order and duplicates. A wildcard id
+inside a list is the same stored id wherever it reappears elsewhere in that
+stipulated head, including other argument positions and deeper lists. Do not
+renumber each occurrence or erase it during transport.
+Transport performs no unification or execution-time freshening.
+
+This type contains finite proper lists only. Improper/open-tail lists and
+non-list compounds have no spelling here; encountering one remains a reported
+unsupported-value finding. Do not flatten, stringify, truncate, coerce, exclude
+the original or invent another tag to continue.
+
+Event `Pat` still has only `val` and `wild`; neither `Term` nor `Fact.purpose_`
+gains a list value. Lean's `StipArg.ofPat` (also the one-way coercion) preserves
+the old scalar/id exactly, with no reverse coercion into event positions.
+`Stip.wellFormed` still checks only the number of outer argument positions.
+Existing stipulated Day slots still require a scalar date or wildcard; a list
+in such a slot is not a scalar Day. Other slots are not recursively scanned
+for dates, numeric ranges or inferred roles. V1 still requires no stipulations
+for generated inputs; the V2–V10 requirements and actual query-time boundary
+remain in force. This declaration changes no query representation or mode.
 
 ## Fact registry: 57 constructors
 
@@ -186,17 +228,17 @@ facts. No argument is omitted even when the constructor is inert.
 `patient` and `patient_` remain different constructors. The three helper
 constructors with three/four arguments retain all their `Term` arguments.
 `first_day_year/2`, `gross_income/3`, `is_before/2` and `last_day_year/2`
-are not Fact constructors (`Fact` documentation, lines 71–75).
+are not Fact constructors (the `Fact` declaration's documentation).
 
 ## Stipulation registry: 31 signatures
 
 For a well-shaped stipulation, `args` contains exactly the listed number of
-`Pat` values, in positions 1 through arity. Each position uses the same Pat
+`StipArg` values, in positions 1 through arity. Each position uses the same recursive
 spelling; the table makes no assertion about a query mode, input/output
 projection, argument role or successful evaluation. The extra signatures stay
 distinct from any shorter signature with the same source predicate name.
 
-| `pred` | Source signature | Arity (`Pat` positions 1…arity) |
+| `pred` | Source signature | Arity (`StipArg` positions 1…arity) |
 | --- | --- | --- |
 | `s63_3` | `s63/3` | 3 |
 | `s7703_4` | `s7703/4` | 4 |
@@ -233,7 +275,7 @@ distinct from any shorter signature with the same source predicate name.
 In particular, `s151_d_4`, `s2_a_5` and `s63_c_3_4` have opaque pattern
 arguments under the shared time schema. Do not infer time roles from their
 values, reinterpret their arities, swap their positions, or discard them.
-The `Stip` type stores `List Pat`; arity well-formedness is the separate
+The `Stip` type stores `List StipArg`; arity well-formedness is the separate
 `Stip.wellFormed` check. Transport copies that list exactly and does not
 truncate or pad a malformed list to make the check pass.
 
@@ -257,6 +299,11 @@ LF is not part of any `wire` value.
 | `dates_and_tagged_patterns` | Pre-epoch/epoch/leap/boundary Day spelling and preserved date-like atom/string patterns | Stipulations prevent generated-input V1; no `ValidStip` claim |
 | `wildcard_identity` | `val` versus `wild`, large Nat ID, distinct stored IDs, repeated ordered stipulations | Wildcards/stipulations prevent generated-input V1; no execution-freshness claim |
 | `opaque_helpers_extra_arities` | All three helper constructors, `patient` versus `patient_`, inert marker, all three extra stipulated arities, inert year literal in its supplied position | Helpers/stipulations prevent generated-input V1; no `ValidStip` claim |
+| `supplied_s151_lists` | The four `[charlie]`/`[0]` heads for 2014–2017 and the `[alice]` head recorded in Q-022 | Supplied shapes only; no H4.3 or `ValidStip` claim |
+| `recursive_lists_shared_ids` | Empty/nonempty/nested proper lists, empty list versus scalar atom/string `"[]"`, scalar tags, signed integers beyond 64 bits, ordered duplicate elements, ids shared inside/outside nested lists | Transport example; no validity or domain claim |
+
+The six pre-list fixtures and all their scalar/wildcard `wire` values remain
+byte-identical. The two appended fixtures specify the new container only.
 
 All numbers in the fixture container also require exact integer parsing.
 Checks for implementers are preservation of the declared value, exact `wire`

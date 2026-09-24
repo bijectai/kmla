@@ -1,0 +1,11 @@
+{
+  "hashes": {
+    "harness/grounding.pl": "b79f8dff6110ee226d795fc81eec07b392b4222561701dfd9ce8eea929e15c0d",
+    "harness/grounding.py": "42b9f7967746bcd7a39a3a3eda5cf2d906f6120370a145d972cdb0aaa04fead5",
+    "harness/grounding_observations.pl": "7ab0b41ae2fcf5137317878dfd23db6e52ea901d11540373a60b9ad7f691d2f9",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "scripts/test_country_grounding.py": "cd2549512bf71066236271985a4b5c301c395dd62aeba514c01e89dad6edc907"
+  },
+  "scope": "A-021 14-case measurement only; no Valid or parity records",
+  "mode_authority": "H6.5 and explicit owner direction: source bound/free args; tax first solution unbound amount"
+}

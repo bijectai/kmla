@@ -1,0 +1,756 @@
+{
+  "scope": "two original H4 checks plus synthetic list guards; no admission/parity",
+  "original_case_count": 2,
+  "rows": [
+    {
+      "original_case": "s2_a_1_B_pos.pl",
+      "source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+      "h4_3_a": "pass",
+      "h4_3_b": "pass",
+      "original_measurement": "ground-0001.pl",
+      "exact_supplied_heads": "pass",
+      "reground_measurement": "ground-0002.pl",
+      "query_plan": {
+        "kind": "paragraph",
+        "query": {
+          "predicate": "s2_a_1_B",
+          "mode": "bffb",
+          "goal": "'s2_a_1_B'('bob',Q0,Q1,2016)",
+          "outputs": [
+            "Q0",
+            "Q1"
+          ],
+          "outer_naf": false,
+          "original_goal": "s2_a_1_B(bob,_,_,2016)"
+        },
+        "tax_input": null,
+        "reason": null
+      },
+      "observations": {
+        "status": "pass",
+        "original": {
+          "raw_solutions": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "proof_count": 3,
+          "cpu_seconds": 0.006407917000000013,
+          "wall_seconds": 0.0071833133697509766,
+          "canonical": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-3fcd3b44e44d4a6aabd235932ecd99ce",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0001.pl",
+              "/requests/s2_a_1_B_pos.pl-original.observation.pl"
+            ],
+            "timeout_seconds": 60.0,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "007.stdout",
+            "stderr": "007.stderr",
+            "elapsed_seconds": 0.414879
+          }
+        },
+        "serialized": {
+          "raw_solutions": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "proof_count": 3,
+          "cpu_seconds": 0.0047000400000000025,
+          "wall_seconds": 0.0049211978912353516,
+          "canonical": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-3010caf85d33450e91e84d33023cb56a",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0002.pl",
+              "/requests/s2_a_1_B_pos.pl-serialized.observation.pl"
+            ],
+            "timeout_seconds": 60.0,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "008.stdout",
+            "stderr": "008.stderr",
+            "elapsed_seconds": 0.471035
+          }
+        }
+      }
+    },
+    {
+      "original_case": "s63_d_2_pos.pl",
+      "source_sha256": "0a1dc6a183134f02f6517b88250bcb6b6ddf3fd3e8752936cc255cd3662e6749",
+      "h4_3_a": "pass",
+      "h4_3_b": "pass",
+      "original_measurement": "ground-0003.pl",
+      "exact_supplied_heads": "pass",
+      "reground_measurement": "ground-0004.pl",
+      "query_plan": {
+        "kind": "paragraph",
+        "query": {
+          "predicate": "s63_d_2",
+          "mode": "bbb",
+          "goal": "'s63_d_2'('alice',[2000],2017)",
+          "outputs": [],
+          "outer_naf": false,
+          "original_goal": "s63_d_2(alice,[2000],2017)"
+        },
+        "tax_input": null,
+        "reason": null
+      },
+      "observations": {
+        "status": "pass",
+        "original": {
+          "raw_solutions": [
+            [],
+            []
+          ],
+          "proof_count": 2,
+          "cpu_seconds": 0.0015361239999999998,
+          "wall_seconds": 0.001531839370727539,
+          "canonical": [
+            []
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-17ed25231d1047e1851233b0b4d48557",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0003.pl",
+              "/requests/s63_d_2_pos.pl-original.observation.pl"
+            ],
+            "timeout_seconds": 60.0,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "011.stdout",
+            "stderr": "011.stderr",
+            "elapsed_seconds": 0.476342
+          }
+        },
+        "serialized": {
+          "raw_solutions": [
+            [],
+            []
+          ],
+          "proof_count": 2,
+          "cpu_seconds": 0.0016859169999999951,
+          "wall_seconds": 0.0016870498657226562,
+          "canonical": [
+            []
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-8a6dd52b8c72491f8cbf90e6abd2a06c",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0004.pl",
+              "/requests/s63_d_2_pos.pl-serialized.observation.pl"
+            ],
+            "timeout_seconds": 60.0,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "012.stdout",
+            "stderr": "012.stderr",
+            "elapsed_seconds": 0.429003
+          }
+        }
+      }
+    }
+  ],
+  "guards": [
+    {
+      "name": "nested aliases/tags/largeints/emptylists/copy freshness",
+      "status": "pass",
+      "requests": [
+        "ground-0005.pl",
+        "ground-0006.pl"
+      ]
+    },
+    {
+      "name": "compound",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-92ecc5e92bd0404f8ed12e690f5c774b",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0007.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "015.stdout",
+        "stderr": "015.stderr",
+        "elapsed_seconds": 0.48458
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term(f(a))\n"
+    },
+    {
+      "name": "improper",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-50d9a393ee45468a86cd620f81b45219",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0008.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "016.stdout",
+        "stderr": "016.stderr",
+        "elapsed_seconds": 0.460194
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|b])\n"
+    },
+    {
+      "name": "open_tail",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-1f678ee0ec7f4eb08de1ec7b2de1fdd3",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0009.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "017.stdout",
+        "stderr": "017.stderr",
+        "elapsed_seconds": 0.419356
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|_G1362])\n"
+    },
+    {
+      "name": "nested_improper",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-ea3e54fdba1e422794ba3aa0f0f530a7",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0010.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "018.stdout",
+        "stderr": "018.stderr",
+        "elapsed_seconds": 0.503277
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|b])\n"
+    },
+    {
+      "name": "nested_open_tail",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-5a6b429eea614f69bd16e2f2b174c074",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0011.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "019.stdout",
+        "stderr": "019.stderr",
+        "elapsed_seconds": 0.571711
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|_G1368])\n"
+    },
+    {
+      "name": "fake_variable_marker",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-cbdf9e2639fe4b2cbcb3519fd2051866",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0012.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "020.stdout",
+        "stderr": "020.stderr",
+        "elapsed_seconds": 0.503633
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term(H)\n"
+    }
+  ],
+  "finding": null,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "diagnostic_household_instances": 2,
+  "diagnostic_distinct_ordered_households": 2,
+  "diagnostic_household_sha256": [
+    "82c8fdb147cbf27a4a3fe12c6b71ae66d9f696db17653df7982b161ef82926c5",
+    "5a65f55241eb538e914e38a2358f04841d2439433c2b6b311c3f21c8dd50b815"
+  ]
+}

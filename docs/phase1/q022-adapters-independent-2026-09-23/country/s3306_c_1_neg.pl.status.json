@@ -1,0 +1,200 @@
+{
+  "original_case": "s3306_c_1_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "55fe14f65753735c4e93612aff84e78de2e5bc0cfa55086ba3376cc343c10a06",
+  "query": {
+    "predicate": "s3306_c_1",
+    "mode": "bb",
+    "goal": "'s3306_c_1'('alice_employer',2017)",
+    "outputs": [],
+    "outer_naf": true,
+    "original_goal": "\\+ s3306_c_1(alice_employer,2017)"
+  },
+  "original_request": "ground-0011.pl",
+  "original_stats": {
+    "unary_proofs": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 19,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002782910000000416,
+    "grounding_wall_seconds": 0.0002772808074951172,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0012.pl",
+  "reground_stats": {
+    "unary_proofs": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 19,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00033708400000001526,
+    "grounding_wall_seconds": 0.0003364086151123047,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 6.812500000000221e-05,
+    "wall_seconds": 6.699562072753906e-05,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-3a9ddfaa50cc4b3ea0ff810a53f23d64",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0011.pl",
+        "/requests/s3306_c_1_neg-original.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "029.stdout",
+      "stderr": "029.stderr",
+      "elapsed_seconds": 0.889609
+    }
+  },
+  "serialized_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 6.479100000000848e-05,
+    "wall_seconds": 6.413459777832031e-05,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-820450404d2748fa8a85f5af24c5bb5d",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q022-adapters-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0012.pl",
+        "/requests/s3306_c_1_neg-serialized.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "030.stdout",
+      "stderr": "030.stderr",
+      "elapsed_seconds": 0.463402
+    }
+  }
+}

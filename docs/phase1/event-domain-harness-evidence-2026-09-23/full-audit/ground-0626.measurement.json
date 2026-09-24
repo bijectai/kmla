@@ -1,0 +1,320 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1992-02-03"
+        ]
+      },
+      {
+        "ctor": "nonresident_alien_",
+        "args": [
+          {
+            "a": "alice_is_a_nra"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_a_nra"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_is_a_nra"
+          },
+          "2014-07-09"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2012-04-05"
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "bob_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          "2017-09-16"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          71414
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          "2013-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          56404
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          "2013-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "nonresident_alien_",
+      "event": {
+        "a": "alice_is_a_nra"
+      }
+    },
+    {
+      "source_clause": 8,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 12,
+      "predicate": "death_",
+      "event": {
+        "a": "bob_dies"
+      }
+    },
+    {
+      "source_clause": 15,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_income"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "alice_is_a_nra"
+    },
+    {
+      "a": "bob_dies"
+    },
+    {
+      "a": "alice_income"
+    },
+    {
+      "a": "bob_income"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 5,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002397500000000108,
+    "grounding_wall_seconds": 0.00023937225341796875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 17783,
+    "cpu_seconds": 0.017439958999999977,
+    "wall_seconds": 0.01748037338256836
+  }
+}

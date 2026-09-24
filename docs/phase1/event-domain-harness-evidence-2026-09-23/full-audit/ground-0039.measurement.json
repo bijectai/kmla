@@ -1,0 +1,63 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+        "pred": "s152_c_1_3",
+        "args": [
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": 2015
+          }
+        ]
+      },
+      {
+        "pred": "s152_c_1_3",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2015
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [],
+  "event_domain": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs": 0,
+    "distinct_event_domain": 0,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 0,
+    "stipulation_count": 2,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 7.52910000000051e-05,
+    "grounding_wall_seconds": 7.462501525878906e-05,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

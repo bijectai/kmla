@@ -1,0 +1,190 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "father_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1994-04-15"
+        ]
+      },
+      {
+        "ctor": "brother_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          "1992-10-12"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2015"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2015"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2015"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2015"
+          },
+          87319
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "father_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "brother_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2015"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "bob_and_charlie"
+    },
+    {
+      "a": "alice_income_2015"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "stats": {
+    "unary_proofs": 3,
+    "distinct_event_domain": 3,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 12,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002788340000000056,
+    "grounding_wall_seconds": 0.0002779960632324219,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 19801,
+    "cpu_seconds": 0.0021494999999999986,
+    "wall_seconds": 0.0021495819091796875
+  }
+}

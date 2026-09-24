@@ -1,0 +1,10 @@
+{
+  "raw_solutions": [
+    [ {"a":"bob_s_house"},  {"a":"charlie"} ],
+    [ {"a":"bob_s_house"},  {"a":"charlie"} ],
+    [ {"a":"bob_s_house"},  {"a":"charlie"} ]
+  ],
+  "proof_count":3,
+  "cpu_seconds":0.005071583000000018,
+  "wall_seconds":0.005074262619018555
+}

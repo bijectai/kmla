@@ -1,0 +1,5 @@
+atom_empty_list=false
+atom_quoted_brackets=true
+identical=false
+bare=[]
+quoted='[]'

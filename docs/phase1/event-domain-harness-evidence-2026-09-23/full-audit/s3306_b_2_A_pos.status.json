@@ -1,0 +1,59 @@
+{
+  "original_case": "s3306_b_2_A_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "52906bfee4eace57373cf5a4b9f9cba2e3f642798ae6aaae83c444cffa3db2d8",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s3306_b_2_A/1 b"
+  },
+  "original_queries": [
+    "s3306_b_2_A(health_insurance_fund)"
+  ],
+  "original_measurement": "ground-0345.pl",
+  "original_stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 6,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 30,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002913749999999826,
+    "grounding_wall_seconds": 0.00029015541076660156,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0346.pl",
+  "reground_stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 6,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 30,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00031445800000001745,
+    "grounding_wall_seconds": 0.0003135204315185547,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "unimplemented:approved-H6-projection-not-implemented",
+    "reason": "unimplemented H6 observation: s3306_b_2_A/1 b",
+    "owner_choice_blocker": false
+  }
+}

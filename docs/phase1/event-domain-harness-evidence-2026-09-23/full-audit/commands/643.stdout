@@ -1,0 +1,87 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_income"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_income"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_income"}, 22895 ]},
+      {"ctor":"son_", "args": [ {"a":"alice_and_bob"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice_and_bob_home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_residence"}, "2017-01-01" ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"bob_residence"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_residence"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_residence"},  {"a":"alice_and_bob_home"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"bob_residence"}, "2017-01-01" ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_income"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"son_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":8,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":12,
+      "predicate":"residence_",
+      "event": {"a":"bob_residence"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_income"},
+    {"a":"alice_and_bob"},
+    {"a":"alice_residence"},
+    {"a":"bob_residence"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+  "stats": {
+    "unary_proofs":4,
+    "distinct_event_domain":4,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":15,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00026020800000001176,
+    "grounding_wall_seconds":0.0002593994140625,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":2384,
+    "cpu_seconds":0.0039733329999999956,
+    "wall_seconds":0.003973245620727539
+  }
+}

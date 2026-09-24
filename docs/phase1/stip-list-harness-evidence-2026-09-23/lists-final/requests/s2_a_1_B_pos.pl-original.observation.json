@@ -1,0 +1,16 @@
+{
+  "query": {
+    "predicate": "s2_a_1_B",
+    "mode": "bffb",
+    "goal": "'s2_a_1_B'('bob',Q0,Q1,2016)",
+    "outputs": [
+      "Q0",
+      "Q1"
+    ],
+    "outer_naf": false,
+    "original_goal": "s2_a_1_B(bob,_,_,2016)"
+  },
+  "program_request": "ground-0001.pl",
+  "program_sha256": "e2beafa94e575317c6eebfa148fc045034b77aa1ffc853b66afb1618d9298e6f",
+  "request_sha256": "66e8cf2db70c776649b9d70a23ff3729f9b77cf8bc060fc90c4c066d8a9f4d0c"
+}

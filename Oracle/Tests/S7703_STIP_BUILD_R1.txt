@@ -1,0 +1,16 @@
+$ mkdir -p /private/tmp/kmla-oracle7703-stip.ichTPX/Interface /private/tmp/kmla-oracle7703-stip.ichTPX/Oracle
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-stip.ichTPX/Interface/Household.olean Interface/Household.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-stip.ichTPX/Interface/QuerySchema.olean Interface/QuerySchema.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-stip.ichTPX/Interface/QueryTime.olean Interface/QueryTime.lean
+exit_code=0
+
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-stip.ichTPX/Oracle/S7703Stip.olean Oracle/S7703Stip.lean
+exit_code=1
+Oracle/S7703Stip.lean:95:44: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+Oracle/S7703Stip.lean:96:54: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`

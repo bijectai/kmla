@@ -1,0 +1,194 @@
+{
+  "original_case": "s63_d_2_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "0a1dc6a183134f02f6517b88250bcb6b6ddf3fd3e8752936cc255cd3662e6749",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "paragraph",
+    "query": {
+      "predicate": "s63_d_2",
+      "mode": "bbb",
+      "goal": "'s63_d_2'('alice',[2000],2017)",
+      "outputs": [],
+      "outer_naf": false,
+      "original_goal": "s63_d_2(alice,[2000],2017)"
+    },
+    "tax_input": null,
+    "reason": null
+  },
+  "original_queries": [
+    "s63_d_2(alice,[2000],2017)"
+  ],
+  "original_measurement": "ground-0481.pl",
+  "original_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.00031487499999999224,
+    "grounding_wall_seconds": 0.00031447410583496094,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0482.pl",
+  "reground_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0003264169999999955,
+    "grounding_wall_seconds": 0.0003256797790527344,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "pass",
+    "original": {
+      "raw_solutions": [
+        [],
+        []
+      ],
+      "proof_count": 2,
+      "cpu_seconds": 0.0017379170000000055,
+      "wall_seconds": 0.0017397403717041016,
+      "canonical": [
+        []
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-0ca66dd14f83459e9cacf5a692320a7e",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0481.pl",
+          "/requests/s63_d_2_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "513.stdout",
+        "stderr": "513.stderr",
+        "elapsed_seconds": 0.408883
+      }
+    },
+    "serialized": {
+      "raw_solutions": [
+        [],
+        []
+      ],
+      "proof_count": 2,
+      "cpu_seconds": 0.001716959000000004,
+      "wall_seconds": 0.0017113685607910156,
+      "canonical": [
+        []
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-66bc21ff3db546dd9a066a0fb8fad4c4",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0482.pl",
+          "/requests/s63_d_2_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "514.stdout",
+        "stderr": "514.stderr",
+        "elapsed_seconds": 0.36552
+      }
+    }
+  }
+}

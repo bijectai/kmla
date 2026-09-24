@@ -1,0 +1,217 @@
+{
+  "original_case": "s3306_c_B_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "48d1aa6cda75f418dfdc12461aa7117efc8977d2104a58dd9aeda5397512c2fe",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "paragraph",
+    "query": {
+      "predicate": "s3306_c_B",
+      "mode": "fbbf",
+      "goal": "'s3306_c_B'(Q0,'alice','bob',Q1)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_B(_,alice,bob,_)"
+    },
+    "tax_input": null,
+    "reason": null
+  },
+  "original_queries": [
+    "\\+ s3306_c_B(_,alice,bob,_)"
+  ],
+  "original_measurement": "ground-0419.pl",
+  "original_stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 19,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003355830000000004,
+    "grounding_wall_seconds": 0.0003352165222167969,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0420.pl",
+  "reground_stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 19,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00033054199999998923,
+    "grounding_wall_seconds": 0.00032901763916015625,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "pass",
+    "original": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.00017362500000001058,
+      "wall_seconds": 0.00017261505126953125,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-8a601910fc494e8cbeae0f6f2f62e817",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0419.pl",
+          "/requests/s3306_c_B_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "445.stdout",
+        "stderr": "445.stderr",
+        "elapsed_seconds": 0.505053
+      }
+    },
+    "serialized": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.00019687399999998578,
+      "wall_seconds": 0.00020003318786621094,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-3d46941d1983490f8ead8fe2de2ad478",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0420.pl",
+          "/requests/s3306_c_B_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "446.stdout",
+        "stderr": "446.stderr",
+        "elapsed_seconds": 0.555326
+      }
+    }
+  }
+}

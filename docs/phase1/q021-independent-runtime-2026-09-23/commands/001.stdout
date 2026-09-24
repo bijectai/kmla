@@ -1,0 +1,24 @@
+{
+  "original_case": "s3306_c_A_pos.pl",
+  "source_sha256": "4f788e912133535b3433f32fa53d489a9d5933f5f674b485b141ce92d784012b",
+  "supplied_country_fact": {
+    "ctor": "country_",
+    "args": [
+      {
+        "s": "baltimore, maryland, usa"
+      },
+      {
+        "s": "usa"
+      }
+    ]
+  },
+  "country_retained": true,
+  "h4_3_a": "pass",
+  "observation_authority": "H6.5 s3306_c_A/3 bff; inputs [alice_employer], outputs [Employer,Employee]",
+  "h4_3_b": "pass",
+  "scope": "unchanged-grounder finding; no preservation fix or alternative traversal",
+  "helper_sha256": "2e7c25dcbf62a0494d228aa10fcaaedbccbdb6e9e43a56fbb8976e77faf52c22",
+  "script_sha256": "d7a3eff71c7026e53f9a7b90d82da0180b84bcc2d3b746569925bb507ed68ba1"
+}
+original canonical: [[{"a":"alice"},{"a":"bob"}]]
+regrounded canonical: [[{"a":"alice"},{"a":"bob"}]]

@@ -1,0 +1,17 @@
+income_('alice_income_2006').
+agent_('alice_income_2006','alice').
+amount_('alice_income_2006',97407).
+start_('alice_income_2006',"2006-12-31").
+income_('bob_income_2006').
+agent_('bob_income_2006','bob').
+amount_('bob_income_2006',136370).
+start_('bob_income_2006',"2006-12-31").
+marriage_('alice_and_bob').
+agent_('alice_and_bob','alice').
+agent_('alice_and_bob','bob').
+start_('alice_and_bob',"2006-02-03").
+joint_return_('bob_and_alice_joint_return').
+agent_('bob_and_alice_joint_return','bob').
+agent_('bob_and_alice_joint_return','alice').
+start_('bob_and_alice_joint_return',"2006-01-01").
+end_('bob_and_alice_joint_return',"2006-12-31").

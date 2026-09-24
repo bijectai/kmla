@@ -1,0 +1,53 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+	"pred":"s3306_a_2",
+	"args": [ {"val": {"a":"alice"}},  {"val":2015} ]
+      },
+      {
+	"pred":"s3306_a_2",
+	"args": [ {"val": {"a":"alice"}},  {"val":2016} ]
+      },
+      {
+	"pred":"total_wages_employer_6",
+	"args": [
+	  {"val": {"a":"alice"}},
+	  {"val":453009},
+	  {"wild":0},
+	  {"wild":1},
+	  {"val": {"s":"2015-01-01"}},
+	  {"val": {"s":"2015-12-31"}}
+	]
+      },
+      {
+	"pred":"total_wages_employer_6",
+	"args": [
+	  {"val": {"a":"alice"}},
+	  {"val":443870},
+	  {"wild":2},
+	  {"wild":3},
+	  {"val": {"s":"2016-01-01"}},
+	  {"val": {"s":"2016-12-31"}}
+	]
+      }
+    ]
+  },
+  "unary": [],
+  "event_domain": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs":0,
+    "distinct_event_domain":0,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":0,
+    "stipulation_count":4,
+    "wildcard_count":4,
+    "grounding_cpu_seconds":0.0002882920000000233,
+    "grounding_wall_seconds":0.0002872943878173828,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

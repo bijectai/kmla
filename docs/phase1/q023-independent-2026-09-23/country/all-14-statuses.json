@@ -1,0 +1,2700 @@
+[
+  {
+    "original_case": "s3306_c_A_pos.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "baltimore, maryland, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "baltimore, maryland, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "4f788e912133535b3433f32fa53d489a9d5933f5f674b485b141ce92d784012b",
+    "query": {
+      "predicate": "s3306_c_A",
+      "mode": "bff",
+      "goal": "'s3306_c_A'('alice_employer',Q0,Q1)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": false,
+      "original_goal": "s3306_c_A(alice_employer,_,_)"
+    },
+    "original_request": "ground-0001.pl",
+    "original_stats": {
+      "unary_proofs": 2,
+      "distinct_event_domain": 2,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 13,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00032454199999998323,
+      "grounding_wall_seconds": 0.0003237724304199219,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0002.pl",
+    "reground_stats": {
+      "unary_proofs": 2,
+      "distinct_event_domain": 2,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 13,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00030070800000001063,
+      "grounding_wall_seconds": 0.00029969215393066406,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.00017812500000002895,
+      "wall_seconds": 0.00017714500427246094,
+      "canonical": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-6df6b52264a54cfcb299d53c56f107e3",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0001.pl",
+          "/requests/s3306_c_A_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "007.stdout",
+        "stderr": "007.stderr",
+        "elapsed_seconds": 0.579691
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.0003012909999999813,
+      "wall_seconds": 0.0002989768981933594,
+      "canonical": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-0e26a99a6976492783bdf9d53654c31f",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0002.pl",
+          "/requests/s3306_c_A_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "008.stdout",
+        "stderr": "008.stderr",
+        "elapsed_seconds": 1.076325
+      }
+    },
+    "anchored_regression": "pass"
+  },
+  {
+    "original_case": "s3306_c_A_neg.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "toronto, ontario, canada"
+            },
+            {
+              "s": "canada"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "toronto, ontario, canada"
+            },
+            {
+              "s": "canada"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "e416ee08f4bbfd8d70489576333f983c14f262d0fdd9ee452dc53e47659400e7",
+    "query": {
+      "predicate": "s3306_c_A",
+      "mode": "bff",
+      "goal": "'s3306_c_A'('alice_employer',Q0,Q1)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_A(alice_employer,_,_)"
+    },
+    "original_request": "ground-0003.pl",
+    "original_stats": {
+      "unary_proofs": 2,
+      "distinct_event_domain": 2,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 13,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003150000000000097,
+      "grounding_wall_seconds": 0.00035190582275390625,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0004.pl",
+    "reground_stats": {
+      "unary_proofs": 2,
+      "distinct_event_domain": 2,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 13,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003702909999999948,
+      "grounding_wall_seconds": 0.00036907196044921875,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0002677910000000172,
+      "wall_seconds": 0.00026488304138183594,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-63b5fc967c7f413c841da0f89472e6aa",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0003.pl",
+          "/requests/s3306_c_A_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "011.stdout",
+        "stderr": "011.stderr",
+        "elapsed_seconds": 0.509468
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0001549170000000044,
+      "wall_seconds": 0.0001537799835205078,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-2162ddd1f64a49c7afbe97e1366595f5",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0004.pl",
+          "/requests/s3306_c_A_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "012.stdout",
+        "stderr": "012.stderr",
+        "elapsed_seconds": 0.505243
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_B_pos.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "e42e70c81eb09614c819ae38920992661cc36ca490df805d63875c9ed228c6c9",
+    "query": {
+      "predicate": "s3306_c_B",
+      "mode": "bfff",
+      "goal": "'s3306_c_B'('alice_employer',Q0,Q1,Q2)",
+      "outputs": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "outer_naf": false,
+      "original_goal": "s3306_c_B(alice_employer,_,_,_)"
+    },
+    "original_request": "ground-0005.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 18,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0005920839999999927,
+      "grounding_wall_seconds": 0.0006208419799804688,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0006.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 18,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003282920000000078,
+      "grounding_wall_seconds": 0.0003314018249511719,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          {
+            "s": "caracas, venezuela"
+          }
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.00021137500000001364,
+      "wall_seconds": 0.00021028518676757812,
+      "canonical": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          {
+            "s": "caracas, venezuela"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-5dae3dfefec9404bb01d80bde8ebdb19",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0005.pl",
+          "/requests/s3306_c_B_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "015.stdout",
+        "stderr": "015.stderr",
+        "elapsed_seconds": 0.459523
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          {
+            "s": "caracas, venezuela"
+          }
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.00020979100000001472,
+      "wall_seconds": 0.00020837783813476562,
+      "canonical": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          {
+            "s": "caracas, venezuela"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-4258f3cc5e784abd8aa17924bf1dacdd",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0006.pl",
+          "/requests/s3306_c_B_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "016.stdout",
+        "stderr": "016.stderr",
+        "elapsed_seconds": 0.565074
+      }
+    },
+    "diagnostic_omission_control": {
+      "raw_solutions": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          null
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.00020945899999999518,
+      "wall_seconds": 0.00021696090698242188,
+      "canonical": [
+        [
+          {
+            "a": "alice"
+          },
+          {
+            "a": "bob"
+          },
+          null
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-2fc143c7ca02478981432fa1b714bb4a",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/s3306_c_B_pos.omission-control.pl",
+          "/requests/s3306_c_B_pos-omission-control.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "017.stdout",
+        "stderr": "017.stderr",
+        "elapsed_seconds": 0.533374
+      }
+    },
+    "omission_effect": {
+      "added_solutions": 1,
+      "lost_solutions": 1
+    },
+    "anchored_regression": "pass"
+  },
+  {
+    "original_case": "s3306_c_B_neg.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "48d1aa6cda75f418dfdc12461aa7117efc8977d2104a58dd9aeda5397512c2fe",
+    "query": {
+      "predicate": "s3306_c_B",
+      "mode": "fbbf",
+      "goal": "'s3306_c_B'(Q0,'alice','bob',Q1)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_B(_,alice,bob,_)"
+    },
+    "original_request": "ground-0007.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00029754100000001227,
+      "grounding_wall_seconds": 0.00029659271240234375,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0008.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003088329999999806,
+      "grounding_wall_seconds": 0.00030803680419921875,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.00021400000000001973,
+      "wall_seconds": 0.0002129077911376953,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-d713f34b9b5a43d58629d0e41b562e70",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0007.pl",
+          "/requests/s3306_c_B_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "020.stdout",
+        "stderr": "020.stderr",
+        "elapsed_seconds": 0.519834
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.00019666599999998424,
+      "wall_seconds": 0.00019788742065429688,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-ce899a0e4d274be7a465a138e758a35d",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0008.pl",
+          "/requests/s3306_c_B_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "021.stdout",
+        "stderr": "021.stderr",
+        "elapsed_seconds": 0.500851
+      }
+    },
+    "diagnostic_omission_control": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0001047080000000089,
+      "wall_seconds": 0.0001068115234375,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-ba5ee4c370a3479f95a5cba58d736ada",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/s3306_c_B_neg.omission-control.pl",
+          "/requests/s3306_c_B_neg-omission-control.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "022.stdout",
+        "stderr": "022.stderr",
+        "elapsed_seconds": 0.499116
+      }
+    },
+    "omission_effect": {
+      "added_solutions": 0,
+      "lost_solutions": 0
+    },
+    "anchored_regression": "pass"
+  },
+  {
+    "original_case": "s3306_c_1_pos.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "fc5d2692231ab2f124efa9fcba16a337125facc3265219b7c60f0e59dc4859a0",
+    "query": {
+      "predicate": "s3306_c_1",
+      "mode": "bb",
+      "goal": "'s3306_c_1'('alice_employer',2017)",
+      "outputs": [],
+      "outer_naf": false,
+      "original_goal": "s3306_c_1(alice_employer,2017)"
+    },
+    "original_request": "ground-0009.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0005871259999999934,
+      "grounding_wall_seconds": 0.0005898475646972656,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0010.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00027779199999999893,
+      "grounding_wall_seconds": 0.0002770423889160156,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [
+        []
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.0017107500000000109,
+      "wall_seconds": 0.0017101764678955078,
+      "canonical": [
+        []
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-7d23063bd39b4ee7a888285be8fb21c4",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0009.pl",
+          "/requests/s3306_c_1_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "025.stdout",
+        "stderr": "025.stderr",
+        "elapsed_seconds": 0.603811
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [
+        []
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.0017508760000000123,
+      "wall_seconds": 0.0017540454864501953,
+      "canonical": [
+        []
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-065a90ac8261433fb90719b0784d7175",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0010.pl",
+          "/requests/s3306_c_1_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "026.stdout",
+        "stderr": "026.stderr",
+        "elapsed_seconds": 1.019899
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_1_neg.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "55fe14f65753735c4e93612aff84e78de2e5bc0cfa55086ba3376cc343c10a06",
+    "query": {
+      "predicate": "s3306_c_1",
+      "mode": "bb",
+      "goal": "'s3306_c_1'('alice_employer',2017)",
+      "outputs": [],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_1(alice_employer,2017)"
+    },
+    "original_request": "ground-0011.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003896670000000102,
+      "grounding_wall_seconds": 0.0003898143768310547,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0012.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003012500000000029,
+      "grounding_wall_seconds": 0.0003006458282470703,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 7.479099999999073e-05,
+      "wall_seconds": 6.818771362304688e-05,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-574b66dde1e44af2bd59027f789c7f95",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0011.pl",
+          "/requests/s3306_c_1_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "029.stdout",
+        "stderr": "029.stderr",
+        "elapsed_seconds": 0.567137
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 7.383299999999537e-05,
+      "wall_seconds": 7.224082946777344e-05,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-b8749e31ef0a4bcda8f724b97a33c921",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0012.pl",
+          "/requests/s3306_c_1_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "030.stdout",
+        "stderr": "030.stderr",
+        "elapsed_seconds": 0.524864
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_1_A_i_pos.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "333b10b614f55abc243e059154f399e6c630686eefce178027309c6056647225",
+    "query": {
+      "predicate": "s3306_c_1_A_i",
+      "mode": "bfbfb",
+      "goal": "'s3306_c_1_A_i'('alice',Q0,['bob'],Q1,2017)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": false,
+      "original_goal": "s3306_c_1_A_i(alice,_,[bob],_,2017)"
+    },
+    "original_request": "ground-0013.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0002919580000000088,
+      "grounding_wall_seconds": 0.0002911090850830078,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0014.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0002883330000000017,
+      "grounding_wall_seconds": 0.00028777122497558594,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [
+        [
+          23200,
+          [
+            {
+              "a": "alice_employer"
+            }
+          ]
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.001692499000000014,
+      "wall_seconds": 0.0035736560821533203,
+      "canonical": [
+        [
+          23200,
+          [
+            {
+              "a": "alice_employer"
+            }
+          ]
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-0a4c8e112e0243488c20e393f20da7b9",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0013.pl",
+          "/requests/s3306_c_1_A_i_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "033.stdout",
+        "stderr": "033.stderr",
+        "elapsed_seconds": 0.550602
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [
+        [
+          23200,
+          [
+            {
+              "a": "alice_employer"
+            }
+          ]
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.001737166999999984,
+      "wall_seconds": 0.002323627471923828,
+      "canonical": [
+        [
+          23200,
+          [
+            {
+              "a": "alice_employer"
+            }
+          ]
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-1e47f4038b5f4a4799ff8070195838ae",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0014.pl",
+          "/requests/s3306_c_1_A_i_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "034.stdout",
+        "stderr": "034.stderr",
+        "elapsed_seconds": 0.458442
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_1_A_i_neg.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "fb94e4729dc0fec64466fd479160e1b123834f1ef6f213e15bd9eed47ccadef3",
+    "query": {
+      "predicate": "s3306_c_1_A_i",
+      "mode": "bfbfb",
+      "goal": "'s3306_c_1_A_i'('alice',Q0,'bob',Q1,2017)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_1_A_i(alice,_,bob,_,2017)"
+    },
+    "original_request": "ground-0015.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 20,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003107920000000042,
+      "grounding_wall_seconds": 0.0003101825714111328,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0016.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 20,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0002710419999999991,
+      "grounding_wall_seconds": 0.0002703666687011719,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0015675829999999974,
+      "wall_seconds": 0.0015671253204345703,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-26cab072940f4ce88f87223e2da77313",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0015.pl",
+          "/requests/s3306_c_1_A_i_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "037.stdout",
+        "stderr": "037.stderr",
+        "elapsed_seconds": 0.467669
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0016016660000000016,
+      "wall_seconds": 0.0016007423400878906,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-96e6f44940ef49b481dd9695d4db2cb0",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0016.pl",
+          "/requests/s3306_c_1_A_i_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "038.stdout",
+        "stderr": "038.stderr",
+        "elapsed_seconds": 0.480277
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_1_B_pos.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "fe00984e3b2f06d483c50594cd0208bbd809f80be4bf23cd3cf0da02668a641d",
+    "query": {
+      "predicate": "s3306_c_1_B",
+      "mode": "bf",
+      "goal": "'s3306_c_1_B'('alice_employer',Q0)",
+      "outputs": [
+        "Q0"
+      ],
+      "outer_naf": false,
+      "original_goal": "s3306_c_1_B(alice_employer,_)"
+    },
+    "original_request": "ground-0017.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0002847500000000003,
+      "grounding_wall_seconds": 0.0002841949462890625,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0018.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 19,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0002783749999999974,
+      "grounding_wall_seconds": 0.0002779960632324219,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [
+        [
+          null
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.00021395800000001408,
+      "wall_seconds": 0.00021576881408691406,
+      "canonical": [
+        [
+          null
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-f085400cad7443319aa587388c8a00ed",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0017.pl",
+          "/requests/s3306_c_1_B_pos-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "041.stdout",
+        "stderr": "041.stderr",
+        "elapsed_seconds": 0.451514
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [
+        [
+          null
+        ]
+      ],
+      "proof_count": 1,
+      "cpu_seconds": 0.0002500840000000115,
+      "wall_seconds": 0.003178834915161133,
+      "canonical": [
+        [
+          null
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-d1e474b56653433b9d36de936800f362",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0018.pl",
+          "/requests/s3306_c_1_B_pos-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "042.stdout",
+        "stderr": "042.stderr",
+        "elapsed_seconds": 0.456425
+      }
+    }
+  },
+  {
+    "original_case": "s3306_c_1_B_neg.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "stanley, wisconsin, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "stanley, wisconsin, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "6cb9cd6a32903844fd388c3496a55135935f95deabbf10310880cc5fd165f894",
+    "query": {
+      "predicate": "s3306_c_1_B",
+      "mode": "bf",
+      "goal": "'s3306_c_1_B'('alice_employer',Q0)",
+      "outputs": [
+        "Q0"
+      ],
+      "outer_naf": true,
+      "original_goal": "\\+ s3306_c_1_B(alice_employer,_)"
+    },
+    "original_request": "ground-0019.pl",
+    "original_stats": {
+      "unary_proofs": 5,
+      "distinct_event_domain": 5,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 24,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00032475000000001253,
+      "grounding_wall_seconds": 0.001004934310913086,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0020.pl",
+    "reground_stats": {
+      "unary_proofs": 5,
+      "distinct_event_domain": 5,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 24,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00032991699999998514,
+      "grounding_wall_seconds": 0.00032901763916015625,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.00015687500000000076,
+      "wall_seconds": 0.00015878677368164062,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-6e21301b5636416faaf3b3e327209999",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0019.pl",
+          "/requests/s3306_c_1_B_neg-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "045.stdout",
+        "stderr": "045.stderr",
+        "elapsed_seconds": 0.947054
+      }
+    },
+    "serialized_observation": {
+      "raw_solutions": [],
+      "proof_count": 0,
+      "cpu_seconds": 0.0001675839999999984,
+      "wall_seconds": 0.0001697540283203125,
+      "canonical": [],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-9d02ea94660e4280977efa84c32120e9",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0020.pl",
+          "/requests/s3306_c_1_B_neg-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "046.stdout",
+        "stderr": "046.stderr",
+        "elapsed_seconds": 0.516364
+      }
+    }
+  },
+  {
+    "original_case": "tax_case_4.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        8
+      ],
+      "emitted_source_indices": [
+        8
+      ],
+      "emitted_fact_positions_1based": [
+        8
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "baltimore, maryland, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "baltimore, maryland, usa"
+            },
+            {
+              "s": "usa"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "425076719af4f946a51f4a77ad2b228622a702c74e95fd045965b965d4f6b5fb",
+    "query": {
+      "tax_inputs": "tax_inputs('alice',2012)",
+      "amount": "unbound; first solution only"
+    },
+    "original_request": "ground-0021.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 2,
+      "distinct_service_domain": 2,
+      "fact_count": 25,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0004167499999999935,
+      "grounding_wall_seconds": 0.0004367828369140625,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0022.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 2,
+      "distinct_service_domain": 2,
+      "fact_count": 25,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00040341699999998926,
+      "grounding_wall_seconds": 0.00040340423583984375,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "status": "first_solution",
+      "value": 192,
+      "cpu_seconds": 0.013105916999999995,
+      "wall_seconds": 0.013122320175170898
+    },
+    "serialized_observation": {
+      "status": "first_solution",
+      "value": 192,
+      "cpu_seconds": 0.0025740419999999986,
+      "wall_seconds": 0.002574443817138672
+    }
+  },
+  {
+    "original_case": "tax_case_51.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        7
+      ],
+      "emitted_source_indices": [
+        7
+      ],
+      "emitted_fact_positions_1based": [
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "8ca3dd3cad07a56b04f386093fb5dc9513fd80e30329794dfd38fd828ef96e2e",
+    "query": {
+      "tax_inputs": "tax_inputs('alice',2017)",
+      "amount": "unbound; first solution only"
+    },
+    "original_request": "ground-0023.pl",
+    "original_stats": {
+      "unary_proofs": 9,
+      "distinct_event_domain": 9,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 41,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003453339999999888,
+      "grounding_wall_seconds": 0.0003437995910644531,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0024.pl",
+    "reground_stats": {
+      "unary_proofs": 9,
+      "distinct_event_domain": 9,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 41,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003721670000000066,
+      "grounding_wall_seconds": 0.00037097930908203125,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "status": "first_solution",
+      "value": 55528,
+      "cpu_seconds": 0.009574582999999998,
+      "wall_seconds": 0.012888193130493164
+    },
+    "serialized_observation": {
+      "status": "first_solution",
+      "value": 55528,
+      "cpu_seconds": 0.009393874999999996,
+      "wall_seconds": 0.009394407272338867
+    }
+  },
+  {
+    "original_case": "tax_case_81.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        11
+      ],
+      "emitted_source_indices": [
+        11
+      ],
+      "emitted_fact_positions_1based": [
+        11
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "1f50228a9bee0ab32db169a5e6b9af30219aeca6d7618b6ae6576e85bb6084c3",
+    "query": {
+      "tax_inputs": "tax_inputs('alice',2012)",
+      "amount": "unbound; first solution only"
+    },
+    "original_request": "ground-0025.pl",
+    "original_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 20,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.000303875000000009,
+      "grounding_wall_seconds": 0.00030303001403808594,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0026.pl",
+    "reground_stats": {
+      "unary_proofs": 4,
+      "distinct_event_domain": 4,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 20,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003180419999999906,
+      "grounding_wall_seconds": 0.0003173351287841797,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "status": "first_solution",
+      "value": 10922,
+      "cpu_seconds": 0.0018041249999999898,
+      "wall_seconds": 0.0018041133880615234
+    },
+    "serialized_observation": {
+      "status": "first_solution",
+      "value": 10922,
+      "cpu_seconds": 0.001895542,
+      "wall_seconds": 0.0019021034240722656
+    }
+  },
+  {
+    "original_case": "tax_case_82.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        11
+      ],
+      "emitted_source_indices": [
+        11
+      ],
+      "emitted_fact_positions_1based": [
+        11
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "caracas, venezuela"
+            },
+            {
+              "s": "venezuela"
+            }
+          ]
+        }
+      ]
+    },
+    "source_sha256": "91b629a64717532e7bd826b4954e1b5ae8965746bb9843f0832459d357a8dd9a",
+    "query": {
+      "tax_inputs": "tax_inputs('bob',2012)",
+      "amount": "unbound; first solution only"
+    },
+    "original_request": "ground-0027.pl",
+    "original_stats": {
+      "unary_proofs": 5,
+      "distinct_event_domain": 5,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 22,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.00034308299999999403,
+      "grounding_wall_seconds": 0.00034236907958984375,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "reground_request": "ground-0028.pl",
+    "reground_stats": {
+      "unary_proofs": 5,
+      "distinct_event_domain": 5,
+      "service_proofs": 1,
+      "distinct_service_domain": 1,
+      "fact_count": 22,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.0003240419999999966,
+      "grounding_wall_seconds": 0.0003228187561035156,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "original_observation": {
+      "status": "first_solution",
+      "value": 986,
+      "cpu_seconds": 0.002142625000000009,
+      "wall_seconds": 0.002149820327758789
+    },
+    "serialized_observation": {
+      "status": "first_solution",
+      "value": 986,
+      "cpu_seconds": 0.0017479999999999996,
+      "wall_seconds": 0.0017485618591308594
+    }
+  }
+]

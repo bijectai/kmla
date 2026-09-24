@@ -1,0 +1,239 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          "2009-12-10"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2016"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2016"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2016"
+          },
+          554313
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2016"
+          },
+          "2016-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "spouse_income_2016"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "spouse_income_2016"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "spouse_income_2016"
+          },
+          56298
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "spouse_income_2016"
+          },
+          "2016-12-31"
+        ]
+      },
+      {
+        "ctor": "deduction_",
+        "args": [
+          {
+            "a": "spouse_itemized_deduction"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "spouse_itemized_deduction"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "spouse_itemized_deduction"
+          },
+          "2016-01-01"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "spouse_itemized_deduction"
+          },
+          4421
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2016"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "income_",
+      "event": {
+        "a": "spouse_income_2016"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "deduction_",
+      "event": {
+        "a": "spouse_itemized_deduction"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_marriage"
+    },
+    {
+      "a": "alice_income_2016"
+    },
+    {
+      "a": "spouse_income_2016"
+    },
+    {
+      "a": "spouse_itemized_deduction"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 16,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00025975000000000303,
+    "grounding_wall_seconds": 0.00025916099548339844,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 207772,
+    "cpu_seconds": 0.0025967500000000088,
+    "wall_seconds": 0.0025970935821533203
+  }
+}

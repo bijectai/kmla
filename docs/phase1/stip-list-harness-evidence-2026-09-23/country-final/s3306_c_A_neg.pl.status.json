@@ -1,0 +1,203 @@
+{
+  "original_case": "s3306_c_A_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "toronto, ontario, canada"
+          },
+          {
+            "s": "canada"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "toronto, ontario, canada"
+          },
+          {
+            "s": "canada"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "e416ee08f4bbfd8d70489576333f983c14f262d0fdd9ee452dc53e47659400e7",
+  "query": {
+    "predicate": "s3306_c_A",
+    "mode": "bff",
+    "goal": "'s3306_c_A'('alice_employer',Q0,Q1)",
+    "outputs": [
+      "Q0",
+      "Q1"
+    ],
+    "outer_naf": true,
+    "original_goal": "\\+ s3306_c_A(alice_employer,_,_)"
+  },
+  "original_request": "ground-0003.pl",
+  "original_stats": {
+    "unary_proofs": 2,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 13,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00025091700000001715,
+    "grounding_wall_seconds": 0.0002503395080566406,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0004.pl",
+  "reground_stats": {
+    "unary_proofs": 2,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 13,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002015829999999913,
+    "grounding_wall_seconds": 0.0002009868621826172,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 0.0001158750000000014,
+    "wall_seconds": 0.00011730194091796875,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-bc64ef49c4a7491e948053a793bc17bb",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/country-final/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0003.pl",
+        "/requests/s3306_c_A_neg-original.observation.pl"
+      ],
+      "timeout_seconds": 60,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "011.stdout",
+      "stderr": "011.stderr",
+      "elapsed_seconds": 0.345239
+    }
+  },
+  "serialized_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 0.00012958300000000256,
+    "wall_seconds": 0.00013113021850585938,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-5c8d4d34091d49838fcef158b0d8bbd0",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/country-final/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0004.pl",
+        "/requests/s3306_c_A_neg-serialized.observation.pl"
+      ],
+      "timeout_seconds": 60,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "012.stdout",
+      "stderr": "012.stderr",
+      "elapsed_seconds": 0.343534
+    }
+  }
+}

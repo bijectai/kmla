@@ -1,0 +1,507 @@
+{
+  "before": {
+    "Interface/Household.lean": "0b24983ff06fe250ff4441689fe8a445104b9d4105579e7b67cc86a88fd433ab",
+    "Interface/HOUSEHOLD_WIRE.md": "67ffb4bf85e72dc0eee25d94c9500c9fcfa6ef22b20b506ec5b96444d60a2d36",
+    "Interface/WIRE.md": "97c5ca3ad43d6d79885f11801bf1aa285ee858a031916537c1dafa740fe4eeaa",
+    "Interface/fixtures/household_wire.json": "27475f25f7707f73b65533fa49c42908345a285cb1a411cfba3ff33bd34726e4",
+    "scripts/stip_list_guards.lean": "5ce3e8fe9de14412d50f00830505b0fd0382bf701b00a83be56bb5bd65e6da76",
+    "scripts/check_query_time.sh": "4a206b56386e8ef8096a265f02d99139d9a79a802e86cbe9b85df429a7057544",
+    "tests/test_stip_list_wire.py": "66b49e64a657486857bbdcafe3c0f922566a26d00a823e741a4829d8759c9b25"
+  },
+  "after": {
+    "Interface/Household.lean": "0b24983ff06fe250ff4441689fe8a445104b9d4105579e7b67cc86a88fd433ab",
+    "Interface/HOUSEHOLD_WIRE.md": "67ffb4bf85e72dc0eee25d94c9500c9fcfa6ef22b20b506ec5b96444d60a2d36",
+    "Interface/WIRE.md": "97c5ca3ad43d6d79885f11801bf1aa285ee858a031916537c1dafa740fe4eeaa",
+    "Interface/fixtures/household_wire.json": "27475f25f7707f73b65533fa49c42908345a285cb1a411cfba3ff33bd34726e4",
+    "scripts/stip_list_guards.lean": "5ce3e8fe9de14412d50f00830505b0fd0382bf701b00a83be56bb5bd65e6da76",
+    "scripts/check_query_time.sh": "4a206b56386e8ef8096a265f02d99139d9a79a802e86cbe9b85df429a7057544",
+    "tests/test_stip_list_wire.py": "66b49e64a657486857bbdcafe3c0f922566a26d00a823e741a4829d8759c9b25"
+  },
+  "stable": true,
+  "legacy_fixture_container_before": {
+    "scope": "Household transport spelling only; not an end-to-end payload or observation",
+    "validity_claim": "No fixture asserts Valid or ValidStip; some deliberately violate existing admission conditions",
+    "cases": [
+      {
+        "name": "empty",
+        "household": {
+          "facts": [],
+          "stipulations": []
+        },
+        "wire": "{\"facts\":[],\"stipulations\":[]}"
+      },
+      {
+        "name": "tags_order_integers",
+        "household": {
+          "facts": [
+            {
+              "ctor": "country_",
+              "args": [
+                {
+                  "a": "place"
+                },
+                {
+                  "a": "usa"
+                }
+              ]
+            },
+            {
+              "ctor": "country_",
+              "args": [
+                {
+                  "a": "place"
+                },
+                {
+                  "s": "usa"
+                }
+              ]
+            },
+            {
+              "ctor": "country_",
+              "args": [
+                {
+                  "a": "place"
+                },
+                {
+                  "a": "usa"
+                }
+              ]
+            },
+            {
+              "ctor": "amount_",
+              "args": [
+                {
+                  "a": "payment"
+                },
+                9007199254740993
+              ]
+            },
+            {
+              "ctor": "amount_",
+              "args": [
+                {
+                  "a": "payment"
+                },
+                -9007199254740993
+              ]
+            },
+            {
+              "ctor": "amount_",
+              "args": [
+                {
+                  "a": "zero"
+                },
+                0
+              ]
+            },
+            {
+              "ctor": "agent_",
+              "args": [
+                {
+                  "a": "numeric-participant"
+                },
+                9007199254740993
+              ]
+            }
+          ],
+          "stipulations": []
+        },
+        "wire": "{\"facts\":[{\"ctor\":\"country_\",\"args\":[{\"a\":\"place\"},{\"a\":\"usa\"}]},{\"ctor\":\"country_\",\"args\":[{\"a\":\"place\"},{\"s\":\"usa\"}]},{\"ctor\":\"country_\",\"args\":[{\"a\":\"place\"},{\"a\":\"usa\"}]},{\"ctor\":\"amount_\",\"args\":[{\"a\":\"payment\"},9007199254740993]},{\"ctor\":\"amount_\",\"args\":[{\"a\":\"payment\"},-9007199254740993]},{\"ctor\":\"amount_\",\"args\":[{\"a\":\"zero\"},0]},{\"ctor\":\"agent_\",\"args\":[{\"a\":\"numeric-participant\"},9007199254740993]}],\"stipulations\":[]}"
+      },
+      {
+        "name": "controls_unicode",
+        "household": {
+          "facts": [
+            {
+              "ctor": "location_",
+              "args": [
+                {
+                  "a": "controls"
+                },
+                {
+                  "s": "\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f\"\\/é|é|税|🧾"
+                }
+              ]
+            },
+            {
+              "ctor": "location_",
+              "args": [
+                {
+                  "a": "unicode"
+                },
+                {
+                  "a": "é|é|税|🧾"
+                }
+              ]
+            },
+            {
+              "ctor": "type_",
+              "args": [
+                {
+                  "a": ""
+                },
+                {
+                  "s": ""
+                }
+              ]
+            }
+          ],
+          "stipulations": []
+        },
+        "wire": "{\"facts\":[{\"ctor\":\"location_\",\"args\":[{\"a\":\"controls\"},{\"s\":\"\\u0000\\u0001\\u0002\\u0003\\u0004\\u0005\\u0006\\u0007\\b\\t\\n\\u000b\\f\\r\\u000e\\u000f\\u0010\\u0011\\u0012\\u0013\\u0014\\u0015\\u0016\\u0017\\u0018\\u0019\\u001a\\u001b\\u001c\\u001d\\u001e\\u001f\\\"\\\\/é|é|税|🧾\"}]},{\"ctor\":\"location_\",\"args\":[{\"a\":\"unicode\"},{\"a\":\"é|é|税|🧾\"}]},{\"ctor\":\"type_\",\"args\":[{\"a\":\"\"},{\"s\":\"\"}]}],\"stipulations\":[]}"
+      },
+      {
+        "name": "dates_and_tagged_patterns",
+        "household": {
+          "facts": [
+            {
+              "ctor": "start_",
+              "args": [
+                {
+                  "a": "pre-epoch"
+                },
+                "1969-12-31"
+              ]
+            },
+            {
+              "ctor": "end_",
+              "args": [
+                {
+                  "a": "epoch"
+                },
+                "1970-01-01"
+              ]
+            },
+            {
+              "ctor": "start_",
+              "args": [
+                {
+                  "a": "leap"
+                },
+                "2000-02-29"
+              ]
+            },
+            {
+              "ctor": "start_",
+              "args": [
+                {
+                  "a": "lower"
+                },
+                "1900-01-01"
+              ]
+            },
+            {
+              "ctor": "end_",
+              "args": [
+                {
+                  "a": "upper"
+                },
+                "2100-12-31"
+              ]
+            }
+          ],
+          "stipulations": [
+            {
+              "pred": "s3306_c_5",
+              "args": [
+                {
+                  "val": {
+                    "a": "service"
+                  }
+                },
+                {
+                  "val": {
+                    "a": "employer"
+                  }
+                },
+                {
+                  "val": {
+                    "a": "employee"
+                  }
+                },
+                {
+                  "val": {
+                    "s": "2015-01-01"
+                  }
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            },
+            {
+              "pred": "s3306_c_5",
+              "args": [
+                {
+                  "val": {
+                    "a": "service"
+                  }
+                },
+                {
+                  "val": {
+                    "a": "employer"
+                  }
+                },
+                {
+                  "val": {
+                    "a": "employee"
+                  }
+                },
+                {
+                  "val": {
+                    "a": "2015-01-01"
+                  }
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            }
+          ]
+        },
+        "wire": "{\"facts\":[{\"ctor\":\"start_\",\"args\":[{\"a\":\"pre-epoch\"},\"1969-12-31\"]},{\"ctor\":\"end_\",\"args\":[{\"a\":\"epoch\"},\"1970-01-01\"]},{\"ctor\":\"start_\",\"args\":[{\"a\":\"leap\"},\"2000-02-29\"]},{\"ctor\":\"start_\",\"args\":[{\"a\":\"lower\"},\"1900-01-01\"]},{\"ctor\":\"end_\",\"args\":[{\"a\":\"upper\"},\"2100-12-31\"]}],\"stipulations\":[{\"pred\":\"s3306_c_5\",\"args\":[{\"val\":{\"a\":\"service\"}},{\"val\":{\"a\":\"employer\"}},{\"val\":{\"a\":\"employee\"}},{\"val\":{\"s\":\"2015-01-01\"}},{\"val\":2015}]},{\"pred\":\"s3306_c_5\",\"args\":[{\"val\":{\"a\":\"service\"}},{\"val\":{\"a\":\"employer\"}},{\"val\":{\"a\":\"employee\"}},{\"val\":{\"a\":\"2015-01-01\"}},{\"val\":2015}]}]}"
+      },
+      {
+        "name": "wildcard_identity",
+        "household": {
+          "facts": [
+            {
+              "ctor": "purpose_",
+              "args": [
+                {
+                  "wild": 9007199254740993
+                },
+                {
+                  "s": "agricultural labor"
+                }
+              ]
+            },
+            {
+              "ctor": "purpose_",
+              "args": [
+                {
+                  "val": {
+                    "a": "_"
+                  }
+                },
+                {
+                  "s": "agricultural labor"
+                }
+              ]
+            }
+          ],
+          "stipulations": [
+            {
+              "pred": "s2_b_3",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "wild": 17
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            },
+            {
+              "pred": "s2_b_3",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "wild": 18
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            },
+            {
+              "pred": "s2_b_3",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "wild": 17
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            }
+          ]
+        },
+        "wire": "{\"facts\":[{\"ctor\":\"purpose_\",\"args\":[{\"wild\":9007199254740993},{\"s\":\"agricultural labor\"}]},{\"ctor\":\"purpose_\",\"args\":[{\"val\":{\"a\":\"_\"}},{\"s\":\"agricultural labor\"}]}],\"stipulations\":[{\"pred\":\"s2_b_3\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":17},{\"val\":2015}]},{\"pred\":\"s2_b_3\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":18},{\"val\":2015}]},{\"pred\":\"s2_b_3\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":17},{\"val\":2015}]}]}"
+      },
+      {
+        "name": "opaque_helpers_extra_arities",
+        "household": {
+          "facts": [
+            {
+              "ctor": "agricultural_service",
+              "args": [
+                {
+                  "a": "helper"
+                },
+                {
+                  "s": "2015-01-01"
+                },
+                -7
+              ]
+            },
+            {
+              "ctor": "alice_employer",
+              "args": [
+                {
+                  "a": "alice"
+                },
+                {
+                  "s": "household"
+                },
+                250000
+              ]
+            },
+            {
+              "ctor": "alice_household_maintenance",
+              "args": [
+                {
+                  "a": "alice"
+                },
+                {
+                  "a": "payment"
+                },
+                {
+                  "s": ""
+                },
+                9007199254740993
+              ]
+            },
+            {
+              "ctor": "patient",
+              "args": [
+                {
+                  "a": "event"
+                },
+                {
+                  "a": "person"
+                }
+              ]
+            },
+            {
+              "ctor": "patient_",
+              "args": [
+                {
+                  "a": "event"
+                },
+                {
+                  "a": "person"
+                }
+              ]
+            },
+            {
+              "ctor": "itemize_deductions_",
+              "args": [
+                {
+                  "a": "inert-marker"
+                }
+              ]
+            }
+          ],
+          "stipulations": [
+            {
+              "pred": "s151_d_4",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "val": {
+                    "s": "2015-01-01"
+                  }
+                },
+                {
+                  "wild": 40
+                },
+                {
+                  "val": 250000
+                }
+              ]
+            },
+            {
+              "pred": "s2_a_5",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "wild": 41
+                },
+                {
+                  "val": {
+                    "s": "2015-01-01"
+                  }
+                },
+                {
+                  "val": -7
+                },
+                {
+                  "val": 250000
+                }
+              ]
+            },
+            {
+              "pred": "s63_c_3_4",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "wild": 42
+                },
+                {
+                  "val": 0
+                },
+                {
+                  "val": 2015
+                }
+              ]
+            },
+            {
+              "pred": "s68_b_3",
+              "args": [
+                {
+                  "val": {
+                    "a": "alice"
+                  }
+                },
+                {
+                  "val": 2015
+                },
+                {
+                  "val": 250000
+                }
+              ]
+            }
+          ]
+        },
+        "wire": "{\"facts\":[{\"ctor\":\"agricultural_service\",\"args\":[{\"a\":\"helper\"},{\"s\":\"2015-01-01\"},-7]},{\"ctor\":\"alice_employer\",\"args\":[{\"a\":\"alice\"},{\"s\":\"household\"},250000]},{\"ctor\":\"alice_household_maintenance\",\"args\":[{\"a\":\"alice\"},{\"a\":\"payment\"},{\"s\":\"\"},9007199254740993]},{\"ctor\":\"patient\",\"args\":[{\"a\":\"event\"},{\"a\":\"person\"}]},{\"ctor\":\"patient_\",\"args\":[{\"a\":\"event\"},{\"a\":\"person\"}]},{\"ctor\":\"itemize_deductions_\",\"args\":[{\"a\":\"inert-marker\"}]}],\"stipulations\":[{\"pred\":\"s151_d_4\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"val\":{\"s\":\"2015-01-01\"}},{\"wild\":40},{\"val\":250000}]},{\"pred\":\"s2_a_5\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":41},{\"val\":{\"s\":\"2015-01-01\"}},{\"val\":-7},{\"val\":250000}]},{\"pred\":\"s63_c_3_4\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"wild\":42},{\"val\":0},{\"val\":2015}]},{\"pred\":\"s68_b_3\",\"args\":[{\"val\":{\"a\":\"alice\"}},{\"val\":2015},{\"val\":250000}]}]}"
+      }
+    ]
+  }
+}

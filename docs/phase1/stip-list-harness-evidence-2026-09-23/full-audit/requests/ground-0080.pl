@@ -1,0 +1,10 @@
+income_('alice_makes_money').
+agent_('alice_makes_money','alice').
+amount_('alice_makes_money',312).
+start_('alice_makes_money',"2015-01-01").
+end_('alice_makes_money',"2015-12-31").
+father_('alice_and_bob').
+agent_('alice_and_bob','bob').
+patient_('alice_and_bob','alice').
+s152_c('bob','alice',2015).
+s151_d('alice',_KMLA_W0,2000,2015).

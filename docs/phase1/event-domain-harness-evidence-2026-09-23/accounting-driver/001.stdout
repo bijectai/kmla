@@ -1,0 +1,64 @@
+{
+  "original_population_exact_and_unchanged": 376,
+  "attempted_original_count": 376,
+  "h4_3_a_counts": {
+    "pass": 376
+  },
+  "h4_3_b_counts": {
+    "unimplemented:approved-H6-projection-not-implemented": 262,
+    "pass": 114
+  },
+  "direct_country_counts": {
+    "not-applicable:no-supplied-country": 362,
+    "pass": 14
+  },
+  "diagnostic_household_instances": 376,
+  "diagnostic_distinct_ordered_households": 297,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "list_totals": {
+    "original_facts": 17943,
+    "original_stipulations": 440,
+    "reground_facts": 17943,
+    "reground_stipulations": 440
+  },
+  "source_and_lane_code_hashes_unchanged": true,
+  "historical_files_byte_unchanged": 2725,
+  "legacy_code_snapshots_sha256_verified": 3,
+  "all_measurements_unary_proof_and_distinct_domain_checks": {
+    "domain-regressions": 9,
+    "list-regressions": 6,
+    "country-regressions": 31,
+    "full-audit": 752
+  },
+  "pinned_prolog_readonly_mount_checks": {
+    "domain-regressions": 9,
+    "list-regressions": 16,
+    "country-regressions": 57,
+    "full-audit": 780
+  },
+  "retained_process_exit_counts": {
+    "domain-regressions": {
+      "0": 13
+    },
+    "list-regressions": {
+      "0": 14,
+      "2": 6
+    },
+    "country-regressions": {
+      "0": 57,
+      "2": 4
+    },
+    "full-audit": {
+      "0": 784
+    }
+  },
+  "retained_process_timeout_counts": {
+    "domain-regressions": 0,
+    "list-regressions": 0,
+    "country-regressions": 0,
+    "full-audit": 0
+  },
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92",
+  "finding": null
+}

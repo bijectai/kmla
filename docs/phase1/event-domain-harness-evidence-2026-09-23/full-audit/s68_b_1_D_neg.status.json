@@ -1,0 +1,59 @@
+{
+  "original_case": "s68_b_1_D_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "8a1728596aad02648a487e84bf644c944446c8774ae974bd60812e6ed9b0871f",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s68_b_1_D/3 bbb"
+  },
+  "original_queries": [
+    "\\+ s68_b_1_D(alice,150000,2016)"
+  ],
+  "original_measurement": "ground-0527.pl",
+  "original_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0002752089999999985,
+    "grounding_wall_seconds": 0.00027489662170410156,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0528.pl",
+  "reground_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0002593330000000005,
+    "grounding_wall_seconds": 0.0002589225769042969,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "unimplemented:approved-H6-projection-not-implemented",
+    "reason": "unimplemented H6 observation: s68_b_1_D/3 bbb",
+    "owner_choice_blocker": false
+  }
+}

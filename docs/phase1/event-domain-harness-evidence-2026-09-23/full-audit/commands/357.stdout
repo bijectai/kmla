@@ -1,0 +1,188 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2017-01-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2017-12-31" ]},
+      {"ctor":"payment_", "args": [ {"a":"alice_pays_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_pays_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_pays_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_pays_bob"}, "2017-01-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_pays_bob"}, "2017-12-31" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays_bob"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays_bob"}, 45252 ]},
+      {"ctor":"payment_", "args": [ {"a":"alice_pays_retirement"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_pays_retirement"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_pays_retirement"},  {"a":"retirement_fund"} ]
+      },
+      {"ctor":"plan_", "args": [ {"a":"retirement_fund"} ]},
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"retirement_fund"}},
+	  {"s":"make provisions for employees in case of retirement"}
+	]
+      },
+      {
+	"ctor":"beneficiary_",
+	"args": [ {"a":"retirement_fund"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_pays_retirement"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_pays_retirement"}, "2017-12-31" ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_pays_retirement"}, 9832 ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays_insurance"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_pays_insurance"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_pays_insurance"},  {"a":"life_insurance_fund"} ]
+      },
+      {"ctor":"plan_", "args": [ {"a":"life_insurance_fund"} ]},
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"life_insurance_fund"}},
+	  {"s":"make provisions for employees in case of death"}
+	]
+      },
+      {
+	"ctor":"beneficiary_",
+	"args": [ {"a":"life_insurance_fund"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_pays_insurance"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_pays_insurance"}, "2017-12-31" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays_insurance"}, 5322 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":6,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays_bob"}
+    },
+    {
+      "source_clause":13,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays_retirement"}
+    },
+    {
+      "source_clause":16,
+      "predicate":"plan_",
+      "event": {"a":"retirement_fund"}
+    },
+    {
+      "source_clause":22,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays_insurance"}
+    },
+    {
+      "source_clause":25,
+      "predicate":"plan_",
+      "event": {"a":"life_insurance_fund"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_employer"},
+    {"a":"alice_pays_bob"},
+    {"a":"alice_pays_retirement"},
+    {"a":"retirement_fund"},
+    {"a":"alice_pays_insurance"},
+    {"a":"life_insurance_fund"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "stats": {
+    "unary_proofs":6,
+    "distinct_event_domain":6,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":30,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0002643330000000055,
+    "grounding_wall_seconds":0.0002636909484863281,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

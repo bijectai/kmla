@@ -1,0 +1,6 @@
+{
+  "case": "synthetic unchanged repeated-event traversal",
+  "candidate": "regular",
+  "query": "none",
+  "source_sha256": "e1f7721af8515155dcdaf1ec7af56752f0de261c824ac4c51df69b432c20ba62"
+}

@@ -1,0 +1,15 @@
+income_('alice_income').
+agent_('alice_income','alice').
+start_('alice_income',"2017-12-31").
+amount_('alice_income',22895).
+son_('alice_and_bob').
+agent_('alice_and_bob','bob').
+patient_('alice_and_bob','alice').
+residence_('alice_residence').
+agent_('alice_residence','alice').
+patient_('alice_residence','alice_and_bob_home').
+start_('alice_residence',"2017-01-01").
+residence_('bob_residence').
+agent_('bob_residence','bob').
+patient_('bob_residence','alice_and_bob_home').
+start_('bob_residence',"2017-01-01").

@@ -1,0 +1,13 @@
+payment_(alice_is_paid).
+patient_(alice_is_paid,alice).
+start_(alice_is_paid,"2017-12-31").
+amount_(alice_is_paid,33200).
+marriage_(alice_and_bob).
+agent_(alice_and_bob,alice).
+agent_(alice_and_bob,bob).
+start_(alice_and_bob,"2017-02-03").
+joint_return_(alice_and_bob_file_a_joint_return).
+agent_(alice_and_bob_file_a_joint_return,alice).
+agent_(alice_and_bob_file_a_joint_return,bob).
+start_(alice_and_bob_file_a_joint_return,"2017-01-01").
+end_(alice_and_bob_file_a_joint_return,"2017-12-31").

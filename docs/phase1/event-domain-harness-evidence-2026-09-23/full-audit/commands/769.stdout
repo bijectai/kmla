@@ -1,0 +1,199 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2010-02-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2010-09-02" ]},
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"baltimore"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"maryland"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"usa"} ]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_employer"}},  {"s":"domestic service"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"s":"private home"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_pays"},  {"a":"alice"} ]},
+      {"ctor":"patient_", "args": [ {"a":"alice_pays"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_pays"}, "2010-09-02" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays"}, 300 ]},
+      {"ctor":"payment_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2010-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 33408 ]},
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_1"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_1"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_1"}, "2010-01-01" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_1"}, 680 ]},
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_2"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_2"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_2"}, "2010-01-01" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_2"}, 2102 ]},
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_3"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_3"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_3"}, "2010-01-01" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_3"}, 1993 ]},
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_4"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_4"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_4"}, "2010-01-01" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_4"}, 4807 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":11,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays"}
+    },
+    {
+      "source_clause":17,
+      "predicate":"payment_",
+      "event": {"a":"alice_is_paid"}
+    },
+    {
+      "source_clause":21,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_1"}
+    },
+    {
+      "source_clause":25,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_2"}
+    },
+    {
+      "source_clause":29,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_3"}
+    },
+    {
+      "source_clause":33,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_4"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_employer"},
+    {"a":"alice_pays"},
+    {"a":"alice_is_paid"},
+    {"a":"itemized_deduction_1"},
+    {"a":"itemized_deduction_2"},
+    {"a":"itemized_deduction_3"},
+    {"a":"itemized_deduction_4"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "stats": {
+    "unary_proofs":7,
+    "distinct_event_domain":7,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":36,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00028429100000000596,
+    "grounding_wall_seconds":0.0002834796905517578,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":3274,
+    "cpu_seconds":0.001567291999999998,
+    "wall_seconds":0.0015676021575927734
+  }
+}

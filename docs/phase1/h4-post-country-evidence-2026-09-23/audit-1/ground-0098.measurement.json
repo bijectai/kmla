@@ -1,0 +1,177 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "father_",
+        "args": [
+          {
+            "a": "charlie_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_and_bob"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_and_bob"
+          },
+          "1995-04-15"
+        ]
+      },
+      {
+        "ctor": "mother_",
+        "args": [
+          {
+            "a": "dorothy_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "dorothy_and_bob"
+          },
+          {
+            "a": "dorothy"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "dorothy_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "dorothy_and_bob"
+          },
+          "1995-04-15"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          "2018-08-08"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "father_",
+      "event": {
+        "a": "charlie_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "mother_",
+      "event": {
+        "a": "dorothy_and_bob"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_charlie"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "stats": {
+    "unary_proofs": 3,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 12,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002370409999999934,
+    "grounding_wall_seconds": 0.00023627281188964844,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

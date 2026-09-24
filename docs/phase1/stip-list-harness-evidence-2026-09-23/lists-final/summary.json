@@ -1,0 +1,756 @@
+{
+  "scope": "two original H4 checks plus synthetic list guards; no admission/parity",
+  "original_case_count": 2,
+  "rows": [
+    {
+      "original_case": "s2_a_1_B_pos.pl",
+      "source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+      "h4_3_a": "pass",
+      "h4_3_b": "pass",
+      "original_measurement": "ground-0001.pl",
+      "exact_supplied_heads": "pass",
+      "reground_measurement": "ground-0002.pl",
+      "query_plan": {
+        "kind": "paragraph",
+        "query": {
+          "predicate": "s2_a_1_B",
+          "mode": "bffb",
+          "goal": "'s2_a_1_B'('bob',Q0,Q1,2016)",
+          "outputs": [
+            "Q0",
+            "Q1"
+          ],
+          "outer_naf": false,
+          "original_goal": "s2_a_1_B(bob,_,_,2016)"
+        },
+        "tax_input": null,
+        "reason": null
+      },
+      "observations": {
+        "status": "pass",
+        "original": {
+          "raw_solutions": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "proof_count": 3,
+          "cpu_seconds": 0.0058437090000000025,
+          "wall_seconds": 0.005845308303833008,
+          "canonical": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-c5df2376665d43d7b0b6502b6371775d",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0001.pl",
+              "/requests/s2_a_1_B_pos.pl-original.observation.pl"
+            ],
+            "timeout_seconds": 60,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "007.stdout",
+            "stderr": "007.stderr",
+            "elapsed_seconds": 0.302516
+          }
+        },
+        "serialized": {
+          "raw_solutions": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ],
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "proof_count": 3,
+          "cpu_seconds": 0.003950167000000004,
+          "wall_seconds": 0.0039517879486083984,
+          "canonical": [
+            [
+              {
+                "a": "bob_s_house"
+              },
+              {
+                "a": "charlie"
+              }
+            ]
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-fa51b375ec6d4316b4556ea4ca210575",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0002.pl",
+              "/requests/s2_a_1_B_pos.pl-serialized.observation.pl"
+            ],
+            "timeout_seconds": 60,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "008.stdout",
+            "stderr": "008.stderr",
+            "elapsed_seconds": 0.371996
+          }
+        }
+      }
+    },
+    {
+      "original_case": "s63_d_2_pos.pl",
+      "source_sha256": "0a1dc6a183134f02f6517b88250bcb6b6ddf3fd3e8752936cc255cd3662e6749",
+      "h4_3_a": "pass",
+      "h4_3_b": "pass",
+      "original_measurement": "ground-0003.pl",
+      "exact_supplied_heads": "pass",
+      "reground_measurement": "ground-0004.pl",
+      "query_plan": {
+        "kind": "paragraph",
+        "query": {
+          "predicate": "s63_d_2",
+          "mode": "bbb",
+          "goal": "'s63_d_2'('alice',[2000],2017)",
+          "outputs": [],
+          "outer_naf": false,
+          "original_goal": "s63_d_2(alice,[2000],2017)"
+        },
+        "tax_input": null,
+        "reason": null
+      },
+      "observations": {
+        "status": "pass",
+        "original": {
+          "raw_solutions": [
+            [],
+            []
+          ],
+          "proof_count": 2,
+          "cpu_seconds": 0.0014386259999999984,
+          "wall_seconds": 0.0014405250549316406,
+          "canonical": [
+            []
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-6208778105b44118baef4aef78cf41c9",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0003.pl",
+              "/requests/s63_d_2_pos.pl-original.observation.pl"
+            ],
+            "timeout_seconds": 60,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "011.stdout",
+            "stderr": "011.stderr",
+            "elapsed_seconds": 0.340991
+          }
+        },
+        "serialized": {
+          "raw_solutions": [
+            [],
+            []
+          ],
+          "proof_count": 2,
+          "cpu_seconds": 0.0015380839999999951,
+          "wall_seconds": 0.0015368461608886719,
+          "canonical": [
+            []
+          ],
+          "command": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--name",
+              "kmla-runtime-a80be99acbf64a8784f4c09aefce49ed",
+              "--platform",
+              "linux/amd64",
+              "--network",
+              "none",
+              "--read-only",
+              "--tmpfs",
+              "/tmp",
+              "--cap-drop",
+              "ALL",
+              "--security-opt",
+              "no-new-privileges",
+              "--user",
+              "501:20",
+              "--workdir",
+              "/corpus",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+              "--mount",
+              "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+              "--entrypoint",
+              "swipl",
+              "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+              "-q",
+              "-f",
+              "none",
+              "-s",
+              "/harness/grounding_observations.pl",
+              "-g",
+              "observe_main",
+              "-t",
+              "halt",
+              "--",
+              "/requests/ground-0004.pl",
+              "/requests/s63_d_2_pos.pl-serialized.observation.pl"
+            ],
+            "timeout_seconds": 60,
+            "exit": 0,
+            "timed_out": false,
+            "stdout": "012.stdout",
+            "stderr": "012.stderr",
+            "elapsed_seconds": 0.358003
+          }
+        }
+      }
+    }
+  ],
+  "guards": [
+    {
+      "name": "nested aliases/tags/largeints/emptylists/copy freshness",
+      "status": "pass",
+      "requests": [
+        "ground-0005.pl",
+        "ground-0006.pl"
+      ]
+    },
+    {
+      "name": "compound",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-41f6e323496e4e96bff75670a23bc4d8",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0007.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "015.stdout",
+        "stderr": "015.stderr",
+        "elapsed_seconds": 0.298403
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term(f(a))\n"
+    },
+    {
+      "name": "improper",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-e56e77f51cf546c9a3df9df77049a366",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0008.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "016.stdout",
+        "stderr": "016.stderr",
+        "elapsed_seconds": 0.351215
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|b])\n"
+    },
+    {
+      "name": "open_tail",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-ea0e2bb84f93457da5be27093dbc995b",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0009.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "017.stdout",
+        "stderr": "017.stderr",
+        "elapsed_seconds": 0.338848
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|_G1362])\n"
+    },
+    {
+      "name": "nested_improper",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-d17b8b96a43e4e11aa4ad4b464cf284c",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0010.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "018.stdout",
+        "stderr": "018.stderr",
+        "elapsed_seconds": 0.299802
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|b])\n"
+    },
+    {
+      "name": "nested_open_tail",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-456cefed33804569977a36819a3068c5",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0011.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "019.stdout",
+        "stderr": "019.stderr",
+        "elapsed_seconds": 0.296241
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term([a|_G1368])\n"
+    },
+    {
+      "name": "fake_variable_marker",
+      "status": "pass:expected-rejection",
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-645cad73f14c4f8f912e926203044314",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/lists-final/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding.pl",
+          "-g",
+          "main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0012.pl",
+          "/requests/registry.pl",
+          "regular",
+          "none"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 2,
+        "timed_out": false,
+        "stdout": "020.stdout",
+        "stderr": "020.stderr",
+        "elapsed_seconds": 0.335961
+      },
+      "stderr_verbatim": "ERROR: Unknown error term: unsupported_household_term(H)\n"
+    }
+  ],
+  "finding": null,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "diagnostic_household_instances": 2,
+  "diagnostic_distinct_ordered_households": 2,
+  "diagnostic_household_sha256": [
+    "82c8fdb147cbf27a4a3fe12c6b71ae66d9f696db17653df7982b161ef82926c5",
+    "5a65f55241eb538e914e38a2358f04841d2439433c2b6b311c3f21c8dd50b815"
+  ]
+}

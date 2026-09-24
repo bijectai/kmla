@@ -1,0 +1,1030 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1992-02-03"
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "alice_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          "2014-07-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          "2014-07-09"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          },
+          "2004-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "charlie_and_bob_residence"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_maintains_household_2015"
+            }
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_maintains_household_2016"
+            }
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_maintains_household_2017"
+            }
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_maintains_household_2018"
+            }
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_maintains_household_2019"
+            }
+          },
+          {
+            "a": "bob_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          "2016-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          "2018-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          "2016-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          "2018-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          300000
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          300000
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          300000
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          300000
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          300000
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          "2016-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          "2018-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          "2016-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2018"
+          },
+          "2018-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2019"
+          },
+          "2019-12-31"
+        ]
+      }
+    ],
+    "stipulations": [
+      {
+        "pred": "s152_d_2_H_6",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2015
+          },
+          {
+            "wild": 0
+          },
+          {
+            "val": {
+              "s": "2015-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2015-12-31"
+            }
+          }
+        ]
+      },
+      {
+        "pred": "s152_d_2_H_6",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2016
+          },
+          {
+            "wild": 1
+          },
+          {
+            "val": {
+              "s": "2016-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2016-12-31"
+            }
+          }
+        ]
+      },
+      {
+        "pred": "s152_d_2_H_6",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2017
+          },
+          {
+            "wild": 2
+          },
+          {
+            "val": {
+              "s": "2017-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-12-31"
+            }
+          }
+        ]
+      },
+      {
+        "pred": "s152_d_2_H_6",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2018
+          },
+          {
+            "wild": 3
+          },
+          {
+            "val": {
+              "s": "2018-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2018-12-31"
+            }
+          }
+        ]
+      },
+      {
+        "pred": "s152_d_2_H_6",
+        "args": [
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": 2019
+          },
+          {
+            "wild": 4
+          },
+          {
+            "val": {
+              "s": "2019-01-01"
+            }
+          },
+          {
+            "val": {
+              "s": "2019-12-31"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "death_",
+      "event": {
+        "a": "alice_dies"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "residence_",
+      "event": {
+        "a": "charlie_and_bob_residence"
+      }
+    },
+    {
+      "source_clause": 15,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_maintains_household_2015"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_maintains_household_2016"
+      }
+    },
+    {
+      "source_clause": 17,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_maintains_household_2017"
+      }
+    },
+    {
+      "source_clause": 18,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_maintains_household_2018"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_maintains_household_2019"
+      }
+    },
+    {
+      "source_clause": 45,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_maintains_household_2015"
+      }
+    },
+    {
+      "source_clause": 46,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_maintains_household_2016"
+      }
+    },
+    {
+      "source_clause": 47,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_maintains_household_2017"
+      }
+    },
+    {
+      "source_clause": 48,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_maintains_household_2018"
+      }
+    },
+    {
+      "source_clause": 49,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_maintains_household_2019"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "alice_dies"
+    },
+    {
+      "a": "charlie_and_bob_residence"
+    },
+    {
+      "a": "bob_maintains_household_2015"
+    },
+    {
+      "a": "bob_maintains_household_2016"
+    },
+    {
+      "a": "bob_maintains_household_2017"
+    },
+    {
+      "a": "bob_maintains_household_2018"
+    },
+    {
+      "a": "bob_maintains_household_2019"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+  ],
+  "stats": {
+    "unary_proofs": 13,
+    "distinct_event_domain": 8,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 69,
+    "stipulation_count": 5,
+    "wildcard_count": 5,
+    "grounding_cpu_seconds": 0.00040404199999999335,
+    "grounding_wall_seconds": 0.00040340423583984375,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

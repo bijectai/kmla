@@ -1,0 +1,90 @@
+{
+  "original_case": "tax_case_82.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      11
+    ],
+    "emitted_source_indices": [
+      11
+    ],
+    "emitted_fact_positions_1based": [
+      11
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "91b629a64717532e7bd826b4954e1b5ae8965746bb9843f0832459d357a8dd9a",
+  "query": {
+    "tax_inputs": "tax_inputs('bob',2012)",
+    "amount": "unbound; first solution only"
+  },
+  "original_request": "ground-0027.pl",
+  "original_stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00022008299999998204,
+    "grounding_wall_seconds": 0.00021958351135253906,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0028.pl",
+  "reground_stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002639579999999947,
+    "grounding_wall_seconds": 0.00026297569274902344,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "status": "first_solution",
+    "value": 986,
+    "cpu_seconds": 0.0014058750000000009,
+    "wall_seconds": 0.0014061927795410156
+  },
+  "serialized_observation": {
+    "status": "first_solution",
+    "value": 986,
+    "cpu_seconds": 0.0015446669999999996,
+    "wall_seconds": 0.0015439987182617188
+  }
+}

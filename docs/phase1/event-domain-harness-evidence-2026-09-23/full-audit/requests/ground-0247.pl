@@ -1,0 +1,11 @@
+marriage_(alice_and_bob).
+agent_(alice_and_bob,alice).
+agent_(alice_and_bob,bob).
+start_(alice_and_bob,"1992-02-03").
+death_(alice_dies).
+agent_(alice_dies,alice).
+start_(alice_dies,"2014-07-09").
+end_(alice_dies,"2014-07-09").
+nonresident_alien_(alice_is_nra).
+agent_(alice_is_nra,alice).
+start_(alice_is_nra,"1990-03-04").

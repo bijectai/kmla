@@ -1,0 +1,240 @@
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean --version
+Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Interface/Household.olean Interface/Household.lean
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Interface/QuerySchema.olean Interface/QuerySchema.lean
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Interface/QueryTime.olean Interface/QueryTime.lean
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Oracle/S7703Stip.olean Oracle/S7703Stip.lean
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Oracle/S7703.olean Oracle/S7703.lean
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Oracle/Tests/S7703.olean Oracle/Tests/S7703.lean
+Oracle/Tests/S7703.lean:259:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil, Solution.encode,
+    Obs.encode, escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.s7703_a_1_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_1_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_is_member_of_household_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_bbb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_3_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.a1_null_only_at_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b3_deduplication_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_composition_preserves_literal_order_and_every_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_no_residence_never_needs_provider' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_spouse_one_guard_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_two_guard_successes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_identical_people_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_other_spouse_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_retains_atom_string_distinction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_mode_retains_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_mode_retains_guard_times_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
++ for module in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703 Oracle/Tests/S7703 Oracle/Tests/S7703Stip
++ /Users/devrashie/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -o /private/tmp/kmla-oracle7703-stip-lists-r1.uHyjpI/Oracle/Tests/S7703Stip.olean Oracle/Tests/S7703Stip.lean
+Oracle/Tests/S7703Stip.lean:106:2: error: Tactic `decide` failed for proposition
+  List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      ["[" ++ ",".intercalate [(stipArgObs (StipArg.wild 100)).encode, (stipArgObs (StipArg.wild 100)).encode] ++ "]"] =
+    ["[null,null]"]
+because its `Decidable` instance
+  instDecidableEqList
+    (List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      ["[" ++ ",".intercalate [(stipArgObs (StipArg.wild 100)).encode, (stipArgObs (StipArg.wild 100)).encode] ++ "]"])
+    ["[null,null]"]
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decEq`, `instDecidableEqBitVec`, `instDecidableEqBool`, `instDecidableEqFin`, `instDecidableEqList`, `instDecidableEqNat`, `instDecidableEqString`, `instDecidableEqUInt8`, `instDecidableOr`, `BitVec.decEq`, `Bool.decEq`, `Nat.decEq`, `Nat.decLe`, `Nat.decLt`, `String.decEq`, and `UInt8.decEq`, reduction got stuck at the `Decidable` instance
+  (([].append
+            (",".intercalate
+                    [(stipArgObs (StipArg.wild 100)).encode,
+                      (stipArgObs (StipArg.wild 100)).encode]).toByteArray.data.toList).append
+        "]".toByteArray.data.toList).hasDecEq
+    (((((((((([].concat (UInt8.ofNat 'n'.val.toNat)).concat (UInt8.ofNat 'u'.val.toNat)).concat
+                                  (UInt8.ofNat 'l'.val.toNat)).concat
+                              (UInt8.ofNat 'l'.val.toNat)).concat
+                          (UInt8.ofNat ','.val.toNat)).concat
+                      (UInt8.ofNat 'n'.val.toNat)).concat
+                  (UInt8.ofNat 'u'.val.toNat)).concat
+              (UInt8.ofNat 'l'.val.toNat)).concat
+          (UInt8.ofNat 'l'.val.toNat)).concat
+      (UInt8.ofNat ']'.val.toNat))
+Oracle/Tests/S7703Stip.lean:104:32: warning: This simp argument is unused:
+  patObs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rootBffbSolutions, observe, List.map_cons, List.map_nil, Solution.encode, Obs.encode,
+    List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Oracle/Tests/S7703Stip.lean:105:21: warning: This simp argument is unused:
+  Obs.encode
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rootBffbSolutions, patObs, observe, List.map_cons, List.map_nil, Solution.encode, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Oracle/Tests/S7703Stip.lean:113:34: error: unsolved goals
+⊢ "[" ++ ((stipArgObs (StipArg.wild 100)).encode ++ "," ++ (stipArgObs (StipArg.wild 100)).encode) ++ "]" ≤
+    "[" ++ ((stipArgObs (StipArg.wild 101)).encode ++ "," ++ (stipArgObs (StipArg.wild 101)).encode) ++ "]"
+Oracle/Tests/S7703Stip.lean:114:2: error: Tactic `decide` failed for proposition
+  List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      ["[" ++ ",".intercalate [(stipArgObs (StipArg.wild 100)).encode, (stipArgObs (StipArg.wild 100)).encode] ++ "]",
+        "[" ++ ",".intercalate [(stipArgObs (StipArg.wild 101)).encode, (stipArgObs (StipArg.wild 101)).encode] ++
+          "]"] =
+    ["[null,null]"]
+because its `Decidable` instance
+  instDecidableEqList
+    (List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      ["[" ++ ",".intercalate [(stipArgObs (StipArg.wild 100)).encode, (stipArgObs (StipArg.wild 100)).encode] ++ "]",
+        "[" ++ ",".intercalate [(stipArgObs (StipArg.wild 101)).encode, (stipArgObs (StipArg.wild 101)).encode] ++ "]"])
+    ["[null,null]"]
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decEq`, `instDecidableEqBitVec`, `instDecidableEqBool`, `instDecidableEqFin`, `instDecidableEqList`, `instDecidableEqNat`, `instDecidableEqString`, `instDecidableEqUInt8`, `instDecidableOr`, `BitVec.decEq`, `Bool.decEq`, `Nat.decEq`, `Nat.decLe`, `Nat.decLt`, `String.decEq`, and `UInt8.decEq`, reduction got stuck at the `Decidable` instance
+  match
+    List.foldr
+      (fun x acc =>
+        match acc with
+        | [] => [x]
+        | y :: tail => if (x == y) = true then acc else x :: acc)
+      []
+      ["[" ++ ",".intercalate [(stipArgObs (StipArg.wild 100)).encode, (stipArgObs (StipArg.wild 100)).encode] ++ "]",
+        "[" ++ ",".intercalate [(stipArgObs (StipArg.wild 101)).encode, (stipArgObs (StipArg.wild 101)).encode] ++
+          "]"] with
+  | [] =>
+    match ["[null,null]"] with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match ["[null,null]"] with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+Oracle/Tests/S7703Stip.lean:111:32: warning: This simp argument is unused:
+  patObs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rootBffbSolutions, observe, List.map_cons, List.map_nil, Solution.encode, Obs.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Oracle/Tests/S7703Stip.lean:112:21: warning: This simp argument is unused:
+  Obs.encode
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rootBffbSolutions, patObs, observe, List.map_cons, List.map_nil, Solution.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.Stipulation.solutions' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.Stipulation.bindSpouse' depends on axioms: [propext]
+'KMLA.Oracle.S7703.Stipulation.admitted_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.one_fresh_at_any_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.duplicate_clauses_kept_and_freshened' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.within_clause_shared_output_variable' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.distinct_output_variables_not_aliased' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.repeated_clauses_do_not_share_stored_variable_names' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.repeated_calls_thread_the_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.year_binding_propagates_to_both_outputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.taxpayer_binding_propagates_to_free_spouse' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_wildcard_rejects_inconsistent_bound_inputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_wildcard_accepts_consistent_bound_inputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_variable_constraint_is_tag_sensitive' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.literal_constraint_is_tag_sensitive' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.textual_year_does_not_match_integer' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.failed_head_does_not_bind_the_next_clause' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.other_signatures_do_not_reorder_matching_clauses' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_spouse_binding_preserves_alias' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_spouse_binding_preserves_independent_marriage' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_tag_mismatch_fails' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipTests.unbound_is_null_only_at_observation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.copied_variables_deduplicate_only_at_observation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.statute_precedes_duplicate_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.bbfb_doubles_statute_but_not_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.stipulated_clause_bypasses_statute_identity_guard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.no_marriage_facts_required_for_stipulated_clause' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.bbfb_bound_spouse_binds_shared_marriage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

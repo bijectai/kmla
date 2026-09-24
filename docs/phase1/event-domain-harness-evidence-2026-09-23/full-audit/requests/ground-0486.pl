@@ -1,0 +1,8 @@
+payment_('alice_is_paid').
+patient_('alice_is_paid','alice').
+start_('alice_is_paid',"2017-12-31").
+amount_('alice_is_paid',33200).
+deduction_('deduction_alice_2017').
+agent_('deduction_alice_2017','alice').
+start_('deduction_alice_2017',"2017-12-31").
+amount_('deduction_alice_2017',1200).

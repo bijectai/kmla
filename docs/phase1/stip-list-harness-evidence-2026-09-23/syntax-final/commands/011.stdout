@@ -1,0 +1,52 @@
+[
+  {
+    "pred":"s151",
+    "args": [
+      {"a":"bob"},
+      {"variable":"_KMLA_W0"},
+      {"list": [ {"a":"charlie"} ]},
+      {"list": [0 ]},
+      2014
+    ]
+  },
+  {
+    "pred":"s151",
+    "args": [
+      {"a":"bob"},
+      {"variable":"_KMLA_W1"},
+      {"list": [ {"a":"charlie"} ]},
+      {"list": [0 ]},
+      2015
+    ]
+  },
+  {
+    "pred":"s151",
+    "args": [
+      {"a":"bob"},
+      {"variable":"_KMLA_W2"},
+      {"list": [ {"a":"charlie"} ]},
+      {"list": [0 ]},
+      2016
+    ]
+  },
+  {
+    "pred":"s151",
+    "args": [
+      {"a":"bob"},
+      {"variable":"_KMLA_W3"},
+      {"list": [ {"a":"charlie"} ]},
+      {"list": [0 ]},
+      2017
+    ]
+  },
+  {
+    "pred":"s151",
+    "args": [
+      {"a":"alice"},
+      2000,
+      {"list": [ {"a":"alice"} ]},
+      {"variable":"_KMLA_W4"},
+      2017
+    ]
+  }
+]

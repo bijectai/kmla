@@ -1,0 +1,22 @@
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 Oracle/Tests/S7703Stip.lean
+exit_code=0
+'KMLA.Oracle.S7703.Stipulation.solutions' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.Stipulation.bindSpouse' depends on axioms: [propext]
+'KMLA.Oracle.S7703.Stipulation.admitted_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.one_fresh_at_any_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.copied_variables_deduplicate_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.statute_precedes_duplicate_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.bbfb_doubles_statute_but_not_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.stipulated_clause_bypasses_statute_identity_guard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

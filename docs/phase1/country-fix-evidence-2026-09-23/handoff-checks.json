@@ -1,0 +1,27 @@
+{
+  "candidate_and_ordinary_event_tail_byte_unchanged": true,
+  "exact_candidate_check_and_unary_provenance_byte_unchanged": true,
+  "stipulation_extraction_byte_unchanged": true,
+  "all_docker_runs_use_exact_pin_and_ro_human": true,
+  "all_prolog_case_fixture_runs_use_ro_corpus": true,
+  "prolog_case_fixture_invocations": 57,
+  "original_facts": 291,
+  "original_stipulations": 0,
+  "original_unary_proofs": 59,
+  "original_grounding_wall_seconds": 0.0035352706909179688,
+  "regrounding_wall_seconds": 0.0035028457641601562,
+  "both_observations_wall_seconds": 0.04147839546203613,
+  "logged_command_count": 61,
+  "logged_command_elapsed_seconds": 22.852227,
+  "timeouts": 0,
+  "nonzero_exit_commands": [
+    "058.stderr",
+    "059.stderr",
+    "060.stderr",
+    "061.stderr"
+  ],
+  "legacy_diagnostic_script_sha256": "d7a3eff71c7026e53f9a7b90d82da0180b84bcc2d3b746569925bb507ed68ba1",
+  "legacy_diagnostic_helper_sha256": "2e7c25dcbf62a0494d228aa10fcaaedbccbdb6e9e43a56fbb8976e77faf52c22",
+  "accounting_assertion_failures": 1,
+  "accounting_corrective_attempts": 1
+}

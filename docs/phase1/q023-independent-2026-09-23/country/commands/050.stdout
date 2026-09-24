@@ -1,0 +1,242 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2017-02-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2017-09-02" ]},
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"s":"caracas, venezuela"} ]
+      },
+      {
+	"ctor":"country_",
+	"args": [ {"s":"caracas, venezuela"},  {"s":"venezuela"} ]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_employer"}},  {"s":"agricultural labor"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_pays"},  {"a":"alice"} ]},
+      {"ctor":"patient_", "args": [ {"a":"alice_pays"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_pays"}, "2017-09-02" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays"}, 23200 ]},
+      {
+	"ctor":"american_employer_",
+	"args": [ {"a":"alice_is_american_employer"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_american_employer"},  {"a":"alice"} ]
+      },
+      {"ctor":"citizenship_", "args": [ {"a":"bob_is_american"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"bob_is_american"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_is_american"},  {"s":"usa"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice_house"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_residence"}, "2017-01-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_residence"}, "2017-12-31" ]},
+      {"ctor":"payment_", "args": [ {"a":"alice_maintains_house"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_maintains_house"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_maintains_house"}, 1 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_house"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_maintains_house"}},  {"a":"alice_house"} ]
+      },
+      {"ctor":"mother_", "args": [ {"a":"dorothy_is_mother"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"dorothy_is_mother"},  {"a":"dorothy"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"dorothy_is_mother"},  {"a":"alice"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"dorothy_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"dorothy_residence"},  {"a":"dorothy"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"dorothy_residence"},  {"a":"alice_house"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"dorothy_residence"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"dorothy_residence"}, "2017-12-31" ]
+      },
+      {"ctor":"income_", "args": [ {"a":"alice_income_2017"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income_2017"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_income_2017"}, "2017-12-31" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income_2017"}, 197407 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays"}
+    },
+    {
+      "source_clause":15,
+      "predicate":"american_employer_",
+      "event": {"a":"alice_is_american_employer"}
+    },
+    {
+      "source_clause":17,
+      "predicate":"citizenship_",
+      "event": {"a":"bob_is_american"}
+    },
+    {
+      "source_clause":20,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":25,
+      "predicate":"payment_",
+      "event": {"a":"alice_maintains_house"}
+    },
+    {
+      "source_clause":30,
+      "predicate":"mother_",
+      "event": {"a":"dorothy_is_mother"}
+    },
+    {
+      "source_clause":33,
+      "predicate":"residence_",
+      "event": {"a":"dorothy_residence"}
+    },
+    {
+      "source_clause":38,
+      "predicate":"income_",
+      "event": {"a":"alice_income_2017"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_employer"},
+    {"a":"alice_pays"},
+    {"a":"alice_is_american_employer"},
+    {"a":"bob_is_american"},
+    {"a":"alice_residence"},
+    {"a":"alice_maintains_house"},
+    {"a":"dorothy_is_mother"},
+    {"a":"dorothy_residence"},
+    {"a":"alice_income_2017"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "stats": {
+    "unary_proofs":9,
+    "distinct_event_domain":9,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":41,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0003721670000000066,
+    "grounding_wall_seconds":0.00037097930908203125,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":55528,
+    "cpu_seconds":0.009393874999999996,
+    "wall_seconds":0.009394407272338867
+  }
+}

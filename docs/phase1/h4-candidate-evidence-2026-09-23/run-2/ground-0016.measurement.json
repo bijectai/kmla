@@ -1,0 +1,37 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+        "pred": "s151_b_applies_2",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": 2015
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [],
+  "stats": {
+    "unary_proofs": 0,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 0,
+    "stipulation_count": 1,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 6.849999999999912e-05,
+    "grounding_wall_seconds": 6.794929504394531e-05,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

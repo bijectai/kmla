@@ -1,0 +1,6 @@
+{
+  "raw_solutions": [ [23200,  [ {"a":"alice_employer"} ] ] ],
+  "proof_count":1,
+  "cpu_seconds":0.0014721669999999965,
+  "wall_seconds":0.0014710426330566406
+}

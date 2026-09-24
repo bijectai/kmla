@@ -1,0 +1,13 @@
+{
+  "query": {
+    "predicate": "s63_d_2",
+    "mode": "bbb",
+    "goal": "'s63_d_2'('alice',[1200],2017)",
+    "outputs": [],
+    "outer_naf": true,
+    "original_goal": "\\+ s63_d_2(alice,[1200],2017)"
+  },
+  "program_request": "ground-0480.pl",
+  "program_sha256": "aa1f1ebc2af94cb40563010ac79b20ad2d75eb6413aca02f2a58cb0adcc41768",
+  "request_sha256": "ed9c5049482874a9d36d187eb254a8f6d999b075ba8476f1d79ad8518c8c8d4b"
+}

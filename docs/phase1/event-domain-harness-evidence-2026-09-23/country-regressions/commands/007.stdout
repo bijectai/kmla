@@ -1,0 +1,6 @@
+{
+  "raw_solutions": [ [ {"a":"alice"},  {"a":"bob"} ] ],
+  "proof_count":1,
+  "cpu_seconds":0.00012787499999999952,
+  "wall_seconds":0.00012993812561035156
+}

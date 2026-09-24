@@ -1,0 +1,240 @@
+{
+  "original_case": "s3306_c_A_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "baltimore, maryland, usa"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "baltimore, maryland, usa"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "4f788e912133535b3433f32fa53d489a9d5933f5f674b485b141ce92d784012b",
+  "query": {
+    "predicate": "s3306_c_A",
+    "mode": "bff",
+    "goal": "'s3306_c_A'('alice_employer',Q0,Q1)",
+    "outputs": [
+      "Q0",
+      "Q1"
+    ],
+    "outer_naf": false,
+    "original_goal": "s3306_c_A(alice_employer,_,_)"
+  },
+  "original_request": "ground-0001.pl",
+  "original_stats": {
+    "unary_proofs": 2,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 13,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00021716599999999087,
+    "grounding_wall_seconds": 0.00021648406982421875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0002.pl",
+  "reground_stats": {
+    "unary_proofs": 2,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 13,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00024070800000000614,
+    "grounding_wall_seconds": 0.000240325927734375,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "raw_solutions": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "proof_count": 1,
+    "cpu_seconds": 0.00012504200000000576,
+    "wall_seconds": 0.00012683868408203125,
+    "canonical": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-f75e41e5b5f54c0cb1db46349254820b",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-final/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0001.pl",
+        "/requests/s3306_c_A_pos-original.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "007.stdout",
+      "stderr": "007.stderr",
+      "elapsed_seconds": 0.381924
+    }
+  },
+  "serialized_observation": {
+    "raw_solutions": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "proof_count": 1,
+    "cpu_seconds": 0.00013266700000000298,
+    "wall_seconds": 0.00013446807861328125,
+    "canonical": [
+      [
+        {
+          "a": "alice"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    ],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-7baa1c76cbab4bfebf701b290e4ab189",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-final/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0002.pl",
+        "/requests/s3306_c_A_pos-serialized.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "008.stdout",
+      "stderr": "008.stderr",
+      "elapsed_seconds": 0.435524
+    }
+  },
+  "anchored_regression": "pass"
+}

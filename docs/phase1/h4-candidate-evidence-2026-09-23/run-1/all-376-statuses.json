@@ -1,0 +1,1934 @@
+[
+  {
+    "original_case": "s151_a_neg.pl",
+    "h4_3_a": "error",
+    "h4_3_b": "blocked:grounding-not-complete",
+    "source_sha256": "ddf3670b519874c4892b56fa7c97a6c490bb39ffd997aaf96c0a64cb18d0d910",
+    "reader_exceptions": [],
+    "h6_observation": "blocked: shared target output-position schema absent; no ground-truth substitute",
+    "error": "s151_a_neg.pl: process failure {'argv': ['docker', 'run', '--rm', '--name', 'kmla-runtime-123143b889824725bd39b8a360dedb2c', '--platform', 'linux/amd64', '--network', 'none', '--read-only', '--tmpfs', '/tmp', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--user', '501:20', '--workdir', '/corpus', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly', '--mount', 'type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/h4-candidate-evidence-2026-09-23/run-1/requests,dst=/requests,readonly', '--entrypoint', 'swipl', 'sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7', '-q', '-f', 'none', '-s', '/harness/grounding.pl', '-g', 'main', '-t', 'halt', '--', '/requests/ground-0003.pl', '/requests/registry.pl', 'regular', 'none'], 'timeout_seconds': 60.0, 'exit': 2, 'timed_out': False, 'stdout': '007.stdout', 'stderr': '007.stderr', 'elapsed_seconds': 0.330435}; retained raw diagnostics"
+  },
+  {
+    "original_case": "s151_a_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_b_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_b_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_c_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_c_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_3_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_3_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_3_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_3_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_5_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s151_d_5_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_a_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_a_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_b_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_b_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_b_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_b_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_E_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_E_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_3_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_c_3_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_1_D_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_1_D_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_C_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_C_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_D_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_D_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_E_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_E_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_F_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_F_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_G_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_G_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_H_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s152_d_2_H_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_iii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_iii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_iv_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_iv_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_v_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_1_v_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_iii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_iii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_iv_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_iv_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_v_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_a_2_v_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_iii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_iii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_iv_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_iv_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_v_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_b_v_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_iii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_iii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_iv_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_iv_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_v_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_c_v_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_iii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_iii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_iv_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_iv_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_v_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s1_d_v_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_1_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_1_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_a_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_II_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_II_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_I_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_I_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_C_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_2_C_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_3_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_3_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_3_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s2_b_3_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3301_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3301_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_3_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_a_3_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_10_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_10_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_10_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_10_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_11_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_11_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_15_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_15_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_2_C_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_2_C_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_7_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_7_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_b_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_A_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_A_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_A_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_A_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_10_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_11_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_11_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_13_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_13_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_16_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_16_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_A_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_A_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_21_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_21_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_5_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_5_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_6_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_6_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_7_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_7_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s3306_c_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_a_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_a_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_b_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_b_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_A_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_A_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_A_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_A_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_C_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_2_C_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_3_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_3_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_5_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_5_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_D_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_6_D_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_7_i_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_7_i_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_7_ii_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_c_7_ii_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_d_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_d_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_d_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_d_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_1_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_1_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_2_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_2_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_2_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_2_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_3_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s63_f_3_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_a_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_a_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_a_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_a_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_A_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_A_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_B_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_B_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_C_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_C_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_D_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_b_1_D_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_f_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s68_f_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_a_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_a_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_a_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_a_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_1_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_1_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_2_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_2_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_3_neg.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "s7703_b_3_pos.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_1.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_10.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_100.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_11.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_12.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_13.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_14.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_15.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_16.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_17.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_18.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_19.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_2.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_20.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_21.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_22.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_23.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_24.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_25.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_26.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_27.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_28.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_29.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_3.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_30.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_31.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_32.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_33.pl",
+    "h4_3_a": "pass",
+    "h4_3_b": "pass",
+    "source_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+    "reader_exceptions": [],
+    "h6_observation": "tax/3 first solution, amount unbound",
+    "original_measurement": "ground-0001.pl",
+    "original_stats": {
+      "unary_proofs": 316,
+      "service_proofs": 157,
+      "distinct_service_domain": 157,
+      "fact_count": 1736,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.05208295800000001,
+      "grounding_wall_seconds": 0.05208277702331543,
+      "candidate": {
+        "outer_iterations": 316,
+        "inner_distinct_terms": 157,
+        "full_two_input_calls": 49612,
+        "successful_proofs": 157
+      }
+    },
+    "reground_measurement": "ground-0002.pl",
+    "reground_stats": {
+      "unary_proofs": 316,
+      "service_proofs": 157,
+      "distinct_service_domain": 157,
+      "fact_count": 1736,
+      "stipulation_count": 0,
+      "wildcard_count": 0,
+      "grounding_cpu_seconds": 0.03382091699999998,
+      "grounding_wall_seconds": 0.03382372856140137,
+      "candidate": {
+        "scope": "not_applicable"
+      }
+    },
+    "tax_first_solution": {
+      "original": {
+        "status": "first_solution",
+        "value": 27181,
+        "cpu_seconds": 0.798959874,
+        "wall_seconds": 0.7992689609527588
+      },
+      "regrounded": {
+        "status": "first_solution",
+        "value": 27181,
+        "cpu_seconds": 0.04344895800000001,
+        "wall_seconds": 0.04347062110900879
+      }
+    }
+  },
+  {
+    "original_case": "tax_case_34.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_35.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_36.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_37.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_38.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_39.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_4.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_40.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_41.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_42.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_43.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_44.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_45.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_46.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_47.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_48.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_49.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_5.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_50.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_51.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_52.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_53.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_54.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_55.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_56.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_57.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_58.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_59.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_6.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_60.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_61.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_62.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_63.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_64.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_65.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_66.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_67.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_68.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_69.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_7.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_70.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_71.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_72.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_73.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_74.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_75.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_76.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_77.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_78.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_79.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_8.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_80.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_81.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_82.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_83.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_84.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_85.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_86.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_87.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_88.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_89.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_9.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_90.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_91.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_92.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_93.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_94.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_95.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_96.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_97.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_98.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  },
+  {
+    "original_case": "tax_case_99.pl",
+    "h4_3_a": "blocked:halt-after-finding",
+    "h4_3_b": "blocked:halt-after-finding"
+  }
+]

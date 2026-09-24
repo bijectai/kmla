@@ -1,0 +1,2401 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_harold_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_harold_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_harold_marriage"
+          },
+          {
+            "a": "harold"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_harold_marriage"
+          },
+          "1992-09-03"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "alice_and_harold_son"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_harold_son"
+          },
+          {
+            "a": "unnamed_son"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_harold_son"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_harold_son"
+          },
+          {
+            "a": "harold"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_harold_son"
+          },
+          "2000-01-25"
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "harold_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "harold_dies"
+          },
+          {
+            "a": "harold"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "harold_dies"
+          },
+          "2016-02-28"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "1993-01-01"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "harold_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "harold_residence"
+          },
+          {
+            "a": "harold"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "harold_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "harold_residence"
+          },
+          "1993-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "harold_residence"
+          },
+          "2016-02-28"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "son_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "son_residence"
+          },
+          {
+            "a": "unnamed_son"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "son_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "son_residence"
+          },
+          "2000-01-25"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_home"
+            }
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1993-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1994-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1995-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1996-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1997-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1998-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "1999-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2000-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2001-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2002-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2003-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2004-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2005-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2006-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2007-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2008-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2009-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2010-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2011-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2012-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2013-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2014-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2016-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2018-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2020-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2021-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2022-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2023-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2024-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2025-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2026-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2027-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2028-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2029-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2030-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2031-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2032-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2033-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2034-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2035-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2036-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2037-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2038-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2039-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2040-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2041-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2042-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2043-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2044-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2045-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2046-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2047-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2048-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2049-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2050-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2051-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2052-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2053-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2054-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2055-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2056-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2057-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2058-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2059-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2060-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2061-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2062-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2063-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2064-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2065-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2066-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2067-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2068-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2069-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2070-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2071-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2072-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2073-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2074-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2075-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2076-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2077-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2078-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2079-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2080-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2081-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2082-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2083-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2084-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2085-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2086-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2087-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2088-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2089-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2090-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2091-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2092-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_home"
+          },
+          "2093-01-01"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          236422
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employs_george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employs_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employs_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_bob"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_cameron"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_dan"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_emily"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_fred"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employs_george"
+          },
+          "2017-09-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_bob"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_cameron"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_dan"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_emily"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_fred"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employs_george"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_cameron"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_dan"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_emily"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_fred"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_george"
+          },
+          "2017-10-01"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_cameron"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_dan"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_emily"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_fred"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_george"
+          },
+          5012
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_bob"
+            }
+          },
+          {
+            "a": "alice_employs_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_cameron"
+            }
+          },
+          {
+            "a": "alice_employs_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_dan"
+            }
+          },
+          {
+            "a": "alice_employs_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_emily"
+            }
+          },
+          {
+            "a": "alice_employs_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_fred"
+            }
+          },
+          {
+            "a": "alice_employs_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_george"
+            }
+          },
+          {
+            "a": "alice_employs_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employs_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_harold_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "son_",
+      "event": {
+        "a": "alice_and_harold_son"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "death_",
+      "event": {
+        "a": "harold_dies"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_residence"
+      }
+    },
+    {
+      "source_clause": 17,
+      "predicate": "residence_",
+      "event": {
+        "a": "harold_residence"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "residence_",
+      "event": {
+        "a": "son_residence"
+      }
+    },
+    {
+      "source_clause": 26,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_home"
+      }
+    },
+    {
+      "source_clause": 31,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2017"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_bob"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_cameron"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_dan"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_emily"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_fred"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employs_george"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_bob"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_cameron"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_dan"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_emily"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_fred"
+      }
+    },
+    {
+      "source_clause": 41,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_george"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_harold_marriage"
+    },
+    {
+      "a": "alice_and_harold_son"
+    },
+    {
+      "a": "harold_dies"
+    },
+    {
+      "a": "alice_residence"
+    },
+    {
+      "a": "harold_residence"
+    },
+    {
+      "a": "son_residence"
+    },
+    {
+      "a": "alice_maintains_home"
+    },
+    {
+      "a": "alice_income_2017"
+    },
+    {
+      "a": "alice_employs_bob"
+    },
+    {
+      "a": "alice_employs_cameron"
+    },
+    {
+      "a": "alice_employs_dan"
+    },
+    {
+      "a": "alice_employs_emily"
+    },
+    {
+      "a": "alice_employs_fred"
+    },
+    {
+      "a": "alice_employs_george"
+    },
+    {
+      "a": "alice_pays_bob"
+    },
+    {
+      "a": "alice_pays_cameron"
+    },
+    {
+      "a": "alice_pays_dan"
+    },
+    {
+      "a": "alice_pays_emily"
+    },
+    {
+      "a": "alice_pays_fred"
+    },
+    {
+      "a": "alice_pays_george"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    36,
+    36,
+    36,
+    36,
+    36,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    43,
+    43,
+    43,
+    43,
+    43,
+    44,
+    44,
+    44,
+    44,
+    44,
+    44,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    46,
+    46,
+    46,
+    46,
+    46,
+    46,
+    47,
+    47,
+    47,
+    47,
+    47,
+    47
+  ],
+  "stats": {
+    "unary_proofs": 20,
+    "distinct_event_domain": 20,
+    "service_proofs": 6,
+    "distinct_service_domain": 6,
+    "fact_count": 206,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.001371584000000009,
+    "grounding_wall_seconds": 0.0013706684112548828,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 68844,
+    "cpu_seconds": 0.04428033399999998,
+    "wall_seconds": 0.0442807674407959
+  }
+}

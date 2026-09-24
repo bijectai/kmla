@@ -1,0 +1,25 @@
+income_(alice_income).
+agent_(alice_income,alice).
+amount_(alice_income,5723215).
+start_(alice_income,"2019-12-31").
+service_(alice_employer).
+patient_(alice_employer,alice).
+agent_(alice_employer,bob).
+start_(alice_employer,"2011-01-02").
+end_(alice_employer,"2019-10-10").
+payment_(alice_pays_bob).
+agent_(alice_pays_bob,alice).
+patient_(alice_pays_bob,bob).
+start_(alice_pays_bob,"2019-12-31").
+amount_(alice_pays_bob,3255).
+purpose_(alice_pays_bob,alice_employer).
+retirement_(bob_retires).
+agent_(bob_retires,bob).
+start_(bob_retires,"2019-02-10").
+reason_(bob_retires,"reached age 65").
+payment_(alice_pays_for_bonus).
+agent_(alice_pays_for_bonus,alice).
+patient_(alice_pays_for_bonus,bob).
+start_(alice_pays_for_bonus,"2019-02-10").
+amount_(alice_pays_for_bonus,12980).
+purpose_(alice_pays_for_bonus,alice_employer).

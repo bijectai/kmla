@@ -1,0 +1,241 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          "2011-08-25"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          22895
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "birth_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          },
+          "1950-01-01"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "joint_return"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2017"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "birth_",
+      "event": {
+        "a": "alice_is_born"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_marriage"
+    },
+    {
+      "a": "joint_return"
+    },
+    {
+      "a": "alice_income_2017"
+    },
+    {
+      "a": "alice_is_born"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 16,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00025887499999999175,
+    "grounding_wall_seconds": 0.0002582073211669922,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 1844,
+    "cpu_seconds": 0.0018140410000000162,
+    "wall_seconds": 0.001814126968383789
+  }
+}

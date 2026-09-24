@@ -853,3 +853,204 @@ established, the empty-list exception remains prohibited and would now drop the
 whole declared family of 157 pairs, the wildcard question in the body stays open
 with `Pat.wild` preserved under H2/A3 until Dev says otherwise, and both H4.3
 checks must be re-run over all 376 rather than over `tax_case_33` alone.
+
+### Review appended 2026-09-23 (Q-020 / A-020) — candidate reviewed, not installed
+
+Bodies above unedited. This records a **review**, and separates three things that
+must not be conflated.
+
+**1. The finding is now sharper than P-GROUND2's body states, and in Dev's
+favour.** The raise is not caused by an unbound first argument. With the original
+goal `findall(Purpose,purpose_(payment_2015_1,Purpose),Purposes)` the first
+`split_string/4` accepts the ground atom and binds `Xp="payment"`, `Yp="2015"`,
+`Zp="1"`; the **second** `split_string/4`, on the free `Service_event`, raises
+`error(instantiation_error,context(system:split_string/4,_))`. So H4.2's
+prescribed mode is satisfied and the call still raises, which is the evidence Dev
+required before entertaining an amendment.
+
+**2. Fable's review of `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`: endorsed as
+explicit enough to implement and verify, subject to four clarifications** that
+change no domain, order or promise and therefore need no new owner decision —
+stated in full in `docs/consult/A-020.md` §3: that the two-input call *replaces*
+rather than supplements step (ii) for this predicate in this file; that step (i)
+must retain per-unary-predicate provenance, since the candidate consumes the
+`service_/1` projection rather than the merged universe; that the inner-domain
+deduplication and the undeduplicated outer event traversal are deliberately
+asymmetric; and that the rule is keyed so the exception fails closed if it does
+not match exactly one clause in the file of that digest. No missing owner choice
+and no counterexample to this tax_case_33-scoped candidate were found.
+
+**3. What this review is not.** Not installed text, not an owner acceptance, not
+an H4.3 result, not a cost measurement, not a claim of preservation or of global
+completeness, and not a Checkpoint 1 outcome. Installation into
+`human/DECISIONS.md` and the re-pin remain Dev's alone. The candidate's promise
+is exactly H4.3(a) and (b) on that case, measured, with a raise, nontermination or
+failed check remaining a finding — never an empty result, a skipped original, a
+broader domain or a source repair. Both H4.3 checks and the traversal cost for all
+376 originals remain open verification obligations.
+
+The separate oracle lane is unaffected by this entry and remains under Dev's
+authorization for continued §7703 translation and one proof-only round.
+
+## 2026-09-23 — REVIEW, no contract change — `country_/2` fact loss is an implementation defect
+
+Origin: Q-021 / A-021. **Not a proposal, not an acceptance, not an installation,
+and not a checkpoint result.** Recorded because it classifies a measured
+mismatch, and because the classification determines who may act.
+
+**Verdict: implementation defect. Dev's interpretation is confirmed, and no new
+owner choice is required.** The chain is entirely in signed text: H4.2(ii)
+applies to "every binary **event** predicate with the **event position** bound to
+each event", and H3 (`human/DECISIONS.md:645`) gives `country_/2` the roles
+**(place, country string)** — it has no event position, so step (ii)'s
+precondition is unmet and binding position 1 to each event is a category error
+rather than a permitted reading. H1 requires supplied facts to be carried in
+source order with duplicates kept and nothing defaulted; H3 adds that even
+predicates with zero statute reads "are still part of `Household` (the serializer
+must round-trip them)", a fortiori one with four reads and fourteen supplied
+clauses.
+
+**Source claims verified, not adopted.** H3's row states 4 statute reads and 14
+case clauses. The statute reads are exactly `section3306.pl:464, 468, 479, 483`.
+Fourteen case files supply exactly one `country_` clause each, all bodyless and
+ground, including `s3306_c_A_pos.pl:15`. Of every binary predicate in H3's table,
+`country_/2` is the **only** one whose declared position-1 role is not an event:
+`first_day_year/2`, `is_before/2` and `last_day_year/2` have zero case clauses,
+and `patient/2`'s two clauses (`tax_case_25.pl:11-12`) do have an event in
+position 1. Scoping the fix to `country_` by name is therefore also complete on
+this corpus — a measured statement about H3's table, not a general rule about
+predicates.
+
+**Mechanism of the measured mismatch**, refining the framing in the question: the
+solution loss comes through the **positive** read at `section3306.pl:464`, not
+through the NAF. With the fact, `country_("baltimore, maryland, usa",Country)`
+binds `Country="usa"` and `Country=="usa"` succeeds. Without it that disjunct
+fails; the second disjunct's `\+ country_(Geographical_location,_)` then succeeds
+under G5 but is defeated by `Geographical_location=="usa"`, since the location is
+`"baltimore, maryland, usa"`. Hence `[[{"a":"alice"},{"a":"bob"}]]` becomes `[]`.
+The mirror site `:479/:483` in `s3306_c_B` has the opposite sign: there the same
+omission can *add* solutions.
+
+**What this demonstrates about the verification design.** H4.3(a) passed while
+(b) failed. (a) is a fixed-point check, and a consistently lossy grounder
+satisfies it. Since (b) is blind to predicates with zero statute reads, neither
+H4.3 check can detect a dropped inert fact, so the regression needs a direct
+supplied-fact-to-fact-list comparison in addition to Dev's stated scope.
+
+**Open and unchanged.** Nothing here authorizes bypassing step (ii) for bodyless
+event facts generally, deduplicating the outer event traversal, widening the
+`tax_case_33` domain, or altering any comparison. A rule-defined `country_`
+clause is not covered and would be a new finding; none exists in the corpus
+today, and the handling should fail closed if one appears. The regression Dev
+named — all 14 files, both H4.3 checks each, and the original
+`[[{"a":"alice"},{"a":"bob"}]]` observation in `s3306_c_A_pos` — stands, with the
+direct fact-list check and the opposite-sign `s3306_c_B_pos/_neg` case added.
+P-GROUND2's own open items are untouched, and the scoped `tax_case_33` candidate
+is unaffected.
+
+## 2026-09-23 — REVIEW, no contract change — list-valued stipulation arguments are a shared-representation gap
+
+Origin: Q-022 / A-022. **Not a proposal, not an acceptance, not an installation,
+no representation chosen or installed.** Recorded because it classifies a halted
+lane and determines who may act.
+
+**Verdict: shared `Interface/`-and-codec gap, not an owner amendment.** G4 does
+not type stipulation argument values, and cannot: the statute's own signature
+`section151.pl:2` is `s151(Taxp,S2,Person_list,Exemptions_list,Taxy)`, whose
+positions 3 and 4 are proper lists built by `findall` at `:48-57`. If G4's flat
+`Term` were the global domain, that signature would be unrepresentable and H6.2's
+list-to-array observation rule would be incoherent. G4's body is entirely about
+atom-versus-`str` tagging and atomic comparison; H2 types *event fact* arguments;
+V1 constrains facts and forces `stipulations = []`; `ValidStip` imposes only
+`Stip.wellFormed`, an arity check. No signed text assigns a type to a stipulated
+argument value.
+
+What the signed text does require is retention: H4.1 admits `s151/5` as a
+stipulated signature with 5 fact and 1 rule clause, H4.2(iii) enumerates
+stipulated clauses keeping unbound outputs as wildcards, H1 retains supplied
+stipulations in order with duplicates and no defaults, and H4.3 requires both
+round-trip checks. H4.1's own wildcard census corroborates that these clauses
+were counted rather than overlooked: it records `s151/5` wildcards at "pos 3×4,
+pos 4×5" over six clauses, i.e. two non-wildcard position-3 values and one
+non-wildcard position-4 value — exactly the two list-bearing heads
+(`s2_a_1_B_pos.pl`, `s63_d_2_pos.pl`) and exactly their list positions.
+
+**The encoder's refusal was correct behaviour** and must survive the fix: the
+Prolog side evaluated normally and printed four solutions, and
+`unsupported_household_term([charlie])` is a harness-side representation failure,
+not G6 and not a reference result.
+
+**Minimal correction, for the builder, with its one trap.** A stipulation
+argument needs a recursive list container so a wildcard inside a list keeps its
+`'$VAR'(N)` identity under A3 and nested lists remain expressible. `Pat` is
+currently shared with `Fact.purpose_`, so extending `Pat` in place would silently
+widen event facts, which Q-022 forbids; a distinct stipulation-argument type, or
+a `Fact`-side well-formedness restriction, avoids that. The wire form needs a
+third tag disjoint from `val`/`wild` so an inner list cannot be confused with the
+outer argument array; the concrete spelling stays builder-owned under P-WIRE.
+Everything still unrepresentable — improper lists, non-list compounds — must keep
+raising and be reported as findings.
+
+**Open.** Both H4.3 checks for the two affected originals and the rest of the
+376; a runtime report of any stipulated solution outside the representable set,
+which replaces the syntactic census as evidence; and the run-specific statuses
+(120 (a) passes, one encoding error, 255 blocked) stay run-specific, not an
+all-376 result. `Valid` needs no change, since V1 already excludes stipulations
+from generated inputs.
+
+## 2026-09-23 — REVIEW, no contract change — the step (ii) event domain is a set
+
+Origin: Q-023 / A-023. **Not a proposal, not an acceptance, not an installation.**
+Recorded because it classifies a halted lane, and because it corrects a sentence
+in A-020.
+
+**Verdict: authorized implementation correction, already determined.** H4.2(i)
+obtains "the event **universe**", and H4.2(ii) binds "the event position **to each
+event**, collecting all solutions **with multiplicity**" — multiplicity is
+attached to the binary solutions, not to the domain. Independently of that
+reading, **H4.3(a) forces it**: re-grounding must reproduce the same ordered fact
+list, and with an occurrence-multiset domain it provably cannot. An event
+declared by `k` unary predicates is visited `k` times, so its binary facts are
+emitted `k`× on pass 1, and on pass 2 the `k` materialised clauses are each found
+from each of the `k` visits, giving `k²`. The measured 114 → 204 → 384 is that
+doubling with `k = 2`: 114 = C + 2X, 204 = C + 4X, 384 = C + 8X with C = 24,
+X = 45. With a set domain and preserved solution multiplicity, grounding is a
+fixed point: `n` materialised facts yield `n` solutions yield `n` facts.
+
+**Three things that must not be conflated, and only the middle one is a set:**
+the stored unary facts (all 13 here — `payment_(e)` and `income_(e)` are
+different facts, kept in enumeration order, never deduplicated); the traversal
+domain (8 distinct ground event terms, first occurrence in step (i)'s order); and
+the binary solutions (every proof kept with multiplicity). Genuine duplicate
+clauses survive all three and stay idempotent.
+
+**No commitment is revisited.** Dev's country instruction — do not bypass step
+(ii) for bodyless event facts, since its per-event order is what H1 fixes — is
+untouched: every event is still visited through step (ii), exactly once, in the
+same relative order. A-021 declined to authorize deduplicating the outer
+traversal and remains correct for its own scope. The A-020 `tax_case_33`
+candidate's text is unaffected and becomes more uniform, since both its loops now
+use distinct-terms-in-first-occurrence-order; its H4.3 measurement was taken
+under the old traversal and must be re-taken.
+
+**Correction to A-020 §3.3.** It called the deduplicated inner domain and the
+undeduplicated outer traversal "both defensible". They are not. The outer
+multiset breaks H4.3(a) for any case containing a multi-kind event, and A-020
+should have said so.
+
+**Optional clarifying text, not an amendment, if Dev wants the order written
+down rather than derived:** "The event universe is the set of distinct ground
+event terms, in first-occurrence order of step (i)'s enumeration; step (ii)
+visits each once. Solution multiplicity and the stored unary facts are
+unaffected." This states what H4.3(a) already forces; sorting the domain would
+also be idempotent but would contradict Dev's per-event-order instruction.
+
+**Required regression.** The three-pass fixed point on `s2_b_3_B_pos.pl`; a case
+with genuinely duplicated binary clauses or proofs, showing multiplicity kept and
+still idempotent; the multi-kind event case storing 13 unary facts over 8 domain
+entries; unchanged ordering for single-kind events; both H4 comparisons on the
+affected original; the 14-country slice re-run; the `tax_case_33` candidate
+re-measured. The audit's 148 H4(a) passes were measured under the old traversal
+and do not transfer — the broad run restarts. No source repair under P-INTENT,
+no validity exclusion, no reordered comparison, no deduplication of stored facts
+or solutions, no waived original.

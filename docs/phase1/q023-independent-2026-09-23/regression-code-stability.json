@@ -1,0 +1,90 @@
+{
+  "before": {
+    "harness/grounding.pl": "b79f8dff6110ee226d795fc81eec07b392b4222561701dfd9ce8eea929e15c0d",
+    "harness/grounding.py": "42b9f7967746bcd7a39a3a3eda5cf2d906f6120370a145d972cdb0aaa04fead5",
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "scripts/test_event_domain.py": "f5c80c3212c86787ada8e96af50f93c2ce1f76f6a7d26b7d955ba6f4d931127b",
+    "scripts/test_country_grounding.py": "cd2549512bf71066236271985a4b5c301c395dd62aeba514c01e89dad6edc907",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124"
+  },
+  "after": {
+    "harness/grounding.pl": "b79f8dff6110ee226d795fc81eec07b392b4222561701dfd9ce8eea929e15c0d",
+    "harness/grounding.py": "42b9f7967746bcd7a39a3a3eda5cf2d906f6120370a145d972cdb0aaa04fead5",
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "scripts/test_event_domain.py": "f5c80c3212c86787ada8e96af50f93c2ce1f76f6a7d26b7d955ba6f4d931127b",
+    "scripts/test_country_grounding.py": "cd2549512bf71066236271985a4b5c301c395dd62aeba514c01e89dad6edc907",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124"
+  },
+  "stable": true,
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/test_country_grounding.py",
+        "--evidence",
+        "docs/phase1/q023-independent-2026-09-23/country",
+        "--timeout",
+        "60"
+      ],
+      "timeout_seconds": 180,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "001.stdout",
+      "stderr": "001.stderr",
+      "elapsed_seconds": 32.996446
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/test_stip_lists.py",
+        "--evidence",
+        "docs/phase1/q023-independent-2026-09-23/lists",
+        "--timeout",
+        "60"
+      ],
+      "timeout_seconds": 180,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "002.stdout",
+      "stderr": "002.stderr",
+      "elapsed_seconds": 12.269622
+    },
+    {
+      "argv": [
+        "env",
+        "PYTHONPATH=scripts",
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py"
+      ],
+      "timeout_seconds": 180,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "003.stdout",
+      "stderr": "003.stderr",
+      "elapsed_seconds": 11.480532
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/human_manifest.py",
+        "verify"
+      ],
+      "timeout_seconds": 180,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "004.stdout",
+      "stderr": "004.stderr",
+      "elapsed_seconds": 0.18006
+    }
+  ]
+}

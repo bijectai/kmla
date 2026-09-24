@@ -1,0 +1,193 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "s": "z"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "z"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          7
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "7"
+          }
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "s": "7"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "s": "z"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "s": "z"
+          },
+          {
+            "a": "str_event"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "z"
+          },
+          {
+            "a": "atom_event"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          7,
+          {
+            "a": "int_event"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "7"
+          },
+          {
+            "a": "atom_number"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "s": "7"
+          },
+          {
+            "a": "string_number"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "s": "z"
+      }
+    },
+    {
+      "source_clause": 2,
+      "predicate": "income_",
+      "event": {
+        "a": "z"
+      }
+    },
+    {
+      "source_clause": 3,
+      "predicate": "payment_",
+      "event": 7
+    },
+    {
+      "source_clause": 4,
+      "predicate": "service_",
+      "event": {
+        "a": "7"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "income_",
+      "event": {
+        "s": "7"
+      }
+    },
+    {
+      "source_clause": 6,
+      "predicate": "service_",
+      "event": {
+        "s": "z"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "s": "z"
+    },
+    {
+      "a": "z"
+    },
+    7,
+    {
+      "a": "7"
+    },
+    {
+      "s": "7"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 5,
+    "service_proofs": 3,
+    "distinct_service_domain": 2,
+    "fact_count": 11,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00026137500000000813,
+    "grounding_wall_seconds": 0.0002608299255371094,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

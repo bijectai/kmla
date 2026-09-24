@@ -29,7 +29,10 @@ projection, canonicalization, missing-value convention or coercion is selected.
 These are lossless spelling choices under the owner-approved byte proposal.
 The observation encoder already exists. [HOUSEHOLD_WIRE.md](HOUSEHOLD_WIRE.md)
 fixes the Household component, with declarative cross-language fixtures under
-`fixtures/household_wire.json`. The full input codec does **not** yet exist:
+`fixtures/household_wire.json`. Its distinct recursive `StipArg` uses the
+disjoint `{"list":[...]}` tag for proper-list stipulation arguments, retaining
+the existing scalar/wildcard bytes; event `Pat` and `Term` remain scalar.
+The full input codec does **not** yet exist:
 before emitting full records, fix the remaining payload/query packaging and
 fixtures here (or in a referenced Interface specification).
 Do not let either lane independently invent the payload wire shape.

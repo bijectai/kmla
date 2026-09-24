@@ -1,0 +1,34 @@
+test_distinct_event_and_stipulation_types (__main__.StipListTests.test_distinct_event_and_stipulation_types) ... ok
+test_lists_rejected_in_event_positions (__main__.StipListTests.test_lists_rejected_in_event_positions) ... ok
+test_original_query_modes_do_not_release_bound_arguments (__main__.StipListTests.test_original_query_modes_do_not_release_bound_arguments) ... ok
+test_recursive_aliases_tags_order_and_empty_lists (__main__.StipListTests.test_recursive_aliases_tags_order_and_empty_lists) ... ok
+test_recursive_large_integer_and_wild_id (__main__.StipListTests.test_recursive_large_integer_and_wild_id) ... ok
+test_strict_recursive_decode (__main__.StipListTests.test_strict_recursive_decode) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.012s
+
+OK
+Traceback (most recent call last):
+  File "/Users/devrashie/Documents/csProjects/kmla/scripts/test_stip_lists.py", line 209, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/devrashie/Documents/csProjects/kmla/scripts/test_stip_lists.py", line 204, in main
+    integration(args.evidence, args.timeout)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devrashie/Documents/csProjects/kmla/scripts/test_stip_lists.py", line 112, in integration
+    session = GroundingSession(evidence)
+  File "/Users/devrashie/Documents/csProjects/kmla/harness/grounding.py", line 77, in __init__
+    self.pinned = PinnedSession(directory)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/devrashie/Documents/csProjects/kmla/harness/swipl.py", line 45, in __init__
+    measured = runtime.measure(self.log, IMAGE, expected["image"]["tag"])
+  File "/Users/devrashie/Documents/csProjects/kmla/harness/runtime.py", line 253, in measure
+    metadata = log.json(["docker", "image", "inspect", image])[0]
+               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devrashie/Documents/csProjects/kmla/harness/runtime.py", line 110, in json
+    _, out, _ = self.run(argv)
+                ~~~~~~~~^^^^^^
+  File "/Users/devrashie/Documents/csProjects/kmla/harness/runtime.py", line 106, in run
+    raise RuntimeFailure(f"command failed: {result}; see {self.directory}")
+harness.runtime.RuntimeFailure: command failed: {'argv': ['docker', 'image', 'inspect', 'sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7'], 'timeout_seconds': 60, 'exit': 1, 'timed_out': False, 'stdout': '001.stdout', 'stderr': '001.stderr', 'elapsed_seconds': 0.132046}; see /Users/devrashie/Documents/csProjects/kmla/docs/phase1/stip-list-harness-evidence-2026-09-23/list-runtime-1/commands

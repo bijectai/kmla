@@ -1,0 +1,4 @@
+ok: 175 shared signatures; 135 queried; 31 stipulated; generated tables match
+'QueryAdmissionTests.outOfRangeQueryRejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QueryAdmissionTests.outOfRangeStipRejected' depends on axioms: [propext, Classical.choice, Quot.sound]
+ok    query-time guards and kernel-checked boundary proofs passed

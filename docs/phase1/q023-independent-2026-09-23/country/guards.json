@@ -1,0 +1,351 @@
+[
+  {
+    "guard": "tags/order/duplicates/inert/wildcard/ordinary-event",
+    "status": "pass",
+    "requests": [
+      "ground-0029.pl",
+      "ground-0030.pl"
+    ],
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        1,
+        4,
+        6
+      ],
+      "emitted_source_indices": [
+        1,
+        4,
+        6
+      ],
+      "emitted_fact_positions_1based": [
+        1,
+        4,
+        6
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "a": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "a": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        }
+      ]
+    },
+    "reground_predicate_counts": {
+      "agent_": 1,
+      "patient": 1,
+      "patient_": 1,
+      "country_": 3,
+      "purpose_": 1
+    },
+    "fixture_h4_3_a": "equal under A-023; both stored unary duplicates retained"
+  },
+  {
+    "guard": "country without unary events",
+    "status": "pass",
+    "request": "ground-0031.pl"
+  },
+  {
+    "guard": "rule_true",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-a6cc7404085d48bca1ae51de81c9b27b",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0032.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "058.stdout",
+      "stderr": "058.stderr",
+      "elapsed_seconds": 0.407536
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: country_rule_not_covered\n"
+  },
+  {
+    "guard": "rule_fail",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-f23112ccc0a44fd89ef04a101d0007c0",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0033.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "059.stdout",
+      "stderr": "059.stderr",
+      "elapsed_seconds": 0.402043
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: country_rule_not_covered\n"
+  },
+  {
+    "guard": "free_place",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-bb4ec9bac64248d7a8466e681f17a04e",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0034.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "060.stdout",
+      "stderr": "060.stderr",
+      "elapsed_seconds": 0.537531
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: nonground_country_not_covered\n"
+  },
+  {
+    "guard": "free_country",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-a099c6a0ab494f1a87dbb8d765ca9f37",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/country/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0035.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "061.stdout",
+      "stderr": "061.stderr",
+      "elapsed_seconds": 0.452891
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: nonground_country_not_covered\n"
+  }
+]

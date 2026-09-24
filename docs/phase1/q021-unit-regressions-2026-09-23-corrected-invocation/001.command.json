@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "env",
+    "PYTHONPATH=scripts",
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "scripts.test_case_reader",
+    "scripts.test_facts",
+    "scripts.test_grounding",
+    "scripts.test_country_grounding",
+    "scripts.test_observation",
+    "scripts.test_parity_invocation",
+    "scripts.test_runtime",
+    "scripts.test_runner_boundary"
+  ],
+  "timeout_seconds": 120,
+  "exit": 0,
+  "timed_out": false,
+  "stdout": "001.stdout",
+  "stderr": "001.stderr",
+  "elapsed_seconds": 4.165925
+}

@@ -1,0 +1,47 @@
+{
+  "before": {
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124",
+    "scripts/test_facts.py": "a7f849a62eb78481b2f90b0dd3b223afda17253ce25a90d61d8e74b06c7a18ea",
+    "scripts/test_grounding_dispatch.py": "4a5bc2fc5b56df594c906b8ff7c3a7d9148578594b099aba50a3cc239a2e592f"
+  },
+  "after": {
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124",
+    "scripts/test_facts.py": "a7f849a62eb78481b2f90b0dd3b223afda17253ce25a90d61d8e74b06c7a18ea",
+    "scripts/test_grounding_dispatch.py": "4a5bc2fc5b56df594c906b8ff7c3a7d9148578594b099aba50a3cc239a2e592f"
+  },
+  "stable": true,
+  "command": {
+    "argv": [
+      "env",
+      "PYTHONPATH=scripts",
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "scripts.test_case_reader",
+      "scripts.test_facts",
+      "scripts.test_grounding",
+      "scripts.test_grounding_dispatch",
+      "scripts.test_country_grounding",
+      "scripts.test_stip_lists",
+      "scripts.test_observation",
+      "scripts.test_parity_invocation",
+      "scripts.test_runtime",
+      "scripts.test_runner_boundary",
+      "scripts.test_verify_phase0",
+      "scripts.test_consult"
+    ],
+    "timeout_seconds": 180,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 6.610674
+  }
+}

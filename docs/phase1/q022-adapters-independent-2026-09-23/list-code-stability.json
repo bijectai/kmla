@@ -1,0 +1,40 @@
+{
+  "before": {
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding.py": "7388fafe1b752638dbf6a7226ad3c170f81d3dfa076a52904204e3bb6e743226",
+    "harness/grounding_observations.pl": "7ab0b41ae2fcf5137317878dfd23db6e52ea901d11540373a60b9ad7f691d2f9",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "harness/transport_reader.pl": "b9382446cee14c91cd86c9d7f00d6d2258026ccc01d30edce4672839f141a882",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124",
+    "scripts/test_grounding.py": "9e91c83f2793aa8a1339a482647f9e687d70f99f5393fef3d76111ff8f53fda0"
+  },
+  "after": {
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "harness/grounding.pl": "f92f547d8fdd1a3bf3319842687d5a4d9f8dc2c7280561e6081761aea1956d65",
+    "harness/grounding.py": "7388fafe1b752638dbf6a7226ad3c170f81d3dfa076a52904204e3bb6e743226",
+    "harness/grounding_observations.pl": "7ab0b41ae2fcf5137317878dfd23db6e52ea901d11540373a60b9ad7f691d2f9",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "harness/transport_reader.pl": "b9382446cee14c91cd86c9d7f00d6d2258026ccc01d30edce4672839f141a882",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124",
+    "scripts/test_grounding.py": "9e91c83f2793aa8a1339a482647f9e687d70f99f5393fef3d76111ff8f53fda0"
+  },
+  "stable": true,
+  "command": {
+    "argv": [
+      "python3",
+      "-B",
+      "scripts/test_stip_lists.py",
+      "--evidence",
+      "docs/phase1/q022-adapters-independent-2026-09-23/lists",
+      "--timeout",
+      "60"
+    ],
+    "timeout_seconds": 180,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 9.728385
+  }
+}

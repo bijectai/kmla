@@ -1,0 +1,2 @@
+ERROR: '$set_predicate_attribute'/3: No permission to modify static procedure `s151_c/4'
+ERROR: Defined at /corpus/statutes/prolog/section151.pl:98

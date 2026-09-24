@@ -1,0 +1,58 @@
+{
+  "scope": "syntactic supplied-head census only; not runtime solution completeness",
+  "original_case_count": 376,
+  "list_head_clause_count": 2,
+  "distinct_case_count": 2,
+  "rows": [
+    {
+      "case": "s2_a_1_B_pos.pl",
+      "source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+      "source_clause_index_1based": 27,
+      "kind": "rule",
+      "signature": "s151/5",
+      "list_argument_positions": [
+        3,
+        4
+      ],
+      "clause_verbatim": "s151(bob,_,[charlie],[0],Year) :- between(2014,2017,Year)",
+      "list_nodes": [
+        {
+          "text": "[charlie]",
+          "element_tags": [
+            "atom"
+          ],
+          "variable_names": []
+        },
+        {
+          "text": "[0]",
+          "element_tags": [
+            "int"
+          ],
+          "variable_names": []
+        }
+      ]
+    },
+    {
+      "case": "s63_d_2_pos.pl",
+      "source_sha256": "0a1dc6a183134f02f6517b88250bcb6b6ddf3fd3e8752936cc255cd3662e6749",
+      "source_clause_index_1based": 5,
+      "kind": "fact",
+      "signature": "s151/5",
+      "list_argument_positions": [
+        3
+      ],
+      "clause_verbatim": "s151(alice,2000,[alice],_,2017)",
+      "list_nodes": [
+        {
+          "text": "[alice]",
+          "element_tags": [
+            "atom"
+          ],
+          "variable_names": []
+        }
+      ]
+    }
+  ],
+  "reader_sha256": "c0e4afea64a561cd8a641f479be1eefede62b7ed56d4878b28e1c9aab7807f95",
+  "script_sha256": "4888643a23346e61345acaa8bed3fcaa0d817ead9bccbe32d452761c3b4dc23f"
+}

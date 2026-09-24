@@ -31,6 +31,7 @@ arguments([Arg|Args], Names, [Value|Values]) :-
 
 argument(Arg, Names, Value) :-
     ( var(Arg) -> variable_name(Names, Arg, Name), Value = json([variable=Name])
+    ; is_list(Arg) -> arguments(Arg, Names, Items), Value = json([list=Items])
     ; integer(Arg) -> Value = Arg
     ; atom(Arg) -> Value = json([a=Arg])
     ; string(Arg) -> Value = json([s=Arg])

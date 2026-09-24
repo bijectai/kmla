@@ -1,0 +1,173 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+        "pred": "s151_5",
+        "args": [
+          {
+            "wild": 0
+          },
+          {
+            "list": [
+              {
+                "wild": 0
+              },
+              {
+                "wild": 1
+              },
+              {
+                "list": [
+                  {
+                    "wild": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "wild": 1
+          },
+          {
+            "list": [
+              {
+                "list": []
+              },
+              {
+                "val": {
+                  "a": "[]"
+                }
+              },
+              {
+                "val": {
+                  "s": "[]"
+                }
+              },
+              {
+                "val": {
+                  "a": "usa"
+                }
+              },
+              {
+                "val": {
+                  "s": "usa"
+                }
+              },
+              {
+                "val": 123456789012345678901234567890
+              },
+              {
+                "val": -123456789012345678901234567890
+              },
+              {
+                "val": {
+                  "a": "dup"
+                }
+              },
+              {
+                "val": {
+                  "a": "dup"
+                }
+              }
+            ]
+          },
+          {
+            "val": 2015
+          }
+        ]
+      },
+      {
+        "pred": "s151_5",
+        "args": [
+          {
+            "wild": 2
+          },
+          {
+            "list": [
+              {
+                "wild": 2
+              },
+              {
+                "wild": 3
+              },
+              {
+                "list": [
+                  {
+                    "wild": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "wild": 3
+          },
+          {
+            "list": [
+              {
+                "list": []
+              },
+              {
+                "val": {
+                  "a": "[]"
+                }
+              },
+              {
+                "val": {
+                  "s": "[]"
+                }
+              },
+              {
+                "val": {
+                  "a": "usa"
+                }
+              },
+              {
+                "val": {
+                  "s": "usa"
+                }
+              },
+              {
+                "val": 123456789012345678901234567890
+              },
+              {
+                "val": -123456789012345678901234567890
+              },
+              {
+                "val": {
+                  "a": "dup"
+                }
+              },
+              {
+                "val": {
+                  "a": "dup"
+                }
+              }
+            ]
+          },
+          {
+            "val": 2015
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs": 0,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 0,
+    "stipulation_count": 2,
+    "wildcard_count": 4,
+    "grounding_cpu_seconds": 0.000757041,
+    "grounding_wall_seconds": 0.000774383544921875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

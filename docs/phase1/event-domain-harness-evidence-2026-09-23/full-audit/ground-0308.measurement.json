@@ -1,0 +1,307 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-01-24"
+            }
+          },
+          {
+            "wild": 0
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-02-04"
+            }
+          },
+          {
+            "wild": 1
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-03-03"
+            }
+          },
+          {
+            "wild": 2
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-03-19"
+            }
+          },
+          {
+            "wild": 3
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-04-02"
+            }
+          },
+          {
+            "wild": 4
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-10-25"
+            }
+          },
+          {
+            "wild": 5
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-11-08"
+            }
+          },
+          {
+            "wild": 6
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-11-22"
+            }
+          },
+          {
+            "wild": 7
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-12-01"
+            }
+          },
+          {
+            "wild": 8
+          }
+        ]
+      },
+      {
+        "pred": "s3306_c_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03"
+            }
+          },
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "bob"
+            }
+          },
+          {
+            "val": {
+              "s": "2017-12-03"
+            }
+          },
+          {
+            "wild": 9
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [],
+  "event_domain": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs": 0,
+    "distinct_event_domain": 0,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 0,
+    "stipulation_count": 10,
+    "wildcard_count": 10,
+    "grounding_cpu_seconds": 0.0002418750000000025,
+    "grounding_wall_seconds": 0.00024080276489257812,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

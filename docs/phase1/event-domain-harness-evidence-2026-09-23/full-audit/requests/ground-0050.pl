@@ -1,0 +1,9 @@
+son_('bob_is_son').
+agent_('bob_is_son','bob').
+patient_('bob_is_son','alice').
+residence_('alice_and_bob').
+agent_('alice_and_bob','alice').
+agent_('alice_and_bob','bob').
+patient_('alice_and_bob','home').
+start_('alice_and_bob',"2015-09-01").
+end_('alice_and_bob',"2019-11-03").

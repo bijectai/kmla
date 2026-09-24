@@ -1,0 +1,36 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"son_", "args": [ {"a":"alice_and_bob"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2014-01-31" ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"son_",
+      "event": {"a":"alice_and_bob"}
+    }
+  ],
+  "event_domain": [ {"a":"alice_and_bob"} ],
+  "fact_source_clauses": [1, 2, 3, 4 ],
+  "stats": {
+    "unary_proofs":1,
+    "distinct_event_domain":1,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":4,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00020945899999999518,
+    "grounding_wall_seconds":0.0002090930938720703,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

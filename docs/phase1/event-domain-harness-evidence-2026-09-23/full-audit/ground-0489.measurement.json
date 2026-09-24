@@ -1,0 +1,236 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          33200
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2017-02-03"
+        ]
+      },
+      {
+        "ctor": "birth_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          },
+          "1950-03-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_is_born"
+          },
+          "1950-03-02"
+        ]
+      },
+      {
+        "ctor": "birth_",
+        "args": [
+          {
+            "a": "bob_is_born"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_is_born"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_is_born"
+          },
+          "1955-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_is_born"
+          },
+          "1955-03-03"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "birth_",
+      "event": {
+        "a": "alice_is_born"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "birth_",
+      "event": {
+        "a": "bob_is_born"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_is_paid"
+    },
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "alice_is_born"
+    },
+    {
+      "a": "bob_is_born"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 16,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003002500000000019,
+    "grounding_wall_seconds": 0.0002994537353515625,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

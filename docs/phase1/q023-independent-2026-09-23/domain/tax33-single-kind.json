@@ -1,0 +1,60 @@
+{
+  "case": "tax_case_33.pl",
+  "source_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "observation": {
+    "status": "pass",
+    "original": {
+      "status": "first_solution",
+      "value": 27181,
+      "cpu_seconds": 1.3932763279999998,
+      "wall_seconds": 1.3937139511108398
+    },
+    "serialized": {
+      "status": "first_solution",
+      "value": 27181,
+      "cpu_seconds": 0.07111829199999997,
+      "wall_seconds": 0.07111859321594238
+    }
+  },
+  "requests": [
+    "ground-0008.pl",
+    "ground-0009.pl"
+  ],
+  "original_stats": {
+    "unary_proofs": 316,
+    "distinct_event_domain": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.10379879099999997,
+    "grounding_wall_seconds": 0.10480523109436035,
+    "candidate": {
+      "outer_iterations": 316,
+      "inner_distinct_terms": 157,
+      "full_two_input_calls": 49612,
+      "successful_proofs": 157
+    }
+  },
+  "reground_stats": {
+    "unary_proofs": 316,
+    "distinct_event_domain": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.04859179400000002,
+    "grounding_wall_seconds": 0.049378156661987305,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "legacy_measurement": "docs/phase1/stip-list-harness-evidence-2026-09-23/full-audit/ground-0001.measurement.json",
+  "legacy_measurement_sha256": "efb4fb10f670ffbd17845b6e8f27c18748d9b15d82a01ee06729af74ac5891f2",
+  "full_ordered_fact_wire_byte_identical": true,
+  "fact_wire_sha256": "dd4252617bd66e90024693b1ff513d919095f8d35c771e3e13ad1fdd09e9643f"
+}

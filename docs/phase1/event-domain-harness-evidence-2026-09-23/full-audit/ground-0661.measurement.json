@@ -1,0 +1,419 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          "2014-05-30"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          103272
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2017-02-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2017-09-02"
+        ]
+      },
+      {
+        "ctor": "location_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "s": "baltimore"
+          }
+        ]
+      },
+      {
+        "ctor": "location_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "s": "maryland"
+          }
+        ]
+      },
+      {
+        "ctor": "location_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          "2017-09-02"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays"
+            }
+          },
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          3200
+        ]
+      },
+      {
+        "ctor": "sibling_",
+        "args": [
+          {
+            "a": "bob_brother_of_alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_brother_of_alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_brother_of_alice"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "joint_return"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2017"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays"
+      }
+    },
+    {
+      "source_clause": 28,
+      "predicate": "sibling_",
+      "event": {
+        "a": "bob_brother_of_alice"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_marriage"
+    },
+    {
+      "a": "joint_return"
+    },
+    {
+      "a": "alice_income_2017"
+    },
+    {
+      "a": "alice_employer"
+    },
+    {
+      "a": "alice_pays"
+    },
+    {
+      "a": "bob_brother_of_alice"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 6,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 30,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00028770799999999763,
+    "grounding_wall_seconds": 0.0002868175506591797,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 21635,
+    "cpu_seconds": 0.0020050419999999847,
+    "wall_seconds": 0.0020055770874023438
+  }
+}

@@ -1,0 +1,11 @@
+test_digest_mismatch_has_no_fallback (__main__.RecognitionTests.test_digest_mismatch_has_no_fallback) ... ok
+test_exact_original (__main__.RecognitionTests.test_exact_original) ... ok
+test_non_tax_mode_is_not_guessed (__main__.RecognitionTests.test_non_tax_mode_is_not_guessed) ... ok
+test_other_case_is_regular (__main__.RecognitionTests.test_other_case_is_regular) ... ok
+test_same_digest_different_name_rejected (__main__.RecognitionTests.test_same_digest_different_name_rejected) ... ok
+test_scalar_input_does_not_include_expected_answer (__main__.RecognitionTests.test_scalar_input_does_not_include_expected_answer) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.013s
+
+OK

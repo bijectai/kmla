@@ -1,0 +1,130 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"payment_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2016-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 51020 ]},
+      {"ctor":"marriage_", "args": [ {"a":"alice_and_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2016-02-03" ]},
+      {
+	"ctor":"joint_return_",
+	"args": [ {"a":"alice_and_bob_file_a_joint_return"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob_file_a_joint_return"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob_file_a_joint_return"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_and_bob_file_a_joint_return"}, "2016-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_and_bob_file_a_joint_return"}, "2016-12-31" ]
+      },
+      {"ctor":"income_", "args": [ {"a":"bob_income"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_income"},  {"a":"bob"} ]},
+      {"ctor":"amount_", "args": [ {"a":"bob_income"}, 42939 ]},
+      {"ctor":"start_", "args": [ {"a":"bob_income"}, "2016-12-31" ]},
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction"}, 21137 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction"}, "2016-12-31" ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"payment_",
+      "event": {"a":"alice_is_paid"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"marriage_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"joint_return_",
+      "event": {"a":"alice_and_bob_file_a_joint_return"}
+    },
+    {
+      "source_clause":14,
+      "predicate":"income_",
+      "event": {"a":"bob_income"}
+    },
+    {
+      "source_clause":18,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_is_paid"},
+    {"a":"alice_and_bob"},
+    {"a":"alice_and_bob_file_a_joint_return"},
+    {"a":"bob_income"},
+    {"a":"itemized_deduction"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "stats": {
+    "unary_proofs":5,
+    "distinct_event_domain":5,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":21,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00039750000000002284,
+    "grounding_wall_seconds":0.000396728515625,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":14473,
+    "cpu_seconds":0.002467999999999998,
+    "wall_seconds":0.0024683475494384766
+  }
+}

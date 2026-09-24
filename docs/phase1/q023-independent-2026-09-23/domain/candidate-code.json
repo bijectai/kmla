@@ -1,0 +1,12 @@
+{
+  "scope": "A-020 candidate / A-021 country / A-023 event-domain measurement; not installation or parity",
+  "hashes": {
+    "harness/grounding.py": "42b9f7967746bcd7a39a3a3eda5cf2d906f6120370a145d972cdb0aaa04fead5",
+    "harness/grounding.pl": "b79f8dff6110ee226d795fc81eec07b392b4222561701dfd9ce8eea929e15c0d",
+    "scripts/test_grounding.py": "55bbd46762db8cf878883fca7d1700dc95f8e2972528196202c302c96c8cd680"
+  },
+  "fact_emission_order": "stable source-clause provenance order (H1); phase execution stays unary, binary, stipulation",
+  "event_domain": "A-023: distinct ground terms by Prolog == in first-occurrence unary order; stored unary and binary proofs unchanged",
+  "wildcards": "findall copies numbered in final facts/stipulations traversal; no wildcard expansion",
+  "country": "country_/2 only: supplied ground bodyless clause emitted once at original source-clause index; rule/non-ground fails closed"
+}

@@ -1,0 +1,99 @@
+{
+  "original_case": "tax_case_51.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "8ca3dd3cad07a56b04f386093fb5dc9513fd80e30329794dfd38fd828ef96e2e",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "tax_first_solution",
+    "query": null,
+    "tax_input": "tax_inputs('alice',2017)",
+    "reason": null
+  },
+  "original_queries": [
+    "tax(alice,2017,55528)"
+  ],
+  "original_measurement": "ground-0647.pl",
+  "original_stats": {
+    "unary_proofs": 9,
+    "distinct_event_domain": 9,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 41,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00037720800000001775,
+    "grounding_wall_seconds": 0.0003762245178222656,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0648.pl",
+  "reground_stats": {
+    "unary_proofs": 9,
+    "distinct_event_domain": 9,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 41,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003434589999999904,
+    "grounding_wall_seconds": 0.0003428459167480469,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "pass",
+    "original": {
+      "status": "first_solution",
+      "value": 55528,
+      "cpu_seconds": 0.009319707999999982,
+      "wall_seconds": 0.009320259094238281
+    },
+    "serialized": {
+      "status": "first_solution",
+      "value": 55528,
+      "cpu_seconds": 0.009398917000000007,
+      "wall_seconds": 0.0093994140625
+    }
+  }
+}

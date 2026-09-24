@@ -1,0 +1,251 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2006"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2006"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2006"
+          },
+          97407
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2006"
+          },
+          "2006-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_income_2006"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_income_2006"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_income_2006"
+          },
+          136370
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_income_2006"
+          },
+          "2006-12-31"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2006-02-03"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          "2006-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          "2006-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2006"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_income_2006"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "bob_and_alice_joint_return"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_income_2006"
+    },
+    {
+      "a": "bob_income_2006"
+    },
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "bob_and_alice_joint_return"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 17,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00025433399999999495,
+    "grounding_wall_seconds": 0.0002536773681640625,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 66088,
+    "cpu_seconds": 0.0017909579999999814,
+    "wall_seconds": 0.0017910003662109375
+  }
+}

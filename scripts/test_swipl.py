@@ -23,6 +23,8 @@ def expected_clauses(h):
         return t.value if t.tag == "int" else {"a" if t.tag == "atom" else "s": t.value}
     def pat(p):
         return {"variable": f"_KMLA_W{p.value}"} if p.tag == "wild" else term(p.value)
+    def stip_arg(p):
+        return {"list": list(map(stip_arg, p.value))} if p.tag == "list" else pat(p)
     result = []
     for fact in h.facts:
         args = [term(a) if k == "Term" else pat(a) if k == "Pat" else
@@ -30,7 +32,7 @@ def expected_clauses(h):
                 for k, a in zip(f.FACT_TYPES[fact.ctor], fact.args)]
         result.append({"pred": fact.ctor, "args": args})
     for stip in h.stipulations:
-        result.append({"pred": f.STIP_SIGNATURES[stip.pred][0], "args": list(map(pat, stip.args))})
+        result.append({"pred": f.STIP_SIGNATURES[stip.pred][0], "args": list(map(stip_arg, stip.args))})
     return result
 
 

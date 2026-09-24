@@ -1,0 +1,12 @@
+s3306_c('alice_employer_2017-01-24','alice','bob',"2017-01-24",_KMLA_W0).
+s3306_c('alice_employer_2017-02-04','alice','bob',"2017-02-04",_KMLA_W1).
+s3306_c('alice_employer_2017-03-03','alice','bob',"2017-03-03",_KMLA_W2).
+s3306_c('alice_employer_2017-03-19','alice','bob',"2017-03-19",_KMLA_W3).
+s3306_c('alice_employer_2017-04-02','alice','bob',"2017-04-02",_KMLA_W4).
+s3306_c('alice_employer_2017-05-09','alice','bob',"2017-05-09",_KMLA_W5).
+s3306_c('alice_employer_2017-10-15','alice','bob',"2017-10-15",_KMLA_W6).
+s3306_c('alice_employer_2017-10-25','alice','bob',"2017-10-25",_KMLA_W7).
+s3306_c('alice_employer_2017-11-08','alice','bob',"2017-11-08",_KMLA_W8).
+s3306_c('alice_employer_2017-11-22','alice','bob',"2017-11-22",_KMLA_W9).
+s3306_c('alice_employer_2017-12-01','alice','bob',"2017-12-01",_KMLA_W10).
+s3306_c('alice_employer_2017-12-03','alice','bob',"2017-12-03",_KMLA_W11).

@@ -1,0 +1,94 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"father_", "args": [ {"a":"bob_is_father"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_is_father"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_is_father"},  {"a":"alice"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_residence"}, "2012-01-01" ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"bob_residence"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_residence"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_residence"},  {"a":"home"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"bob_residence"}, "2012-01-01" ]},
+      {"ctor":"income_", "args": [ {"a":"alice_makes_money"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_makes_money"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_makes_money"}, 102268 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_makes_money"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_makes_money"}, "2015-12-31" ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"father_",
+      "event": {"a":"bob_is_father"}
+    },
+    {
+      "source_clause":4,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":8,
+      "predicate":"residence_",
+      "event": {"a":"bob_residence"}
+    },
+    {
+      "source_clause":12,
+      "predicate":"income_",
+      "event": {"a":"alice_makes_money"}
+    }
+  ],
+  "event_domain": [
+    {"a":"bob_is_father"},
+    {"a":"alice_residence"},
+    {"a":"bob_residence"},
+    {"a":"alice_makes_money"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+  "stats": {
+    "unary_proofs":4,
+    "distinct_event_domain":4,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":16,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00023545899999999342,
+    "grounding_wall_seconds":0.0002346038818359375,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":25055,
+    "cpu_seconds":0.0039607920000000185,
+    "wall_seconds":0.003961086273193359
+  }
+}

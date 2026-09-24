@@ -1,0 +1,136 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "father_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_charlie"
+          },
+          "2014-04-15"
+        ]
+      },
+      {
+        "ctor": "brother_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          "1992-10-12"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "father_",
+      "event": {
+        "a": "alice_and_charlie"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "brother_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_charlie"
+    },
+    {
+      "a": "bob_and_charlie"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "stats": {
+    "unary_proofs": 2,
+    "distinct_event_domain": 2,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 8,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0005312500000000109,
+    "grounding_wall_seconds": 0.0005304813385009766,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"payment_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 33200 ]},
+      {"ctor":"payment_", "args": [ {"a":"bob_is_paid"} ]},
+      {"ctor":"patient_", "args": [ {"a":"bob_is_paid"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"bob_is_paid"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"bob_is_paid"}, 10 ]},
+      {"ctor":"marriage_", "args": [ {"a":"alice_and_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2017-02-03" ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"payment_",
+      "event": {"a":"alice_is_paid"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"payment_",
+      "event": {"a":"bob_is_paid"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"marriage_",
+      "event": {"a":"alice_and_bob"}
+    }
+  ],
+  "event_domain": [ {"a":"alice_is_paid"},  {"a":"bob_is_paid"},  {"a":"alice_and_bob"} ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+  "stats": {
+    "unary_proofs":3,
+    "distinct_event_domain":3,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":12,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0002749579999999918,
+    "grounding_wall_seconds":0.0002741813659667969,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

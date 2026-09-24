@@ -1,0 +1,13 @@
+{
+  "query": {
+    "predicate": "s3306_c_1",
+    "mode": "bb",
+    "goal": "'s3306_c_1'('alice_employer',2017)",
+    "outputs": [],
+    "outer_naf": false,
+    "original_goal": "s3306_c_1(alice_employer,2017)"
+  },
+  "program_request": "ground-0009.pl",
+  "program_sha256": "2b5a0c8673207e3146771878946279d837c8bbcf4cf305c48e6d7d2eb7928ad4",
+  "request_sha256": "bcec6126c2f09eb569e44a0ca787f7b746b7c21f7c04fb141a1cea249a5a9fe7"
+}

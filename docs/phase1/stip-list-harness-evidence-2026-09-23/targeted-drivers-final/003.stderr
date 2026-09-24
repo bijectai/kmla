@@ -1,0 +1,16 @@
+test_a_anchor_checks_both_not_just_mutual_equality (__main__.CountryTests.test_a_anchor_checks_both_not_just_mutual_equality) ... ok
+test_all_ten_exact_modes (__main__.CountryTests.test_all_ten_exact_modes) ... ok
+test_b_anchors_require_measured_full_output_and_proof_counts (__main__.CountryTests.test_b_anchors_require_measured_full_output_and_proof_counts) ... ok
+test_bound_list_is_not_scalar_or_free (__main__.CountryTests.test_bound_list_is_not_scalar_or_free) ... ok
+test_canonicalization_only_at_observation_boundary (__main__.CountryTests.test_canonicalization_only_at_observation_boundary) ... ok
+test_country_source_fails_closed (__main__.CountryTests.test_country_source_fails_closed) ... ok
+test_country_source_tags_order_duplicates (__main__.CountryTests.test_country_source_tags_order_duplicates) ... ok
+test_no_extra_conjunct_or_unknown_mode_guess (__main__.CountryTests.test_no_extra_conjunct_or_unknown_mode_guess) ... ok
+test_outer_naf_only_and_bound_inputs_unchanged (__main__.CountryTests.test_outer_naf_only_and_bound_inputs_unchanged) ... ok
+test_tax_uses_only_person_and_year (__main__.CountryTests.test_tax_uses_only_person_and_year) ... ok
+test_variable_sharing_and_anonymous_freshness (__main__.CountryTests.test_variable_sharing_and_anonymous_freshness) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.008s
+
+OK

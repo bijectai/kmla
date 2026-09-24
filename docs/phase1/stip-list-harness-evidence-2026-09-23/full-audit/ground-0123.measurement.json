@@ -1,0 +1,125 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-12-31"
+        ]
+      }
+    ],
+    "stipulations": [
+      {
+        "pred": "s7703_4",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "spouse"
+            }
+          },
+          {
+            "wild": 0
+          },
+          {
+            "val": 2017
+          }
+        ]
+      },
+      {
+        "pred": "s63_3",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": 2017
+          },
+          {
+            "val": 164612
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause": 2,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "joint_return"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "stats": {
+    "unary_proofs": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 5,
+    "stipulation_count": 2,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0002501250000000038,
+    "grounding_wall_seconds": 0.00024962425231933594,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

@@ -1,0 +1,4800 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"marriage_", "args": [ {"a":"alice_marriage"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_marriage"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_marriage"},  {"a":"spouse"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_marriage"}, "2006-06-02" ]
+      },
+      {"ctor":"joint_return_", "args": [ {"a":"joint_return"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"joint_return"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"joint_return"},  {"a":"spouse"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"joint_return"}, "2017-01-01" ]},
+      {"ctor":"end_", "args": [ {"a":"joint_return"}, "2017-12-31" ]},
+      {"ctor":"income_", "args": [ {"a":"alice_income_2017"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income_2017"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_income_2017"}, "2017-12-31" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income_2017"}, 684642 ]},
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_fred"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_bob"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_cameron"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_dan"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_emily"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_george"}},
+	  {"s":"agricultural labor"}
+	]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-03-19_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-04-02_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-05-09_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-15_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-10-25_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-08_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-01_george"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily"} ]
+      },
+      {
+	"ctor":"service_",
+	"args": [ {"a":"alice_employer_2017-12-03_george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-25_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron"},  {"a":"cameron"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily"},  {"a":"emily"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_george"},  {"a":"george"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_george"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_george"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_george"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_george"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_george"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_george"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_george"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_george"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_george"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-03-19_george"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-04-02_george"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-05-09_george"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-15_george"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-10-25_george"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-08_george"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-01_george"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_employer_2017-12-03_george"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-03-19_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-04-02_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-05-09_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-15_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-10-25_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-08_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-01_george_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily_payment"} ]
+      },
+      {
+	"ctor":"payment_",
+	"args": [ {"a":"alice_employer_2017-12-03_george_payment"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-02-04_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-02-04_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_fred_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_cameron_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan_payment"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_emily_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"agent_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_george_payment"},
+	  {"a":"alice"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-02-04_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred_payment"},  {"a":"fred"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob_payment"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_cameron_payment"},
+	  {"a":"cameron"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan_payment"},  {"a":"dan"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_emily_payment"},
+	  {"a":"emily"}
+	]
+      },
+      {
+	"ctor":"patient_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_george_payment"},
+	  {"a":"george"}
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob_payment"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-01-24_cameron_payment"},
+	  "2017-01-24"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan_payment"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily_payment"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred_payment"}, "2017-01-24" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob_payment"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-02-04_cameron_payment"},
+	  "2017-02-04"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred_payment"}, "2017-02-04" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob_payment"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-03-03_cameron_payment"},
+	  "2017-03-03"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan_payment"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily_payment"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred_payment"}, "2017-03-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_cameron_payment"},
+	  "2017-03-19"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan_payment"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily_payment"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred_payment"}, "2017-03-19" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-03-19_george_payment"},
+	  "2017-03-19"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob_payment"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_cameron_payment"},
+	  "2017-04-02"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan_payment"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred_payment"}, "2017-04-02" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-04-02_george_payment"},
+	  "2017-04-02"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_cameron_payment"},
+	  "2017-05-09"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan_payment"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily_payment"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred_payment"}, "2017-05-09" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-05-09_george_payment"},
+	  "2017-05-09"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob_payment"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_cameron_payment"},
+	  "2017-10-15"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan_payment"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily_payment"}, "2017-10-15" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-10-15_george_payment"},
+	  "2017-10-15"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob_payment"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily_payment"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred_payment"}, "2017-10-25" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-10-25_george_payment"},
+	  "2017-10-25"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob_payment"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_cameron_payment"},
+	  "2017-11-08"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily_payment"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred_payment"}, "2017-11-08" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-11-08_george_payment"},
+	  "2017-11-08"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob_payment"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-11-22_cameron_payment"},
+	  "2017-11-22"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan_payment"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily_payment"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred_payment"}, "2017-11-22" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob_payment"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_cameron_payment"},
+	  "2017-12-01"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan_payment"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily_payment"}, "2017-12-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-12-01_george_payment"},
+	  "2017-12-01"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob_payment"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_cameron_payment"},
+	  "2017-12-03"
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan_payment"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily_payment"}, "2017-12-03" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [
+	  {"a":"alice_employer_2017-12-03_george_payment"},
+	  "2017-12-03"
+	]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-01-24_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-01-24_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-01-24_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-01-24_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-01-24_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-02-04_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-02-04_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-02-04_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-03_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-03_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-03_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-03_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-03_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-19_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-19_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-19_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-19_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-03-19_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-04-02_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-04-02_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-04-02_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-04-02_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-04-02_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-05-09_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-05-09_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-05-09_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-05-09_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-05-09_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-15_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-15_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-15_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-15_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-15_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-25_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-25_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-25_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-10-25_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-08_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-08_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-08_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-08_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-08_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-22_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-22_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-22_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-22_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-11-22_fred_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-01_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-01_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-01_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-01_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-01_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-03_bob_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-03_cameron_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-03_dan_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-03_emily_payment"}, 632 ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"alice_employer_2017-12-03_george_payment"}, 632 ]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_bob_payment"}},
+	  {"a":"alice_employer_2017-01-24_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_cameron_payment"}},
+	  {"a":"alice_employer_2017-01-24_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_dan_payment"}},
+	  {"a":"alice_employer_2017-01-24_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_emily_payment"}},
+	  {"a":"alice_employer_2017-01-24_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-01-24_fred_payment"}},
+	  {"a":"alice_employer_2017-01-24_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_bob_payment"}},
+	  {"a":"alice_employer_2017-02-04_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_cameron_payment"}},
+	  {"a":"alice_employer_2017-02-04_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-02-04_fred_payment"}},
+	  {"a":"alice_employer_2017-02-04_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_bob_payment"}},
+	  {"a":"alice_employer_2017-03-03_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_cameron_payment"}},
+	  {"a":"alice_employer_2017-03-03_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_dan_payment"}},
+	  {"a":"alice_employer_2017-03-03_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_emily_payment"}},
+	  {"a":"alice_employer_2017-03-03_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-03_fred_payment"}},
+	  {"a":"alice_employer_2017-03-03_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_cameron_payment"}},
+	  {"a":"alice_employer_2017-03-19_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_dan_payment"}},
+	  {"a":"alice_employer_2017-03-19_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_emily_payment"}},
+	  {"a":"alice_employer_2017-03-19_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_fred_payment"}},
+	  {"a":"alice_employer_2017-03-19_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-03-19_george_payment"}},
+	  {"a":"alice_employer_2017-03-19_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_bob_payment"}},
+	  {"a":"alice_employer_2017-04-02_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_cameron_payment"}},
+	  {"a":"alice_employer_2017-04-02_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_dan_payment"}},
+	  {"a":"alice_employer_2017-04-02_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_fred_payment"}},
+	  {"a":"alice_employer_2017-04-02_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-04-02_george_payment"}},
+	  {"a":"alice_employer_2017-04-02_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_cameron_payment"}},
+	  {"a":"alice_employer_2017-05-09_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_dan_payment"}},
+	  {"a":"alice_employer_2017-05-09_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_emily_payment"}},
+	  {"a":"alice_employer_2017-05-09_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_fred_payment"}},
+	  {"a":"alice_employer_2017-05-09_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-05-09_george_payment"}},
+	  {"a":"alice_employer_2017-05-09_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_bob_payment"}},
+	  {"a":"alice_employer_2017-10-15_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_cameron_payment"}},
+	  {"a":"alice_employer_2017-10-15_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_dan_payment"}},
+	  {"a":"alice_employer_2017-10-15_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_emily_payment"}},
+	  {"a":"alice_employer_2017-10-15_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-15_george_payment"}},
+	  {"a":"alice_employer_2017-10-15_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_bob_payment"}},
+	  {"a":"alice_employer_2017-10-25_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_emily_payment"}},
+	  {"a":"alice_employer_2017-10-25_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_fred_payment"}},
+	  {"a":"alice_employer_2017-10-25_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-10-25_george_payment"}},
+	  {"a":"alice_employer_2017-10-25_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_bob_payment"}},
+	  {"a":"alice_employer_2017-11-08_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_cameron_payment"}},
+	  {"a":"alice_employer_2017-11-08_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_emily_payment"}},
+	  {"a":"alice_employer_2017-11-08_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_fred_payment"}},
+	  {"a":"alice_employer_2017-11-08_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-08_george_payment"}},
+	  {"a":"alice_employer_2017-11-08_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_bob_payment"}},
+	  {"a":"alice_employer_2017-11-22_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_cameron_payment"}},
+	  {"a":"alice_employer_2017-11-22_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_dan_payment"}},
+	  {"a":"alice_employer_2017-11-22_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_emily_payment"}},
+	  {"a":"alice_employer_2017-11-22_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-11-22_fred_payment"}},
+	  {"a":"alice_employer_2017-11-22_fred"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_bob_payment"}},
+	  {"a":"alice_employer_2017-12-01_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_cameron_payment"}},
+	  {"a":"alice_employer_2017-12-01_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_dan_payment"}},
+	  {"a":"alice_employer_2017-12-01_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_emily_payment"}},
+	  {"a":"alice_employer_2017-12-01_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-01_george_payment"}},
+	  {"a":"alice_employer_2017-12-01_george"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_bob_payment"}},
+	  {"a":"alice_employer_2017-12-03_bob"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_cameron_payment"}},
+	  {"a":"alice_employer_2017-12-03_cameron"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_dan_payment"}},
+	  {"a":"alice_employer_2017-12-03_dan"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_emily_payment"}},
+	  {"a":"alice_employer_2017-12-03_emily"}
+	]
+      },
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_employer_2017-12-03_george_payment"}},
+	  {"a":"alice_employer_2017-12-03_george"}
+	]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"marriage_",
+      "event": {"a":"alice_marriage"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"joint_return_",
+      "event": {"a":"joint_return"}
+    },
+    {
+      "source_clause":10,
+      "predicate":"income_",
+      "event": {"a":"alice_income_2017"}
+    },
+    {
+      "source_clause":71,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-01-24_bob"}
+    },
+    {
+      "source_clause":72,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-01-24_cameron"}
+    },
+    {
+      "source_clause":73,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-01-24_dan"}
+    },
+    {
+      "source_clause":74,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-01-24_emily"}
+    },
+    {
+      "source_clause":75,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-01-24_fred"}
+    },
+    {
+      "source_clause":76,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-02-04_bob"}
+    },
+    {
+      "source_clause":77,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-02-04_cameron"}
+    },
+    {
+      "source_clause":78,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-02-04_fred"}
+    },
+    {
+      "source_clause":79,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-03_bob"}
+    },
+    {
+      "source_clause":80,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-03_cameron"}
+    },
+    {
+      "source_clause":81,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-03_dan"}
+    },
+    {
+      "source_clause":82,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-03_emily"}
+    },
+    {
+      "source_clause":83,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-03_fred"}
+    },
+    {
+      "source_clause":84,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-19_cameron"}
+    },
+    {
+      "source_clause":85,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-19_dan"}
+    },
+    {
+      "source_clause":86,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-19_emily"}
+    },
+    {
+      "source_clause":87,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-19_fred"}
+    },
+    {
+      "source_clause":88,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-03-19_george"}
+    },
+    {
+      "source_clause":89,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-04-02_bob"}
+    },
+    {
+      "source_clause":90,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-04-02_cameron"}
+    },
+    {
+      "source_clause":91,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-04-02_dan"}
+    },
+    {
+      "source_clause":92,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-04-02_fred"}
+    },
+    {
+      "source_clause":93,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-04-02_george"}
+    },
+    {
+      "source_clause":94,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-05-09_cameron"}
+    },
+    {
+      "source_clause":95,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-05-09_dan"}
+    },
+    {
+      "source_clause":96,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-05-09_emily"}
+    },
+    {
+      "source_clause":97,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-05-09_fred"}
+    },
+    {
+      "source_clause":98,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-05-09_george"}
+    },
+    {
+      "source_clause":99,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-15_bob"}
+    },
+    {
+      "source_clause":100,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-15_cameron"}
+    },
+    {
+      "source_clause":101,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-15_dan"}
+    },
+    {
+      "source_clause":102,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-15_emily"}
+    },
+    {
+      "source_clause":103,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-15_george"}
+    },
+    {
+      "source_clause":104,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-25_bob"}
+    },
+    {
+      "source_clause":105,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-25_emily"}
+    },
+    {
+      "source_clause":106,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-25_fred"}
+    },
+    {
+      "source_clause":107,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-10-25_george"}
+    },
+    {
+      "source_clause":108,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-08_bob"}
+    },
+    {
+      "source_clause":109,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-08_cameron"}
+    },
+    {
+      "source_clause":110,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-08_emily"}
+    },
+    {
+      "source_clause":111,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-08_fred"}
+    },
+    {
+      "source_clause":112,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-08_george"}
+    },
+    {
+      "source_clause":113,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-22_bob"}
+    },
+    {
+      "source_clause":114,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-22_cameron"}
+    },
+    {
+      "source_clause":115,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-22_dan"}
+    },
+    {
+      "source_clause":116,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-22_emily"}
+    },
+    {
+      "source_clause":117,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-11-22_fred"}
+    },
+    {
+      "source_clause":118,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-01_bob"}
+    },
+    {
+      "source_clause":119,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-01_cameron"}
+    },
+    {
+      "source_clause":120,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-01_dan"}
+    },
+    {
+      "source_clause":121,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-01_emily"}
+    },
+    {
+      "source_clause":122,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-01_george"}
+    },
+    {
+      "source_clause":123,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-03_bob"}
+    },
+    {
+      "source_clause":124,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-03_cameron"}
+    },
+    {
+      "source_clause":125,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-03_dan"}
+    },
+    {
+      "source_clause":126,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-03_emily"}
+    },
+    {
+      "source_clause":127,
+      "predicate":"service_",
+      "event": {"a":"alice_employer_2017-12-03_george"}
+    },
+    {
+      "source_clause":356,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-01-24_bob_payment"}
+    },
+    {
+      "source_clause":357,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-01-24_cameron_payment"}
+    },
+    {
+      "source_clause":358,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-01-24_dan_payment"}
+    },
+    {
+      "source_clause":359,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-01-24_emily_payment"}
+    },
+    {
+      "source_clause":360,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-01-24_fred_payment"}
+    },
+    {
+      "source_clause":361,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-02-04_bob_payment"}
+    },
+    {
+      "source_clause":362,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-02-04_cameron_payment"}
+    },
+    {
+      "source_clause":363,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-02-04_fred_payment"}
+    },
+    {
+      "source_clause":364,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-03_bob_payment"}
+    },
+    {
+      "source_clause":365,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-03_cameron_payment"}
+    },
+    {
+      "source_clause":366,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-03_dan_payment"}
+    },
+    {
+      "source_clause":367,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-03_emily_payment"}
+    },
+    {
+      "source_clause":368,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-03_fred_payment"}
+    },
+    {
+      "source_clause":369,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-19_cameron_payment"}
+    },
+    {
+      "source_clause":370,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-19_dan_payment"}
+    },
+    {
+      "source_clause":371,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-19_emily_payment"}
+    },
+    {
+      "source_clause":372,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-19_fred_payment"}
+    },
+    {
+      "source_clause":373,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-03-19_george_payment"}
+    },
+    {
+      "source_clause":374,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-04-02_bob_payment"}
+    },
+    {
+      "source_clause":375,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-04-02_cameron_payment"}
+    },
+    {
+      "source_clause":376,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-04-02_dan_payment"}
+    },
+    {
+      "source_clause":377,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-04-02_fred_payment"}
+    },
+    {
+      "source_clause":378,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-04-02_george_payment"}
+    },
+    {
+      "source_clause":379,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-05-09_cameron_payment"}
+    },
+    {
+      "source_clause":380,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-05-09_dan_payment"}
+    },
+    {
+      "source_clause":381,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-05-09_emily_payment"}
+    },
+    {
+      "source_clause":382,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-05-09_fred_payment"}
+    },
+    {
+      "source_clause":383,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-05-09_george_payment"}
+    },
+    {
+      "source_clause":384,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-15_bob_payment"}
+    },
+    {
+      "source_clause":385,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-15_cameron_payment"}
+    },
+    {
+      "source_clause":386,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-15_dan_payment"}
+    },
+    {
+      "source_clause":387,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-15_emily_payment"}
+    },
+    {
+      "source_clause":388,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-15_george_payment"}
+    },
+    {
+      "source_clause":389,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-25_bob_payment"}
+    },
+    {
+      "source_clause":390,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-25_emily_payment"}
+    },
+    {
+      "source_clause":391,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-25_fred_payment"}
+    },
+    {
+      "source_clause":392,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-10-25_george_payment"}
+    },
+    {
+      "source_clause":393,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-08_bob_payment"}
+    },
+    {
+      "source_clause":394,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-08_cameron_payment"}
+    },
+    {
+      "source_clause":395,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-08_emily_payment"}
+    },
+    {
+      "source_clause":396,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-08_fred_payment"}
+    },
+    {
+      "source_clause":397,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-08_george_payment"}
+    },
+    {
+      "source_clause":398,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-22_bob_payment"}
+    },
+    {
+      "source_clause":399,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-22_cameron_payment"}
+    },
+    {
+      "source_clause":400,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-22_dan_payment"}
+    },
+    {
+      "source_clause":401,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-22_emily_payment"}
+    },
+    {
+      "source_clause":402,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-11-22_fred_payment"}
+    },
+    {
+      "source_clause":403,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-01_bob_payment"}
+    },
+    {
+      "source_clause":404,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-01_cameron_payment"}
+    },
+    {
+      "source_clause":405,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-01_dan_payment"}
+    },
+    {
+      "source_clause":406,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-01_emily_payment"}
+    },
+    {
+      "source_clause":407,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-01_george_payment"}
+    },
+    {
+      "source_clause":408,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-03_bob_payment"}
+    },
+    {
+      "source_clause":409,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-03_cameron_payment"}
+    },
+    {
+      "source_clause":410,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-03_dan_payment"}
+    },
+    {
+      "source_clause":411,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-03_emily_payment"}
+    },
+    {
+      "source_clause":412,
+      "predicate":"payment_",
+      "event": {"a":"alice_employer_2017-12-03_george_payment"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_marriage"},
+    {"a":"joint_return"},
+    {"a":"alice_income_2017"},
+    {"a":"alice_employer_2017-01-24_bob"},
+    {"a":"alice_employer_2017-01-24_cameron"},
+    {"a":"alice_employer_2017-01-24_dan"},
+    {"a":"alice_employer_2017-01-24_emily"},
+    {"a":"alice_employer_2017-01-24_fred"},
+    {"a":"alice_employer_2017-02-04_bob"},
+    {"a":"alice_employer_2017-02-04_cameron"},
+    {"a":"alice_employer_2017-02-04_fred"},
+    {"a":"alice_employer_2017-03-03_bob"},
+    {"a":"alice_employer_2017-03-03_cameron"},
+    {"a":"alice_employer_2017-03-03_dan"},
+    {"a":"alice_employer_2017-03-03_emily"},
+    {"a":"alice_employer_2017-03-03_fred"},
+    {"a":"alice_employer_2017-03-19_cameron"},
+    {"a":"alice_employer_2017-03-19_dan"},
+    {"a":"alice_employer_2017-03-19_emily"},
+    {"a":"alice_employer_2017-03-19_fred"},
+    {"a":"alice_employer_2017-03-19_george"},
+    {"a":"alice_employer_2017-04-02_bob"},
+    {"a":"alice_employer_2017-04-02_cameron"},
+    {"a":"alice_employer_2017-04-02_dan"},
+    {"a":"alice_employer_2017-04-02_fred"},
+    {"a":"alice_employer_2017-04-02_george"},
+    {"a":"alice_employer_2017-05-09_cameron"},
+    {"a":"alice_employer_2017-05-09_dan"},
+    {"a":"alice_employer_2017-05-09_emily"},
+    {"a":"alice_employer_2017-05-09_fred"},
+    {"a":"alice_employer_2017-05-09_george"},
+    {"a":"alice_employer_2017-10-15_bob"},
+    {"a":"alice_employer_2017-10-15_cameron"},
+    {"a":"alice_employer_2017-10-15_dan"},
+    {"a":"alice_employer_2017-10-15_emily"},
+    {"a":"alice_employer_2017-10-15_george"},
+    {"a":"alice_employer_2017-10-25_bob"},
+    {"a":"alice_employer_2017-10-25_emily"},
+    {"a":"alice_employer_2017-10-25_fred"},
+    {"a":"alice_employer_2017-10-25_george"},
+    {"a":"alice_employer_2017-11-08_bob"},
+    {"a":"alice_employer_2017-11-08_cameron"},
+    {"a":"alice_employer_2017-11-08_emily"},
+    {"a":"alice_employer_2017-11-08_fred"},
+    {"a":"alice_employer_2017-11-08_george"},
+    {"a":"alice_employer_2017-11-22_bob"},
+    {"a":"alice_employer_2017-11-22_cameron"},
+    {"a":"alice_employer_2017-11-22_dan"},
+    {"a":"alice_employer_2017-11-22_emily"},
+    {"a":"alice_employer_2017-11-22_fred"},
+    {"a":"alice_employer_2017-12-01_bob"},
+    {"a":"alice_employer_2017-12-01_cameron"},
+    {"a":"alice_employer_2017-12-01_dan"},
+    {"a":"alice_employer_2017-12-01_emily"},
+    {"a":"alice_employer_2017-12-01_george"},
+    {"a":"alice_employer_2017-12-03_bob"},
+    {"a":"alice_employer_2017-12-03_cameron"},
+    {"a":"alice_employer_2017-12-03_dan"},
+    {"a":"alice_employer_2017-12-03_emily"},
+    {"a":"alice_employer_2017-12-03_george"},
+    {"a":"alice_employer_2017-01-24_bob_payment"},
+    {"a":"alice_employer_2017-01-24_cameron_payment"},
+    {"a":"alice_employer_2017-01-24_dan_payment"},
+    {"a":"alice_employer_2017-01-24_emily_payment"},
+    {"a":"alice_employer_2017-01-24_fred_payment"},
+    {"a":"alice_employer_2017-02-04_bob_payment"},
+    {"a":"alice_employer_2017-02-04_cameron_payment"},
+    {"a":"alice_employer_2017-02-04_fred_payment"},
+    {"a":"alice_employer_2017-03-03_bob_payment"},
+    {"a":"alice_employer_2017-03-03_cameron_payment"},
+    {"a":"alice_employer_2017-03-03_dan_payment"},
+    {"a":"alice_employer_2017-03-03_emily_payment"},
+    {"a":"alice_employer_2017-03-03_fred_payment"},
+    {"a":"alice_employer_2017-03-19_cameron_payment"},
+    {"a":"alice_employer_2017-03-19_dan_payment"},
+    {"a":"alice_employer_2017-03-19_emily_payment"},
+    {"a":"alice_employer_2017-03-19_fred_payment"},
+    {"a":"alice_employer_2017-03-19_george_payment"},
+    {"a":"alice_employer_2017-04-02_bob_payment"},
+    {"a":"alice_employer_2017-04-02_cameron_payment"},
+    {"a":"alice_employer_2017-04-02_dan_payment"},
+    {"a":"alice_employer_2017-04-02_fred_payment"},
+    {"a":"alice_employer_2017-04-02_george_payment"},
+    {"a":"alice_employer_2017-05-09_cameron_payment"},
+    {"a":"alice_employer_2017-05-09_dan_payment"},
+    {"a":"alice_employer_2017-05-09_emily_payment"},
+    {"a":"alice_employer_2017-05-09_fred_payment"},
+    {"a":"alice_employer_2017-05-09_george_payment"},
+    {"a":"alice_employer_2017-10-15_bob_payment"},
+    {"a":"alice_employer_2017-10-15_cameron_payment"},
+    {"a":"alice_employer_2017-10-15_dan_payment"},
+    {"a":"alice_employer_2017-10-15_emily_payment"},
+    {"a":"alice_employer_2017-10-15_george_payment"},
+    {"a":"alice_employer_2017-10-25_bob_payment"},
+    {"a":"alice_employer_2017-10-25_emily_payment"},
+    {"a":"alice_employer_2017-10-25_fred_payment"},
+    {"a":"alice_employer_2017-10-25_george_payment"},
+    {"a":"alice_employer_2017-11-08_bob_payment"},
+    {"a":"alice_employer_2017-11-08_cameron_payment"},
+    {"a":"alice_employer_2017-11-08_emily_payment"},
+    {"a":"alice_employer_2017-11-08_fred_payment"},
+    {"a":"alice_employer_2017-11-08_george_payment"},
+    {"a":"alice_employer_2017-11-22_bob_payment"},
+    {"a":"alice_employer_2017-11-22_cameron_payment"},
+    {"a":"alice_employer_2017-11-22_dan_payment"},
+    {"a":"alice_employer_2017-11-22_emily_payment"},
+    {"a":"alice_employer_2017-11-22_fred_payment"},
+    {"a":"alice_employer_2017-12-01_bob_payment"},
+    {"a":"alice_employer_2017-12-01_cameron_payment"},
+    {"a":"alice_employer_2017-12-01_dan_payment"},
+    {"a":"alice_employer_2017-12-01_emily_payment"},
+    {"a":"alice_employer_2017-12-01_george_payment"},
+    {"a":"alice_employer_2017-12-03_bob_payment"},
+    {"a":"alice_employer_2017-12-03_cameron_payment"},
+    {"a":"alice_employer_2017-12-03_dan_payment"},
+    {"a":"alice_employer_2017-12-03_emily_payment"},
+    {"a":"alice_employer_2017-12-03_george_payment"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697
+  ],
+  "stats": {
+    "unary_proofs":117,
+    "distinct_event_domain":117,
+    "service_proofs":57,
+    "distinct_service_domain":57,
+    "fact_count":697,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.006462791999999995,
+    "grounding_wall_seconds":0.006462574005126953,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":247432,
+    "cpu_seconds":0.18170029099999999,
+    "wall_seconds":0.18172836303710938
+  }
+}

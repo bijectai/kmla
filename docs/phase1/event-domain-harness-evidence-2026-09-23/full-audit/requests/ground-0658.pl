@@ -1,0 +1,17 @@
+income_('alice_makes_money').
+agent_('alice_makes_money','alice').
+amount_('alice_makes_money',395276).
+start_('alice_makes_money',"2015-01-01").
+end_('alice_makes_money',"2015-12-31").
+deduction_('itemized_deduction_1').
+agent_('itemized_deduction_1','alice').
+amount_('itemized_deduction_1',4571).
+start_('itemized_deduction_1',"2015-12-31").
+deduction_('itemized_deduction_2').
+agent_('itemized_deduction_2','alice').
+amount_('itemized_deduction_2',1973).
+start_('itemized_deduction_2',"2015-12-31").
+deduction_('itemized_deduction_3').
+agent_('itemized_deduction_3','alice').
+amount_('itemized_deduction_3',15271).
+start_('itemized_deduction_3',"2015-12-31").

@@ -1,0 +1,108 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"business_", "args": [ {"a":"alice_runs_a_factory"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_runs_a_factory"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"type_",
+	"args": [ {"a":"alice_runs_a_factory"},  {"s":"manufacturing"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_runs_a_factory"}, "2016-02-01" ]
+      },
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2017-06-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2017-08-31" ]},
+      {
+	"ctor":"type_",
+	"args": [ {"a":"alice_employer"},  {"s":"painting Alice's house"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_pays_bob"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_pays_bob"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_pays_bob"}, "2017-10-02" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_pays_bob"}, "2017-10-02" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays_bob"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays_bob"}, 323 ]},
+      {
+	"ctor":"means_",
+	"args": [ {"a":"alice_pays_bob"},  {"s":"goods"} ]
+      }
+    ],
+    "stipulations": [
+      {
+	"pred":"s3306_c_5",
+	"args": [
+	  {"val": {"a":"alice_employer"}},
+	  {"val": {"a":"alice"}},
+	  {"val": {"a":"bob"}},
+	  {"wild":0},
+	  {"wild":1}
+	]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"business_",
+      "event": {"a":"alice_runs_a_factory"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":11,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays_bob"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_runs_a_factory"},
+    {"a":"alice_employer"},
+    {"a":"alice_pays_bob"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
+  "stats": {
+    "unary_proofs":3,
+    "distinct_event_domain":3,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":18,
+    "stipulation_count":1,
+    "wildcard_count":2,
+    "grounding_cpu_seconds":0.0003239579999999992,
+    "grounding_wall_seconds":0.0003235340118408203,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

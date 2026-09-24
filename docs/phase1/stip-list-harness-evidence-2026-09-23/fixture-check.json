@@ -1,0 +1,54 @@
+{
+  "legacy_reference": "eeea5f9^:Interface/fixtures/household_wire.json",
+  "legacy_fixtures_unchanged": 6,
+  "all_shared_fixtures": [
+    {
+      "name": "empty",
+      "wire_sha256": "2ed1ddea16e3e469333cf76db848d9f00ee8521bd1713962b33edbbb8210cae0",
+      "wire_bytes": 30,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "tags_order_integers",
+      "wire_sha256": "3748cd7efdb7f226c43a3e63e6967f35c9b3836d40540083abaf78a77d1908c1",
+      "wire_bytes": 432,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "controls_unicode",
+      "wire_sha256": "f9a5a1131b7b705a0e34360e2ce16916f3e955f7d6b5004720368db1cc91b41c",
+      "wire_bytes": 391,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "dates_and_tagged_patterns",
+      "wire_sha256": "b347632aa592c1ebfca37372a0057eff451880290bd922180b2be11ff931455c",
+      "wire_bytes": 585,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "wildcard_identity",
+      "wire_sha256": "8f783f31ab3f2774ea3c34e1618aaeab98f4ac51a761ec5ad1aeb5752566819a",
+      "wire_bytes": 406,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "opaque_helpers_extra_arities",
+      "wire_sha256": "5e4ba9ca19cceaf5051c8287cc68a219b3bcfe642e41063be0bcceb9a0bfab5e",
+      "wire_bytes": 844,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "supplied_s151_lists",
+      "wire_sha256": "5724827f8d501a5aea2be97dbb0ec6a8562f8ddbe6008cb8df9f91ca959d4bb0",
+      "wire_bytes": 656,
+      "current_encoder_matches": true
+    },
+    {
+      "name": "recursive_lists_shared_ids",
+      "wire_sha256": "15b21e7498b38fd9605f2adc5a8dcf0a63e5156bb313174f2df82bff0594e7b1",
+      "wire_bytes": 366,
+      "current_encoder_matches": true
+    }
+  ]
+}

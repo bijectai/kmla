@@ -1,0 +1,10 @@
+test_all_declared_values_match_exact_wire_bytes (test_stip_list_wire.StipListWireTests.test_all_declared_values_match_exact_wire_bytes) ... ok
+test_legacy_wire_bytes_are_unchanged (test_stip_list_wire.StipListWireTests.test_legacy_wire_bytes_are_unchanged) ... ok
+test_nested_identity_tags_precision_order_and_multiplicity (test_stip_list_wire.StipListWireTests.test_nested_identity_tags_precision_order_and_multiplicity) ... ok
+test_original_s151_shapes_from_q022 (test_stip_list_wire.StipListWireTests.test_original_s151_shapes_from_q022) ... ok
+test_stipulations_use_declared_arities_and_recursive_tags (test_stip_list_wire.StipListWireTests.test_stipulations_use_declared_arities_and_recursive_tags) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

@@ -1,0 +1,59 @@
+{
+  "original_case": "s63_c_6_D_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "19698f536587bb738b1f2ccd01892a896ef2db8a25fe171c20b00fe27781e989",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s63_c_6_D/2 bb"
+  },
+  "original_queries": [
+    "\\+ s63_c_6_D(\"Walter Brown Family Trust II\",2021)"
+  ],
+  "original_measurement": "ground-0467.pl",
+  "original_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002468750000000075,
+    "grounding_wall_seconds": 0.00024628639221191406,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0468.pl",
+  "reground_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00026408399999999776,
+    "grounding_wall_seconds": 0.00026345252990722656,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "unimplemented:approved-H6-projection-not-implemented",
+    "reason": "unimplemented H6 observation: s63_c_6_D/2 bb",
+    "owner_choice_blocker": false
+  }
+}

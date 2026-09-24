@@ -1,0 +1,200 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2003"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2003"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2003"
+          },
+          "2003-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2003"
+          },
+          54313
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1985-02-03"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          "2003-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_and_alice_joint_return"
+          },
+          "2003-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2003"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "bob_and_alice_joint_return"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_income_2003"
+    },
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "bob_and_alice_joint_return"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "stats": {
+    "unary_proofs": 3,
+    "distinct_event_domain": 3,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 13,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002278330000000106,
+    "grounding_wall_seconds": 0.00022745132446289062,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 7611,
+    "cpu_seconds": 0.0017377920000000019,
+    "wall_seconds": 0.001737833023071289
+  }
+}

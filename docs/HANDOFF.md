@@ -1,362 +1,155 @@
-# Phase 1 handoff
+# KMLA handoff
 
-## Authorization and entry identity
+## Current state
 
-**Current dispatch status (2026-09-23): §7703 bounded continuation verified.**
-`6e3cdc9` preserves the working admission/transport/compiling oracle slice AND
-the three failing proof tests on `claude/checkpoint-0-integration`. Dev has
-authorized one proof-only round with assertions unchanged. Keep translating
-§7703 on the narrowed domain with R5 proof obligations open; unclosed proofs
-do not stop unrelated translation. If a breaker repeats, obtain Fable's
-design-flaw review of the obligation, not a fourth proof attempt. The same
-isolated oracle context completed this handoff and is now closed; no later
-section has been dispatched.
+- Integration branch: `claude/checkpoint-0-integration`.
+- Pushed implementation head checked for this consolidation:
+  `fe25216db512aefdb205cdd0ba3e0c8769208176`. The handoff-only commit follows it;
+  resolve that revision with `git log -1 --format=%H -- docs/HANDOFF.md` on
+  the integration branch rather than treating the implementation hash as HEAD.
+- Checkpoint 0 is signed off at owner parent
+  `0a2a65ac1313c180bea39d137e6665c01b8e833a`; Phase 1 is authorized.
+  **Checkpoint 1 is not passed. No Phase 2 work is authorized.**
+- `human/DECISIONS.md` SHA-256:
+  `12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a`.
+- `human/HASHES.txt` SHA-256:
+  `5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9`.
+  Both digests checked directly at consolidation. The retained verification
+  passes; no protected artifact was installed or re-pinned by this handoff.
+- Frozen entry meter SHA-256:
+  `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
+  Invoke only via its CLI; never read or implement its source.
+- All implementation contexts are quiescent. The pre-existing untracked
+  `scripts/__pycache__/inventory_cases.cpython-314.pyc` is not task work and
+  remains untouched. No outstanding implementation changes were present.
 
-Round result: all three exact original assertions now pass, with the prior
-goals and failed attempts preserved. The complete file has 62 passing theorem
-declarations; all 53 original statements and 24 original fixture definitions
-remain unchanged. The source `(b)` composition and root statute clause bodies
-are added with explicit required downstream dependencies, not fake providers.
-Root stipulations/freshening, missing modes, production guards and R5 adequacy
-remain open. No complete root reference, original parity or CP1 pass is claimed.
-Fresh verification: `docs/phase1/s7703-continuation-final-2026-09-23/001.*`.
+Read `docs/PLAN.md`, accepted `docs/PROTOCOL.md` amendments, the applicable
+working/lane rules and this file before work. The original PLAN is preserved;
+accepted amendments override it. Historical status paragraphs in STATE and
+the [verbatim handoff archive](phase1/HANDOFF_HISTORY.md) do not override this
+consolidated state. Consult lane-specific reports only from their owning lane.
 
-H4 grounding stays separately held. Dev has NOT accepted an amendment. The
-fresh retained original-call trace confirms purpose_(payment_2015_1,Purpose)
-has its event bound; the SECOND split_string reads free Service_event and
-raises. See `docs/consult/evidence/h4-bound-goal-2026-09-23/`. No alternative
-grounder is installed. A-017/A-019 remain proposal/correction only. Neither
-partial translation nor passing transport checks establish original round
-trips, parity or Checkpoint 1. Full pre-round proof goals are retained in
-`docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt`.
+### Complete, with bounded evidence
 
-The successful pre-dispatch preparation follows:
-Dev authorized continuation after the prior circuit-breaker stop. Q-016/A-016
-and isolated reduction checks identified the date parser plumbing. Structural
-character-list parsing now closes the SAME concrete tuple-admission rejection
-with only X1 axioms, without changing its statement, bounds or round-trip test.
-`scripts/check_query_time.sh` exits 0, including 73,414 admitted-day round trips
-and kernel malformed-date checks. Runtime (29), runner boundary (12) and
-household guards (115) pass. The earlier failure evidence is preserved in
-`docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt`.
-Fresh Phase 1.1 and §7703 Phase 1.2 contexts have begun. Operational call-site
-coverage and R5 adequacy remain obligations, not consequences of this preflight.
+| Item | Verified result | Evidence (read only in the appropriate lane) |
+| --- | --- | --- |
+| Shared boundary and preflight | Read-only runner/CI enforcement, query/stipulation admission, V10 in Valid and ValidStip; these are not production guard or operational coverage proofs | `Interface/`, `docs/phase1/RUNNER_BOUNDARY_2026-09-22.md`, `docs/phase1/QUERY_ADMISSION_RESUMED_2026-09-23.md` |
+| Household wire | Recursive StipArg with distinct list encoding; shared fixtures, event Term/Pat and validity semantics preserved | `Interface/HOUSEHOLD_WIRE.md`, `docs/phase1/STIP_LIST_INTERFACE_2026-09-23.md` |
+| H4.3(a) | Ordered re-grounding identity passes 376/376 originals | Harness: `docs/phase1/EVENT_DOMAIN_CORRECTION_2026-09-23.md`, `docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/` |
+| H4.3(b) | 114 passes, 262 explicitly unimplemented; no measured mismatch/error/timeout in the restarted run | Same harness evidence; `audit_pass: false`, exit 1 for incomplete coverage |
+| Narrow regressions | All 14 country originals and both list originals pass both H4 checks; tax_case_33 retains 1,736 ordered facts and result 27181 | Same harness report; earlier failing evidence is preserved |
+| Partial oracle | §7703 slice has 122 kernel-checked assertions; 87 earlier statements unchanged; still parameterized by real downstream dependencies | Oracle: `Oracle/UNPROVED.md`, `docs/phase1/STIP_LIST_ORACLE_2026-09-23.md` |
+| Builder regressions | 147 unit tests passed at the implementation head | `docs/phase1/q023-independent-2026-09-23/regression-driver/003.*` |
 
-On 2026-09-22 Dev confirmed Checkpoint 0 at parent
-`0a2a65ac1313c180bea39d137e6665c01b8e833a` and authorized Phase 1. The owner
-installed Option A's H5/R5/R8/R9 amendment there and re-pinned the protected
-bundle. The manifest verifies; the meter is unchanged and remains CLI-only.
+The broad diagnostic population is **376 Household instances / 297 distinct**.
+These are not production records. Full reference parity has not been produced.
+No new audit, compilation or evidence re-hashing was performed to consolidate
+this file; the results above are checked against the retained repository record.
 
-- Current DECISIONS SHA-256: `12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a`.
-- Current manifest SHA-256: `5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9`.
-- Current meter SHA-256: `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
+### Open work, findings and breakers
 
-Before fresh isolated contexts start, establish runner read-only mounts and CI
-enforcement, connect V3 to actual query/stipulation Workdays, and confirm V10
-is the generator's validity boundary. R5 work is authorized on the narrowed
-domain with proofs open; this is not Checkpoint 1 or a termination certificate.
+- **Shared output projections are not yet declared for all 135 queried
+  signatures.** H6.5 explicitly says a bound argument presented as the answer
+  is an output (`human/DECISIONS.md:916`); `f` positions alone are insufficient.
+  `Interface/QuerySchema.lean` and `TIME_SCHEMA.json` supply time/schema roles,
+  not the missing complete output declaration. No new semantic mode is authorized.
+- **262 H6 observations and full producer records remain unimplemented.**
+  `Interface/WIRE.md` / `HOUSEHOLD_WIRE.md` leave full payload/target packaging
+  to be fixed once in the shared Interface before either producer uses it.
+- **H4.2 bound-purpose exception awaits Dev's installation and re-pin.**
+  `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md` is a reviewed, conditionally
+  implemented candidate, not signed text. A-020 reviewed it; A-023 corrects
+  A-020's outer event-multiset interpretation. Read the draft with that correction
+  and current measured evidence, not its historical country/permission hold.
+  Full H4.3(b) evidence remains incomplete. Only Dev installs protected text.
+- Q-021 country retention, Q-022 recursive stipulation representation and
+  Q-023 distinct traversal domain are resolved implementation defects. Their
+  immutable answers and failure evidence remain available; none requires
+  another A/WIRE choice or Checkpoint 0 sign-off.
+- **Oracle obligations remain open:** other root modes, the actual ordered
+  §152 provider, source/unification/freshening correspondence, production V7/V8,
+  exact V10 universal-decider iff, participant-universe coverage, strict
+  measure/phase and fuel adequacy, and every operational R5/R8 actual-time path.
+  `Oracle/UNPROVED.md` is the owning ledger. No R5 termination certificate,
+  default provider or exhaustion-as-answer is available.
+- The two inert `s68_b(alice,2015,250000)` stipulated year findings remain
+  source findings, not exclusions or argument repairs (A-014;
+  `docs/contracts/A_WIRE_INSTALLATION_2026-09-22.md`).
+- No active three-failure breaker remains. The earlier admission/proof breakers
+  were resumed under owner authority and resolved; failed goals stay recorded
+  in `docs/phase1/QUERY_ADMISSION_CIRCUIT_BREAKER_2026-09-22.txt` and
+  `Oracle/UNPROVED.md`. A new three-failed-edit-cycle check stops affected work;
+  never weaken an assertion or take a fourth attempt without the required review.
+- Runtime publication, offline rebuild closure and independent image deposit
+  remain obligations in `docs/contracts/RUNTIME.md`; prior native directive
+  baselines are not Lean parity.
 
-### Earlier entry identity (retained history)
+### Next work, in order
 
-On 2026-09-21 Dev explicitly stated: "I sign off checkpoint 0 and authorize
-phase 1". Checkpoint 0 is cleared. The immediately preceding strict verification
-reported 17 passed, 0 failed, 0 outstanding; the installed 412-record manifest
-verified. Entry commit: `ba1e9206f4bb4cc7067e7bd70a951191b64fa51b`.
+1. **Before implementing the remaining 262 observations**, declare the
+   output-position projections for all **135 queried signatures** once in
+   shared `Interface/`, from G2 and H6.5. Include bound arguments presented
+   by a case as its answer. Both isolated lanes consume this declaration;
+   move the harness's hand-coded projection exceptions into it. Do not infer
+   an output solely from `b/f`, choose new modes or silently guess a missing
+   decision. This handoff declares the task, not the projection table itself.
+2. Fix the remaining lossless record/payload field map and shared fixtures in
+   Interface before emitting production records. Preserve WIRE's approved
+   record unit and report records, distinct households and originals separately.
+3. In the isolated harness lane, implement the remaining H6 observations
+   against that declaration; complete both H4.3 checks for every original.
+   Preserve all failures and the bound-purpose traversal/cost evidence. The
+   H4.2 exception is waiting for **Dev to install it**, never for a builder
+   write under human/. No complete round-trip claim precedes complete evidence.
+4. In the separate oracle context, continue the explicit unfinished §7703
+   modes/providers/guards and proof obligations. R5 work is authorized on the
+   narrowed domain with obligations open; an unproved goal is recorded, not a
+   reference value or permission to alter semantics. Keep failing tests failing.
+   Subsequent fresh section contexts follow **7703, 3306, 3301, 2, 63, 68,
+   151, 152, 1**. Do not pass lane implementation through integration.
+5. Integrate through opaque engine CLIs, retain outputs and verbatim meter
+   mismatches, and obtain all-376 reference parity and hazard accounting for
+   Dev's Checkpoint 1 review. No filtering or semantic repair to obtain a pass.
 
-- Meter SHA-256: `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
-- Manifest SHA-256: `7dcf2d707a908b53530dbc2dab4f4fa0e59bf8c033434c95db47c29339128480`.
-- Meter conformance: 19/20 matching outcomes, no enforced failure. The approved
-  informational `absent-key-is-not-null` divergence remains reported, not waived
-  or relabelled. The suite does not establish every accepted policy.
+The future generator contract prohibits multibirth persons, multi-date births
+and same-birthday eligible pairs as a **validity boundary**, not an
+answer-dependent filter. All-years A and the same-birthday graded-domain
+limitation remain operative. No Phase 2 generator exists yet.
 
-## Builder lanes and boundaries
+## Exact owner deliverables for Checkpoint 1
 
-1. Phase 1.1: a fresh serializer/harness context implements case reading,
-   pinned Prolog execution and semantic round trips for all 376 cases. It must
-   not inspect `Oracle/`. Follow H4 grounding, stipulations and both documented
-   reader exceptions; do not filter difficult cases or confuse the earlier
-   directive baseline with round-trip or Lean parity.
-2. Phase 1.2: a separate fresh oracle context for each section, in order
-   7703, 3306, 3301, 2, 63, 68, 151, 152, 1. It must not inspect serializer or
-   generator implementation. Shared semantics are only `human/DECISIONS.md`
-   and `Interface/`, with original Prolog source read-only. Cite every clause
-   and annotate the applicable NAF/CUT/AGG sites. No semantic defaults, `sorry`,
-   `partial` or `native_decide` may stand in for missing implementations.
-3. The orchestrator owns integration and retains per-section outputs, full
-   mismatch evidence, runtime/source/meter identities, and the 376-case coverage
-   accounting. Test the actual read-only corpus mount before executing case
-   programs. Never expose one lane's implementation to the other to obtain a
-   passing comparison. Missing shared decisions stop the affected lane.
+1. Review the H4.2 bound-purpose candidate, A-020 with A-023's correction, and
+   the required all-376 H4.3 evidence/cost. Install any approved protected
+   wording into `human/DECISIONS.md` and re-pin the manifest personally.
+2. For each section, review every source-clause/hazard annotation (NAF, CUT,
+   AGG) against the signed decisions; require every hazard to be accounted for.
+3. Triage every mismatch, reference exception, timeout and uncovered semantic
+   choice. Any clarification is an owner-maintained decision and re-pin;
+   implementation is rerun against it, not repaired by editing the source.
+4. Review both semantic round-trip checks for all 376 originals and zero
+   Lean/Prolog parity mismatches on that same population, with the independent
+   meter's entry hash unchanged. Missing outputs/placeholders cannot pass.
+5. Explicitly sign off Checkpoint 1 before Phase 2. Tool success, A/WIRE
+   acceptance and this handoff do not sign it.
 
-The production V7/V8 guards and V10's exact nonrecursive all-eligible-pairs
-decrease decider must use real definitions; test-only instances are not implementations.
-`human/` remains strictly read-only.
-The meter is invoked only via its CLI in fresh output directories, never read.
-Existing runtime archival obligations remain open and are not erased by sign-off.
+Dev continues to own the four artifacts: DECISIONS, parity meter, gate exploits
+and signed invariant statements; every installation under human/, every re-pin
+and every checkpoint sign-off. Checkpoint 2 exploits and Checkpoint 3a statements
+remain later deliverables, not newly due for Checkpoint 1.
 
-## Exact human deliverables for Checkpoint 1
+## Existing worktrees — preserved, not cleaned up
 
-### H4 finding — remedy not accepted; proof continuation authorized
+Inventory checked with `git worktree list --porcelain` at consolidation. No
+worktree was removed or updated. Paths below are relative to
+`/Users/devrashie/Documents/csProjects/kmla` except the main checkout itself.
 
-- The required bound-call diagnostic is complete: the original purpose rule
-  in tax_case_33 fails in its second split with its first event already bound.
-  No grounder fix for an unbound first argument is indicated by this evidence.
-  An exact amendment may now be proposed, not installed. Approve it only after its required
-  argument domains, ordering/multiplicity and H2/A3 wildcard preservation are
-  stated and justified. The builder stages any protected-artifact draft under
-  docs/contracts; Dev installs/re-pins it. H4.3 stays unchanged unless Dev
-  explicitly chooses otherwise; a global/infinite-relation criterion is not
-  an existing requirement. A-017/A-019 and P-GROUND2 are proposals/review,
-  not an installed remedy or a measured corpus-wide candidate audit.
-- The §7703 proof-only restart is authorized, with the exact three assertions
-  unchanged. A-018 is a diagnostic plan, not proof evidence. No change to
-  shared semantics, expectations or production guards is authorized. Keep
-  unproved goals/failing tests visible and continue §7703 translation with
-  R5/recursive dependencies explicit. A repeated breaker requires Fable
-  design-flaw review of the obligation rather than another proof attempt.
+| Worktree | Branch | Head at inventory | Stale? |
+| --- | --- | --- | --- |
+| Main checkout | `claude/checkpoint-0-integration` | `fe25216` before handoff commit | No; current integration checkout |
+| `.claude/worktrees/human-deliverables-474e7d` | `claude/human-deliverables-474e7d` | `6406e0c` | Yes; old artifact work, no local CLAUDE.md present |
+| `.claude/worktrees/sara-semantics-interpretation-9ecfee` | `claude/sara-semantics-interpretation-9ecfee` | `00e1b45` | Yes; local CLAUDE.md still assigns the old design-authority role |
 
-That proof round is now complete: all three assertions close without a repeated
-breaker. There is no further owner choice for these proofs. The H4 candidate
-is in `docs/contracts/H4_BOUND_PURPOSE_DRAFT.md`, unapproved and unimplemented;
-Q-020's external review was denied by the permission reviewer before execution.
-Explicit permission to send it to Fable/Claude and permit a consult answer is
-still required. No existing answer file was edited and no external review result
-is inferred from that denial.
-
-No new A/WIRE choice, Checkpoint 0 sign-off or parity-meter implementation is
-requested. Only H4-dependent work is held; later sections have not been dispatched.
-
-No further artifact was required at Phase 1 entry. Dev has now resolved the two
-owner-choice blockers with **A** and **WIRE** (2026-09-22). Do not ask for those
-choices again. Neither acceptance is Checkpoint 1 sign-off.
-
-### Owner installation — complete at 0a2a65a
-
-Dev installed `docs/contracts/DECISIONS_R5_A_AMENDMENT.md` in the corresponding
-H5, R5, R8 and R9 sections of `human/DECISIONS.md` and re-pinned the manifest.
-No further protected artifact is due before Phase 1. The builder installs no
-protected file. The amendment preserves the selected all-years A and its
-same-birthday/domain limitations. WIRE release
-wording, record unit and byte/count handling are already installed in
-`docs/contracts/PARITY.md` and `Interface/WIRE.md`; no further WIRE choice is due.
-
-The builder verified the new manifest using
-`python3 -B scripts/human_manifest.py verify`; no manifest was regenerated.
-
-### Builder obligations before an R5 reference or termination claim
-
-- V10 is in both Valid and ValidStip: unconditional distinct birth-event/day
-  uniqueness and strict DOB/birthless descent for every eligible pair in all
-  201 years. Supply the real original K/c3 universal-decrease decider, including
-  wildcard stipulations and all solutions, without prefiltering offending pairs.
-  Prove an iff with the approved quantified condition: conservative false is
-  not allowed. No default exists; that alone cannot certify a production instance.
-  A finite list of ground pairs is inadequate for arbitrary wildcard patterns;
-  the measure's finite universe has its separate proof obligation (A-014).
-- `Interface/QueryTime.lean` ties a checked year to the actual root-year or
-  Workday argument and the exact `r5Years` population. Use it at every relevant
-  wrapper/call site, including query/stipulation values and R8. Complete the
-  typed-argument/mode audit, preserve the existing E2 exclusion, and prove
-  admitted operational calls are covered. The new type alone is not that proof.
-  Failed construction is a reported error, never a reference answer. Do not
-  impose a new V8-at-derived-year requirement through a convenience wrapper.
-  The tuple-indexed boundary and concrete kernel rejection now pass; each
-  production wrapper/call site still has to consume the actual certificate.
-- Prove structural-descendant correspondence, finite-person-universe coverage,
-  the strict measure, phase/cycle cut and N+1 branch-counter adequacy with every
-  entry/mode/offset accounted for. The old child-descent argument and A-009's
-  withdrawn 2·persons+2 bound remain invalid; no R5/R8 theorem exists yet.
-- Fix the remaining lossless input-codec field map and cross-language fixtures
-  in Interface before producer use. WIRE does not authorize guessed semantics.
-  Report record/distinct-household/original-case counts separately in run
-  summaries, frozen manifests and coverage reports. The ≥10k unit is records.
-- The future generator must never mint multibirth persons, multi-date births
-  or same-birthday eligible pairs. Its contract is in gen/AGENTS.md; no Phase 2
-  generator has been implemented. It may invoke the real Valid via Interface
-  without inspecting Oracle implementation. The harness retains all originals.
-
-Q-012/A-012 and Q-013/A-013 review this boundary. A-013 withdraws the mistaken
-fixed-year/case-year-only claims: both the approved draft and retained audit
-already cover all 201 years. It confirms the remaining coverage work is not a
-new owner choice. Any actually uncovered original is still a finding, never
-silently filtered.
-
-The additional stipulated-time census is retained in
-`docs/contracts/A_WIRE_INSTALLATION_2026-09-22.md`: all 376 executions completed,
-but two source literals put 250000 in s68_b's year position and 150 time slots
-are wildcards. The two literals cannot match their actual queries' bound 2015;
-do not swap their arguments or filter the originals. The census is not full
-operational coverage and its exit 1 remains reported.
-
-The 2026-09-22 schema-derived Day census in
-`docs/phase1/TIME_SCHEMA_2026-09-22.md` examined all 376 retained records:
-162 concrete declared Day occurrences are canonical and in range, four Day
-wildcards remain unchanged, and zero originals are excluded by this Day check.
-The two inert year findings remain findings. This census does not establish
-query-mode completeness, full ValidStip, a kernel admission proof or parity.
-
-A-014 confirms the eligibility representation correction preserves A and needs
-no owner choice. It also closes A-013's conditional escalation about the two
-s68_b literals: retain/report them under P-INTENT, without filtering or swapping
-arguments. Complete operational coverage remains unproved.
-
-The source-reader slice has 26 passing tests covering all 376 case files, with
-its full lexical accounting retained in `docs/phase1/`. Grounding, semantic
-round trips and oracle parity remain unimplemented. The oracle context produced
-a source/mode audit and halted before adding any Lean definitions.
-
-### Review when implementation reaches Checkpoint 1
-
-At Checkpoint 1, Dev must:
-
-- Review the per-section clause/hazard audit and every NAF/CUT/AGG annotation
-  against the signed decisions. Require every hazard to be accounted for.
-- Triage every reported mismatch, reference exception, timeout or uncovered
-  semantic decision. Any semantic clarification belongs in the owner-maintained
-  decisions, with a new protected manifest; the builder does not edit them.
-- Review semantic round-trip evidence for all 376 cases and zero Lean/Prolog
-  parity mismatches across that same population, with the meter hash unchanged
-  from the entry identity above. Placeholders and missing outputs do not pass.
-- Explicitly sign off Checkpoint 1 before Phase 2 begins.
-
-Checkpoint 2 still requires human-authored gate exploits; Checkpoint 3a still
-requires human-signed invariant statements. Neither is newly due in Phase 1.
-
-## Historical Phase 0 handoff
-
-The record below is retained as history. Its earlier absent-meter and pending
-sign-off statements are superseded by the Phase 1 authorization above.
-
-## Current state after Dev's 2026-09-21 decisions
-
-### Meter independently audited and accepted by the owner
-
-Dev independently audited and accepted `human/parity/check.py` on 2026-09-21.
-The meter, its black-box owner checks and their retained results are installed.
-The protected manifest covers 412 records and verifies.
-
-The 20-fixture conformance suite has no enforced failure: 19 checks pass and
-`absent-key-is-not-null` retains its directed informational exit-2 divergence.
-The additional black-box suite reports 11 checks passed and 0 failed; its
-case-fold collision fixture is informational on this host because the
-case-insensitive filesystem collapses the two names before invocation. The
-strict Phase 0 verifier, with Docker access, reports **17 passed, 0 failed, 0
-outstanding for Checkpoint 0**. Complete outputs are retained in
-`human/parity/CONFORMANCE_2026-09-21.txt`,
-`human/parity/OWNER_CHECKS_2026-09-21.txt`, and
-`docs/contracts/PHASE0_ACCEPTANCE_2026-09-21.after-meter.txt`.
-
-The independent owner audit and acceptance are complete. Before Phase 1, Dev
-must still explicitly sign off Checkpoint 0. Meter acceptance alone did not
-authorize Phase 1.
-
-Work continues on `claude/checkpoint-0-integration`. The accumulated integration
-work was committed and pushed as `44d2a96` before applying Dev's follow-up
-clarifications. No Phase 1 implementation has begun.
-
-- P-SUMLIST and P-RUNTIME are accepted, not pending. One runtime acceptance
-  amends both PROTOCOL B001 and RUNTIME.md. The five parity policies are in
-  PARITY.md; Dev's complete directory procedure closes Q-007/A-007's escalation.
-- The source and `human/DECISIONS.md` remain untouched. The existing manifest
-  covers 408 records; it cannot yet cover the absent owner meter.
-- `Interface/Household.lean` passed 29 behavioural guards. The production
-  OracleGuards for V7/V8 remain Phase 1 work; test-only guards do not prove them.
-- The existing SWI 9.2.9 control is installed at
-  `docs/contracts/CONTROL_swipl9.json`: 312 clean outcomes and 64 `rdiv/2`
-  errors across 376 cases. The pinned legacy baseline has 376 clean outcomes,
-  including two vacuous cases, not 376 exercised assertions.
-- Native-runtime CI run `35649969714` on `b265977` completed successfully.
-  The downloaded evidence verifies 376 clean directive outcomes, including the
-  two known vacuous cases. Its native runtime record and all 1546 diagnostic
-  files are retained in `docs/contracts/runtime-history/`; see
-  `NATIVE_35649969714.md`. This is not Lean parity. Runtime publication, closure
-  vendoring and independent archival deposit remain incomplete; see RUNTIME.md.
-  Preserve historical records when rebuilding.
-
-## Follow-up approvals installed
-
-Dev approved both follow-up points; no renewed approval is needed:
-
-1. An entry ending in `.json` joins the population and is judged by the ID
-   grammar and regular-file rule; a dotted non-JSON entry is ignored; any
-   other entry, including `notes.txt`, is exit 2. No category is left open.
-2. The verifier reports exploits under Checkpoint 2 and signed statements under
-   Checkpoint 3a, separately from Checkpoint 0's counters. They remain visible
-   and mandatory at those checkpoints. Runtime checks are unchanged. The grep
-   count bug is fixed, and the new report must replace the earlier untrusted
-   17/0/3 result for acceptance purposes. Dev's sign-off is still required.
-
-The corrected local run exits cleanly and reports **17 passed, 0 failed,
-1 outstanding for Checkpoint 0** (the absent meter), with the **two later
-artifacts still reported separately**. Strict mode correctly exits 1. See
-`docs/contracts/PHASE0_ACCEPTANCE_2026-09-21.after-clarifications.txt` for the
-complete output. The earlier acceptance report remains unchanged as history.
-
-The case-fold uniqueness grammar is already installed in PARITY.md before the
-meter exists, satisfying the requested timing without a between-checkpoint
-meter change. No additional sequencing decision is needed for that action.
-
-## Independent meter and completion sequence
-
-The sequence below is mechanically complete: the owner-audited meter exists,
-conformance and owner checks pass as reported above, the manifest covers it,
-and strict Phase 0 verification has zero current outstanding items. Dev's
-explicit Checkpoint 0 sign-off remains.
-
-Dev implements and installs `human/parity/check.py` to PARITY.md and the
-accepted policies, including the now-complete directory decision procedure.
-The builder must not implement it, inspect its source or propose its algorithm.
-
-A builder CLI preflight found that relative meter paths stopped resolving after
-the suite changed cwd. That defect is fixed and four invocation regressions
-pass (A-007 classifies this as contract restoration, not changing expectations).
-Only `invalid-input-id` was promoted to enforced, exactly as Dev directed.
-`absent-key-is-not-null` and `no-number-coercion` remain informational. There
-are still 20 conformance fixtures, and they do not cover every new policy.
-
-Once the meter exists:
-
-1. Invoke `python3 -B scripts/parity_conformance.py --meter human/parity/check.py`.
-   Report output verbatim, including WRONG-REASON and informational divergences.
-   A failure is a finding for Dev; do not alter the meter or expected outcomes
-   to reconcile it.
-2. Only after conformance passes, refresh `human/HASHES.txt` to cover the
-   meter, verify, and commit per Dev's sequence. The conditional manifest step
-   has not occurred. No other protected-file write is authorized.
-3. Re-run `scripts/verify_phase0.sh`; report all results, with later artifacts
-   under their own headings. Checkpoint 0 clears only with zero failures,
-   zero outstanding for Checkpoint 0, and
-   **Dev's explicit signoff**, not because tooling has become quieter.
-
-Dev will separately correct the decisions preamble's argv/emulation diagnosis.
-The actual error was `ENTRYPOINT ["swipl"]` producing `swipl swipl ...`.
-Stdin remains valid; the builder does not edit that protected preamble.
-
-## Bundle and source
-
-**No submodule, second repository or URL is required (P-BUNDLE).** `human/`
-stays in the parent repository. Bundle identity is
-`bijectai/kmla@<parent sha>:human/` plus its manifest. CI detects protected
-changes and hash drift; the accepted limitation is detection, not impossibility.
-The migration script is retained but unused; additional rulesets were declined.
-
-The canonical JHU archive SHA-256 is
-`e4f1b845016fc38b95b702bbbb27a5c9af3eadfa856ba585662b8b2cd71c187c`.
-Installed root: `human/sara/sara/`; 400 original payload files and 376 case
-programs, with 256/120 train/test splits. No source repair or filtering is
-authorized. The accepted reader exceptions are described in the decisions.
-
-## Later checkpoints and implementation boundaries
-
-- Checkpoint 2: human-authored `human/gate/exploits/`, written against GATE.md.
-  Do not inspect their source during gate development.
-- Checkpoint 3a: human-signed invariant statements. Prove exact statements;
-  failed proof search is PARTIAL, not REFUTED.
-- Phase 1 requires separate oracle and serializer/generator contexts, shared
-  decisions/interface only, and a read-only protected source mount. Neither
-  lane may inspect the other's implementation.
-- Mutation admission witnesses remain separate from frozen grading inputs.
-  Survivors and unresolved mutants remain findings; versioned corpus expansion
-  preserves both reported rates.
-- On a design flaw, halt the affected work, record evidence in STATE.md and
-  ask Dev before changing the design. Never merge a PR.
+Do not start a new session in either stale worktree: old local instructions
+or inherited main-checkout instructions can conflict. The owner's transition
+requires a separately reviewed roles branch; this consolidation does not
+activate any role change. Preserve these worktrees until separately authorized.

@@ -1,0 +1,31 @@
+{
+  "scope": "country-only slice; not all-376 completion, Valid, parity, production records or CP1",
+  "original_case_count": 14,
+  "completed_original_count": 14,
+  "h4_3_a_pass": 14,
+  "h4_3_b_pass": 14,
+  "anchored_regressions_pass": 3,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced (production records absent)",
+  "diagnostic_household_instances": 14,
+  "diagnostic_distinct_ordered_households": 13,
+  "diagnostic_household_sha256": [
+    "d96807e521475fd18a4d67f4581ee15e7c6ac05f12fe58527d416718416f6abf",
+    "78e1c91f90f9bf94b59fe25c96c6479a8fa3fb08717b0b378a076287afd1b1ad",
+    "6f77dd2ed44e7b2c102ce6b99ed66c4bbbb73886a23677b02a934f64223f7ca6",
+    "a76853249f5c4bff7ebb10440e4de0ad6f005491367f9790e930050aaa8c8b31",
+    "3123c0272cdca530cc2b3652937d6370bd4366e6215122e26c211ef147e41e36",
+    "04125d0cdca05b7ff9437e7f0e56fd1ccb6c19d7a41eca6613ddd431cc269769",
+    "8dd4e142a3b984ba08a39b7b3c56d855e0d2801eb49469a6c52851625fa662f4",
+    "12c261cb567fb602c1a6812f655c8e330e686ac9ce9721931f3854d28772c52e",
+    "3123c0272cdca530cc2b3652937d6370bd4366e6215122e26c211ef147e41e36",
+    "3001924357cd7e3f141eca6e4d091efaa94fb33d01d3a259940f8b6a0b3b96fb",
+    "4ba92bd532eb67890120a147a50935157a129ad94d9f0a895040c71d78aeebd3",
+    "d615a159ce7babb5a6b2946fefc3c8fad8e279a4ec29f6d9e77c7df6ee8207ee",
+    "ddd1c81e50daf1e5539990a275922204a3c82c82f4944d61a390293d6afcb9dd",
+    "efeb85aff3b3af15843e5033fc9752deb41151abb3e03c1b85b512b58b8fd2eb"
+  ],
+  "guard_count": 6,
+  "elapsed_wall_seconds": 21.141452541807666,
+  "finding": null
+}

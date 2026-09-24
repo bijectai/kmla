@@ -1,0 +1,82 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"marriage_", "args": [ {"a":"alice_marriage"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_marriage"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_marriage"},  {"a":"spouse"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_marriage"}, "2016-10-09" ]
+      },
+      {"ctor":"joint_return_", "args": [ {"a":"joint_return"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"joint_return"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"joint_return"},  {"a":"spouse"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"joint_return"}, "2017-01-01" ]},
+      {"ctor":"end_", "args": [ {"a":"joint_return"}, "2017-12-31" ]},
+      {"ctor":"income_", "args": [ {"a":"alice_income_2017"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income_2017"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_income_2017"}, "2017-12-31" ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income_2017"}, 42876 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"marriage_",
+      "event": {"a":"alice_marriage"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"joint_return_",
+      "event": {"a":"joint_return"}
+    },
+    {
+      "source_clause":10,
+      "predicate":"income_",
+      "event": {"a":"alice_income_2017"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_marriage"},
+    {"a":"joint_return"},
+    {"a":"alice_income_2017"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+  "stats": {
+    "unary_proofs":3,
+    "distinct_event_domain":3,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":13,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0002507910000000002,
+    "grounding_wall_seconds":0.00025010108947753906,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":4931,
+    "cpu_seconds":0.0018085409999999968,
+    "wall_seconds":0.0018086433410644531
+  }
+}

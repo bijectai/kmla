@@ -1,0 +1,361 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2023"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2023"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2023"
+          },
+          54775
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2023"
+          },
+          "2023-12-31"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_is_son"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_is_son"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2023-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2023-12-31"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "bob_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          "2023-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          "2023-12-31"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_house"
+          },
+          "2023-01-01"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_house"
+            }
+          },
+          {
+            "a": "alice_house"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2023"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "son_",
+      "event": {
+        "a": "bob_is_son"
+      }
+    },
+    {
+      "source_clause": 8,
+      "predicate": "son_",
+      "event": {
+        "a": "charlie_is_son"
+      }
+    },
+    {
+      "source_clause": 11,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_residence"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "residence_",
+      "event": {
+        "a": "bob_residence"
+      }
+    },
+    {
+      "source_clause": 21,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_house"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_income_2023"
+    },
+    {
+      "a": "bob_is_son"
+    },
+    {
+      "a": "charlie_is_son"
+    },
+    {
+      "a": "alice_residence"
+    },
+    {
+      "a": "bob_residence"
+    },
+    {
+      "a": "alice_maintains_house"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "stats": {
+    "unary_proofs": 6,
+    "distinct_event_domain": 6,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 25,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003992089999999837,
+    "grounding_wall_seconds": 0.0003981590270996094,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 6449,
+    "cpu_seconds": 0.007374917000000009,
+    "wall_seconds": 0.007374763488769531
+  }
+}

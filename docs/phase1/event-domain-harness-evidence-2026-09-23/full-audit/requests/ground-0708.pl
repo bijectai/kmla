@@ -1,0 +1,17 @@
+joint_return_('joint_return').
+agent_('joint_return','alice').
+agent_('joint_return','bob').
+start_('joint_return',"2020-01-01").
+end_('joint_return',"2020-12-31").
+income_('alice_income_2020').
+agent_('alice_income_2020','alice').
+start_('alice_income_2020',"2020-12-31").
+amount_('alice_income_2020',103272).
+payment_('bob_is_paid').
+patient_('bob_is_paid','bob').
+start_('bob_is_paid',"2020-12-31").
+amount_('bob_is_paid',10).
+marriage_('alice_and_bob').
+agent_('alice_and_bob','alice').
+agent_('alice_and_bob','bob').
+start_('alice_and_bob',"2017-02-03").

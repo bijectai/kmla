@@ -1,0 +1,10 @@
+payment_('alice_is_paid').
+patient_('alice_is_paid','alice').
+start_('alice_is_paid',"2017-12-31").
+amount_('alice_is_paid',33200).
+marriage_('alice_and_bob').
+agent_('alice_and_bob','alice').
+agent_('alice_and_bob','bob').
+start_('alice_and_bob',"2017-02-03").
+s63_f_1_A('alice',2017).
+s63_f_1_B('alice','bob',2017).

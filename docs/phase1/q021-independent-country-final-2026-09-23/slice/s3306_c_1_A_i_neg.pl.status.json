@@ -1,0 +1,203 @@
+{
+  "original_case": "s3306_c_1_A_i_neg.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      7
+    ],
+    "emitted_source_indices": [
+      7
+    ],
+    "emitted_fact_positions_1based": [
+      7
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "fb94e4729dc0fec64466fd479160e1b123834f1ef6f213e15bd9eed47ccadef3",
+  "query": {
+    "predicate": "s3306_c_1_A_i",
+    "mode": "bfbfb",
+    "goal": "'s3306_c_1_A_i'('alice',Q0,'bob',Q1,2017)",
+    "outputs": [
+      "Q0",
+      "Q1"
+    ],
+    "outer_naf": true,
+    "original_goal": "\\+ s3306_c_1_A_i(alice,_,bob,_,2017)"
+  },
+  "original_request": "ground-0015.pl",
+  "original_stats": {
+    "unary_proofs": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 20,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00026854199999998274,
+    "grounding_wall_seconds": 0.0002682209014892578,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0016.pl",
+  "reground_stats": {
+    "unary_proofs": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 20,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002920409999999929,
+    "grounding_wall_seconds": 0.0002911090850830078,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 0.0014974579999999793,
+    "wall_seconds": 0.0014994144439697266,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-88e912fef90b407496e75765789a779d",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q021-independent-country-final-2026-09-23/slice/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0015.pl",
+        "/requests/s3306_c_1_A_i_neg-original.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "037.stdout",
+      "stderr": "037.stderr",
+      "elapsed_seconds": 0.498628
+    }
+  },
+  "serialized_observation": {
+    "raw_solutions": [],
+    "proof_count": 0,
+    "cpu_seconds": 0.001473000000000002,
+    "wall_seconds": 0.00147247314453125,
+    "canonical": [],
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-e3d45a62a06d48b5bff4d35fac132c38",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q021-independent-country-final-2026-09-23/slice/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding_observations.pl",
+        "-g",
+        "observe_main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0016.pl",
+        "/requests/s3306_c_1_A_i_neg-serialized.observation.pl"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 0,
+      "timed_out": false,
+      "stdout": "038.stdout",
+      "stderr": "038.stderr",
+      "elapsed_seconds": 0.498018
+    }
+  }
+}

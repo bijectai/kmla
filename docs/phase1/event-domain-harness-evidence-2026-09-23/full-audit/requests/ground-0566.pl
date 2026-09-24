@@ -1,0 +1,64 @@
+father_('bob_and_alice').
+agent_('bob_and_alice','bob').
+patient_('bob_and_alice','alice').
+payment_('bob_is_paid').
+agent_('bob_is_paid',"johns hopkins university").
+patient_('bob_is_paid','bob').
+start_('bob_is_paid',"2017-12-31").
+purpose_('bob_is_paid','bob_employed').
+amount_('bob_is_paid',53249).
+service_('bob_employed').
+patient_('bob_employed',"johns hopkins university").
+agent_('bob_employed','bob').
+start_('bob_employed',"2017-01-01").
+end_('bob_employed',"2017-12-31").
+educational_institution_('hopkins_is_a_university').
+agent_('hopkins_is_a_university',"johns hopkins university").
+enrollment_('alice_goes_to_hopkins').
+agent_('alice_goes_to_hopkins','alice').
+patient_('alice_goes_to_hopkins',"johns hopkins university").
+start_('alice_goes_to_hopkins',"2015-08-29").
+end_('alice_goes_to_hopkins',"2019-05-30").
+attending_classes_('alice_goes_to_class').
+agent_('alice_goes_to_class','alice').
+location_('alice_goes_to_class',"johns hopkins university").
+start_('alice_goes_to_class',"2015-08-29").
+end_('alice_goes_to_class',"2019-05-30").
+residence_('bob_residence').
+agent_('bob_residence','bob').
+patient_('bob_residence','bob_house').
+residence_('alice_residence').
+agent_('alice_residence','alice').
+patient_('alice_residence','bob_house').
+start_('alice_residence',"2015-08-29").
+end_('alice_residence',"2019-05-30").
+payment_('bob_maintains_household_2015').
+payment_('bob_maintains_household_2016').
+payment_('bob_maintains_household_2017').
+payment_('bob_maintains_household_2018').
+payment_('bob_maintains_household_2019').
+agent_('bob_maintains_household_2015','bob').
+agent_('bob_maintains_household_2016','bob').
+agent_('bob_maintains_household_2017','bob').
+agent_('bob_maintains_household_2018','bob').
+agent_('bob_maintains_household_2019','bob').
+amount_('bob_maintains_household_2015',1).
+amount_('bob_maintains_household_2016',1).
+amount_('bob_maintains_household_2017',1).
+amount_('bob_maintains_household_2018',1).
+amount_('bob_maintains_household_2019',1).
+purpose_('bob_maintains_household_2015','bob_house').
+purpose_('bob_maintains_household_2016','bob_house').
+purpose_('bob_maintains_household_2017','bob_house').
+purpose_('bob_maintains_household_2018','bob_house').
+purpose_('bob_maintains_household_2019','bob_house').
+start_('bob_maintains_household_2015',"2015-08-29").
+start_('bob_maintains_household_2016',"2016-01-01").
+start_('bob_maintains_household_2017',"2017-01-01").
+start_('bob_maintains_household_2018',"2018-01-01").
+start_('bob_maintains_household_2019',"2019-01-01").
+end_('bob_maintains_household_2015',"2015-12-31").
+end_('bob_maintains_household_2016',"2016-12-31").
+end_('bob_maintains_household_2017',"2017-12-31").
+end_('bob_maintains_household_2018',"2018-12-31").
+end_('bob_maintains_household_2019',"2019-05-30").

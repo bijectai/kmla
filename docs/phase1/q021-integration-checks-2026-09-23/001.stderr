@@ -1,0 +1,17 @@
+test_base_branch_owner_change_does_not_taint_unrelated_pr (__main__.ProtectionTests.test_base_branch_owner_change_does_not_taint_unrelated_pr) ... ok
+test_equal_tip_files_do_not_hide_pr_protected_change (__main__.ProtectionTests.test_equal_tip_files_do_not_hide_pr_protected_change) ... ok
+test_git_failure_is_not_no_changes_even_with_label (__main__.ProtectionTests.test_git_failure_is_not_no_changes_even_with_label) ... ok
+test_move_out_of_protected_tree_is_rejected (__main__.ProtectionTests.test_move_out_of_protected_tree_is_rejected) ... ok
+test_new_protected_file_is_rejected (__main__.ProtectionTests.test_new_protected_file_is_rejected) ... ok
+test_protected_change_requires_exact_owner_authorization (__main__.ProtectionTests.test_protected_change_requires_exact_owner_authorization) ... ok
+test_unrelated_change_is_allowed (__main__.ProtectionTests.test_unrelated_change_is_allowed) ... ok
+test_boundary_tests_and_live_probe_are_wired_into_ci (__main__.WorkflowTests.test_boundary_tests_and_live_probe_are_wired_into_ci) ... ok
+test_label_changes_recheck_the_existing_owner_exception (__main__.WorkflowTests.test_label_changes_recheck_the_existing_owner_exception) ... ok
+test_manifest_is_unconditional_in_both_workflows (__main__.WorkflowTests.test_manifest_is_unconditional_in_both_workflows) ... ok
+test_manifest_rejects_missing_empty_and_drifted_standin (__main__.WorkflowTests.test_manifest_rejects_missing_empty_and_drifted_standin) ... ok
+test_shared_checks_use_the_pinned_lean_toolchain (__main__.WorkflowTests.test_shared_checks_use_the_pinned_lean_toolchain) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.756s
+
+OK

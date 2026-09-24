@@ -1,0 +1,23 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"country_", "args": [ {"s":"p"},  {"s":"c"} ]},
+      {"ctor":"country_", "args": [ {"s":"p"},  {"s":"c"} ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [],
+  "fact_source_clauses": [1, 2 ],
+  "stats": {
+    "unary_proofs":0,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":2,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00019237499999999463,
+    "grounding_wall_seconds":0.00019168853759765625,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

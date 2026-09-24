@@ -38,3 +38,12 @@ write docs/consult/Q-NNN.md, run bash scripts/consult.sh docs/consult/Q-NNN.md,
 read the A file, and proceed. If the A file says escalate: yes, halt that
 lane and record it in STATE.md under ## Blockers. Never edit an A file.
 Never answer your own Q file.
+
+Dev grants standing authorization for this consult channel (2026-09-23),
+including repository excerpts needed for each question. Use scripts/consult.sh;
+Fable may write only under docs/consult/ and append to docs/DECISION_LOG.md.
+Audit changed paths after every call; any out-of-scope write halts that lane.
+Serialize consultations and pause concurrent repository writers during the
+before/after audit interval so changes can be attributed unambiguously.
+Do not seek renewed permission per question within this fixed scope. Contract
+amendments, protected artifacts and installations still require Dev's approval.

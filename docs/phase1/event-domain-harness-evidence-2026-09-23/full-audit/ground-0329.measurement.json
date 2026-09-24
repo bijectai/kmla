@@ -1,0 +1,319 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2011-01-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2019-10-10"
+        ]
+      },
+      {
+        "ctor": "disability_",
+        "args": [
+          {
+            "a": "bob_is_disabled"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_is_disabled"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_is_disabled"
+          },
+          "2019-10-10"
+        ]
+      },
+      {
+        "ctor": "termination_",
+        "args": [
+          {
+            "a": "alice_lays_bob_off"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_lays_bob_off"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_lays_bob_off"
+          },
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "reason_",
+        "args": [
+          {
+            "a": "alice_lays_bob_off"
+          },
+          {
+            "a": "bob_is_disabled"
+          }
+        ]
+      },
+      {
+        "ctor": "retirement_",
+        "args": [
+          {
+            "a": "bob_retires"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_retires"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_retires"
+          },
+          "2019-10-10"
+        ]
+      },
+      {
+        "ctor": "reason_",
+        "args": [
+          {
+            "a": "bob_retires"
+          },
+          {
+            "s": "disability"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          "2019-10-10"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays"
+            }
+          },
+          {
+            "a": "alice_lays_bob_off"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          12980
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer"
+      }
+    },
+    {
+      "source_clause": 6,
+      "predicate": "disability_",
+      "event": {
+        "a": "bob_is_disabled"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "termination_",
+      "event": {
+        "a": "alice_lays_bob_off"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "retirement_",
+      "event": {
+        "a": "bob_retires"
+      }
+    },
+    {
+      "source_clause": 17,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_employer"
+    },
+    {
+      "a": "bob_is_disabled"
+    },
+    {
+      "a": "alice_lays_bob_off"
+    },
+    {
+      "a": "bob_retires"
+    },
+    {
+      "a": "alice_pays"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.000276208,
+    "grounding_wall_seconds": 0.00027561187744140625,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

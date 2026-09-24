@@ -1,0 +1,155 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          33200
+        ]
+      },
+      {
+        "ctor": "deduction_",
+        "args": [
+          {
+            "a": "itemized_deduction"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "itemized_deduction"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "itemized_deduction"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "itemized_deduction"
+          },
+          4252
+        ]
+      }
+    ],
+    "stipulations": [
+      {
+        "pred": "s151_5",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": 2000
+          },
+          {
+            "wild": 0
+          },
+          {
+            "wild": 1
+          },
+          {
+            "val": 2017
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "deduction_",
+      "event": {
+        "a": "itemized_deduction"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_is_paid"
+    },
+    {
+      "a": "itemized_deduction"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "stats": {
+    "unary_proofs": 2,
+    "distinct_event_domain": 2,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 8,
+    "stipulation_count": 1,
+    "wildcard_count": 2,
+    "grounding_cpu_seconds": 0.0003800419999999971,
+    "grounding_wall_seconds": 0.00037932395935058594,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

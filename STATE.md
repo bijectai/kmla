@@ -2,6 +2,186 @@
 
 ## Current phase
 
+2026-09-23 (A-023 correction verified; full H4 observation coverage still open):
+the restarted audit visits every original. H4.3(a) passes 376/376; H4.3(b)
+passes 114, with 262 explicitly unimplemented, no mismatch/error/timeout.
+The audit intentionally exits 1 for missing coverage; it is not a full H4 pass.
+376 diagnostic Household instances / 297 distinct; production records and
+reference parity remain absent. The corrected witness is 69 -> 69 -> 69 facts,
+retaining 13 unary proofs over 8 event-domain entries. Country14, list2 and
+tax33 freshly pass their bounded checks; main independently verifies these
+and 147 builder tests. The verified 122-oracle-assertion source snapshot is
+unchanged (87 existing statements preserved). New builder regressions are
+wired into CI alongside the mandatory proof suite. Details:
+docs/phase1/EVENT_DOMAIN_CORRECTION_2026-09-23.md and
+docs/phase1/q023-independent-2026-09-23/.
+Remaining work: 262 H6 observations, shared full record packaging/producers,
+and unfinished oracle modes/providers/production guards/R5 obligations.
+No new blocking owner decision arose from Q-023; protected H4 installation
+and re-pin still belong to Dev. Checkpoint 1 is NOT passed. human/ and PLAN
+are unchanged; all subtask work is bounded, with no later phase started.
+
+2026-09-23 (A-023 reviewed; bounded traversal correction released): Fable
+classifies the occurrence-multiset event domain as an implementation violation
+of H4.3(a), not a blocking owner amendment. The domain must use distinct ground
+events in first-occurrence order, WITHOUT deduplicating stored unary facts or
+binary solutions and WITHOUT bypassing step (ii) for bodyless facts. A-023
+explicitly corrects A-020 §3.3; old answers remain unchanged. Consult audit is
+clean: only new A-023 and appended DECISION_LOG, protected manifest verifies.
+The isolated harness lane may implement this bounded correction and restart
+the broad audit. Prior pass counts do not transfer to the new traversal.
+No protected text is installed, and Checkpoint 1 remains unpassed.
+
+2026-09-23 (StipArg adapters verified; new H4(a) finding, Q-023): both isolated
+adapters are complete. Independent checks pass both list-bearing originals,
+all 14 country originals, 144 unit regressions and 122 oracle assertions
+(87 existing statements unchanged). The broader audit stops at s2_b_3_B_pos:
+114 facts become 204 on re-grounding; zero-based index 20 changes an agent_
+event from bob_maintains_household_2016 to bob_maintains_household_2015.
+Main reproduces 114 -> 204 -> 384 with unchanged code, 13 unary proofs over
+8 distinct events on each pass. No remedy is implemented. Affected grounding
+development is halted for Q-023 classification under standing consult scope.
+All 376 originals are accounted for: H4(a) 148 pass/1 fail/227 unvisited;
+H4(b) 3 pass/145 unimplemented/228 blocked. Separate passing slices remain
+separate evidence. Production records and reference parity are not produced;
+Checkpoint 1 remains unpassed. human/ and docs/PLAN.md are untouched.
+
+2026-09-23 (shared stipulation-list boundary verified): distinct recursive
+StipArg and its tagged-list wire are checked independently. All 115 existing
+Interface guards, unchanged query-time guards, 16 new behavioral guards,
+20 new proofs and five declarative fixture tests pass on pinned Lean 4.33.1.
+Six legacy fixture encodings remain unchanged; human manifest verifies.
+The two isolated implementation contexts may now adapt to this shared shape.
+Their prior results are snapshots, not claims that the changed adapters already
+compile. No full-population H4 completion or Checkpoint 1 pass is claimed.
+Evidence: docs/phase1/q022-shared-independent-2026-09-23/.
+
+2026-09-23 (A-022 reviewed; shared-only representation correction released):
+Fable classifies list-valued stipulations as an Interface/codec representation
+gap under existing H4, not an owner amendment or G6 source failure. Its writes
+were only A-022 and an append to DECISION_LOG; all-path audit clean, protected
+manifest unchanged. The shared Interface context is implementing a DISTINCT
+recursive stipulation-argument type; event Term/Pat must remain unchanged.
+Both implementation lanes stay paused until that shared declaration and wire
+shape are checked. A pinned numbervars probe confirms one variable id is shared
+inside/outside nested lists; no per-occurrence renumbering. No new validity
+restriction, semantic mode, protected installation or checkpoint is authorized.
+Fable's optional G4 scope confirmation is non-blocking; no new owner action is
+required for this correction as classified. Review/audit: A-022 and
+docs/consult/evidence/q022-path-audit-2026-09-23.json.
+
+2026-09-23 (new list-valued stipulation encoding finding; Q-022 prepared): the
+wider audit stops at s2_a_1_B_pos.pl with pinned stderr
+`ERROR: Unknown error term: unsupported_household_term([charlie])` (exit 2,
+no timeout). Its four s151/5 heads retain [charlie] and [0] in positions 3/4;
+the shared flat Pat/Term input representation cannot encode them. A source-head
+census also identifies [alice] in s63_d_2_pos.pl. No coercion, exclusion, new
+constructor or semantic remedy is implemented. The affected lane is halted
+for Q-022 classification under standing consult authorization, after writer
+quiescence and before/after scope audits. The country-only 14-case success is
+unchanged. The separate §7703 stipulation slice is complete and independently
+verified (62 unchanged + 25 new theorems); remaining provider/mode/R5 obligations
+are recorded in Oracle/UNPROVED.md. Checkpoint 1 remains unpassed.
+
+2026-09-23 (country fix independently verified; Phase 1 continuation): the
+country_-by-name correction passes both H4.3 checks on all 14 originals and
+the independent supplied-country comparison. The final independent run also
+passes 11 unit tests, three fixed output regressions and six runtime guard
+groups; implementation/test hashes did not change during verification.
+s3306_c_A_pos is exactly [[{"a":"alice"},{"a":"bob"}]] on both programs.
+The B-positive omission control changes the location to null (one tuple added,
+one lost), not a net proof-count increase; B-negative stays empty. Ordinary
+event traversal is unchanged; a country rule/non-ground clause fails closed.
+The broader unit run passes 103 tests; the initial orchestrator import-path
+failure and corrected invocation are both retained. See
+docs/phase1/Q021_INTEGRATION_2026-09-23.md and COUNTRY_FIX_REPORT_2026-09-23.md.
+The harness lane may continue the all-376 audit; the separate §7703 context is
+working on root stipulated-clause append/freshening with its required §152
+provider and R5 proof obligations open. No production records or reference
+parity yet; Checkpoint 1 remains unpassed. No human installation is implied.
+
+2026-09-23 (A-021 reviewed; country-only correction released): Fable confirms
+Dev's reading: country_/2 has no event position, so applying H4.2(ii)'s event
+domain is an implementation defect under H1/H3, not a missing semantic choice.
+The all-path audit (including ignored files and git metadata) finds only new
+A-021 and an append to DECISION_LOG changed during the consult; old answers and
+the protected manifest are unchanged. The isolated harness lane is resumed for
+the country_-by-name correction and both H4.3 regressions on all 14 files, plus
+direct supplied-fact preservation. No bodyless-event bypass or country rule
+handling is authorized. Phase 1 continues after that slice is verified. The
+standing consult permission is recorded in AGENTS; no new owner action is
+currently required for this defect. Checkpoint 1 remains unpassed.
+
+2026-09-23 (Q-021 explicitly authorized; standing consult scope): Dev clears
+the Q-021 pre-spawn permission hold and grants standing consultation through
+scripts/consult.sh, with writes only in docs/consult/ and appended
+docs/DECISION_LOG.md. Audit paths after each call; out-of-scope writes halt the
+lane. Contract amendments, human/ and installations still require Dev. Q-021
+now carries Dev's interpretation and conditional country_-only correction:
+preserve supplied ground bodyless clauses with source order/tags/multiplicity;
+record placement, reject a future country_ rule as a finding, keep event
+traversal unchanged, and check both H4.3 criteria for all 14 originals. Fable
+must confirm or refute before implementation. The historical hold below is
+superseded; Checkpoint 1 remains unpassed.
+
+Prior continuation handoff (before Q-021 authorization): the isolated harness context was closed;
+no background implementation remains. Independent orchestrator rechecks pass
+tax_case_33's two comparisons and reproduce the country mismatch with exit 1
+(`docs/phase1/h4-tax33-recheck-2026-09-23/` and
+`docs/phase1/h4-country-recheck-2026-09-23/`). Regression suite: 117 tests, OK;
+this does not override the failing H4 diagnostic. The exact 376-name population
+was independently checked against the corpus, with no omissions/duplicates.
+Qualified H4.3(a): 115 measured equalities, 261 blocked. H4.3(b): 1 pass,
+1 fail, 113 unimplemented observations, 261 blocked. Only tax_case_33 passes
+both. The interrupted broad run is not a completed audit; its historical null
+finding is qualified in the report. Producer records/distinct households are
+not yet produced. Details: docs/phase1/H4_CANDIDATE_REPORT_2026-09-23.md.
+
+2026-09-23 (H4 candidate measured; generic path held): the exact reviewed
+tax_case_33 candidate passes its own H4.3(a,b) measurement: 1,736 facts retained,
+tax/3 first solution 27181 on both programs, 316 outer iterations × 157 inner
+terms = 49,612 two-input calls with 157 successful proofs. This does not validate
+all 376 originals. A separate generic grounder defect drops the supplied
+country_("baltimore, maryland, usa","usa") in s3306_c_A_pos.pl. Its ordered-list
+re-grounding passes but its H6.5 bff observation changes from [[alice,bob]] to
+[]. Raw tagged outputs and pinned identities are retained under
+docs/phase1/h4-candidate-evidence-2026-09-23/country-finding/. No revised traversal
+or comparison was applied. The affected generic path is halted for review.
+
+Q-021 asks whether H1/H3 already require a narrow implementation correction
+(country's first position is a place, not an event), or an owner choice is
+missing. Its CLI spawn was rejected before execution: explicit permission
+covered Q-020, not this new payload. No A-021 exists; no retry or indirect route
+is authorized. Dev must authorize sending Q-021 and its listed excerpts before
+the standing design-authority review can run. Checkpoint 1 remains unpassed.
+
+2026-09-23 (Q-020 review complete): Fable endorses the narrow H4 candidate as
+explicit, with no missing owner choice or counterexample. Its four clarifications
+are now folded into docs/contracts/H4_BOUND_PURPOSE_DRAFT.md: replacement rather
+than double traversal, unary provenance, explicit asymmetric deduplication and
+fail-closed exact-rule recognition. Implementation/verification is authorized
+under Dev's conditional approval, not protected installation or preservation.
+Fable's only tracked-scope writes are A-020 and an appended DECISION_LOG review;
+the protected manifest verifies and the draft/Q/STATE/HANDOFF were not changed
+by the consult. Both H4.3 checks over 376 originals and traversal cost are still
+unmeasured. The isolated harness context is resumed; it cannot inspect Oracle/.
+Checkpoint 1 is not passed. Earlier permission/review holds below are historical.
+
+2026-09-23 (H4 candidate review authorized): Dev accepts the exact bound-call
+finding and approves the staged tax_case_33-only candidate for Fable review,
+then implementation/verification only if Fable endorses it as explicit. Any
+missing choice or counterexample goes to Dev before implementation. Both H4.3
+checks must be reported for all 376 originals and traversal cost measured;
+no fallback, exclusion, source repair or global-completeness claim. Installation
+and re-pin remain Dev's. Human/ is unchanged and the manifest verifies.
+The explicitly requested three commits (6e3cdc9, f99fafe, 866f519) were pushed
+before consultation; the remote branch tip is verified at
+866f5196fc3c645ba393a1b7f3e6e8048631836c. Q-020's CLI invocation is now explicitly
+authorized, with Fable writes confined to docs/consult/ and docs/DECISION_LOG.md.
+No implementation has started pending its answer. Checkpoint 1 stays unpassed.
+Pre-existing untracked scripts/__pycache__/inventory_cases.cpython-314.pyc is
+left untouched and is not part of this work.
+
 2026-09-23 (bounded continuation verified): all three original §7703 proof
 obligations now kernel-check with their statements and fixtures unchanged.
 The isolated lane also added the source `(b)` composition and root statute
@@ -387,9 +567,97 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Pending permission: Q-020 external design review
+### Q-023 resolved: event-domain correction verified; H4(b) implementation incomplete
 
-The exact bound-call evidence was reported to Dev before drafting Q-020's
+A-023 resolves the classification as an existing-contract implementation
+correction. Its bounded repair is independently verified: distinct first-seen
+event domain, stored unary/binary proofs intact, no bodyless bypass, fixed-point
+witness 69/69/69, country/list/tax33 regressions, and a restarted all-376 audit.
+All 376 H4(a) comparisons pass; H4(b) is 114 pass and 262 unimplemented.
+No prior pass count is reused. The optional explicit H4.2 clarification remains
+Dev's choice, not a required installation or blocker. Full H4/CP1 is still open.
+
+The following is the original pre-review finding, retained unchanged in evidence:
+The exact failure and unchanged three-pass reproduction are in Q-023 and
+docs/consult/evidence/q023-reproduction-2026-09-23/. Source hash:
+cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a.
+Both measured programs exit 0 without timeout; the ordered fact comparison
+fails (114 versus 204), while five stipulations are equal. Another unchanged
+re-grounding yields 384 facts. This is not an H4(b) or parity mismatch.
+The event-domain/proof-multiplicity distinction needs Fable's classification
+against H1/H4 and the explicit no-bodyless-bypass instruction. No deduplication,
+source repair, exclusion, revised traversal or comparison change is authorized
+by this finding. Consult first; amendments/installations still require Dev.
+
+### Q-022 resolved: shared representation and both adapters verified
+
+A-022 resolves the classification: implementation representation gap, no blocking
+owner amendment. The shared-only StipArg correction and both isolated adapters
+are independently verified, including both named original H4 checks and all
+122 oracle assertions. They use the same checked type and wire. Full H4 remains
+unverified because of the separate Q-023 finding. The failed run below remains
+historical failed evidence.
+
+Exact failure: `ERROR: Unknown error term: unsupported_household_term([charlie])`.
+Original s2_a_1_B_pos.pl supplies
+`s151(bob,_,[charlie],[0],Year) :- between(2014,2017,Year)`; the pinned diagnostic
+prints all four yearly heads before unchanged encoding fails. This is an
+encoder failure, not evidence that the source query is reference-undefined.
+G4 fixes flat scalar Term; H4 retains these stipulated clauses. At the failed
+snapshot Stip.args and its input wire used only val(Term)/wild(Nat), prompting
+the classification now resolved by A-022. No list
+is flattened/stringified/dropped and no validity restriction is introduced.
+Q-022 and adjacent census/trace evidence preserve the decision question.
+The broad run accounts for all 376: 120 H4(a) pass, 1 error, 255 blocked; H4(b)
+has 1 pass, 119 unimplemented, 1 encoding-blocked, 255 blocked-after-finding.
+The previously verified country slice is separate retained evidence, not waived.
+
+### Q-021 resolved; country correction verified, wider H4 audit unfinished
+
+Dev explicitly authorized Q-021 and granted standing in-scope consultation.
+A-021 confirms the implementation defect and releases the conditional fix.
+The path audit is clean and the log change is append-only. The permission
+denial below is retained history, not a current request for owner permission.
+The measured mismatch is now corrected: all 14 originals pass both comparisons,
+direct preservation and the fixed expected-output regressions. Old failing
+evidence is preserved. The wider all-376 and general H6 obligations remain open.
+
+Measured original H6.5 query:
+`s3306_c_A(alice_employer,Employer,Employee)` in s3306_c_A_pos.pl.
+Original stdout is `[ [ {"a":"alice"},  {"a":"bob"} ] ]`; serialized stdout is
+`[]`. Both processes exit 0 without a timeout. H4.3(b) fails, even though
+H4.3(a) passes. This is not a refutation of the scoped service-domain candidate;
+the generic binary path incorrectly treats country_/2 position 1 as an event.
+No source, answer, comparison, universe or traversal was changed to hide it.
+
+Q-021 seeks a design-authority ruling on the existing H1/H3 requirement versus
+a missing owner choice before applying a correction. Fable was not invoked:
+the permission reviewer rejected the new payload/destination before process
+creation. No answer is inferred from the denial. Explicit owner permission is
+needed to send docs/consult/Q-021.md and its named repository excerpts to Fable,
+allowing only docs/consult/ and appended docs/DECISION_LOG.md writes.
+
+Verbatim rejection:
+
+```text
+This action was rejected due to unacceptable risk.
+Reason: This sends a new Q-021 and potentially sensitive repository excerpts to the separate Fable service; prior authorization specifically covered Q-020, not this new payload and destination, so sensitive egress is not specifically authorized.
+Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.
+```
+
+This was one rejected tool invocation, not a failed Claude subprocess. The
+three-failed-CLI-attempt breaker was not reached; no repeated attempt is made.
+
+### Resolved: Q-020 permission and review gate
+
+Dev explicitly authorized this payload/destination/consult-answer scope after
+the prior rejection. The three commits were pushed first; Q-020 completed
+successfully and A-020 endorsed candidate implementation/verification with four
+clarifications now in the staged draft. There is no active consultation or
+permission hold. Neither H4.3 preservation nor installation is established.
+The historical permission-denial evidence below is preserved, not active.
+
+Historical pre-authorization record: the exact bound-call evidence was reported to Dev before drafting Q-020's
 tax_case_33-only candidate exception. It is not an installed amendment and
 neither H4.3 preservation nor its full traversal cost is claimed. The consult
 did not start: the permission reviewer rejected sending repository excerpts
@@ -441,7 +709,13 @@ isolating the observation reduction. No recommendation has been applied, and
 all three original assertions remain unchanged. Its general Lean explanations
 are hypotheses to test, not trusted proof evidence.
 
-### Active: H4.2 grounding raises on tax_case_33 (Q-017, 2026-09-23)
+### Historical Q-017: bound-purpose raise; candidate measured, full H4 release open
+
+Current qualification: the A-020 candidate is implemented under Dev's bounded
+approval and freshly passes both tax33 checks after A-023, with the same
+1,736 ordered facts and result 27181. The original raise below remains
+historical evidence. Full H4 release and protected installation are not claimed:
+262 original H6 observations still need implementation and verification.
 
 Dev requires exact goal/binding evidence before any amendment. The fresh
 read-only original-call reproduction and clause-call trace above confirm the
@@ -473,8 +747,11 @@ be explicit; H2/A3 wildcard representation cannot be silently expanded away.
 A-019 appends the factual correction. Nothing in the consult answers accepts
 a remedy or changes H4.3: keep its existing re-grounding and original-query
 preservation checks unless Dev explicitly amends them. An exact revised H4.2
-procedure still needs a draft, domain/order justification and owner approval;
-no completeness or cost claim for an unaudited candidate is accepted here.
+procedure needed a draft, domain/order justification and owner approval at that
+time. Dev has since conditionally authorized the narrow staged candidate and
+A-020 has endorsed its implementation with clarifications. Only the candidate
+implementation/review hold is cleared; both H4.3 checks and cost remain to be
+measured, and protected installation/re-pin remain Dev's.
 
 ### Resolved 2026-09-23: query-admission proof circuit breaker (2026-09-22)
 
@@ -889,8 +1166,12 @@ implementation obligations above, with separate oracle/serializer contexts and
 read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
 query-admission circuit breaker was resolved on Dev-authorized continuation;
 pre-dispatch checks passed and both isolated lanes delivered initial slices.
-The H4 grounding lane stays paused for an owner-approved remedy after the
-bound-call evidence; no amendment is accepted and Q-020 review needs permission.
+The Q-020 candidate is implemented and measured for tax_case_33 only; protected
+installation remains Dev's. A-021 confirms the authorized country-only fix is
+an implementation correction; complete all 14 regressions, then continue the
+all-376 audit without changing semantics. Consultations have standing scope
+authorization with per-call changed-path audits. New contract choices still
+halt the affected lane for Dev.
 The authorized §7703 proof-only round is complete: all three assertions pass,
 and bounded source translation continued with explicit open dependencies.
 Continue §7703 integration without mistaking those dependencies for references.

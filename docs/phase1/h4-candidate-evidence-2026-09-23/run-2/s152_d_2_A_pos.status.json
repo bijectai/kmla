@@ -1,0 +1,36 @@
+{
+  "original_case": "s152_d_2_A_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "blocked:unimplemented-approved-H6-projection",
+  "source_sha256": "a613421ec6f76be5642dca4dd14de74648ac6b3f36672b1c365ceb46c5f0d9c3",
+  "reader_exceptions": [],
+  "h6_observation": "blocked: shared target output-position schema absent; no ground-truth substitute",
+  "original_measurement": "ground-0085.pl",
+  "original_stats": {
+    "unary_proofs": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00024949999999998584,
+    "grounding_wall_seconds": 0.0002484321594238281,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0086.pl",
+  "reground_stats": {
+    "unary_proofs": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0001974160000000058,
+    "grounding_wall_seconds": 0.00019693374633789062,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  }
+}

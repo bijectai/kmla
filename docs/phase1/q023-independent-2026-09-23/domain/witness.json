@@ -1,0 +1,73 @@
+{
+  "case": "s2_b_3_B_pos.pl",
+  "source_sha256": "cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a",
+  "legacy_fact_counts_separate_procedure": [
+    114,
+    204,
+    384
+  ],
+  "corrected_passes": [
+    {
+      "request": "ground-0001.pl",
+      "stats": {
+        "unary_proofs": 13,
+        "distinct_event_domain": 8,
+        "service_proofs": 0,
+        "distinct_service_domain": 0,
+        "fact_count": 69,
+        "stipulation_count": 5,
+        "wildcard_count": 5,
+        "grounding_cpu_seconds": 0.001045416999999993,
+        "grounding_wall_seconds": 0.0010447502136230469,
+        "candidate": {
+          "scope": "not_applicable"
+        }
+      },
+      "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+    },
+    {
+      "request": "ground-0002.pl",
+      "stats": {
+        "unary_proofs": 13,
+        "distinct_event_domain": 8,
+        "service_proofs": 0,
+        "distinct_service_domain": 0,
+        "fact_count": 69,
+        "stipulation_count": 5,
+        "wildcard_count": 5,
+        "grounding_cpu_seconds": 0.000490416999999993,
+        "grounding_wall_seconds": 0.0004897117614746094,
+        "candidate": {
+          "scope": "not_applicable"
+        }
+      },
+      "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+    },
+    {
+      "request": "ground-0003.pl",
+      "stats": {
+        "unary_proofs": 13,
+        "distinct_event_domain": 8,
+        "service_proofs": 0,
+        "distinct_service_domain": 0,
+        "fact_count": 69,
+        "stipulation_count": 5,
+        "wildcard_count": 5,
+        "grounding_cpu_seconds": 0.0005564590000000091,
+        "grounding_wall_seconds": 0.0005562305450439453,
+        "candidate": {
+          "scope": "not_applicable"
+        }
+      },
+      "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+    }
+  ],
+  "h4_3_a": "pass:three-corrected-passes",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "query_plan": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s2_b_3_B/3 bbb"
+  }
+}

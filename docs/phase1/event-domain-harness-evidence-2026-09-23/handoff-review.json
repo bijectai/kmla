@@ -1,0 +1,23 @@
+{
+  "report_sha256": "2ae995264ea85facf52474f6c132a9c80c21afbbeba15526102fd27ff054e1ea",
+  "pre_precision_review_report_sha256": "b4a517b8fcf98a0f52598e8addc3d19555e358703e099f592b552b29e9c7a59b",
+  "report_only_precision_edits": "Clarify standing authorization, main dispatch and independently reported assertion/source-snapshot counts; no code or tests changed or rerun.",
+  "accounting_sha256": "0aaca9bdd838cd93d60dd0e7f8099bb3683bdbd43a0a1a0751fa6e2d068eb178",
+  "verifier_sha256": "2b037b4f88f046ca400828c36b2a7c4e0ef0d67fd89c2b4d060860d5b1a17b2c",
+  "baseline_sha256": "dc267cc6a0f282e7082db735551ff15113d0d6b5d0a2050255c00f1d7f45cecd",
+  "tested_code_still_matches": {
+    "scripts/test_grounding.py": "55bbd46762db8cf878883fca7d1700dc95f8e2972528196202c302c96c8cd680",
+    "scripts/test_grounding_dispatch.py": "4a5bc2fc5b56df594c906b8ff7c3a7d9148578594b099aba50a3cc239a2e592f",
+    "scripts/test_country_grounding.py": "cd2549512bf71066236271985a4b5c301c395dd62aeba514c01e89dad6edc907",
+    "harness/grounding.py": "42b9f7967746bcd7a39a3a3eda5cf2d906f6120370a145d972cdb0aaa04fead5",
+    "harness/grounding.pl": "b79f8dff6110ee226d795fc81eec07b392b4222561701dfd9ce8eea929e15c0d",
+    "harness/grounding_observations.py": "cbfb2210755fa9cd6f22af8a4034a5381ef0a31507bb9abc7b56d3b913016682",
+    "harness/grounding_observations.pl": "7ab0b41ae2fcf5137317878dfd23db6e52ea901d11540373a60b9ad7f691d2f9",
+    "harness/facts.py": "98d2ff42d80d36f9e234d78e749a8e58d112941628058952057cd2a83d51404a",
+    "scripts/test_stip_lists.py": "176ac5a9229326a51125cf7e2e70059fcbcf6f81d946c92356fa7a7171dbe124",
+    "scripts/test_event_domain.py": "f5c80c3212c86787ada8e96af50f93c2ce1f76f6a7d26b7d955ba6f4d931127b"
+  },
+  "report_links_exist": 6,
+  "scope": "Final read-only accounting/document check; no new corpus execution or H6 coverage; lane quiescent",
+  "failed_edit_cycles": 0
+}

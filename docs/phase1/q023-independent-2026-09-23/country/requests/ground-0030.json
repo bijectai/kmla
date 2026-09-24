@@ -1,0 +1,6 @@
+{
+  "case": "synthetic A-023 distinct-event traversal",
+  "candidate": "regular",
+  "query": "none",
+  "source_sha256": "e159127c6702474d4dc143ccdf2e92d72e65748b3132527bf23229790e23978a"
+}
