@@ -1117,7 +1117,8 @@ and need no role reassignment. **Exceptions deliberately left unchanged:**
 `docs/consult/FABLE_PROMPT.md` (history only, no longer imported), consult smoke
 test/old PR description/recommended semantics, dated phase/evidence reports,
 the unedited `docs/phase1/HANDOFF_HISTORY.md`, historical decision-log bodies
-and dated STATE records, and historical/protected-artifact drafts (including
+and dated STATE records, `Oracle/UNPROVED.md`'s dated ledgers and retained
+Oracle test diagnostics, and historical/protected-artifact drafts (including
 the H4 candidate's recorded Fable review). Old role language in those records
 is provenance, not current authority. Existing stale worktrees are not updated
 or deleted; their conflicting/missing local CLAUDE files are listed in HANDOFF.

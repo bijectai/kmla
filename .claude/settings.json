@@ -1,0 +1,16 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "permissions": {
+    "deny": [
+      "Edit(/human/**)",
+      "Read(/human/parity/check.py)",
+      "Read(/human/gate/exploits/**)",
+      "Edit(/docs/consult/A-*.md)",
+      "Edit(/docs/PLAN.md)"
+    ]
+  }
+}

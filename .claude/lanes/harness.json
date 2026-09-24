@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(/Oracle/**)",
+      "Edit(/Oracle/**)",
+      "Read(/scripts/check_oracle7703.sh)",
+      "Edit(/scripts/check_oracle7703.sh)",
+      "Read(/docs/phase1/ORACLE_7703.md)",
+      "Edit(/docs/phase1/ORACLE_7703.md)",
+      "Read(/docs/phase1/ORACLE_7703_PROGRESS_2026-09-23.md)",
+      "Edit(/docs/phase1/ORACLE_7703_PROGRESS_2026-09-23.md)",
+      "Read(/docs/phase1/ORACLE_7703_STIP_PROGRESS_2026-09-23.md)",
+      "Edit(/docs/phase1/ORACLE_7703_STIP_PROGRESS_2026-09-23.md)",
+      "Read(/docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt)",
+      "Edit(/docs/phase1/S7703_PREROUND_GOALS_2026-09-23.txt)",
+      "Read(/docs/phase1/STIP_LIST_ORACLE_2026-09-23.md)",
+      "Edit(/docs/phase1/STIP_LIST_ORACLE_2026-09-23.md)",
+      "Read(/docs/phase1/q021-oracle-stip-independent-2026-09-23/**)",
+      "Edit(/docs/phase1/q021-oracle-stip-independent-2026-09-23/**)",
+      "Read(/docs/phase1/s7703-continuation-check-2026-09-23/**)",
+      "Edit(/docs/phase1/s7703-continuation-check-2026-09-23/**)",
+      "Read(/docs/phase1/s7703-continuation-final-2026-09-23/**)",
+      "Edit(/docs/phase1/s7703-continuation-final-2026-09-23/**)",
+      "Read(/docs/phase1/HANDOFF_HISTORY.md)",
+      "Edit(/docs/phase1/HANDOFF_HISTORY.md)",
+      "Read(/docs/phase1/STIP_LIST_INTEGRATION_2026-09-23.md)",
+      "Edit(/docs/phase1/STIP_LIST_INTEGRATION_2026-09-23.md)",
+      "Read(/docs/phase1/continuation-checks-2026-09-23/**)",
+      "Edit(/docs/phase1/continuation-checks-2026-09-23/**)",
+      "Read(/docs/phase1/q021-integration-checks-2026-09-23/**)",
+      "Edit(/docs/phase1/q021-integration-checks-2026-09-23/**)",
+      "Read(/docs/phase1/q022-adapters-independent-2026-09-23/**)",
+      "Edit(/docs/phase1/q022-adapters-independent-2026-09-23/**)",
+      "Read(/docs/phase1/q022-integration-safety-2026-09-23/**)",
+      "Edit(/docs/phase1/q022-integration-safety-2026-09-23/**)",
+      "Read(/docs/phase1/q023-independent-2026-09-23/**)",
+      "Edit(/docs/phase1/q023-independent-2026-09-23/**)",
+      "Read(/docs/reviews/**)",
+      "Edit(/docs/reviews/**)"
+    ]
+  }
+}

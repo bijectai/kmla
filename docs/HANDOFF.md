@@ -3,10 +3,12 @@
 ## Current state
 
 - Integration branch: `claude/checkpoint-0-integration`.
-- Pushed implementation head checked for this consolidation:
-  `fe25216db512aefdb205cdd0ba3e0c8769208176`. The handoff-only commit follows it;
-  resolve that revision with `git log -1 --format=%H -- docs/HANDOFF.md` on
-  the integration branch rather than treating the implementation hash as HEAD.
+- Pushed integration head after the role-neutral consolidation:
+  `96722c5b8d8bbc9bf6d74327b84ac3736eb56f8f`. Implementation evidence is at
+  its parent `fe25216db512aefdb205cdd0ba3e0c8769208176`.
+- This checkout is now on proposal branch `roles/claude-builder`, cut from
+  that pushed head. P-ROLES awaits Dev's acceptance and merge; it is not in
+  force and this branch must not be used to start implementation yet.
 - Checkpoint 0 is signed off at owner parent
   `0a2a65ac1313c180bea39d137e6665c01b8e833a`; Phase 1 is authorized.
   **Checkpoint 1 is not passed. No Phase 2 work is authorized.**
@@ -153,3 +155,67 @@ Do not start a new session in either stale worktree: old local instructions
 or inherited main-checkout instructions can conflict. The owner's transition
 requires a separately reviewed roles branch; this consolidation does not
 activate any role change. Preserve these worktrees until separately authorized.
+
+## Roles and starting a session — PROPOSED P-ROLES
+
+These instructions activate only when Dev accepts and merges P-ROLES. No
+builder or governor continuation is authorized by merely checking out this
+proposal. The main checkout switched to roles/claude-builder after the
+worktree inventory above; the two stale worktrees were left exactly as found.
+
+Claude Code sessions become the builder; Astra becomes the governor (design
+authority, consult answerer, reviewer and event-driven monitor), never the
+implementer. Dev retains all owner artifacts, installations, re-pins and
+checkpoint sign-offs. Root CLAUDE imports docs/BUILDER_RULES.md; AGENTS files
+are governor-only. The governor may review both lanes but may not relay either
+implementation to the other. Integration coordinates shared declarations and
+opaque engine outputs; it must not use a mixed context to implement either lane.
+
+After acceptance, from the up-to-date main checkout at the accepted revision,
+use a fresh session for each of these types (not either stale worktree):
+
+| Session | Exact launch command, from the repository root | Lane instructions |
+| --- | --- | --- |
+| Integration | `claude --settings .claude/settings.json` | Root CLAUDE and imported BUILDER_RULES; no lane implementation in this mixed context |
+| Oracle | `claude --settings .claude/lanes/oracle.json` | Root CLAUDE, then read Oracle/CLAUDE.md before any lane file |
+| Harness / serializer | `claude --settings .claude/lanes/harness.json` | Root CLAUDE, then read harness/CLAUDE.md before any lane file |
+
+**First action in every new builder session: run `/memory`.** Confirm root
+CLAUDE.md and its BUILDER_RULES import loaded, and that **no AGENTS.md did**.
+For a lane session, read its CLAUDE.md immediately and run `/memory` again to
+confirm the lane rules loaded before implementation. Integration has no lane
+assignment; any later lane directory read must load its CLAUDE, but cannot
+turn the already mixed integration context into an isolated implementer.
+If the loaded roles are missing or conflicting, stop; do not begin work.
+Static file/import/JSON checks do **not** confirm what Claude actually loads.
+That confirmation is the first builder session's responsibility.
+
+Root CLAUDE.md must always exist, preventing AGENTS fallback. Do not change the
+Project instructions setting. Imports use paths relative to their importing
+file, at most four levels deep. Directory CLAUDE files load on file access;
+nested worktree sessions also inherit the main checkout's ancestor CLAUDE files.
+Do not start in stale worktrees or silently update/delete them to avoid a conflict.
+
+Project settings/local settings are shared with worktrees. Use session
+--settings for lane restrictions; its lists merge with project settings.
+Integration explicitly supplies the project file and adds no lane deny list.
+The oracle file denies harness/gen implementation, their scripts/reports and
+mixed implementation evidence; the harness file denies the corresponding
+Oracle paths. Both deny mixed review notes. Their concrete path lists cover
+the current tree; extend them as new opposite-lane tests/reports appear, before
+lane access. Written isolation applies even to unlisted future files.
+gen/ gets a settings file only when its later lane opens after Checkpoint 1.
+
+Read/Edit denies are defence in depth, not a sandbox. Read denies cover common
+shell reads naming the path but not scripts that open files, recursive grep
+from inside a directory or /usr/bin/cat. Never use a bypass. Edit covers writes;
+no Write rules are used. Project attribution disables co-author/PR footers and
+session URLs. Project human/ denies also apply to Dev's Claude sessions; owner
+installation is never delegated to a builder session.
+
+For consultations, write a never-reused Q and run scripts/consult.sh. It does
+not spawn Claude: exit 1 means awaiting the governor and halts that lane. Notify
+Dev/the governor with the path. Once A exists, the command reads it unchanged;
+read its escalation before resuming. Only the governor writes/seals A; no one
+answers their own Q. Audit changed paths after calls and answer delivery. Keep
+old FABLE_PROMPT and A-files as history; see docs/consult/README.md.

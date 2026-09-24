@@ -1,7 +1,7 @@
 # Generated-input lane
 
 No generator is implemented yet. Phase 2 remains gated by Dev's Checkpoint 1
-sign-off. `AGENTS.md` installs the owner's A/WIRE requirements for the eventual
+sign-off. `CLAUDE.md` installs the owner's A/WIRE requirements for the eventual
 generator; it is not evidence that outputs have already been generated/checked.
 
 Construct births and eligible relationships within approved Option A rather
