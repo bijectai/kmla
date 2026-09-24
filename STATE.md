@@ -33,6 +33,13 @@ role/permission/session references below are provenance, not new routing.
 The governor may inspect both lanes for review but must never relay either
 implementation. Review is event-driven and sampled, not a full audit rerun.
 
+HANDOFF item 1 (shared output-position projections) is halted, awaiting
+docs/consult/Q-024.md. Q-024 asks where the declaration lives, which positions
+are outputs where a case binds its answer, and how the harness's projection
+exceptions reach the declaration without a lane-implementation relay. Its
+evidence is docs/consult/evidence/q024-question-bindings/, extracted
+mechanically from the owner corpus. The first P-WAKE wake waits for Dev's go.
+
 ## Historical phase snapshots
 
 The dated records below retain their original wording, including superseded
