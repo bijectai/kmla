@@ -1,0 +1,59 @@
+{
+  "original_case": "s3306_c_10_A_i_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "d21a4b70707ee7c31b232ff7282b806bd79db434a8580d0160cf4c953a919ac9",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unsupported query/conjunct; do not strip constraints"
+  },
+  "original_queries": [
+    "s3306_c_10_A(alice_employed,\"johns hopkins university\",alice,\"2017-01-01\"),\n    s3306_c_10_A_i(alice,\"johns hopkins university\",\"2017-01-01\")"
+  ],
+  "original_measurement": "ground-0361.pl",
+  "original_stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 26,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003086250000000068,
+    "grounding_wall_seconds": 0.00030803680419921875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0362.pl",
+  "reground_stats": {
+    "unary_proofs": 5,
+    "distinct_event_domain": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 26,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0003093750000000006,
+    "grounding_wall_seconds": 0.0003085136413574219,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "unimplemented:approved-H6-projection-not-implemented",
+    "reason": "unsupported query/conjunct; do not strip constraints",
+    "owner_choice_blocker": false
+  }
+}

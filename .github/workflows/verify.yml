@@ -72,6 +72,11 @@ jobs:
       - name: Shared stipulation wire fixtures
         run: python3 -B -m unittest discover -s tests -p test_stip_list_wire.py -v
 
+      - name: Builder regression tests
+        env:
+          PYTHONPATH: scripts
+        run: python3 -B -m unittest discover -s scripts -p 'test_*.py' -v
+
       - name: Partial section 7703 proof regressions
         # This checks every required proof file, not complete reference parity
         # or Checkpoint 1 acceptance. Open obligations remain explicit.

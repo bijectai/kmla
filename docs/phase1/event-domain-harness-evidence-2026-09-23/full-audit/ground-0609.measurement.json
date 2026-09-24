@@ -1,0 +1,84 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income"
+          },
+          22895
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_income"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002537910000000032,
+    "grounding_wall_seconds": 0.0002529621124267578,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 2684,
+    "cpu_seconds": 0.0016083330000000173,
+    "wall_seconds": 0.0016083717346191406
+  }
+}

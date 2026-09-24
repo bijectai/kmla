@@ -1,0 +1,32 @@
+son_('bob_is_son').
+agent_('bob_is_son','bob').
+patient_('bob_is_son','alice').
+residence_('alice_residence').
+agent_('alice_residence','alice').
+patient_('alice_residence','alice_house').
+start_('alice_residence',"2015-01-01").
+end_('alice_residence',"2015-12-31").
+residence_('bob_residence').
+agent_('bob_residence','bob').
+patient_('bob_residence','alice_house').
+start_('bob_residence',"2015-01-01").
+end_('bob_residence',"2015-12-31").
+payment_('alice_maintains_house').
+agent_('alice_maintains_house','alice').
+amount_('alice_maintains_house',1).
+start_('alice_maintains_house',"2015-01-01").
+purpose_('alice_maintains_house','alice_house').
+service_('alice_employed').
+patient_('alice_employed',"bertha's mussels").
+agent_('alice_employed','alice').
+start_('alice_employed',"2015-01-01").
+end_('alice_employed',"2015-12-31").
+location_('alice_employed','baltimore').
+location_('alice_employed','maryland').
+location_('alice_employed','usa').
+payment_('alice_is_paid').
+agent_('alice_is_paid',"bertha's mussels").
+patient_('alice_is_paid','alice').
+start_('alice_is_paid',"2015-12-31").
+purpose_('alice_is_paid','alice_employed').
+amount_('alice_is_paid',73200).

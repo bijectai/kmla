@@ -1,0 +1,82 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"payment_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 117192 ]},
+      {"ctor":"marriage_", "args": [ {"a":"alice_and_bob"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2017-02-03" ]},
+      {"ctor":"nonresident_alien_", "args": [ {"a":"alice_is_a_nra"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_a_nra"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_is_a_nra"}, "2016-08-23" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_is_a_nra"}, "2018-08-15" ]},
+      {"ctor":"income_", "args": [ {"a":"bob_income"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_income"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"bob_income"}, "2017-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"bob_income"}, 37820 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"payment_",
+      "event": {"a":"alice_is_paid"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"marriage_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"nonresident_alien_",
+      "event": {"a":"alice_is_a_nra"}
+    },
+    {
+      "source_clause":13,
+      "predicate":"income_",
+      "event": {"a":"bob_income"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_is_paid"},
+    {"a":"alice_and_bob"},
+    {"a":"alice_is_a_nra"},
+    {"a":"bob_income"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+  "stats": {
+    "unary_proofs":4,
+    "distinct_event_domain":4,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":16,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00029241699999998927,
+    "grounding_wall_seconds":0.0002923011779785156,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":34233,
+    "cpu_seconds":0.0026626669999999797,
+    "wall_seconds":0.0026617050170898438
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+	"pred":"s3306_b_8",
+	"args": [
+	  {"val":3200},
+	  {"wild":0},
+	  {"val": {"a":"bob_works"}},
+	  {"val": {"a":"alice"}},
+	  {"val": {"a":"bob"}},
+	  {"val": {"a":"alice"}},
+	  {"val": {"a":"bob"}},
+	  {"wild":1}
+	]
+      },
+      {
+	"pred":"s3306_b_8",
+	"args": [
+	  {"val":4500},
+	  {"wild":2},
+	  {"val": {"a":"alice_works"}},
+	  {"val": {"a":"bob"}},
+	  {"val": {"a":"alice"}},
+	  {"val": {"a":"bob"}},
+	  {"val": {"a":"alice"}},
+	  {"wild":3}
+	]
+      }
+    ]
+  },
+  "unary": [],
+  "event_domain": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs":0,
+    "distinct_event_domain":0,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":0,
+    "stipulation_count":2,
+    "wildcard_count":4,
+    "grounding_cpu_seconds":0.00023508299999999704,
+    "grounding_wall_seconds":0.0002338886260986328,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

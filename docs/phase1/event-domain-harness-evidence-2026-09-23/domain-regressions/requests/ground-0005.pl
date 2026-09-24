@@ -1,0 +1,15 @@
+service_('z').
+service_('z').
+income_('z').
+service_('a').
+service_('a').
+agent_('z','p').
+agent_('z','p').
+patient_('z','q').
+patient_('z','p').
+patient_('z','q').
+patient_('a','q').
+patient_('a','p').
+patient_('a','q').
+amount_('a',7).
+amount_('a',7).

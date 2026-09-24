@@ -1,0 +1,444 @@
+{
+  "scope": "bounded A-023 corrected measurements; no Valid, parity or checkpoint claim",
+  "rows": [
+    {
+      "case": "s2_b_3_B_pos.pl",
+      "source_sha256": "cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a",
+      "legacy_fact_counts_separate_procedure": [
+        114,
+        204,
+        384
+      ],
+      "corrected_passes": [
+        {
+          "request": "ground-0001.pl",
+          "stats": {
+            "unary_proofs": 13,
+            "distinct_event_domain": 8,
+            "service_proofs": 0,
+            "distinct_service_domain": 0,
+            "fact_count": 69,
+            "stipulation_count": 5,
+            "wildcard_count": 5,
+            "grounding_cpu_seconds": 0.001045416999999993,
+            "grounding_wall_seconds": 0.0010447502136230469,
+            "candidate": {
+              "scope": "not_applicable"
+            }
+          },
+          "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+        },
+        {
+          "request": "ground-0002.pl",
+          "stats": {
+            "unary_proofs": 13,
+            "distinct_event_domain": 8,
+            "service_proofs": 0,
+            "distinct_service_domain": 0,
+            "fact_count": 69,
+            "stipulation_count": 5,
+            "wildcard_count": 5,
+            "grounding_cpu_seconds": 0.000490416999999993,
+            "grounding_wall_seconds": 0.0004897117614746094,
+            "candidate": {
+              "scope": "not_applicable"
+            }
+          },
+          "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+        },
+        {
+          "request": "ground-0003.pl",
+          "stats": {
+            "unary_proofs": 13,
+            "distinct_event_domain": 8,
+            "service_proofs": 0,
+            "distinct_service_domain": 0,
+            "fact_count": 69,
+            "stipulation_count": 5,
+            "wildcard_count": 5,
+            "grounding_cpu_seconds": 0.0005564590000000091,
+            "grounding_wall_seconds": 0.0005562305450439453,
+            "candidate": {
+              "scope": "not_applicable"
+            }
+          },
+          "household_sha256": "4a84d820e61ee908c46da09cbfff25ca97a4b08b5e9a1d59db0914045a0d2f7f"
+        }
+      ],
+      "h4_3_a": "pass:three-corrected-passes",
+      "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+      "query_plan": {
+        "kind": "unimplemented",
+        "query": null,
+        "tax_input": null,
+        "reason": "unimplemented H6 observation: s2_b_3_B/3 bbb"
+      }
+    },
+    {
+      "case": "tax_case_33.pl",
+      "source_sha256": "5c04303da3dfdf96c412994cb0aaa3ce01c5d248d9de01ed4726456ea523ffa0",
+      "h4_3_a": "pass",
+      "h4_3_b": "pass",
+      "observation": {
+        "status": "pass",
+        "original": {
+          "status": "first_solution",
+          "value": 27181,
+          "cpu_seconds": 1.3932763279999998,
+          "wall_seconds": 1.3937139511108398
+        },
+        "serialized": {
+          "status": "first_solution",
+          "value": 27181,
+          "cpu_seconds": 0.07111829199999997,
+          "wall_seconds": 0.07111859321594238
+        }
+      },
+      "requests": [
+        "ground-0008.pl",
+        "ground-0009.pl"
+      ],
+      "original_stats": {
+        "unary_proofs": 316,
+        "distinct_event_domain": 316,
+        "service_proofs": 157,
+        "distinct_service_domain": 157,
+        "fact_count": 1736,
+        "stipulation_count": 0,
+        "wildcard_count": 0,
+        "grounding_cpu_seconds": 0.10379879099999997,
+        "grounding_wall_seconds": 0.10480523109436035,
+        "candidate": {
+          "outer_iterations": 316,
+          "inner_distinct_terms": 157,
+          "full_two_input_calls": 49612,
+          "successful_proofs": 157
+        }
+      },
+      "reground_stats": {
+        "unary_proofs": 316,
+        "distinct_event_domain": 316,
+        "service_proofs": 157,
+        "distinct_service_domain": 157,
+        "fact_count": 1736,
+        "stipulation_count": 0,
+        "wildcard_count": 0,
+        "grounding_cpu_seconds": 0.04859179400000002,
+        "grounding_wall_seconds": 0.049378156661987305,
+        "candidate": {
+          "scope": "not_applicable"
+        }
+      },
+      "legacy_measurement": "docs/phase1/stip-list-harness-evidence-2026-09-23/full-audit/ground-0001.measurement.json",
+      "legacy_measurement_sha256": "efb4fb10f670ffbd17845b6e8f27c18748d9b15d82a01ee06729af74ac5891f2",
+      "full_ordered_fact_wire_byte_identical": true,
+      "fact_wire_sha256": "dd4252617bd66e90024693b1ff513d919095f8d35c771e3e13ad1fdd09e9643f"
+    }
+  ],
+  "guards": [
+    {
+      "name": "true_duplicates_and_multiple_proofs",
+      "status": "pass",
+      "requests": [
+        "ground-0004.pl",
+        "ground-0005.pl"
+      ],
+      "expected_household": {
+        "facts": [
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "a": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "a": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "income_",
+            "args": [
+              {
+                "a": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "a": "a"
+              }
+            ]
+          },
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "a": "a"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "p"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "p"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "q"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "p"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "q"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "a"
+              },
+              {
+                "a": "q"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "a"
+              },
+              {
+                "a": "p"
+              }
+            ]
+          },
+          {
+            "ctor": "patient_",
+            "args": [
+              {
+                "a": "a"
+              },
+              {
+                "a": "q"
+              }
+            ]
+          },
+          {
+            "ctor": "amount_",
+            "args": [
+              {
+                "a": "a"
+              },
+              7
+            ]
+          },
+          {
+            "ctor": "amount_",
+            "args": [
+              {
+                "a": "a"
+              },
+              7
+            ]
+          }
+        ],
+        "stipulations": []
+      },
+      "domain": [
+        {
+          "a": "z"
+        },
+        {
+          "a": "a"
+        }
+      ],
+      "unary_proofs": 5,
+      "distinct_event_domain": 2
+    },
+    {
+      "name": "tag_sensitive_first_occurrence",
+      "status": "pass",
+      "requests": [
+        "ground-0006.pl",
+        "ground-0007.pl"
+      ],
+      "expected_household": {
+        "facts": [
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "s": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "income_",
+            "args": [
+              {
+                "a": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "payment_",
+            "args": [
+              7
+            ]
+          },
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "a": "7"
+              }
+            ]
+          },
+          {
+            "ctor": "income_",
+            "args": [
+              {
+                "s": "7"
+              }
+            ]
+          },
+          {
+            "ctor": "service_",
+            "args": [
+              {
+                "s": "z"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "s": "z"
+              },
+              {
+                "a": "str_event"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "a": "z"
+              },
+              {
+                "a": "atom_event"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              7,
+              {
+                "a": "int_event"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "a": "7"
+              },
+              {
+                "a": "atom_number"
+              }
+            ]
+          },
+          {
+            "ctor": "agent_",
+            "args": [
+              {
+                "s": "7"
+              },
+              {
+                "a": "string_number"
+              }
+            ]
+          }
+        ],
+        "stipulations": []
+      },
+      "domain": [
+        {
+          "s": "z"
+        },
+        {
+          "a": "z"
+        },
+        7,
+        {
+          "a": "7"
+        },
+        {
+          "s": "7"
+        }
+      ],
+      "unary_proofs": 6,
+      "distinct_event_domain": 5
+    }
+  ],
+  "finding": null,
+  "original_case_count": 2,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "diagnostic_household_instances": 2,
+  "diagnostic_distinct_ordered_households": 2
+}

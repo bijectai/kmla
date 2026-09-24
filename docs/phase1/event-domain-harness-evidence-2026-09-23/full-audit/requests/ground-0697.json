@@ -1,0 +1,6 @@
+{
+  "case": "tax_case_74.pl",
+  "candidate": "regular",
+  "query": "tax_inputs('alice',2017)",
+  "source_sha256": "8b230add11088b34a1d486f477f6415986d80fbbeb2310bef934e2e8a5aa4774"
+}

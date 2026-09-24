@@ -1,0 +1,386 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1992-02-03"
+        ]
+      },
+      {
+        "ctor": "nonresident_alien_",
+        "args": [
+          {
+            "a": "alice_is_nra"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_nra"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "alice_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          "2014-07-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_dies"
+          },
+          "2014-07-09"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          "2015-09-14"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          28864
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "charlie_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_income"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_income"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "charlie_income"
+          },
+          27953
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "bob_and_charlie_joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie_joint_return"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie_joint_return"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie_joint_return"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_and_charlie_joint_return"
+          },
+          "2015-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "nonresident_alien_",
+      "event": {
+        "a": "alice_is_nra"
+      }
+    },
+    {
+      "source_clause": 7,
+      "predicate": "death_",
+      "event": {
+        "a": "alice_dies"
+      }
+    },
+    {
+      "source_clause": 11,
+      "predicate": "marriage_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    },
+    {
+      "source_clause": 15,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_income"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "income_",
+      "event": {
+        "a": "charlie_income"
+      }
+    },
+    {
+      "source_clause": 23,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "bob_and_charlie_joint_return"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "alice_is_nra"
+    },
+    {
+      "a": "alice_dies"
+    },
+    {
+      "a": "bob_and_charlie"
+    },
+    {
+      "a": "bob_income"
+    },
+    {
+      "a": "charlie_income"
+    },
+    {
+      "a": "bob_and_charlie_joint_return"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "stats": {
+    "unary_proofs": 7,
+    "distinct_event_domain": 7,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 27,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002903750000000094,
+    "grounding_wall_seconds": 0.00028967857360839844,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 8312,
+    "cpu_seconds": 0.002171917000000023,
+    "wall_seconds": 0.002172231674194336
+  }
+}

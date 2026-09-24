@@ -1,0 +1,420 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "birth_",
+        "args": [
+          {
+            "a": "birth_alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "birth_alice"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "birth_alice"
+          },
+          "1964-06-07"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1988-02-07"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "bob_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_residence"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "home"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          "2015-12-31"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          "2014-06-29"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "bob_income"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          43591
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_income"
+          },
+          "2015-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "birth_",
+      "event": {
+        "a": "birth_alice"
+      }
+    },
+    {
+      "source_clause": 4,
+      "predicate": "son_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 8,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_residence"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "residence_",
+      "event": {
+        "a": "bob_residence"
+      }
+    },
+    {
+      "source_clause": 18,
+      "predicate": "residence_",
+      "event": {
+        "a": "charlie_residence"
+      }
+    },
+    {
+      "source_clause": 23,
+      "predicate": "son_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    },
+    {
+      "source_clause": 27,
+      "predicate": "income_",
+      "event": {
+        "a": "bob_income"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "birth_alice"
+    },
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "alice_residence"
+    },
+    {
+      "a": "bob_residence"
+    },
+    {
+      "a": "charlie_residence"
+    },
+    {
+      "a": "bob_and_charlie"
+    },
+    {
+      "a": "bob_income"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "stats": {
+    "unary_proofs": 7,
+    "distinct_event_domain": 7,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 30,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002705829999999909,
+    "grounding_wall_seconds": 0.0002694129943847656,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 6812,
+    "cpu_seconds": 0.005667915999999995,
+    "wall_seconds": 0.005668163299560547
+  }
+}

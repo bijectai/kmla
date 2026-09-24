@@ -1,0 +1,87 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2017-02-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2017-09-02" ]},
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"baltimore"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"maryland"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"a":"usa"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_pays"},  {"a":"alice"} ]},
+      {"ctor":"patient_", "args": [ {"a":"alice_pays"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_pays"}, "2017-09-02" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays"}, 3200 ]},
+      {"ctor":"father_", "args": [ {"a":"bob_father_of_alice"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"bob_father_of_alice"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_father_of_alice"},  {"a":"alice"} ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays"}
+    },
+    {
+      "source_clause":15,
+      "predicate":"father_",
+      "event": {"a":"bob_father_of_alice"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_employer"},
+    {"a":"alice_pays"},
+    {"a":"bob_father_of_alice"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+  "stats": {
+    "unary_proofs":3,
+    "distinct_event_domain":3,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":17,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00026433400000000495,
+    "grounding_wall_seconds":0.0002663135528564453,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

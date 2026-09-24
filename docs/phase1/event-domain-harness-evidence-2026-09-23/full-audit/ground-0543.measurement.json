@@ -1,0 +1,8073 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2012-04-05"
+        ]
+      },
+      {
+        "ctor": "son_",
+        "args": [
+          {
+            "a": "charlie_is_born"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_is_born"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_is_born"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_is_born"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_is_born"
+          },
+          "2017-09-16"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "charlie_residence"
+          },
+          "2017-09-16"
+        ]
+      },
+      {
+        "ctor": "residence_",
+        "args": [
+          {
+            "a": "alice_residence"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_residence"
+          },
+          "2017-09-16"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2018"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2019"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2020"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2021"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2022"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2023"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2024"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2025"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2026"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2027"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2028"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2029"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2030"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2031"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2032"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2033"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2034"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2035"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2036"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2037"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2038"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2039"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2040"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2041"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2042"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2043"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2044"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2045"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2046"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2047"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2048"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2049"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2050"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2051"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2052"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2053"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2054"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2055"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2056"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2057"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2058"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2059"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2060"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2061"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2062"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2063"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2064"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2065"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2066"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2067"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2068"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2069"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2070"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2071"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2072"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2073"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2074"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2075"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2076"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2077"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2078"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2079"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2080"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2081"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2082"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2083"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2084"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2085"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2086"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2087"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2088"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2089"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2090"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2091"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2092"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2093"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2094"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2095"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2096"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2097"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2098"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2099"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2100"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2101"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2102"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2103"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2104"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2105"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2106"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2107"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2108"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2109"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2110"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2111"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2112"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2113"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2114"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2115"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2116"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2117"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2018"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2019"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2020"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2021"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2022"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2023"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2024"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2025"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2026"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2027"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2028"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2029"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2030"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2031"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2032"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2033"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2034"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2035"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2036"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2037"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2038"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2039"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2040"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2041"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2042"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2043"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2044"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2045"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2046"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2047"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2048"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2049"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2050"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2051"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2052"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2053"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2054"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2055"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2056"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2057"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2058"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2059"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2060"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2061"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2062"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2063"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2064"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2065"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2066"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2067"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2068"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2069"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2070"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2071"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2072"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2073"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2074"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2075"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2076"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2077"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2078"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2079"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2080"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2081"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2082"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2083"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2084"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2085"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2086"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2087"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2088"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2089"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2090"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2091"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2092"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2093"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2094"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2095"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2096"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2097"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2098"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2099"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2100"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2101"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2102"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2103"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2104"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2105"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2106"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2107"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2108"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2109"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2110"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2111"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2112"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2113"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2114"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2115"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2116"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2117"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2017"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2018"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2019"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2020"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2021"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2022"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2023"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2024"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2025"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2026"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2027"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2028"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2029"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2030"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2031"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2032"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2033"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2034"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2035"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2036"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2037"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2038"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2039"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2040"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2041"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2042"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2043"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2044"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2045"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2046"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2047"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2048"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2049"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2050"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2051"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2052"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2053"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2054"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2055"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2056"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2057"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2058"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2059"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2060"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2061"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2062"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2063"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2064"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2065"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2066"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2067"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2068"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2069"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2070"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2071"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2072"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2073"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2074"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2075"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2076"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2077"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2078"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2079"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2080"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2081"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2082"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2083"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2084"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2085"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2086"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2087"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2088"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2089"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2090"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2091"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2092"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2093"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2094"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2095"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2096"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2097"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2098"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2099"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2100"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2101"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2102"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2103"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2104"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2105"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2106"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2107"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2108"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2109"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2110"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2111"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2112"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2113"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2114"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2115"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2116"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2117"
+          },
+          1
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2017"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2018"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2019"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2020"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2021"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2022"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2023"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2024"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2025"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2026"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2027"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2028"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2029"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2030"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2031"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2032"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2033"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2034"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2035"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2036"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2037"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2038"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2039"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2040"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2041"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2042"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2043"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2044"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2045"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2046"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2047"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2048"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2049"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2050"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2051"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2052"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2053"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2054"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2055"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2056"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2057"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2058"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2059"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2060"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2061"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2062"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2063"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2064"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2065"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2066"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2067"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2068"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2069"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2070"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2071"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2072"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2073"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2074"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2075"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2076"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2077"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2078"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2079"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2080"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2081"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2082"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2083"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2084"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2085"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2086"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2087"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2088"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2089"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2090"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2091"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2092"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2093"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2094"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2095"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2096"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2097"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2098"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2099"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2100"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2101"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2102"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2103"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2104"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2105"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2106"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2107"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2108"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2109"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2110"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2111"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2112"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2113"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2114"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2115"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2116"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_maintains_household_2117"
+            }
+          },
+          {
+            "a": "alice_s_house"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2017"
+          },
+          "2017-09-16"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2018"
+          },
+          "2018-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2019"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2020"
+          },
+          "2020-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2021"
+          },
+          "2021-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2022"
+          },
+          "2022-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2023"
+          },
+          "2023-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2024"
+          },
+          "2024-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2025"
+          },
+          "2025-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2026"
+          },
+          "2026-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2027"
+          },
+          "2027-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2028"
+          },
+          "2028-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2029"
+          },
+          "2029-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2030"
+          },
+          "2030-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2031"
+          },
+          "2031-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2032"
+          },
+          "2032-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2033"
+          },
+          "2033-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2034"
+          },
+          "2034-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2035"
+          },
+          "2035-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2036"
+          },
+          "2036-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2037"
+          },
+          "2037-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2038"
+          },
+          "2038-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2039"
+          },
+          "2039-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2040"
+          },
+          "2040-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2041"
+          },
+          "2041-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2042"
+          },
+          "2042-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2043"
+          },
+          "2043-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2044"
+          },
+          "2044-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2045"
+          },
+          "2045-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2046"
+          },
+          "2046-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2047"
+          },
+          "2047-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2048"
+          },
+          "2048-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2049"
+          },
+          "2049-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2050"
+          },
+          "2050-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2051"
+          },
+          "2051-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2052"
+          },
+          "2052-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2053"
+          },
+          "2053-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2054"
+          },
+          "2054-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2055"
+          },
+          "2055-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2056"
+          },
+          "2056-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2057"
+          },
+          "2057-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2058"
+          },
+          "2058-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2059"
+          },
+          "2059-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2060"
+          },
+          "2060-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2061"
+          },
+          "2061-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2062"
+          },
+          "2062-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2063"
+          },
+          "2063-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2064"
+          },
+          "2064-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2065"
+          },
+          "2065-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2066"
+          },
+          "2066-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2067"
+          },
+          "2067-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2068"
+          },
+          "2068-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2069"
+          },
+          "2069-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2070"
+          },
+          "2070-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2071"
+          },
+          "2071-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2072"
+          },
+          "2072-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2073"
+          },
+          "2073-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2074"
+          },
+          "2074-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2075"
+          },
+          "2075-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2076"
+          },
+          "2076-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2077"
+          },
+          "2077-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2078"
+          },
+          "2078-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2079"
+          },
+          "2079-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2080"
+          },
+          "2080-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2081"
+          },
+          "2081-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2082"
+          },
+          "2082-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2083"
+          },
+          "2083-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2084"
+          },
+          "2084-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2085"
+          },
+          "2085-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2086"
+          },
+          "2086-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2087"
+          },
+          "2087-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2088"
+          },
+          "2088-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2089"
+          },
+          "2089-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2090"
+          },
+          "2090-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2091"
+          },
+          "2091-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2092"
+          },
+          "2092-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2093"
+          },
+          "2093-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2094"
+          },
+          "2094-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2095"
+          },
+          "2095-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2096"
+          },
+          "2096-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2097"
+          },
+          "2097-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2098"
+          },
+          "2098-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2099"
+          },
+          "2099-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2100"
+          },
+          "2100-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2101"
+          },
+          "2101-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2102"
+          },
+          "2102-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2103"
+          },
+          "2103-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2104"
+          },
+          "2104-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2105"
+          },
+          "2105-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2106"
+          },
+          "2106-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2107"
+          },
+          "2107-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2108"
+          },
+          "2108-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2109"
+          },
+          "2109-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2110"
+          },
+          "2110-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2111"
+          },
+          "2111-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2112"
+          },
+          "2112-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2113"
+          },
+          "2113-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2114"
+          },
+          "2114-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2115"
+          },
+          "2115-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2116"
+          },
+          "2116-01-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2117"
+          },
+          "2117-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2018"
+          },
+          "2018-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2019"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2020"
+          },
+          "2020-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2021"
+          },
+          "2021-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2022"
+          },
+          "2022-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2023"
+          },
+          "2023-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2024"
+          },
+          "2024-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2025"
+          },
+          "2025-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2026"
+          },
+          "2026-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2027"
+          },
+          "2027-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2028"
+          },
+          "2028-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2029"
+          },
+          "2029-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2030"
+          },
+          "2030-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2031"
+          },
+          "2031-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2032"
+          },
+          "2032-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2033"
+          },
+          "2033-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2034"
+          },
+          "2034-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2035"
+          },
+          "2035-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2036"
+          },
+          "2036-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2037"
+          },
+          "2037-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2038"
+          },
+          "2038-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2039"
+          },
+          "2039-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2040"
+          },
+          "2040-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2041"
+          },
+          "2041-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2042"
+          },
+          "2042-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2043"
+          },
+          "2043-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2044"
+          },
+          "2044-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2045"
+          },
+          "2045-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2046"
+          },
+          "2046-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2047"
+          },
+          "2047-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2048"
+          },
+          "2048-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2049"
+          },
+          "2049-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2050"
+          },
+          "2050-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2051"
+          },
+          "2051-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2052"
+          },
+          "2052-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2053"
+          },
+          "2053-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2054"
+          },
+          "2054-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2055"
+          },
+          "2055-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2056"
+          },
+          "2056-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2057"
+          },
+          "2057-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2058"
+          },
+          "2058-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2059"
+          },
+          "2059-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2060"
+          },
+          "2060-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2061"
+          },
+          "2061-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2062"
+          },
+          "2062-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2063"
+          },
+          "2063-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2064"
+          },
+          "2064-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2065"
+          },
+          "2065-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2066"
+          },
+          "2066-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2067"
+          },
+          "2067-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2068"
+          },
+          "2068-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2069"
+          },
+          "2069-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2070"
+          },
+          "2070-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2071"
+          },
+          "2071-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2072"
+          },
+          "2072-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2073"
+          },
+          "2073-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2074"
+          },
+          "2074-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2075"
+          },
+          "2075-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2076"
+          },
+          "2076-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2077"
+          },
+          "2077-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2078"
+          },
+          "2078-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2079"
+          },
+          "2079-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2080"
+          },
+          "2080-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2081"
+          },
+          "2081-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2082"
+          },
+          "2082-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2083"
+          },
+          "2083-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2084"
+          },
+          "2084-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2085"
+          },
+          "2085-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2086"
+          },
+          "2086-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2087"
+          },
+          "2087-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2088"
+          },
+          "2088-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2089"
+          },
+          "2089-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2090"
+          },
+          "2090-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2091"
+          },
+          "2091-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2092"
+          },
+          "2092-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2093"
+          },
+          "2093-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2094"
+          },
+          "2094-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2095"
+          },
+          "2095-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2096"
+          },
+          "2096-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2097"
+          },
+          "2097-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2098"
+          },
+          "2098-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2099"
+          },
+          "2099-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2100"
+          },
+          "2100-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2101"
+          },
+          "2101-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2102"
+          },
+          "2102-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2103"
+          },
+          "2103-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2104"
+          },
+          "2104-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2105"
+          },
+          "2105-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2106"
+          },
+          "2106-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2107"
+          },
+          "2107-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2108"
+          },
+          "2108-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2109"
+          },
+          "2109-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2110"
+          },
+          "2110-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2111"
+          },
+          "2111-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2112"
+          },
+          "2112-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2113"
+          },
+          "2113-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2114"
+          },
+          "2114-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2115"
+          },
+          "2115-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2116"
+          },
+          "2116-12-31"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_maintains_household_2117"
+          },
+          "2117-12-31"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2017"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2017"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2018"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2018"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2018"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2018"
+          },
+          "2018-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2018"
+          },
+          "2018-12-31"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2019"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2019"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2019"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2019"
+          },
+          "2019-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return_2019"
+          },
+          "2019-12-31"
+        ]
+      }
+    ],
+    "stipulations": [
+      {
+        "pred": "s151_c_applies_3",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": 2017
+          }
+        ]
+      },
+      {
+        "pred": "s151_c_applies_3",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": 2018
+          }
+        ]
+      },
+      {
+        "pred": "s151_c_applies_3",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "val": {
+              "a": "charlie"
+            }
+          },
+          {
+            "val": 2019
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "son_",
+      "event": {
+        "a": "charlie_is_born"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "residence_",
+      "event": {
+        "a": "charlie_residence"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "residence_",
+      "event": {
+        "a": "alice_residence"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2017"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2018"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2019"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2020"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2021"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2022"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2023"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2024"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2025"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2026"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2027"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2028"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2029"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2030"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2031"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2032"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2033"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2034"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2035"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2036"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2037"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2038"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2039"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2040"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2041"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2042"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2043"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2044"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2045"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2046"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2047"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2048"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2049"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2050"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2051"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2052"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2053"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2054"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2055"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2056"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2057"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2058"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2059"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2060"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2061"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2062"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2063"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2064"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2065"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2066"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2067"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2068"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2069"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2070"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2071"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2072"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2073"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2074"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2075"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2076"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2077"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2078"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2079"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2080"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2081"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2082"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2083"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2084"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2085"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2086"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2087"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2088"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2089"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2090"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2091"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2092"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2093"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2094"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2095"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2096"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2097"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2098"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2099"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2100"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2101"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2102"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2103"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2104"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2105"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2106"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2107"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2108"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2109"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2110"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2111"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2112"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2113"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2114"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2115"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2116"
+      }
+    },
+    {
+      "source_clause": 19,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_maintains_household_2117"
+      }
+    },
+    {
+      "source_clause": 26,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "alice_and_bob_joint_return_2017"
+      }
+    },
+    {
+      "source_clause": 31,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "alice_and_bob_joint_return_2018"
+      }
+    },
+    {
+      "source_clause": 36,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "alice_and_bob_joint_return_2019"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_and_bob"
+    },
+    {
+      "a": "charlie_is_born"
+    },
+    {
+      "a": "charlie_residence"
+    },
+    {
+      "a": "alice_residence"
+    },
+    {
+      "a": "alice_maintains_household_2017"
+    },
+    {
+      "a": "alice_maintains_household_2018"
+    },
+    {
+      "a": "alice_maintains_household_2019"
+    },
+    {
+      "a": "alice_maintains_household_2020"
+    },
+    {
+      "a": "alice_maintains_household_2021"
+    },
+    {
+      "a": "alice_maintains_household_2022"
+    },
+    {
+      "a": "alice_maintains_household_2023"
+    },
+    {
+      "a": "alice_maintains_household_2024"
+    },
+    {
+      "a": "alice_maintains_household_2025"
+    },
+    {
+      "a": "alice_maintains_household_2026"
+    },
+    {
+      "a": "alice_maintains_household_2027"
+    },
+    {
+      "a": "alice_maintains_household_2028"
+    },
+    {
+      "a": "alice_maintains_household_2029"
+    },
+    {
+      "a": "alice_maintains_household_2030"
+    },
+    {
+      "a": "alice_maintains_household_2031"
+    },
+    {
+      "a": "alice_maintains_household_2032"
+    },
+    {
+      "a": "alice_maintains_household_2033"
+    },
+    {
+      "a": "alice_maintains_household_2034"
+    },
+    {
+      "a": "alice_maintains_household_2035"
+    },
+    {
+      "a": "alice_maintains_household_2036"
+    },
+    {
+      "a": "alice_maintains_household_2037"
+    },
+    {
+      "a": "alice_maintains_household_2038"
+    },
+    {
+      "a": "alice_maintains_household_2039"
+    },
+    {
+      "a": "alice_maintains_household_2040"
+    },
+    {
+      "a": "alice_maintains_household_2041"
+    },
+    {
+      "a": "alice_maintains_household_2042"
+    },
+    {
+      "a": "alice_maintains_household_2043"
+    },
+    {
+      "a": "alice_maintains_household_2044"
+    },
+    {
+      "a": "alice_maintains_household_2045"
+    },
+    {
+      "a": "alice_maintains_household_2046"
+    },
+    {
+      "a": "alice_maintains_household_2047"
+    },
+    {
+      "a": "alice_maintains_household_2048"
+    },
+    {
+      "a": "alice_maintains_household_2049"
+    },
+    {
+      "a": "alice_maintains_household_2050"
+    },
+    {
+      "a": "alice_maintains_household_2051"
+    },
+    {
+      "a": "alice_maintains_household_2052"
+    },
+    {
+      "a": "alice_maintains_household_2053"
+    },
+    {
+      "a": "alice_maintains_household_2054"
+    },
+    {
+      "a": "alice_maintains_household_2055"
+    },
+    {
+      "a": "alice_maintains_household_2056"
+    },
+    {
+      "a": "alice_maintains_household_2057"
+    },
+    {
+      "a": "alice_maintains_household_2058"
+    },
+    {
+      "a": "alice_maintains_household_2059"
+    },
+    {
+      "a": "alice_maintains_household_2060"
+    },
+    {
+      "a": "alice_maintains_household_2061"
+    },
+    {
+      "a": "alice_maintains_household_2062"
+    },
+    {
+      "a": "alice_maintains_household_2063"
+    },
+    {
+      "a": "alice_maintains_household_2064"
+    },
+    {
+      "a": "alice_maintains_household_2065"
+    },
+    {
+      "a": "alice_maintains_household_2066"
+    },
+    {
+      "a": "alice_maintains_household_2067"
+    },
+    {
+      "a": "alice_maintains_household_2068"
+    },
+    {
+      "a": "alice_maintains_household_2069"
+    },
+    {
+      "a": "alice_maintains_household_2070"
+    },
+    {
+      "a": "alice_maintains_household_2071"
+    },
+    {
+      "a": "alice_maintains_household_2072"
+    },
+    {
+      "a": "alice_maintains_household_2073"
+    },
+    {
+      "a": "alice_maintains_household_2074"
+    },
+    {
+      "a": "alice_maintains_household_2075"
+    },
+    {
+      "a": "alice_maintains_household_2076"
+    },
+    {
+      "a": "alice_maintains_household_2077"
+    },
+    {
+      "a": "alice_maintains_household_2078"
+    },
+    {
+      "a": "alice_maintains_household_2079"
+    },
+    {
+      "a": "alice_maintains_household_2080"
+    },
+    {
+      "a": "alice_maintains_household_2081"
+    },
+    {
+      "a": "alice_maintains_household_2082"
+    },
+    {
+      "a": "alice_maintains_household_2083"
+    },
+    {
+      "a": "alice_maintains_household_2084"
+    },
+    {
+      "a": "alice_maintains_household_2085"
+    },
+    {
+      "a": "alice_maintains_household_2086"
+    },
+    {
+      "a": "alice_maintains_household_2087"
+    },
+    {
+      "a": "alice_maintains_household_2088"
+    },
+    {
+      "a": "alice_maintains_household_2089"
+    },
+    {
+      "a": "alice_maintains_household_2090"
+    },
+    {
+      "a": "alice_maintains_household_2091"
+    },
+    {
+      "a": "alice_maintains_household_2092"
+    },
+    {
+      "a": "alice_maintains_household_2093"
+    },
+    {
+      "a": "alice_maintains_household_2094"
+    },
+    {
+      "a": "alice_maintains_household_2095"
+    },
+    {
+      "a": "alice_maintains_household_2096"
+    },
+    {
+      "a": "alice_maintains_household_2097"
+    },
+    {
+      "a": "alice_maintains_household_2098"
+    },
+    {
+      "a": "alice_maintains_household_2099"
+    },
+    {
+      "a": "alice_maintains_household_2100"
+    },
+    {
+      "a": "alice_maintains_household_2101"
+    },
+    {
+      "a": "alice_maintains_household_2102"
+    },
+    {
+      "a": "alice_maintains_household_2103"
+    },
+    {
+      "a": "alice_maintains_household_2104"
+    },
+    {
+      "a": "alice_maintains_household_2105"
+    },
+    {
+      "a": "alice_maintains_household_2106"
+    },
+    {
+      "a": "alice_maintains_household_2107"
+    },
+    {
+      "a": "alice_maintains_household_2108"
+    },
+    {
+      "a": "alice_maintains_household_2109"
+    },
+    {
+      "a": "alice_maintains_household_2110"
+    },
+    {
+      "a": "alice_maintains_household_2111"
+    },
+    {
+      "a": "alice_maintains_household_2112"
+    },
+    {
+      "a": "alice_maintains_household_2113"
+    },
+    {
+      "a": "alice_maintains_household_2114"
+    },
+    {
+      "a": "alice_maintains_household_2115"
+    },
+    {
+      "a": "alice_maintains_household_2116"
+    },
+    {
+      "a": "alice_maintains_household_2117"
+    },
+    {
+      "a": "alice_and_bob_joint_return_2017"
+    },
+    {
+      "a": "alice_and_bob_joint_return_2018"
+    },
+    {
+      "a": "alice_and_bob_joint_return_2019"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "stats": {
+    "unary_proofs": 108,
+    "distinct_event_domain": 108,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 638,
+    "stipulation_count": 3,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00901724999999999,
+    "grounding_wall_seconds": 0.009036540985107422,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

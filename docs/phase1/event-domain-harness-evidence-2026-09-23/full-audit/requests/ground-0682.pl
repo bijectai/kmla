@@ -1,0 +1,16 @@
+marriage_('alice_marriage').
+agent_('alice_marriage','alice').
+agent_('alice_marriage','spouse').
+start_('alice_marriage',"2009-12-10").
+income_('alice_income_2016').
+agent_('alice_income_2016','alice').
+amount_('alice_income_2016',554313).
+start_('alice_income_2016',"2016-12-31").
+income_('spouse_income_2016').
+agent_('spouse_income_2016','spouse').
+amount_('spouse_income_2016',56298).
+start_('spouse_income_2016',"2016-12-31").
+deduction_('spouse_itemized_deduction').
+agent_('spouse_itemized_deduction','spouse').
+start_('spouse_itemized_deduction',"2016-01-01").
+amount_('spouse_itemized_deduction',4421).

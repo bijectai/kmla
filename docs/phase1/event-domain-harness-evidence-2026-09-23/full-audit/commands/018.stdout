@@ -1,0 +1,47 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"marriage_", "args": [ {"a":"alice_and_charlie"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_charlie"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_and_charlie"},  {"a":"charlie"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_and_charlie"}, "2015-02-02" ]
+      }
+    ],
+    "stipulations": [
+      {
+	"pred":"s152_c_1_3",
+	"args": [ {"val": {"a":"bob"}},  {"val": {"a":"alice"}},  {"val":2015} ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"marriage_",
+      "event": {"a":"alice_and_charlie"}
+    }
+  ],
+  "event_domain": [ {"a":"alice_and_charlie"} ],
+  "fact_source_clauses": [1, 2, 3, 4 ],
+  "stats": {
+    "unary_proofs":1,
+    "distinct_event_domain":1,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":4,
+    "stipulation_count":1,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0001872919999999917,
+    "grounding_wall_seconds":0.00018644332885742188,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

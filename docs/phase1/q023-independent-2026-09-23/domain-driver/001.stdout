@@ -1,0 +1,2 @@
+s2_b_3_B_pos.pl: corrected 69 -> 69 -> 69; 13 unary proofs / 8 distinct events; H4(b) unimplemented
+tax_case_33: both H4 checks PASS; 1736 ordered facts byte-identical; 49612 calls / 157 proofs

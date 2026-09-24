@@ -182,30 +182,36 @@ def integration_guards(session, timeout):
     f = facts.Fact
     expected = facts.Household((
         f("country_", (string("p"), string("c"))), f("service_", (atom("e"),)),
-        f("agent_", (atom("e"), atom("a"))), f("agent_", (atom("e"), atom("a"))),
+        f("agent_", (atom("e"), atom("a"))),
         f("country_", (atom("p"), string("c"))), f("service_", (atom("e"),)),
         f("country_", (string("p"), string("c"))),
-        f("patient", (atom("e"), atom("x"))), f("patient", (atom("e"), atom("x"))),
-        f("patient_", (atom("e"), string("x"))), f("patient_", (atom("e"), string("x"))),
+        f("patient", (atom("e"), atom("x"))),
+        f("patient_", (atom("e"), string("x"))),
         f("purpose_", (facts.Pat("wild", 0), string("agricultural labor"))),
         f("medical_institution_", (atom("clinic"),)), f("retirement_", (atom("r"),)),
     ), ())
-    if first.household != expected or first.raw["fact_source_clauses"] != [1,2,3,3,4,5,6,7,7,8,8,9,10,11]:
+    if first.household != expected or first.raw["fact_source_clauses"] != list(range(1,12)):
         raise GroundingFailure("synthetic exact order/tag/duplicate/inert/event guard failed")
     direct = country_check(parse_case(GUARD_SOURCE.encode()), first)
     if direct["status"] != "pass":
         raise GroundingFailure("synthetic country direct comparison failed")
     again = session.measure(facts.emit_prolog(first.household), candidate="regular", query="none",
-                            name="synthetic unchanged repeated-event traversal", timeout=timeout)
+                            name="synthetic A-023 distinct-event traversal", timeout=timeout)
     counts = {p: sum(x.ctor == p for x in again.household.facts)
               for p in ("agent_", "patient", "patient_", "country_", "purpose_")}
-    if counts != {"agent_":4, "patient":4, "patient_":4, "country_":3, "purpose_":1}:
+    if counts != {"agent_":1, "patient":1, "patient_":1, "country_":3, "purpose_":1}:
         raise GroundingFailure("ordinary event traversal or wildcard changed")
-    # Deliberate non-idempotent fixture: do NOT dedup the outer traversal to fix it.
+    if again.household != expected or again.raw["fact_source_clauses"] != list(range(1,12)):
+        raise GroundingFailure("A-023 exact ordered fixed point failed")
+    # A-023 withdraws the old multiset-domain expectation (2 -> 4 copies of
+    # single binary clauses). Old source, assertions and runtime evidence are
+    # retained in event-domain-harness-evidence-2026-09-23/baseline.json and the
+    # untouched stip-list-harness-evidence-2026-09-23/country-final/ directory.
+    # Both genuine service_(e) clauses and all three country clauses stay here.
     reports.append({"guard":"tags/order/duplicates/inert/wildcard/ordinary-event", "status":"pass",
                     "requests":[first.request,again.request], "direct_country":direct,
                     "reground_predicate_counts":counts,
-                    "fixture_h4_3_a":"unequal as expected from repeated event enumeration; not an original"})
+                    "fixture_h4_3_a":"equal under A-023; both stored unary duplicates retained"})
     only = session.measure('country_("p","c").\ncountry_("p","c").\n', candidate="regular",
                            query="none", name="synthetic zero-event country guard", timeout=timeout)
     if len(only.household.facts) != 2 or only.raw["stats"]["unary_proofs"] != 0:

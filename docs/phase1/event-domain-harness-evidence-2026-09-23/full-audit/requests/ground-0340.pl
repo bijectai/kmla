@@ -1,0 +1,15 @@
+death_('bob_dies').
+agent_('bob_dies','bob').
+start_('bob_dies',"2019-11-25").
+end_('bob_dies',"2019-11-25").
+marriage_('bob_and_charlie').
+agent_('bob_and_charlie','bob').
+agent_('bob_and_charlie','charlie').
+payment_('alice_pays').
+agent_('alice_pays','alice').
+patient_('alice_pays','charlie').
+start_('alice_pays',"2019-12-20").
+end_('alice_pays',"2019-12-20").
+purpose_('alice_pays','alice_employer').
+amount_('alice_pays',1200).
+s3306_c('alice_employer','alice','bob',_KMLA_W0,_KMLA_W1).

@@ -1,0 +1,41 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2018-12-31" ]},
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 310192 ]}
+    ],
+    "stipulations": [
+      {
+	"pred":"s2_a_3",
+	"args": [ {"val": {"a":"alice"}},  {"wild":0},  {"val":2018} ]
+      }
+    ]
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_is_paid"}
+    }
+  ],
+  "event_domain": [ {"a":"alice_is_paid"} ],
+  "fact_source_clauses": [1, 2, 3, 4 ],
+  "stats": {
+    "unary_proofs":1,
+    "distinct_event_domain":1,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":4,
+    "stipulation_count":1,
+    "wildcard_count":1,
+    "grounding_cpu_seconds":0.0006948330000000058,
+    "grounding_wall_seconds":0.0006930828094482422,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

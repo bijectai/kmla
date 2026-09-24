@@ -1,0 +1,127 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"father_", "args": [ {"a":"alice_and_bob"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"service_", "args": [ {"a":"alice_employer"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employer"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employer"},  {"a":"bob"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employer"}, "2013-02-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employer"}, "2013-09-02" ]},
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"s":"baltimore"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"s":"maryland"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employer"},  {"s":"usa"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_pays"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_pays"},  {"a":"alice"} ]},
+      {"ctor":"patient_", "args": [ {"a":"alice_pays"},  {"a":"bob"} ]},
+      {"ctor":"start_", "args": [ {"a":"alice_pays"}, "2013-09-02" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_pays"}},  {"a":"alice_employer"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_pays"}, 2561 ]},
+      {"ctor":"income_", "args": [ {"a":"alice_income_2013"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income_2013"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income_2013"}, 42384 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_income_2013"}, "2013-12-31" ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"father_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":4,
+      "predicate":"service_",
+      "event": {"a":"alice_employer"}
+    },
+    {
+      "source_clause":12,
+      "predicate":"payment_",
+      "event": {"a":"alice_pays"}
+    },
+    {
+      "source_clause":18,
+      "predicate":"income_",
+      "event": {"a":"alice_income_2013"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_and_bob"},
+    {"a":"alice_employer"},
+    {"a":"alice_pays"},
+    {"a":"alice_income_2013"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "stats": {
+    "unary_proofs":4,
+    "distinct_event_domain":4,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":21,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0002506250000000043,
+    "grounding_wall_seconds":0.00025010108947753906,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":7595,
+    "cpu_seconds":0.0018533330000000126,
+    "wall_seconds":0.0019223690032958984
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "source identity check, not a new build",
+  "prior_result": "q022-adapters-independent-2026-09-23/oracle/001.command.json",
+  "compiled_assertions": 122,
+  "unchanged_assertion_statements": 87,
+  "source_identity": {
+    "Oracle/S7703.lean": true,
+    "Oracle/S7703Stip.lean": true,
+    "Oracle/Tests/S7703.lean": true,
+    "Oracle/Tests/S7703Stip.lean": true,
+    "Oracle/Tests/S7703StipLists.lean": true,
+    "scripts/check_oracle7703.sh": true,
+    "Interface/Household.lean": true
+  }
+}

@@ -1,0 +1,8 @@
+test_fixture_expectations_keep_true_duplicates (__main__.EventDomainTests.test_fixture_expectations_keep_true_duplicates) ... ok
+test_literal_witness_retains_two_unary_kinds_and_duplicate_rules (__main__.EventDomainTests.test_literal_witness_retains_two_unary_kinds_and_duplicate_rules) ... ok
+test_witness_h6_remains_explicitly_unimplemented (__main__.EventDomainTests.test_witness_h6_remains_explicitly_unimplemented) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

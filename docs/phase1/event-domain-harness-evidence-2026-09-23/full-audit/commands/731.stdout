@@ -1,0 +1,1214 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_residence"}, "2007-01-01" ]
+      },
+      {"ctor":"father_", "args": [ {"a":"bob_father"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_father"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_father"},  {"a":"alice"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"bob_residence"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_residence"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_residence"},  {"a":"home"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"bob_residence"}, "2007-01-01" ]},
+      {"ctor":"payment_", "args": [ {"a":"alice_maintains_home"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_maintains_home"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_maintains_home"}, 75 ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_maintains_home"}},  {"a":"home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2007-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2008-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2009-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2010-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2011-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2012-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2013-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2014-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2016-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2018-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2019-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2020-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2021-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2022-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2023-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2024-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2025-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2026-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2027-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2028-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2029-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2030-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2031-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2032-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2033-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2034-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2035-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2036-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2037-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2038-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2039-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2040-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2041-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2042-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2043-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2044-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2045-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2046-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2047-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2048-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2049-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2050-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2051-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2052-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2053-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2054-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2055-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2056-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2057-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2058-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2059-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2060-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2061-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2062-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2063-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2064-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2065-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2066-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2067-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2068-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2069-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2070-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2071-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2072-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2073-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2074-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2075-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2076-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2077-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2078-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2079-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2080-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2081-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2082-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2083-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2084-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2085-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2086-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2087-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2088-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2089-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2090-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2091-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2092-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2093-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2094-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2095-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2096-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2097-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2098-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2099-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2100-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2101-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2102-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2103-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2104-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2105-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2106-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2107-01-01" ]
+      },
+      {"ctor":"brother_", "args": [ {"a":"charlie_brother"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"charlie_brother"},  {"a":"charlie"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"charlie_brother"},  {"a":"alice"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"charlie_maintains_home"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"charlie_maintains_home"},  {"a":"charlie"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"charlie_maintains_home"}, 25 ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"charlie_maintains_home"}},  {"a":"home"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2007-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2008-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2009-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2010-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2011-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2012-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2013-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2014-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2016-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2017-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2018-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2019-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2020-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2021-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2022-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2023-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2024-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2025-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2026-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2027-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2028-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2029-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2030-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2031-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2032-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2033-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2034-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2035-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2036-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2037-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2038-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2039-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2040-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2041-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2042-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2043-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2044-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2045-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2046-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2047-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2048-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2049-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2050-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2051-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2052-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2053-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2054-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2055-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2056-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2057-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2058-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2059-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2060-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2061-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2062-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2063-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2064-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2065-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2066-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2067-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2068-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2069-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2070-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2071-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2072-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2073-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2074-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2075-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2076-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2077-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2078-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2079-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2080-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2081-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2082-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2083-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2084-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2085-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2086-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2087-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2088-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2089-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2090-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2091-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2092-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2093-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2094-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2095-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2096-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2097-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2098-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2099-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2100-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2101-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2102-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2103-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2104-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2105-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2106-01-01" ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_maintains_home"}, "2107-01-01" ]
+      },
+      {"ctor":"income_", "args": [ {"a":"alice_income_2012"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income_2012"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income_2012"}, 67285 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_income_2012"}, "2012-12-31" ]
+      },
+      {"ctor":"income_", "args": [ {"a":"charlie_income_2012"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"charlie_income_2012"},  {"a":"charlie"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"charlie_income_2012"}, 56174 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"charlie_income_2012"}, "2012-12-31" ]
+      },
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deductions"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deductions"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deductions"}, 17817 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deductions"}, "2012-01-01" ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"father_",
+      "event": {"a":"bob_father"}
+    },
+    {
+      "source_clause":8,
+      "predicate":"residence_",
+      "event": {"a":"bob_residence"}
+    },
+    {
+      "source_clause":12,
+      "predicate":"payment_",
+      "event": {"a":"alice_maintains_home"}
+    },
+    {
+      "source_clause":17,
+      "predicate":"brother_",
+      "event": {"a":"charlie_brother"}
+    },
+    {
+      "source_clause":20,
+      "predicate":"payment_",
+      "event": {"a":"charlie_maintains_home"}
+    },
+    {
+      "source_clause":25,
+      "predicate":"income_",
+      "event": {"a":"alice_income_2012"}
+    },
+    {
+      "source_clause":29,
+      "predicate":"income_",
+      "event": {"a":"charlie_income_2012"}
+    },
+    {
+      "source_clause":33,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deductions"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_residence"},
+    {"a":"bob_father"},
+    {"a":"bob_residence"},
+    {"a":"alice_maintains_home"},
+    {"a":"charlie_brother"},
+    {"a":"charlie_maintains_home"},
+    {"a":"alice_income_2012"},
+    {"a":"charlie_income_2012"},
+    {"a":"itemized_deductions"}
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "stats": {
+    "unary_proofs":9,
+    "distinct_event_domain":9,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":236,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0010844580000000104,
+    "grounding_wall_seconds":0.0010838508605957031,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":8883,
+    "cpu_seconds":0.025174500000000016,
+    "wall_seconds":0.025174856185913086
+  }
+}

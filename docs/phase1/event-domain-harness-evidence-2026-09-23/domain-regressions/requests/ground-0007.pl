@@ -1,0 +1,11 @@
+service_("z").
+income_('z').
+payment_(7).
+service_('7').
+income_("7").
+service_("z").
+agent_("z",'str_event').
+agent_('z','atom_event').
+agent_(7,'int_event').
+agent_('7','atom_number').
+agent_("7",'string_number').

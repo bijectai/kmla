@@ -1,0 +1,8978 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_marriage"
+          },
+          "2006-06-02"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          {
+            "a": "spouse"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "joint_return"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "income_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_income_2017"
+          },
+          684642
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_fred"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_bob"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_cameron"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_dan"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_emily"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_george"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george_payment"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george_payment"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred_payment"
+          },
+          {
+            "a": "fred"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob_payment"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron_payment"
+          },
+          {
+            "a": "cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan_payment"
+          },
+          {
+            "a": "dan"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily_payment"
+          },
+          {
+            "a": "emily"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george_payment"
+          },
+          {
+            "a": "george"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob_payment"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron_payment"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan_payment"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily_payment"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred_payment"
+          },
+          "2017-01-24"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob_payment"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron_payment"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred_payment"
+          },
+          "2017-02-04"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob_payment"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron_payment"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan_payment"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily_payment"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred_payment"
+          },
+          "2017-03-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron_payment"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan_payment"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily_payment"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred_payment"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george_payment"
+          },
+          "2017-03-19"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob_payment"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron_payment"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan_payment"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred_payment"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george_payment"
+          },
+          "2017-04-02"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron_payment"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan_payment"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily_payment"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred_payment"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george_payment"
+          },
+          "2017-05-09"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob_payment"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron_payment"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan_payment"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily_payment"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george_payment"
+          },
+          "2017-10-15"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob_payment"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily_payment"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred_payment"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george_payment"
+          },
+          "2017-10-25"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob_payment"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron_payment"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily_payment"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred_payment"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george_payment"
+          },
+          "2017-11-08"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob_payment"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron_payment"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan_payment"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily_payment"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred_payment"
+          },
+          "2017-11-22"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob_payment"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron_payment"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan_payment"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily_payment"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george_payment"
+          },
+          "2017-12-01"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob_payment"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron_payment"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan_payment"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily_payment"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george_payment"
+          },
+          "2017-12-03"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-01-24_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-02-04_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-03_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-03-19_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-04-02_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-05-09_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-15_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-10-25_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-08_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-11-22_fred_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-01_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_bob_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_cameron_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_dan_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_emily_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_employer_2017-12-03_george_payment"
+          },
+          632
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-01-24_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-01-24_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-01-24_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-01-24_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-01-24_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-01-24_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-02-04_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-02-04_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-02-04_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-02-04_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-03_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-03_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-03_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-03_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-03_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-03_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-19_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-19_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-19_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-19_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-03-19_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-03-19_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-04-02_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-04-02_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-04-02_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-04-02_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-04-02_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-04-02_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-05-09_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-05-09_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-05-09_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-05-09_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-05-09_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-05-09_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-15_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-15_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-15_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-15_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-15_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-15_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-25_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-25_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-25_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-10-25_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-10-25_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-08_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-08_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-08_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-08_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-08_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-08_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-22_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-22_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-22_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-22_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-11-22_fred_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-11-22_fred"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-01_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-01_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-01_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-01_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-01_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-01_george"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_bob_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-03_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_cameron_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-03_cameron"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_dan_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-03_dan"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_emily_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-03_emily"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer_2017-12-03_george_payment"
+            }
+          },
+          {
+            "a": "alice_employer_2017-12-03_george"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_marriage"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "joint_return"
+      }
+    },
+    {
+      "source_clause": 10,
+      "predicate": "income_",
+      "event": {
+        "a": "alice_income_2017"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-01-24_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-01-24_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-01-24_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-01-24_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-01-24_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-02-04_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-02-04_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-02-04_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-03_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-03_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-03_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-03_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-03_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-19_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-19_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-19_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-19_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-03-19_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-04-02_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-04-02_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-04-02_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-04-02_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-04-02_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-05-09_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-05-09_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-05-09_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-05-09_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-05-09_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-15_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-15_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-15_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-15_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-15_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-25_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-25_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-25_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-10-25_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-08_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-08_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-08_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-08_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-08_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-22_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-22_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-22_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-22_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-11-22_fred"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-01_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-01_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-01_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-01_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-01_george"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-03_bob"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-03_cameron"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-03_dan"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-03_emily"
+      }
+    },
+    {
+      "source_clause": 16,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer_2017-12-03_george"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-01-24_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-01-24_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-01-24_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-01-24_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-01-24_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-02-04_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-02-04_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-02-04_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-03_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-03_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-03_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-03_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-03_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-19_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-19_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-19_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-19_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-03-19_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-04-02_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-04-02_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-04-02_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-04-02_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-04-02_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-05-09_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-05-09_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-05-09_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-05-09_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-05-09_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-15_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-15_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-15_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-15_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-15_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-25_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-25_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-25_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-10-25_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-08_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-08_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-08_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-08_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-08_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-22_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-22_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-22_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-22_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-11-22_fred_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-01_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-01_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-01_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-01_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-01_george_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-03_bob_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-03_cameron_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-03_dan_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-03_emily_payment"
+      }
+    },
+    {
+      "source_clause": 22,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_employer_2017-12-03_george_payment"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_marriage"
+    },
+    {
+      "a": "joint_return"
+    },
+    {
+      "a": "alice_income_2017"
+    },
+    {
+      "a": "alice_employer_2017-01-24_bob"
+    },
+    {
+      "a": "alice_employer_2017-01-24_cameron"
+    },
+    {
+      "a": "alice_employer_2017-01-24_dan"
+    },
+    {
+      "a": "alice_employer_2017-01-24_emily"
+    },
+    {
+      "a": "alice_employer_2017-01-24_fred"
+    },
+    {
+      "a": "alice_employer_2017-02-04_bob"
+    },
+    {
+      "a": "alice_employer_2017-02-04_cameron"
+    },
+    {
+      "a": "alice_employer_2017-02-04_fred"
+    },
+    {
+      "a": "alice_employer_2017-03-03_bob"
+    },
+    {
+      "a": "alice_employer_2017-03-03_cameron"
+    },
+    {
+      "a": "alice_employer_2017-03-03_dan"
+    },
+    {
+      "a": "alice_employer_2017-03-03_emily"
+    },
+    {
+      "a": "alice_employer_2017-03-03_fred"
+    },
+    {
+      "a": "alice_employer_2017-03-19_cameron"
+    },
+    {
+      "a": "alice_employer_2017-03-19_dan"
+    },
+    {
+      "a": "alice_employer_2017-03-19_emily"
+    },
+    {
+      "a": "alice_employer_2017-03-19_fred"
+    },
+    {
+      "a": "alice_employer_2017-03-19_george"
+    },
+    {
+      "a": "alice_employer_2017-04-02_bob"
+    },
+    {
+      "a": "alice_employer_2017-04-02_cameron"
+    },
+    {
+      "a": "alice_employer_2017-04-02_dan"
+    },
+    {
+      "a": "alice_employer_2017-04-02_fred"
+    },
+    {
+      "a": "alice_employer_2017-04-02_george"
+    },
+    {
+      "a": "alice_employer_2017-05-09_cameron"
+    },
+    {
+      "a": "alice_employer_2017-05-09_dan"
+    },
+    {
+      "a": "alice_employer_2017-05-09_emily"
+    },
+    {
+      "a": "alice_employer_2017-05-09_fred"
+    },
+    {
+      "a": "alice_employer_2017-05-09_george"
+    },
+    {
+      "a": "alice_employer_2017-10-15_bob"
+    },
+    {
+      "a": "alice_employer_2017-10-15_cameron"
+    },
+    {
+      "a": "alice_employer_2017-10-15_dan"
+    },
+    {
+      "a": "alice_employer_2017-10-15_emily"
+    },
+    {
+      "a": "alice_employer_2017-10-15_george"
+    },
+    {
+      "a": "alice_employer_2017-10-25_bob"
+    },
+    {
+      "a": "alice_employer_2017-10-25_emily"
+    },
+    {
+      "a": "alice_employer_2017-10-25_fred"
+    },
+    {
+      "a": "alice_employer_2017-10-25_george"
+    },
+    {
+      "a": "alice_employer_2017-11-08_bob"
+    },
+    {
+      "a": "alice_employer_2017-11-08_cameron"
+    },
+    {
+      "a": "alice_employer_2017-11-08_emily"
+    },
+    {
+      "a": "alice_employer_2017-11-08_fred"
+    },
+    {
+      "a": "alice_employer_2017-11-08_george"
+    },
+    {
+      "a": "alice_employer_2017-11-22_bob"
+    },
+    {
+      "a": "alice_employer_2017-11-22_cameron"
+    },
+    {
+      "a": "alice_employer_2017-11-22_dan"
+    },
+    {
+      "a": "alice_employer_2017-11-22_emily"
+    },
+    {
+      "a": "alice_employer_2017-11-22_fred"
+    },
+    {
+      "a": "alice_employer_2017-12-01_bob"
+    },
+    {
+      "a": "alice_employer_2017-12-01_cameron"
+    },
+    {
+      "a": "alice_employer_2017-12-01_dan"
+    },
+    {
+      "a": "alice_employer_2017-12-01_emily"
+    },
+    {
+      "a": "alice_employer_2017-12-01_george"
+    },
+    {
+      "a": "alice_employer_2017-12-03_bob"
+    },
+    {
+      "a": "alice_employer_2017-12-03_cameron"
+    },
+    {
+      "a": "alice_employer_2017-12-03_dan"
+    },
+    {
+      "a": "alice_employer_2017-12-03_emily"
+    },
+    {
+      "a": "alice_employer_2017-12-03_george"
+    },
+    {
+      "a": "alice_employer_2017-01-24_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-01-24_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-01-24_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-01-24_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-01-24_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-02-04_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-02-04_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-02-04_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-03_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-03_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-03_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-03_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-03_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-19_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-19_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-19_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-19_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-03-19_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-04-02_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-04-02_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-04-02_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-04-02_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-04-02_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-05-09_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-05-09_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-05-09_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-05-09_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-05-09_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-15_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-15_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-15_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-15_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-15_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-25_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-25_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-25_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-10-25_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-08_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-08_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-08_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-08_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-08_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-22_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-22_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-22_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-22_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-11-22_fred_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-01_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-01_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-01_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-01_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-01_george_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-03_bob_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-03_cameron_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-03_dan_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-03_emily_payment"
+    },
+    {
+      "a": "alice_employer_2017-12-03_george_payment"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    25,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27
+  ],
+  "stats": {
+    "unary_proofs": 117,
+    "distinct_event_domain": 117,
+    "service_proofs": 57,
+    "distinct_service_domain": 57,
+    "fact_count": 697,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.05365208199999999,
+    "grounding_wall_seconds": 0.05418205261230469,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 247432,
+    "cpu_seconds": 49.615584003,
+    "wall_seconds": 49.637481927871704
+  }
+}

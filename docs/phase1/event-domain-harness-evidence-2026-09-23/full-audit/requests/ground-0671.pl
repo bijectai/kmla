@@ -1,0 +1,16 @@
+marriage_(alice_marriage).
+agent_(alice_marriage,alice).
+agent_(alice_marriage,bob).
+start_(alice_marriage,"2011-08-25").
+joint_return_(joint_return).
+agent_(joint_return,alice).
+agent_(joint_return,bob).
+start_(joint_return,"2017-01-01").
+end_(joint_return,"2017-12-31").
+income_(alice_income_2017).
+agent_(alice_income_2017,alice).
+amount_(alice_income_2017,22895).
+start_(alice_income_2017,"2017-12-31").
+birth_(alice_is_born).
+agent_(alice_is_born,alice).
+start_(alice_is_born,"1950-01-01").

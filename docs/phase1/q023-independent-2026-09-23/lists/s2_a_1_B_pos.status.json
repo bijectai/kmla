@@ -1,0 +1,216 @@
+{
+  "original_case": "s2_a_1_B_pos.pl",
+  "source_sha256": "7a5d0387154778ecdb3755377b97e86b64f66558bb5c5d9557b064b439c307f3",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "original_measurement": "ground-0001.pl",
+  "exact_supplied_heads": "pass",
+  "reground_measurement": "ground-0002.pl",
+  "query_plan": {
+    "kind": "paragraph",
+    "query": {
+      "predicate": "s2_a_1_B",
+      "mode": "bffb",
+      "goal": "'s2_a_1_B'('bob',Q0,Q1,2016)",
+      "outputs": [
+        "Q0",
+        "Q1"
+      ],
+      "outer_naf": false,
+      "original_goal": "s2_a_1_B(bob,_,_,2016)"
+    },
+    "tax_input": null,
+    "reason": null
+  },
+  "observations": {
+    "status": "pass",
+    "original": {
+      "raw_solutions": [
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ],
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ],
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      ],
+      "proof_count": 3,
+      "cpu_seconds": 0.007157416999999999,
+      "wall_seconds": 0.007386684417724609,
+      "canonical": [
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-542bc017c5794ae7bf801dd711f26f47",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0001.pl",
+          "/requests/s2_a_1_B_pos.pl-original.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "007.stdout",
+        "stderr": "007.stderr",
+        "elapsed_seconds": 0.642954
+      }
+    },
+    "serialized": {
+      "raw_solutions": [
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ],
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ],
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      ],
+      "proof_count": 3,
+      "cpu_seconds": 0.005149084000000026,
+      "wall_seconds": 0.00514984130859375,
+      "canonical": [
+        [
+          {
+            "a": "bob_s_house"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      ],
+      "command": {
+        "argv": [
+          "docker",
+          "run",
+          "--rm",
+          "--name",
+          "kmla-runtime-4a100cef20f849e0995685aac62c6e16",
+          "--platform",
+          "linux/amd64",
+          "--network",
+          "none",
+          "--read-only",
+          "--tmpfs",
+          "/tmp",
+          "--cap-drop",
+          "ALL",
+          "--security-opt",
+          "no-new-privileges",
+          "--user",
+          "501:20",
+          "--workdir",
+          "/corpus",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+          "--mount",
+          "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/q023-independent-2026-09-23/lists/requests,dst=/requests,readonly",
+          "--entrypoint",
+          "swipl",
+          "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+          "-q",
+          "-f",
+          "none",
+          "-s",
+          "/harness/grounding_observations.pl",
+          "-g",
+          "observe_main",
+          "-t",
+          "halt",
+          "--",
+          "/requests/ground-0002.pl",
+          "/requests/s2_a_1_B_pos.pl-serialized.observation.pl"
+        ],
+        "timeout_seconds": 60.0,
+        "exit": 0,
+        "timed_out": false,
+        "stdout": "008.stdout",
+        "stderr": "008.stderr",
+        "elapsed_seconds": 0.557297
+      }
+    }
+  }
+}

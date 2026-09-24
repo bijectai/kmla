@@ -1,0 +1,18 @@
+service_('alice_employer').
+patient_('alice_employer','alice').
+agent_('alice_employer','bob').
+start_('alice_employer',"2011-01-02").
+end_('alice_employer',"2019-10-10").
+termination_('alice_lays_bob_off').
+agent_('alice_lays_bob_off','alice').
+patient_('alice_lays_bob_off','alice_employer').
+retirement_('bob_retires').
+agent_('bob_retires','bob').
+start_('bob_retires',"2019-10-10").
+reason_('bob_retires',"reached age 65").
+payment_('alice_pays').
+agent_('alice_pays','alice').
+patient_('alice_pays','bob').
+start_('alice_pays',"2019-10-10").
+purpose_('alice_pays','alice_lays_bob_off').
+amount_('alice_pays',12980).

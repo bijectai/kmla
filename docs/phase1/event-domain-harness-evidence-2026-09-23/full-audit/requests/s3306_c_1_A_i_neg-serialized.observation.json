@@ -1,0 +1,16 @@
+{
+  "query": {
+    "predicate": "s3306_c_1_A_i",
+    "mode": "bfbfb",
+    "goal": "'s3306_c_1_A_i'('alice',Q0,'bob',Q1,2017)",
+    "outputs": [
+      "Q0",
+      "Q1"
+    ],
+    "outer_naf": true,
+    "original_goal": "\\+ s3306_c_1_A_i(alice,_,bob,_,2017)"
+  },
+  "program_request": "ground-0384.pl",
+  "program_sha256": "6a8615c878083ca642bdbdae31c17ef6f5d676aa037ece6afe42f521c07225bf",
+  "request_sha256": "eac2d3fdb241c9eb1a39d234d5447aab9d53fff02d5d5beb309a01d28874b464"
+}

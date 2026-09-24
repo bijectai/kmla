@@ -2,6 +2,24 @@
 
 ## Authorization and entry identity
 
+**Current bounded result (2026-09-23):** A-023's correction is verified in a
+fresh complete-population run: H4(a) 376 pass; H4(b) 114 pass / 262 unimplemented,
+no actual mismatch or process error. The incomplete audit correctly exits 1.
+It emits 376 diagnostic Household instances / 297 distinct, not production
+parity records. Main independently verifies exact counts/source/code identities,
+all retained ordered equalities and first-occurrence domains, the 69/69/69
+witness, country14/list2/tax33 regressions and 147 unit tests. The 122-proof
+oracle snapshot remains unchanged. See EVENT_DOMAIN_CORRECTION_2026-09-23.md
+and q023-independent-2026-09-23/ under docs/phase1/.
+
+**Next Phase 1 work:** complete the 262 H6 observation implementations without
+guessing projections, fix shared full record packaging in Interface before
+producer output, and continue the isolated §7703 oracle's explicit unfinished
+mode/provider/guard/R5 obligations before advancing the prescribed section order.
+No new owner decision is needed for the verified Q-021/Q-022/Q-023 repairs.
+Only Dev installs/re-pins the protected H4 candidate after its required evidence,
+and only Dev can sign Checkpoint 1. Neither complete H4 nor Checkpoint 1 is passed.
+
 **A-023 classification (2026-09-23):** the occurrence-multiset traversal is an
 implementation defect, not a required amendment. The cleanly audited review
 releases distinct ground events in stable first-occurrence order, preserving

@@ -1,0 +1,101 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"income_", "args": [ {"a":"alice_makes_money"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_makes_money"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_makes_money"}, 395276 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_makes_money"}, "2015-01-01" ]
+      },
+      {
+	"ctor":"end_",
+	"args": [ {"a":"alice_makes_money"}, "2015-12-31" ]
+      },
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_1"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_1"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_1"}, 4571 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_1"}, "2015-12-31" ]
+      },
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_2"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_2"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"itemized_deduction_2"}, 1973 ]},
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_2"}, "2015-12-31" ]
+      },
+      {"ctor":"deduction_", "args": [ {"a":"itemized_deduction_3"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"itemized_deduction_3"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"amount_",
+	"args": [ {"a":"itemized_deduction_3"}, 15271 ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"itemized_deduction_3"}, "2015-12-31" ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"income_",
+      "event": {"a":"alice_makes_money"}
+    },
+    {
+      "source_clause":6,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_1"}
+    },
+    {
+      "source_clause":10,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_2"}
+    },
+    {
+      "source_clause":14,
+      "predicate":"deduction_",
+      "event": {"a":"itemized_deduction_3"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_makes_money"},
+    {"a":"itemized_deduction_1"},
+    {"a":"itemized_deduction_2"},
+    {"a":"itemized_deduction_3"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+  "stats": {
+    "unary_proofs":4,
+    "distinct_event_domain":4,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":17,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.00025283300000000786,
+    "grounding_wall_seconds":0.0002522468566894531,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":130388,
+    "cpu_seconds":0.0034761249999999966,
+    "wall_seconds":0.0034766197204589844
+  }
+}

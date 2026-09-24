@@ -1,0 +1,75 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"service_", "args": [ {"a":"alice_employed"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_employed"},  {"s":"state of maryland"} ]
+      },
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_employed"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_employed"}, "2017-01-01" ]
+      },
+      {"ctor":"end_", "args": [ {"a":"alice_employed"}, "2017-12-31" ]},
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employed"},  {"s":"baltimore"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employed"},  {"s":"maryland"} ]
+      },
+      {
+	"ctor":"location_",
+	"args": [ {"a":"alice_employed"},  {"s":"usa"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_is_paid"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_is_paid"},  {"s":"state of maryland"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_is_paid"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_is_paid"}, "2017-12-31" ]},
+      {
+	"ctor":"purpose_",
+	"args": [ {"val": {"a":"alice_is_paid"}},  {"a":"alice_employed"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_is_paid"}, 73200 ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"service_",
+      "event": {"a":"alice_employed"}
+    },
+    {
+      "source_clause":9,
+      "predicate":"payment_",
+      "event": {"a":"alice_is_paid"}
+    }
+  ],
+  "event_domain": [ {"a":"alice_employed"},  {"a":"alice_is_paid"} ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  "stats": {
+    "unary_proofs":2,
+    "distinct_event_domain":2,
+    "service_proofs":1,
+    "distinct_service_domain":1,
+    "fact_count":14,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.0003050410000000059,
+    "grounding_wall_seconds":0.0005271434783935547,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {"status":"not_requested"}
+}

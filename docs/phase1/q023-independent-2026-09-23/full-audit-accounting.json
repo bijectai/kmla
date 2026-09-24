@@ -1,0 +1,20 @@
+{
+  "scope": "independent read-only accounting of final retained run, not a second full corpus execution",
+  "all_376_names_exact": true,
+  "all_source_hashes_match": true,
+  "all_recorded_code_hashes_match": true,
+  "ordered_comparisons_equal": 376,
+  "exact_first_occurrence_domains_verified": 376,
+  "originals_with_repeated_event_proofs": [
+    "s2_b_3_B_pos.pl",
+    "tax_case_16.pl",
+    "tax_case_41.pl"
+  ],
+  "canonical_observations_equal": 114,
+  "unimplemented_observations": 262,
+  "diagnostic_households": 376,
+  "distinct_exact_households": 297,
+  "production_records": "not-yet-produced",
+  "finding": null,
+  "audit_pass": false
+}

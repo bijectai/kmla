@@ -80,10 +80,11 @@ class GroundingSession:
         with (self.pinned.requests / "registry.pl").open("x", encoding="utf-8") as stream:
             stream.write(_registry())
         runtime.write_json(self.directory / "candidate-code.json", {
-            "scope": "A-020 candidate / A-021 country correction measurement; not installation or parity",
+            "scope": "A-020 candidate / A-021 country / A-023 event-domain measurement; not installation or parity",
             "hashes": {name: runtime.sha256(ROOT / name) for name in
                 ("harness/grounding.py", "harness/grounding.pl", "scripts/test_grounding.py")},
             "fact_emission_order": "stable source-clause provenance order (H1); phase execution stays unary, binary, stipulation",
+            "event_domain": "A-023: distinct ground terms by Prolog == in first-occurrence unary order; stored unary and binary proofs unchanged",
             "wildcards": "findall copies numbered in final facts/stipulations traversal; no wildcard expansion",
             "country": "country_/2 only: supplied ground bodyless clause emitted once at original source-clause index; rule/non-ground fails closed",
         })

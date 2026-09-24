@@ -1,0 +1,460 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "bob_works_for_alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_works_for_alice"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_works_for_alice"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_works_for_alice"
+          },
+          "2019-02-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_works_for_alice"
+          },
+          "2019-11-19"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_works_for_alice"
+            }
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_bob"
+            }
+          },
+          {
+            "a": "bob_works_for_alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          "2019-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_bob"
+          },
+          27371
+        ]
+      },
+      {
+        "ctor": "death_",
+        "args": [
+          {
+            "a": "bob_dies"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          "2019-11-25"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_dies"
+          },
+          "2019-11-25"
+        ]
+      },
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_and_charlie"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays_for_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays_for_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays_for_bob"
+          },
+          {
+            "a": "charlie"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays_for_bob"
+          },
+          "2020-01-20"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays_for_bob"
+            }
+          },
+          {
+            "a": "bob_works_for_alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays_for_bob"
+          },
+          24500
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          "2020-12-31"
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          372109
+        ]
+      },
+      {
+        "ctor": "deduction_",
+        "args": [
+          {
+            "a": "donation_to_food_bank"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "donation_to_food_bank"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "donation_to_food_bank"
+          },
+          25000
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "donation_to_food_bank"
+          },
+          "2020-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "bob_works_for_alice"
+      }
+    },
+    {
+      "source_clause": 7,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_bob"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "death_",
+      "event": {
+        "a": "bob_dies"
+      }
+    },
+    {
+      "source_clause": 17,
+      "predicate": "marriage_",
+      "event": {
+        "a": "bob_and_charlie"
+      }
+    },
+    {
+      "source_clause": 20,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays_for_bob"
+      }
+    },
+    {
+      "source_clause": 26,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid"
+      }
+    },
+    {
+      "source_clause": 30,
+      "predicate": "deduction_",
+      "event": {
+        "a": "donation_to_food_bank"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "bob_works_for_alice"
+    },
+    {
+      "a": "alice_pays_bob"
+    },
+    {
+      "a": "bob_dies"
+    },
+    {
+      "a": "bob_and_charlie"
+    },
+    {
+      "a": "alice_pays_for_bob"
+    },
+    {
+      "a": "alice_is_paid"
+    },
+    {
+      "a": "donation_to_food_bank"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "stats": {
+    "unary_proofs": 7,
+    "distinct_event_domain": 7,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 33,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00027591699999998665,
+    "grounding_wall_seconds": 0.0002751350402832031,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 118227,
+    "cpu_seconds": 0.0021505830000000115,
+    "wall_seconds": 0.0021507740020751953
+  }
+}

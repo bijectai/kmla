@@ -1,0 +1,106 @@
+{
+  "household": {
+    "facts": [
+      {"ctor":"son_", "args": [ {"a":"alice_and_bob"} ]},
+      {"ctor":"agent_", "args": [ {"a":"alice_and_bob"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_and_bob"},  {"a":"alice"} ]
+      },
+      {"ctor":"start_", "args": [ {"a":"alice_and_bob"}, "2014-01-31" ]},
+      {"ctor":"residence_", "args": [ {"a":"alice_residence"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice"} ]
+      },
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"alice_residence"},  {"a":"alice_and_bob_home"} ]
+      },
+      {"ctor":"residence_", "args": [ {"a":"bob_residence"} ]},
+      {"ctor":"agent_", "args": [ {"a":"bob_residence"},  {"a":"bob"} ]},
+      {
+	"ctor":"patient_",
+	"args": [ {"a":"bob_residence"},  {"a":"alice_and_bob_home"} ]
+      },
+      {"ctor":"payment_", "args": [ {"a":"alice_maintains_home"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_maintains_home"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_maintains_home"}, 1 ]},
+      {
+	"ctor":"purpose_",
+	"args": [
+	  {"val": {"a":"alice_maintains_home"}},
+	  {"a":"alice_and_bob_home"}
+	]
+      },
+      {
+	"ctor":"start_",
+	"args": [ {"a":"alice_maintains_home"}, "2017-12-31" ]
+      },
+      {"ctor":"income_", "args": [ {"a":"alice_income"} ]},
+      {
+	"ctor":"agent_",
+	"args": [ {"a":"alice_income"},  {"a":"alice"} ]
+      },
+      {"ctor":"amount_", "args": [ {"a":"alice_income"}, 22895 ]},
+      {"ctor":"start_", "args": [ {"a":"alice_income"}, "2017-12-31" ]}
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause":1,
+      "predicate":"son_",
+      "event": {"a":"alice_and_bob"}
+    },
+    {
+      "source_clause":5,
+      "predicate":"residence_",
+      "event": {"a":"alice_residence"}
+    },
+    {
+      "source_clause":8,
+      "predicate":"residence_",
+      "event": {"a":"bob_residence"}
+    },
+    {
+      "source_clause":11,
+      "predicate":"payment_",
+      "event": {"a":"alice_maintains_home"}
+    },
+    {
+      "source_clause":16,
+      "predicate":"income_",
+      "event": {"a":"alice_income"}
+    }
+  ],
+  "event_domain": [
+    {"a":"alice_and_bob"},
+    {"a":"alice_residence"},
+    {"a":"bob_residence"},
+    {"a":"alice_maintains_home"},
+    {"a":"alice_income"}
+  ],
+  "fact_source_clauses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+  "stats": {
+    "unary_proofs":5,
+    "distinct_event_domain":5,
+    "service_proofs":0,
+    "distinct_service_domain":0,
+    "fact_count":19,
+    "stipulation_count":0,
+    "wildcard_count":0,
+    "grounding_cpu_seconds":0.000285208000000009,
+    "grounding_wall_seconds":0.0002849102020263672,
+    "candidate": {"scope":"not_applicable"}
+  },
+  "tax": {
+    "status":"first_solution",
+    "value":2174,
+    "cpu_seconds":0.005163582999999999,
+    "wall_seconds":0.005163908004760742
+  }
+}

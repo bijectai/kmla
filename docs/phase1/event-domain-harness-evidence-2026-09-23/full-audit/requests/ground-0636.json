@@ -1,0 +1,6 @@
+{
+  "case": "tax_case_46.pl (re-emitted)",
+  "candidate": "regular",
+  "query": "tax_inputs('alice',2020)",
+  "source_sha256": "813562df31ca9891bf398465ddcdfb38be872f953b2a46135942cce4cdf1ba98"
+}

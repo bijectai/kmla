@@ -1,0 +1,14 @@
+version_string	SWI-Prolog version 7.2.3 for amd64
+plarch	amd64
+plversion	70203
+uname_m	x86_64
+dpkg_arch	amd64
+tz	America/New_York
+tz_sha256	5fa6dccc303352e1195c4348b189f3085014d8a56a1976c8e8a32bd4fedb69fd
+winter_offset	-0500
+summer_offset	-0400
+process_exe	/run/rosetta/rosetta
+process_exe_sha256	e743f8a5dcdf8255c507e41e4085d8a7c6cc5efda8585265f6c1603f2cbe1ab6
+process_elf_machine	b700
+swipl_exe	/usr/lib/swi-prolog/bin/amd64/swipl
+swipl_exe_sha256	b6d1ff84656fced3e00e940240ee69982e14b953c1ed5b939b72af799b978a5b

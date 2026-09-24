@@ -1,0 +1,90 @@
+{
+  "original_case": "tax_case_4.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      8
+    ],
+    "emitted_source_indices": [
+      8
+    ],
+    "emitted_fact_positions_1based": [
+      8
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "baltimore, maryland, usa"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "baltimore, maryland, usa"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "425076719af4f946a51f4a77ad2b228622a702c74e95fd045965b965d4f6b5fb",
+  "query": {
+    "tax_inputs": "tax_inputs('alice',2012)",
+    "amount": "unbound; first solution only"
+  },
+  "original_request": "ground-0021.pl",
+  "original_stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 2,
+    "distinct_service_domain": 2,
+    "fact_count": 25,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00021424999999999916,
+    "grounding_wall_seconds": 0.000213623046875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0022.pl",
+  "reground_stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 2,
+    "distinct_service_domain": 2,
+    "fact_count": 25,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002262499999999834,
+    "grounding_wall_seconds": 0.0002257823944091797,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "status": "first_solution",
+    "value": 192,
+    "cpu_seconds": 0.0016432079999999932,
+    "wall_seconds": 0.0016431808471679688
+  },
+  "serialized_observation": {
+    "status": "first_solution",
+    "value": 192,
+    "cpu_seconds": 0.001663834000000003,
+    "wall_seconds": 0.0016639232635498047
+  }
+}

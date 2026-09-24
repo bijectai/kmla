@@ -1,0 +1,11 @@
+test_distinct_event_and_stipulation_types (__main__.StipListTests.test_distinct_event_and_stipulation_types) ... ok
+test_lists_rejected_in_event_positions (__main__.StipListTests.test_lists_rejected_in_event_positions) ... ok
+test_original_query_modes_do_not_release_bound_arguments (__main__.StipListTests.test_original_query_modes_do_not_release_bound_arguments) ... ok
+test_recursive_aliases_tags_order_and_empty_lists (__main__.StipListTests.test_recursive_aliases_tags_order_and_empty_lists) ... ok
+test_recursive_large_integer_and_wild_id (__main__.StipListTests.test_recursive_large_integer_and_wild_id) ... ok
+test_strict_recursive_decode (__main__.StipListTests.test_strict_recursive_decode) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.013s
+
+OK

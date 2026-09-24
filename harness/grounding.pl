@@ -23,7 +23,10 @@ run :-
     get_time(W0),
     % H1: retain source-clause provenance across the H4 evaluation phases.
     findall(I-(P-H), unary_solution(Refs, I, P, H), Unary),
-    findall(E, member(_-(_-E), Unary), Events),
+    findall(E, member(_-(_-E), Unary), EventProofs),
+    % A-023: the traversal universe has distinct ground terms in first-seen
+    % order. Unary/UnaryFacts and every binary proof retain multiplicity.
+    distinct_terms(EventProofs, Events),
     findall(E, member(_-(service_-E), Unary), ServiceProofs),
     distinct_terms(ServiceProofs, Services),
     findall(I-H, binary_solution(Refs, Events, Services, Candidate, I, H), Binary),
@@ -42,6 +45,8 @@ run :-
     numbervars(FactHeads-StipHeads, 0, WildCount),
     encode_facts(FactHeads, Facts), encode_stips(StipHeads, Stips),
     encode_unary(Unary, UnaryJSON),
+    encode_event_domain(Events, EventDomainJSON),
+    length(EventProofs, UnaryProofCount),
     length(Events, EventCount), length(Services, ServiceCount),
     length(ServiceProofs, ServiceProofCount),
     length(FactHeads, FactCount), length(StipHeads, StipCount),
@@ -52,8 +57,10 @@ run :-
     tax_observation(TaxInput, Tax),
     json_write(current_output, json([
         household=json([facts=Facts, stipulations=Stips]), unary=UnaryJSON,
+        event_domain=EventDomainJSON,
         fact_source_clauses=FactSources,
-        stats=json([unary_proofs=EventCount, service_proofs=ServiceProofCount,
+        stats=json([unary_proofs=UnaryProofCount, distinct_event_domain=EventCount,
+                    service_proofs=ServiceProofCount,
                     distinct_service_domain=ServiceCount, fact_count=FactCount,
                     stipulation_count=StipCount, wildcard_count=WildCount,
                     grounding_cpu_seconds=CPU, grounding_wall_seconds=Wall,
@@ -155,6 +162,10 @@ candidate_counts(tax_case_33, Facts, EC, SC, JSON) :-
 encode_unary([], []).
 encode_unary([I-(P-E)|Rows], [json([source_clause=I,predicate=P,event=Value])|Out]) :-
     term_json(E,Value), encode_unary(Rows,Out).
+
+encode_event_domain([], []).
+encode_event_domain([E|Events], [J|JSON]) :-
+    term_json(E,J), encode_event_domain(Events,JSON).
 
 encode_facts([], []).
 encode_facts([H|T], [json([ctor=P,args=Args])|R]) :-

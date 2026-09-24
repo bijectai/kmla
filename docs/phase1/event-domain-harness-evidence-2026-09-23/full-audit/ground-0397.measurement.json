@@ -1,0 +1,264 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employed"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employed"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employed"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employed"
+          },
+          "2017-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employed"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          "2017-12-31"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_is_paid"
+            }
+          },
+          {
+            "a": "alice_employed"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_is_paid"
+          },
+          200
+        ]
+      },
+      {
+        "ctor": "penal_institution_",
+        "args": [
+          {
+            "a": "jail_is_a_penal_institution"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "jail_is_a_penal_institution"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "incarceration_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          {
+            "a": "jail"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          "2015-01-24"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_goes_to_jail"
+          },
+          "2019-05-05"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employed"
+      }
+    },
+    {
+      "source_clause": 6,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_is_paid"
+      }
+    },
+    {
+      "source_clause": 12,
+      "predicate": "penal_institution_",
+      "event": {
+        "a": "jail_is_a_penal_institution"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "incarceration_",
+      "event": {
+        "a": "alice_goes_to_jail"
+      }
+    }
+  ],
+  "event_domain": [
+    {
+      "a": "alice_employed"
+    },
+    {
+      "a": "alice_is_paid"
+    },
+    {
+      "a": "jail_is_a_penal_institution"
+    },
+    {
+      "a": "alice_goes_to_jail"
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "distinct_event_domain": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 18,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002652489999999952,
+    "grounding_wall_seconds": 0.0002682209014892578,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

@@ -2,6 +2,25 @@
 
 ## Current phase
 
+2026-09-23 (A-023 correction verified; full H4 observation coverage still open):
+the restarted audit visits every original. H4.3(a) passes 376/376; H4.3(b)
+passes 114, with 262 explicitly unimplemented, no mismatch/error/timeout.
+The audit intentionally exits 1 for missing coverage; it is not a full H4 pass.
+376 diagnostic Household instances / 297 distinct; production records and
+reference parity remain absent. The corrected witness is 69 -> 69 -> 69 facts,
+retaining 13 unary proofs over 8 event-domain entries. Country14, list2 and
+tax33 freshly pass their bounded checks; main independently verifies these
+and 147 builder tests. The verified 122-oracle-assertion source snapshot is
+unchanged (87 existing statements preserved). New builder regressions are
+wired into CI alongside the mandatory proof suite. Details:
+docs/phase1/EVENT_DOMAIN_CORRECTION_2026-09-23.md and
+docs/phase1/q023-independent-2026-09-23/.
+Remaining work: 262 H6 observations, shared full record packaging/producers,
+and unfinished oracle modes/providers/production guards/R5 obligations.
+No new blocking owner decision arose from Q-023; protected H4 installation
+and re-pin still belong to Dev. Checkpoint 1 is NOT passed. human/ and PLAN
+are unchanged; all subtask work is bounded, with no later phase started.
+
 2026-09-23 (A-023 reviewed; bounded traversal correction released): Fable
 classifies the occurrence-multiset event domain as an implementation violation
 of H4.3(a), not a blocking owner amendment. The domain must use distinct ground
@@ -548,15 +567,17 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Active Q-023: ordered re-grounding multiplies facts in s2_b_3_B_pos
+### Q-023 resolved: event-domain correction verified; H4(b) implementation incomplete
 
 A-023 resolves the classification as an existing-contract implementation
-correction. The remaining gate is verification of a distinct first-occurrence
-event domain, stored unary/binary multiplicity intact, bodyless traversal/order
-intact, plus fresh witness/country/tax33/broad runs. The optional explicit H4.2
-clarification remains Dev's choice, not a required installation or blocker.
-No prior pass count is reused as a post-correction measurement.
+correction. Its bounded repair is independently verified: distinct first-seen
+event domain, stored unary/binary proofs intact, no bodyless bypass, fixed-point
+witness 69/69/69, country/list/tax33 regressions, and a restarted all-376 audit.
+All 376 H4(a) comparisons pass; H4(b) is 114 pass and 262 unimplemented.
+No prior pass count is reused. The optional explicit H4.2 clarification remains
+Dev's choice, not a required installation or blocker. Full H4/CP1 is still open.
 
+The following is the original pre-review finding, retained unchanged in evidence:
 The exact failure and unchanged three-pass reproduction are in Q-023 and
 docs/consult/evidence/q023-reproduction-2026-09-23/. Source hash:
 cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a.
@@ -688,7 +709,13 @@ isolating the observation reduction. No recommendation has been applied, and
 all three original assertions remain unchanged. Its general Lean explanations
 are hypotheses to test, not trusted proof evidence.
 
-### Active: H4.2 grounding raises on tax_case_33 (Q-017, 2026-09-23)
+### Historical Q-017: bound-purpose raise; candidate measured, full H4 release open
+
+Current qualification: the A-020 candidate is implemented under Dev's bounded
+approval and freshly passes both tax33 checks after A-023, with the same
+1,736 ordered facts and result 27181. The original raise below remains
+historical evidence. Full H4 release and protected installation are not claimed:
+262 original H6 observations still need implementation and verification.
 
 Dev requires exact goal/binding evidence before any amendment. The fresh
 read-only original-call reproduction and clause-call trace above confirm the

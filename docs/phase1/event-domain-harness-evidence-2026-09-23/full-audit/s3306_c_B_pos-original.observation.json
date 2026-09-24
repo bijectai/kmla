@@ -1,0 +1,84 @@
+{
+  "raw_solutions": [
+    [
+      {
+        "a": "alice"
+      },
+      {
+        "a": "bob"
+      },
+      {
+        "s": "caracas, venezuela"
+      }
+    ]
+  ],
+  "proof_count": 1,
+  "cpu_seconds": 0.0002047500000000313,
+  "wall_seconds": 0.0002079010009765625,
+  "canonical": [
+    [
+      {
+        "a": "alice"
+      },
+      {
+        "a": "bob"
+      },
+      {
+        "s": "caracas, venezuela"
+      }
+    ]
+  ],
+  "command": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "kmla-runtime-4f4f723f262345d09e6e1dd187d261a6",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--user",
+      "501:20",
+      "--workdir",
+      "/corpus",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+      "--mount",
+      "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/event-domain-harness-evidence-2026-09-23/full-audit/requests,dst=/requests,readonly",
+      "--entrypoint",
+      "swipl",
+      "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+      "-q",
+      "-f",
+      "none",
+      "-s",
+      "/harness/grounding_observations.pl",
+      "-g",
+      "observe_main",
+      "-t",
+      "halt",
+      "--",
+      "/requests/ground-0421.pl",
+      "/requests/s3306_c_B_pos-original.observation.pl"
+    ],
+    "timeout_seconds": 60.0,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "449.stdout",
+    "stderr": "449.stderr",
+    "elapsed_seconds": 1.020853
+  }
+}

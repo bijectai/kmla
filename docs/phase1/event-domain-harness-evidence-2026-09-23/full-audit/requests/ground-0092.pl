@@ -1,0 +1,12 @@
+father_('charlie_and_bob').
+agent_('charlie_and_bob','charlie').
+patient_('charlie_and_bob','bob').
+start_('charlie_and_bob',"1995-04-15").
+mother_('dorothy_and_bob').
+agent_('dorothy_and_bob','dorothy').
+patient_('dorothy_and_bob','bob').
+start_('dorothy_and_bob',"1995-04-15").
+marriage_('alice_and_charlie').
+agent_('alice_and_charlie','alice').
+agent_('alice_and_charlie','charlie').
+start_('alice_and_charlie',"2018-08-08").

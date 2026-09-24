@@ -1,0 +1,59 @@
+{
+  "original_case": "s68_a_1_pos.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "unimplemented:approved-H6-projection-not-implemented",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "7d0ff3b5b1be09cfd8af79b5fd65085254ef8f97660e575b3cc25e1cd5d36651",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unsupported query/conjunct; do not strip constraints"
+  },
+  "original_queries": [
+    "s68_b(alice,Applicable_amount,2016),\n    gross_income(alice,2016,Gross_income),\n    s68_a_1(Gross_income,Applicable_amount,306)"
+  ],
+  "original_measurement": "ground-0509.pl",
+  "original_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0003093750000000006,
+    "grounding_wall_seconds": 0.00031185150146484375,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0510.pl",
+  "reground_stats": {
+    "unary_proofs": 1,
+    "distinct_event_domain": 1,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 4,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0003265410000000135,
+    "grounding_wall_seconds": 0.00032591819763183594,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "observation_comparison": {
+    "status": "unimplemented:approved-H6-projection-not-implemented",
+    "reason": "unsupported query/conjunct; do not strip constraints",
+    "owner_choice_blocker": false
+  }
+}

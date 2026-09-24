@@ -1,0 +1,1071 @@
+{
+  "scope": "read-only census of 149 retained pre-correction measurements; not all376 or a corrected run",
+  "measured_originals": 149,
+  "with_repeated_domain_events": 1,
+  "repeated": [
+    {
+      "case": "s2_b_3_B_pos.pl",
+      "unary_proofs": 13,
+      "distinct_events": 8,
+      "repeated_events": {
+        "{\"a\": \"bob_maintains_household_2015\"}": 2,
+        "{\"a\": \"bob_maintains_household_2016\"}": 2,
+        "{\"a\": \"bob_maintains_household_2017\"}": 2,
+        "{\"a\": \"bob_maintains_household_2018\"}": 2,
+        "{\"a\": \"bob_maintains_household_2019\"}": 2
+      },
+      "old_h4_a": "fail"
+    }
+  ],
+  "all_rows": [
+    {
+      "case": "s151_a_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_a_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_b_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_b_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_c_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_c_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_1_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_1_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_2_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_2_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_3_A_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_3_A_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_3_B_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_3_B_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_5_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s151_d_5_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_a_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_a_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_b_1_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_b_1_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_b_2_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_b_2_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_B_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_B_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_E_neg.pl",
+      "unary_proofs": 4,
+      "distinct_events": 4,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_E_pos.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_1_pos.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_A_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_A_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_B_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_B_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_2_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_3_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_c_3_pos.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_1_B_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_1_B_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_1_D_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_1_D_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_A_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_A_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_B_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_B_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_C_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_C_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_D_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_D_pos.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_E_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_E_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_F_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_F_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_G_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_G_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_H_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s152_d_2_H_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_i_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_i_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_ii_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_ii_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_iii_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_iii_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_iv_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_iv_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_v_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_1_v_pos.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_i_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_i_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_ii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_ii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_iii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_iii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_iv_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_iv_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_v_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_a_2_v_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_i_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_i_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_ii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_ii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_iii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_iii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_iv_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_iv_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_v_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_b_v_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_i_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_i_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_ii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_ii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_iii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_iii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_iv_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_iv_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_neg.pl",
+      "unary_proofs": 1,
+      "distinct_events": 1,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_v_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_c_v_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_i_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_i_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_ii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_ii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_iii_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_iii_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_iv_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_iv_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_v_neg.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s1_d_v_pos.pl",
+      "unary_proofs": 0,
+      "distinct_events": 0,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_1_A_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_1_A_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_1_B_neg.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_1_B_pos.pl",
+      "unary_proofs": 19,
+      "distinct_events": 19,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_2_A_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_2_A_pos.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_2_B_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_a_2_B_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_II_neg.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_II_pos.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_I_neg.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_I_pos.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_neg.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_i_pos.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_ii_neg.pl",
+      "unary_proofs": 23,
+      "distinct_events": 23,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_ii_pos.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_neg.pl",
+      "unary_proofs": 36,
+      "distinct_events": 36,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_A_pos.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_B_neg.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_B_pos.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_neg.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_1_pos.pl",
+      "unary_proofs": 20,
+      "distinct_events": 20,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_A_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_A_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_B_neg.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_B_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_C_neg.pl",
+      "unary_proofs": 3,
+      "distinct_events": 3,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_2_C_pos.pl",
+      "unary_proofs": 2,
+      "distinct_events": 2,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_3_A_neg.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_3_A_pos.pl",
+      "unary_proofs": 21,
+      "distinct_events": 21,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_3_B_neg.pl",
+      "unary_proofs": 9,
+      "distinct_events": 9,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    },
+    {
+      "case": "s2_b_3_B_pos.pl",
+      "unary_proofs": 13,
+      "distinct_events": 8,
+      "repeated_events": {
+        "{\"a\": \"bob_maintains_household_2015\"}": 2,
+        "{\"a\": \"bob_maintains_household_2016\"}": 2,
+        "{\"a\": \"bob_maintains_household_2017\"}": 2,
+        "{\"a\": \"bob_maintains_household_2018\"}": 2,
+        "{\"a\": \"bob_maintains_household_2019\"}": 2
+      },
+      "old_h4_a": "fail"
+    },
+    {
+      "case": "tax_case_33.pl",
+      "unary_proofs": 316,
+      "distinct_events": 316,
+      "repeated_events": {},
+      "old_h4_a": "pass"
+    }
+  ]
+}

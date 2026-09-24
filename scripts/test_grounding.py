@@ -134,12 +134,12 @@ def audit(evidence, timeout):
     try:
         session = GroundingSession(evidence)
         runtime.write_json(session.directory / "audit-code.json", {
-            "scope":"post-list bounded audit; eight explicit paragraph modes plus tax first solution only",
+            "scope":"A-023 distinct-event audit restarted from source; eight explicit paragraph modes plus tax first solution only",
             "hashes":{name:runtime.sha256(ROOT / name) for name in (
                 "scripts/test_grounding.py", "scripts/test_grounding_dispatch.py", "scripts/test_country_grounding.py",
                 "harness/grounding.py", "harness/grounding.pl", "harness/grounding_observations.py",
                 "harness/grounding_observations.pl", "harness/facts.py",
-                "scripts/test_stip_lists.py")},
+                "scripts/test_stip_lists.py", "scripts/test_event_domain.py")},
             "execution_order":[p.name for p in ordered],
             "source_files_sha256":{p.name:runtime.sha256(p) for p in paths},
         })

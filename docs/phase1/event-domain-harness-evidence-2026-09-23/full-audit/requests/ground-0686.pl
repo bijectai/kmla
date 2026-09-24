@@ -1,0 +1,9 @@
+marriage_('alice_and_bob').
+agent_('alice_and_bob','alice').
+agent_('alice_and_bob','bob').
+start_('alice_and_bob',"1997-02-03").
+end_('alice_and_bob',"2001-10-31").
+income_('alice_income').
+agent_('alice_income','alice').
+start_('alice_income',"2014-12-31").
+amount_('alice_income',718791).
