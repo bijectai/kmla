@@ -523,21 +523,22 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Q-022: list-valued original stipulations do not fit the shared input pattern
+### Q-022: representation classified and shared boundary checked; adapters in progress
 
 A-022 resolves the classification: implementation representation gap, no blocking
-owner amendment. A shared-only correction is in progress. The encoding and
-oracle adaptations must wait for the corrected shared type/wire; they must not
-independently invent that shape. The failed run below remains failed evidence.
+owner amendment. The shared-only StipArg correction is independently verified;
+the separate encoding and oracle contexts are adapting to that checked type
+and wire. They must not independently invent a different shape. Full H4 remains
+unverified. The failed run below remains historical failed evidence.
 
 Exact failure: `ERROR: Unknown error term: unsupported_household_term([charlie])`.
 Original s2_a_1_B_pos.pl supplies
 `s151(bob,_,[charlie],[0],Year) :- between(2014,2017,Year)`; the pinned diagnostic
 prints all four yearly heads before unchanged encoding fails. This is an
 encoder failure, not evidence that the source query is reference-undefined.
-G4 fixes flat scalar Term; H4 retains these stipulated clauses; Stip.args and
-the current input wire use only val(Term)/wild(Nat). The required classification
-is implementation representation gap versus a needed owner amendment. No list
+G4 fixes flat scalar Term; H4 retains these stipulated clauses. At the failed
+snapshot Stip.args and its input wire used only val(Term)/wild(Nat), prompting
+the classification now resolved by A-022. No list
 is flattened/stringified/dropped and no validity restriction is introduced.
 Q-022 and adjacent census/trace evidence preserve the decision question.
 The broad run accounts for all 376: 120 H4(a) pass, 1 error, 255 blocked; H4(b)
