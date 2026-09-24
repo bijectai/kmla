@@ -947,3 +947,53 @@ named — all 14 files, both H4.3 checks each, and the original
 direct fact-list check and the opposite-sign `s3306_c_B_pos/_neg` case added.
 P-GROUND2's own open items are untouched, and the scoped `tax_case_33` candidate
 is unaffected.
+
+## 2026-09-23 — REVIEW, no contract change — list-valued stipulation arguments are a shared-representation gap
+
+Origin: Q-022 / A-022. **Not a proposal, not an acceptance, not an installation,
+no representation chosen or installed.** Recorded because it classifies a halted
+lane and determines who may act.
+
+**Verdict: shared `Interface/`-and-codec gap, not an owner amendment.** G4 does
+not type stipulation argument values, and cannot: the statute's own signature
+`section151.pl:2` is `s151(Taxp,S2,Person_list,Exemptions_list,Taxy)`, whose
+positions 3 and 4 are proper lists built by `findall` at `:48-57`. If G4's flat
+`Term` were the global domain, that signature would be unrepresentable and H6.2's
+list-to-array observation rule would be incoherent. G4's body is entirely about
+atom-versus-`str` tagging and atomic comparison; H2 types *event fact* arguments;
+V1 constrains facts and forces `stipulations = []`; `ValidStip` imposes only
+`Stip.wellFormed`, an arity check. No signed text assigns a type to a stipulated
+argument value.
+
+What the signed text does require is retention: H4.1 admits `s151/5` as a
+stipulated signature with 5 fact and 1 rule clause, H4.2(iii) enumerates
+stipulated clauses keeping unbound outputs as wildcards, H1 retains supplied
+stipulations in order with duplicates and no defaults, and H4.3 requires both
+round-trip checks. H4.1's own wildcard census corroborates that these clauses
+were counted rather than overlooked: it records `s151/5` wildcards at "pos 3×4,
+pos 4×5" over six clauses, i.e. two non-wildcard position-3 values and one
+non-wildcard position-4 value — exactly the two list-bearing heads
+(`s2_a_1_B_pos.pl`, `s63_d_2_pos.pl`) and exactly their list positions.
+
+**The encoder's refusal was correct behaviour** and must survive the fix: the
+Prolog side evaluated normally and printed four solutions, and
+`unsupported_household_term([charlie])` is a harness-side representation failure,
+not G6 and not a reference result.
+
+**Minimal correction, for the builder, with its one trap.** A stipulation
+argument needs a recursive list container so a wildcard inside a list keeps its
+`'$VAR'(N)` identity under A3 and nested lists remain expressible. `Pat` is
+currently shared with `Fact.purpose_`, so extending `Pat` in place would silently
+widen event facts, which Q-022 forbids; a distinct stipulation-argument type, or
+a `Fact`-side well-formedness restriction, avoids that. The wire form needs a
+third tag disjoint from `val`/`wild` so an inner list cannot be confused with the
+outer argument array; the concrete spelling stays builder-owned under P-WIRE.
+Everything still unrepresentable — improper lists, non-list compounds — must keep
+raising and be reported as findings.
+
+**Open.** Both H4.3 checks for the two affected originals and the rest of the
+376; a runtime report of any stipulated solution outside the representable set,
+which replaces the syntactic census as evidence; and the run-specific statuses
+(120 (a) passes, one encoding error, 255 blocked) stay run-specific, not an
+all-376 result. `Valid` needs no change, since V1 already excludes stipulations
+from generated inputs.

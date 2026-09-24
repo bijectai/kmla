@@ -1,0 +1,2 @@
+sample('$VAR'(0),['$VAR'(0),'$VAR'(1),['$VAR'(1)]],'$VAR'(1))
+next_id=2

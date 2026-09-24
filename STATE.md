@@ -2,6 +2,20 @@
 
 ## Current phase
 
+2026-09-23 (A-022 reviewed; shared-only representation correction released):
+Fable classifies list-valued stipulations as an Interface/codec representation
+gap under existing H4, not an owner amendment or G6 source failure. Its writes
+were only A-022 and an append to DECISION_LOG; all-path audit clean, protected
+manifest unchanged. The shared Interface context is implementing a DISTINCT
+recursive stipulation-argument type; event Term/Pat must remain unchanged.
+Both implementation lanes stay paused until that shared declaration and wire
+shape are checked. A pinned numbervars probe confirms one variable id is shared
+inside/outside nested lists; no per-occurrence renumbering. No new validity
+restriction, semantic mode, protected installation or checkpoint is authorized.
+Fable's optional G4 scope confirmation is non-blocking; no new owner action is
+required for this correction as classified. Review/audit: A-022 and
+docs/consult/evidence/q022-path-audit-2026-09-23.json.
+
 2026-09-23 (new list-valued stipulation encoding finding; Q-022 prepared): the
 wider audit stops at s2_a_1_B_pos.pl with pinned stderr
 `ERROR: Unknown error term: unsupported_household_term([charlie])` (exit 2,
@@ -500,6 +514,11 @@ semantic decisions or as permission to change anything under `human/`.
 ## Blockers
 
 ### Q-022: list-valued original stipulations do not fit the shared input pattern
+
+A-022 resolves the classification: implementation representation gap, no blocking
+owner amendment. A shared-only correction is in progress. The encoding and
+oracle adaptations must wait for the corrected shared type/wire; they must not
+independently invent that shape. The failed run below remains failed evidence.
 
 Exact failure: `ERROR: Unknown error term: unsupported_household_term([charlie])`.
 Original s2_a_1_B_pos.pl supplies

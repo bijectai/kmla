@@ -2,6 +2,15 @@
 
 ## Authorization and entry identity
 
+**A-022 classification (2026-09-23):** representation defect under signed H4,
+not a blocking owner amendment. The consult audit is clean. A shared-only
+Interface context is preparing a distinct recursive stipulation-argument type
+and lossless tagged-list wire, preserving event Term/Pat and validity rules.
+The implementation lanes await that checked declaration, then adapt separately.
+The nested-variable identity assumption has been measured on the pinned runtime.
+No protected artifact is installed; Dev's optional G4 scope confirmation is
+non-blocking. Full H4 and parity remain unfinished; Checkpoint 1 is not passed.
+
 **Latest continuation finding (2026-09-23):** the full-population grounding
 audit is halted at s2_a_1_B_pos.pl:40: the supplied s151/5 clause has proper
 lists [charlie] and [0], while shared Stip.args uses flat Pat/Term. The pinned
