@@ -10,7 +10,7 @@ parameterized by the unavailable s152_a_1/3 continuation. No provider,
 recursive knot, R5 bound, production OracleGuards or full s7703 target is
 supplied. The root body covers bound Taxp/Year, free Marriage, and either free
 or bound Spouse ONLY. H4 append/unification/freshening for those two modes is
-implemented using shared Pat and an explicit fresh-id supply. Other root modes,
+implemented using shared StipArg and an explicit fresh-id supply. Other root modes,
 the actual downstream provider and its R5 proof remain absent; this is not a
 completed reference or a complete operational-mode implementation.
 
@@ -356,8 +356,8 @@ def s7703_statute_bbfb (h : Household) (taxpayer spouse : Term) (year : Year)
 /--
 H4.1/G1 assembly for source s7703/4 (section7703.pl:2–9), mode bffb.
 The statute clause precedes EVERY stipulated head, with duplicates retained.
-Result: (next-unused id, ordered (Spouse, Marriage) rows). Existing shared Pat
-keeps free outputs and within-row identity; the Nat supply is administrative
+Result: (next-unused id, ordered (Spouse, Marriage) rows). Shared StipArg
+keeps recursive lists, free outputs and within-row identity; the Nat supply is administrative
 state, not another Prolog input or a new wire schema. Thread the returned supply
 into later invocations; resetting it with live outputs would violate freshness.
 The required provider and actual-year certificate remain explicit.
@@ -367,7 +367,7 @@ def s7703_bffb (h : Household) (taxpayer : Term) (year : Year)
     (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
       CoveredR5Time (.year year) → List Unit)
     (next : Nat) (shaped : h.stipulations.all Stip.wellFormed = true) :
-    Nat × List (Pat × Pat) :=
+    Nat × List (StipArg × StipArg) :=
   let statute := s7703_statute_bffb h taxpayer year checked s152_a_1_bbb
   let (next', stips) := Stipulation.solutions taxpayer none year next h.stipulations shaped
   (next', statute.map (fun (s, m) => (.val s, .val m)) ++ stips)
@@ -379,11 +379,11 @@ def s7703_bbfb (h : Household) (taxpayer spouse : Term) (year : Year)
     (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
       CoveredR5Time (.year year) → List Unit)
     (next : Nat) (shaped : h.stipulations.all Stip.wellFormed = true) :
-    Nat × List Pat :=
+    Nat × List StipArg :=
   let statute := s7703_statute_bbfb h taxpayer spouse year checked s152_a_1_bbb
   let (next', stips) := Stipulation.solutions taxpayer (some spouse) year next
     h.stipulations shaped
-  (next', statute.map Pat.val ++ stips.map Prod.snd)
+  (next', statute.map StipArg.val ++ stips.map Prod.snd)
 
 /-! Entry tuples use only the shared QueryCall, SuppliedArg, Pat and Term types.
 The free positions below are exactly H6.5, not ground-only substitute modes.
@@ -477,11 +477,26 @@ def patObs : Pat → Obs
   | .val t => termObs t
   | .wild _ => .null
 
-def rootBffbSolutions (rows : List (Pat × Pat)) : List Solution :=
-  rows.map fun (s, m) => [patObs s, patObs m]
+mutual
+  /-- H6.2: preserve every list level, tag, position and duplicate element.
+  Only still-unbound leaves become null; an empty list remains an empty array. -/
+  def stipArgObs : (p : StipArg) → Obs
+    | .val t => termObs t
+    | .wild _ => .null
+    | .list items => .arr (stipArgsObs items)
+  termination_by structural p => p
 
-def rootBbfbSolutions (rows : List Pat) : List Solution :=
-  rows.map fun m => [patObs m]
+  private def stipArgsObs : (items : List StipArg) → List Obs
+    | [] => []
+    | p :: ps => stipArgObs p :: stipArgsObs ps
+  termination_by structural items => items
+end
+
+def rootBffbSolutions (rows : List (StipArg × StipArg)) : List Solution :=
+  rows.map fun (s, m) => [stipArgObs s, stipArgObs m]
+
+def rootBbfbSolutions (rows : List StipArg) : List Solution :=
+  rows.map fun m => [stipArgObs m]
 
 def a1Solutions (rows : List (Term × Term × Option Day)) : List Solution :=
   rows.map fun (s, m, d) => [termObs s, termObs m, match d with

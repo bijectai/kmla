@@ -1,0 +1,44 @@
+{
+  "household": {
+    "facts": [],
+    "stipulations": [
+      {
+        "pred": "s151_d_4",
+        "args": [
+          {
+            "val": {
+              "a": "alice"
+            }
+          },
+          {
+            "wild": 0
+          },
+          {
+            "val": 2000
+          },
+          {
+            "val": 2015
+          }
+        ]
+      }
+    ]
+  },
+  "unary": [],
+  "fact_source_clauses": [],
+  "stats": {
+    "unary_proofs": 0,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 0,
+    "stipulation_count": 1,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.00012508299999999806,
+    "grounding_wall_seconds": 0.00012445449829101562,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

@@ -1,0 +1,211 @@
+tax_case_33.pl: H4.3(a)=pass H4.3(b)=pass
+s151_a_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_a_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_b_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_b_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_c_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_c_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_1_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_1_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_2_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_2_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_3_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_3_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_3_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_3_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_5_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s151_d_5_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_a_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_a_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_b_1_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_b_1_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_b_2_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_b_2_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_E_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_E_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_1_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_2_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_3_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_c_3_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_1_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_1_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_1_D_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_1_D_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_C_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_C_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_D_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_D_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_E_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_E_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_F_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_F_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_G_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_G_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_H_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s152_d_2_H_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_iii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_iii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_iv_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_iv_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_v_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_1_v_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_iii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_iii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_iv_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_iv_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_v_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_a_2_v_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_iii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_iii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_iv_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_iv_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_v_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_b_v_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_iii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_iii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_iv_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_iv_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_v_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_c_v_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_iii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_iii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_iv_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_iv_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_v_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s1_d_v_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_1_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_1_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_1_B_neg.pl: H4.3(a)=pass H4.3(b)=pass
+s2_a_1_B_pos.pl: H4.3(a)=pass H4.3(b)=pass
+s2_a_2_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_2_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_2_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_a_2_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_II_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_II_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_I_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_I_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_i_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_ii_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_ii_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_1_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_B_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_C_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_2_C_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_3_A_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_3_A_pos.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_3_B_neg.pl: H4.3(a)=pass H4.3(b)=unimplemented:approved-H6-projection-not-implemented
+s2_b_3_B_pos.pl: H4.3(a)=fail H4.3(b)=blocked:ordered-list-comparison-failure
+FINDING: {"case": "s2_b_3_B_pos.pl", "kind": "H4.3(a) ordered comparison failure", "details": {"field": "facts", "index": 20, "original_grounding": {"ctor": "agent_", "args": [{"a": "bob_maintains_household_2016"}, {"a": "bob"}]}, "regrounding": {"ctor": "agent_", "args": [{"a": "bob_maintains_household_2015"}, {"a": "bob"}]}, "original_length": 114, "regrounded_length": 204}}
+{
+  "scope": "candidate measurement only; no production records, Valid, parity or checkpoint claim",
+  "original_case_count": 376,
+  "attempted_original_count": 149,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "h4_3_a_pass": 148,
+  "h4_3_b_pass": 3,
+  "h4_3_a_counts": {
+    "pass": 148,
+    "fail": 1,
+    "blocked:halt-after-finding": 227
+  },
+  "h4_3_b_counts": {
+    "unimplemented:approved-H6-projection-not-implemented": 145,
+    "pass": 3,
+    "blocked:ordered-list-comparison-failure": 1,
+    "blocked:halt-after-finding": 227
+  },
+  "direct_country_counts": {
+    "not-applicable:no-supplied-country": 149,
+    "blocked:halt-after-finding": 227
+  },
+  "diagnostic_household_instances": 149,
+  "diagnostic_distinct_ordered_households": 93,
+  "all_originals_visited": false,
+  "audit_pass": false,
+  "elapsed_wall_seconds": 122.47609791602008,
+  "finding": {
+    "case": "s2_b_3_B_pos.pl",
+    "kind": "H4.3(a) ordered comparison failure",
+    "details": {
+      "field": "facts",
+      "index": 20,
+      "original_grounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "regrounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "original_length": 114,
+      "regrounded_length": 204
+    }
+  }
+}

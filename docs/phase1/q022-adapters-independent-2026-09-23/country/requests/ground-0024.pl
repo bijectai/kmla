@@ -1,0 +1,41 @@
+service_('alice_employer').
+patient_('alice_employer','alice').
+agent_('alice_employer','bob').
+start_('alice_employer',"2017-02-01").
+end_('alice_employer',"2017-09-02").
+location_('alice_employer',"caracas, venezuela").
+country_("caracas, venezuela","venezuela").
+purpose_('alice_employer',"agricultural labor").
+payment_('alice_pays').
+agent_('alice_pays','alice').
+patient_('alice_pays','bob').
+start_('alice_pays',"2017-09-02").
+purpose_('alice_pays','alice_employer').
+amount_('alice_pays',23200).
+american_employer_('alice_is_american_employer').
+agent_('alice_is_american_employer','alice').
+citizenship_('bob_is_american').
+agent_('bob_is_american','bob').
+patient_('bob_is_american',"usa").
+residence_('alice_residence').
+agent_('alice_residence','alice').
+patient_('alice_residence','alice_house').
+start_('alice_residence',"2017-01-01").
+end_('alice_residence',"2017-12-31").
+payment_('alice_maintains_house').
+agent_('alice_maintains_house','alice').
+amount_('alice_maintains_house',1).
+start_('alice_maintains_house',"2017-01-01").
+purpose_('alice_maintains_house','alice_house').
+mother_('dorothy_is_mother').
+agent_('dorothy_is_mother','dorothy').
+patient_('dorothy_is_mother','alice').
+residence_('dorothy_residence').
+agent_('dorothy_residence','dorothy').
+patient_('dorothy_residence','alice_house').
+start_('dorothy_residence',"2017-01-01").
+end_('dorothy_residence',"2017-12-31").
+income_('alice_income_2017').
+agent_('alice_income_2017','alice').
+start_('alice_income_2017',"2017-12-31").
+amount_('alice_income_2017',197407).

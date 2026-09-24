@@ -2,6 +2,15 @@
 
 ## Authorization and entry identity
 
+**New H4(a) halt (2026-09-23):** list adapters are verified, but the fresh broad
+audit stops at s2_b_3_B_pos: facts grow 114 -> 204 (independent next pass: 384).
+Q-023 requests classification before any remedy. Standing consultation is
+authorized; a resulting amendment or protected installation still comes to Dev.
+The previous list representation issue requires no new human deliverable.
+Both affected-list originals and all 14 country cases pass independently;
+122 oracle assertions and 144 unit regressions pass. These bounded results are
+not all-376 H4 completion, reference parity or Checkpoint 1 approval.
+
 **Shared correction checked (2026-09-23):** Interface now carries distinct
 recursive StipArg with disjoint list wire. Event Term/Pat and validity/query
 requirements are unchanged. Independent checks pass: 115 old guards, unchanged

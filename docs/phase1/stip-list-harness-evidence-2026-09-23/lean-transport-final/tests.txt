@@ -1,0 +1,17 @@
+test_admitted_dates_against_standard_calendar (__main__.TransportTests.test_admitted_dates_against_standard_calendar) ... ok
+test_all_constructors_round_trip (__main__.TransportTests.test_all_constructors_round_trip) ... ok
+test_dates_not_normalized (__main__.TransportTests.test_dates_not_normalized) ... ok
+test_declared_registries (__main__.TransportTests.test_declared_registries) ... ok
+test_lean_compiles_all_fixtures_and_constructors (__main__.TransportTests.test_lean_compiles_all_fixtures_and_constructors) ... ok
+test_lossless_stip_list_separate_from_arity (__main__.TransportTests.test_lossless_stip_list_separate_from_arity) ... ok
+test_no_interpreter_decimal_digit_cap (__main__.TransportTests.test_no_interpreter_decimal_digit_cap) ... ok
+test_rejects_ambiguous_or_noninteger_json (__main__.TransportTests.test_rejects_ambiguous_or_noninteger_json) ... ok
+test_rejects_malformed_shapes_without_defaults (__main__.TransportTests.test_rejects_malformed_shapes_without_defaults) ... ok
+test_shared_fixture_bytes_and_inverse (__main__.TransportTests.test_shared_fixture_bytes_and_inverse) ... ok
+test_tags_order_duplicates_and_wild_ids_matter (__main__.TransportTests.test_tags_order_duplicates_and_wild_ids_matter) ... ok
+test_transport_does_not_apply_v3 (__main__.TransportTests.test_transport_does_not_apply_v3) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.776s
+
+OK

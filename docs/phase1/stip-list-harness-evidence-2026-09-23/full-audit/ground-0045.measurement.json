@@ -1,0 +1,137 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "joint_return_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return"
+          },
+          "2015-01-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_and_bob_joint_return"
+          },
+          "2015-12-31"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "joint_return_",
+      "event": {
+        "a": "alice_and_bob_joint_return"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "stats": {
+    "unary_proofs": 2,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 9,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00022400000000000198,
+    "grounding_wall_seconds": 0.00022363662719726562,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

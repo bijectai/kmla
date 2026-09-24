@@ -1,0 +1,336 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2012-02-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2012-09-02"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_employer"
+            }
+          },
+          {
+            "s": "domestic service"
+          }
+        ]
+      },
+      {
+        "ctor": "location_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "s": "baltimore, maryland, usa"
+          }
+        ]
+      },
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "baltimore, maryland, usa"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          "2012-09-02"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays"
+            }
+          },
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          3200
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "bob_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_employer"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_employer"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_employer"
+          },
+          "2012-04-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "bob_employer"
+          },
+          "2012-12-31"
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "bob_pays"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_pays"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_pays"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "bob_pays"
+          },
+          "2012-09-02"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "bob_pays"
+            }
+          },
+          {
+            "a": "bob_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "bob_pays"
+          },
+          4500
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer"
+      }
+    },
+    {
+      "source_clause": 9,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays"
+      }
+    },
+    {
+      "source_clause": 15,
+      "predicate": "service_",
+      "event": {
+        "a": "bob_employer"
+      }
+    },
+    {
+      "source_clause": 20,
+      "predicate": "payment_",
+      "event": {
+        "a": "bob_pays"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "service_proofs": 2,
+    "distinct_service_domain": 2,
+    "fact_count": 25,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002382499999999954,
+    "grounding_wall_seconds": 0.00023698806762695312,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "first_solution",
+    "value": 192,
+    "cpu_seconds": 0.0018237919999999908,
+    "wall_seconds": 0.0018241405487060547
+  }
+}

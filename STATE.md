@@ -2,6 +2,20 @@
 
 ## Current phase
 
+2026-09-23 (StipArg adapters verified; new H4(a) finding, Q-023): both isolated
+adapters are complete. Independent checks pass both list-bearing originals,
+all 14 country originals, 144 unit regressions and 122 oracle assertions
+(87 existing statements unchanged). The broader audit stops at s2_b_3_B_pos:
+114 facts become 204 on re-grounding; zero-based index 20 changes an agent_
+event from bob_maintains_household_2016 to bob_maintains_household_2015.
+Main reproduces 114 -> 204 -> 384 with unchanged code, 13 unary proofs over
+8 distinct events on each pass. No remedy is implemented. Affected grounding
+development is halted for Q-023 classification under standing consult scope.
+All 376 originals are accounted for: H4(a) 148 pass/1 fail/227 unvisited;
+H4(b) 3 pass/145 unimplemented/228 blocked. Separate passing slices remain
+separate evidence. Production records and reference parity are not produced;
+Checkpoint 1 remains unpassed. human/ and docs/PLAN.md are untouched.
+
 2026-09-23 (shared stipulation-list boundary verified): distinct recursive
 StipArg and its tagged-list wire are checked independently. All 115 existing
 Interface guards, unchanged query-time guards, 16 new behavioral guards,
@@ -522,6 +536,19 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### Active Q-023: ordered re-grounding multiplies facts in s2_b_3_B_pos
+
+The exact failure and unchanged three-pass reproduction are in Q-023 and
+docs/consult/evidence/q023-reproduction-2026-09-23/. Source hash:
+cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a.
+Both measured programs exit 0 without timeout; the ordered fact comparison
+fails (114 versus 204), while five stipulations are equal. Another unchanged
+re-grounding yields 384 facts. This is not an H4(b) or parity mismatch.
+The event-domain/proof-multiplicity distinction needs Fable's classification
+against H1/H4 and the explicit no-bodyless-bypass instruction. No deduplication,
+source repair, exclusion, revised traversal or comparison change is authorized
+by this finding. Consult first; amendments/installations still require Dev.
 
 ### Q-022: representation classified and shared boundary checked; adapters in progress
 

@@ -1,5 +1,74 @@
 # Oracle proof obligations
 
+## §7703 recursive stipulation-list adaptation — 2026-09-23
+
+The bounded bffb/bbfb adapter now consumes the checked shared `StipArg` from
+`eeea5f9`. Recursive freshening threads one renaming table through every head
+position and nested proper list; recursive resolution propagates scalar input
+bindings to all aliased leaves. Ground scalar taxpayer/spouse/year cannot match
+a list. Root results retain `StipArg` until the recursive `Obs.arr` mapping;
+only unbound leaves become null. Statute-first clause order, tags, empty lists,
+list-element duplicates and separate fresh clause copies are preserved.
+
+All 62 existing section assertions, 25 existing stipulation assertions and 35
+new list assertions compile in the main-owned combined runner on pinned Lean
+4.33.1. The 87 existing assertion declarations are byte-identical to `eeea5f9`;
+the only existing-test edits replace `patObs` with `stipArgObs` in two proof
+bodies. `Tests/S7703.lean` remains entirely byte-identical. Identity evidence:
+[S7703_STIP_LIST_ASSERTION_IDENTITY.txt](Tests/S7703_STIP_LIST_ASSERTION_IDENTITY.txt).
+No fixture, expected value or assertion was weakened.
+
+### Retained attempts and final goals
+
+1. R1: fresh shared dependencies, helper, root and 62-test module compile.
+   Two old stipulation observation proofs fail because their simplification
+   lists still name `patObs`; the other 23 pass. Full goals and recovery-axiom
+   diagnostics are retained in
+   [S7703_STIP_LIST_BUILD_R1.txt](Tests/S7703_STIP_LIST_BUILD_R1.txt).
+   Those recovery terms are failed evidence, not proofs; no successful test
+   artifact is claimed for that module in R1.
+2. R2: introduce structurally recursive observation and update only the two
+   proof-body observer names. The combined build stops at a documentation
+   comment placed before `mutual`: `unexpected token 'mutual'`. No test runs
+   in this attempt. Full diagnostic:
+   [S7703_STIP_LIST_COMBINED_R2.txt](Tests/S7703_STIP_LIST_COMBINED_R2.txt).
+3. R3: move that comment onto the definition inside `mutual`. The fresh combined
+   build exits 0 for all three assertion modules (62 + 25 + 35). Full final
+   axiom output:
+   [S7703_STIP_LIST_COMBINED_R3.txt](Tests/S7703_STIP_LIST_COMBINED_R3.txt).
+   Every printed axiom set is a subset of X1; the recursive observer and both
+   root observation mappings have no axioms. The 35 new tests pass on their
+   first reached compilation. Latest test goals: none.
+
+No test reached three failed edit cycles. Each affected existing observation
+test has one executed failed cycle, followed by the source-syntax-blocked
+build and a pass; even counting the blocked build conservatively gives two,
+not three. The earlier worker's service-compaction interruption is not a proof
+failure. Historical failure files below remain unchanged.
+
+### Still open after the representation adaptation
+
+The actual ordered §152 provider, other root modes, non-ground caller inputs,
+general relational/unification and supply-threading correspondence, production
+OracleGuards, the V10 decider iff, participant-universe/phase/decrease/fuel
+adequacy, and full operational R5/R8 query/time coverage remain open. The entry
+wrappers still require actual-tuple admission and actual-year certificates;
+no defaults, provider implementation, recursive fuel, domain restriction or
+later-section translation was added. Proper-list structural recursion does not
+prove R5 termination. No original-case parity or Checkpoint 1 result is claimed.
+
+Main confirmed unconditional runner wiring for `Tests/S7703StipLists.lean`;
+this lane did not edit the runner. The full handoff is
+[STIP_LIST_ORACLE_2026-09-23.md](../docs/phase1/STIP_LIST_ORACLE_2026-09-23.md).
+
+Self-review: assume signed ordered SLD/multiplicity; aliases shared throughout
+one head, including nested lists; fresh variables for separate copies/calls;
+tag-sensitive scalar equality; finite proper lists distinct from scalar `[]`;
+and H6 observation-only null/sorting/deduplication. Supported input constraints
+are scalar, so no variable-to-list binding or occurs-check case is introduced.
+Three failed edit cycles on one test means stop and report, with no fourth edit
+or weakened assertion. That breaker did not fire in this adaptation.
+
 ## §7703 stipulated-root slice — 2026-09-23 current continuation
 
 The explicitly authorized bffb/bbfb H4 append/head-unification/freshening slice

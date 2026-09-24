@@ -18,7 +18,8 @@ class DispatchTests(unittest.TestCase):
                  "s3306_c_1(e,2017)", "s3306_c_1_A_i(alice,_,[bob],_,2017)", "s3306_c_1_B(e,_)"]
         plans = [observation_plan(case(g)) for g in goals]
         self.assertTrue(all(p.kind == "paragraph" for p in plans))
-        self.assertEqual({(p.query.predicate,p.query.mode) for p in plans}, MODES)
+        self.assertEqual({(p.query.predicate,p.query.mode) for p in plans},
+                         MODES - {("s2_a_1_B", "bffb"), ("s63_d_2", "bbb")})
 
     def test_unknown_mismatched_arity_and_bound_modes_do_not_dispatch(self):
         for goal in ("s151_a(alice,4000,2015)", "s3306_c_A(e,alice,bob)", "s3306_c_A(e,_)",

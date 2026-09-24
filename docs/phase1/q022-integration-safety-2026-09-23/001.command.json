@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "scripts/verify_phase0.sh",
+    "."
+  ],
+  "timeout_seconds": 120,
+  "exit": 0,
+  "timed_out": false,
+  "stdout": "001.stdout",
+  "stderr": "001.stderr",
+  "elapsed_seconds": 5.041045
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "scripts/test_verify_phase0.py"
+  ],
+  "timeout_seconds": 120,
+  "exit": 0,
+  "timed_out": false,
+  "stdout": "002.stdout",
+  "stderr": "002.stderr",
+  "elapsed_seconds": 0.148364
+}

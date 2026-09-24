@@ -1,0 +1,80 @@
+{
+  "original_case": "s2_b_3_B_pos.pl",
+  "h4_3_a": "fail",
+  "h4_3_b": "blocked:ordered-list-comparison-failure",
+  "direct_country": {
+    "status": "not-applicable:no-supplied-country",
+    "supplied_source_indices": [],
+    "emitted_source_indices": [],
+    "emitted_fact_positions_1based": [],
+    "supplied": [],
+    "emitted": []
+  },
+  "source_sha256": "cdf109a726f44e6b5aced16ad84354a71ef51bd8b1bc3e8899b4fb81f9ac7f8a",
+  "reader_exceptions": [],
+  "h6_observation": {
+    "kind": "unimplemented",
+    "query": null,
+    "tax_input": null,
+    "reason": "unimplemented H6 observation: s2_b_3_B/3 bbb"
+  },
+  "original_queries": [
+    "s2_b_3_B(bob,charlie,2018)"
+  ],
+  "original_measurement": "ground-0297.pl",
+  "original_stats": {
+    "unary_proofs": 13,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 114,
+    "stipulation_count": 5,
+    "wildcard_count": 5,
+    "grounding_cpu_seconds": 0.0011898330000000013,
+    "grounding_wall_seconds": 0.0011889934539794922,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_measurement": "ground-0298.pl",
+  "reground_stats": {
+    "unary_proofs": 13,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 204,
+    "stipulation_count": 5,
+    "wildcard_count": 5,
+    "grounding_cpu_seconds": 0.000708207999999988,
+    "grounding_wall_seconds": 0.0007076263427734375,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "ordered_difference": {
+    "field": "facts",
+    "index": 20,
+    "original_grounding": {
+      "ctor": "agent_",
+      "args": [
+        {
+          "a": "bob_maintains_household_2016"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    },
+    "regrounding": {
+      "ctor": "agent_",
+      "args": [
+        {
+          "a": "bob_maintains_household_2015"
+        },
+        {
+          "a": "bob"
+        }
+      ]
+    },
+    "original_length": 114,
+    "regrounded_length": 204
+  }
+}

@@ -1,4 +1,4 @@
-"""Explicit H6 modes for the ten country-bearing paragraph originals only.
+"""Explicit H6 modes for the country and list-stipulation paragraph slices.
 
 This is diagnostic query plumbing, not shared payload packaging. The source's
 bound arguments stay bound; only its outer NAF is stripped. Tax is handled by
@@ -16,6 +16,9 @@ from harness.grounding import CORPUS, IMAGE, ROOT, GroundingFailure
 MODES = {
     ("s3306_c_A", "bff"), ("s3306_c_B", "bfff"), ("s3306_c_B", "fbbf"),
     ("s3306_c_1", "bb"), ("s3306_c_1_A_i", "bfbfb"), ("s3306_c_1_B", "bf"),
+    # H6.5: s2_a_1_B exposes its two source-free outputs. s63_d_2's
+    # Question asks applicability, not an amount: retain [2000] as an input.
+    ("s2_a_1_B", "bffb"), ("s63_d_2", "bbb"),
 }
 
 
@@ -48,7 +51,7 @@ class Query:
 
 def paragraph_query(case):
     if len(case.queries) != 1:
-        raise GroundingFailure("country slice requires exactly one source query")
+        raise GroundingFailure("bounded paragraph slice requires exactly one source query")
     original = case.queries[0].goal
     goal = _ungroup(original)
     negative = goal.tag == "op" and goal.value == "\\+"

@@ -1,0 +1,184 @@
+toolchain: leanprover/lean4:v4.33.1
+build artifacts: /var/folders/nb/1nmz4lr56rz3wcmmcgglfyx00000gn/T//kmla-s7703.X6VKfc
+Oracle/Tests/S7703.lean:259:20: warning: This simp argument is unused:
+  List.merge
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [a1Solutions, termObs, bob, marriage, observe, List.map_cons, List.map_nil, Solution.encode,
+    Obs.encode, escapeJson, String.foldl_eq_foldl_toList, List.mergeSort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'KMLA.Oracle.S7703.s7703_a_1_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_a_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_1_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_is_member_of_household_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_3_clause1' depends on axioms: [propext]
+'KMLA.Oracle.S7703.s7703_b_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_bbb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_clause1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_statute_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_a_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_1_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_2_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_b_3_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.a1_null_only_at_observation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.b3_deduplication_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_composition_preserves_literal_order_and_every_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.b_no_residence_never_needs_provider' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_spouse_one_guard_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_two_guard_successes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_identical_people_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_other_spouse_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_spouse_retains_atom_string_distinction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_free_mode_retains_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.Tests.root_statute_bound_mode_retains_guard_times_fact_duplicates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ok    partial §7703 S7703 assertions compiled; open reference obligations remain
+'KMLA.Oracle.S7703.Stipulation.solutions' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.Stipulation.bindSpouse' depends on axioms: [propext]
+'KMLA.Oracle.S7703.Stipulation.admitted_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.one_fresh_at_any_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.duplicate_clauses_kept_and_freshened' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.within_clause_shared_output_variable' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.distinct_output_variables_not_aliased' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.repeated_clauses_do_not_share_stored_variable_names' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.repeated_calls_thread_the_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.year_binding_propagates_to_both_outputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.taxpayer_binding_propagates_to_free_spouse' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_wildcard_rejects_inconsistent_bound_inputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_wildcard_accepts_consistent_bound_inputs' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.shared_variable_constraint_is_tag_sensitive' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.literal_constraint_is_tag_sensitive' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.textual_year_does_not_match_integer' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.failed_head_does_not_bind_the_next_clause' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.other_signatures_do_not_reorder_matching_clauses' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_spouse_binding_preserves_alias' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_spouse_binding_preserves_independent_marriage' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.later_tag_mismatch_fails' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipTests.unbound_is_null_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.copied_variables_deduplicate_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.statute_precedes_duplicate_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.bbfb_doubles_statute_but_not_stipulated_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.stipulated_clause_bypasses_statute_identity_guard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.no_marriage_facts_required_for_stipulated_clause' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipTests.bbfb_bound_spouse_binds_shared_marriage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ok    partial §7703 S7703Stip assertions compiled; open reference obligations remain
+'KMLA.Oracle.S7703.Stipulation.solutions' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.Stipulation.bindSpouse' depends on axioms: [propext]
+'KMLA.Oracle.S7703.Stipulation.admitted_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bffb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.s7703_bbfb_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMLA.Oracle.S7703.stipArgObs' does not depend on any axioms
+'KMLA.Oracle.S7703.rootBffbSolutions' does not depend on any axioms
+'KMLA.Oracle.S7703.rootBbfbSolutions' does not depend on any axioms
+'KMLA.Oracle.S7703.StipListTests.nested_aliases_share_one_renaming_table' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.distinct_ids_allocate_in_depth_first_head_order' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.nested_first_occurrence_aliases_later_scalar_position' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.taxpayer_and_late_year_bind_every_nested_alias' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.bound_spouse_resolves_nested_marriage_aliases' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.later_spouse_binding_reaches_nested_aliases' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipListTests.nested_binding_preserves_scalar_string_tag' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipListTests.inconsistent_bound_alias_with_nested_occurrences_fails' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.list_taxpayer_cannot_match_scalar_input' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.list_spouse_cannot_match_scalar_input' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.list_year_cannot_match_scalar_input' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.empty_list_taxpayer_is_not_scalar_empty_list_atom' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.empty_list_spouse_is_not_scalar_empty_list_atom' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.later_list_spouse_constraint_fails' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipListTests.scalar_empty_list_atom_still_matches_itself' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.empty_output_lists_remain_two_output_positions' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.list_tags_large_integers_order_and_duplicates_survive' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.duplicate_nested_clauses_keep_distinct_fresh_copies' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.repeated_nested_calls_thread_the_supply' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.binding_one_copy_preserves_another_copy' depends on axioms: [propext]
+'KMLA.Oracle.S7703.StipListTests.failed_list_head_consumes_ids_but_not_bindings' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.unrelated_signature_keeps_nested_clause_order_and_supply' depends on axioms: [propext,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.arbitrary_supply_keeps_nested_aliases' depends on axioms: [propext, Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.nested_observer_preserves_tags_and_exact_integers' does not depend on any axioms
+'KMLA.Oracle.S7703.StipListTests.nested_observer_preserves_structure_and_duplicate_elements' does not depend on any axioms
+'KMLA.Oracle.S7703.StipListTests.empty_list_atom_string_and_unbound_observe_differently' does not depend on any axioms
+'KMLA.Oracle.S7703.StipListTests.empty_and_nested_empty_lists_encode_as_arrays' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.nested_duplicate_solutions_deduplicate_only_at_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.list_element_duplicates_survive_canonical_observation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.statute_precedes_nested_stipulations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.bbfb_keeps_doubled_statute_and_bound_nested_outputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.free_spouse_can_be_a_nested_list' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.bbfb_rejects_list_spouse_without_discarding_other_clauses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.stipulated_nested_output_bypasses_statute_identity_guard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KMLA.Oracle.S7703.StipListTests.bbfb_observation_retains_resolved_nested_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ok    partial §7703 S7703StipLists assertions compiled; open reference obligations remain

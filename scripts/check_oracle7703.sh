@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Compile the partial §7703 implementation and both required assertion files.
+# Compile the partial §7703 implementation and every required assertion file.
 # A proof failure is a nonzero result, never a skip/xfail. This is not parity,
 # a complete reference implementation, an axiom hygiene gate or CP1 acceptance.
 # Usage: bash scripts/check_oracle7703.sh [repo-root]
@@ -17,7 +17,7 @@ export LEAN_PATH="$KMLA_CHECK_DIR"
 for KMLA_MODULE in Interface/Household Interface/QuerySchema Interface/QueryTime Oracle/S7703Stip Oracle/S7703; do
   lean "+$KMLA_TOOLCHAIN" -o "$KMLA_CHECK_DIR/$KMLA_MODULE.olean" "$KMLA_MODULE.lean"
 done
-for KMLA_TEST in S7703 S7703Stip; do
+for KMLA_TEST in S7703 S7703Stip S7703StipLists; do
   if lean "+$KMLA_TOOLCHAIN" -o "$KMLA_CHECK_DIR/Oracle/Tests/$KMLA_TEST.olean" "Oracle/Tests/$KMLA_TEST.lean"; then
     echo "ok    partial §7703 $KMLA_TEST assertions compiled; open reference obligations remain"
   else

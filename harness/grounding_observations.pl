@@ -1,4 +1,4 @@
-% Bounded H6 observations for the ten country-bearing section 3306 originals.
+% Bounded H6 observations for country and list-stipulation paragraph slices.
 % No expected-answer constraint, outer NAF, inferred output role or tax findall.
 :- consult('/harness/grounding.pl').
 
@@ -28,11 +28,15 @@ approved_mode(s3306_c_B,[f,b,b,f]).
 approved_mode(s3306_c_1,[b,b]).
 approved_mode(s3306_c_1_A_i,[b,f,b,f,b]).
 approved_mode(s3306_c_1_B,[b,f]).
+approved_mode(s2_a_1_B,[b,f,f,b]).
+% H6.5 bbb and the source Question asks applicability. The deduction list
+% remains bound; no output amount is requested or released.
+approved_mode(s63_d_2,[b,b,b]).
 
 checked_observation(Goal,Outputs) :-
     ( nonvar(Goal), Goal =.. [P|Args], argument_mode(Args,Mode,Free),
       approved_mode(P,Mode), Outputs == Free -> true
-    ; throw(error(unapproved_country_observation,checked_observation/2)) ).
+    ; throw(error(unapproved_paragraph_observation,checked_observation/2)) ).
 argument_mode([],[],[]).
 argument_mode([H|T],[M|MT],Free) :-
     ( var(H) -> M=f, Free=[H|FT]
@@ -46,7 +50,7 @@ observation_rows([H|T],[J|JT]) :-
 observation_values([],[]).
 observation_values([H|T],[J|JT]) :-
     observation_value(H,J), observation_values(T,JT).
-% All free positions in these six modes are Term / Int / lists thereof, not
+% All free positions in these modes are Term / Int / lists thereof, not
 % Day. An unexpected compound/improper list is an error, never a string cast.
 observation_value(V,J) :-
     ( var(V) -> J = @(null)

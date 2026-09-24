@@ -1,0 +1,68 @@
+{
+  "original_population_exact_and_unchanged": 376,
+  "h4_3_a_counts": {
+    "pass": 148,
+    "fail": 1,
+    "blocked:halt-after-finding": 227
+  },
+  "h4_3_b_counts": {
+    "unimplemented:approved-H6-projection-not-implemented": 145,
+    "pass": 3,
+    "blocked:ordered-list-comparison-failure": 1,
+    "blocked:halt-after-finding": 227
+  },
+  "direct_country_counts": {
+    "not-applicable:no-supplied-country": 149,
+    "blocked:halt-after-finding": 227
+  },
+  "diagnostic_household_instances": 149,
+  "diagnostic_distinct_ordered_households": 93,
+  "record_count": "not-yet-produced",
+  "distinct_household_count": "not-yet-produced",
+  "list_totals": {
+    "original_facts": 4564,
+    "original_stipulations": 208,
+    "reground_facts": 4654,
+    "reground_stipulations": 208
+  },
+  "source_and_lane_code_hashes_unchanged": true,
+  "pinned_prolog_readonly_mount_checks": {
+    "lists-final": 16,
+    "syntax-final": 13,
+    "country-final": 57,
+    "full-audit": 302
+  },
+  "runtime_identity_sha256": "744cbb885225c77569618a35c4c856f5c4a6c6e4fb6ecb37f7476eb46bbf5c92",
+  "finding": {
+    "case": "s2_b_3_B_pos.pl",
+    "kind": "H4.3(a) ordered comparison failure",
+    "details": {
+      "field": "facts",
+      "index": 20,
+      "original_grounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "regrounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "original_length": 114,
+      "regrounded_length": 204
+    }
+  }
+}

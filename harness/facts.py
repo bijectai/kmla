@@ -2,7 +2,7 @@
 
 Authority: human/DECISIONS.md H1–H4/G4/D1/M1/A3 and
 Interface/HOUSEHOLD_WIRE.md. No oracle implementation is imported.
-Stipulation arity is deliberately separate from transport (Stip stores List Pat).
+Stipulation arity is separate from transport (Stip stores List StipArg).
 """
 
 from __future__ import annotations
@@ -176,6 +176,24 @@ class Pat:
             raise TransportError("expected Pat.val Term or Pat.wild Nat")
 
 
+@dataclass(frozen=True)
+class StipArg:
+    tag: str
+    value: Term | int | tuple[StipArg, ...]
+
+    def __post_init__(self):
+        if self.tag == "wild":
+            if _integer(self.value) < 0:
+                raise TransportError("wildcard identity must be Nat")
+        elif self.tag == "val" and isinstance(self.value, Term):
+            pass
+        elif self.tag == "list" and type(self.value) is tuple and all(
+                isinstance(item, StipArg) for item in self.value):
+            pass
+        else:
+            raise TransportError("expected StipArg.val Term, wild Nat or list of StipArg")
+
+
 def day_from_iso(text):
     """Civil arithmetic only; no V3 admission, timestamp shift or normalization."""
     text = _string(text)
@@ -226,13 +244,13 @@ class Fact:
 @dataclass(frozen=True)
 class Stip:
     pred: str
-    args: tuple[Pat, ...]
+    args: tuple[StipArg, ...]
 
     def __post_init__(self):
         if self.pred not in STIP_SIGNATURES:
             raise TransportError(f"unknown StipPred: {self.pred!r}")
-        if type(self.args) is not tuple or any(not isinstance(p, Pat) for p in self.args):
-            raise TransportError("Stip args must be an ordered tuple of Pat")
+        if type(self.args) is not tuple or any(not isinstance(p, StipArg) for p in self.args):
+            raise TransportError("Stip args must be an ordered tuple of StipArg")
 
     @property
     def well_formed(self):
@@ -269,6 +287,17 @@ def _pat(value):
     raise TransportError(f"invalid Pat: {value!r}")
 
 
+def _stip_arg(value):
+    if type(value) is dict and len(value) == 1:
+        if "val" in value:
+            return StipArg("val", _term(value["val"]))
+        if "wild" in value:
+            return StipArg("wild", value["wild"])
+        if "list" in value:
+            return StipArg("list", tuple(map(_stip_arg, _array(value["list"]))))
+    raise TransportError(f"invalid StipArg: {value!r}")
+
+
 def from_value(value):
     _object(value, ("facts", "stipulations"))
     facts, stips = [], []
@@ -283,7 +312,7 @@ def from_value(value):
         facts.append(Fact(ctor, tuple(converters[k](v) for k, v in zip(kinds, args))))
     for stip in _array(value["stipulations"]):
         _object(stip, ("pred", "args"))
-        stips.append(Stip(_string(stip["pred"]), tuple(map(_pat, _array(stip["args"])))))
+        stips.append(Stip(_string(stip["pred"]), tuple(map(_stip_arg, _array(stip["args"])))))
     return Household(tuple(facts), tuple(stips))
 
 
@@ -293,6 +322,12 @@ def _term_value(term):
 
 def _pat_value(pat):
     return {pat.tag: _term_value(pat.value) if pat.tag == "val" else pat.value}
+
+
+def _stip_arg_value(arg):
+    if arg.tag == "list":
+        return {"list": list(map(_stip_arg_value, arg.value))}
+    return _pat_value(arg)
 
 
 def to_value(household):
@@ -306,7 +341,7 @@ def to_value(household):
     return {
         "facts": [{"ctor": f.ctor, "args": [arg_value(k, a) for k, a in zip(FACT_TYPES[f.ctor], f.args)]}
                   for f in household.facts],
-        "stipulations": [{"pred": s.pred, "args": list(map(_pat_value, s.args))}
+        "stipulations": [{"pred": s.pred, "args": list(map(_stip_arg_value, s.args))}
                          for s in household.stipulations],
     }
 
@@ -374,6 +409,12 @@ def _prolog_pat(pat):
     return "_KMLA_W" + _decimal(pat.value) if pat.tag == "wild" else _prolog_term(pat.value)
 
 
+def _prolog_stip_arg(arg):
+    if arg.tag == "list":
+        return "[" + ",".join(map(_prolog_stip_arg, arg.value)) + "]"
+    return _prolog_pat(arg)
+
+
 def emit_prolog(household):
     """Ordered bodyless clauses, to append AFTER statutes in a pinned consumer.
 
@@ -398,7 +439,7 @@ def emit_prolog(household):
         if not stip.well_formed:
             raise TransportError(f"cannot emit {stip.pred} with {len(stip.args)} arguments")
         pred, _ = STIP_SIGNATURES[stip.pred]
-        lines.append(f"{pred}({','.join(map(_prolog_pat, stip.args))}).")
+        lines.append(f"{pred}({','.join(map(_prolog_stip_arg, stip.args))}).")
     return "\n".join(lines) + ("\n" if lines else "")
 
 
@@ -418,6 +459,14 @@ def _lean_pat(pat):
     return f"(KMLA.Pat.{pat.tag} {v})"
 
 
+def _lean_stip_arg(arg):
+    if arg.tag == "list":
+        v = "[" + ", ".join(map(_lean_stip_arg, arg.value)) + "]"
+    else:
+        v = _decimal(arg.value) if arg.tag == "wild" else _lean_term(arg.value)
+    return f"(KMLA.StipArg.{arg.tag} {v})"
+
+
 def emit_lean(household):
     """A closed KMLA.Household expression; no admission instance or oracle."""
     facts = []
@@ -428,5 +477,5 @@ def emit_lean(household):
                         _lean_pat(arg) if kind == "Pat" else "(" + _decimal(arg) + ")")
         facts.append(f"(KMLA.Fact.{f.ctor} {' '.join(args)})")
     stips = [f"({{ pred := KMLA.StipPred.{s.pred}, args := [" +
-             ", ".join(map(_lean_pat, s.args)) + "] } : KMLA.Stip)" for s in household.stipulations]
+             ", ".join(map(_lean_stip_arg, s.args)) + "] } : KMLA.Stip)" for s in household.stipulations]
     return "({ facts := [" + ", ".join(facts) + "], stipulations := [" + ", ".join(stips) + "] } : KMLA.Household)"

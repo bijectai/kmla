@@ -36,6 +36,9 @@ run :-
     statistics(cputime, T1), get_time(W1),
     % One numbering traversal preserves shared variables within a solution;
     % findall has already freshened separate solutions per A1/A3.
+    % Validate before numbering so a supplied '$VAR'/1 compound cannot be
+    % mistaken for a variable marker. Unsupported inputs remain findings.
+    validate_stips(StipHeads),
     numbervars(FactHeads-StipHeads, 0, WildCount),
     encode_facts(FactHeads, Facts), encode_stips(StipHeads, Stips),
     encode_unary(Unary, UnaryJSON),
@@ -172,7 +175,23 @@ encode_stips([H|T], [json([pred=C,args=Args])|R]) :-
     H =.. [P|Values], length(Values,A), stip_kind(P,A,C),
     pattern_args(Values,Args), encode_stips(T,R).
 pattern_args([], []).
-pattern_args([V|T], [J|R]) :- pat_json(V,J), pattern_args(T,R).
+pattern_args([V|T], [J|R]) :- stip_arg_json(V,J), pattern_args(T,R).
+stip_arg_json('$VAR'(N), json([wild=N])) :- !.
+stip_arg_json(V, json([list=Items])) :- is_list(V), !, pattern_args(V,Items).
+stip_arg_json(V, json([val=J])) :- term_json(V,J).
+
+validate_stips([]).
+validate_stips([H|T]) :- H =.. [_|Args], validate_stip_args(Args), validate_stips(T).
+validate_stip_args([]).
+validate_stip_args([H|T]) :- validate_stip_arg(H), validate_stip_args(T).
+validate_stip_arg(V) :-
+    ( var(V) -> true
+    ; is_list(V) -> validate_stip_args(V)
+    ; integer(V) -> true
+    ; atom(V) -> true
+    ; string(V) -> true
+    ; throw(error(unsupported_household_term(V),validate_stip_arg/1)) ).
+
 pat_json('$VAR'(N), json([wild=N])) :- !.
 pat_json(V, json([val=J])) :- term_json(V,J).
 term_json(V,J) :-

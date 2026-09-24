@@ -1,8 +1,8 @@
 import Interface.QueryTime
 
 /-!
-§7703-only H4.1 head unification and invocation freshening. Shared Pat is the
-only variable/value representation. Nat is an explicit next-unused-id supply,
+§7703-only H4.1 head unification and invocation freshening. Shared StipArg
+preserves scalar values, variables and recursive proper lists. Nat is an explicit next-unused-id supply,
 not a new payload field, reference result, finite Term universe, or fuel.
 Callers compose invocations by passing the returned supply; never reset it
 while retaining live outputs. Stored Household ids are clause-local names:
@@ -12,28 +12,47 @@ No general cross-section relational engine or recursive provider is supplied.
 
 namespace KMLA.Oracle.S7703.Stipulation
 
-private def freshPat (next : Nat) (names : List (Nat × Nat)) (p : Pat) :
-    Nat × List (Nat × Nat) × Pat :=
-  match p with
-  | .val t => (next, names, .val t)
-  | .wild id =>
-    match names.find? (fun pair => pair.1 == id) with
-    | some (_, renamed) => (next, names, .wild renamed)
-    | none => (next + 1, (id, next) :: names, .wild next)
+-- H4/A1/A3: the same table traverses every nested list and every head position.
+-- The recursion is structural on the finite proper-list representation, not R5.
+mutual
+  private def freshArg (next : Nat) (names : List (Nat × Nat)) (p : StipArg) :
+      Nat × List (Nat × Nat) × StipArg :=
+    match p with
+    | .val t => (next, names, .val t)
+    | .wild id =>
+      match names.find? (fun pair => pair.1 == id) with
+      | some (_, renamed) => (next, names, .wild renamed)
+      | none => (next + 1, (id, next) :: names, .wild next)
+    | .list items =>
+      let (next', names', items') := freshArgs next names items
+      (next', names', .list items')
+  termination_by structural p
+
+  private def freshArgs (next : Nat) (names : List (Nat × Nat))
+      (items : List StipArg) : Nat × List (Nat × Nat) × List StipArg :=
+    match items with
+    | [] => (next, names, [])
+    | p :: ps =>
+      let (next', names', p') := freshArg next names p
+      let (next'', names'', ps') := freshArgs next' names' ps
+      (next'', names'', p' :: ps')
+  termination_by structural items
+end
 
 /-- Freshen all four positions before trying head constraints, left to right.
 Repeated source ids share a renamed id; each clause invocation starts names=[]. -/
-private def freshHead (next : Nat) (a b c d : Pat) :
-    Nat × Pat × Pat × Pat × Pat :=
-  let (n1, names1, a') := freshPat next [] a
-  let (n2, names2, b') := freshPat n1 names1 b
-  let (n3, names3, c') := freshPat n2 names2 c
-  let (n4, _, d') := freshPat n3 names3 d
+private def freshHead (next : Nat) (a b c d : StipArg) :
+    Nat × StipArg × StipArg × StipArg × StipArg :=
+  let (n1, names1, a') := freshArg next [] a
+  let (n2, names2, b') := freshArg n1 names1 b
+  let (n3, names3, c') := freshArg n2 names2 c
+  let (n4, _, d') := freshArg n3 names3 d
   (n4, a', b', c', d')
 
-/-- The two selected modes unify head variables only against ground inputs.
-There are no compound terms/occurs-check cases in the shared Term domain. -/
-private def bindGround (bindings : List (Nat × Term)) (p : Pat) (t : Term) :
+/-- The two selected modes unify head variables only against ground scalars.
+A proper list cannot match a scalar, including the scalar atom "[]".
+These modes introduce no variable-to-list binding or occurs-check case. -/
+private def bindGround (bindings : List (Nat × Term)) (p : StipArg) (t : Term) :
     Option (List (Nat × Term)) :=
   match p with
   | .val v => if v == t then some bindings else none
@@ -41,20 +60,32 @@ private def bindGround (bindings : List (Nat × Term)) (p : Pat) (t : Term) :
     match bindings.find? (fun pair => pair.1 == id) with
     | some (_, v) => if v == t then some bindings else none
     | none => some ((id, t) :: bindings)
+  | .list _ => none
 
-private def resolve (bindings : List (Nat × Term)) (p : Pat) : Pat :=
-  match p with
-  | .val t => .val t
-  | .wild id =>
-    match bindings.find? (fun pair => pair.1 == id) with
-    | some (_, t) => .val t
-    | none => .wild id
+mutual
+  private def resolve (bindings : List (Nat × Term)) (p : StipArg) : StipArg :=
+    match p with
+    | .val t => .val t
+    | .wild id =>
+      match bindings.find? (fun pair => pair.1 == id) with
+      | some (_, t) => .val t
+      | none => .wild id
+    | .list items => .list (resolveArgs bindings items)
+  termination_by structural p
+
+  private def resolveArgs (bindings : List (Nat × Term))
+      (items : List StipArg) : List StipArg :=
+    match items with
+    | [] => []
+    | p :: ps => resolve bindings p :: resolveArgs bindings ps
+  termination_by structural items
+end
 
 /-- Head unification for bffb/bbfb. Free output positions do not constrain the
 head, but bindings from ANY input position propagate to every shared variable.
 In particular the last (Year) position may bind an earlier output. -/
 private def matchHead (taxpayer : Term) (spouse : Option Term) (year : Year)
-    (a b c d : Pat) : Option (Pat × Pat) := do
+    (a b c d : StipArg) : Option (StipArg × StipArg) := do
   let bindings ← bindGround [] a taxpayer
   let bindings ← match spouse with
     | none => some bindings
@@ -68,7 +99,7 @@ prevents a malformed s7703 head from being silently dropped as logical failure.
 No clause-local binding is carried into the next clause. -/
 private def clause (taxpayer : Term) (spouse : Option Term) (year : Year)
     (next : Nat) (s : Stip) (shaped : s.wellFormed = true) :
-    Nat × List (Pat × Pat) :=
+    Nat × List (StipArg × StipArg) :=
   match hp : s.pred with
   | .s7703_4 =>
     have arity : s.args.length = 4 := by
@@ -88,7 +119,7 @@ The first component is the next supply; the second is the ordered solution list.
 Freshening here is evaluation, not a mutation of transported Household ids. -/
 def solutions (taxpayer : Term) (spouse : Option Term) (year : Year)
     (next : Nat) (clauses : List Stip)
-    (shaped : clauses.all Stip.wellFormed = true) : Nat × List (Pat × Pat) :=
+    (shaped : clauses.all Stip.wellFormed = true) : Nat × List (StipArg × StipArg) :=
   match clauses with
   | [] => (next, [])
   | s :: ss =>
@@ -102,7 +133,8 @@ def solutions (taxpayer : Term) (spouse : Option Term) (year : Year)
 This is not a new query mode: it demonstrates/usefully preserves a shared
 output variable through a later conjunct rather than observing it prematurely.
 An inconsistent constraint is ordinary unification failure. -/
-def bindSpouse (row : Pat × Pat) (spouse : Term) : Option (Pat × Pat) := do
+def bindSpouse (row : StipArg × StipArg) (spouse : Term) :
+    Option (StipArg × StipArg) := do
   let bindings ← bindGround [] row.1 spouse
   pure (resolve bindings row.1, resolve bindings row.2)
 

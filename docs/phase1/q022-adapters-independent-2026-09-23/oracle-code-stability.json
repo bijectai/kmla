@@ -1,0 +1,44 @@
+{
+  "before": {
+    "Oracle/S7703.lean": "46bb7dd388f81bc57bef86c493d46da711632574e75d8669c282125f7939946b",
+    "Oracle/S7703Stip.lean": "74cec18be2e7445db2457af3a54e1ca4574c622652d970548d9a8e85de21d3c8",
+    "Oracle/Tests/S7703.lean": "096ac907f363dd7d780787662a75544f271c4dd698b3598f582cd59283e3fa67",
+    "Oracle/Tests/S7703Stip.lean": "981318270ce46cefa1b6d21a8fa201c9164ec5339682bf4a2a01544375ec9189",
+    "Oracle/Tests/S7703StipLists.lean": "2651adfcd8709cf730f621df2ee09615617ad63f3c1fb42f440aa105c61c3e68",
+    "scripts/check_oracle7703.sh": "5122fd675a2c3d8fdbc4d1813c45778ff7d5d02ce3fd91bd8a6819668fd09536",
+    "Interface/Household.lean": "0b24983ff06fe250ff4441689fe8a445104b9d4105579e7b67cc86a88fd433ab"
+  },
+  "after": {
+    "Oracle/S7703.lean": "46bb7dd388f81bc57bef86c493d46da711632574e75d8669c282125f7939946b",
+    "Oracle/S7703Stip.lean": "74cec18be2e7445db2457af3a54e1ca4574c622652d970548d9a8e85de21d3c8",
+    "Oracle/Tests/S7703.lean": "096ac907f363dd7d780787662a75544f271c4dd698b3598f582cd59283e3fa67",
+    "Oracle/Tests/S7703Stip.lean": "981318270ce46cefa1b6d21a8fa201c9164ec5339682bf4a2a01544375ec9189",
+    "Oracle/Tests/S7703StipLists.lean": "2651adfcd8709cf730f621df2ee09615617ad63f3c1fb42f440aa105c61c3e68",
+    "scripts/check_oracle7703.sh": "5122fd675a2c3d8fdbc4d1813c45778ff7d5d02ce3fd91bd8a6819668fd09536",
+    "Interface/Household.lean": "0b24983ff06fe250ff4441689fe8a445104b9d4105579e7b67cc86a88fd433ab"
+  },
+  "stable": true,
+  "command": {
+    "argv": [
+      "bash",
+      "scripts/check_oracle7703.sh"
+    ],
+    "timeout_seconds": 180,
+    "exit": 0,
+    "timed_out": false,
+    "stdout": "001.stdout",
+    "stderr": "001.stderr",
+    "elapsed_seconds": 14.856646
+  },
+  "prior_assertions": {
+    "Oracle/Tests/S7703.lean": {
+      "count": 62,
+      "statements_unchanged": true
+    },
+    "Oracle/Tests/S7703Stip.lean": {
+      "count": 25,
+      "statements_unchanged": true
+    }
+  },
+  "new_theorems": 35
+}

@@ -1,0 +1,44 @@
+{
+  "all_376_names_exact": true,
+  "all_source_hashes_match": true,
+  "all_recorded_code_hashes_match": true,
+  "retained_ordered_comparisons": {
+    "equal": 148,
+    "unequal": 1
+  },
+  "diagnostic_households": 149,
+  "distinct_exact_households": 93,
+  "production_records": "not-yet-produced",
+  "finding": {
+    "case": "s2_b_3_B_pos.pl",
+    "kind": "H4.3(a) ordered comparison failure",
+    "details": {
+      "field": "facts",
+      "index": 20,
+      "original_grounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2016"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "regrounding": {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_maintains_household_2015"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      "original_length": 114,
+      "regrounded_length": 204
+    }
+  }
+}

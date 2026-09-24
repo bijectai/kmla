@@ -1,0 +1,13 @@
+PASS empty: 0 ordered tagged clauses
+PASS tags_order_integers: 7 ordered tagged clauses
+PASS controls_unicode: 3 ordered tagged clauses
+PASS dates_and_tagged_patterns: 7 ordered tagged clauses
+PASS wildcard_identity: 5 ordered tagged clauses
+PASS opaque_helpers_extra_arities: 10 ordered tagged clauses
+PASS supplied_s151_lists: 5 ordered tagged clauses
+PASS recursive_lists_shared_ids: 1 ordered tagged clauses
+PASS all_registered_constructors: 88 ordered tagged clauses
+PASS parser_failure: reported failure with raw diagnostics
+PASS reject_directive: reported failure with raw diagnostics
+PASS reject_rule: reported failure with raw diagnostics
+PASS reject_compound_value: reported failure with raw diagnostics

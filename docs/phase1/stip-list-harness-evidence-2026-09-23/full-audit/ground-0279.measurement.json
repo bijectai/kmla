@@ -1,0 +1,127 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "marriage_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob"
+          },
+          "1992-02-03"
+        ]
+      },
+      {
+        "ctor": "legal_separation_",
+        "args": [
+          {
+            "a": "alice_and_bob_divorce"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_and_bob_divorce"
+          },
+          {
+            "s": "decree of separate maintenance"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_and_bob_divorce"
+          },
+          {
+            "a": "alice_and_bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_and_bob_divorce"
+          },
+          "2014-07-09"
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "marriage_",
+      "event": {
+        "a": "alice_and_bob"
+      }
+    },
+    {
+      "source_clause": 5,
+      "predicate": "legal_separation_",
+      "event": {
+        "a": "alice_and_bob_divorce"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "stats": {
+    "unary_proofs": 2,
+    "service_proofs": 0,
+    "distinct_service_domain": 0,
+    "fact_count": 8,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002529169999999914,
+    "grounding_wall_seconds": 0.0002524852752685547,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

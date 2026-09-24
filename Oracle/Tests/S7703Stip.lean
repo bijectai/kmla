@@ -101,14 +101,14 @@ theorem later_tag_mismatch_fails :
 
 theorem unbound_is_null_only_at_observation :
     observe (rootBffbSolutions [(.wild 100, .wild 100)]) = ["[null,null]"] := by
-  simp only [rootBffbSolutions, patObs, observe, List.map_cons, List.map_nil,
+  simp only [rootBffbSolutions, stipArgObs, observe, List.map_cons, List.map_nil,
     Solution.encode, Obs.encode, List.mergeSort]
   decide
 
 theorem copied_variables_deduplicate_only_at_observation :
     observe (rootBffbSolutions [(.wild 100, .wild 100), (.wild 101, .wild 101)]) =
       ["[null,null]"] := by
-  simp only [rootBffbSolutions, patObs, observe, List.map_cons, List.map_nil,
+  simp only [rootBffbSolutions, stipArgObs, observe, List.map_cons, List.map_nil,
     Solution.encode, Obs.encode]
   rw [List.mergeSort_of_pairwise (by simp)]
   decide

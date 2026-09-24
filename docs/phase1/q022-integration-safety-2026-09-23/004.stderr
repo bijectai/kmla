@@ -1,0 +1,34 @@
+test_baseline_requires_every_outcome_and_names_both_vacuous_cases (__main__.CorpusTests.test_baseline_requires_every_outcome_and_names_both_vacuous_cases) ... ok
+test_complete_raw_streams_and_vacuous_annotation (__main__.CorpusTests.test_complete_raw_streams_and_vacuous_annotation) ... ok
+test_empty_stderr_does_not_mask_process_failure_or_timeout (__main__.CorpusTests.test_empty_stderr_does_not_mask_process_failure_or_timeout) ... ok
+test_interrupted_and_malformed_rows_are_retained (__main__.CorpusTests.test_interrupted_and_malformed_rows_are_retained) ... ok
+test_invalid_budgets_rejected (__main__.CorpusTests.test_invalid_budgets_rejected) ... ok
+test_status_without_streams_is_not_clean (__main__.CorpusTests.test_status_without_streams_is_not_clean) ... ok
+test_zero_exit_does_not_mask_failed_directives_or_loading (__main__.CorpusTests.test_zero_exit_does_not_mask_failed_directives_or_loading) ... ok
+test_duplicate_targets_and_non_boolean_modes_are_rejected (__main__.MountBoundaryTests.test_duplicate_targets_and_non_boolean_modes_are_rejected) ... ok
+test_full_human_mount_is_mandatory_even_for_corpus_only_runner (__main__.MountBoundaryTests.test_full_human_mount_is_mandatory_even_for_corpus_only_runner) ... ok
+test_hardlink_aliases_cannot_hide_protected_files (__main__.MountBoundaryTests.test_hardlink_aliases_cannot_hide_protected_files) ... ok
+test_host_directory_identity_accounts_for_case_aliases (__main__.MountBoundaryTests.test_host_directory_identity_accounts_for_case_aliases) ... ok
+test_mount_option_injection_and_noncanonical_targets_are_rejected (__main__.MountBoundaryTests.test_mount_option_injection_and_noncanonical_targets_are_rejected) ... ok
+test_readonly_protected_mounts_and_disjoint_writable_output (__main__.MountBoundaryTests.test_readonly_protected_mounts_and_disjoint_writable_output) ... ok
+test_readonly_source_aliases_and_destination_shadows_are_rejected (__main__.MountBoundaryTests.test_readonly_source_aliases_and_destination_shadows_are_rejected) ... ok
+test_symlink_aliases_cannot_hide_protected_sources (__main__.MountBoundaryTests.test_symlink_aliases_cannot_hide_protected_sources) ... ok
+test_writable_parent_destination_cannot_cover_readonly_child (__main__.MountBoundaryTests.test_writable_parent_destination_cannot_cover_readonly_child) ... ok
+test_writable_protected_destinations_are_rejected (__main__.MountBoundaryTests.test_writable_protected_destinations_are_rejected) ... ok
+test_writable_protected_root_child_file_and_ancestor_are_rejected (__main__.MountBoundaryTests.test_writable_protected_root_child_file_and_ancestor_are_rejected) ... ok
+test_command_failure_and_timeout_retain_raw_diagnostics (__main__.RuntimeTests.test_command_failure_and_timeout_retain_raw_diagnostics) ... ok
+test_container_timeout_cleans_up_and_mounts_source_readonly (__main__.RuntimeTests.test_container_timeout_cleans_up_and_mounts_source_readonly) ... ok
+test_entire_record_identity_only_excludes_local_image_id (__main__.RuntimeTests.test_entire_record_identity_only_excludes_local_image_id) ... ok
+test_exact_package_and_complete_closure_parser (__main__.RuntimeTests.test_exact_package_and_complete_closure_parser) ... ok
+test_exact_runtime_measurements (__main__.RuntimeTests.test_exact_runtime_measurements) ... ok
+test_native_evidence_uses_daemon_and_prolog_process (__main__.RuntimeTests.test_native_evidence_uses_daemon_and_prolog_process) ... ok
+test_probe_never_drops_malformed_or_duplicate_rows (__main__.RuntimeTests.test_probe_never_drops_malformed_or_duplicate_rows) ... ok
+test_protected_output_rejected_without_creating_it (__main__.RuntimeTests.test_protected_output_rejected_without_creating_it) ... ok
+test_record_creation_never_overwrites (__main__.RuntimeTests.test_record_creation_never_overwrites) ... ok
+test_rosetta_evidence_is_a_measured_binary (__main__.RuntimeTests.test_rosetta_evidence_is_a_measured_binary) ... ok
+test_unknown_translator_is_a_provenance_failure (__main__.RuntimeTests.test_unknown_translator_is_a_provenance_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.269s
+
+OK

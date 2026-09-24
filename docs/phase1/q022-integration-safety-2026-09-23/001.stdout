@@ -1,0 +1,42 @@
+Checkpoint 0 acceptance checks against /Users/devrashie/Documents/csProjects/kmla
+
+-- scanner self-tests --
+ok    statute hazard scanner self-test
+ok    case inventory scanner self-test
+ok    hash manifest tool self-test
+ok    consult wrapper offline tests
+
+-- staged inventories regenerate byte for byte --
+ok    HAZARDS.json matches a fresh scan
+ok    CASES.json matches a fresh scan
+
+-- source integrity --
+ok    source archive digest matches docs/contracts/HASHES.txt
+ok    human/HASHES.txt is the installed manifest (docs/contracts/HASHES.txt is the superseded staging draft)
+ok    installed human/HASHES.txt verifies
+
+-- parity meter --
+ok    owner's meter satisfies the PARITY.md contract
+
+-- Checkpoint 0 owner decisions --
+ok    human/DECISIONS.md contains no TODO markers
+
+-- runtime pin --
+ok    the Docker daemon is running
+ok    runtime identity recorded (7.2.3 / amd64 / TZ=America/New_York)
+ok    the pinned interpreter image is built locally
+ok    corpus baseline recorded for utc (374/376 cases clean)
+ok    corpus baseline recorded for america_new_york (376/376 cases clean)
+ok    no decision-log entry is still PENDING
+
+-- Checkpoint 2: human-authored gate exploits --
+later human/gate/exploits contains no exploit files
+        Checkpoint 2 input outstanding; not a Checkpoint 0 blocker
+
+-- Checkpoint 3a: human-signed invariant statements --
+later human/invariants/statements contains no claim files
+        Checkpoint 3a input outstanding; not a Checkpoint 0 blocker
+
+Checkpoint 0: 17 passed, 0 failed, 0 outstanding
+Later checkpoints: 0 artifact group(s) present, 2 outstanding (reported above)
+Checkpoint 0 also requires Dev's explicit sign-off; this script cannot grant it.

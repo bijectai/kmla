@@ -1,0 +1,9 @@
+income_(alice_makes_money).
+agent_(alice_makes_money,alice).
+amount_(alice_makes_money,312).
+start_(alice_makes_money,"2015-01-01").
+end_(alice_makes_money,"2015-12-31").
+father_(alice_and_bob).
+agent_(alice_and_bob,bob).
+patient_(alice_and_bob,alice).
+s151_d(alice,_,2000,2015).
