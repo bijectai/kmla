@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Retain a concrete H3 country omission and its full H6.5 observation mismatch.
+"""Retained H3 country-omission regression against the current grounder.
 
-This is a failing diagnostic of the UNCHANGED grounder, not a semantic remedy.
+Compare direct country retention, ordered re-grounding and the full H6.5
+observation. Prior failing runs remain evidence; this run measures current code.
 """
 import argparse
 import json
@@ -48,7 +49,7 @@ def main():
         "observation_authority":"H6.5 s3306_c_A/3 bff; inputs [alice_employer], outputs [Employer,Employee]",
         "original_observation":before,"regrounded_observation":after,
         "h4_3_b":"pass" if before["canonical"] == after["canonical"] else "fail",
-        "scope":"unchanged-grounder finding; no preservation fix or alternative traversal",
+        "scope":"retained country-omission regression against the current grounder; no corpus-wide preservation, Valid or parity claim",
         "helper_sha256":runtime.sha256(ROOT / "harness/grounding_findings.pl"),
         "script_sha256":runtime.sha256(Path(__file__)),
     }

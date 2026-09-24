@@ -1,0 +1,283 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "p"
+          },
+          {
+            "s": "c"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "e"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "a"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "a"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "a"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "a"
+          }
+        ]
+      },
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "a": "p"
+          },
+          {
+            "s": "c"
+          }
+        ]
+      },
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "e"
+          }
+        ]
+      },
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "p"
+          },
+          {
+            "s": "c"
+          }
+        ]
+      },
+      {
+        "ctor": "patient",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "a": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "s": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "s": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "s": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "e"
+          },
+          {
+            "s": "x"
+          }
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "wild": 0
+          },
+          {
+            "s": "agricultural labor"
+          }
+        ]
+      },
+      {
+        "ctor": "medical_institution_",
+        "args": [
+          {
+            "a": "clinic"
+          }
+        ]
+      },
+      {
+        "ctor": "retirement_",
+        "args": [
+          {
+            "a": "r"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 2,
+      "predicate": "service_",
+      "event": {
+        "a": "e"
+      }
+    },
+    {
+      "source_clause": 6,
+      "predicate": "service_",
+      "event": {
+        "a": "e"
+      }
+    },
+    {
+      "source_clause": 13,
+      "predicate": "medical_institution_",
+      "event": {
+        "a": "clinic"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "retirement_",
+      "event": {
+        "a": "r"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    9,
+    9,
+    10,
+    10,
+    11,
+    11,
+    12,
+    13,
+    14
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "service_proofs": 2,
+    "distinct_service_domain": 1,
+    "fact_count": 20,
+    "stipulation_count": 0,
+    "wildcard_count": 1,
+    "grounding_cpu_seconds": 0.0002559169999999944,
+    "grounding_wall_seconds": 0.00025582313537597656,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

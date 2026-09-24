@@ -1,0 +1,6 @@
+{
+  "case": "synthetic order/tag/duplicate/inert/event guard",
+  "candidate": "regular",
+  "query": "none",
+  "source_sha256": "1ed9482c4e94c23a861e6e44724b92ab116461d82626fe7fe4fe91165da2a228"
+}

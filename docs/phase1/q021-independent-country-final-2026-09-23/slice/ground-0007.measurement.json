@@ -1,0 +1,265 @@
+{
+  "household": {
+    "facts": [
+      {
+        "ctor": "service_",
+        "args": [
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2017-02-01"
+        ]
+      },
+      {
+        "ctor": "end_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          "2017-09-02"
+        ]
+      },
+      {
+        "ctor": "location_",
+        "args": [
+          {
+            "a": "alice_employer"
+          },
+          {
+            "s": "caracas, venezuela"
+          }
+        ]
+      },
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      },
+      {
+        "ctor": "payment_",
+        "args": [
+          {
+            "a": "alice_pays"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "start_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          "2017-09-02"
+        ]
+      },
+      {
+        "ctor": "purpose_",
+        "args": [
+          {
+            "val": {
+              "a": "alice_pays"
+            }
+          },
+          {
+            "a": "alice_employer"
+          }
+        ]
+      },
+      {
+        "ctor": "amount_",
+        "args": [
+          {
+            "a": "alice_pays"
+          },
+          3200
+        ]
+      },
+      {
+        "ctor": "citizenship_",
+        "args": [
+          {
+            "a": "alice_is_venezuelan"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "alice_is_venezuelan"
+          },
+          {
+            "a": "alice"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "alice_is_venezuelan"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      },
+      {
+        "ctor": "citizenship_",
+        "args": [
+          {
+            "a": "bob_is_american"
+          }
+        ]
+      },
+      {
+        "ctor": "agent_",
+        "args": [
+          {
+            "a": "bob_is_american"
+          },
+          {
+            "a": "bob"
+          }
+        ]
+      },
+      {
+        "ctor": "patient_",
+        "args": [
+          {
+            "a": "bob_is_american"
+          },
+          {
+            "s": "usa"
+          }
+        ]
+      }
+    ],
+    "stipulations": []
+  },
+  "unary": [
+    {
+      "source_clause": 1,
+      "predicate": "service_",
+      "event": {
+        "a": "alice_employer"
+      }
+    },
+    {
+      "source_clause": 8,
+      "predicate": "payment_",
+      "event": {
+        "a": "alice_pays"
+      }
+    },
+    {
+      "source_clause": 14,
+      "predicate": "citizenship_",
+      "event": {
+        "a": "alice_is_venezuelan"
+      }
+    },
+    {
+      "source_clause": 17,
+      "predicate": "citizenship_",
+      "event": {
+        "a": "bob_is_american"
+      }
+    }
+  ],
+  "fact_source_clauses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "stats": {
+    "unary_proofs": 4,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 19,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.00022758300000000342,
+    "grounding_wall_seconds": 0.0002269744873046875,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "tax": {
+    "status": "not_requested"
+  }
+}

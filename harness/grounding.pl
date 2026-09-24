@@ -31,6 +31,7 @@ run :-
     append(UnaryFacts, Binary, Unsorted),
     keysort(Unsorted, Ordered),
     pairs_values(Ordered, FactHeads),
+    findall(I, member(I-_,Ordered), FactSources),
     findall(H, stipulated_solution(Refs, H), StipHeads),
     statistics(cputime, T1), get_time(W1),
     % One numbering traversal preserves shared variables within a solution;
@@ -48,6 +49,7 @@ run :-
     tax_observation(TaxInput, Tax),
     json_write(current_output, json([
         household=json([facts=Facts, stipulations=Stips]), unary=UnaryJSON,
+        fact_source_clauses=FactSources,
         stats=json([unary_proofs=EventCount, service_proofs=ServiceProofCount,
                     distinct_service_domain=ServiceCount, fact_count=FactCount,
                     stipulation_count=StipCount, wildcard_count=WildCount,
@@ -59,8 +61,19 @@ read_clauses(Stream, Clauses) :-
     read_term(Stream, Clause, [syntax_errors(error)]),
     ( Clause == end_of_file -> Clauses = []
     ; Clause = (:- _) -> throw(error(unexpected_case_directive, install/3))
-    ; Clauses = [Clause|Rest], read_clauses(Stream,Rest)
+    ; validate_country_clause(Clause),
+      Clauses = [Clause|Rest], read_clauses(Stream,Rest)
     ).
+
+% A-021: only the supplied, ground BODYLESS country_/2 clause is covered.
+% Check syntax before assertz: clause/3 cannot distinguish a fact from :- true.
+validate_country_clause(Clause) :-
+    clause_parts(Clause,H,_),
+    ( functor(H,country_,2) ->
+        ( Clause = (_ :- _) -> throw(error(country_rule_not_covered, read_clauses/2))
+        ; ground(H) -> true
+        ; throw(error(nonground_country_not_covered, read_clauses/2)) )
+    ; true ).
 
 declare_heads([]).
 declare_heads([Clause|Rest]) :-
@@ -96,7 +109,13 @@ unary_solution(Refs, I, P, E) :-
 binary_solution(Refs, Events, Services, Candidate, I, H) :-
     member(ref(I,P,2,Ref), Refs), fact_kind(P,[_,_]),
     clause(H,Body,Ref), arg(1,H,First),
-    ( Body == true, var(First) ->
+    ( P == country_ ->
+        % H3's place position is not an event position. Emit once at this
+        % original source-clause index I (stable keysort above), not grouped
+        % before/after the event facts. Tags and duplicate clauses are intact.
+        ( Body == true, ground(H) -> true
+        ; throw(error(unsupported_country_clause, binary_solution/6)) )
+    ; Body == true, var(First) ->
         % H2 explicitly retains the bodyless purpose pattern without expansion.
         ( P == purpose_ -> true ; throw(error(unapproved_event_wildcard(P), binary_solution/6)) )
     ; Candidate == tax_case_33, P == purpose_ ->

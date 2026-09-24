@@ -1,0 +1,351 @@
+[
+  {
+    "guard": "tags/order/duplicates/inert/wildcard/ordinary-event",
+    "status": "pass",
+    "requests": [
+      "ground-0029.pl",
+      "ground-0030.pl"
+    ],
+    "direct_country": {
+      "status": "pass",
+      "supplied_source_indices": [
+        1,
+        4,
+        6
+      ],
+      "emitted_source_indices": [
+        1,
+        4,
+        6
+      ],
+      "emitted_fact_positions_1based": [
+        1,
+        5,
+        7
+      ],
+      "supplied": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "a": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        }
+      ],
+      "emitted": [
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "a": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        },
+        {
+          "ctor": "country_",
+          "args": [
+            {
+              "s": "p"
+            },
+            {
+              "s": "c"
+            }
+          ]
+        }
+      ]
+    },
+    "reground_predicate_counts": {
+      "agent_": 4,
+      "patient": 4,
+      "patient_": 4,
+      "country_": 3,
+      "purpose_": 1
+    },
+    "fixture_h4_3_a": "unequal as expected from repeated event enumeration; not an original"
+  },
+  {
+    "guard": "country without unary events",
+    "status": "pass",
+    "request": "ground-0031.pl"
+  },
+  {
+    "guard": "rule_true",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-c903fcfd594a4c7687602ad57a69f84d",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-1/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0032.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "058.stdout",
+      "stderr": "058.stderr",
+      "elapsed_seconds": 0.291801
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: country_rule_not_covered\n"
+  },
+  {
+    "guard": "rule_fail",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-3efd83bdaa1f4211b483d4b6e5391c42",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-1/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0033.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "059.stdout",
+      "stderr": "059.stderr",
+      "elapsed_seconds": 0.290628
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: country_rule_not_covered\n"
+  },
+  {
+    "guard": "free_place",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-0acae8b2879f43689828df1432845d81",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-1/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0034.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "060.stdout",
+      "stderr": "060.stderr",
+      "elapsed_seconds": 0.334375
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: nonground_country_not_covered\n"
+  },
+  {
+    "guard": "free_country",
+    "status": "pass:expected-rejection",
+    "command": {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "kmla-runtime-d0a96a9d8b5f48a28052bead0283b488",
+        "--platform",
+        "linux/amd64",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--user",
+        "501:20",
+        "--workdir",
+        "/corpus",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human,dst=/human,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/human/sara/sara,dst=/corpus,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/harness,dst=/harness,readonly",
+        "--mount",
+        "type=bind,src=/Users/devrashie/Documents/csProjects/kmla/docs/phase1/country-fix-evidence-2026-09-23/slice-1/requests,dst=/requests,readonly",
+        "--entrypoint",
+        "swipl",
+        "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+        "-q",
+        "-f",
+        "none",
+        "-s",
+        "/harness/grounding.pl",
+        "-g",
+        "main",
+        "-t",
+        "halt",
+        "--",
+        "/requests/ground-0035.pl",
+        "/requests/registry.pl",
+        "regular",
+        "none"
+      ],
+      "timeout_seconds": 60.0,
+      "exit": 2,
+      "timed_out": false,
+      "stdout": "061.stdout",
+      "stderr": "061.stderr",
+      "elapsed_seconds": 0.341578
+    },
+    "stderr_verbatim": "ERROR: Unknown error term: nonground_country_not_covered\n"
+  }
+]

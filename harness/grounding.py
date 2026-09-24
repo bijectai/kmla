@@ -2,8 +2,8 @@
 
 Not an installed amendment, admission check, parity producer or H6 mode guesser.
 Generic non-tax H6 observation coverage is an unfinished implementation task.
-The general binary path has a retained country_/2 loss finding; it must not be
-used as a production grounder or called preservation-certified.
+A-021's by-name ground/bodyless country_/2 correction is measured separately;
+this is not a production grounder or a corpus-wide preservation certificate.
 """
 
 from __future__ import annotations
@@ -80,11 +80,12 @@ class GroundingSession:
         with (self.pinned.requests / "registry.pl").open("x", encoding="utf-8") as stream:
             stream.write(_registry())
         runtime.write_json(self.directory / "candidate-code.json", {
-            "scope": "A-020 candidate measurement; not protected installation or parity",
+            "scope": "A-020 candidate / A-021 country correction measurement; not installation or parity",
             "hashes": {name: runtime.sha256(ROOT / name) for name in
                 ("harness/grounding.py", "harness/grounding.pl", "scripts/test_grounding.py")},
             "fact_emission_order": "stable source-clause provenance order (H1); phase execution stays unary, binary, stipulation",
             "wildcards": "findall copies numbered in final facts/stipulations traversal; no wildcard expansion",
+            "country": "country_/2 only: supplied ground bodyless clause emitted once at original source-clause index; rule/non-ground fails closed",
         })
 
     def measure(self, source, *, candidate, query, name, timeout=60):

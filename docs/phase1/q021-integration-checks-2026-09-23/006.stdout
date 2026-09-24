@@ -1,0 +1,17 @@
+BYTE-IDENTICAL b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity SHA256 94ad637a8ef8ccb7a421a873d2e4fb91a01b08115e68a41bc083ca3ce8b23b2a
+theorem b1_exact_duration_passes_same_time_and_keeps_dependency_multiplicity
+    (checked : CoveredR5Time (.year y))
+    (dependency : (d t : Term) → (year : Year) → CoveredR5Time (.year year) → List Unit) :
+    s7703_b_1_bffb (hh (childHome (jul1 + 1))) alice y checked dependency =
+      (dependency bob alice y checked).flatMap (fun _ => [(home, bob)]) := by
+BYTE-IDENTICAL a1_null_only_at_observation SHA256 38fe92b93a06de672777e086244871f9c7719e97ba970756ff6b3a7854bd864c
+theorem a1_null_only_at_observation :
+    observe (a1Solutions (s7703_a_1_bfffb (hh married) alice y)) =
+      ["[{\"a\":\"bob\"},{\"a\":\"marriage\"},null]"] := by
+BYTE-IDENTICAL b3_deduplication_only_at_observation SHA256 5aea04698b8ae18b730f7edeb3db9c8af9eb9b155cc0d68999ab6f9a57f26300
+theorem b3_deduplication_only_at_observation :
+    observe (b3Solutions (s7703_b_3_bfbb
+      (hh (married ++ [.agent_ marriage bob])) alice home y)) =
+      ["[{\"a\":\"bob\"}]"] := by
+ALL 24 original fixture definitions byte-identical
+THEOREMS 62

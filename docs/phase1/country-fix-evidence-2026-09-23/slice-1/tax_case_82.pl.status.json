@@ -1,0 +1,88 @@
+{
+  "original_case": "tax_case_82.pl",
+  "h4_3_a": "pass",
+  "h4_3_b": "pass",
+  "direct_country": {
+    "status": "pass",
+    "supplied_source_indices": [
+      11
+    ],
+    "emitted_source_indices": [
+      11
+    ],
+    "emitted_fact_positions_1based": [
+      11
+    ],
+    "supplied": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ],
+    "emitted": [
+      {
+        "ctor": "country_",
+        "args": [
+          {
+            "s": "caracas, venezuela"
+          },
+          {
+            "s": "venezuela"
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": "91b629a64717532e7bd826b4954e1b5ae8965746bb9843f0832459d357a8dd9a",
+  "query": {
+    "tax_inputs": "tax_inputs('bob',2012)",
+    "amount": "unbound; first solution only"
+  },
+  "original_request": "ground-0027.pl",
+  "original_stats": {
+    "unary_proofs": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002459590000000039,
+    "grounding_wall_seconds": 0.0002455711364746094,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "reground_request": "ground-0028.pl",
+  "reground_stats": {
+    "unary_proofs": 5,
+    "service_proofs": 1,
+    "distinct_service_domain": 1,
+    "fact_count": 22,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.0002642080000000019,
+    "grounding_wall_seconds": 0.0002636909484863281,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "original_observation": {
+    "status": "first_solution",
+    "value": 986,
+    "cpu_seconds": 0.0014111249999999992,
+    "wall_seconds": 0.0014111995697021484
+  },
+  "serialized_observation": {
+    "status": "first_solution",
+    "value": 986,
+    "cpu_seconds": 0.0015393749999999956,
+    "wall_seconds": 0.0015399456024169922
+  }
+}

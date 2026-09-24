@@ -2,6 +2,23 @@
 
 ## Current phase
 
+2026-09-23 (country fix independently verified; Phase 1 continuation): the
+country_-by-name correction passes both H4.3 checks on all 14 originals and
+the independent supplied-country comparison. The final independent run also
+passes 11 unit tests, three fixed output regressions and six runtime guard
+groups; implementation/test hashes did not change during verification.
+s3306_c_A_pos is exactly [[{"a":"alice"},{"a":"bob"}]] on both programs.
+The B-positive omission control changes the location to null (one tuple added,
+one lost), not a net proof-count increase; B-negative stays empty. Ordinary
+event traversal is unchanged; a country rule/non-ground clause fails closed.
+The broader unit run passes 103 tests; the initial orchestrator import-path
+failure and corrected invocation are both retained. See
+docs/phase1/Q021_INTEGRATION_2026-09-23.md and COUNTRY_FIX_REPORT_2026-09-23.md.
+The harness lane may continue the all-376 audit; the separate §7703 context is
+working on root stipulated-clause append/freshening with its required §152
+provider and R5 proof obligations open. No production records or reference
+parity yet; Checkpoint 1 remains unpassed. No human installation is implied.
+
 2026-09-23 (A-021 reviewed; country-only correction released): Fable confirms
 Dev's reading: country_/2 has no event position, so applying H4.2(ii)'s event
 domain is an implementation defect under H1/H3, not a missing semantic choice.
@@ -469,13 +486,15 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
-### Q-021 resolved; country correction and regression in progress
+### Q-021 resolved; country correction verified, wider H4 audit unfinished
 
 Dev explicitly authorized Q-021 and granted standing in-scope consultation.
 A-021 confirms the implementation defect and releases the conditional fix.
 The path audit is clean and the log change is append-only. The permission
 denial below is retained history, not a current request for owner permission.
-The measured mismatch remains a failing regression until corrected, not waived.
+The measured mismatch is now corrected: all 14 originals pass both comparisons,
+direct preservation and the fixed expected-output regressions. Old failing
+evidence is preserved. The wider all-376 and general H6 obligations remain open.
 
 Measured original H6.5 query:
 `s3306_c_A(alice_employer,Employer,Employee)` in s3306_c_A_pos.pl.

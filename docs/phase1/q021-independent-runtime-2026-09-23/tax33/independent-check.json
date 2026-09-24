@@ -1,0 +1,46 @@
+{
+  "h4_3_a": true,
+  "h4_3_b": true,
+  "original_tax": {
+    "status": "first_solution",
+    "value": 27181,
+    "cpu_seconds": 0.812915164,
+    "wall_seconds": 0.8131921291351318
+  },
+  "serialized_tax": {
+    "status": "first_solution",
+    "value": 27181,
+    "cpu_seconds": 0.04263083300000001,
+    "wall_seconds": 0.042630910873413086
+  },
+  "original_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.05222737399999999,
+    "grounding_wall_seconds": 0.052227020263671875,
+    "candidate": {
+      "outer_iterations": 316,
+      "inner_distinct_terms": 157,
+      "full_two_input_calls": 49612,
+      "successful_proofs": 157
+    }
+  },
+  "serialized_stats": {
+    "unary_proofs": 316,
+    "service_proofs": 157,
+    "distinct_service_domain": 157,
+    "fact_count": 1736,
+    "stipulation_count": 0,
+    "wildcard_count": 0,
+    "grounding_cpu_seconds": 0.03471474999999999,
+    "grounding_wall_seconds": 0.0347142219543457,
+    "candidate": {
+      "scope": "not_applicable"
+    }
+  },
+  "qualification": "scoped candidate only; not protected installation or all-376 completion"
+}

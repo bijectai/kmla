@@ -12,10 +12,17 @@ ground bodyless clauses at their source-clause positions with tags/duplicates
 intact; a country_ rule remains a new finding. Verify both H4.3 checks in all
 14 files before continuing the Phase 1 audit. No checkpoint is passed.
 
-A-021 now confirms that reading. Its only repository writes were the new answer
+A-021 confirms that reading. Its only repository writes were the new answer
 and an append-only decision-log review, verified by an all-path before/after
-audit. The isolated harness correction is in progress. No human action is due
-for this implementation defect; new amendments/installations still go to Dev.
+audit. The correction is now independently verified: 14/14 originals pass both
+H4.3 checks and direct country retention, with fixed expected-output assertions.
+Placement is by original source-clause index, tags/duplicates intact. Event
+traversal is unchanged and country rules/non-ground clauses fail closed.
+The full corpus audit continues; general H6 coverage is unfinished builder work.
+The isolated §7703 context continues root stipulation append/freshening, keeping
+the actual §152 provider and R5 proof obligations explicit/open. No human action
+is due for this defect; new amendments/installations still go to Dev. See
+docs/phase1/Q021_INTEGRATION_2026-09-23.md for independent checks and limitations.
 
 **Earlier H4 snapshot (superseded permission hold): scoped candidate passes; corpus-wide completion
 is blocked, not claimed.** tax_case_33 retains its ordered 1,736 facts and tax

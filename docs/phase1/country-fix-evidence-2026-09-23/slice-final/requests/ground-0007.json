@@ -1,0 +1,6 @@
+{
+  "case": "s3306_c_B_neg.pl",
+  "candidate": "regular",
+  "query": "none",
+  "source_sha256": "dbfbe42752063ee3f595ced8b55026f397adb858589417eec65d82bc0039c4e9"
+}

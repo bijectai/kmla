@@ -1,0 +1,6 @@
+{
+  "raw_solutions": [ [ {"a":"alice"},  {"a":"bob"},  {"s":"caracas, venezuela"} ] ],
+  "proof_count":1,
+  "cpu_seconds":0.00016054100000000016,
+  "wall_seconds":0.00015926361083984375
+}
