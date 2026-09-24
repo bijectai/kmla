@@ -1,0 +1,3 @@
+$ LEAN_PATH=/private/tmp/kmla-oracle7703-stip.ichTPX lean +leanprover/lean4:v4.33.1 -o /private/tmp/kmla-oracle7703-stip.ichTPX/Oracle/S7703.olean Oracle/S7703.lean
+exit_code=0
+

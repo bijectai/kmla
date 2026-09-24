@@ -1,4 +1,4 @@
-import Interface.QueryTime
+import Oracle.S7703Stip
 
 /-!
 §7703 slice against human/DECISIONS.md, G1–G9, H1–H6, D1–D9, N1–N5,
@@ -9,8 +9,10 @@ Three clause BODIES, (b)(1), (b), and the statute clause of s7703/4, are
 parameterized by the unavailable s152_a_1/3 continuation. No provider,
 recursive knot, R5 bound, production OracleGuards or full s7703 target is
 supplied. The root body covers bound Taxp/Year, free Marriage, and either free
-or bound Spouse ONLY. In particular it is NOT the complete root predicate:
-H4 stipulated clauses (including free outputs and freshening) remain absent.
+or bound Spouse ONLY. H4 append/unification/freshening for those two modes is
+implemented using shared Pat and an explicit fresh-id supply. Other root modes,
+the actual downstream provider and its R5 proof remain absent; this is not a
+completed reference or a complete operational-mode implementation.
 
 Definitions named *_clause1 and *_mode are internal, ordered solution lists.
 Only *_entry wrappers are query entries; each consumes AdmittedQuery for the
@@ -318,10 +320,10 @@ G3: the pre-a nonidentity succeeds for a free Spouse; a bound identical Spouse
 fails before a. Filtering the free-mode results alone would lose that doubling.
 Other modes, in particular free Taxp/bound Spouse, are not implemented here.
 
-H4.1 root stipulations must be appended AFTER this clause, not subjected to its
-guard or NAF. That append/unification/freshening layer is deliberately absent;
-returning only these ground statute rows is NOT a full reference value. Do not
-enumerate an arbitrary ground universe to replace a stipulated wildcard.
+H4.1 root stipulations are appended AFTER this clause by the mode assemblies
+below, not subjected to its guard or NAF. Returning only these ground statute
+rows is NOT the predicate's full list. Never enumerate an arbitrary ground
+universe to replace a stipulated wildcard.
 -/
 def s7703_clause1 (h : Household) (taxpayer : Term) (spouseInput : Option Term)
     (year : Year) (checked : CoveredR5Time (.year year))
@@ -351,6 +353,38 @@ def s7703_statute_bbfb (h : Household) (taxpayer spouse : Term) (year : Year)
       CoveredR5Time (.year year) → List Unit) : List Term :=
   (s7703_clause1 h taxpayer (some spouse) year checked s152_a_1_bbb).map Prod.snd
 
+/--
+H4.1/G1 assembly for source s7703/4 (section7703.pl:2–9), mode bffb.
+The statute clause precedes EVERY stipulated head, with duplicates retained.
+Result: (next-unused id, ordered (Spouse, Marriage) rows). Existing shared Pat
+keeps free outputs and within-row identity; the Nat supply is administrative
+state, not another Prolog input or a new wire schema. Thread the returned supply
+into later invocations; resetting it with live outputs would violate freshness.
+The required provider and actual-year certificate remain explicit.
+-/
+def s7703_bffb (h : Household) (taxpayer : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit)
+    (next : Nat) (shaped : h.stipulations.all Stip.wellFormed = true) :
+    Nat × List (Pat × Pat) :=
+  let statute := s7703_statute_bffb h taxpayer year checked s152_a_1_bbb
+  let (next', stips) := Stipulation.solutions taxpayer none year next h.stipulations shaped
+  (next', statute.map (fun (s, m) => (.val s, .val m)) ++ stips)
+
+/-- H4.1 assembly for bbfb: statute's two bound-nonvar successes are retained,
+but appended facts are tried only once each. Bound Spouse is not an output. -/
+def s7703_bbfb (h : Household) (taxpayer spouse : Term) (year : Year)
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit)
+    (next : Nat) (shaped : h.stipulations.all Stip.wellFormed = true) :
+    Nat × List Pat :=
+  let statute := s7703_statute_bbfb h taxpayer spouse year checked s152_a_1_bbb
+  let (next', stips) := Stipulation.solutions taxpayer (some spouse) year next
+    h.stipulations shaped
+  (next', statute.map Pat.val ++ stips.map Prod.snd)
+
 /-! Entry tuples use only the shared QueryCall, SuppliedArg, Pat and Term types.
 The free positions below are exactly H6.5, not ground-only substitute modes.
 No runtime dispatcher, decoder or additional payload shape is invented here. -/
@@ -374,6 +408,34 @@ def b2Query (taxpayer home : Term) (year : Year) : QueryCall :=
 def b3Query (taxpayer home : Term) (year : Year) : QueryCall :=
   ⟨"s7703_b_3", [.single (.val taxpayer), .single (.wild 0),
     .single (.val home), .single (.val (.int year))]⟩
+
+/-- Distinct free query positions, as in the implemented source-call mode.
+Query labels describe the tuple; output variable ids use the threaded supply. -/
+def rootBffbQuery (taxpayer : Term) (year : Year) : QueryCall :=
+  ⟨"s7703", [.single (.val taxpayer), .single (.wild 0),
+    .single (.wild 1), .single (.val (.int year))]⟩
+
+def rootBbfbQuery (taxpayer spouse : Term) (year : Year) : QueryCall :=
+  ⟨"s7703", [.single (.val taxpayer), .single (.val spouse),
+    .single (.wild 0), .single (.val (.int year))]⟩
+
+/-- Still parameterized; neither admission nor the supply proves R5 adequacy. -/
+def s7703_bffb_entry [OracleGuards] (lane : AdmissionLane)
+    (h : Household) (taxpayer : Term) (year : Year)
+    (admitted : AdmittedQuery lane h year (rootBffbQuery taxpayer year))
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) (next : Nat) :=
+  s7703_bffb h taxpayer year checked s152_a_1_bbb next (Stipulation.admitted_shape admitted)
+
+def s7703_bbfb_entry [OracleGuards] (lane : AdmissionLane)
+    (h : Household) (taxpayer spouse : Term) (year : Year)
+    (admitted : AdmittedQuery lane h year (rootBbfbQuery taxpayer spouse year))
+    (checked : CoveredR5Time (.year year))
+    (s152_a_1_bbb : (dependent taxpayer : Term) → (year : Year) →
+      CoveredR5Time (.year year) → List Unit) (next : Nat) :=
+  s7703_bbfb h taxpayer spouse year checked s152_a_1_bbb next
+    (Stipulation.admitted_shape admitted)
 
 def s7703_a_1_entry [OracleGuards] (lane : AdmissionLane)
     (h : Household) (taxpayer : Term) (year : Year)
@@ -409,6 +471,17 @@ def termObs : Term → Obs
   | .atom s => .atom s
   | .str s => .str s
   | .int n => .num n
+
+/-- H6.2 ONLY at observation: unbound values become null, not before unification. -/
+def patObs : Pat → Obs
+  | .val t => termObs t
+  | .wild _ => .null
+
+def rootBffbSolutions (rows : List (Pat × Pat)) : List Solution :=
+  rows.map fun (s, m) => [patObs s, patObs m]
+
+def rootBbfbSolutions (rows : List Pat) : List Solution :=
+  rows.map fun m => [patObs m]
 
 def a1Solutions (rows : List (Term × Term × Option Day)) : List Solution :=
   rows.map fun (s, m, d) => [termObs s, termObs m, match d with

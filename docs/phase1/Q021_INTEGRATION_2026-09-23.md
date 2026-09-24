@@ -74,6 +74,28 @@ H6 observation plumbing remain builder work, not a new missing owner choice.
 The isolated oracle context continues the bounded root stipulation append and
 freshening work, with the actual §152 provider and R5 proofs still explicit/open.
 
+## Subsequent §7703 integration check
+
+The new root bffb/bbfb assemblies retain the statute's ordered solutions before
+the stipulated clauses. The latter use shared `Pat` values, ground-input
+unification and a threaded fresh-id supply; they do not inherit statute-only
+guards. This is a section-local implementation, not a new wire schema or a
+general relational engine. The §152 dependency, other operational modes,
+production guards, and R5 termination/adequacy remain open.
+
+`q021-oracle-stip-independent-2026-09-23/` retains a fresh Lean 4.33.1 build:
+**62 existing + 25 new theorems compile**. The main test file is byte-unchanged
+from the entry snapshot. Implementation, both test files and runner hashes are
+unchanged across the independent execution. The runner unconditionally compiles
+the new `Oracle/S7703Stip.lean` dependency and both required assertion files;
+any compilation/proof failure remains nonzero. No skipped or weakened test,
+dummy production provider, default guards, parity or complete-reference claim.
+
+The staged whitespace check reports one extra final blank line in the raw
+`Oracle/Tests/S7703_STIP_ROOT_BUILD.txt` transcript. It is retained verbatim;
+no proof/source/test comparison is affected, and no clean whole-diff whitespace
+result is claimed for that raw log.
+
 ## Self-review
 
 G4 tags, H1 source order and proof multiplicity, G5 closed-world negation, H6.2

@@ -1,5 +1,90 @@
 # Oracle proof obligations
 
+## §7703 stipulated-root slice — 2026-09-23 current continuation
+
+The explicitly authorized bffb/bbfb H4 append/head-unification/freshening slice
+is implemented and checked. This section updates the historical root-stipulation
+absence recorded below; it does not close the remaining modes, actual provider,
+general source equivalence or R5/R8 obligations. The previous ledger is preserved.
+
+- Implementation uses existing shared Pat results and a threaded next-unused
+  Nat id. No new shared type/payload, Interface edit or private parallel public
+  schema was introduced. Main confirmed that this internal supply does not by
+  itself require a new shared payload field. Callers must thread the returned
+  supply and not reset it while earlier outputs remain live.
+- H4.1: statute rows precede ordered stipulated rows. A fresh renaming table and
+  binding environment are used per clause invocation; duplicate clauses remain
+  separate, repeated ids within a head retain identity, and bound constraints
+  from taxpayer/spouse/year propagate to shared outputs with G4 tags intact.
+  Stipulated heads are not subjected to statute-only guards/NAF. No ground
+  universe substitutes for an unbound variable. Observation alone emits null.
+- Two new entry wrappers require exact QueryCall admission and actual-year
+  CoveredR5Time plus the real provider parameter. `admitted_shape` proves head
+  well-formedness from existing admission; malformed arity is not filtered into
+  ordinary failure. No OracleGuards instance or provider implementation exists.
+
+### Bounded attempt ledger and latest goals
+
+1. Helper build R1 failed at lines 95–96: `Unknown constant
+   Bool.and_eq_true.mp`. Complete raw diagnostics and all preceding dependency
+   commands: [S7703_STIP_BUILD_R1.txt](Tests/S7703_STIP_BUILD_R1.txt). This was an
+   elaboration error, not an observation mismatch or a weakened assertion.
+2. Helper build R2 uses the existing equality lemma via simplification of the
+   same arity premise. Exit 0; [S7703_STIP_BUILD_R2.txt](Tests/S7703_STIP_BUILD_R2.txt).
+   Latest helper goals: none. One failed helper edit cycle, no breaker.
+3. Root assembly/entry compile: exit 0 on first attempt;
+   [S7703_STIP_ROOT_BUILD.txt](Tests/S7703_STIP_ROOT_BUILD.txt).
+4. Initial 24 focused theorems: all pass on first attempt;
+   [S7703_STIP_TEST_R1.txt](Tests/S7703_STIP_TEST_R1.txt). Added one bbfb shared
+   marriage binding assertion and full new-theorem axiom printouts; no original
+   or focused assertion was changed. Final focused suite: 25/25, exit 0.
+5. Final fresh build `/private/tmp/kmla-oracle7703-stip-final.y3qRdj`: all shared
+   dependencies, helper, S7703, original 62 theorems, and new 25 theorems exit 0.
+   Full exact commands/output/hashes:
+   [S7703_STIP_FINAL_VERIFICATION.txt](Tests/S7703_STIP_FINAL_VERIFICATION.txt).
+   All printed new declaration/proof axiom sets are subsets of X1; no recovery
+   axiom. Latest test goals: none. Failed test edit cycles in this slice: zero.
+6. Main independently reports its fresh runner unconditionally builds the helper
+   and both test modules, passes 62+25 theorems, and preserves implementation/test
+   hashes during verification. Evidence:
+   `docs/phase1/q021-oracle-stip-independent-2026-09-23/`. This is main's check,
+   not a run performed or inspected by this lane. No further implementation or
+   next-section work follows this bounded handoff.
+
+The entire original `Tests/S7703.lean` is byte-unchanged, SHA-256
+`096ac907f363dd7d780787662a75544f271c4dd698b3598f582cd59283e3fa67` before/after.
+Its existing unused-simp warning is retained. Historical diagnostic failure
+files remain historical failures; they were not edited or used as proofs.
+
+### Still owed after this slice
+
+- Actual ordered s152_a_1 provider and downstream recursive implementation;
+  the new assemblies remain parameterized, not a complete reference.
+- Other root modes, non-ground caller inputs/general relational continuations,
+  operational mode census, E2 exclusion and H6 Bool entry/integration. The two
+  implemented modes have ground Taxp/Year, ground-or-free Spouse, free Marriage;
+  the bffb query has two distinct free output variables.
+- General source/unification/freshness correspondence and every caller's supply
+  threading. The quantified one-clause supply theorem and finite focused tests
+  do not prove the full cross-section operational invariant.
+- Production OracleGuards, exact V10 decider iff, complete participant universe,
+  phase/decrease/counter adequacy and R5/R8 actual-time coverage. Nat id allocation
+  is not recursion fuel; there is no fuel-exhaustion answer or default provider.
+- Opaque integration through main only; no original comparison or parity record
+  was produced. All 376-case parity and CP1 remain unpassed.
+
+No consult or git action occurred. Main owns consultations/status and runner
+integration. The NEW report is
+`docs/phase1/ORACLE_7703_STIP_PROGRESS_2026-09-23.md`; the old report is untouched.
+
+Self-review: signed ordered SLD/multiplicity, structural tagged ground equality,
+same-variable identity inside a head, fresh clause variables across invocations,
+ground-input head unification, failure-local bindings, H4 statute-before-fact
+append, and H6 boundary-only null/deduplication are the assumptions. Existing
+NAF/commit/date/aggregate semantics are unchanged. Complete R5/reference behavior
+is not assumed. Three failed edit cycles on one test means stop and report;
+no fourth attempt or assertion weakening.
+
 ## §7703 authorized resumed proof round, 2026-09-23
 
 Dev authorized one bounded proof-only round on the three existing assertions,
