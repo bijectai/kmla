@@ -270,17 +270,17 @@ Report it to the user before implementing a revised design. Do not silently
 change the experiment, comparison, input population, or semantic interpretation.
 The mutation-admission review that led to B003 is the standard to follow.
 
-## PROPOSED — P-ROLES: Claude builder and independent governor
+## Accepted 2026-09-24 — P-ROLES: Claude builder and independent governor
 
-**Not in force.** Prepared at Dev's direction on `roles/claude-builder`, based
-on pushed integration `96722c5`. Dev must accept and merge before the role
-swap takes effect; no checkpoint is signed by preparing these files.
+**In force.** Dev accepted P-ROLES on 2026-09-24 by merging PR #7 (`bc80499`)
+into `main`, which is now the integration base. The acceptance signs no
+checkpoint.
 
-Upon acceptance, Claude Code sessions own implementation, with integration,
-oracle and harness contexts kept separate. Astra owns design-authority answers,
-PR/milestone review and event-driven, sampled monitoring, never implementation
-or a second full-audit run. Recommendations are not owner sign-off. This
-supersedes PLAN's assignments to Astra/Fable without modifying PLAN.
+Claude Code sessions own implementation, with integration, oracle and harness
+contexts kept separate. Astra owns design-authority answers, PR/milestone
+review and event-driven, sampled monitoring, never implementation or a second
+full-audit run. Recommendations are not owner sign-off. This supersedes PLAN's
+assignments to Astra/Fable without modifying PLAN.
 
 Unchanged: Dev owns DECISIONS, the independent meter, gate exploits and signed
 invariant statements, all human/ installations, re-pins and checkpoint sign-offs.
@@ -309,8 +309,37 @@ files in the README format; existing answers are read-only, disagreement is a
 new Q, and no one answers their own Q. An escalation halts the affected lane
 for Dev. The governor writes only A-files, decision-log entries and review
 notes; the builder maintains STATE and implementation. FABLE_PROMPT remains
-unchanged history, not an operative role assignment.
+unchanged history, not an operative role assignment. P-WAKE (below) lets a
+builder wake the governor for one registered Q at a time; manual relay through
+Dev remains the fallback, and consult.sh itself still spawns nothing.
 
 The full file-by-file migration and historical exceptions are in the P-ROLES
-decision-log entry. Both branches are pushed for review; neither is merged by
-an assistant. After preparing this proposal, wait for Dev's acceptance.
+decision-log entries: the 2026-09-23 proposal, the 2026-09-24 correction and
+the 2026-09-24 acceptance. No assistant merged either branch.
+
+## Accepted 2026-09-24 — P-WAKE: per-question headless governor wake
+
+Dev authorized a builder to wake Astra's Codex thread for one consult question
+at a time with `scripts/wake_governor.sh docs/consult/Q-NNN.md`, instead of
+asking Dev to relay it. Use it on demand only: no polling, schedulers, hooks or
+standing automation. Manual relay through Dev remains the fallback. Before the
+first live wake, the builder shows Dev the exact command and waits for Dev's go.
+
+The script refuses (exit 4) on a standing `$STATE/HALT`, a held lock, an
+unclean checkout, an existing A or a thread held open by another Codex process.
+It runs the fixed `codex exec resume` command with the configured thread, model
+and effort (never Codex's default model), sends Codex's output only to
+`$STATE/logs/`, and audits the checkout afterwards: only a sealed new A and
+Status-index rows or an appended tail in `docs/DECISION_LOG.md` may change;
+HEAD, refs, stash, worktrees and the names and modes under `human/` must not.
+Exit 3 (any out-of-scope change) writes `$STATE/HALT`, which only Dev clears.
+Ignored paths (judged by the ignore rules in force before the wake), other
+`.git` contents, processes that leave Codex's process group and writes outside
+the checkout are not audited; the README lists the builder's interpretations.
+
+No builder session reads the governor's logs or anything under `~/.codex/`;
+the only governor output a builder reads is the sealed A, through consult.sh.
+Delivery is not approval: the A's Contract change and Escalate to Dev fields
+still govern. The complete operative terms are in the P-WAKE decision-log
+entry, and the builder's procedure is in `docs/consult/README.md`. P-WAKE
+changes no semantics, contract, checkpoint or owner authority.

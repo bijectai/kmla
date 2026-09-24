@@ -1,3 +1,4 @@
 docs/consult/.fable_session
 docs/consult/.fable_session.lock/
 docs/consult/.fable_session.tmp.*
+__pycache__/
