@@ -1,6 +1,6 @@
 # Oracle lane isolation
 
-Read the root working rules. This context translates original Prolog against
+Read root CLAUDE.md and its imported builder rules. This context translates original Prolog against
 `human/DECISIONS.md` and `Interface/`; it must not inspect `harness/`, `gen/`,
 their tests, or their implementation reports. The orchestrator may invoke a
 harness CLI and pass retained inputs, outputs, diagnostics and verbatim meter

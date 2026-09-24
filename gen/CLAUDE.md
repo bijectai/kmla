@@ -1,6 +1,6 @@
 # Generator lane — approved domain and isolation
 
-Read root AGENTS.md first. This is a later-phase lane, not permission to begin
+Read root CLAUDE.md first. This is a later-phase lane, not permission to begin
 Phase 2 before Dev signs off Checkpoint 1.
 
 - Implement against `human/DECISIONS.md`, accepted amendments in

@@ -1,6 +1,6 @@
 # Harness / serializer lane isolation
 
-Read the root working rules. This context uses original Prolog, the approved
+Read root CLAUDE.md and its imported builder rules. This context uses original Prolog, the approved
 `human/DECISIONS.md` and shared `Interface/`. Never inspect `Oracle/`, oracle
 tests, or oracle implementation reports. A callable Lean runner is an opaque
 integration interface; the orchestrator coordinates it without sharing code.
