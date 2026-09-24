@@ -2,13 +2,17 @@
 
 ## Current state
 
-- Integration branch: `claude/checkpoint-0-integration`.
-- Pushed integration head after the role-neutral consolidation:
+- Integration base: `main`. P-ROLES is in force: Dev accepted it on
+  2026-09-24 by merging PR #7 (`bc80499`); `origin/main` was `c2353d7` at
+  activation. PRs target `main` and only Dev merges; this activation's work
+  went on `builder/*` branches cut from `origin/main`, the only branches Dev
+  authorized it to push. The former integration branch was merged by PR #6
+  (`ca23ba3`) and is no longer on origin.
+- Role-neutral consolidation head:
   `96722c5b8d8bbc9bf6d74327b84ac3736eb56f8f`. Implementation evidence is at
   its parent `fe25216db512aefdb205cdd0ba3e0c8769208176`.
-- This checkout is now on proposal branch `roles/claude-builder`, cut from
-  that pushed head. P-ROLES awaits Dev's acceptance and merge; it is not in
-  force and this branch must not be used to start implementation yet.
+- P-WAKE (accepted 2026-09-24) lets a builder wake the governor for one
+  registered consult question; see the consultation paragraph at the end.
 - Checkpoint 0 is signed off at owner parent
   `0a2a65ac1313c180bea39d137e6665c01b8e833a`; Phase 1 is authorized.
   **Checkpoint 1 is not passed. No Phase 2 work is authorized.**
@@ -16,14 +20,16 @@
   `12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a`.
 - `human/HASHES.txt` SHA-256:
   `5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9`.
-  Both digests checked directly at consolidation. The retained verification
-  passes; no protected artifact was installed or re-pinned by this handoff.
+  Both digests checked directly at consolidation and again at activation
+  (2026-09-24). No protected artifact was installed or re-pinned since.
 - Frozen entry meter SHA-256:
   `c5cc94a60437d393b302a87f6c6fd40d1a1758e610c121f65662c014ff3c92e5`.
   Invoke only via its CLI; never read or implement its source.
-- All implementation contexts are quiescent. The pre-existing untracked
-  `scripts/__pycache__/inventory_cases.cpython-314.pyc` is not task work and
-  remains untouched. No outstanding implementation changes were present.
+- All implementation contexts are quiescent. No outstanding implementation
+  changes were present at activation.
+  `scripts/__pycache__/inventory_cases.cpython-314.pyc`, committed by accident
+  with the P-ROLES row edit (`3caa4c4`), is untracked again and `__pycache__/`
+  is ignored.
 
 Read `docs/PLAN.md`, accepted `docs/PROTOCOL.md` amendments, the applicable
 working/lane rules and this file before work. The original PLAN is preserved;
@@ -141,29 +147,30 @@ remain later deliverables, not newly due for Checkpoint 1.
 
 ## Existing worktrees — preserved, not cleaned up
 
-Inventory checked with `git worktree list --porcelain` at consolidation. No
-worktree was removed or updated. Paths below are relative to
+Inventory checked with `git worktree list --porcelain` at consolidation and
+rechecked at activation (2026-09-24), unchanged. No worktree was removed or
+updated. Paths below are relative to
 `/Users/devrashie/Documents/csProjects/kmla` except the main checkout itself.
 
 | Worktree | Branch | Head at inventory | Stale? |
 | --- | --- | --- | --- |
-| Main checkout | `claude/checkpoint-0-integration` | `fe25216` before handoff commit | No; current integration checkout |
+| Main checkout | `builder/*` branches cut from `origin/main`, the integration base | `c2353d7` (`origin/main`) at activation, 2026-09-24 | No; current integration checkout |
 | `.claude/worktrees/human-deliverables-474e7d` | `claude/human-deliverables-474e7d` | `6406e0c` | Yes; old artifact work, no local CLAUDE.md present |
 | `.claude/worktrees/sara-semantics-interpretation-9ecfee` | `claude/sara-semantics-interpretation-9ecfee` | `00e1b45` | Yes; local CLAUDE.md still assigns the old design-authority role |
 
 Do not start a new session in either stale worktree: old local instructions
-or inherited main-checkout instructions can conflict. The owner's transition
-requires a separately reviewed roles branch; this consolidation does not
-activate any role change. Preserve these worktrees until separately authorized.
+or inherited main-checkout instructions can conflict. P-ROLES is active from
+`main` (PR #7, `bc80499`), so start every session from the main checkout.
+Preserve these worktrees, and the stale local `main` and `roles/claude-builder`
+branches, until separately authorized.
 
-## Roles and starting a session — PROPOSED P-ROLES
+## Roles and starting a session — P-ROLES (accepted 2026-09-24)
 
-These instructions activate only when Dev accepts and merges P-ROLES. No
-builder or governor continuation is authorized by merely checking out this
-proposal. The main checkout switched to roles/claude-builder after the
-worktree inventory above; the two stale worktrees were left exactly as found.
+Dev accepted P-ROLES on 2026-09-24 by merging PR #7 (`bc80499`) into `main`;
+these instructions are in force. The two stale worktrees were left exactly as
+found.
 
-Claude Code sessions become the builder; Astra becomes the governor (design
+Claude Code sessions are the builder; Astra is the governor (design
 authority, consult answerer, reviewer and event-driven monitor), never the
 implementer. Dev retains all owner artifacts, installations, re-pins and
 checkpoint sign-offs. Root CLAUDE imports docs/BUILDER_RULES.md; AGENTS files
@@ -171,8 +178,9 @@ are governor-only. The governor may review both lanes but may not relay either
 implementation to the other. Integration coordinates shared declarations and
 opaque engine outputs; it must not use a mixed context to implement either lane.
 
-After acceptance, from the up-to-date main checkout at the accepted revision,
-use a fresh session for each of these types (not either stale worktree):
+From the main checkout, on `main` or a `builder/*` branch cut from an
+up-to-date `origin/main`, use a fresh session for each of these types (not
+either stale worktree):
 
 | Session | Exact launch command, from the repository root | Lane instructions |
 | --- | --- | --- |
@@ -188,7 +196,8 @@ assignment; any later lane directory read must load its CLAUDE, but cannot
 turn the already mixed integration context into an isolated implementer.
 If the loaded roles are missing or conflicting, stop; do not begin work.
 Static file/import/JSON checks do **not** confirm what Claude actually loads.
-That confirmation is the first builder session's responsibility.
+The first integration session confirmed it on 2026-09-24 (root CLAUDE and its
+BUILDER_RULES import loaded, no AGENTS.md); every new session repeats it.
 
 Root CLAUDE.md must always exist, preventing AGENTS fallback. Do not change the
 Project instructions setting. Imports use paths relative to their importing
@@ -211,11 +220,18 @@ shell reads naming the path but not scripts that open files, recursive grep
 from inside a directory or /usr/bin/cat. Never use a bypass. Edit covers writes;
 no Write rules are used. Project attribution disables co-author/PR footers and
 session URLs. Project human/ denies also apply to Dev's Claude sessions; owner
-installation is never delegated to a builder session.
+installation is never delegated to a builder session. The project file also
+denies Read of `~/.kmla-governor/logs/**` and `~/.codex/**` (P-WAKE).
 
-For consultations, write a never-reused Q and run scripts/consult.sh. It does
-not spawn Claude: exit 1 means awaiting the governor and halts that lane. Notify
-Dev/the governor with the path. Once A exists, the command reads it unchanged;
-read its escalation before resuming. Only the governor writes/seals A; no one
-answers their own Q. Audit changed paths after calls and answer delivery. Keep
-old FABLE_PROMPT and A-files as history; see docs/consult/README.md.
+For consultations, first check DECISION_LOG, DECISIONS, Interface and prior
+A files, then write a never-reused Q, commit it and run scripts/consult.sh. It
+spawns nothing: exit 1 means awaiting the governor and halts that lane. Under
+P-WAKE the builder may then wake Astra for that one Q with
+`bash scripts/wake_governor.sh docs/consult/Q-NNN.md`, run in the background
+after telling Dev in one line; the first live wake waits for Dev's go.
+Otherwise notify Dev/the governor with the path for a manual relay. Once A
+exists, consult.sh reads it unchanged; read its escalation before resuming.
+Only the governor writes/seals A; no one answers their own Q. Audit changed
+paths after calls and answer delivery; the wake script audits its own run. No
+builder opens anything under ~/.kmla-governor/logs/ or ~/.codex/. Keep old
+FABLE_PROMPT and A-files as history; see docs/consult/README.md.

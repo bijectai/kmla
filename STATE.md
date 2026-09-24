@@ -2,6 +2,45 @@
 
 ## Current phase
 
+P-ROLES is in force: Dev accepted it on 2026-09-24 by merging PR #7
+(`bc80499`) into `main`, now the integration base. Claude Code sessions are
+the builder; Astra is the governor (design authority, consult answers, review
+and event-driven monitoring), never the implementer. The first integration
+session confirmed its loaded instructions on 2026-09-24 and is activating the
+roles on `builder/activate-roles`: stale activation wording is updated, and
+P-WAKE (accepted the same day) adds `scripts/wake_governor.sh`, a per-question
+headless governor wake with manual relay through Dev as the fallback. No
+Oracle, harness, Interface or gen implementation has changed since `fe25216`;
+later commits are role, infra and documentation changes only.
+
+Technical status remains H4(a) 376 pass; H4(b) 114 pass / 262 unimplemented;
+full audit exit 1 for incomplete coverage. The partial oracle has 122 checked
+assertions; 147 builder tests passed at the implementation head. Checkpoint 0
+is signed; Checkpoint 1 is not. Before any remaining H6 implementation, the
+builder must declare all 135 queried-signature output projections once in
+Interface per G2/H6.5, including bound answer positions, and move private
+harness exceptions into that shared declaration. Remaining producer/oracle
+obligations and exact owner deliverables are in the consolidated
+docs/HANDOFF.md. H4.2 bound-purpose installation and re-pin remain Dev's;
+human/ and PLAN stay untouched.
+
+Builder rules live in CLAUDE/BUILDER_RULES and lane CLAUDE files; AGENTS binds
+only the governor. consult.sh is a read-only awaiting/delivery check, never a
+subprocess; under P-WAKE the separate wake script may wake the governor for one
+registered Q and audits the checkout afterwards. An unanswered Q halts the
+affected lane; the builder records governor escalations here. Historical Fable
+role/permission/session references below are provenance, not new routing.
+The governor may inspect both lanes for review but must never relay either
+implementation. Review is event-driven and sampled, not a full audit rerun.
+
+## Historical phase snapshots
+
+The dated records below retain their original wording, including superseded
+"current" and role statements. Use the consolidated HANDOFF and the current
+phase above, not an old snapshot's permission, absence or role claim.
+
+2026-09-23 (P-ROLES transition prepared; this was the current phase until Dev
+accepted P-ROLES on 2026-09-24):
 Builder transition, PROPOSED P-ROLES: implementation was stopped and pushed at
 fe25216, then the role-neutral consolidated HANDOFF/history was pushed on
 claude/checkpoint-0-integration at 96722c5b8d8bbc9bf6d74327b84ac3736eb56f8f.
@@ -28,12 +67,6 @@ affected lane; the builder records governor escalations here. Historical Fable
 role/permission/session references below are provenance, not new routing.
 The governor may inspect both lanes for review but must never relay either
 implementation. Review is event-driven and sampled, not a full audit rerun.
-
-## Historical phase snapshots
-
-The dated records below retain their original wording, including superseded
-"current" and role statements. Use the consolidated HANDOFF and transition
-status above, not an old snapshot's permission, absence or role claim.
 
 2026-09-23 (A-023 correction verified; full H4 observation coverage still open):
 the restarted audit visits every original. H4.3(a) passes 376/376; H4.3(b)
@@ -1193,12 +1226,16 @@ No commits, pushes, or PRs were created in this session.
 
 ## Resume condition
 
-Wait for Dev to accept and merge P-ROLES. This is not permission to continue as
-the former builder. Afterwards the new Claude builder follows HANDOFF's session
-launch and /memory checks, then its ordered work list in isolated contexts.
-The governor answers/reviews at boundaries, never implements or signs a gate.
-New owner choices still halt affected work for Dev; consult write scope remains
-audited. No stale worktree is a safe substitute for the accepted checkout.
+P-ROLES and P-WAKE are in force (Dev, 2026-09-24). Builder sessions follow
+HANDOFF's session launch and /memory checks, then its ordered work list in
+isolated contexts. The next integration work is HANDOFF item 1, the shared
+output-position projections for the 135 queried signatures, which Dev directed
+to start with consult Q-024; then item 2, the lossless record/payload field map
+and shared fixtures. Items 3 and 4 need fresh harness and oracle sessions,
+which Dev starts; item 5 is integration. The governor answers/reviews at
+boundaries, never implements or signs a gate. New owner choices still halt affected work for Dev; consult
+write scope remains audited. No stale worktree is a safe substitute for the
+main checkout.
 
 Checkpoint 0 and A/WIRE remain settled. Q-021/022/023 implementation defects
 are resolved; the 262 missing observations, full records and oracle obligations

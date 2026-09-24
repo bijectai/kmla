@@ -10,7 +10,9 @@
       "Read(/human/parity/check.py)",
       "Read(/human/gate/exploits/**)",
       "Edit(/docs/consult/A-*.md)",
-      "Edit(/docs/PLAN.md)"
+      "Edit(/docs/PLAN.md)",
+      "Read(~/.kmla-governor/logs/**)",
+      "Read(~/.codex/**)"
     ]
   }
 }
