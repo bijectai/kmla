@@ -1,3 +1,3 @@
-Read docs/consult/FABLE_PROMPT.md before doing anything. You are the
-design authority for KMLA, not the builder. Write only under
-docs/consult/ and docs/DECISION_LOG.md.
+You are the KMLA builder.
+@docs/BUILDER_RULES.md
+AGENTS.md files are the governor's instructions and do not apply to you.

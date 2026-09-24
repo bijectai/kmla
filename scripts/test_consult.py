@@ -1,40 +1,21 @@
 #!/usr/bin/env python3
-"""Offline wrapper checks in temporary repos; never invokes the real Claude CLI."""
+"""Offline governor-queue checks; no real model or protected artifact is used.
 
-import json
+P-ROLES removes (not skips) obsolete Claude spawn/tool-flag, JSON/session-id,
+resume/lock, and FABLE_PROMPT-installation tests. Those tested the retired
+subprocess channel; its historical smoke evidence and Git history are retained.
+The replacement contract is read-only awaiting/delivery, never self-consultation.
+"""
+
 import os
 from pathlib import Path
 import shutil
 import subprocess
-import sys
 import tempfile
 import unittest
 
 
 REPO = Path(__file__).resolve().parents[1]
-SESSION = "11111111-2222-4333-8444-555555555555"
-OTHER_SESSION = "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee"
-FAKE_CLI = r'''
-import json, os, pathlib, re, sys
-args = sys.argv[1:]
-pathlib.Path("last-call.json").write_text(json.dumps(args))
-mode = os.environ.get("CONSULT_TEST_MODE", "success")
-if mode == "bad-json":
-    print("not JSON")
-    raise SystemExit(0)
-prompt = args[args.index("-p") + 1]
-answer = re.search(r"Write your answer to (docs/consult/A-\d{3}\.md)", prompt)[1]
-if mode not in {"no-answer", "cli-error"}:
-    pathlib.Path(answer).write_text("Offline fixture answer.\n")
-value = {"type": "result", "subtype": "success", "is_error": False,
-         "result": answer, "session_id": os.environ["CONSULT_TEST_SESSION"]}
-if mode == "no-session":
-    del value["session_id"]
-if mode in {"error-json", "cli-error"}:
-    value.update(is_error=True, subtype="error_during_execution")
-print(json.dumps(value))
-raise SystemExit(7 if mode == "cli-error" else 0)
-'''
 
 
 class ConsultTests(unittest.TestCase):
@@ -47,143 +28,150 @@ class ConsultTests(unittest.TestCase):
         (self.root / "scripts").mkdir()
         (self.root / "bin").mkdir()
         shutil.copyfile(REPO / "scripts/consult.sh", self.root / "scripts/consult.sh")
-        # Copy Dev's real prompt unchanged; do not author a substitute prompt.
-        shutil.copyfile(REPO / "docs/consult/FABLE_PROMPT.md", self.consult / "FABLE_PROMPT.md")
+        # Any accidental attempt to launch a model is observable and forbidden.
         fake = self.root / "bin/claude"
-        fake.write_text("#!" + sys.executable + "\n" + FAKE_CLI)
+        fake.write_text("#!/bin/sh\nprintf 'spawned' > \"$CONSULT_SPAWN_MARKER\"\nexit 99\n")
         fake.chmod(0o700)
         self.env = dict(os.environ, PATH=str(fake.parent) + os.pathsep + os.environ["PATH"],
-                        TMPDIR=str(self.root), CONSULT_TEST_SESSION=SESSION)
+                        CONSULT_SPAWN_MARKER=str(self.root / "spawned"))
         self.question(1)
 
     def question(self, number):
         path = f"docs/consult/Q-{number:03d}.md"
-        (self.root / path).write_text("Offline transport fixture, not a design consultation.\n")
+        (self.root / path).write_text(
+            f"# Q-{number:03d}\n\n## Phase\nInfra\n\n## Lane\ninfra\n\n"
+            "## Question\nOffline queue fixture, not a design consultation.\n\n"
+            "## What was tried\nNone.\n\n## Files involved\nNone.\n\n"
+            "## Proposed answer\nNone.\n"
+        )
         return path
 
-    def run_consult(self, *args, mode="success", session=SESSION, cwd=None):
-        env = dict(self.env, CONSULT_TEST_MODE=mode, CONSULT_TEST_SESSION=session)
-        return subprocess.run(
-            ["bash", str(self.root / "scripts/consult.sh"), *args],
-            cwd=cwd or self.root, env=env, capture_output=True, text=True,
+    def answer(self, number=1):
+        path = self.consult / f"A-{number:03d}.md"
+        path.write_text(
+            f"# A-{number:03d}\n\n## Answer\nOffline delivery fixture.\n\n"
+            "## Rationale\nTransport test only.\n\n## Contract change\nNo.\n\n"
+            "## Escalate to Dev\nNo.\n\n## Self-review\nNo semantic assumptions.\n"
         )
+        path.chmod(0o444)
+        return path
 
-    def assert_failure(self, result, message):
-        self.assertNotEqual(result.returncode, 0)
+    def snapshot(self):
+        result = {}
+        for path in self.root.rglob("*"):
+            rel = str(path.relative_to(self.root))
+            if path.is_symlink():
+                result[rel] = ("link", os.readlink(path))
+            elif path.is_file():
+                result[rel] = ("file", path.read_bytes(), path.stat().st_mode & 0o777)
+            else:
+                result[rel] = ("directory",)
+        return result
+
+    def run_consult(self, *args, cwd=None):
+        before = self.snapshot()
+        result = subprocess.run(
+            ["bash", str(self.root / "scripts/consult.sh"), *args],
+            cwd=cwd or self.root, env=self.env, capture_output=True, text=True,
+        )
+        self.assertEqual(self.snapshot(), before, "consult changed repository paths")
+        self.assertFalse((self.root / "spawned").exists(), "consult spawned Claude")
+        return result
+
+    def assert_failure(self, result, message, status=2):
+        self.assertEqual(result.returncode, status, result.stderr)
         self.assertIn(message, result.stderr)
         self.assertEqual(result.stdout, "")
-        self.assertFalse((self.consult / ".fable_session.lock").exists())
 
-    def test_fresh_session_and_exact_tool_boundary(self):
-        result = self.run_consult("docs/consult/Q-001.md")
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout, "Offline fixture answer.\n")
-        saved = self.consult / ".fable_session"
-        self.assertEqual(saved.read_text(), SESSION + "\n")
-        self.assertEqual(saved.stat().st_mode & 0o777, 0o600)
-        self.assertEqual((self.consult / "A-001.md").stat().st_mode & 0o222, 0)
-        args = json.loads((self.root / "last-call.json").read_text())
-        for flag in ("--tools", "--allowedTools"):
-            self.assertEqual(args[args.index(flag) + 1], "Read,Glob,Grep,Write,Edit")
-        self.assertEqual(args[args.index("--permission-mode") + 1], "acceptEdits")
-        self.assertEqual(args[args.index("--output-format") + 1], "json")
-        self.assertEqual(args[args.index("--disallowedTools") + 1], "Bash,mcp__*")
-        self.assertIn("--strict-mcp-config", args)
-        self.assertIn("--disable-slash-commands", args)
-        self.assertEqual(json.loads(args[args.index("--mcp-config") + 1]), {"mcpServers": {}})
-        self.assertEqual(args[args.index("--append-system-prompt") + 1],
-                         (self.consult / "FABLE_PROMPT.md").read_text().rstrip("\n"))
-        self.assertNotIn("--resume", args)
-        self.assertFalse((self.consult / ".fable_session.lock").exists())
-
-    def test_resume_keeps_id_and_prior_answer(self):
-        self.assertEqual(self.run_consult("docs/consult/Q-001.md").returncode, 0)
-        old_answer = (self.consult / "A-001.md").read_bytes()
-        result = self.run_consult(self.question(2))
-        self.assertEqual(result.returncode, 0, result.stderr)
-        args = json.loads((self.root / "last-call.json").read_text())
-        self.assertEqual(args[args.index("--resume") + 1], SESSION)
-        self.assertEqual((self.consult / ".fable_session").read_text(), SESSION + "\n")
-        self.assertEqual((self.consult / "A-001.md").read_bytes(), old_answer)
-
-    def test_existing_answer_is_not_reused(self):
-        self.assertEqual(self.run_consult("docs/consult/Q-001.md").returncode, 0)
-        before = (self.root / "last-call.json").read_bytes()
-        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "answer already exists")
-        self.assertEqual((self.root / "last-call.json").read_bytes(), before)
-
-    def test_missing_answer_fails_even_on_success_json(self):
-        self.assert_failure(self.run_consult("docs/consult/Q-001.md", mode="no-answer"),
-                            "answer was not created")
+    def test_unanswered_question_halts_without_creating_answer_or_session(self):
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"),
+                            "awaiting the governor", status=1)
+        self.assertFalse((self.consult / "A-001.md").exists())
         self.assertFalse((self.consult / ".fable_session").exists())
 
-    def test_missing_session_warns_but_returns_answer(self):
-        result = self.run_consult("docs/consult/Q-001.md", mode="no-session")
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("warning: session_id missing", result.stderr)
-        self.assertEqual(result.stdout, "Offline fixture answer.\n")
-        self.assertFalse((self.consult / ".fable_session").exists())
+    def test_repeated_poll_is_same_question_not_new_number(self):
+        for _ in range(2):
+            self.assert_failure(self.run_consult("docs/consult/Q-001.md"),
+                                "awaiting the governor", status=1)
 
-    def test_missing_session_on_resume_preserves_previous_id(self):
+    def test_existing_answer_delivered_unchanged_repeatedly(self):
+        answer = self.answer()
+        for _ in range(2):
+            result = self.run_consult("docs/consult/Q-001.md")
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(result.stdout, answer.read_text())
+            self.assertIn("check escalation", result.stderr)
+        self.assertEqual(answer.stat().st_mode & 0o222, 0)
+
+    def test_only_matching_answer_satisfies_question(self):
+        self.answer()
+        self.assert_failure(self.run_consult(self.question(2)),
+                            "awaiting the governor", status=1)
+
+    def test_old_session_lock_and_missing_prompt_are_irrelevant(self):
+        (self.consult / ".fable_session").write_text("historical-id\n")
+        (self.consult / ".fable_session.lock").mkdir()
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"),
+                            "awaiting the governor", status=1)
+        self.answer()
         self.assertEqual(self.run_consult("docs/consult/Q-001.md").returncode, 0)
-        result = self.run_consult(self.question(2), mode="no-session")
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("warning: session_id missing", result.stderr)
-        self.assertEqual((self.consult / ".fable_session").read_text(), SESSION + "\n")
 
-    def test_malformed_saved_id_stops_before_cli(self):
-        (self.consult / ".fable_session").write_text("not-a-session-id\n")
-        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "saved session id")
-        self.assertFalse((self.root / "last-call.json").exists())
-
-    def test_existing_lock_is_preserved_and_stops_before_cli(self):
-        lock = self.consult / ".fable_session.lock"
-        lock.mkdir()
-        result = self.run_consult("docs/consult/Q-001.md")
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn("another consult is active", result.stderr)
-        self.assertTrue(lock.is_dir())
-        self.assertFalse((self.root / "last-call.json").exists())
-
-    def test_changed_resume_id_fails_without_replacing_saved_id(self):
-        self.assertEqual(self.run_consult("docs/consult/Q-001.md").returncode, 0)
-        result = self.run_consult(self.question(2), session=OTHER_SESSION)
-        self.assert_failure(result, "different session id")
-        self.assertEqual((self.consult / ".fable_session").read_text(), SESSION + "\n")
-
-    def test_cli_error_is_propagated(self):
-        result = self.run_consult("docs/consult/Q-001.md", mode="cli-error")
-        self.assert_failure(result, "claude exited 7")
-        self.assertEqual(result.returncode, 7)
-        self.assertIn("answer was not created", result.stderr)
-
-    def test_malformed_and_error_json_fail(self):
-        for mode, message in (("bad-json", "invalid CLI JSON"),
-                              ("error-json", "failed or unexpected result")):
-            with self.subTest(mode=mode):
-                self.assert_failure(self.run_consult("docs/consult/Q-001.md", mode=mode), message)
-
-    def test_missing_prompt_stops_before_cli(self):
-        (self.consult / "FABLE_PROMPT.md").unlink()
-        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "FABLE_PROMPT.md not installed")
-        self.assertFalse((self.root / "last-call.json").exists())
-
-    def test_invalid_paths_and_usage_stop_before_cli(self):
-        for args in ((), ("docs/consult/Q-000.md",), ("../Q-001.md",),
-                     ("docs/consult/Q-001.md;false",)):
+    def test_usage_and_number_grammar(self):
+        for args in ((), ("docs/consult/Q-001.md", "extra"),
+                     ("docs/consult/Q-000.md",), ("../Q-001.md",),
+                     ("docs/consult/Q-01.md",), ("docs/consult/Q-1000.md",),
+                     ("docs/consult/Q-abc.md",), ("docs/consult/Q-001.md;false",),
+                     ("docs/consult/A-001.md",), ("docs/consult/Q-００１.md",)):
             with self.subTest(args=args):
-                self.assertNotEqual(self.run_consult(*args).returncode, 0)
-        self.assertFalse((self.root / "last-call.json").exists())
+                self.assertEqual(self.run_consult(*args).returncode, 2)
+        self.assert_failure(self.run_consult(self.question(999)),
+                            "awaiting the governor", status=1)
 
-    def test_answer_symlink_is_rejected(self):
-        (self.consult / "A-001.md").symlink_to(self.root / "missing-target")
-        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "answer already exists")
-        self.assertFalse((self.root / "last-call.json").exists())
+    def test_missing_empty_and_directory_questions_rejected(self):
+        self.assert_failure(self.run_consult("docs/consult/Q-002.md"), "question is missing")
+        question = self.consult / "Q-001.md"
+        question.write_text("")
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "question is missing")
+        question.unlink()
+        question.mkdir()
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "question is missing")
+
+    def test_question_symlink_rejected(self):
+        (self.consult / "Q-002.md").symlink_to(self.consult / "Q-001.md")
+        self.assert_failure(self.run_consult("docs/consult/Q-002.md"), "question is missing")
+
+    def test_answer_symlinks_rejected_even_dangling(self):
+        path = self.consult / "A-001.md"
+        path.symlink_to(self.root / "missing")
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "answer must not")
+        path.unlink()
+        path.symlink_to(self.consult / "Q-001.md")
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "answer must not")
+
+    def test_empty_or_directory_answer_rejected(self):
+        path = self.consult / "A-001.md"
+        path.write_text("")
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "nonempty regular file")
+        path.unlink()
+        path.mkdir()
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "nonempty regular file")
+
+    def test_symlinked_consult_directory_rejected(self):
+        self.consult.rename(self.root / "moved-consult")
+        self.consult.symlink_to(self.root / "moved-consult", target_is_directory=True)
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "directories must not")
+
+    def test_symlinked_docs_directory_rejected(self):
+        docs = self.root / "docs"
+        docs.rename(self.root / "moved-docs")
+        docs.symlink_to(self.root / "moved-docs", target_is_directory=True)
+        self.assert_failure(self.run_consult("docs/consult/Q-001.md"), "directories must not")
 
     def test_other_working_directory(self):
+        answer = self.answer()
         result = self.run_consult("docs/consult/Q-001.md", cwd=self.root.parent)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual((self.consult / ".fable_session").read_text(), SESSION + "\n")
+        self.assertEqual(result.stdout, answer.read_text())
 
 
 if __name__ == "__main__":

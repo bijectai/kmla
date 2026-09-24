@@ -1,6 +1,7 @@
 # Decision log
 
-Entries are appended by Fable (design authority). PROPOSED entries are not in
+Entries are appended by the design authority (historically Fable; proposed
+successor: the governor under P-ROLES). PROPOSED entries are not in
 force until Dev accepts them and installs the corresponding text in the owning
 artifact. Contract sources: `docs/PLAN.md` §4, `docs/PROTOCOL.md` B001–B004,
 `docs/contracts/RUNTIME.md`.
@@ -43,6 +44,7 @@ and its heading still reads PENDING.
 | P-R5CYCLE | R5 flaw stands; Dev selected refined Option A with coverage/generator conditions | **ACCEPTED A** (Dev, 2026-09-22); A-009's V10/2·persons+2 remain **WITHDRAWN** | V10 in both Interface validity predicates; owner installed/re-pinned H5/R5/R8/R9 at `0a2a65a`; production eligibility, operational coverage and adequacy proofs not completed. See latest entry and STATE |
 | P-CHECKPOINT-ACCOUNTING | Later artifacts remain reported under their own checkpoints | **ACCEPTED** | `docs/PROTOCOL.md`, `docs/HANDOFF.md`, `scripts/verify_phase0.sh`; runtime checks and owner sign-off unchanged |
 | P-GROUND2 | H4.2's step (ii) cannot ground a binary event predicate that relates two events; `tax_case_33` raises | **PROPOSED** | — ; H4.2 is Dev's, see A-017. The serializer grounding path is halted |
+| P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **PROPOSED** — awaiting Dev's acceptance and merge | Prepared only on `roles/claude-builder`, based on pushed integration `96722c5`; no role change on the integration branch |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -1054,3 +1056,128 @@ re-measured. The audit's 148 H4(a) passes were measured under the old traversal
 and do not transfer — the broad run restarts. No source repair under P-INTENT,
 no validity exclusion, no reordered comparison, no deduplication of stored facts
 or solutions, no waived original.
+
+## 2026-09-23 — PROPOSED — P-ROLES: builder and governor separation
+
+Origin: Dev's role-transition directive. Preparation is authorized, but this
+amendment is **not in force until Dev accepts and merges the proposal**.
+Steps 1–2 ended builder work on pushed integration head
+`96722c5b8d8bbc9bf6d74327b84ac3736eb56f8f`. Steps 3–4 are confined to
+`roles/claude-builder`; they are not installed on the integration branch.
+
+### Allocation and rationale
+
+Implementation moves to **Claude Code builder sessions**, including separate
+integration, oracle and harness contexts. **Astra becomes the governor**:
+design authority, consult answerer, reviewer and event-driven monitor; no
+implementation. Review is sampled at PR/milestone boundaries, not a second
+full-corpus audit. The governor recommends; only Dev signs.
+
+Unchanged: Dev owns the four independent artifacts (DECISIONS, parity meter,
+gate exploits, signed invariant statements), every installation under human/,
+every re-pin and every checkpoint sign-off. human/ remains read-only, the meter
+source and exploit contents remain unread, and lane isolation, owner-only Git
+attribution, the design-flaw stop-and-report standard, immutable A-files and
+the three-failed-edit-cycle circuit breaker remain. PLAN stays byte for byte
+as supplied; upon acceptance, PROTOCOL supersedes its old role assignments.
+No semantics, validity domain, comparison, checkpoint or budget is changed.
+
+The benchmark's validity rests on owner-artifact independence and lane
+independence; neither depends on which system plays which role. A reviewer
+from a different system than the implementer shares fewer of its blind spots.
+That is the rationale for the separation, not evidence that a review proves
+correctness or substitutes for a meter or owner decision.
+
+**New hazard:** the governor may read both lanes in order to review them and
+must never convey one lane's implementation to the other, including code,
+tests, implementation reports, algorithms or implementation-derived hints.
+Communicate via approved DECISIONS/Interface semantics and opaque input/output
+evidence, not by making one side imitate the other.
+
+### Operative-document inventory and migration
+
+| File | Proposed treatment |
+| --- | --- |
+| Root `CLAUDE.md` | Always present; identifies the Claude builder, imports `@docs/BUILDER_RULES.md`, disclaims AGENTS instructions |
+| Root `AGENTS.md` | Governor duties, answer/review write scope, owner escalation, sampled reviews and non-relay boundary; explicit first-line Claude exclusion |
+| `docs/BUILDER_RULES.md` | Root builder rules moved here with their substance preserved; consult the governor, not Fable/another Claude builder |
+| `Oracle/AGENTS.md`, `harness/AGENTS.md`, `gen/AGENTS.md` | Git-move existing lane instructions to neighboring `CLAUDE.md`; replace AGENTS with short governor-only lane review rules |
+| `gen/README.md` | Point the builder to its neighboring CLAUDE, not AGENTS |
+| `docs/consult/README.md`, `scripts/consult.sh`, `scripts/test_consult.py` | Manual/event-driven governor queue, nonzero awaiting status, read-only retrieval of an existing A; no Claude spawn, resume or session protocol; obsolete spawn tests removed with a note |
+| `.claude/settings.json` | Disable default attribution and deny protected edits/reads project-wide |
+| `.claude/lanes/oracle.json`, `.claude/lanes/harness.json` | Per-session Read/Edit denies derived from the opposite implementation, scripts and reports; no project-wide lane settings; gen file deferred until that lane opens |
+| `docs/HANDOFF.md` | Add proposed roles and exact session launch commands, memory-load check, stale-worktree warning; preserve consolidated state and owner deliverables |
+| `STATE.md` | Identify transition and current role routing; mark dated predecessor role statements as history, update operative resume directions |
+| `docs/DECISION_LOG.md`, `docs/PROTOCOL.md` | This PROPOSED entry/index and matching PROPOSED amendment; no acceptance inferred |
+| `.github/workflows/verify.yml` | Protected-change diagnostic points to relocated BUILDER_RULES; enforcement itself unchanged |
+
+Root README and active semantic contracts use generic builder/owner language
+and need no role reassignment. **Exceptions deliberately left unchanged:**
+`docs/PLAN.md`, all `human/`, sealed A-files and historical Q-files,
+`docs/consult/FABLE_PROMPT.md` (history only, no longer imported), consult smoke
+test/old PR description/recommended semantics, dated phase/evidence reports,
+the unedited `docs/phase1/HANDOFF_HISTORY.md`, historical decision-log bodies
+and dated STATE records, `Oracle/UNPROVED.md`'s dated ledgers and retained
+Oracle test diagnostics, and historical/protected-artifact drafts (including
+the H4 candidate's recorded Fable review). Old role language in those records
+is provenance, not current authority. Existing stale worktrees are not updated
+or deleted; their conflicting/missing local CLAUDE files are listed in HANDOFF.
+
+### Loading, settings and limits
+
+Use Dev's supplied Claude Code facts: CLAUDE is the builder entry point;
+root CLAUDE must exist so AGENTS fallback cannot select governor instructions.
+Imports are relative `@path` (at most four levels); nested CLAUDE loads on
+directory reads, and ancestor main-checkout CLAUDE files also apply in nested
+worktrees. Do not change the Project instructions setting. Worktrees share
+project settings/local settings; lane denies belong in session `--settings`
+files and merge with project lists. Session loading must be confirmed by the
+first new builder with `/memory`; static inspection cannot establish what the
+actual Claude Code session loads.
+
+Project attribution is `{"commit":"","pr":"","sessionUrl":false}`;
+do not use deprecated includeCoAuthoredBy. Commit author/committer remain
+`Devakh Rashie <59419810+arkanemystic@users.noreply.github.com>`.
+Project denies are `Edit(/human/**)`, `Read(/human/parity/check.py)`,
+`Read(/human/gate/exploits/**)`, `Edit(/docs/consult/A-*.md)` and
+`Edit(/docs/PLAN.md)`. **These also block Dev's own Claude sessions from editing
+human/, which is already the rule.** Owner installation remains outside those
+builder sessions. Use Edit for all writes, not a Write permission rule.
+
+Anchored patterns resolve to the project root. Read denies also cover common
+shell reads naming the path, but not scripts that open files, recursive grep
+from inside a directory or `/usr/bin/cat`. Therefore these rules are defence
+in depth, not a sandbox: written lane rules and existing read-only runner
+mounts remain primary. Never use those gaps to bypass isolation. Mixed-lane
+reports are not a shortcut around the boundary. No governor polling loop or
+new automation is installed by this proposal.
+
+## 2026-09-24 — CORRECTION to P-ROLES (measured): lane deny patterns must be relative
+
+P-ROLES above says "Anchored patterns resolve to the project root." That holds
+for the committed project `.claude/settings.json` and **not** for a file passed
+with `claude --settings`. Measured on 2026-09-24 in a throwaway repository with
+headless Claude sessions:
+
+| Settings location | Pattern | Result |
+| --- | --- | --- |
+| `--settings .claude/lanes/x.json` | `Read(/secret/**)` | read succeeded — deny ignored |
+| `--settings .claude/lanes/x.json` | `Read(secret/**)` | denied |
+| project `.claude/settings.json` | `Read(/secret/**)` | denied |
+
+Every pattern in `.claude/lanes/oracle.json` (102) and `.claude/lanes/harness.json`
+(36) was anchored, so as launched the lane isolation was instruction-only. Both
+files now use relative patterns, which resolve against the session's working
+directory; launch lane sessions from the repository root, as HANDOFF directs.
+The project-wide denies in `.claude/settings.json` were already effective and
+are unchanged. The same commit removes the transitional paragraph from the top
+of `AGENTS.md`, which would otherwise have become a standing freeze on the
+governor after merge. P-ROLES remains PROPOSED until Dev accepts it.
+
+Re-tested after the fix against the real repository from its root, each with one
+traced Read call: oracle lane → `harness/AGENTS.md` and `scripts/test_grounding.py`
+denied, `Interface/WIRE.md` readable; harness lane → `Oracle/AGENTS.md` denied,
+`Interface/WIRE.md` readable. The project `Read(/human/gate/exploits/**)` deny was
+confirmed on a copy of the committed `.claude/settings.json` with a dummy
+fixture, because builder sessions in the real repository decline to attempt that
+read. `human/parity/check.py` was never used as a test target.

@@ -2,6 +2,39 @@
 
 ## Current phase
 
+Builder transition, PROPOSED P-ROLES: implementation was stopped and pushed at
+fe25216, then the role-neutral consolidated HANDOFF/history was pushed on
+claude/checkpoint-0-integration at 96722c5b8d8bbc9bf6d74327b84ac3736eb56f8f.
+The separate roles/claude-builder proposal prepares Claude Code as builder and
+Astra as governor (design authority, consult answers, review and monitoring).
+It is NOT in force until Dev accepts and merges. No implementation, audit or
+lane dispatch follows this transition task; wait for acceptance. No merge.
+
+Technical status remains H4(a) 376 pass; H4(b) 114 pass / 262 unimplemented;
+full audit exit 1 for incomplete coverage. The partial oracle has 122 checked
+assertions; 147 builder tests passed at the implementation head. No new full
+audit is run for this transition. Checkpoint 0 is signed; Checkpoint 1 is not.
+Before any remaining H6 implementation, the new builder must declare all 135
+queried-signature output projections once in Interface per G2/H6.5, including
+bound answer positions, and move private harness exceptions into that shared
+declaration. Remaining producer/oracle obligations and exact owner deliverables
+are in the consolidated docs/HANDOFF.md. H4.2 bound-purpose installation and
+re-pin remain Dev's; human/ and PLAN stay untouched.
+
+Upon acceptance, builder rules live in CLAUDE/BUILDER_RULES and lane CLAUDE
+files; AGENTS binds only the governor. The consult script becomes a read-only
+awaiting/delivery check, never a Claude subprocess. An unanswered Q halts the
+affected lane; the builder records governor escalations here. Historical Fable
+role/permission/session references below are provenance, not new routing.
+The governor may inspect both lanes for review but must never relay either
+implementation. Review is event-driven and sampled, not a full audit rerun.
+
+## Historical phase snapshots
+
+The dated records below retain their original wording, including superseded
+"current" and role statements. Use the consolidated HANDOFF and transition
+status above, not an old snapshot's permission, absence or role claim.
+
 2026-09-23 (A-023 correction verified; full H4 observation coverage still open):
 the restarted audit visits every original. H4.3(a) passes 376/376; H4.3(b)
 passes 114, with 262 explicitly unimplemented, no mismatch/error/timeout.
@@ -1160,23 +1193,18 @@ No commits, pushes, or PRs were created in this session.
 
 ## Resume condition
 
-Checkpoint 0 remains explicitly signed off. A/WIRE are accepted, not open
-choices. Continue only within their installed shared contracts and the remaining
-implementation obligations above, with separate oracle/serializer contexts and
-read-only human. Owner installation/re-pin is complete at 0a2a65a. The active
-query-admission circuit breaker was resolved on Dev-authorized continuation;
-pre-dispatch checks passed and both isolated lanes delivered initial slices.
-The Q-020 candidate is implemented and measured for tax_case_33 only; protected
-installation remains Dev's. A-021 confirms the authorized country-only fix is
-an implementation correction; complete all 14 regressions, then continue the
-all-376 audit without changing semantics. Consultations have standing scope
-authorization with per-call changed-path audits. New contract choices still
-halt the affected lane for Dev.
-The authorized §7703 proof-only round is complete: all three assertions pass,
-and bounded source translation continued with explicit open dependencies.
-Continue §7703 integration without mistaking those dependencies for references.
-A repeated proof breaker requires Fable design-flaw review of the obligation.
-Do not claim
-R5 termination before actual query/stipulation coverage and adequacy proofs.
-Checkpoint 1 still requires zero parity mismatches on all 376 cases, an unchanged
-meter hash, owner hazard/mismatch review and explicit owner sign-off before Phase 2.
+Wait for Dev to accept and merge P-ROLES. This is not permission to continue as
+the former builder. Afterwards the new Claude builder follows HANDOFF's session
+launch and /memory checks, then its ordered work list in isolated contexts.
+The governor answers/reviews at boundaries, never implements or signs a gate.
+New owner choices still halt affected work for Dev; consult write scope remains
+audited. No stale worktree is a safe substitute for the accepted checkout.
+
+Checkpoint 0 and A/WIRE remain settled. Q-021/022/023 implementation defects
+are resolved; the 262 missing observations, full records and oracle obligations
+remain work, not new completed gates. H4.2 bound-purpose installation/re-pin
+remain Dev's. No R5 termination claim before operational coverage and adequacy
+proofs. A repeated proof breaker goes to the governor for design-flaw review
+of the obligation, not a fourth attempt. Checkpoint 1 still requires all-376
+round trips and zero parity mismatches, unchanged meter, owner hazard/mismatch
+review and explicit owner sign-off before Phase 2.

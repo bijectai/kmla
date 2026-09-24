@@ -269,3 +269,48 @@ evidence, consequence, and needed decision under `STATE.md` → `Blockers`.
 Report it to the user before implementing a revised design. Do not silently
 change the experiment, comparison, input population, or semantic interpretation.
 The mutation-admission review that led to B003 is the standard to follow.
+
+## PROPOSED — P-ROLES: Claude builder and independent governor
+
+**Not in force.** Prepared at Dev's direction on `roles/claude-builder`, based
+on pushed integration `96722c5`. Dev must accept and merge before the role
+swap takes effect; no checkpoint is signed by preparing these files.
+
+Upon acceptance, Claude Code sessions own implementation, with integration,
+oracle and harness contexts kept separate. Astra owns design-authority answers,
+PR/milestone review and event-driven, sampled monitoring, never implementation
+or a second full-audit run. Recommendations are not owner sign-off. This
+supersedes PLAN's assignments to Astra/Fable without modifying PLAN.
+
+Unchanged: Dev owns DECISIONS, the independent meter, gate exploits and signed
+invariant statements, all human/ installations, re-pins and checkpoint sign-offs.
+The human read-only boundary, meter/exploit source bans, separate implementation
+lanes sharing only approved DECISIONS/Interface semantics, owner-only Git
+attribution, stop-and-report standard and three-failed-edit-cycle circuit breaker
+remain in force. No comparison, domain, semantics or gate changes.
+
+Owner-artifact independence and lane independence do not depend on which system
+builds. A reviewer from a different system than the implementer shares fewer
+blind spots. The new hazard is cross-lane leakage through a governor that sees
+both implementations: never relay either lane's implementation to the other.
+
+CLAUDE files bind builders, AGENTS files bind the governor. Root CLAUDE always
+exists and imports docs/BUILDER_RULES.md; lane CLAUDE files preserve the former
+lane rules. Session-specific settings add opposite-lane Read/Edit denies to
+project-wide protected-artifact denies and disabled attribution. These are
+defence in depth, not a sandbox, and also apply to Dev's Claude sessions.
+Do not change the Project instructions setting. First-session `/memory`
+confirmation, launch commands and stale-worktree warnings are in HANDOFF.
+
+Consultation is a manual governor queue: the builder writes a never-reused
+Q-number, scripts/consult.sh validates it and exits nonzero while awaiting an
+A. It never spawns Claude or answers a question. The governor writes/seals A
+files in the README format; existing answers are read-only, disagreement is a
+new Q, and no one answers their own Q. An escalation halts the affected lane
+for Dev. The governor writes only A-files, decision-log entries and review
+notes; the builder maintains STATE and implementation. FABLE_PROMPT remains
+unchanged history, not an operative role assignment.
+
+The full file-by-file migration and historical exceptions are in the P-ROLES
+decision-log entry. Both branches are pushed for review; neither is merged by
+an assistant. After preparing this proposal, wait for Dev's acceptance.

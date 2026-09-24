@@ -120,6 +120,6 @@ jobs:
             exit 0
           fi
           echo "::error::human/ is owner-owned and read-only to the assistant"
-          echo "::error::(docs/PLAN.md section 2, AGENTS.md). If this change is yours,"
+          echo "::error::(docs/PLAN.md section 2, docs/BUILDER_RULES.md). If this change is yours,"
           echo "::error::add the 'owner-human-update' label to this pull request."
           exit 1
