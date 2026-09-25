@@ -33,6 +33,31 @@ role/permission/session references below are provenance, not new routing.
 The governor may inspect both lanes for review but must never relay either
 implementation. Review is event-driven and sampled, not a full audit rerun.
 
+Q-024 was answered by A-024 through the first P-WAKE wake, which Dev ran
+(verdict 0, audit clean). A-024 settles the declaration's location: a per-mode
+output field in TIME_SCHEMA.json. It lists the required bound-answer outputs
+and routes the harness's exceptions through DECISIONS and source call sites,
+not a lane relay. It escalates PROPOSED P-H6-CONJ to Dev; see Blockers.
+The projection declaration may not be finalized as approved: its full G2
+statute call-site derivation is unreviewed. Only read-only contract and
+call-site analysis continues.
+
+The builder's derivation is in docs/consult/evidence/q025-g2-derivation/: all
+135 signatures under a syntactic reading (S) and a live-path reading (L), with
+file:line basis. It is static and not executed. Q-025 asked the governor to
+review it. The Q-025 wake ended with exit 3: only the worktree list changed,
+because another Claude session's worktree HEAD moved during the wake. Dev
+reviewed the HALT, attributed the change to that session rather than the
+governor, and directed delivery.
+
+A-025 does not approve the derivation. It separates three counting policies,
+proposes P-G2-CALLS (a call-entry census) for Dev, confirms nine G2
+interpretation points with qualifications, accepts the builder-owned
+representation, and escalates a possible G6 gap in §3306/§3301/tax. HANDOFF
+item 1 and the affected definedness work are halted; see Blockers. Dev directed
+no re-wake. Only work independent of those decisions continues, starting with
+correcting the stale claims in the Q-025 evidence README.
+
 ## Historical phase snapshots
 
 The dated records below retain their original wording, including superseded
@@ -632,6 +657,99 @@ semantic decisions or as permission to change anything under `human/`.
   file still needs to be part of the installed/pinned bundle (B006).
 
 ## Blockers
+
+### P-G2-CALLS (A-025): the G2 call-counting policy awaits Dev
+
+**Update 2026-09-25:** Dev accepted P-G2-CALLS as drafted (ENTRY plus the
+R3→R4 fix). It is staged for install in docs/contracts/G2_H6_INSTALL.patch
+together with P-H6-CONJ, and installation is pending. The projection
+re-derivation under ENTRY and the WIRE work stay halted until Dev confirms
+the install and the builder has verified the manifest. The original record
+follows.
+
+G2 (`human/DECISIONS.md:33-40`) does not say which call sites count once a path
+has unavoidably failed or raised. A-025 separates three policies:
+- S, syntactic continuation;
+- ENTRY, operational call entry;
+- defined-domain-only.
+
+It selects none. It proposes P-G2-CALLS, an ENTRY census scoped to
+stipulation-free H1-H3 households and to each original case with its own
+stipulations, as a candidate for Dev to approve or amend. The proposal also
+corrects G2's "(R3)" citation to R4. It is PROPOSED in docs/DECISION_LOG.md and
+not installed.
+
+Until Dev decides:
+- the shared output-position declaration stays halted: neither the S nor the L
+  column of docs/consult/evidence/q025-g2-derivation/ is accepted, and a rule
+  will need re-deriving under whatever policy Dev picks;
+- nothing is written to Interface/ for projections, and no producer or scoring
+  work depends on a projection table.
+
+A-025 accepts the representation (a one-based per-case-mode `outputs` map in
+TIME_SCHEMA.json, rendered separately), but only as spelling, not as content.
+
+### G6 finding (A-025, R-Q025): possible definedness gap through tax/3, unconfirmed
+
+**Update 2026-09-25:** Dev authorized the bounded diagnostic in the
+integration session, diagnosis only and emulated on the Mac, and lifted the
+§3306/§3301/tax definedness halt for this diagnostic alone. Its evidence
+goes to docs/consult/evidence/g6-domestic-2026-09-25/. If a V1-V10 household
+raises, the builder brings Dev a minimal exclusion proposal and implements
+nothing. The original record follows.
+
+This comes from static source reading and is not reproduced. The path is
+`utils.pl:342 -> section3301.pl:7 -> section3306.pl:14 -> :57 -> :44 -> :441
+-> :604`, under `human/sara/sara/statutes/prolog/`. Along it, `s3306_a_3` may
+be called with Caly unbound for a domestic service, so `Pyear is Caly-1` at
+`:242` could raise under `tax/3` for a household that the signed V-rules admit.
+V7 excludes only payment cycles.
+
+A-025 requires a bounded diagnostic on the pinned runtime before any domain
+amendment. It must record:
+- the exact root query and facts;
+- the runtime identity and TZ;
+- the goal and bindings;
+- stdout and stderr verbatim;
+- the exit and timeout status;
+- every V1-V10 premise, checked without fake guards.
+
+A result that disproves the path is preserved too. A-025 also gives a candidate
+household: an unpaid domestic service, "private home" and "usa" locations, no
+payments or stipulations.
+
+Per Dev (2026-09-25), the affected §3306, §3301 and tax definedness work is
+halted, including that diagnostic, until Dev decides. No V-rule, exclusion,
+fuel value or source repair is proposed or applied. The two corpus anomalies
+A-025 confirms (`cases/s151_b_neg.pl:20`, `cases/tax_case_100.pl:5,28`) are
+preserved under G9, with no repair.
+
+### P-H6-CONJ (A-024): extra-conjunct scoring scope awaits Dev
+
+**Update 2026-09-25:** Dev accepted P-H6-CONJ as proposed in A-024 §3. It is
+staged in docs/contracts/G2_H6_INSTALL.patch, and installation is pending.
+Scoring work stays halted until the install is confirmed and the manifest
+verifies. The original record follows.
+
+Still pending after A-025, which leaves it unchanged.
+
+A-024 escalates an owner-text inconsistency. H6.3 (`human/DECISIONS.md:895`)
+names only `s152_d_2_D_pos/neg` as cases with extra conjuncts. H6.5 also flags
+`s152_d_2_G/4`, `s68_b/3` and `s3306_c_10_A/4`, and the originals
+`s152_d_2_G_pos`, `s68_a_1_pos/neg` and `s3306_c_10_A_i_pos` carry extra
+conjuncts. The proposed replacement sentence is recorded as PROPOSED
+P-H6-CONJ in docs/DECISION_LOG.md. It is not installed; only Dev approves,
+amends and installs it.
+
+Halted until Dev decides:
+- the H6.3 scoring of those extra-conjunct originals;
+- the integration and scoring work and the producer release that depend on it;
+- finalizing the shared projection declaration as approved.
+
+A-024 certifies only the listed bound-answer outputs and the named G2 classes,
+not a complete 135-signature table. Read-only contract and statute call-site
+analysis may continue. Additional conjuncts do not change any target's
+output tuple. No lane is dispatched and no checkpoint is affected.
 
 ### Q-023 resolved: event-domain correction verified; H4(b) implementation incomplete
 

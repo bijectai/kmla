@@ -1,0 +1,46 @@
+--- a/human/DECISIONS.md
++++ b/human/DECISIONS.md
+@@ -37,7 +37,22 @@
+ Lean function per mode, named `p_mode`, with the mode string recorded in the
+ section table (H6). Instantiation guards (`nonvar/1`, `var/1`) are resolved at
+ translation time by the mode; the both-unbound `s152` call is the empty list
+-(R3).
++(R4).
++
++For the H6.5 case-mode declaration, count statute and case-test call entries
++reachable by a finite prefix of the G1-ordered evaluation from the listed
++root modes. The census covers stipulation-free, well-formed H1–H3 households
++in those modes and each original case with its own facts and H4 stipulations;
++do not pool unrelated case stipulations. Do not prune this census using
++G6/V-rule exclusions. An entered goal counts even if it fails, raises, or
++belongs to an evaluation that later raises or diverges. A successor requiring
++a return that cannot occur does not count. Binding at a successor is derived
++from the successful returns that can actually reach it, including stipulated
++rule bodies, not head-variable spelling or vacuous success implications.
++Keep H6.5's bound-answer rule. This census does not certify binding claims
++for arbitrary additional wildcard stipulations or discharge any theorem
++quantified over all `ValidStip`; those obligations remain open. No validity,
++source, observation, or corpus-population change follows from this census.
+ 
+ **G3 (`=`, `==`, `\==`).** `=` with one side unbound is a binding; with both
+ bound it is structural equality on `Term`. `==`/`\==` on bound terms is
+@@ -892,9 +907,16 @@
+   external observation is a set.
+ * H6.3 (per-case accuracy). A positive case passes iff the expected tuple
+   (the ground values of the case goal in output positions, or "non-empty" if
+-  none) is in the observed set; a negative case passes iff it is not. The two
+-  cases with extra conjuncts (`s152_d_2_D_pos/neg`) evaluate the conjuncts on
+-  each observed tuple. The `tax_case_*` files test `tax/3` with a ground
++  none) is in the observed set; a negative case passes iff it is not.
++  For every original case directive with additional conjuncts, evaluate the
++  additional conjuncts on each matching solution of the queried target,
++  preserving the original variable sharing, literal order, bindings and
++  negation scope. The positive test succeeds iff a solution satisfies the
++  entire conjunction; a negated conjunction succeeds iff none does. This
++  includes `s152_d_2_D_pos/neg`, `s152_d_2_G_pos`, `s68_a_1_pos/neg`, and
++  `s3306_c_10_A_i_pos`. Additional conjuncts do not change the target's
++  output-position tuple or the H6.1/H6.2 observation policy.
++  The `tax_case_*` files test `tax/3` with a ground
+   answer.
+ * H6.4 (models and stipulations). Model outputs are graded on
+   stipulation-free inputs only (V1). Per-case accuracy on the originals is

@@ -1,0 +1,26 @@
+--- a/human/DECISIONS.md
++++ b/human/DECISIONS.md
+@@ -37,7 +37,22 @@
+ Lean function per mode, named `p_mode`, with the mode string recorded in the
+ section table (H6). Instantiation guards (`nonvar/1`, `var/1`) are resolved at
+ translation time by the mode; the both-unbound `s152` call is the empty list
+-(R3).
++(R4).
++
++For the H6.5 case-mode declaration, count statute and case-test call entries
++reachable by a finite prefix of the G1-ordered evaluation from the listed
++root modes. The census covers stipulation-free, well-formed H1–H3 households
++in those modes and each original case with its own facts and H4 stipulations;
++do not pool unrelated case stipulations. Do not prune this census using
++G6/V-rule exclusions. An entered goal counts even if it fails, raises, or
++belongs to an evaluation that later raises or diverges. A successor requiring
++a return that cannot occur does not count. Binding at a successor is derived
++from the successful returns that can actually reach it, including stipulated
++rule bodies, not head-variable spelling or vacuous success implications.
++Keep H6.5's bound-answer rule. This census does not certify binding claims
++for arbitrary additional wildcard stipulations or discharge any theorem
++quantified over all `ValidStip`; those obligations remain open. No validity,
++source, observation, or corpus-population change follows from this census.
+ 
+ **G3 (`=`, `==`, `\==`).** `=` with one side unbound is a binding; with both
+ bound it is structural equality on `Term`. `==`/`\==` on bound terms is
