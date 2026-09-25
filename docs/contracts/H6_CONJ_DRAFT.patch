@@ -1,0 +1,22 @@
+--- a/human/DECISIONS.md
++++ b/human/DECISIONS.md
+@@ -892,9 +892,16 @@
+   external observation is a set.
+ * H6.3 (per-case accuracy). A positive case passes iff the expected tuple
+   (the ground values of the case goal in output positions, or "non-empty" if
+-  none) is in the observed set; a negative case passes iff it is not. The two
+-  cases with extra conjuncts (`s152_d_2_D_pos/neg`) evaluate the conjuncts on
+-  each observed tuple. The `tax_case_*` files test `tax/3` with a ground
++  none) is in the observed set; a negative case passes iff it is not.
++  For every original case directive with additional conjuncts, evaluate the
++  additional conjuncts on each matching solution of the queried target,
++  preserving the original variable sharing, literal order, bindings and
++  negation scope. The positive test succeeds iff a solution satisfies the
++  entire conjunction; a negated conjunction succeeds iff none does. This
++  includes `s152_d_2_D_pos/neg`, `s152_d_2_G_pos`, `s68_a_1_pos/neg`, and
++  `s3306_c_10_A_i_pos`. Additional conjuncts do not change the target's
++  output-position tuple or the H6.1/H6.2 observation policy.
++  The `tax_case_*` files test `tax/3` with a ground
+   answer.
+ * H6.4 (models and stipulations). Model outputs are graded on
+   stipulation-free inputs only (V1). Per-case accuracy on the originals is

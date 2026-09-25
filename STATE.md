@@ -660,6 +660,13 @@ semantic decisions or as permission to change anything under `human/`.
 
 ### P-G2-CALLS (A-025): the G2 call-counting policy awaits Dev
 
+**Update 2026-09-25:** Dev accepted P-G2-CALLS as drafted (ENTRY plus the
+R3→R4 fix). It is staged for install in docs/contracts/G2_H6_INSTALL.patch
+together with P-H6-CONJ, and installation is pending. The projection
+re-derivation under ENTRY and the WIRE work stay halted until Dev confirms
+the install and the builder has verified the manifest. The original record
+follows.
+
 G2 (`human/DECISIONS.md:33-40`) does not say which call sites count once a path
 has unavoidably failed or raised. A-025 separates three policies:
 - S, syntactic continuation;
@@ -683,6 +690,13 @@ A-025 accepts the representation (a one-based per-case-mode `outputs` map in
 TIME_SCHEMA.json, rendered separately), but only as spelling, not as content.
 
 ### G6 finding (A-025, R-Q025): possible definedness gap through tax/3, unconfirmed
+
+**Update 2026-09-25:** Dev authorized the bounded diagnostic in the
+integration session, diagnosis only and emulated on the Mac, and lifted the
+§3306/§3301/tax definedness halt for this diagnostic alone. Its evidence
+goes to docs/consult/evidence/g6-domestic-2026-09-25/. If a V1-V10 household
+raises, the builder brings Dev a minimal exclusion proposal and implements
+nothing. The original record follows.
 
 This comes from static source reading and is not reproduced. The path is
 `utils.pl:342 -> section3301.pl:7 -> section3306.pl:14 -> :57 -> :44 -> :441
@@ -711,6 +725,11 @@ A-025 confirms (`cases/s151_b_neg.pl:20`, `cases/tax_case_100.pl:5,28`) are
 preserved under G9, with no repair.
 
 ### P-H6-CONJ (A-024): extra-conjunct scoring scope awaits Dev
+
+**Update 2026-09-25:** Dev accepted P-H6-CONJ as proposed in A-024 §3. It is
+staged in docs/contracts/G2_H6_INSTALL.patch, and installation is pending.
+Scoring work stays halted until the install is confirmed and the manifest
+verifies. The original record follows.
 
 Still pending after A-025, which leaves it unchanged.
 

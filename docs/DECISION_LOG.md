@@ -48,8 +48,8 @@ and its heading still reads PENDING.
 | P-GROUND2 | H4.2's step (ii) cannot ground a binary event predicate that relates two events; `tax_case_33` raises | **PROPOSED** | — ; H4.2 is Dev's, see A-017. The serializer grounding path is halted |
 | P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **ACCEPTED** (Dev, 2026-09-24; merged PR #7, bc80499) | Installed on `main` by the PR #7 merge: root and lane `CLAUDE.md`, `docs/BUILDER_RULES.md`, governor `AGENTS.md` files, `docs/PROTOCOL.md`, `.claude/settings.json`, `.claude/lanes/*.json`, consult README/script/tests, HANDOFF and STATE; stale activation wording updated by the `builder/activate-roles` PR. Recorded by the builder at Dev's direction |
 | P-WAKE | Per-question headless governor wake with `scripts/wake_governor.sh`; manual relay through Dev remains the fallback | **ACCEPTED** (Dev, 2026-09-24) | Installed by the `builder/activate-roles` PR: `docs/PROTOCOL.md`, `docs/BUILDER_RULES.md`, `docs/consult/README.md`, `docs/HANDOFF.md`, `scripts/wake_governor.sh`, `scripts/test_wake_governor.py`, `.claude/settings.json` read denies. `AGENTS.md` unchanged (Dev's call). Recorded by the builder at Dev's direction |
-| P-H6-CONJ | H6.3 extra-conjunct scope beyond its two named cases | **PROPOSED** (A-024, 2026-09-24) | Not installed; owner approval/amendment and installation required. Affected integration/scoring work halted; no checkpoint or projection-table acceptance |
-| P-G2-CALLS | Explicit G2 call-entry/census scope and R4 citation correction | **PROPOSED** (A-025, 2026-09-25) | Not installed; Dev must approve/amend. Neither S nor L accepted as the declaration |
+| P-H6-CONJ | H6.3 extra-conjunct scope beyond its two named cases | **ACCEPTED** (Dev, 2026-09-25, as proposed in A-024 §3; recorded by the builder at Dev's direction) | **Installation pending.** Staged in `docs/contracts/G2_H6_INSTALL.patch` together with P-G2-CALLS (draft: `docs/contracts/H6_CONJ_DRAFT.md`). Not installed or re-pinned until Dev confirms. Scoring work stays halted until then; no checkpoint or projection-table acceptance |
+| P-G2-CALLS | Explicit G2 call-entry/census scope and R4 citation correction | **ACCEPTED** (Dev, 2026-09-25, as drafted in `docs/contracts/G2_CALLS_DRAFT.md`; recorded by the builder at Dev's direction) | **Installation pending.** Staged in `docs/contracts/G2_H6_INSTALL.patch`. Not installed or re-pinned until Dev confirms. Neither the S nor the L column is accepted; the declaration is to be re-derived under ENTRY once the install is confirmed and the manifest verifies |
 | R-Q025 | Sampled derivation review, two corpus anomalies and possible domestic-service definedness gap | **REVIEW / UNCONFIRMED G6 FINDING** (A-025, 2026-09-25) | No implementation or domain change; builder to record affected halt and retain bounded pinned diagnostic for Dev |
 
 `INSTALLED` entries record an action taken, not a proposal.
@@ -1452,3 +1452,47 @@ report to Dev. P-H6-CONJ remains pending; no checkpoint is signed.
 Self-review: G1/H4 ordered evaluation and successful-return bindings assumed;
 runtime failure and full validity are unmeasured; three failed edit cycles on
 one check means stop/report, no fourth attempt or weakened check (none here).
+
+## 2026-09-25 — ACCEPTED (Dev) — P-G2-CALLS: explicit call-entry and census scope
+
+Recorded by the builder at Dev's direction. Dev's decision 1 of 2026-09-25,
+verbatim:
+
+> P-G2-CALLS: approved as drafted in docs/contracts/G2_CALLS_DRAFT.md (A-025 §2
+> ENTRY text verbatim, plus the R3→R4 citation fix).
+
+This accepts the 2026-09-25 PROPOSED entry above, whose body is unchanged. The
+approved change has two parts:
+- the ENTRY census paragraph, inserted after G2 in `human/DECISIONS.md`;
+- G2's `(R3)` corrected to `(R4)`.
+
+The exact text and patch are in `docs/contracts/G2_CALLS_DRAFT.md`. Dev
+directed one combined install with P-H6-CONJ:
+`docs/contracts/G2_H6_INSTALL.patch`, with the commands and expected digests
+in `docs/contracts/H6_CONJ_DRAFT.md`.
+
+**Installed: pending.** Dev installs and re-pins. The builder records the
+installation only after Dev confirms it and the manifest verifies. Until then
+the projection declaration stays halted. Afterwards it is re-derived under
+ENTRY and reviewed before anything is written to `Interface/`; neither column
+of the Q-025 evidence is accepted. No `Valid`/`ValidStip`, source, observation
+or population change follows, and no checkpoint is signed.
+
+## 2026-09-25 — ACCEPTED (Dev) — P-H6-CONJ: state the full extra-conjunct scope
+
+Recorded by the builder at Dev's direction. Dev's decision 2 of 2026-09-25,
+verbatim:
+
+> P-H6-CONJ: approved as proposed in A-024 §3.
+
+This accepts the 2026-09-24 PROPOSED entry above, whose body is unchanged. The
+approved change replaces H6.3's sentence "The two cases with extra conjuncts
+(`s152_d_2_D_pos/neg`) evaluate the conjuncts on each observed tuple." with
+A-024 §3's text, verbatim. The draft is `docs/contracts/H6_CONJ_DRAFT.md`, and
+the install is combined with P-G2-CALLS in
+`docs/contracts/G2_H6_INSTALL.patch`.
+
+**Installed: pending**, as above. After Dev confirms the install and the
+manifest verifies, the scoring of the six extra-conjunct originals becomes
+implementation work. Output-position tuples and the H6.1/H6.2 observation
+policy are unchanged, and no checkpoint is signed.

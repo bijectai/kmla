@@ -1,15 +1,18 @@
 # G2 call-entry census (P-G2-CALLS): install candidate
 
-Status: **CANDIDATE ONLY — not approved, not installed.** Staged at Dev's
-direction on 2026-09-25 so that Dev can decide and, if approving, install it
-without drafting. It contains:
+Status: **APPROVED by Dev on 2026-09-25 — NOT INSTALLED.** Staged at Dev's
+direction on 2026-09-25 as a candidate. Dev then approved it as drafted, and
+the approval is recorded in `docs/DECISION_LOG.md` by the builder at Dev's
+direction, with "installed" pending. Dev asked to install it together with
+P-H6-CONJ: use `docs/contracts/G2_H6_INSTALL.patch` and the combined commands
+and digests in `docs/contracts/H6_CONJ_DRAFT.md`. This draft contains:
 - A-025 §2's proposed P-G2-CALLS clarification, verbatim;
 - A-025 §5's editorial citation fix;
 - the exact patch, re-pin and verify commands.
 
 Only Dev approves, amends, installs into `human/DECISIONS.md` and re-pins. The
-builder wrote nothing under `human/`. Staging this draft approves nothing: not
-the ENTRY policy, not any projection row, not Checkpoint 1.
+builder wrote nothing under `human/`. Approving the policy approves no
+projection row and does not pass Checkpoint 1.
 
 ## Origin
 
@@ -106,7 +109,10 @@ check only; nothing was written.
  bound it is structural equality on `Term`. `==`/`\==` on bound terms is
 ```
 
-## Install and re-pin (Dev only)
+## Install and re-pin alone (Dev only; superseded by the combined install)
+
+Dev asked for one combined install. The commands below are for installing
+this change alone and are kept for reference.
 
 Run this from the repository root, in Dev's own shell rather than a builder
 session: the project settings deny builder edits under `human/`, and owner
