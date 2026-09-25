@@ -49,6 +49,8 @@ and its heading still reads PENDING.
 | P-ROLES | Claude Code builds; Astra governs, reviews and answers consults | **ACCEPTED** (Dev, 2026-09-24; merged PR #7, bc80499) | Installed on `main` by the PR #7 merge: root and lane `CLAUDE.md`, `docs/BUILDER_RULES.md`, governor `AGENTS.md` files, `docs/PROTOCOL.md`, `.claude/settings.json`, `.claude/lanes/*.json`, consult README/script/tests, HANDOFF and STATE; stale activation wording updated by the `builder/activate-roles` PR. Recorded by the builder at Dev's direction |
 | P-WAKE | Per-question headless governor wake with `scripts/wake_governor.sh`; manual relay through Dev remains the fallback | **ACCEPTED** (Dev, 2026-09-24) | Installed by the `builder/activate-roles` PR: `docs/PROTOCOL.md`, `docs/BUILDER_RULES.md`, `docs/consult/README.md`, `docs/HANDOFF.md`, `scripts/wake_governor.sh`, `scripts/test_wake_governor.py`, `.claude/settings.json` read denies. `AGENTS.md` unchanged (Dev's call). Recorded by the builder at Dev's direction |
 | P-H6-CONJ | H6.3 extra-conjunct scope beyond its two named cases | **PROPOSED** (A-024, 2026-09-24) | Not installed; owner approval/amendment and installation required. Affected integration/scoring work halted; no checkpoint or projection-table acceptance |
+| P-G2-CALLS | Explicit G2 call-entry/census scope and R4 citation correction | **PROPOSED** (A-025, 2026-09-25) | Not installed; Dev must approve/amend. Neither S nor L accepted as the declaration |
+| R-Q025 | Sampled derivation review, two corpus anomalies and possible domestic-service definedness gap | **REVIEW / UNCONFIRMED G6 FINDING** (A-025, 2026-09-25) | No implementation or domain change; builder to record affected halt and retain bounded pinned diagnostic for Dev |
 
 `INSTALLED` entries record an action taken, not a proposal.
 
@@ -1355,3 +1357,98 @@ audit or evidence re-hash was run. Prolog assumptions: G1/G2 literal-entry
 bindings and original conjunction/NAF scope, without a new runtime claim.
 Circuit breaker: three failed edit cycles on one check means stop and report;
 no fourth attempt or weakened check. No implementation edit cycles here.
+
+## 2026-09-25 — PROPOSED — P-G2-CALLS: explicit call-entry and census scope
+
+Origin: builder Q-025, governor A-025. Audience: integration and both lanes;
+shared semantics and original-source evidence only. No owner approval follows
+from the automated wake, analyst consensus or this proposal.
+
+**Missing choice.** G2 (`human/DECISIONS.md:33–40`) does not explicitly choose
+syntactic continuation past an unavoidable failure/error (S), operational
+call-entry reachability (L/ENTRY), or exclusion of all calls in G6 regions.
+The last is not implied by G6, which governs reference definedness, not a
+projection census. The proposed handling below is ENTRY, not an installed
+interpretation and not approval of the existing L column.
+
+**Candidate clarification for Dev:**
+
+> For the H6.5 case-mode declaration, count statute and case-test call entries
+> reachable by a finite prefix of the G1-ordered evaluation from the listed
+> root modes. The census covers stipulation-free, well-formed H1–H3 households
+> in those modes and each original case with its own facts and H4 stipulations;
+> do not pool unrelated case stipulations. Do not prune this census using
+> G6/V-rule exclusions. An entered goal counts even if it fails, raises, or
+> belongs to an evaluation that later raises or diverges. A successor requiring
+> a return that cannot occur does not count. Binding at a successor is derived
+> from the successful returns that can actually reach it, including stipulated
+> rule bodies, not head-variable spelling or vacuous success implications.
+> Keep H6.5's bound-answer rule. This census does not certify binding claims
+> for arbitrary additional wildcard stipulations or discharge any theorem
+> quantified over all `ValidStip`; those obligations remain open. No validity,
+> source, observation, or corpus-population change follows from this census.
+
+Evidence distinguishing entry from completion: `section3306.pl:678` is entered
+with a free Workday, but `:694 -> utils.pl:11` fails before successor `:681`;
+`section3306.pl:604` can be entered with free Caly before its callee fails to
+return normally. Sources are under `human/sara/sara/statutes/prolog/`.
+Rule-body binding example: `human/sara/sara/cases/s2_b_1_A_pos.pl:40` binds its
+head Year through `between/3` on success. H4.1/H6.4 require actual original
+stipulations; V1 does not remove them from oracle checking.
+
+**Separate editorial correction, proposed:** in G2, replace the `(R3)` citation
+for the both-unbound `s152` rule with `(R4)`. R3 is `amount/2`; the intended rule
+is already explicit in G2 and R4 (`human/DECISIONS.md:1390–1401`).
+
+Dev must approve/amend and install any protected correction and re-pin. The
+builder must retain the dependent declaration/producer/scoring halt in STATE.
+No schema content, Valid/ValidStip, source, comparison or checkpoint is changed.
+Prolog assumptions: literal-entry state follows G1, success bindings include H4
+rule bodies, and entered calls are distinct from successful evaluations.
+Circuit breaker: three failed edit cycles on one check means stop/report; no
+fourth attempt or weakened check.
+
+## 2026-09-25 — REVIEW — R-Q025: derivation consistency and source findings
+
+Origin: Q-025/A-025. Audience: integration and both lanes. Sampled shared/source
+review only; neither lane implementation was read. No corpus audit, evidence
+re-hash or interpreter execution was performed.
+
+**Derivation findings.** Under the submitted finite-corpus stipulation premises
+and L, `s7703_a_1/5` position 5's unresolved status is inconsistent with the
+`s152_b_2/4` L argument: successful stipulated escapes bind the year. This is
+not certification over arbitrary `ValidStip`. The critic/README is stale where
+it says Q1/Q2 are undefined, the `s3306_c_10_A_ii/3` predecessor-failure basis
+is absent, and `s151_a/3`/`tax/3` lack H6.5 bound-answer evidence: those appear
+in the delivered TABLE at lines 2406, 2260, 1277 and 2497 respectively. Preserve
+prior analysis; reconcile the current evidence rather than blindly applying
+the critic. Neither whole S/L column is accepted by this sampled review.
+
+**Confirmed corpus discrepancies, preserved under G9.** Relative to
+`human/sara/sara/`: `cases/s151_b_neg.pl:20` supplies atom `bob` to the amount
+position of `s151_b/3` (`statutes/prolog/section151.pl:84`), whereas its question
+describes the spouse exemption. `cases/tax_case_100.pl:5,28` names Bob but
+queries Alice. No arity/tag/query repair, exclusion or changed label authorized.
+
+**Possible G6/V-rule gap, not reproduced.** Source path under
+`statutes/prolog/`: `utils.pl:342 -> section3301.pl:7 -> section3306.pl:14 ->
+:57 -> :44 -> :441 -> :604`. A domestic service may reach `s3306_a_3` with
+Caly unbound, leading to `:242` or an earlier failure to return. V7 is about
+cycles of payments and does not by itself establish this path impossible.
+An unpaid domestic-service candidate with employee/employer and string
+locations `"private home"` and `"usa"`, and no payments, plans, kinship,
+births, residences or stipulations, leaves that payment graph empty. This is
+a static diagnostic candidate, not a certified Valid input or pinned exception.
+
+Require a bounded pinned-runtime root diagnostic, verbatim output/error and
+bindings, runtime/TZ provenance, exit/timeout status and an explicit signed
+V1–V10 assessment without fake production guards. Record a disproving result
+as well. If an admitted root raises, Dev must review a minimal exclusion and
+original-corpus impact before any V-rule change. Never replace exception or
+fuel exhaustion with a reference value, repair source, or filter to pass.
+Builder to record the affected §3306/§3301/tax definedness halt in STATE and
+report to Dev. P-H6-CONJ remains pending; no checkpoint is signed.
+
+Self-review: G1/H4 ordered evaluation and successful-return bindings assumed;
+runtime failure and full validity are unmeasured; three failed edit cycles on
+one check means stop/report, no fourth attempt or weakened check (none here).
