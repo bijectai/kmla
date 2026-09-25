@@ -42,6 +42,17 @@ The projection declaration may not be finalized as approved: its full G2
 statute call-site derivation is unreviewed. Only read-only contract and
 call-site analysis continues.
 
+The builder's derivation is in docs/consult/evidence/q025-g2-derivation/: all
+135 signatures under a syntactic reading (S) and a live-path reading (L), with
+file:line basis. It is static and not executed. Two independent derivations
+agreed in 9 of 10 groups, and a critic found no conflict with A-024. The
+readings differ on 10 rows. HANDOFF item 1 stays halted, awaiting
+docs/consult/Q-025.md: review of the derivation, the S/L reading, the other
+G2 interpretations and the representation. Q-025 also routes several findings
+for Dev: G2's R3/R4 citation slip, two corpus anomalies, and a possible
+unrecorded reference-undefined path through tax/3, which has not been
+executed.
+
 ## Historical phase snapshots
 
 The dated records below retain their original wording, including superseded
