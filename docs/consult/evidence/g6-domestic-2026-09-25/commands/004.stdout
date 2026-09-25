@@ -1,0 +1,20 @@
+household('household.pl')
+probe(s3306_c,s3306_c(A,alice,B,C,D))
+first_instantiation_error(context(system: (is)/2,A))
+BACKTRACE-BEGIN
+  [20] _G1127 is _G1131-1
+  [19] '<meta-call>'(user: ...) <foreign>
+  [18] '$bags':findall_loop((_G1203,_G1204),user: ...,_G1200,[]) at /usr/lib/swi-prolog/boot/bags.pl:82
+  [17] setup_call_catcher_cleanup('$bags':'$new_findall_bag','$bags': ...,_G1246,'$bags':'$destroy_findall_bag') at /usr/lib/swi-prolog/boot/init.pl:310
+  [13] s3306_a_3(alice,_G1292,_G1293,_G1294) at /corpus/statutes/prolog/section3306.pl:237
+  [12] s3306_c_2(alice_domestic_service,"private home",_G1328) at /corpus/statutes/prolog/section3306.pl:604
+  [11] s3306_c(alice_domestic_service,alice,bob,_G1364,_G1365) at /corpus/statutes/prolog/section3306.pl:441
+  [10] once(user: ...) at /usr/lib/swi-prolog/boot/init.pl:250
+   [9] '<meta-call>'(user: ...) <foreign>
+   [8] catch(user: ...,error(instantiation_error,...),user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [7] run('household.pl',s3306_c) at /audit/g6_domestic.pl:38
+   [6] catch(user: ...,_G1536,user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [5] main('household.pl',s3306_c) at /audit/g6_domestic.pl:26
+   [4] ignore(user: ...) at /usr/lib/swi-prolog/boot/init.pl:258
+BACKTRACE-END
+result(s3306_c,exception(error(instantiation_error,context(system: (is)/2,A))))

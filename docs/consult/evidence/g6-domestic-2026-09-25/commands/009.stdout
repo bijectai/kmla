@@ -1,0 +1,3 @@
+household('household.pl')
+probe(v10_s152_c_2,findall(A-B,s152_c_2(A,B,C,D),E))
+result(v10_s152_c_2,success(findall(A-B,s152_c_2(A,B,C,D),[])))

@@ -1,0 +1,3 @@
+household('household.pl')
+probe(v5_is_child_of,is_child_of(bob,alice,A,B))
+result(v5_is_child_of,failure)

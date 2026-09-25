@@ -689,7 +689,18 @@ Until Dev decides:
 A-025 accepts the representation (a one-based per-case-mode `outputs` map in
 TIME_SCHEMA.json, rendered separately), but only as spelling, not as content.
 
-### G6 finding (A-025, R-Q025): possible definedness gap through tax/3, unconfirmed
+### G6 finding (A-025, R-Q025): definedness gap through tax/3, reproduced
+
+**Result 2026-09-25:** the diagnostic reproduces the gap. A household that
+satisfies V1-V10 makes the root query tax(alice,2017,T) raise an instantiation
+error at section3306.pl:242, reached via :44 -> :441 -> :604 -> s3306_a_3 with
+Caly free. The run was emulated through Rosetta for Linux, with the runtime,
+translator and statute digests all matching their records. Controls: bob's
+tax, and the same household without "private home", both return 0. Of the 376
+originals, 0 fall in the region. The builder's minimal exclusion proposal,
+candidate V11 (E6) in docs/consult/evidence/g6-domestic-2026-09-25/README.md,
+awaits Dev; nothing is implemented. The §3306/§3301/tax definedness halt,
+lifted for the diagnostic only, is back in force until Dev decides.
 
 **Update 2026-09-25:** Dev authorized the bounded diagnostic in the
 integration session, diagnosis only and emulated on the Mac, and lifted the

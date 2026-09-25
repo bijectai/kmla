@@ -1,0 +1,87 @@
+{
+  "why": "identity.json was written by run.py before g6_originals.pl, originals_probe.py and translator_probe.py existed or changed; this supplement pins every evidence tool as committed and cross-checks the runtime against its records",
+  "tools_sha256": {
+    "g6_domestic.pl": "bcc3a716ccb352ca62ef5d396fe1a3f591ccb4cd261e4aabba746c0b7cc2ec27",
+    "g6_originals.pl": "6f6a0d1cef85cff076e800983c652959351f6c2603dffbc022a37a8aa4a9f481",
+    "household.pl": "087a2ef8ecf7cde82092495a2d73179f80b31522dc6b551367caf88b6c98950a",
+    "household_control.pl": "518db8a696e724223ca30726b5cefe475e88e0d02262a2ee12fb1759af0351bc",
+    "originals_probe.py": "e047254eae3fcf514fd5100a07545384b7e6149515d5996e857e556c9776a91f",
+    "run.py": "027fc34cdc0a0264f738b71ccf64fe21004e8131a1eff8d9c970c26b8d176807",
+    "translator_probe.py": "4910216db62d33c9ee9bf64084f713a54cfea25d831f9421f76e8f1df0468de2"
+  },
+  "statutes_vs_manifest": {
+    "events.pl": {
+      "in_container": "aed56ad9b0569d91328b2e2932621bc49911791f5a343dca7c2af7a87a5af85c",
+      "human/HASHES.txt": "aed56ad9b0569d91328b2e2932621bc49911791f5a343dca7c2af7a87a5af85c",
+      "match": true
+    },
+    "init.pl": {
+      "in_container": "b1dedfd2469737799c9d12b50d8e3d3ce19652aaa87465c43ce0d190b1c6926f",
+      "human/HASHES.txt": "b1dedfd2469737799c9d12b50d8e3d3ce19652aaa87465c43ce0d190b1c6926f",
+      "match": true
+    },
+    "section1.pl": {
+      "in_container": "76ad42975e9156b8e235319bab8510056f558df9c023be0947f48599fcb63a32",
+      "human/HASHES.txt": "76ad42975e9156b8e235319bab8510056f558df9c023be0947f48599fcb63a32",
+      "match": true
+    },
+    "section151.pl": {
+      "in_container": "b00273394d4fc9f734947287d411400dbf49d2c38785dba82c63c2b12378ccbc",
+      "human/HASHES.txt": "b00273394d4fc9f734947287d411400dbf49d2c38785dba82c63c2b12378ccbc",
+      "match": true
+    },
+    "section152.pl": {
+      "in_container": "6d653a12197a64967f686ad0f4f751e2c9876d3804a45c93fb7df09effc747f3",
+      "human/HASHES.txt": "6d653a12197a64967f686ad0f4f751e2c9876d3804a45c93fb7df09effc747f3",
+      "match": true
+    },
+    "section2.pl": {
+      "in_container": "14431d6954acffd7b1f2dcc2014dc63f89618ae974e2f147b8265ec336b6265f",
+      "human/HASHES.txt": "14431d6954acffd7b1f2dcc2014dc63f89618ae974e2f147b8265ec336b6265f",
+      "match": true
+    },
+    "section3301.pl": {
+      "in_container": "f053e7e0b9ed17b73a4d81530cb64532388221581323478d4b81d21b8aa35662",
+      "human/HASHES.txt": "f053e7e0b9ed17b73a4d81530cb64532388221581323478d4b81d21b8aa35662",
+      "match": true
+    },
+    "section3306.pl": {
+      "in_container": "e5b07f2e510eb8d66095217beaa0db5b0c2b092f801481e58d4c670050a6768e",
+      "human/HASHES.txt": "e5b07f2e510eb8d66095217beaa0db5b0c2b092f801481e58d4c670050a6768e",
+      "match": true
+    },
+    "section63.pl": {
+      "in_container": "337bfedc2ad36cf29466c7b2004d1e5420a396bd6648c1a89e3073ca2d939b07",
+      "human/HASHES.txt": "337bfedc2ad36cf29466c7b2004d1e5420a396bd6648c1a89e3073ca2d939b07",
+      "match": true
+    },
+    "section68.pl": {
+      "in_container": "3604740d2d7bd4d67e442cdb308cb00c3d0de63d764a8859adeb97cfef75ad34",
+      "human/HASHES.txt": "3604740d2d7bd4d67e442cdb308cb00c3d0de63d764a8859adeb97cfef75ad34",
+      "match": true
+    },
+    "section7703.pl": {
+      "in_container": "37f5ad90cbfea12e47b6c91068f93edd02980cd88f3a1caacfdf79b4263e81e3",
+      "human/HASHES.txt": "37f5ad90cbfea12e47b6c91068f93edd02980cd88f3a1caacfdf79b4263e81e3",
+      "match": true
+    },
+    "utils.pl": {
+      "in_container": "e773297c392da3c7caec86dc393d72c1233a44255af4f9a51c136415f9070e1c",
+      "human/HASHES.txt": "e773297c392da3c7caec86dc393d72c1233a44255af4f9a51c136415f9070e1c",
+      "match": true
+    }
+  },
+  "all_statutes_match_manifest": true,
+  "translator": {
+    "name": "Rosetta for Linux (exe /run/rosetta/rosetta, commands/011 and 014)",
+    "binary_sha256_measured": "e743f8a5dcdf8255c507e41e4085d8a7c6cc5efda8585265f6c1603f2cbe1ab6",
+    "binary_sha256_RUNTIME_json": "e743f8a5dcdf8255c507e41e4085d8a7c6cc5efda8585265f6c1603f2cbe1ab6",
+    "match": true
+  },
+  "swipl_exe": {
+    "sha256_measured": "b6d1ff84656fced3e00e940240ee69982e14b953c1ed5b939b72af799b978a5b",
+    "sha256_RUNTIME_json": "b6d1ff84656fced3e00e940240ee69982e14b953c1ed5b939b72af799b978a5b",
+    "match": true
+  },
+  "emulated": true
+}

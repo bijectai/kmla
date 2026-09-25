@@ -1,0 +1,26 @@
+household('household.pl')
+probe(s3306_a,s3306_a(alice,2017))
+first_instantiation_error(context(system: (is)/2,A))
+BACKTRACE-BEGIN
+  [30] _G220 is _G223-1
+  [29] '<meta-call>'(user: ...) <foreign>
+  [28] '$bags':findall_loop((_G236,_G237),user: ...,_G233,[]) at /usr/lib/swi-prolog/boot/bags.pl:82
+  [27] setup_call_catcher_cleanup('$bags':'$new_findall_bag','$bags': ...,_G247,'$bags':'$destroy_findall_bag') at /usr/lib/swi-prolog/boot/init.pl:310
+  [23] s3306_a_3(alice,_G260,_G261,_G262) at /corpus/statutes/prolog/section3306.pl:237
+  [22] s3306_c_2(alice_domestic_service,"private home",_G266) at /corpus/statutes/prolog/section3306.pl:604
+  [21] s3306_c(alice_domestic_service,alice,bob,_G271,_G272) at /corpus/statutes/prolog/section3306.pl:441
+  [20] s3306_a_1_is_day_of_employment(alice,bob,_G276) at /corpus/statutes/prolog/section3306.pl:44
+  [19] '<meta-call>'(user: ...) <foreign>
+  [18] '$bags':findall_loop((_G288,...),user: ...,_G285,[]) at /usr/lib/swi-prolog/boot/bags.pl:82
+  [17] setup_call_catcher_cleanup('$bags':'$new_findall_bag','$bags': ...,_G299,'$bags':'$destroy_findall_bag') at /usr/lib/swi-prolog/boot/init.pl:310
+  [13] s3306_a_1_B(alice,_G315,_G316,2017) at /corpus/statutes/prolog/section3306.pl:54
+  [11] s3306_a(alice,2017) at /corpus/statutes/prolog/section3306.pl:5
+  [10] once(user: ...) at /usr/lib/swi-prolog/boot/init.pl:250
+   [9] '<meta-call>'(user: ...) <foreign>
+   [8] catch(user: ...,error(instantiation_error,...),user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [7] run('household.pl',s3306_a) at /audit/g6_domestic.pl:38
+   [6] catch(user: ...,_G414,user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [5] main('household.pl',s3306_a) at /audit/g6_domestic.pl:26
+   [4] ignore(user: ...) at /usr/lib/swi-prolog/boot/init.pl:258
+BACKTRACE-END
+result(s3306_a,exception(error(instantiation_error,context(system: (is)/2,A))))

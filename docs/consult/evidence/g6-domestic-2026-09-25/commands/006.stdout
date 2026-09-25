@@ -1,0 +1,3 @@
+household('household.pl')
+probe(root_tax_bob,tax(bob,2017,A))
+result(root_tax_bob,success(tax(bob,2017,0)))

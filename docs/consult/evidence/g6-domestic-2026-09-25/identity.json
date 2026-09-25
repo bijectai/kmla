@@ -1,0 +1,32 @@
+{
+  "image_id": "sha256:8e53d3a0003635786ccdeafc0048b3344b621815fe4881fd4512914a95606ec7",
+  "image_platform": "linux/amd64",
+  "image_repo_tags": [
+    "kmla-swipl:runtime-infra-check"
+  ],
+  "image_labels": {
+    "org.kmla.runtime.dockerfile-sha256": "fc26076b088477b1e3c56af553ecbc6f916a69b297114cbd1a76ec734493d448"
+  },
+  "image_env": [
+    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "TZ=America/New_York",
+    "LANG=C.UTF-8",
+    "LC_ALL=C.UTF-8"
+  ],
+  "runtime_record": "docs/contracts/RUNTIME.json",
+  "runtime_record_sha256": "c1ca3a433d329ca28818cdd177190f14930a8025e310c0c9f1310d862c1aa12d",
+  "decisions_sha256": "12d534e2ea589f97dfd27d93ddebb88e37cbc259af66ebe7e1b54f03d7f8686a",
+  "manifest_sha256": "5ff23beb28eacdf18d4428395e1d96e4fc8123a8f51ae29abc7943bf0f6062b9",
+  "host": {
+    "os": "Darwin",
+    "machine": "arm64",
+    "docker_server": "29.1.5 arm64"
+  },
+  "emulated": true,
+  "inputs_sha256": {
+    "g6_domestic.pl": "bcc3a716ccb352ca62ef5d396fe1a3f591ccb4cd261e4aabba746c0b7cc2ec27",
+    "household.pl": "087a2ef8ecf7cde82092495a2d73179f80b31522dc6b551367caf88b6c98950a",
+    "household_control.pl": "518db8a696e724223ca30726b5cefe475e88e0d02262a2ee12fb1759af0351bc"
+  },
+  "scope": "G6 definedness diagnosis only (A-025, R-Q025); no V-rule, exclusion or reference answer"
+}

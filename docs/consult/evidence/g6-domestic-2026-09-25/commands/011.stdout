@@ -1,0 +1,3 @@
+exe=/run/rosetta/rosetta
+rosetta_present=no
+800000000000-800000026000 r--p 00000000 00:3a 2                          /run/rosetta/rosetta

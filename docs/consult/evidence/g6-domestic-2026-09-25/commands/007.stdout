@@ -1,0 +1,3 @@
+household('household_control.pl')
+probe(root_tax,tax(alice,2017,A))
+result(root_tax,success(tax(alice,2017,0)))

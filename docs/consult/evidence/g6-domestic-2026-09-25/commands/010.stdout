@@ -1,0 +1,3 @@
+household('household.pl')
+probe(v8_s151_c_applies,findall(A-B, (member(A,[alice,bob]),s151_c_applies(A,B,2017)),C))
+result(v8_s151_c_applies,success(findall(A-B, (member(A,[alice,bob]),s151_c_applies(A,B,2017)),[])))

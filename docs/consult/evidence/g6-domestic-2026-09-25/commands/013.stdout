@@ -1,0 +1,3 @@
+case('household.pl',clauses(6),stipulations_skipped([]),dom0([alice_domestic_service-alice-bob]),reach604([alice_domestic_service-alice-bob]),s3306_c_2_at_441([alice_domestic_service-raised(error(instantiation_error,context(system: (is)/2,A)))]))
+case('household_control.pl',clauses(5),stipulations_skipped([]),dom0([]),reach604([]),s3306_c_2_at_441([]))
+done(2)

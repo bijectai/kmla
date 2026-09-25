@@ -1,0 +1,28 @@
+household('household.pl')
+probe(root_tax,tax(alice,2017,A))
+first_instantiation_error(context(system: (is)/2,A))
+BACKTRACE-BEGIN
+  [32] _G229 is _G232-1
+  [31] '<meta-call>'(user: ...) <foreign>
+  [30] '$bags':findall_loop((_G245,_G246),user: ...,_G242,[]) at /usr/lib/swi-prolog/boot/bags.pl:82
+  [29] setup_call_catcher_cleanup('$bags':'$new_findall_bag','$bags': ...,_G256,'$bags':'$destroy_findall_bag') at /usr/lib/swi-prolog/boot/init.pl:310
+  [25] s3306_a_3(alice,_G269,_G270,_G271) at /corpus/statutes/prolog/section3306.pl:237
+  [24] s3306_c_2(alice_domestic_service,"private home",_G275) at /corpus/statutes/prolog/section3306.pl:604
+  [23] s3306_c(alice_domestic_service,alice,bob,_G280,_G281) at /corpus/statutes/prolog/section3306.pl:441
+  [22] s3306_a_1_is_day_of_employment(alice,bob,_G285) at /corpus/statutes/prolog/section3306.pl:44
+  [21] '<meta-call>'(user: ...) <foreign>
+  [20] '$bags':findall_loop((_G297,...),user: ...,_G294,[]) at /usr/lib/swi-prolog/boot/bags.pl:82
+  [19] setup_call_catcher_cleanup('$bags':'$new_findall_bag','$bags': ...,_G308,'$bags':'$destroy_findall_bag') at /usr/lib/swi-prolog/boot/init.pl:310
+  [15] s3306_a_1_B(alice,_G324,_G325,2017) at /corpus/statutes/prolog/section3306.pl:54
+  [13] s3306_a(alice,2017) at /corpus/statutes/prolog/section3306.pl:5
+  [12] s3301(alice,2017,_G353,_G354,_G355,_G356) at /corpus/statutes/prolog/section3301.pl:7
+  [11] tax(alice,2017,_G370) at /corpus/statutes/prolog/utils.pl:342
+  [10] once(user: ...) at /usr/lib/swi-prolog/boot/init.pl:250
+   [9] '<meta-call>'(user: ...) <foreign>
+   [8] catch(user: ...,error(instantiation_error,...),user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [7] run('household.pl',root_tax) at /audit/g6_domestic.pl:38
+   [6] catch(user: ...,_G454,user: ...) at /usr/lib/swi-prolog/boot/init.pl:274
+   [5] main('household.pl',root_tax) at /audit/g6_domestic.pl:26
+   [4] ignore(user: ...) at /usr/lib/swi-prolog/boot/init.pl:258
+BACKTRACE-END
+result(root_tax,exception(error(instantiation_error,context(system: (is)/2,A))))
