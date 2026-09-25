@@ -116,8 +116,9 @@ esac
 repo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)" ||
   invalid 'cannot resolve the repository root'
 cd -- "$repo_root" || invalid 'cannot enter the repository root'
-top="$(g rev-parse --show-toplevel 2>/dev/null)" &&
-  [ "$(cd -- "$top" && pwd -P)" = "$repo_root" ] ||
+# Compare directories, not spellings: on a case-insensitive filesystem the
+# caller's $PWD may differ in case from the path Git reports for the same root.
+top="$(g rev-parse --show-toplevel 2>/dev/null)" && [ "$top" -ef "$repo_root" ] ||
   invalid 'the script is not inside a Git checkout root'
 
 # Question validation mirrors scripts/consult.sh, which stays unchanged.

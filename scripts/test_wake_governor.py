@@ -497,6 +497,16 @@ class WakeGovernorTests(unittest.TestCase):
                                       script=sub / "scripts/wake_governor.sh"),
                             "not inside a Git checkout root")
 
+    def test_differently_cased_path_to_the_same_checkout(self):
+        # On a case-insensitive filesystem the caller's $PWD may spell the
+        # checkout differently from the path Git reports; it is the same root.
+        alt = Path(str(self.repo).swapcase())
+        if not alt.exists() or not os.path.samefile(alt, self.repo):
+            self.skipTest("case-sensitive filesystem: no second spelling of the checkout")
+        result = self.wake(actions="sealed", cwd=alt, script=Path("scripts/wake_governor.sh"),
+                           env={"PWD": str(alt)})
+        self.assert_verdict(result, 0)
+
     # Decision-log shapes.
     def test_new_index_row_and_appended_entry_are_clean(self):
         result = self.wake(actions="sealed,row,append")
