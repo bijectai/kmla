@@ -4,7 +4,8 @@ A-024 asked for the output positions of the 135 queried signatures to be derived
 from G2 statute call sites as well as H6.5's case modes and its bound-answer
 table, with each row keeping its basis, and for underdetermined rows to come
 back for review. This directory is that derivation. It is **builder analysis for
-review, not a declaration**: nothing here is in `Interface/`.
+review, not a declaration**: nothing here is in `Interface/`. A-025 reviewed it
+and did not approve it; see "Review status" below.
 
 - `TABLE.md`: a summary table, then one section per signature listing its
   reached modes and every position's classification under both readings, with
@@ -33,8 +34,10 @@ entry in that caller mode. That holds for:
   or an earlier statute call whose clauses always bind it and which no case
   stipulation leaves unbound.
 
-Bindings inside `\+` and `findall/3` do not escape. Modes propagate from the
-case modes through every statute caller. G2's `nonvar`/`var` guards are
+Bindings made inside `\+` do not escape. Neither do bindings of the variables
+inside a `findall/3` goal, but `findall/3`'s third argument is bound to the
+collected list (A-025 §3). Modes propagate from the case modes through every
+statute caller. G2's `nonvar`/`var` guards are
 resolved by the mode, and the both-unbound `s152` call is empty.
 
 - **Reading S (syntactic):** every call site reached in a reached mode counts.
@@ -78,25 +81,52 @@ otherwise **underdetermined**.
   `s63_d_2/3`, `s63_f_1_A/2`, `s63_f_2_A/2`, `s68_f/1`, `s3306_a_1/2`,
   `s3306_b_2_A/1`, `s3306_b_2_C/1` and `s3306_c_6/1`.
 
-## Critic corrections, not applied to the table
+## Critic findings, reconciled against the delivered table
 
-- `s7703_a_1/5` position 5 under L: the adjudicated row marks it
-  underdetermined, conditioned on a "Q1" that is defined nowhere. The critic
-  shows that under the table's own L reading it is an input: outputs_L
-  `[1,2,3,4]`, consistent with the other s7703 L rows. See the critic's
-  evidence in `derivation.json`.
-- `s3306_c_10_A_ii/3` under L: the result `[]` is right, but the row's stated
-  basis is wrong. The correct basis is that `:681` is reached only after `:678`
-  succeeds, and `:678` has no solution with Workday unbound: `:694` fails at the
-  `nonvar` guard in `utils.pl:11`.
-- **Missing basis text, with no change to outputs:**
-  - `tax/3` and `s151_a/3` should cite `DECISIONS.md:913-916` and A-024's
-    table. `tax/3` also stays the H6.1/H6.2 first-solution exception and is
-    never enumerated.
-  - The L-only exclusions in `s152_b_2`, `s152_c_1_E`, `s152_c_3` and
-    `s152_d_1_D` should cite `section152.pl:65 -> :129`,
-    `:243 -> :268 -> utils.pl:274` and `:285 -> :345`.
-  - Several rows omit why their excluded positions are always bound.
+An earlier version of this section repeated the pass-two critic's findings
+without checking them against `TABLE.md`. A-025 found several of them stale.
+The critic's original text is kept unchanged in `derivation.json` as history;
+this section describes the table as delivered.
+
+- **`s7703_a_1/5` position 5 under L.** The row is underdetermined, and
+  `TABLE.md:2406` defines the two questions it depends on (Q1, Q2). The
+  critic's "undefined Q1" was wrong. A-025 finds the row's status inconsistent
+  with the `s152_b_2/4` position-4 argument under L. Given L and the stated
+  corpus-stipulation premises, position 5 would be an input, but that is not a
+  certification over arbitrary `ValidStip`. The row is left as delivered,
+  because neither column is accepted (see "Review status").
+- **`s3306_c_10_A_ii/3` under L.** `TABLE.md:2260` already gives the correct
+  basis: `:681` is reached only after `:678` succeeds, and with Workday unbound
+  `:678` fails at the `nonvar` guard in `utils.pl:11` via `:694`. The critic's
+  claim that the basis was wrong is stale. A raise at `:717`, inside the
+  callee, would not establish non-entry.
+- **Bound-answer basis.** `tax/3` position 3 (`TABLE.md:2497`) and
+  `s151_a/3` position 2 (`TABLE.md:1276`) already cite A-024's table and
+  `DECISIONS.md:913-916`, and `tax/3` keeps the H6.1/H6.2 first-solution
+  exception. A-025's sampled §152 L rows contain source chains. Some other rows
+  may still omit why their excluded positions are always bound. Reconcile any
+  row against the delivered bytes, not the critic's checklist.
+- **The critic's scoping premise.** Its unqualified "bindings inside findall do
+  not escape" is corrected as in Definitions above.
+
+## Review status (A-025, 2026-09-25)
+
+- **Not approved.** The derivation is retained analysis. Neither the S column
+  nor the L column is accepted as the declaration, and two analysts agreeing
+  does not prove an input position is always ground.
+- **Counting policy.** A-025 separates three counting policies: S (syntactic
+  continuation), ENTRY (operational call entry) and defined-domain-only. It
+  selects none, and proposes P-G2-CALLS, an ENTRY census, for Dev to approve or
+  amend. Under the policy Dev chooses, the affected rows must be re-derived. S
+  would also need a uniform rule for bindings after a goal that cannot return:
+  "bound on every successful return" is vacuous when nothing returns.
+- **Interpretation points.** Its answers to the nine points are in A-025 §3.
+  Classifications that rely on corpus stipulations hold for the corpus only.
+- **Representation.** Accepted as builder spelling only: one-based `outputs`
+  keyed by case mode, with `[]` versus absence kept distinct. Content is not
+  approved.
+- **Halt.** HANDOFF item 1 is halted until Dev decides P-G2-CALLS and
+  P-H6-CONJ (`STATE.md` → Blockers).
 
 ## Limits
 
@@ -104,7 +134,7 @@ otherwise **underdetermined**.
 - **Beyond the corpus:** some input classifications rely on corpus stipulations
   being ground in a position, for example every `s63/3` stipulation in position
   3 for the 20 `s1_*_{i..v}/2` rows. They would change for Households carrying
-  wildcard stipulations there. Whether that matters beyond the corpus is one of
-  Q-025's questions.
+  wildcard stipulations there. A-025: do not extrapolate. `ValidStip` does not
+  require those positions to be ground, so the claims hold for the corpus only.
 - **Statute-internal modes:** these are recorded in `reached_modes` but not
   proposed for the declaration, following A-024 §1 and H6.5.

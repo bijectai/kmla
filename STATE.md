@@ -44,14 +44,19 @@ call-site analysis continues.
 
 The builder's derivation is in docs/consult/evidence/q025-g2-derivation/: all
 135 signatures under a syntactic reading (S) and a live-path reading (L), with
-file:line basis. It is static and not executed. Two independent derivations
-agreed in 9 of 10 groups, and a critic found no conflict with A-024. The
-readings differ on 10 rows. HANDOFF item 1 stays halted, awaiting
-docs/consult/Q-025.md: review of the derivation, the S/L reading, the other
-G2 interpretations and the representation. Q-025 also routes several findings
-for Dev: G2's R3/R4 citation slip, two corpus anomalies, and a possible
-unrecorded reference-undefined path through tax/3, which has not been
-executed.
+file:line basis. It is static and not executed. Q-025 asked the governor to
+review it. The Q-025 wake ended with exit 3: only the worktree list changed,
+because another Claude session's worktree HEAD moved during the wake. Dev
+reviewed the HALT, attributed the change to that session rather than the
+governor, and directed delivery.
+
+A-025 does not approve the derivation. It separates three counting policies,
+proposes P-G2-CALLS (a call-entry census) for Dev, confirms nine G2
+interpretation points with qualifications, accepts the builder-owned
+representation, and escalates a possible G6 gap in §3306/§3301/tax. HANDOFF
+item 1 and the affected definedness work are halted; see Blockers. Dev directed
+no re-wake. Only work independent of those decisions continues, starting with
+correcting the stale claims in the Q-025 evidence README.
 
 ## Historical phase snapshots
 
@@ -653,7 +658,61 @@ semantic decisions or as permission to change anything under `human/`.
 
 ## Blockers
 
+### P-G2-CALLS (A-025): the G2 call-counting policy awaits Dev
+
+G2 (`human/DECISIONS.md:33-40`) does not say which call sites count once a path
+has unavoidably failed or raised. A-025 separates three policies:
+- S, syntactic continuation;
+- ENTRY, operational call entry;
+- defined-domain-only.
+
+It selects none. It proposes P-G2-CALLS, an ENTRY census scoped to
+stipulation-free H1-H3 households and to each original case with its own
+stipulations, as a candidate for Dev to approve or amend. The proposal also
+corrects G2's "(R3)" citation to R4. It is PROPOSED in docs/DECISION_LOG.md and
+not installed.
+
+Until Dev decides:
+- the shared output-position declaration stays halted: neither the S nor the L
+  column of docs/consult/evidence/q025-g2-derivation/ is accepted, and a rule
+  will need re-deriving under whatever policy Dev picks;
+- nothing is written to Interface/ for projections, and no producer or scoring
+  work depends on a projection table.
+
+A-025 accepts the representation (a one-based per-case-mode `outputs` map in
+TIME_SCHEMA.json, rendered separately), but only as spelling, not as content.
+
+### G6 finding (A-025, R-Q025): possible definedness gap through tax/3, unconfirmed
+
+This comes from static source reading and is not reproduced. The path is
+`utils.pl:342 -> section3301.pl:7 -> section3306.pl:14 -> :57 -> :44 -> :441
+-> :604`, under `human/sara/sara/statutes/prolog/`. Along it, `s3306_a_3` may
+be called with Caly unbound for a domestic service, so `Pyear is Caly-1` at
+`:242` could raise under `tax/3` for a household that the signed V-rules admit.
+V7 excludes only payment cycles.
+
+A-025 requires a bounded diagnostic on the pinned runtime before any domain
+amendment. It must record:
+- the exact root query and facts;
+- the runtime identity and TZ;
+- the goal and bindings;
+- stdout and stderr verbatim;
+- the exit and timeout status;
+- every V1-V10 premise, checked without fake guards.
+
+A result that disproves the path is preserved too. A-025 also gives a candidate
+household: an unpaid domestic service, "private home" and "usa" locations, no
+payments or stipulations.
+
+Per Dev (2026-09-25), the affected §3306, §3301 and tax definedness work is
+halted, including that diagnostic, until Dev decides. No V-rule, exclusion,
+fuel value or source repair is proposed or applied. The two corpus anomalies
+A-025 confirms (`cases/s151_b_neg.pl:20`, `cases/tax_case_100.pl:5,28`) are
+preserved under G9, with no repair.
+
 ### P-H6-CONJ (A-024): extra-conjunct scoring scope awaits Dev
+
+Still pending after A-025, which leaves it unchanged.
 
 A-024 escalates an owner-text inconsistency. H6.3 (`human/DECISIONS.md:895`)
 names only `s152_d_2_D_pos/neg` as cases with extra conjuncts. H6.5 also flags
